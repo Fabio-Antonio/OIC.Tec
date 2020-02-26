@@ -1,0 +1,32 @@
+[<?php
+
+
+$directorio= 'uploads/';
+$subir_archivo= $directorio.basename($FILES 
+require_once('conexion.php');
+ $numero_contrato = $_POST['numero_contrato']; 
+
+
+ 
+$sql =$conn->prepare("INSERT  INTO contrato (pdf) VALUES (?)WHERE numero_contrato= ? ");
+
+
+
+$sql->bindParam(1, $pdf);
+ $sql->bindParam(2, $numero_contrato);
+$sql->execute();
+ 
+ $path = "uploads/$numero_contrato.pdf";  
+ 
+ if($sql){
+ 
+ file_put_contents($path,base64_decode($pdf));
+ 
+ echo "Subio pdf Correctamente";
+ }
+ 
+ 
+$conn = null;
+ }else{
+ echo "Error";
+ }

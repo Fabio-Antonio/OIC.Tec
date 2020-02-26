@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="https://cdn.datos.gob.mx/assets/css/main.css" rel="stylesheet">
+    <link href="css/estilos.css" rel="stylesheet">
+  </head>
+  <body class="front">
+    <main>
+    <nav class="navbar navbar-inverse sub-navbar navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#subenlaces">
+            <span class="sr-only">Interruptor de Navegación</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/" id="besa">B.E.S.A</a>
+        </div>
+        <div class="collapse navbar-collapse" id="subenlaces">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Enlace</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Desplegable <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Acción</a></li>
+                <li><a href="#">Otra acción</a></li>
+                <li><a href="#">Algo más aquí</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Enlace separado</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <br><br><br><br>
+    <!-- -->
+    <!-- -->
+    <!-- INICIA REGISTRO -->
+    <!-- -->
+    <!-- -->
+
+  <form  role="form" id="formlg1" action="usuarios.php" method="POST">
+    <div class="container1">
+      <div class="row">
+        <div class='col-sm-8 col-md-8 col-ld-8'>
+          <h2> ALTA USUARIOS </h2>
+            <div class="form-group">
+              <label class="control-label"> Nombre de Usuario </label>
+              <input class="form-control"  placeholder="Nombre de usuario" type="text" name="nombre">
+            </div>
+
+
+
+<div class="form-group">
+              <label class="control-label"> Apellido paterno: </label>
+              <input class="form-control"  placeholder="Apellido_paterno" type="text" name="apellido_paterno">
+            </div>
+
+
+
+<div class="form-group">
+              <label class="control-label"> Apellido materno: </label>
+              <input class="form-control"  placeholder="Apellido_materno" type="text" name="apellido_materno">
+            </div>
+
+
+
+<div class="form-group">
+              <label class="control-label"> Correo electronico: </label>
+              <input class="form-control"  placeholder="email" type="text" name="email">
+            </div>
+
+
+
+
+            <div class="form-group">
+              <label class="control-label"> CONTRASEÑA :</label>
+              <input class="form-control" placeholder="INGRESA CONTRASEÑA" type="password" name="password">
+            </div>
+            <br>
+            <div class="form-group" >
+              <h2>
+                TIPO DE USUARIO:
+              
+    </h2>
+     <div class="radio">
+  <label>
+    <input type="radio" name="permiso" value="administrador" checked="checked"> Administrador
+  </label>
+  <label>
+    <input type="radio" name="permiso" value="empleado" checked="checked"> Empleado
+  </label>
+ </div>
+
+            </div>
+            <br>
+            <div class="botong">
+		<p>
+              <button class="btn btn-primary pull-right" type="submit" > CANCELAR </button>
+		</p>
+		<p>              
+<button  class="btn btn-primary pull-right" type="submit"> GUARDAR </button>
+</p>            
+</div>
+          </div>
+        </div>
+      </div>
+</form>
+          <!-- -->
+          <!-- -->
+          <!-- TERMINA REGISTRO -->
+          <!-- -->
+          <!-- -->
+  </main>
+
+  </body>
+</html>

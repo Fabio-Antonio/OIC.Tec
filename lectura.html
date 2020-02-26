@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+      <meta charset="utf-8">
+      <title></title>
+      <link href="https://cdn.datos.gob.mx/assets/css/main.css" rel="stylesheet">
+      <link href="css/estilos.css" rel="stylesheet">
+<link href="https://cdn.datos.gob.mx/assets/img/favicon.ico" rel="shortcut icon">
+    </head>
+    <body>
+      <main>
+        <nav class="navbar navbar-inverse sub-navbar navbar-fixed-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#subenlaces">
+                <span class="sr-only">Interruptor de Navegación</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="lectura.html">B.E.S.A</a>
+            </div>
+            <div class="collapse navbar-collapse" id="subenlaces">
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Enlace</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Desplegable <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Acción</a></li>
+                    <li><a href="#">Otra acción</a></li>
+                    <li><a href="#">Algo más aquí</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Enlace separado</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav><br><br><br><br>
+        <!--browse cargador de archivos-->
+        <div class="container1">
+          <center>
+          <div class="row">
+            <div class='col-sm-4 col-md-4 col-ld-4'>
+              <!-- Pestañas -->
+              <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#tab-01">EXCEL</a></li>
+                <li><a data-toggle="tab" href="#tab-04">PDF</a></li>
+              </ul>
+              <!--fin pestañas -->
+              <div class="form-group">
+                <!-- inicio dentro pestaña-->
+                <div class="tab-content">
+                <div class="tab-pane active" id="tab-01">
+
+                  <h1><strong> SUBIR ARCHIVO EXCEL </strong></h1>
+<form   id="excel"  method="POST" enctype="multipart/form-data">
+                  <input type="file" id="filec" name="uploadedfile" accept=".xls,.xlsx,.csv" for="file-01" data-toggle="tooltip" data-placement="top"  title="Solo archivos XLS">
+                 			
+                  <button class="btn btn-primary" type="submit" onclick=this.form.action="uploader.php">subir</button>
+ 
+	</form>
+
+                </div>
+                <div class="tab-pane" id="tab-04">
+<form   id="pdf"  method="POST"enctype="multipart/form-data">
+                  <h1><strong> SUBIR ARCHIVO PDF </strong></h1>
+                  <input type="file" name="pdf" accept=".pdf" for="file-01" data-toggle="tooltip" data-placement="top" title="Solo archivos PDF">
+                 <input class="form-control" placeholder="Area de texto" type="text"name="numero_contrato">                   
+                  <button class="btn btn-primary" type="submit"onclick=this.form.action="subirpdf.php">Enviar</button>
+</form>
+              </div>
+              </div>
+            </div> <!--fin dentro pestañas -->
+            </div>
+          </div>
+          </center>
+        </div>
+        <!--Fin cargador de archivos -->
+      </main>
+      <script src="https://cdn.datos.gob.mx/assets/js/main.js"></script>
+    </body>
+</html>

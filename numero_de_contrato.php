@@ -13,7 +13,7 @@ while($row=$query->fetchAll())
       $flag[]=$row;        
 }  
 $valor=serialize($flag);
-header("Location:sistema_numero_contrato.php?flag=$valor");
+header("Location:consulta_numero_contrato.php?flag=$valor");
 	}
 
 $conn = null;

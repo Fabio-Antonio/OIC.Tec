@@ -21,7 +21,7 @@ $statement->execute();
     $response["success"] = true; 
         
         if($row['permiso']=="administrador"){
-        header("location:consultas.html");
+        header("location:principal.html");
        
 	}else if($row['permiso']=="empleado"){
 	header("location:lectura.html");

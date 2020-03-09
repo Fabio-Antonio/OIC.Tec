@@ -405,6 +405,39 @@
 /*----------fin estilos de la ventana consulta por numero de contratos----------------------------------------------*/
 /*--------------------------------------------------------------*/
 /*--------------------------------------------------------------*/
+/*--------------------------------------------------------------*/
+/*--------------------------------------------------------------*/
+/*----------fin estilos de la ventana consulta por numero de contratos----------------------------------------------*/
+/*--------------------------------------------------------------*/
+/*--------------------------------------------------------------*/
+#dcapturas{
+  /*border: 2px solid red;*/
+  width: 1000px;
+  margin-left: 250px;
+  margin-top: -250px;
+}
+#tc{
+  text-align: center;
+}
+#tca{
+  margin-left: 200px;
+}
+#btg:hover{
+  background: rgba(169,3,41,1);
+  background: -moz-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(169,3,41,1)), color-stop(44%, rgba(143,2,34,1)), color-stop(100%, rgba(109,0,25,1)));
+  background: -webkit-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
+  background: -o-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
+  background: -ms-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
+  background: linear-gradient(to right, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019', GradientType=1 );
+}
+
+/*--------------------------------------------------------------*/
+/*--------------------------------------------------------------*/
+/*----------fin estilos de la ventana consulta por numero de contratos----------------------------------------------*/
+/*--------------------------------------------------------------*/
+/*--------------------------------------------------------------*/
 [class*="col-"] {
   padding-top: 1rem;
   padding-bottom: 1rem;

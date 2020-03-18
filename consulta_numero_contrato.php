@@ -249,9 +249,7 @@
     </div>
   </div>
 
-
-
-    <div id="centro">
+<div id="centro">
       <div id="tit">
         <h1 class="tb"> B.E.S.A </h1>
         <h2 class="ts"> Sistema de Seguimiento a Contratos</h2>
@@ -260,68 +258,66 @@
         <h3 class="selc"> Seleccionar el contrato a consultar </h3>
         <!--inicio de buscar -->
         <div id="busca">
+       
         <div class="btn-group bootstrap-select form-control hidden-xs hidden-sm">
           <button type="button" class="btn dropdown-toggle bs-placeholder btn-default" data-toggle="dropdown" role="button" title="Filtrar por tema">
             <span class="filter-option pull-left">Buscar</span>
             <span class="bs-caret"></span>
           </button>
           <div class="dropdown-menu open" role="combobox">
+          <?php
+                if (isset($_GET['flag'])) {
+              $flag=unserialize($_GET['flag']);
+              $valor=json_encode($flag);
+                
+              foreach ($flag as $key=> $val) {
+
+                  ?>
+
             <ul class="dropdown-menu inner" role="listbox" aria-expanded="false">
-              <li data-original-index="0" class="selected">
-                <a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="true">
-                  <span class="text">Filtrar por tema</span>
-                  <span class="glyphicon glyphicon-ok check-mark"></span>
-                </a>
-              </li>
-              <li data-original-index="1">
+               <li data-original-index="<?php print($val['id_contrato']);?>">
                 <a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false">
-                  <span class="text">Cultura y Turismo</span>
+                  <span class="text"><?php print($val['numero_contrato']); ?></span>
                   <span class="glyphicon glyphicon-ok check-mark"></span>
                 </a>
               </li>
-              <li data-original-index="2">
-                <a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false">
-                  <span class="text">Desarrollo Sostenible</span>
-                  <span class="glyphicon glyphicon-ok check-mark"></span>
-                </a>
-              </li>
-              <li data-original-index="3">
-                <a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false">
-                  <span class="text">Economía</span>
-                  <span class="glyphicon glyphicon-ok check-mark"></span>
-                </a>
-              </li>
-              <li data-original-index="4">
-                <a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false">
-                  <span class="text">Educación</span>
-                  <span class="glyphicon glyphicon-ok check-mark"></span>
-                </a>
-              </li>
-            </ul>
+		 <?php
+              }
+
+}
+
+?>
+
+    </ul>
           </div>
-        <script type="text/javascript">
+        <script lenguage="javascript" type="text/javascript">
 	 function mostrarText(){
- 
+     var Variable='<?=$valor?>'; 
     var selObj = document.getElementById('contrato');
-       var selIndex = selObj.options[selObj.selectedIndex].text;        
-         window.location="consulta.php?numero_contrato="+selIndex;
+       var selIndex = selObj.options[selObj.selectedIndex].text;
+         alert(selIndex);   
+         window.location="consulta.php?numero_contrato="+selIndex+"&flag="+Variable;
     }
 </script>
 
-          <select name="tag" custom-select="custom-select" class="form-control hidden-xs hidden-sm" tabindex="-98">
+          <select name="tag" id="contrato" custom-select="custom-select" class="form-control hidden-xs hidden-sm" tabindex="-98">
            <?php
-		if (isset($_POST['flag'])) {
+		if (isset($_GET["flag"])) {
               $flag=unserialize($_GET["flag"]);
-
-              foreach ($flag as $flag) {
+              $valor=serialize($flag);
+              foreach ($flag as $key=> $val) {
                   ?>
-                  <option value="<?php print($flag['id_contrato']); ?>"><?php print($flag		['numero_contrato']); ?></option>
+                  <option value="<?php print($val['id_contrato']); ?>"><?php print($val['numero_contrato']); ?></option>
                   <?php
               }
+
 }
                   ?>
           </select>
         </div>
+
+   
+       
         <button id ="ser" onclick= "mostrarText();" class="btn btn-primary">
           <div class="glyphicon glyphicon-search"></div>
         </button>
@@ -331,7 +327,7 @@
 
  <?php
 
-if (isset($_POST['numero_contrato'])) {
+if (isset($_GET['numero_contrato'])) {
 
 
               $numero_contrato=$_GET["numero_contrato"];
@@ -391,8 +387,12 @@ $garantia_cumplimiento="";
       <h2 class="con"> Consulta fecha adjudicación y formalización </h2>
       <br>
       <div>
-        <input id="numco" class="form-control" type="text" placeholder="NÚMERO DE CONTRATO"  readonly="readonly" value="<?php echo $numero_contrato;?>">
-          <table class="tabla">
+           <table class="tabla">
+            <tr>
+                <th><label id="ccp" class="col-sm-20">Numero de contrato</label></th>
+       <td> <input id="cp" class="form-control" type="text" placeholder="NÚMERO DE CONTRATO"  readonly="readonly" value="<?php echo $numero_contrato;?>"</td>
+
+            </tr> 
             <tr>
               <th><label id="ccp" class="col-sm-20">Número Contrato Compranet</label></th><td><input class="form-control" id="cp" placeholder="Número Contrato Compranet" type="text"  readonly="readonly" value="<?php echo $contrato_compranet; ?>" ></td>
               <th><label id="ccp" class="col-sm-20">Suficiencia Presupuestal</label></th><td><input class="form-control" id="sp" placeholder="Suficiencia Presupuestas" type="text"  readonly="readonly"  value="<?php echo $suficiencia ?>"></td>

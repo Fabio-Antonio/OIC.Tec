@@ -25,7 +25,7 @@ $num = count ($data);
 
 $row++; 
 echo "$row- ".$data[0].$data[1].$data[2].$data[3]; 
-$insertar="INSERT INTO administrador( nombre,  apellido_paterno, apellido_materno,email) VALUE ( '.$data[0]', '.$data[1]','.$data[2]','.$data[3]')"; 
+$insertar="INSERT INTO administrador( nombre, apellido_paterno, apellido_materno,email) VALUE ( '.$data[0]', '.$data[1]','.$data[2]','.$data[3]')"; 
 
 $stmt = $conn->prepare($insertar);
 

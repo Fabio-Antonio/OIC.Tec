@@ -1,8 +1,9 @@
 <?php
    require_once("conexion.php");
     $numero_contrato = $_GET['numero_contrato'];
-    		
-    
+    $flag=$_GET['flag'];
+    $res=json_decode($flag,true);
+   echo $numero_contrato;
     $statement = $conn->prepare("SELECT numero_contrato,contrato_compranet,nombre_unidad_compradora,numero_unidad,procedimiento,monto_total,unidad,clave_requirente,monto_maximo,monto_minimo,objeto_contratacion,procedimientos,(SELECT fundamento FROM fundamento_legal WHERE fundamento_legal.id_fundamento_legal = procedimientos_contratacion.id_fundamento_legal)as fundamento,suficiencia,inicio_vigencia,fin_vigencia,notificacion_adjudicada,formalizacion_contrato,resicion_contrato,sat,imss,infonavit,garantia_cumplimiento FROM contrato  INNER JOIN unidad_compradora ON contrato.id_unidad_compradora=unidad_compradora.id_unidad_compradora
 INNER JOIN consolidado ON contrato.id_consolidado =consolidado.id_consolidado INNER JOIN unidad_requirente ON contrato.id_unidad_requirente=unidad_requirente.id_requirente INNER JOIN monto_no_iva ON contrato.id_monto_no_iva=monto_no_iva.id_monto_no_iva
 INNER JOIN procedimientos_contratacion ON contrato.id_procedimiento_contratacion=procedimientos_contratacion.id_procedimiento_contratacion INNER JOIN  contrato_fechas ON contrato.id_fechas =contrato_fechas.id_fecha WHERE  numero_contrato= ?");
@@ -45,8 +46,8 @@ $statement->execute();
 	
     $response["success"] = true; 
         
-     
-       header("location: consulta_numero_contraro.php?numero_contrato=$numero_contrato&contrato_compranet=$contrato_compranet&nombre_unidad_compradora=$nombre_unidad_compradora&numero_unidad=$numero_unidad&procedimiento=$procedimiento&monto_total=$monto_total&unidad=$unidad&clave_requirente=$clave_requirente&monto_maximo=$monto_maximo&monto_minimo=$monto_minimo&objeto_contratacion=$objeto_contratacion&procedimientos=$procedimientos&fundamento=$fundamento&suficiencia=$suficiencia&inicio_vigencia=$inicio_vigencia&fin_vigencia=$fin_vigencia&notificacion_adjudicada=$notificacion_adjudicada&formalizacion_contrato=$formalizacion_contrato&resicion_contrato=$resicion_contrato&sat=$sat&imss=$imss&infonavit=$infonavit&garantia_cumplimiento=$garantia_cumplimiento") ;
+   $valor=serialize($res);
+  header("location: consulta_numero_contrato.php?numero_contrato=$numero_contrato&contrato_compranet=$contrato_compranet&nombre_unidad_compradora=$nombre_unidad_compradora&numero_unidad=$numero_unidad&procedimiento=$procedimiento&monto_total=$monto_total&unidad=$unidad&clave_requirente=$clave_requirente&monto_maximo=$monto_maximo&monto_minimo=$monto_minimo&objeto_contratacion=$objeto_contratacion&procedimientos=$procedimientos&fundamento=$fundamento&suficiencia=$suficiencia&inicio_vigencia=$inicio_vigencia&fin_vigencia=$fin_vigencia&notificacion_adjudicada=$notificacion_adjudicada&formalizacion_contrato=$formalizacion_contrato&resicion_contrato=$resicion_contrato&sat=$sat&imss=$imss&infonavit=$infonavit&garantia_cumplimiento=$garantia_cumplimiento&flag=$valor") ;
        
    
     }  

@@ -2,12 +2,14 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
-    <link href="https://cdn.datos.gob.mx/assets/css/main.css" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <title>CAPTURA DE PROCEDIMIENTO CONSOLIDADO</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/estilos.css" rel="stylesheet">
-<link href="https://cdn.datos.gob.mx/assets/img/favicon.ico" rel="shortcut icon">
-
+    <link href="https://cdn.datos.gob.mx/assets/css/main.css" rel="stylesheet">
+    <link href="https://cdn.datos.gob.mx/assets/img/favicon.ico" rel="shortcut icon">
 
   </head>
   <body class="front">
@@ -66,14 +68,14 @@
         <div class="panel-heading">
           <h4 class="panel-title">
             <a data-parent="#filter-by" data-toggle="collapse" href="#consultanc" aria-expanded="false" aria-controls="consultanc">
-              SUBIR ARCHIVO
+              Consulta por Número de Contrato
             </a>
           </h4>
           <button type="button" class="collpase-button collapsed" data-parent="#filter-by" data-toggle="collapse" href="#consultanc"></button>
         </div>
         <div class="panel-collapse collapse" id="consultanc">
           <div class="panel-body">
-            <a href="#" >SUBIR ARCHIVO (PDF,EXCEL)</a>
+            <a href="#">Consulta Contrato</a>
           </div>
         </div>
       </div>
@@ -243,62 +245,49 @@
         </div>
       </div>
     </div>
-
+    </div>
+    </div>
   </div>
-</main>
+  <!--------------------------------------------->
+  <!--------------------------------------------->
+  <!-------------capturas-------------------------------->
+  <!--------------------------------------------->
+  <!--------------------------------------------->
+  <div id="dcapturas">
+    <div id="tc">
+      <h2> CAPTURA PROCEDIMIENTO CONSOLIDADO </h2>
+    </div>
+    <div id ="tca">
+   <form   id="con_mon"  method="POST">
+      <table class="tabla">
+          <tr>
+            <th><label id="ccp" class="col-sm-20"> Procedimiento </label></th><td><input class="form-control" id="pro" placeholder="Procedimiento" name="procedimiento" type="text"></td>
+            <th><label id="ccp" class="col-sm-20"> Monto Total   </label></th><td><input class="form-control" id="mont" placeholder="Monto Total" name="monto_total" type="number" ></td>
+          </tr>
+         </table>
+        <button  id="btg" onclick=this.form.action="procedimientos.php" class="btn btn-primary" type="submit"> GUARDAR </button>
 
-    <!------------------------------------------------------>
-    <!------------------------------------------------------>
-    <!-- INICIA REGISTRO------------------------------------>
-    <!------------------------------------------------------>
-    <!------------------------------------------------------>
+         <div id="tc">
+      <h2> CAPTURA MONTO NO IVA </h2>
+    </div>
+	<table class="tabla">
+	   <tr>
+            <th><label id="ccp" class="col-sm-20"> Monto Maximo  </label></th><td><input class="form-control" name="monto_maximo" id="montomax" placeholder="Monto Maximo" pattern="[0-9]" type="number"></td>
+            <th><label id="ccp" class="col-sm-20"> Monto Minimo  </label></th><td><input class="form-control" id="montomin" placeholder="Monto Minimo" name="monto_minimo" type="number"></td>
+          </tr>
+          <tr>
+            <th><label id="ccp" class="col-sm-20"> Total </label></th><td><input class="form-control" id="tot" placeholder="Total" name="total" type="number"></td>
+          </tr>
+      </table>
+ <button  id="btg" onclick=this.form.action="monto.php" class="btn btn-primary" type="submit"> GUARDAR </button>
+    </div>
+  </div>
 
-    <div class="container1">
-      <div class="row">
-        <div class='col-sm-8 col-md-8 col-ld-8'>
- <form  role="form" id="formlg" action="usuarios.php" method="POST">
-          <h2 CLASS="subtitulo"> ALTA USUARIOS </h2>
-            <div class="form-group">
-              <label class="control-label"> USUARIO : </label>
-              <input class="form-control"  placeholder="INGRESA USUARIO" type="text" name="nombre">
-            </div>
-            <div class="form-group">
-              <label class="control-label"> CONTRASEÑA :</label>
-              <input class="form-control" placeholder="INGRESA CONTRASEÑA" type="text" name="password">
-            </div>
-            <br>
-            <div class="form-group" id="tipodeusuario">
 
-              <label>
-                TIPO DE USUARIO:
-              </label><br>
-                  <input type="radio" name="radio-01" value="administrador" checked="checked" for="file-01" data-toggle="tooltip" data-placement="top" title="Administrador (root)"> ADMINISTRADOR ROOT
-                <br>
-                  <input type="radio" name="radio-01" value="administrador" checked="checked" for="file-01" data-toggle="tooltip" data-placement="top" title="Administrador (solo consultas)"> ADMINISTRADOR
-                <br>
-                  <input type="radio" name="radio-01" value="administrador" checked="checked" for="file-01" data-toggle="tooltip" data-placement="top" title="Usuario solo consultas"> USUARIO
-                <br>
-            </div>
-            <br>
-            <div class="botong">
-              <button id="G" class="btn btn-primary pull-right" type="submit" style="margin: 10px"> CANCELAR </button>
-              <button id="C" class="btn btn-primary pull-right" type="submit" style="margin: 10px"> GUARDAR </button>
-            </div>
-          </div>
-        </div>
-  </form>
-      </div>
-
-      <!------------------------------------------------------>
-      <!------------------------------------------------------>
-      <!-- FIN REGISTRO------------------------------------>
-      <!------------------------------------------------------>
-      <!------------------------------------------------------>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"
-      integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY"
-      crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.datos.gob.mx/assets/js/main.js"></script>
-<script src="js/bootstrap.min.js"></script>
+			integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY"
+			crossorigin="anonymous">
+		</script>
+		<script src="js/bootstrap.min.js"></script>
   </body>
 </html>

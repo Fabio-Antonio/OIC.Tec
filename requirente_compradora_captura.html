@@ -1,14 +1,13 @@
-﻿<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
-    <link href="https://cdn.datos.gob.mx/assets/css/main.css" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <title> INFORME PROCEDIMIENTO 70-30 </title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/estilos.css" rel="stylesheet">
-<link href="https://cdn.datos.gob.mx/assets/img/favicon.ico" rel="shortcut icon">
-
-
+    <link href="https://cdn.datos.gob.mx/assets/css/main.css" rel="stylesheet">
   </head>
   <body class="front">
     <main>
@@ -41,11 +40,11 @@
       </div>
     </nav>
     <br><br><br><br>
-    <!-- ----------------------------------------------->
-    <!-- ----------------------------------------------->
-    <!--INICIO DE MENU A LA IZQUIERDA-------------------------->
-    <!-- ----------------------------------------------->
-    <!-- ----------------------------------------------->
+    <!-----------------------  -------------------------->
+    <!-----------------------  -------------------------->
+    <!----------------------- INICIO DE MENU A LA IZQUIERDA  -------------------------->
+    <!-----------------------  -------------------------->
+    <!-----------------------  -------------------------->
     <div id="contenedorizquierda">
 
 
@@ -66,14 +65,14 @@
         <div class="panel-heading">
           <h4 class="panel-title">
             <a data-parent="#filter-by" data-toggle="collapse" href="#consultanc" aria-expanded="false" aria-controls="consultanc">
-              SUBIR ARCHIVO
+              Consulta por Número de Contrato
             </a>
           </h4>
           <button type="button" class="collpase-button collapsed" data-parent="#filter-by" data-toggle="collapse" href="#consultanc"></button>
         </div>
         <div class="panel-collapse collapse" id="consultanc">
           <div class="panel-body">
-            <a href="#" >SUBIR ARCHIVO (PDF,EXCEL)</a>
+            <a href="#">Consulta Contrato</a>
           </div>
         </div>
       </div>
@@ -148,7 +147,7 @@
         </div>
         <div class="panel-collapse collapse" id="in37">
           <div class="panel-body">
-            <a href="../informe70-30/informe70-30.html">Informe Procedimiento 70-30</a>
+            <a href="informe70-30.html">Informe Procedimiento 70-30</a>
           </div>
         </div>
       </div>
@@ -243,62 +242,47 @@
         </div>
       </div>
     </div>
-
+    </div>
+    </div>
   </div>
-</main>
 
-    <!------------------------------------------------------>
-    <!------------------------------------------------------>
-    <!-- INICIA REGISTRO------------------------------------>
-    <!------------------------------------------------------>
-    <!------------------------------------------------------>
-
-    <div class="container1">
-      <div class="row">
-        <div class='col-sm-8 col-md-8 col-ld-8'>
- <form  role="form" id="formlg" action="usuarios.php" method="POST">
-          <h2 CLASS="subtitulo"> ALTA USUARIOS </h2>
-            <div class="form-group">
-              <label class="control-label"> USUARIO : </label>
-              <input class="form-control"  placeholder="INGRESA USUARIO" type="text" name="nombre">
-            </div>
-            <div class="form-group">
-              <label class="control-label"> CONTRASEÑA :</label>
-              <input class="form-control" placeholder="INGRESA CONTRASEÑA" type="text" name="password">
-            </div>
-            <br>
-            <div class="form-group" id="tipodeusuario">
-
-              <label>
-                TIPO DE USUARIO:
-              </label><br>
-                  <input type="radio" name="radio-01" value="administrador" checked="checked" for="file-01" data-toggle="tooltip" data-placement="top" title="Administrador (root)"> ADMINISTRADOR ROOT
-                <br>
-                  <input type="radio" name="radio-01" value="administrador" checked="checked" for="file-01" data-toggle="tooltip" data-placement="top" title="Administrador (solo consultas)"> ADMINISTRADOR
-                <br>
-                  <input type="radio" name="radio-01" value="administrador" checked="checked" for="file-01" data-toggle="tooltip" data-placement="top" title="Usuario solo consultas"> USUARIO
-                <br>
-            </div>
-            <br>
-            <div class="botong">
-              <button id="G" class="btn btn-primary pull-right" type="submit" style="margin: 10px"> CANCELAR </button>
-              <button id="C" class="btn btn-primary pull-right" type="submit" style="margin: 10px"> GUARDAR </button>
-            </div>
-          </div>
-        </div>
+  <!--------------------------------------------------------------->
+  <!--------------------------------------------------------------->
+  <!--------------capturas------------------------------------------------->
+  <!--------------------------------------------------------------->
+  <!--------------------------------------------------------------->
+  <div id="centercap">
+      <form role="form" class="form-horizontal" action="requirente.php"method="POST" role="form">
+        <h2 align="center"> Unidad Requirente </h2>
+          <label id="ccp1" class="col-sm-20">Clave Requirente: </label>
+          <input class="form-control" id="claver" placeholder="Clave Requirente" name="clave_requirente" type="number" required>
+          <label id="ccp1" class="col-sm-20">Unidad: </label>
+          <input class="form-control" id="uni" placeholder="Unidad" type="text" name="unidad" required>
+          <button id="gu" class="btn btn-primary pull-right" type="submit">Guardar</button>
+    </form>
+    <div>
+    <div id="centeruni">
+    <form role="form" class="form-horizontal" role="form" action="compradora.php"method="POST">
+      <h2 align="center"> Unidad Compradora </h2>
+        <label id="ccp1" class="col-sm-20">Nombre de Unidad Compradora: </label>
+        <input class="form-control" id="nuc" placeholder="Nombre Unidad Compradora" name="nombre_unidad_compradora" type="text" required>
+        <label id="ccp1" class="col-sm-20">Número Unidad: </label>
+        <input class="form-control" id="un" placeholder="Número Unidad" name="numero_unidad" type="number" required>
+        <button id="gua" class="btn btn-primary pull-right" type="submit">Guardar</button>
   </form>
-      </div>
+  </div>
 
-      <!------------------------------------------------------>
-      <!------------------------------------------------------>
-      <!-- FIN REGISTRO------------------------------------>
-      <!------------------------------------------------------>
-      <!------------------------------------------------------>
+
+  <!--------------------------------------------------------------->
+  <!--------------------------------------------------------------->
+  <!--------------------------------------------------------------->
+  <!--------------------------------------------------------------->
+  <!--------------------------------------------------------------->
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"
-      integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY"
-      crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.datos.gob.mx/assets/js/main.js"></script>
-<script src="js/bootstrap.min.js"></script>
+    integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY"
+    crossorigin="anonymous">
+  </script>
+  <script src="js/bootstrap.min.js"></script>
   </body>
 </html>

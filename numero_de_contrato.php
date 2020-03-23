@@ -8,10 +8,11 @@ $query->execute();
 
 if($query)
 {
-while($row=$query->fetchAll())
+while($row=$query->fetch())
 	{
-      $flag[]=$row;        
-}  
+$flag[]=$row;
+}
+
 $valor=serialize($flag);
 header("Location:consulta_numero_contrato.php?flag=$valor");
 	}

@@ -6,7 +6,7 @@
      $password = $_POST["password"];
 	$permiso = $_POST["permiso"];  
 	
-    $statement = $conn->prepare("INSERT IN TO  login (nombre,password,permiso)VALUES(?,?,?)");
+    $statement = $conn->prepare("INSERT INTO  login (nombre,password,permiso)VALUES(?,?,?)");
 $statement->bindParam(1, $nombre);
 $statement->bindParam(2, $password);
 $statement->bindParam(3, $permiso);

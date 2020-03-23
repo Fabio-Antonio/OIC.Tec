@@ -13,7 +13,7 @@ require_once('conexion.php');
  $numero_contrato = $_POST['numero_contrato']; 
 echo "".$numero_contrato;
  
-$sql =$conn->prepare("INSERT  INTO contrato (pdf) VALUES (?) WHERE numero_contrato= ? ");
+$sql =$conn->prepare("UPDATE  contrato SET pdf= ? WHERE numero_contrato= ? ");
 
 
 

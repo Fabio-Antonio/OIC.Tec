@@ -1,12 +1,32 @@
 <?php
     require_once("conexion.php");
      
-    $procedimiento = $_POST["procedimiento"];
+    $procedimiento = $_GET["procedimientos"];
    		
-     $monto_total = $_POST["monto_total"];
-    $statement = $conn->prepare("INSERT INTO consolidado (procedimiento,monto_total)VALUES(?,?)");
-$statement->bindParam(1, $procedimiento);
-$statement->bindParam(2, $monto_total);
+     $fundamento = $_GET["fundamento"];
+echo "bandera";
+$query=$conn->prepare("SELECT id_fundamento_legal FROM fundamento_legal WHERE fundamento=?");
+$query->bindParam(1, $fundamento);
+$query->execute();
+
+if($query)
+{
+while($row=$query->fetch())
+        {
+$dato=$row['id_fundamento_legal'];
+
+echo $dato;
+}
+
+echo $dato;
+}
+
+
+
+
+$statement = $conn->prepare("INSERT INTO procedimientos_contratacion (id_fundamento_legal,procedimientos)VALUES(?,?)");
+$statement->bindValue(1, $dato);
+$statement->bindParam(2, $procedimiento);
 $statement->execute();
    
   

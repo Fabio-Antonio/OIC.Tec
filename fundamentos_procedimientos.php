@@ -253,18 +253,20 @@
       <h2 class="fuu"> FUNDAMENTO LEGAL</h2>
     </div>
     <div id="tabf">
+<form method="POST">
           <label id="ccp" class="col-sm-20"> Fundamento: </label>
-          <input class="form-control" id="fundanen" placeholder="Fundamento" type="text">
+          <input class="form-control" id="fundanen" placeholder="Fundamento" name="fundamento" type="text">
           <div id="difecha">
             <label id="ccp" class="col-sm-20"> Fecha:   </label>
-            <input class="form-control" id="fechafun" placeholder="Fecha" type="date" >
+            <input class="form-control" id="fechafun" name="fecha" placeholder="Fecha" type="date" >
           </div>
           <div id="diopc">
             <label id="ccp" class="col-sm-20"> Opción:   </label>
-            <input class="form-control" id="opcion" placeholder="Opción" type="text" >
+            <input class="form-control" id="opcion" name="opcion" placeholder="Opción" type="text" >
           </div>
           <div id="btnac">
-              <button type="button" id="bac" class="btn btn-primary" name="button"> Guardar </button>
+              <button type="submit" id="bac" class="btn btn-primary" onclick=this.form.action="fundamento.php" name="button"> Guardar </button>
+		</form>
           </div>
     </div>
     <div id="tif">
@@ -272,15 +274,41 @@
     </div>
     <div id="diproc">
       <label id="ccp" class="col-sm-20"> Procedimientos:   </label>
-      <input class="form-control" id="proc" placeholder="Procedimientos" type="text" >
+      <input class="form-control" id="proc" name"proc"  placeholder="Procedimientos" type="text" >
     </div>
     <div id="ful">
       <label id="ccp" class="col-sm-20"> Fundamento legal:   </label>
-      <select id="prc" class="prc" name="">
+     
+ <script lenguage="javascript" type="text/javascript">
+         function mostrarText(){
+    var selObj = document.getElementById('prc');
+      var pr  = (document.getElementById('proc').value);
+
+       var selIndex = selObj.options[selObj.selectedIndex].text;
+         alert(selIndex);   
+         window.location="procedimientos.php?fundamento="+selIndex+"&procedimientos="+pr;
+    }
+</script>
+           <select id="prc" class="prc" name="prc">
+
+                   <?php
+                if (isset($_GET["flag"])) {
+              $flag=unserialize($_GET["flag"]);
+              $valor=serialize($flag);
+              foreach ($flag as $key=> $val) {
+                  ?>
+                  <option value="<?php print($val['id_fundamento_legal']); ?>"><?php print($val['fundamento']); ?></option>
+                  <?php
+              }
+
+}
+                  ?>
+        
       </select>
     </div>
     <div id="btnca">
-        <button type="button" id="bca" class="btn btn-primary" name="button"> Guardar </button>
+        <button type="button" id="bca" onclick="mostrarText();" class="btn btn-primary" name="button"> Guardar </button>
+        
     </div>
   </div>
 

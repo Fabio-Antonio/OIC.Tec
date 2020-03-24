@@ -663,7 +663,7 @@
 }
 #fechafun{
   width: 300px;
-  margin-left: 171px;
+  margin-left: 100px;
   margin-top: -50px;
   font-size: 19px;
 }
@@ -683,8 +683,13 @@
 }
 #diproc{
   width: 700px;
-  margin-left: 200px;
+  margin-left: 0px;
   margin-top:100px;
+}
+#proc{
+  width: 350px;
+  margin-left: 170px;
+  margin-top: -50px;
 }
 #prc{
   margin-left: 20px;
@@ -700,6 +705,16 @@
   -webkit-box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
 -moz-box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
 box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
+}
+#diproc{
+  width: 700px;
+  margin-left: 10px;
+  margin-top:100px;
+}
+#ful{
+  width: 700px;
+  margin-left: 600px;
+  margin-top: -40px;
 }
 #btnac{
   margin-top: 30px;

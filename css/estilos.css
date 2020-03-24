@@ -522,12 +522,15 @@
 /*--------------------------------------------------------------*/
 /*--------------------------------------------------------------*/
 #dcapturas{
-  /*border: 2px solid red;*/
+
   width: 1000px;
   margin-left: 250px;
   margin-top: -250px;
 }
 #tc{
+  text-align: center;
+}
+#tcm{
   text-align: center;
 }
 #tca{
@@ -680,8 +683,8 @@
 }
 #diproc{
   width: 700px;
-  margin-left: 600px;
-  margin-top: -40px;
+  margin-left: 200px;
+  margin-top:100px;
 }
 #prc{
   margin-left: 20px;
@@ -700,11 +703,11 @@ box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
 }
 #btnac{
   margin-top: 30px;
-  margin-left: 350px;
+  margin-left: 450px;
 }
 #btnca{
-  margin-top: -39px;
-  margin-left: 550px;
+  margin-top: 39px;
+  margin-left: 450px;
 }
 #bca{
   width: 150px;
@@ -734,6 +737,12 @@ box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
   background: -ms-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
   background: linear-gradient(to right, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019', GradientType=1 );
+}
+#no{
+  width: 300px;
+}
+#rf{
+  width: 300px;
 }
 /*--------------------------------------------------------------*/
 /*--------------------------------------------------------------*/

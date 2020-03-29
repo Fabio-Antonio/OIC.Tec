@@ -321,7 +321,7 @@
   border-spacing: 10px 5px;
 }
 #ccp{
-  background-color: white;
+  background-color: #ddd;;
   border: 0px;
   font-size: 18px;
   text-align: left;
@@ -454,26 +454,9 @@
 /*----------fin estilos de la ventana consulta por numero de contratos----------------------------------------------*/
 /*-----------requirente_compradora_capturas---------------------------------------------------*/
 /*--------------------------------------------------------------*/
-#centercap{
-  border: 2px solid #00CC99;
-  height: 380px;
-  width: 750px;
-  margin-top: -250px;
-  margin-left: 300px;
-  background-color: #EFEFEF;
 
-}
-#centeruni{
-  border: 2px solid #00CC99;
-  height: 365px;
-  width: 750px;
-  margin-top: 90px;
-  margin-left: -1px;
-  background-color: #EFEFEF;
-
-}
 #gu{
-  margin-right: 659px;
+  margin-right: 559px;
   margin-bottom: 10px;
   margin-top: 30px;
 }
@@ -488,7 +471,7 @@
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019', GradientType=1 );
 }
 #gua{
-  margin-right: 659px;
+  margin-right: 559px;
   margin-bottom: 10px;
   margin-top: 30px;
 }
@@ -522,10 +505,14 @@
 /*--------------------------------------------------------------*/
 /*--------------------------------------------------------------*/
 #dcapturas{
-
+  background-color: #ddd;
   width: 1000px;
   margin-left: 250px;
   margin-top: -250px;
+}
+#dcapturas1{
+  border: 1px solid #bbb;
+  height: 240px;
 }
 #tc{
   text-align: center;

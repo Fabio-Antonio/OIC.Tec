@@ -40,11 +40,11 @@
       </div>
     </nav>
     <br><br><br><br>
-    <!-----------------------  -------------------------->
-    <!-----------------------  -------------------------->
-    <!----------------------- INICIO DE MENU A LA IZQUIERDA  -------------------------->
-    <!-----------------------  -------------------------->
-    <!-----------------------  -------------------------->
+    <!------------------------------------------------->
+    <!------------------------------------------------->
+    <!---INICIO DE MENU A LA IZQUIERDA-------------------------->
+    <!------------------------------------------------->
+    <!------------------------------------------------->
     <div id="contenedorizquierda">
 
 
@@ -248,29 +248,38 @@
 
   <!--------------------------------------------------------------->
   <!--------------------------------------------------------------->
-  <!--------------capturas------------------------------------------------->
+  <!---capturas------------------------------------------------->
   <!--------------------------------------------------------------->
   <!--------------------------------------------------------------->
-  <div id="centercap">
-      <form role="form" class="form-horizontal" action="requirente.php"method="POST" role="form">
-        <h2 align="center"> Unidad Requirente </h2>
-          <label id="ccp1" class="col-sm-20">Clave Requirente: </label>
-          <input class="form-control" id="claver" placeholder="Clave Requirente" name="clave_requirente" type="number" required>
-          <label id="ccp1" class="col-sm-20">Unidad: </label>
-          <input class="form-control" id="uni" placeholder="Unidad" type="text" name="unidad" required>
-          <button id="gu" class="btn btn-primary pull-right" type="submit">Guardar</button>
-    </form>
-    <div>
-    <div id="centeruni">
-    <form role="form" class="form-horizontal" role="form" action="compradora.php"method="POST">
-      <h2 align="center"> Unidad Compradora </h2>
-        <label id="ccp1" class="col-sm-20">Nombre de Unidad Compradora: </label>
-        <input class="form-control" id="nuc" placeholder="Nombre Unidad Compradora" name="nombre_unidad_compradora" type="text" required>
-        <label id="ccp1" class="col-sm-20">Número Unidad: </label>
-        <input class="form-control" id="un" placeholder="Número Unidad" name="numero_unidad" type="number" required>
-        <button id="gua" class="btn btn-primary pull-right" type="submit">Guardar</button>
-  </form>
+
+  <div class="container1">
+    <div class="row">
+      <div class='col-sm-8 col-md-8 col-ld-8'>
+        <form role="form" class="form-horizontal" action="requirente.php"method="POST" role="form">
+          <h2 align="center"> Unidad Requirente </h2>
+            <label id="ccp1" class="col-sm-20">Clave Requirente: </label>
+            <input class="form-control" id="claver" placeholder="Clave Requirente" name="clave_requirente" type="number" required>
+            <label id="ccp1" class="col-sm-20">Unidad: </label>
+            <input class="form-control" id="uni" placeholder="Unidad" type="text" name="unidad" required>
+            <button id="gu" class="btn btn-primary pull-right" type="submit">Guardar</button>
+        </form>
+      </div>
+    </div>
   </div>
+    <div class="container1">
+      <div class="row">
+        <div class='col-sm-8 col-md-8 col-ld-8'>
+          <form role="form" class="form-horizontal" role="form" action="compradora.php"method="POST">
+            <h2 align="center"> Unidad Compradora </h2>
+            <label id="ccp1" class="col-sm-20">Nombre de Unidad Compradora: </label>
+            <input class="form-control" id="nuc" placeholder="Nombre Unidad Compradora" name="nombre_unidad_compradora" type="text" required>
+            <label id="ccp1" class="col-sm-20">Número Unidad: </label>
+            <input class="form-control" id="un" placeholder="Número Unidad" name="numero_unidad" type="number" required>
+            <button id="gua" class="btn btn-primary pull-right" type="submit">Guardar</button>
+          </form>
+        </div>
+      </div>
+    </div>
 
 
   <!--------------------------------------------------------------->

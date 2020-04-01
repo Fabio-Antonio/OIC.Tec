@@ -1,15 +1,18 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
-    <link href="https://cdn.datos.gob.mx/assets/css/main.css" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+      <title>Comprobacion_conveniosm_documentosa</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/estilos.css" rel="stylesheet">
+    <link href="https://cdn.datos.gob.mx/assets/css/main.css" rel="stylesheet">
     <link href="https://cdn.datos.gob.mx/assets/img/favicon.ico" rel="shortcut icon">
-
-
+    <link href="https://cdn.datos.gob.mx/bower_components/dgm-footer/dgm-footer.html" rel="import">
   </head>
+
   <body class="front">
     <main>
     <nav class="navbar navbar-inverse sub-navbar navbar-fixed-top">
@@ -243,62 +246,105 @@
         </div>
       </div>
     </div>
-
   </div>
+</div>
 </main>
-
-    <!------------------------------------------------------>
-    <!------------------------------------------------------>
-    <!-- INICIA REGISTRO------------------------------------>
-    <!------------------------------------------------------>
-    <!------------------------------------------------------>
-
+<!------------------------------------------------------>
+<!------------------------------------------------------>
+<!-- INICIA REGISTRO------------------------------------>
+<!------------------------------------------------------>
+<!------------------------------------------------------>
+  <div id="contec">
     <div class="container1">
       <div class="row">
-        <div class='col-sm-8 col-md-8 col-ld-8'>
-          <form  role="form" id="formlg" action="usuarios.php" method="POST">
-          <h2 CLASS="subtitulo"> ALTA USUARIOS </h2>
-            <div class="form-group">
-              <label class="control-label"> USUARIO : </label>
-              <input class="form-control"  placeholder="INGRESA USUARIO" type="text" name="nombre">
-            </div>
-            <div class="form-group">
-              <label class="control-label"> CONTRASEÑA :</label>
-              <input class="form-control" placeholder="INGRESA CONTRASEÑA" type="text" name="password">
-            </div>
-            <br>
-            <div class="form-group" id="tipodeusuario">
+        <div class='col-sm-20 col-md-20 col-ld-20'>
+          <h2 class="fuu"> COMPROBACIÓN </h2>
+          <label id="textcon" class="control-label"> Contrato: </label>
+          <select id="scontra" class="scontra" name="scontra">
+          </select>
+          <div id="dfechad">
+            <label id="tfechdoc" class="control-label"> Fecha del documento: </label>
+            <input class="form-control" id="fechadoc" name="fecha" type="date" >
+          </div>
+          <div id="divdes">
+            <label id="textdes" class="control-label"> Descripción: </label>
+            <textarea  id="descripcion" class="form-control" rows="5"></textarea>
+          </div>
+          <div id="dbtncomprobacion">
+              <button type="submit" id="bcomprobacion" class="btn btn-primary" name="button"> Guardar </button>
+          </div>
+        </div>
+      </div>
+    </div>
 
-              <label>
-                TIPO DE USUARIO:
-              </label><br>
-                  <input type="radio" name="radio-01" value="administrador" checked="checked" for="file-01" data-toggle="tooltip" data-placement="top" title="Administrador (root)"> ADMINISTRADOR ROOT
-                <br>
-                  <input type="radio" name="radio-01" value="administrador" checked="checked" for="file-01" data-toggle="tooltip" data-placement="top" title="Administrador (solo consultas)"> ADMINISTRADOR
-                <br>
-                  <input type="radio" name="radio-01" value="administrador" checked="checked" for="file-01" data-toggle="tooltip" data-placement="top" title="Usuario solo consultas"> USUARIO
-                <br>
+      <div id="contenedorconvenios">
+        <div class="container1">
+          <div class="row">
+            <div class='col-sm-20 col-md-20 col-ld-20'>
+                <h2 class="fuu"> CONVENIOS MODIFICADOS </h2>
+              <div id ="dcontrato">
+                <label id="textcon" class="control-label"> Contrato: </label>
+                <select id="scontra" class="scontra" name="scontra">
+                </select>
+              </div>
+            <div id="dmontomaximo">
+              <label id="textmontomaximo" class="control-label"> Monto maximo: </label>
+              <input class="form-control" id="montomax" placeholder="Monto Maximo" name="monto_maximo" type="number" step="0.1" >
             </div>
-            <br>
-            <div class="botong">
-              <button id="G" class="btn btn-primary pull-right" type="submit" style="margin: 10px"> CANCELAR </button>
-              <button id="C" class="btn btn-primary pull-right" type="submit" style="margin: 10px"> GUARDAR </button>
+            <div id="dmontominimo">
+              <label id="textmontominimo" class="control-label"> Monto minimo: </label>
+              <input class="form-control" id="montomin" placeholder="Monto Minimo" name="monto_minimo" type="number" step="0.1" >
+            </div>
+            <div id="diniciovigencia">
+              <label id="textiniciovigencia" class="control-label"> Inicio vigencia: </label>
+              <input class="form-control" id="iniciovigencia" name="fecha" type="date" >
+            </div>
+            <div id="dfinvigencia">
+              <label id="textfinvigencia" class="control-label"> Fin vigencia: </label>
+              <input class="form-control" id="finvigencia" name="fecha" type="date" >
+            </div>
+            <div id="dfechaentrega">
+              <label id="textfechaentrega" class="control-label"> Fecha entraga: </label>
+              <input class="form-control" id="fechaentrega" name="fecha" type="date" >
+            </div>
+            <div id="dbtncomprobacion">
+                <button type="submit" id="bcomprobacion" class="btn btn-primary"  name="button"> Guardar </button>
+            </div>
             </div>
           </div>
         </div>
-  </form>
       </div>
 
-      <!------------------------------------------------------>
-      <!------------------------------------------------------>
-      <!-- FIN REGISTRO------------------------------------>
-      <!------------------------------------------------------>
-      <!------------------------------------------------------>
+      <div id="contenedorconvenios">
+        <div class="container1">
+          <div class="row">
+            <div class='col-sm-20 col-md-20 col-ld-20'>
+                <h2 class="fuu"> DOCUMENTOS ADICIONALES </h2>
+                  <label id="textcon" class="control-label"> Contrato: </label>
+                  <select id="scontra" class="scontra" name="scontra">
+                  </select>
+              <div id="dfechad">
+                  <label id="tfechdocadicional" class="control-label"> Fecha del documento: </label>
+                  <input class="form-control" id="fechadocadicional" name="fecha" type="date" >
+              </div>
+              <div id="divdes">
+                  <label id="textdesadicional" class="control-label"> Descripción: </label>
+                  <textarea  id="descripcionadicional" class="form-control" rows="5"></textarea>
+              </div>
+              <div id="dbtncomprobacion">
+                  <button type="submit" id="bcomprobacion" class="btn btn-primary" name="button"> Guardar </button>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"
-      integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY"
-      crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.datos.gob.mx/assets/js/main.js"></script>
-<script src="js/bootstrap.min.js"></script>
+    integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY"
+    crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.datos.gob.mx/assets/js/main.js"></script>
+  <script src="js/bootstrap.min.js"></script>
   </body>
 </html>

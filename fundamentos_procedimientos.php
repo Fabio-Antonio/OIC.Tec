@@ -253,7 +253,7 @@
       <h2 class="fuu"> FUNDAMENTO LEGAL</h2>
     </div>
     <div id="tabf">
-<form method="POST">
+      <form method="POST">
           <label id="ccp" class="col-sm-20"> Fundamento: </label>
           <input class="form-control" id="fundanen" placeholder="Fundamento" name="fundamento" type="text">
           <div id="difecha">
@@ -278,14 +278,14 @@
     </div>
     <div id="ful">
       <label id="ccp" class="col-sm-20"> Fundamento legal:   </label>
-     
+
  <script lenguage="javascript" type="text/javascript">
          function mostrarText(){
     var selObj = document.getElementById('prc');
       var pr  = (document.getElementById('proc').value);
 
        var selIndex = selObj.options[selObj.selectedIndex].text;
-         alert(selIndex);   
+         alert(selIndex);
          window.location="procedimientos.php?fundamento="+selIndex+"&procedimientos="+pr;
     }
 </script>
@@ -303,12 +303,12 @@
 
 }
                   ?>
-        
+
       </select>
     </div>
     <div id="btnca">
         <button type="button" id="bca" onclick="mostrarText();" class="btn btn-primary" name="button"> Guardar </button>
-        
+
     </div>
   </div>
 

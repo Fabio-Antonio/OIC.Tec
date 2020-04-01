@@ -749,8 +749,207 @@ box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
 /*--------------------------------------------------------------*/
 /*--------------------------------------------------------------*/
 /*-----------fin hoja fundamento_procedimiento---------------------------------------------*/
+/*-----------inicio Comprobacion_conveniosm_documentosa---------------------------------------------------*/
 /*--------------------------------------------------------------*/
-/*--------------------------------------------------------------*/
+#contec{
+  margin-left: -150px;
+}
+#textcon{
+  margin-left: 10px;
+  background-color: #e5e2eb;
+  border: 0px;
+  font-size: 18px;
+  text-align: left;
+}
+#scontra{
+  margin-left: 20px;
+  width: 300px;
+  height: 35px;
+  background-color: white;
+ -moz-border-radius: 5px;
+ -webkit-border-radius:5px;
+ padding: 10px;
+}
+#scontra:focus{
+  border: 1.5px solid #00CC99;
+  -webkit-box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
+  -moz-box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
+  box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
+}
+#dfechad{
+  width: 700px;
+  margin-left: 600px;
+  margin-top: -30px;
+}
+#fechadoc{
+  width: 300px;
+  height: 40px;
+  margin-left: 75px;
+  margin-top: -50px;
+  font-size: 19px;
+}
+#tfechdoc{
+  margin-left: -150px;
+  background-color: #e5e2eb;
+  border: 0px;
+  font-size: 18px;
+  text-align: left;
+}
+#divdes{
+  margin-top: 40px;
+}
+#textdes{
+  margin-left: 10px;
+  background-color: #e5e2eb;
+  border: 0px;
+  font-size: 18px;
+  text-align: left;
+}
+#descripcion{
+  width: 1000px;
+  margin-left: 15px;
+}
+#contenedorconvenios{
+  margin-top: 255px;
+}
+#dbtncomprobacion{
+  margin-top: 30px;
+  margin-left: 30px;
+}
+#bcomprobacion{
+  width: 150px;
+  height: 40px;
+}
+#bcomprobacion:hover{
+  background: rgba(169,3,41,1);
+  background: -moz-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(169,3,41,1)), color-stop(44%, rgba(143,2,34,1)), color-stop(100%, rgba(109,0,25,1)));
+  background: -webkit-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
+  background: -o-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
+  background: -ms-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
+  background: linear-gradient(to right, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019', GradientType=1 );
+}
+#dcontrato{
+  margin-left: 300px;
+}
+#dmontomaximo{
+  margin-top: 50px;
+}
+#textmontomaximo{
+  margin-left: 10px;
+  background-color: #e5e2eb;
+  border: 0px;
+  font-size: 18px;
+  text-align: left;
+}
+#montomax{
+  width: 300px;
+  height: 40px;
+  margin-left: 180px;
+  margin-top: -50px;
+  font-size: 19px;
+}
+#dmontominimo{
+  margin-top: -25px;
+  margin-left: 520px;
+}
+#textmontominimo{
+  margin-left: 10px;
+  background-color: #e5e2eb;
+  border: 0px;
+  font-size: 18px;
+  text-align: left;
+}
+#montomin{
+  width: 300px;
+  height: 40px;
+  margin-left: 180px;
+  margin-top: -50px;
+  font-size: 19px;
+}
+#diniciovigencia{
+  margin-top: 50px;
+  margin-left: 160px;
+}
+#textiniciovigencia{
+  margin-left: -150px;
+  background-color: #e5e2eb;
+  border: 0px;
+  font-size: 18px;
+  text-align: left;
+}
+#iniciovigencia{
+  width: 300px;
+  height: 40px;
+  margin-left: 20px;
+  margin-top: -50px;
+  font-size: 19px;
+}
+#dfinvigencia{
+  margin-top: -30px;
+  margin-left: 680px;
+}
+#textfinvigencia{
+  margin-left: -150px;
+  background-color: #e5e2eb;
+  border: 0px;
+  font-size: 18px;
+  text-align: left;
+}
+#finvigencia{
+  width: 300px;
+  height: 40px;
+  margin-left: 20px;
+  margin-top: -50px;
+  font-size: 19px;
+}
+#dfechaentrega{
+  margin-top: 50px;
+  margin-left: 160px;
+}
+#textfechaentrega{
+  margin-left: -150px;
+  background-color: #e5e2eb;
+  border: 0px;
+  font-size: 18px;
+  text-align: left;
+}
+#fechaentrega{
+  width: 300px;
+  height: 40px;
+  margin-left: 20px;
+  margin-top: -50px;
+  font-size: 19px;
+}
+#fechadocadicional{
+  width: 300px;
+  height: 40px;
+  margin-left: 75px;
+  margin-top: -50px;
+  font-size: 19px;
+}
+#tfechdocadicional{
+  margin-left: -150px;
+  background-color: #e5e2eb;
+  border: 0px;
+  font-size: 18px;
+  text-align: left;
+}
+#textdesadicional{
+  margin-left: 10px;
+  background-color: #e5e2eb;
+  border: 0px;
+  font-size: 18px;
+  text-align: left;
+}
+#descripcionadicional{
+  width: 1000px;
+  margin-left: 15px;
+}
+
+
+
 [class*="col-"] {
   padding-top: 1rem;
   padding-bottom: 1rem;

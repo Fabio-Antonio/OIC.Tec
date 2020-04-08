@@ -20,7 +20,8 @@ $statement->execute();
    
     $response["success"] = false;  
    if($statement){
-echo "listo";
+echo "<script>alert('Lod datos se ingresaron correctamente')
+window.location.replace('alta.html');</script>";
 }
        
 

@@ -26,8 +26,10 @@ $sql->execute();
  if($sql){
  
  
- echo "Subio pdf Correctamente";
- }else{ echo "ERROR";}
+ echo "<script>alert('Subido correctamente a $numero_contrato')
+window.location.replace('lectura.html');</script>";
+ }else{ echo "<script>alert('Error al cargar el archivo')
+window.location.replace('lectura.html');</script>" ;}
  
  
 $conn = null;

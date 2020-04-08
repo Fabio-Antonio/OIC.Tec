@@ -254,6 +254,51 @@
 <!-- INICIA REGISTRO------------------------------------>
 <!------------------------------------------------------>
 <!------------------------------------------------------>
+
+
+<script lenguage="javascript" type="text/javascript">
+         function mostrarTexts(){
+    var selObj = document.getElementById('scontra2');
+      var montomax  = (document.getElementById('montomax').value);
+     var montomin  = (document.getElementById('montomin').value);
+     var iniciovigencia  = (document.getElementById('iniciovigencia').value);
+     var finvigencia  = (document.getElementById('finvigencia').value);
+     var fechaentrega = (document.getElementById('fechaentrega').value);
+
+       var selIndex = selObj.options[selObj.selectedIndex].text;
+         alert(selIndex);
+         window.location="conveniosm.php?numero_contrato="+selIndex+"&monto_maximo="+montomax+"&monto_minimo="+montomin+"&inicio_vigencia="+iniciovigencia+
+"&fin_vigencia="+finvigencia+"&fecha_entrega="+fechaentrega;
+    }
+</script>
+
+
+
+
+<script lenguage="javascript" type="text/javascript">
+         function mostrarText(){
+    var selObj = document.getElementById('scontra');
+      var fechadoc  = (document.getElementById('fechadoc').value);
+       var descrip = (document.getElementById('descripcion').value);
+       var selIndex = selObj.options[selObj.selectedIndex].text;
+         alert(selIndex);
+         window.location="comprobacion.php?numero_contrato="+selIndex+"&fecha_documento="+fechadoc+"&descripcion="+descrip;
+    }
+</script>
+
+
+
+<script lenguage="javascript" type="text/javascript">
+         function mostrarText3(){
+    var selObj = document.getElementById('scontra3');
+      var fechadoc  = (document.getElementById('fechadoc2').value);
+       var descrip = (document.getElementById('descripcion2').value);
+       var selIndex = selObj.options[selObj.selectedIndex].text;
+         alert(selIndex);
+         window.location="documentosa.php?numero_contrato="+selIndex+"&fecha_documento="+fechadoc+"&descripcion="+descrip;
+    }
+</script>
+
   <div id="contec">
     <div class="container1">
       <div class="row">
@@ -261,6 +306,20 @@
           <h2 class="fuu"> COMPROBACIÓN </h2>
           <label id="textcon" class="control-label"> Contrato: </label>
           <select id="scontra" class="scontra" name="scontra">
+
+		  <?php
+                if (isset($_GET["flag"])) {
+              $flag=unserialize($_GET["flag"]);
+              $valor=serialize($flag);
+              foreach ($flag as $key=> $val) {
+                  ?>
+                  <option value="<?php print($val['id_contrato']); ?>"><?php print($val['numero_contrato']); ?></option>
+                  <?php
+              }
+
+}
+                  ?>
+		
           </select>
           <div id="dfechad">
             <label id="tfechdoc" class="control-label"> Fecha del documento: </label>
@@ -271,7 +330,7 @@
             <textarea  id="descripcion" class="form-control" rows="5"></textarea>
           </div>
           <div id="dbtncomprobacion">
-              <button type="submit" id="bcomprobacion" class="btn btn-primary" name="button"> Guardar </button>
+              <button type="button" id="bcomprobacion" class="btn btn-primary" onclick="mostrarText();" name="bcomprobacion"> Guardar </button>
           </div>
         </div>
       </div>
@@ -284,31 +343,46 @@
                 <h2 class="fuu"> CONVENIOS MODIFICADOS </h2>
               <div id ="dcontrato">
                 <label id="textcon" class="control-label"> Contrato: </label>
-                <select id="scontra" class="scontra" name="scontra">
+                <select id="scontra2" class="scontra2" name="scontra2">
+
+		 <?php
+                if (isset($_GET["flag"])) {
+              $flag=unserialize($_GET["flag"]);
+              $valor=serialize($flag);
+              foreach ($flag as $key=> $val) {
+                  ?>
+                  <option value="<?php print($val['id_contrato']); ?>"><?php print($val['numero_contrato']); ?></option>
+                  <?php
+              }
+
+}
+                  ?>
+
+
                 </select>
               </div>
             <div id="dmontomaximo">
               <label id="textmontomaximo" class="control-label"> Monto maximo: </label>
-              <input class="form-control" id="montomax" placeholder="Monto Maximo" name="monto_maximo" type="number" step="0.1" >
+              <input class="form-control" id="montomax" placeholder="Monto Maximo" name="montomax" type="number" step="0.1" >
             </div>
             <div id="dmontominimo">
               <label id="textmontominimo" class="control-label"> Monto minimo: </label>
-              <input class="form-control" id="montomin" placeholder="Monto Minimo" name="monto_minimo" type="number" step="0.1" >
+              <input class="form-control" id="montomin" placeholder="Monto Minimo" name="montomin" type="number" step="0.1" >
             </div>
             <div id="diniciovigencia">
               <label id="textiniciovigencia" class="control-label"> Inicio vigencia: </label>
-              <input class="form-control" id="iniciovigencia" name="fecha" type="date" >
+              <input class="form-control" id="iniciovigencia" name="iniciovigencia" type="date" >
             </div>
             <div id="dfinvigencia">
               <label id="textfinvigencia" class="control-label"> Fin vigencia: </label>
-              <input class="form-control" id="finvigencia" name="fecha" type="date" >
+              <input class="form-control" id="finvigencia" name="finvigencia" type="date" >
             </div>
             <div id="dfechaentrega">
               <label id="textfechaentrega" class="control-label"> Fecha entraga: </label>
-              <input class="form-control" id="fechaentrega" name="fecha" type="date" >
+              <input class="form-control" id="fechaentrega" name="fechaentrega" type="date" >
             </div>
             <div id="dbtncomprobacion">
-                <button type="submit" id="bcomprobacion" class="btn btn-primary"  name="button"> Guardar </button>
+                <button type="button" id="bcomprobacion" class="btn btn-primary" onclick="mostrarTexts();" name="button"> Guardar </button>
             </div>
             </div>
           </div>
@@ -321,18 +395,31 @@
             <div class='col-sm-20 col-md-20 col-ld-20'>
                 <h2 class="fuu"> DOCUMENTOS ADICIONALES </h2>
                   <label id="textcon" class="control-label"> Contrato: </label>
-                  <select id="scontra" class="scontra" name="scontra">
+                  <select id="scontra3" class="scontra3" name="scontra3">
+			<?php
+                if (isset($_GET["flag"])) {
+              $flag=unserialize($_GET["flag"]);
+              $valor=serialize($flag);
+              foreach ($flag as $key=> $val) {
+                  ?>
+                  <option value="<?php print($val['id_contrato']); ?>"><?php print($val['numero_contrato']); ?></option>
+                  <?php
+              }
+
+}
+                  ?>
+
                   </select>
               <div id="dfechad">
                   <label id="tfechdocadicional" class="control-label"> Fecha del documento: </label>
-                  <input class="form-control" id="fechadocadicional" name="fecha" type="date" >
+                  <input class="form-control" id="fechadoc2" name="fecha" type="date" >
               </div>
               <div id="divdes">
                   <label id="textdesadicional" class="control-label"> Descripción: </label>
-                  <textarea  id="descripcionadicional" class="form-control" rows="5"></textarea>
+                  <textarea  id="descripcion2" class="form-control" rows="5"></textarea>
               </div>
               <div id="dbtncomprobacion">
-                  <button type="submit" id="bcomprobacion" class="btn btn-primary" name="button"> Guardar </button>
+                  <button type="button" id="bcomprobacion" onclick="mostrarText3();" class="btn btn-primary" name="button"> Guardar </button>
               </div>
               </div>
             </div>

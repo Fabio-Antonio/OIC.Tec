@@ -7,11 +7,12 @@ $password = "YZvwx-00";
     $conn = new PDO("mysql:host=$servername;dbname=sisco", $username, $password);
     // set the PDO error mode to exception
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    echo "Connected successfully";
     }
 catch(PDOException $e)
     {
-    echo "Connection failed: " . $e->getMessage();
+    echo "<script> alert ('Revise la conexión al servidor $e->getMessage()')
+window.location.replace('index.php');</script>";
+;
     }
 
-
+    

@@ -10,7 +10,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/estilos.css" rel="stylesheet">
     <link href="https://cdn.datos.gob.mx/assets/css/main.css" rel="stylesheet">
-  </head>
+		  </head>
   <body class="front">
     <main>
     <nav class="navbar navbar-inverse sub-navbar navbar-fixed-top">
@@ -258,26 +258,25 @@
         <h3 class="selc"> Seleccionar el contrato a consultar </h3>
         <!--inicio de buscar -->
         <div id="busca">
-       
-        <div class="btn-group bootstrap-select form-control hidden-xs hidden-sm">
-          <button type="button" class="btn dropdown-toggle bs-placeholder btn-default" data-toggle="dropdown" role="button" title="Filtrar por tema">
+          <div class="btn-group bootstrap-select form-control hidden-xs hidden-sm">
+          <button type="button" class="btn dropdown-toggle bs-placeholder btn-default" id="drop" data-toggle="dropdown" role="button" title="Filtrar por tema">
             <span class="filter-option pull-left">Buscar</span>
             <span class="bs-caret"></span>
           </button>
-          <div class="dropdown-menu open" role="combobox">
-          <?php
+	    <div class="dropdown-menu open" role="combobox">
+              <ul id="lista" class="dropdown-menu inner" role="listbox" aria-expanded="false">
+		 <?php
                 if (isset($_GET['flag'])) {
               $flag=unserialize($_GET['flag']);
               $valor=json_encode($flag);
-                
+
               foreach ($flag as $key=> $val) {
 
                   ?>
 
-            <ul class="dropdown-menu inner" role="listbox" aria-expanded="false">
-               <li data-original-index="<?php print($val['id_contrato']);?>">
+               <li data-original-index="<?php print($val['id_contrato']);?>" id="<?php print($val['id_contrato']);?>">
                 <a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false">
-                  <span class="text"><?php print($val['numero_contrato']); ?></span>
+                  <span  class="text"><?php print($val['numero_contrato']); ?></span>
                   <span class="glyphicon glyphicon-ok check-mark"></span>
                 </a>
               </li>
@@ -290,36 +289,33 @@
 
     </ul>
           </div>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+
         <script lenguage="javascript" type="text/javascript">
-	 function mostrarText(){
-     var Variable='<?=$valor?>'; 
-    var selObj = document.getElementById('contrato');
-       var selIndex = selObj.options[selObj.selectedIndex].text;
-         alert(selIndex);   
-         window.location="consulta.php?numero_contrato="+selIndex+"&flag="+Variable;
-    }
-</script>
 
-          <select name="tag" id="contrato" custom-select="custom-select" class="form-control hidden-xs hidden-sm" tabindex="-98">
-           <?php
-		if (isset($_GET["flag"])) {
-              $flag=unserialize($_GET["flag"]);
-              $valor=serialize($flag);
-              foreach ($flag as $key=> $val) {
-                  ?>
-                  <option value="<?php print($val['id_contrato']); ?>"><?php print($val['numero_contrato']); ?></option>
-                  <?php
-              }
-
+            $("#lista li").on("click",function() { 
+                var value = $(this).text();
+		var value2=value.trim(); 
+                var Variable='<?=$valor?>';
+                var sOptionVal = $(this).val();
+                 var bool=confirm("Se desea consultar: "+value2);
+  if(bool){
+         window.location="consulta.php?numero_contrato="+value2+"&flag="+Variable;
+ 	}else{
+alert("solicitud cancelada");
 }
-                  ?>
-          </select>
-        </div>
-
-   
+          });
+           </script>
        
-        <button id ="ser" onclick= "mostrarText();" class="btn btn-primary">
-          <div class="glyphicon glyphicon-search"></div>
+        </div>
+<div class="modal later-modal">
+  <p>Select a time to deliver.</p>
+</div>
+     <button id ="ser"  class="btn btn-primary">
+        <div class="glyphicon glyphicon-search"></div>
         </button>
         </div>
       </div>
@@ -434,8 +430,13 @@ $garantia_cumplimiento="";
             <tr>
                 <th><label id="ccp" class="col-sm-20">Contrato Abierto</label></th><td><input id="ck" type="checkbox" name="Entregables"></td>
             </tr>
+               
           </table>
     </div>
+ 
+<div class="panel-body">
+           <button class="btn btn-primary btn-lg" onclick="saludo();" > Descargar pdf </button>
+          </div>
 
 <script language="javascript" type="text/javascript">
 

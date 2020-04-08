@@ -4,10 +4,14 @@ $directorio = 'uploads/';
 $subir_archivo = $directorio.basename($_FILES['uploadedfile']['name']);
 
 if (move_uploaded_file($_FILES['uploadedfile']['tmp_name'], $subir_archivo)) {
-      echo "El archivo es válido y se cargó correctamente";
-	   
-    } else {
-       echo "La subida ha fallado";
+     
+  } else {
+       echo $comparar_js = "<script type='text/javascript'>confirm('La subida ha fallado desea intentarlo de nuevo?')</script>";
+if($comparar_js){ // Si true=="<script type='text...."
+    header("location:lectura.html"); // Esto no se puede dar nunca
+}else{
+    header("location:principal.html"); // Salida: "No entra en el if"
+};
     }    
 
 
@@ -23,14 +27,20 @@ while ($data = fgetcsv ($fp, 1000, ","))
 { 
 $num = count ($data); 
 
-$row++; 
-echo "$row- ".$data[0].$data[1].$data[2].$data[3]; 
-$insertar="INSERT INTO administrador( nombre, apellido_paterno, apellido_materno,email) VALUE ( '.$data[0]', '.$data[1]','.$data[2]','.$data[3]')"; 
+$row++;
+ 
+echo "<script>alert('Datos ingresados correctamente $data[0],$data[1],$data[2],$data[3]')
+window.location.replace('lectura.html');</script>";
+$insertar="INSERT INTO administrador( nombre, apellido_paterno, apellido_materno,email) VALUE ( '$data[0]', '$data[1]','$data[2]','$data[3]')"; 
 
 $stmt = $conn->prepare($insertar);
 
  $stmt->execute();
+
+
+
 } 
+
 fclose ($fp); 
     
         

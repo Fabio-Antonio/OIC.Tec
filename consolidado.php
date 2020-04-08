@@ -1,7 +1,7 @@
 <?php
     require_once("conexion.php");
 
-       $procedimineto = $_POST["procedimiento"];  
+       $procedimiento = $_POST["procedimiento"];  
        $monto_total = $_POST["monto_total"];
        
  $statement = $conn->prepare("INSERT INTO consolidado (procedimiento,monto_total)VALUES(?,?)");

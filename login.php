@@ -9,26 +9,28 @@
 $statement->bindParam(1, $nombre);
 $statement->bindParam(2, $password);
 $statement->execute();
-   
-   
-      
-   
-    $response = array();
-   
-    $response["success"] = false;  
-    
-    while ($row = $statement->fetch()){
+       if($statement->rowCount()>0){
+       while ($row = $statement->fetch()){
     $response["success"] = true; 
         
         if($row['permiso']=="administrador"){
+       
         header("location:principal.html");
        
 	}else if($row['permiso']=="empleado"){
 	header("location:lectura.html");
-	}
-       
+	}       
+
 }
-      
-   $conn = null;
+
+	}else {
+          echo "<script>
+                alert('el usuario no fue encontrado')
+                window.location=('index.php');
+    </script>";
+	}
+
+
+  $conn = null;
         
 ?>

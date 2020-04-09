@@ -2,9 +2,16 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
     <title></title>
-    <link href="https://cdn.datos.gob.mx/assets/css/main.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/estilos.css" rel="stylesheet">
+    <link href="https://cdn.datos.gob.mx/assets/css/main.css" rel="stylesheet">
+    <link href="https://cdn.datos.gob.mx/assets/img/favicon.ico" rel="shortcut icon">
+    <link href="https://cdn.datos.gob.mx/bower_components/dgm-footer/dgm-footer.html" rel="import">
+
   </head>
   <body class="front">
     <main>
@@ -42,7 +49,7 @@
     <!-- INICIA REGISTRO -->
     <!-- -->
     <!-- -->
-
+<div id="dregistro">
   <form  role="form" id="formlg1" action="usuarios.php" method="POST">
     <div class="container1">
       <div class="row">
@@ -55,21 +62,21 @@
 
 
 
-<div class="form-group">
+            <div class="form-group">
               <label class="control-label"> Apellido paterno: </label>
               <input class="form-control"  placeholder="Apellido_paterno" type="text" name="apellido_paterno">
             </div>
 
 
 
-<div class="form-group">
+            <div class="form-group">
               <label class="control-label"> Apellido materno: </label>
               <input class="form-control"  placeholder="Apellido_materno" type="text" name="apellido_materno">
             </div>
 
 
 
-<div class="form-group">
+            <div class="form-group">
               <label class="control-label"> Correo electronico: </label>
               <input class="form-control"  placeholder="email" type="text" name="email">
             </div>
@@ -85,7 +92,7 @@
             <div class="form-group" >
               <h2>
                 TIPO DE USUARIO:
-              
+
     </h2>
      <div class="radio">
   <label>
@@ -102,20 +109,65 @@
 		<p>
               <button class="btn btn-primary pull-right" type="submit" > CANCELAR </button>
 		</p>
-		<p>              
+		<p>
 <button  class="btn btn-primary pull-right" type="submit"> GUARDAR </button>
-</p>            
+</p>
 </div>
           </div>
         </div>
       </div>
+
 </form>
+
+</div>
+
           <!-- -->
           <!-- -->
           <!-- TERMINA REGISTRO -->
           <!-- -->
           <!-- -->
   </main>
+  <footer>
+  <div class="contenedor-todo-footer">
+
+  <div class="contenedor-body">
+
+    <div class="columna1">
+      <h1> Instituto Tecnológico de Tláhuac </h1>
+      <img src="itt.png" alt="ITT">
+    </div>
+
+    <div class="columna2">
+      <h1> BESA </h1>
+      <img src="logo.png" alt="BESA">
+    </div>
+
+    <div class="columna3">
+      <h1> SEP </h1>
+      <img src="fpp.png" alt="sep">
+    </div>
+
+    <div class="columna4">
+      <h1> TECNM</h1>
+      <img src="LOGO_TECNM_BLANCO.png" alt="TECNM">
+    </div>
+
+  </div>
+
+  </div>
+
+  <div class="contenedor-footer">
+    <div class="copyright">
+      <a>&copy; 2020 Todos los Derechos Reservados</a>
+    </div>
+    <div class="autores">
+      <a>Antonio Lorenzana Fabio Antonio</a> |
+      <a>Flores Reyes Jahir</a> |
+      <a>Reyes Villafranca Jose Pedro</a>
+    </div>
+  </div>
+
+</footer>
 
   </body>
 </html>

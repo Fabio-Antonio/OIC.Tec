@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -250,6 +250,10 @@
   </div>
 
 <div id="centro">
+  <div class="container1">
+    <div class="row">
+      <div class='col-sm-150 col-md-150 col-ld-150'>
+
       <div id="tit">
         <h1 class="tb"> B.E.S.A </h1>
         <h2 class="ts"> Sistema de Seguimiento a Contratos</h2>
@@ -292,13 +296,13 @@
 
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
         <script lenguage="javascript" type="text/javascript">
 
-            $("#lista li").on("click",function() { 
+            $("#lista li").on("click",function() {
                 var value = $(this).text();
-		var value2=value.trim(); 
+		var value2=value.trim();
                 var Variable='<?=$valor?>';
                 var sOptionVal = $(this).val();
                  var bool=confirm("Se desea consultar: "+value2);
@@ -309,7 +313,7 @@ alert("solicitud cancelada");
 }
           });
            </script>
-       
+
         </div>
 <div class="modal later-modal">
   <p>Select a time to deliver.</p>
@@ -376,10 +380,16 @@ $garantia_cumplimiento="";
 }
        ?>
 
-
+     </div>
+     </div>
+     </div>
 
     <!-- inicio de mostrar consulta -->
     <div id="centro2">
+      <div class="container1">
+        <div class="row">
+          <div class='col-sm-350 col-md-350 col-ld-350'>
+
       <h2 class="con"> Consulta fecha adjudicación y formalización </h2>
       <br>
       <div>
@@ -388,7 +398,7 @@ $garantia_cumplimiento="";
                 <th><label id="ccp" class="col-sm-20">Numero de contrato</label></th>
        <td> <input id="cp" class="form-control" type="text" placeholder="NÚMERO DE CONTRATO"  readonly="readonly" value="<?php echo $numero_contrato;?>"</td>
 
-            </tr> 
+            </tr>
             <tr>
               <th><label id="ccp" class="col-sm-20">Número Contrato Compranet</label></th><td><input class="form-control" id="cp" placeholder="Número Contrato Compranet" type="text"  readonly="readonly" value="<?php echo $contrato_compranet; ?>" ></td>
               <th><label id="ccp" class="col-sm-20">Suficiencia Presupuestal</label></th><td><input class="form-control" id="sp" placeholder="Suficiencia Presupuestas" type="text"  readonly="readonly"  value="<?php echo $suficiencia ?>"></td>
@@ -430,14 +440,16 @@ $garantia_cumplimiento="";
             <tr>
                 <th><label id="ccp" class="col-sm-20">Contrato Abierto</label></th><td><input id="ck" type="checkbox" name="Entregables"></td>
             </tr>
-               
+
           </table>
     </div>
- 
-<div class="panel-body">
-           <button class="btn btn-primary btn-lg" onclick="saludo();" > Descargar pdf </button>
-          </div>
 
+<div id="dbtdescargar">
+           <button class="btn btn-primary btn-lg" onclick="saludo();" id="btdescargar" > Descargar pdf </button>
+          </div>
+        </div>
+        </div>
+        </div>
 <script language="javascript" type="text/javascript">
 
 function saludo(){
@@ -455,6 +467,5 @@ function saludo(){
 		<script src="js/bootstrap.min.js"></script>
 
  </main>
-
   </body>
 </html>

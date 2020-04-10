@@ -249,6 +249,10 @@
   <!---inicia las capturas----------------------------------------->
   <!---------------------------------------------------------------------->
   <div id="funpro">
+    <div class="container1">
+      <div class="row">
+        <div class='col-sm-150 col-md-150 col-ld-150'>
+
     <div id="tif">
       <h2 class="fuu"> FUNDAMENTO LEGAL</h2>
     </div>
@@ -269,6 +273,16 @@
 		</form>
           </div>
     </div>
+  </div>
+</div>
+</div>
+
+
+<div id="dprocediminetos">
+<div class="container1">
+  <div class="row">
+    <div class='col-sm-150 col-md-150 col-ld-150'>
+
     <div id="tif">
       <h2 class="fuu"> PROCEDIMIENTOS CONTRATACIÓN</h2>
     </div>
@@ -311,9 +325,11 @@
 
     </div>
   </div>
+</div>
+</div>
+</div>
 
-
-
+</div>
 
 
 

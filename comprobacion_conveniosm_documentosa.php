@@ -319,7 +319,7 @@
 
 }
                   ?>
-		
+
           </select>
           <div id="dfechad">
             <label id="tfechdoc" class="control-label"> Fecha del documento: </label>
@@ -394,6 +394,7 @@
           <div class="row">
             <div class='col-sm-20 col-md-20 col-ld-20'>
                 <h2 class="fuu"> DOCUMENTOS ADICIONALES </h2>
+                <div id ="dcontrato2">
                   <label id="textcon" class="control-label"> Contrato: </label>
                   <select id="scontra3" class="scontra3" name="scontra3">
 			<?php
@@ -410,6 +411,7 @@
                   ?>
 
                   </select>
+                </div>
               <div id="dfechad">
                   <label id="tfechdocadicional" class="control-label"> Fecha del documento: </label>
                   <input class="form-control" id="fechadoc2" name="fecha" type="date" >

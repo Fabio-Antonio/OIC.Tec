@@ -1027,9 +1027,208 @@ box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
   -moz-box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
   box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
 }
+
 /*--------------------------------------------------------------*/
 /*--------------------------------------------------------------*/
 /*-----------fin Comprobacion_conveniosm_documentosa---------------------------------------------*/
+/*--------------inicio motivo_inconfor_entregables------------------------------------------------*/
+/*--------------------------------------------------------------*/
+
+.textmotivo{
+  margin-left: 300px;
+  background-color: #e5e2eb;
+  border: 0px;
+  font-size: 18px;
+  text-align: left;
+}
+#inmotivoin{
+  width: 350px;
+  margin-left: 400px;
+  margin-top: -40px;
+}
+.dcontratoin{
+  margin-left: 80px;
+  margin-top: 30px;
+  width: 450px;
+}
+.textcontratoin{
+  background-color: #e5e2eb;
+  border: 0px;
+  font-size: 18px;
+  text-align: left;
+}
+.secontra{
+  margin-left: 20px;
+  width: 300px;
+  height: 35px;
+  background-color: white;
+ -moz-border-radius: 5px;
+ -webkit-border-radius:5px;
+ padding: 10px;
+}
+.secontra:focus{
+  border: 1.5px solid #00CC99;
+  -webkit-box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
+  -moz-box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
+  box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
+}
+.dmotivoin{
+  margin-left: 500px;
+  margin-top: -40px;
+}
+.textmotivoin{
+  background-color: #e5e2eb;
+  border: 0px;
+  font-size: 18px;
+  text-align: left;
+}
+.semotivo{
+  margin-left: 20px;
+  width: 300px;
+  height: 35px;
+  background-color: white;
+ -moz-border-radius: 5px;
+ -webkit-border-radius:5px;
+ padding: 10px;
+}
+.semotivo:focus{
+  border: 1.5px solid #00CC99;
+  -webkit-box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
+  -moz-box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
+  box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
+}
+.dnombrein{
+  margin-top: 30px;
+  margin-left: 80px;
+}
+.textnombrein{
+  background-color: #e5e2eb;
+  border: 0px;
+  font-size: 18px;
+  text-align: left;
+}
+#innombreinco{
+  width: 500px;
+  margin-left: 250px;
+  margin-top: -40px;
+}
+.dsentidoresolucion{
+  margin-top: 30px;
+  margin-left: 80px;
+}
+.textsentido{
+  background-color: #e5e2eb;
+  border: 0px;
+  font-size: 18px;
+  text-align: left;
+}
+#insentido{
+  width: 500px;
+  margin-left: 250px;
+  margin-top: -40px;
+}
+.dcontratoen{
+  width: 430px;
+  margin-left: 300px;
+}
+.dfechaentregamo{
+  margin-left: 10px;
+  margin-top: 30px;
+}
+#textfechaentregamo{
+  background-color: #e5e2eb;
+  border: 0px;
+  font-size: 18px;
+  text-align: left;
+}
+#infechaentregamo{
+  width: 300px;
+  height: 40px;
+  margin-left: 150px;
+  margin-top: -50px;
+  font-size: 19px;
+}
+.dfechaentregamaxima{
+  margin-left: 480px;
+  margin-top: -30px;
+}
+#textfechaentregamaxima{
+  background-color: #e5e2eb;
+  border: 0px;
+  font-size: 18px;
+  text-align: left;
+}
+#infechaentregamaxima{
+  width: 300px;
+  height: 40px;
+  margin-left: 230px;
+  margin-top: -50px;
+  font-size: 19px;
+}
+.dnombreentregables{
+  margin-top: 30px;
+  margin-left: 10px;
+}
+.textnombreentregables{
+  background-color: #e5e2eb;
+  border: 0px;
+  font-size: 18px;
+  text-align: left;
+}
+#innombreentregables{
+  width: 600px;
+  margin-left: 250px;
+  margin-top: -40px;
+}
+.dcantidadentregable{
+    margin-top: 30px;
+    margin-left: 10px;
+}
+.textcantidade{
+  background-color: #e5e2eb;
+  border: 0px;
+  font-size: 18px;
+  text-align: left;
+}
+#incantidade{
+  width: 600px;
+  margin-left: 250px;
+  margin-top: -40px;
+}
+.ddireccione{
+  margin-top: 30px;
+  margin-left: 10px;
+}
+.textdireccione{
+  background-color: #e5e2eb;
+  border: 0px;
+  font-size: 18px;
+  text-align: left;
+}
+#indireccione{
+  width: 600px;
+  margin-left: 250px;
+  margin-top: -40px;
+}
+.ddescripcion{
+  margin-top: 30px;
+  margin-left: 10px;
+}
+.textdescripcion{
+  background-color: #e5e2eb;
+  border: 0px;
+  font-size: 18px;
+  text-align: left;
+}
+#descripcionn{
+  width: 600px;
+  margin-left: 250px;
+  margin-top: -40px;
+}
+
+/*--------------------------------------------------------------*/
+/*--------------------------------------------------------------*/
+/*-----------fin motivo_inconfor_entregables---------------------------------------------*/
 /*--------------footer------------------------------------------------*/
 /*--------------------------------------------------------------*/
 
@@ -1192,7 +1391,7 @@ footer{
   }
 }
 .front{
-  height: 0px;
+  height: 10px;
 }
 
 

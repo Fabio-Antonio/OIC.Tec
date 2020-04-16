@@ -254,6 +254,21 @@
 <!-- INICIA REGISTRO------------------------------------>
 <!------------------------------------------------------>
 <!------------------------------------------------------>
+<script  lenguage="javascript" type="text/javascript">
+         function  mostrarText(){
+    var  selObj  =  document.getElementById('secontra');
+      var  fecha_entrega   =(document.getElementById('infechaentregamo').value);
+     var  fecha_entrega_maxima   =(document.getElementById('infechaentregamaxima').value);
+     var  nombre_entregable   = (document.getElementById('innombreentregables').value);
+     var  cantidad_entregable   = (document.getElementById('incantidade').value);
+     var  direccion_entregable  =(document.getElementById('indireccione').value);
+     var  descripcion  =(document.getElementById('descripcionn').value);
+
+       var  selIndex  = selObj.options[selObj.selectedIndex].text;
+         alert(selIndex);
+         window.location="entregable.php?numero_contrato="+selIndex+"&fecha_entrega="+fecha_entrega+"&nombre_entregable="+nombre_entregable+"&fecha_entrega_maxima="+fecha_entrega_maxima+"&cantidad_entregable="+cantidad_entregable+"&direccion_entregable="+direccion_entregable+"&descripcion="+descripcion;
+    }
+</script>
 
   <div id="contec">
     <div class="container1">
@@ -263,35 +278,46 @@
         <div class="dcontratoen">
           <label class="textcontratoin">Contrato:</label>
             <select id="secontra" class="secontra" name="secontra">
-              <option value=""></option>
-            </select>
+		 <?php
+                if (isset($_GET["flag"])) {
+              $flag=unserialize($_GET["flag"]);
+              $valor=serialize($flag);
+              foreach ($flag as $key=> $val) {
+                  ?>
+                  <option value="<?php print($val['id_contrato']); ?>"><?php print($val['numero_contrato']); ?></option>
+                  <?php
+              }
+
+}
+                  ?>		
+     </select>
         </div>
         <div class="dfechaentregamo">
           <label id="textfechaentregamo" class="control-label"> Fecha entraga: </label>
-          <input class="form-control" id="infechaentregamo" name="fechaentrega" type="date" >
+          <input class="form-control" id="infechaentregamo" name="fecha_entrega" type="date" >
         </div>
         <div class="dfechaentregamaxima">
           <label id="textfechaentregamaxima" class="control-label"> Fecha Entraga Maxima: </label>
-          <input class="form-control" id="infechaentregamaxima" name="fechaentrega" type="date" >
+          <input class="form-control" id="infechaentregamaxima" name="fecha_entrega_maxima" type="date" >
         </div>
         <div class="dnombreentregables">
           <label class="textnombreentregables"> Nombre Entregable: </label>
-          <input type="text" class="form-control" id="innombreentregables" name="" value="" placeholder="Nombre Entregable">
+          <input type="text" class="form-control" id="innombreentregables" name="nombre_entregable"  placeholder="Nombre Entregable">
         </div>
         <div class="dcantidadentregable">
           <label class="textcantidade"> Cantidad Entregables:</label>
-          <input type="text" class="form-control" id="incantidade" name="" value="" placeholder="Cantidad Entregables">
+          <input type="number" class="form-control" id="incantidade" name="cantidad_entregable"  placeholder="Cantidad Entregables">
         </div>
         <div class="ddireccione">
           <label class="textdireccione"> Dirección Entregable:</label>
-          <input type="text" class="form-control" id="indireccione" name="" value="" placeholder="Dirección Entregables">
+          <input type="text" class="form-control" id="indireccione" name="direccion_entregable"  placeholder="Dirección Entregables">
         </div>
         <div class="ddescripcion">
           <label class="textdescripcion">Descripción:</label>
-          <textarea  id="descripcionn" class="form-control" rows="5" placeholder="Descripción"></textarea>
+          <textarea  id="descripcionn" class="form-control" name="descripcionn" rows="5" placeholder="Descripción"></textarea>
         </div>
         <div id="dbtncomprobacion">
-            <button type="button" id="bcomprobacion" class="btn btn-primary" onclick="mostrarTexts();" name="button"> Guardar </button>
+            <button type="button" id="bcomprobacion" class="btn btn-primary" onclick="mostrarText();" name="button"> Guardar </button>
         </div>
         </div>
       </div>

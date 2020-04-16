@@ -254,17 +254,33 @@
 <!-- INICIA REGISTRO------------------------------------>
 <!------------------------------------------------------>
 <!------------------------------------------------------>
+<script lenguage="javascript" type="text/javascript">
+function mostrarText(){
+var selObj =document.getElementById('secontra');
+var selObj2 = document.getElementById('semotivo');
+var nombre_inco =document.getElementById('innombreinco').value;
+var sentido = document.getElementById('insentido').value;
+var selIndex = selObj.options[selObj.selectedIndex].text;
+var selIndex2 = selObj2.options[selObj2.selectedIndex].text;
+alert(selIndex+""+selIndex2);
 
+window.location="inconformidades.php?motivo="+selIndex2+"&numero_contrato="+selIndex+"&nombre_inconforme="+nombre_inco+"&sentido_resolucion="+sentido;
+
+
+}
+</script>
   <div id="contec">
     <div class="container1">
       <div class="row">
         <div class='col-sm-20 col-md-20 col-ld-20'>
           <h2 class="fuu"> MOTIVO INCONFORMIDAD </h2>
+	<form method"POST">
           <label class="textmotivo">Motivo:</label>
-          <input type="text" class="form-control" id="inmotivoin" name="" value="" placeholder="Motivo">
+          <input type="text" class="form-control" id="inmotivoin" name="motivo"  placeholder="Motivo">
           <div id="dbtncomprobacion">
-              <button type="button" id="bcomprobacion" class="btn btn-primary" onclick="mostrarText();" name="bcomprobacion"> Guardar </button>
+              <button type="submit" id="bcomprobacion" class="btn btn-primary" onclick=this.form.action="motivo.php" name="bcomprobacion"> Guardar </button>
           </div>
+	</form>
         </div>
       </div>
     </div>
@@ -280,23 +296,46 @@
               <h2 class="fuu"> INCONFORMIDADES </h2>
               <div class="dcontratoin">
                 <label class="textcontratoin">Contrato:</label>
+
                 <select id="secontra" class="secontra" name="secontra">
-                  <option value=""></option>
+			<?php
+			if(isset($_GET["flag"])){
+                         $flag=unserialize($_GET["flag"]);
+			foreach($flag as $key => $val){
+			?>
+                  <option value="<?php print($val['id_contrato']); ?>"><?php print($val['numero_contrato']); ?> </option>
+			<?php
+			}
+		}
+		?>
                 </select>
+
               </div>
               <div class="dmotivoin">
                 <label class="textmotivoin">Motivo:</label>
+
                 <select id="semotivo" class="semotivo" name="semotivo">
-                  <option value=""></option>
+			  <?php
+                        if(isset($_GET["flag2"])){
+                         $flag=unserialize($_GET["flag2"]);
+                        foreach($flag as $key => $val){
+                        ?>
+                  <option value="<?php print($val['id_motivo']); ?>"><?php print($val['motivo']); ?></option>
+		 <?php
+                        }
+                }
+                ?>
+
                 </select>
+
               </div>
               <div class="dnombrein">
                 <label class="textnombrein">Nombre Inconformidad:</label>
-                <input type="text" class="form-control" id="innombreinco" name="" value="" placeholder="Nombre Inconformidad">
+                <input type="text" class="form-control" id="innombreinco" name="innombreinco"  placeholder="Nombre Inconformidad">
               </div>
               <div class="dsentidoresolucion">
                 <label class="textsentido">Sentido Resolución:</label>
-                <input type="text" class="form-control" id="insentido" name="" value="" placeholder="Sentido Resolución">
+                <input type="text" class="form-control" id="insentido" name="insentido"  placeholder="Sentido Resolución">
               </div>
               <div id="dbtncomprobacion">
                   <button type="button" id="bcomprobacion" class="btn btn-primary" onclick="mostrarText();" name="bcomprobacion"> Guardar </button>
@@ -321,7 +360,6 @@
   <div class="contenedor-todo-footer">
 
   <div class="contenedor-body">
-
     <div class="columna1">
       <h1> Instituto Tecnológico de Tláhuac </h1>
       <img src="itt.png" alt="ITT">

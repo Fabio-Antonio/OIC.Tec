@@ -1,5 +1,5 @@
 <?php 
- $servername = "192.168.0.19:3306";
+ $servername = "192.168.0.22:3306";
 $username = "root";
 $password = "YZvwx-00";
  
@@ -10,7 +10,7 @@ $password = "YZvwx-00";
     }
 catch(PDOException $e)
     {
-    echo "<script> alert ('Revise la conexión al servidor $e->getMessage()')
+    echo "<script> alert ('Revise la conexión al servidor')
 window.location.replace('index.php');</script>";
 ;
     }

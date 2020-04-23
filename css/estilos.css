@@ -1229,6 +1229,269 @@ box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
 /*--------------------------------------------------------------*/
 /*--------------------------------------------------------------*/
 /*-----------fin motivo_inconfor_entregables---------------------------------------------*/
+/*--------------facturas_pagos_efectuados.html------------------------------------------------*/
+/*--------------------------------------------------------------*/
+
+.fasecontra{
+    margin-left: 20px;
+    width: 300px;
+    height: 35px;
+    background-color: white;
+   -moz-border-radius: 5px;
+   -webkit-border-radius:5px;
+   padding: 10px;
+  }
+.fasecontra:focus{
+    border: 1.5px solid #00CC99;
+    -webkit-box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
+    -moz-box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
+    box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
+  }
+.dnumerofactura{
+  width: 535px;
+  height: 40px;
+  margin-left: 10px;
+  margin-top: 30px;
+
+}
+.textnumerofactura{
+    background-color: #e5e2eb;
+    border: 0px;
+    font-size: 18px;
+    text-align: left;
+  }
+#innumerofactura{
+  width: 350px;
+  margin-left: 180px;
+  margin-top: -40px;
+}
+.dmontos{
+  width: 460px;
+  margin-left: 570px;
+  margin-top: -40px;
+}
+.textmontos{
+    background-color: #e5e2eb;
+    border: 0px;
+    font-size: 18px;
+    text-align: left;
+  }
+#montos{
+  width: 350px;
+  margin-left: 100px;
+  margin-top: -40px;
+}
+.dfechafactura{
+  width: 535px;
+  height: 40px;
+  margin-left: 10px;
+  margin-top: 30px;
+}
+.textfechafactura{
+  background-color: #e5e2eb;
+  border: 0px;
+  font-size: 18px;
+  text-align: left;
+}
+#fechafactura{
+  width: 350px;
+  margin-left: 180px;
+  margin-top: -40px;
+}
+.dfechapago{
+  margin-top: -40px;
+  margin-left: 560px;
+}
+.textfechapago{
+  background-color: #e5e2eb;
+  border: 0px;
+  font-size: 18px;
+  text-align: left;
+}
+#fechapago{
+  width: 337px;
+  margin-left: 120px;
+  margin-top: -40px;
+}
+.ddescripcionfactura{
+  margin-top: 30px;
+  margin-left: 10px;
+}
+.textdescripcionfactura{
+  background-color: #e5e2eb;
+  border: 0px;
+  font-size: 18px;
+  text-align: left;
+  margin-top: -855px;
+}
+#texadescripcionfactura{
+  margin-left: 180px;
+  margin-top: -35px;
+  width: 800px;
+}
+/*pagos efectuados*/
+.secontratopagoe{
+  margin-left: 20px;
+  width: 300px;
+  height: 35px;
+  background-color: white;
+ -moz-border-radius: 5px;
+ -webkit-border-radius:5px;
+ padding: 10px;
+  }
+.secontratopagoe:focus{
+      border: 1.5px solid #00CC99;
+      -webkit-box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
+      -moz-box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
+      box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
+    }
+.dmonto{
+  margin-top: 30px;
+  margin-left: 10px;
+}
+.textmonto{
+  background-color: #e5e2eb;
+  border: 0px;
+  font-size: 18px;
+  text-align: left;
+  margin-top: -855px;
+}
+#monto{
+  width: 337px;
+  margin-left: 120px;
+  margin-top: -40px;
+}
+.dfechapagoefectuado{
+  margin-left: 520px;
+  margin-top: -26px;
+}
+.textfechapagoefectuado{
+  background-color: #e5e2eb;
+  border: 0px;
+  font-size: 18px;
+  text-align: left;
+}
+#fechapagoefectuado{
+  width: 337px;
+  margin-left: 120px;
+  margin-top: -40px;
+}
+.ddescripcionpagos{
+  margin-top: 30px;
+  margin-left: 10px;
+}
+.textdescripcionpagoefectuado{
+  background-color: #e5e2eb;
+  border: 0px;
+  font-size: 18px;
+  text-align: left;
+  margin-top: -855px;
+}
+#texadescripcionpagoefectuado{
+  margin-left: 150px;
+  margin-top: -35px;
+  width: 800px;
+}
+/*--------------------------------------------------------------*/
+/*--------------------------------------------------------------*/
+/*-----------fin facturas_pagos_efectuados---------------------------------------------*/
+/*--------------partidas presupuestales partida------------------------------------------------*/
+/*--------------------------------------------------------------*/
+.textcontratopartida{
+    background-color: #e5e2eb;
+    border: 0px;
+    margin-left: 30px;
+    font-size: 18px;
+    text-align: left;
+  }
+.secontrapartisasp{
+      margin-left: 20px;
+      width: 300px;
+      height: 35px;
+      background-color: white;
+     -moz-border-radius: 5px;
+     -webkit-border-radius:5px;
+     padding: 10px;
+    }
+.secontrapartisasp:focus{
+      border: 1.5px solid #00CC99;
+      -webkit-box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
+      -moz-box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
+      box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
+    }
+.dclavepartida{
+  margin-left: 500px;
+  margin-top: -30px;
+}
+.textclavepartida{
+        background-color: #e5e2eb;
+        border: 0px;
+        font-size: 18px;
+        text-align: left;
+      }
+#inclavepartida{
+    width: 337px;
+    margin-left: 155px;
+    margin-top: -40px;
+}
+.textcontratosub{
+    background-color: #e5e2eb;
+    border: 0px;
+    margin-left: 30px;
+    font-size: 18px;
+    text-align: left;
+  }
+.secontatosub{
+      margin-left: 20px;
+      width: 300px;
+      height: 35px;
+      background-color: white;
+     -moz-border-radius: 5px;
+     -webkit-border-radius:5px;
+     padding: 10px;
+    }
+.secontatosub:focus{
+      border: 1.5px solid #00CC99;
+      -webkit-box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
+      -moz-box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
+      box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
+    }
+
+.dnumerosubpartida{
+      margin-left: 470px;
+      margin-top: -30px;
+    }
+.textnumerosuboartida{
+            background-color: #e5e2eb;
+            border: 0px;
+            font-size: 18px;
+            text-align: left;
+          }
+#innumerosubpartida{
+        width: 337px;
+        margin-left: 200px;
+        margin-top: -40px;
+    }
+.ddescripcionsubpartida{
+      margin-top: 30px;
+      margin-left: 10px;
+    }
+.textdescripcionsubpartida{
+      background-color: #e5e2eb;
+      border: 0px;
+      font-size: 18px;
+      text-align: left;
+      margin-top: -855px;
+    }
+#texadescripcionsubpartida{
+      margin-left: 150px;
+      margin-top: -35px;
+      width: 800px;
+    }
+
+/*--------------------------------------------------------------*/
+/*--------------------------------------------------------------*/
+/*-----------fin partidas presupuestales partida---------------------------------------------*/
 /*--------------footer------------------------------------------------*/
 /*--------------------------------------------------------------*/
 

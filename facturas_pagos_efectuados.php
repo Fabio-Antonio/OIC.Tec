@@ -255,47 +255,119 @@
 <!------------------------------------------------------>
 <!------------------------------------------------------>
 
+<script lenguage="javascript" type="text/javascript">
+         function mostrarText(){
+    var selObj = document.getElementById('fasecontra');
+      var numero_factura  = (document.getElementById('innumerofactura').value);
+     var monto  = (document.getElementById('montos').value);
+     var fecha_factura  = (document.getElementById('fechafactura').value);
+     var fecha_pago  = (document.getElementById('fechapago').value);
+     var descripcio_factura = (document.getElementById('texadescripcionfactura').value);
+
+       var selIndex = selObj.options[selObj.selectedIndex].text;
+         alert(selIndex);
+         window.location="facturas.php?numero_contrato="+selIndex+"&numero_factura="+numero_factura+"&monto="+monto+"&fecha_factura="+fecha_factura+"&fecha_pago="+fecha_pago+"&descripcio_factura="+descripcio_factura;
+    }
+</script>
+
+<script lenguage="javascript" type="text/javascript">
+         function mostrarTexts(){
+    var selObj = document.getElementById('secontratopagoe');
+     var monto  = (document.getElementById('monto').value);
+     var fecha_pago  = (document.getElementById('fechapagoefectuado').value);
+     var descripcion = (document.getElementById('texadescripcionpagoefectuado').value);
+
+       var selIndex = selObj.options[selObj.selectedIndex].text;
+         alert(selIndex);
+         window.location="pagos_efectuados.php?numero_contrato="+selIndex+"&monto="+monto+"&fecha_pago="+fecha_pago+"&descripcion="+descripcion;
+    }
+</script>
+
+
+
   <div id="contec">
     <div class="container1">
       <div class="row">
         <div class='col-sm-20 col-md-20 col-ld-20'>
-          <h2 class="fuu">PARTIDAS PRESUPUESTALES</h2>
-            <label class="textcontratopartida">Contrato:</label>
-            <select id="secontrapartisasp" class="secontrapartisasp" name="secontrapartisasp">
-              <option value=""></option>
+          <h2 class="fuu"> FACTURAS </h2>
+            <label class="textmotivo">Contrato:</label>
+            <select id="fasecontra" class="fasecontra" name="fasecontra">
+		  <?php
+                if (isset($_GET["flag"])) {
+              $flag=unserialize($_GET["flag"]);
+              foreach ($flag as $key=> $val) {
+                  ?>
+              <option value="<?php print($val['id_contrato']); ?>"><?php print($val['numero_contrato']); ?></option>
+		<?php
+              }
+
+}
+                  ?>
             </select>
-          <div class="dclavepartida">
-            <label class="textclavepartida">Clave Partida:</label>
-            <input type="text"  class="form-control" id="inclavepartida"  name="" value="" placeholder="Clave Partida">
+          <div class="dnumerofactura">
+            <label class="textnumerofactura">Número Factura:</label>
+            <input type="number"  class="form-control" id="innumerofactura"  name=""  placeholder="Número Factura">
+          </div>
+          <div class="dmontos">
+            <label class="textmontos">Monto:</label>
+            <input type="number" class="form-control" id="montos" placeholder="Monto" name="montos"  step="0.1">
+          </div>
+          <div class="dfechafactura">
+            <label class="textfechafactura">Fecha Factura:</label>
+            <input class="form-control" id="fechafactura" name="fechafactura" type="date" >
+          </div>
+          <div class="dfechapago">
+            <label class="textfechapago">Fecha Pago:</label>
+            <input class="form-control" id="fechapago" name="fechapago" type="date" >
+          </div>
+          <div class="ddescripcionfactura">
+            <label class="textdescripcionfactura"> Descripción:</label><br>
+            <textarea name="name" id="texadescripcionfactura" class="form-control"  rows="3" placeholder="Descripción Factura"></textarea>
           </div>
           <div id="dbtncomprobacion">
-              <button type="submit" id="bcomprobacion" class="btn btn-primary"  name=""> Guardar </button>
+              <button type="button" id="bcomprobacion" class="btn btn-primary" onclick="mostrarText();" name=""> Guardar </button>
           </div>
         </div>
       </div>
     </div>
 
+
       <div id="contenedorconvenios">
         <div class="container1">
           <div class="row">
             <div class='col-sm-20 col-md-20 col-ld-20'>
-              <h2 class="fuu"> SUB PARTIDA </h2>
-              <div class="dsecontratosub">
-                <label  class="textcontratosub">Contrato:</label>
-                <select id="secontatosub" class="secontatosub" name="secontatosub">
-                  <option value=""></option>
+              <h2 class="fuu"> PAGOS EFECTUADOS </h2>
+              <div class="dcontratopagose">
+                <label  class="textmotivo">Contrato:</label>
+                <select id="secontratopagoe" class="secontratopagoe" name="secontratopagoe">
+		<?php
+                if (isset($_GET["flag"])) {
+              $flag=unserialize($_GET["flag"]);
+              $valor=serialize($flag);
+              foreach ($flag as $key=> $val) {
+                  ?>
+                  <option value="<?php print($val['id_contrato']); ?>"><?php print($val['numero_contrato']); ?></option>
+		 <?php
+              }
+
+}
+                  ?>
                 </select>
               </div>
-              <div class="dnumerosubpartida">
-                <label class="textnumerosuboartida">Número Sub Partida:</label>
-                <input type="text"  class="form-control" id="innumerosubpartida"  name="" value="" placeholder="Número Sub Partida">
+              <div class="dmonto">
+                <label class="textmonto">Monto:</label>
+                <input type="number" class="form-control" id="monto" placeholder="Monto" name="montos"  step="0.1">
               </div>
-              <div class="ddescripcionsubpartida">
-                <label class="textdescripcionsubpartida"> Descripción:</label><br>
-                <textarea name="name" id="texadescripcionsubpartida" class="form-control"  rows="3" placeholder="Descripción Sub Partida"></textarea>
+              <div class="dfechapagoefectuado">
+                <label class="textfechapagoefectuado">Fecha Pago:</label>
+                <input class="form-control" id="fechapagoefectuado" name="fechapagoefectuado" type="date" >
+              </div>
+              <div class="ddescripcionpagos">
+                <label class="textdescripcionpagoefectuado"> Descripción:</label><br>
+                <textarea name="name" id="texadescripcionpagoefectuado" class="form-control"  rows="3" placeholder="Descripción Pago Efectuado"></textarea>
               </div>
               <div id="dbtncomprobacion">
-                  <button type="button" id="bcomprobacion" class="btn btn-primary" onclick="mostrarText();" name="bcomprobacion"> Guardar </button>
+                  <button type="button" id="bcomprobacion" class="btn btn-primary" onclick="mostrarTexts();" name="bcomprobacion"> Guardar </button>
               </div>
             </div>
           </div>

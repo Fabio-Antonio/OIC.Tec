@@ -1492,9 +1492,411 @@ box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
 /*--------------------------------------------------------------*/
 /*--------------------------------------------------------------*/
 /*-----------fin partidas presupuestales partida---------------------------------------------*/
+/*--------------recepcion_terminacion_anticipada------------------------------------------------*/
+/*--------------------------------------------------------------*/
+.textcontratorecepcion{
+    background-color: #e5e2eb;
+    border: 0px;
+    margin-left: 30px;
+    font-size: 18px;
+    text-align: left;
+  }
+.secontrarecepcion{
+      margin-left: 20px;
+      width: 300px;
+      height: 35px;
+      background-color: white;
+     -moz-border-radius: 5px;
+     -webkit-border-radius:5px;
+     padding: 10px;
+    }
+.secontrarecepcion:focus{
+      border: 1.5px solid #00CC99;
+      -webkit-box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
+      -moz-box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
+      box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
+    }
+.ddrequirente{
+margin-left: 500px;
+margin-top: -35px;
+width: 470px;
+}
+.textrequirente{
+      background-color: #e5e2eb;
+      border: 0px;
+      font-size: 18px;
+      text-align: left;
+    }
+#inrequirente{
+      width: 337px;
+      margin-left: 130px;
+      margin-top: -40px;
+    }
+.ddescripcionrequirente{
+  margin-top: 30px;
+  margin-left: 30px;
+}
+.textdescripcionrequirente{
+      background-color: #e5e2eb;
+      border: 0px;
+      font-size: 18px;
+      text-align: left;
+      margin-top: -855px;
+    }
+#texadescripcionrequirente{
+      margin-left: 130px;
+      margin-top: -35px;
+      width: 800px;
+    }
+
+.textcontratoterminacion{
+    background-color: #e5e2eb;
+    border: 0px;
+    margin-left: 30px;
+    font-size: 18px;
+    text-align: left;
+  }
+.secontraterminacion{
+      margin-left: 20px;
+      width: 300px;
+      height: 35px;
+      background-color: white;
+     -moz-border-radius: 5px;
+     -webkit-border-radius:5px;
+     padding: 10px;
+    }
+.secontraterminacion:focus{
+      border: 1.5px solid #00CC99;
+      -webkit-box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
+      -moz-box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
+      box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
+    }
+.dfechaterminacion{
+  margin-left: 500px;
+  margin-top: -30px;
+}
+.textfechaterminacion{
+      background-color: #e5e2eb;
+      border: 0px;
+      font-size: 18px;
+      text-align: left;
+    }
+#infechaterminacion{
+      width: 300px;
+      margin-left: 205px;
+      margin-top: -40px;
+    }
+.dgastosnorecuperables{
+  margin-top: 30px;
+}
+.textgastosnorecuperables{
+  background-color: #e5e2eb;
+  border: 0px;
+  margin-left: 30px;
+  font-size: 18px;
+  text-align: left;
+}
+#ingastosnorecuperables{
+  width: 480px;
+  margin-left: 280px;
+  margin-top: -40px;
+}
+.dmontofiniquito{
+  margin-top: 30px;
+}
+.textmontofiniquito{
+  background-color: #e5e2eb;
+  border: 0px;
+  margin-left: 30px;
+  font-size: 18px;
+  text-align: left;
+}
+#inmontofiniquito{
+  width: 480px;
+  margin-left: 280px;
+  margin-top: -40px;
+}
+
+/*--------------------------------------------------------------*/
+/*--------------------------------------------------------------*/
+/*-----------fin recepcion_terminacion_anticipada---------------------------------------------*/
+/*--------------contrato------------------------------------------------*/
+/*--------------------------------------------------------------*/
+.dprocedimientocontratacioncontrato{
+  width: 620px;
+  margin-top: 30px;
+  margin-left: 150px;
+}
+.dunidadcompradoracontrato{
+  width: 550px;
+  margin-top: 30px;
+}
+.seunidadcompradoracontrato{
+      margin-left: 20px;
+      width: 300px;
+      height: 35px;
+      background-color: white;
+     -moz-border-radius: 5px;
+     -webkit-border-radius:5px;
+     padding: 10px;
+    }
+.seunidadcompradoracontrato:focus{
+      border: 1.5px solid #00CC99;
+      -webkit-box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
+      -moz-box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
+      box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
+    }
+.dconsolidadocontrato{
+  width: 480px;
+  margin-left: 520px;
+  margin-top: -40px;
+
+}
+.seconsolidadocontrato{
+      margin-left: 30px;
+      width: 300px;
+      height: 35px;
+      background-color: white;
+     -moz-border-radius: 5px;
+     -webkit-border-radius:5px;
+     padding: 10px;
+    }
+.seconsolidadocontrato:focus{
+      border: 1.5px solid #00CC99;
+      -webkit-box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
+      -moz-box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
+      box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
+    }
+.dunidadrequirentecontrato{
+  width: 550px;
+  margin-top: 30px;
+}
+.seunidadrequirentecontrato{
+      margin-left: 30px;
+      width: 300px;
+      height: 35px;
+      background-color: white;
+     -moz-border-radius: 5px;
+     -webkit-border-radius:5px;
+     padding: 10px;
+    }
+.seunidadrequirentecontrato:focus{
+      border: 1.5px solid #00CC99;
+      -webkit-box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
+      -moz-box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
+      box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
+    }
+.dmontonoivacontrato{
+  width: 500px;
+  margin-left: 520px;
+  margin-top: -40px;
+}
+.semontonoivacontrato{
+      margin-left: 20px;
+      width: 300px;
+      height: 35px;
+      background-color: white;
+     -moz-border-radius: 5px;
+     -webkit-border-radius:5px;
+     padding: 10px;
+    }
+.semontonoivacontrato:focus{
+      border: 1.5px solid #00CC99;
+      -webkit-box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
+      -moz-box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
+      box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
+    }
+.dadministradorcontrato{
+  width: 550px;
+  margin-top: 30px;
+}
+.seadministradorcontrato{
+      margin-left: 70px;
+      width: 300px;
+      height: 35px;
+      background-color: white;
+     -moz-border-radius: 5px;
+     -webkit-border-radius:5px;
+     padding: 10px;
+    }
+.seadministradorcontrato:focus{
+      border: 1.5px solid #00CC99;
+      -webkit-box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
+      -moz-box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
+      box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
+    }
+.dfechascontrato{
+  width: 485px;
+  margin-left: 520px;
+  margin-top: -40px;
+}
+.sefechascontrato{
+      margin-left: 75px;
+      width: 300px;
+      height: 35px;
+      background-color: white;
+     -moz-border-radius: 5px;
+     -webkit-border-radius:5px;
+     padding: 10px;
+    }
+.sefechascontrato:focus{
+      border: 1.5px solid #00CC99;
+      -webkit-box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
+      -moz-box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
+      box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
+    }
+.dproveedoradjudicadocontrato{
+  width: 560px;
+  margin-top: 30px;
+}
+.seproveedoradjudicadocontrato{
+      margin-left: 5px;
+      width: 300px;
+      height: 35px;
+      background-color: white;
+     -moz-border-radius: 5px;
+     -webkit-border-radius:5px;
+     padding: 10px;
+    }
+.seproveedoradjudicadocontrato:focus{
+      border: 1.5px solid #00CC99;
+      -webkit-box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
+      -moz-box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
+      box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
+    }
+.dnumerocontratoc{
+  margin-top: 30px;
+}
+.textnumerocontrato{
+    background-color: #e5e2eb;
+    border: 0px;
+    margin-left: 30px;
+    font-size: 18px;
+    text-align: left;
+    }
+#innumerocontratoc{
+    width: 710px;
+    margin-left: 280px;
+    margin-top: -40px;
+    }
+
+.dprocedimientocompranetc{
+  margin-top: 30px;
+}
+.textprocedimientocompranet{
+    background-color: #e5e2eb;
+    border: 0px;
+    margin-left: 30px;
+    font-size: 18px;
+    text-align: left;
+    }
+#inprocedimientocompranetc{
+    width:  710px;
+    margin-left: 280px;
+    margin-top: -40px;
+    }
+
+.dcontratocompranetc{
+  margin-top: 30px;
+}
+.textcontratocompranet{
+    background-color: #e5e2eb;
+    border: 0px;
+    margin-left: 30px;
+    font-size: 18px;
+    text-align: left;
+    }
+#incontratocompranetc{
+    width:  710px;
+    margin-left: 280px;
+    margin-top: -40px;
+    }
+.dconveniointernoc{
+  margin-top: 30px;
+}
+.textconveniointerno{
+    background-color: #e5e2eb;
+    border: 0px;
+    margin-left: 30px;
+    font-size: 18px;
+    text-align: left;
+    }
+#inconveniointernoc{
+    width:  710px;
+    margin-left: 280px;
+    margin-top: -40px;
+    }
+.dobjetocontratacionc{
+  margin-top: 30px;
+}
+.textobjetocontratacion{
+    background-color: #e5e2eb;
+    border: 0px;
+    margin-left: 30px;
+    font-size: 18px;
+    text-align: left;
+    }
+#inobjetocontratacionc{
+    width:  710px;
+    margin-left: 280px;
+    margin-top: -40px;
+    }
+.dcontratoabiertoc{
+  margin-top: 30px;
+}
+.textcontratoabierto{
+    background-color: #e5e2eb;
+    border: 0px;
+    margin-left: 30px;
+    font-size: 18px;
+    text-align: left;
+    }
+#incontratoabiertoc{
+    width:  710px;
+    margin-left: 280px;
+    margin-top: -40px;
+    }
+.ddocumentodescripcionc{
+  margin-top: 30px;
+}
+.textdocumentodescripcion{
+    background-color: #e5e2eb;
+    border: 0px;
+    margin-left: 30px;
+    font-size: 18px;
+    text-align: left;
+    width: 250px;
+    }
+#indocumentodescripcionc{
+    width:  710px;
+    margin-left: 280px;
+    margin-top: -40px;
+    }
+.dpdfc{
+  margin-top: 30px;
+}
+.textpdf{
+    background-color: #e5e2eb;
+    border: 0px;
+    margin-left: 30px;
+    font-size: 18px;
+    text-align: left;
+    }
+#inpdfc{
+    width:  710px;
+    margin-left: 280px;
+    margin-top: -40px;
+    }
+
+
+
+
+
+/*--------------------------------------------------------------*/
+/*--------------------------------------------------------------*/
+/*-----------fin contrato---------------------------------------------*/
 /*--------------footer------------------------------------------------*/
 /*--------------------------------------------------------------*/
-
 footer{
   width: 100%;
   background-color: #000000;

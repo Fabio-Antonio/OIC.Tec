@@ -1527,14 +1527,24 @@ width: 470px;
       font-size: 18px;
       text-align: left;
     }
-#inrequirente{
-      width: 337px;
-      margin-left: 130px;
-      margin-top: -40px;
-    }
+.seequirentere{
+          margin-left: 20px;
+          width: 300px;
+          height: 35px;
+          background-color: white;
+         -moz-border-radius: 5px;
+         -webkit-border-radius:5px;
+         padding: 10px;
+        }
+.seequirentere:focus{
+          border: 1.5px solid #00CC99;
+          -webkit-box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
+          -moz-box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
+          box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
+        }
 .ddescripcionrequirente{
   margin-top: 30px;
-  margin-left: 30px;
+  margin-left: -470px;
 }
 .textdescripcionrequirente{
       background-color: #e5e2eb;
@@ -1548,6 +1558,14 @@ width: 470px;
       margin-top: -35px;
       width: 800px;
     }
+#dbtnrecep{
+  margin-top: 30px;
+  margin-left: -470px;
+}
+#divterminacionanticipada{
+  margin-top: 255px;
+  margin-left: -400px;
+}
 
 .textcontratoterminacion{
     background-color: #e5e2eb;
@@ -1888,13 +1906,145 @@ width: 470px;
     margin-top: -40px;
     }
 
-
-
-
-
 /*--------------------------------------------------------------*/
 /*--------------------------------------------------------------*/
 /*-----------fin contrato---------------------------------------------*/
+/*--------------inicio fechas------------------------------------------------*/
+/*--------------------------------------------------------------*/
+.dnotificacionadjudicadaf{
+    margin-left: 30px;
+    width: 505px;
+}
+#innotificacionadjudicadaf{
+      width: 250px;
+      margin-left: 250px;
+      margin-top: -40px
+    }
+.dformalizacioncontratof{
+    margin-left: 30px;
+    margin-top: 30px;
+    width: 505px;
+}
+#informalizacioncontratof{
+      width: 250px;
+      margin-left: 250px;
+      margin-top: -40px
+    }
+.drequesicioncontratof{
+    margin-left: 30px;
+    margin-top: 30px;
+    width: 505px;
+}
+#inrequesicioncontratof{
+      width: 250px;
+      margin-left: 250px;
+      margin-top: -40px
+    }
+.dgarantiacumplimientof{
+    margin-left: 30px;
+    margin-top: 30px;
+    width: 505px;
+}
+#ingarantiacumplimientof{
+      width: 250px;
+      margin-left: 250px;
+      margin-top: -40px
+    }
+.dresicioncontratof{
+    margin-left: 30px;
+    margin-top: 30px;
+    width: 505px;
+}
+#inresicioncontratof{
+      width: 250px;
+      margin-left: 250px;
+      margin-top: -40px
+    }
+.diniciovigenciaf{
+    margin-left: 30px;
+    margin-top: 30px;
+    width: 505px;
+}
+#ininiciovigenciaf{
+      width: 250px;
+      margin-left: 250px;
+      margin-top: -40px
+    }
+.dsatf{
+    margin-left: 600px;
+    margin-top: -320px;
+    width: 505px;
+}
+#insatf{
+      width: 250px;
+      margin-left: 145px;
+      margin-top: -40px
+    }
+.dimssf{
+    margin-left: 600px;
+    margin-top: 30px;
+    width: 505px;
+}
+#inimssf{
+      width: 250px;
+      margin-left: 145px;
+      margin-top: -40px
+    }
+.dinfonavitf{
+    margin-left: 600px;
+    margin-top: 30px;
+    width: 505px;
+}
+#ininfonavitf{
+      width: 250px;
+      margin-left: 145px;
+      margin-top: -40px
+    }
+.dfechaentregaf{
+    margin-left: 600px;
+    margin-top: 30px;
+    width: 505px;
+}
+#infechaentregaf{
+      width: 250px;
+      margin-left: 145px;
+      margin-top: -40px
+    }
+.dsuficienciaf{
+    margin-left: 600px;
+    margin-top: 30px;
+    width: 505px;
+}
+#insuficienciaf{
+      width: 250px;
+      margin-left: 145px;
+      margin-top: -40px
+    }
+.dfinvigenciaf{
+    margin-left: 600px;
+    margin-top: 30px;
+    width: 505px;
+}
+#infinvigenciaf{
+      width: 250px;
+      margin-left: 145px;
+      margin-top: -40px
+    }
+.dfechadescripcion{
+  margin-top: 30px;
+}
+#infechadescripcion{
+  width: 970px;
+  margin-left: 30px;
+}
+
+
+
+
+
+/*--------------------------------------------------------------*/
+/*--------------------------------------------------------------*/
+/*-----------fin fechas---------------------------------------------*/
 /*--------------footer------------------------------------------------*/
 /*--------------------------------------------------------------*/
 footer{
@@ -1940,11 +2090,7 @@ footer{
 }
 
 
-/*--------------------------------------------------------------*/
-/*--------------------------------------------------------------*/
-/*-----------footer---------------------------------------------*/
-/*--------------------------------------------------------------*/
-/*--------------------------------------------------------------*/
+
 footer{
   width: 100%;
   background: #202020;
@@ -2020,7 +2166,7 @@ footer{
 }
 
 .contenedor-footer{
-  width: 99%;
+  width: 100%;
   background-color: #101010;
   display: flex;
   justify-content:space-between;

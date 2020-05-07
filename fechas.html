@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-      <title>Comprobacion_conveniosm_documentosa</title>
+      <title> </title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/estilos.css" rel="stylesheet">
     <link href="https://cdn.datos.gob.mx/assets/css/main.css" rel="stylesheet">
@@ -254,180 +254,72 @@
 <!-- INICIA REGISTRO------------------------------------>
 <!------------------------------------------------------>
 <!------------------------------------------------------>
-
-
-<script lenguage="javascript" type="text/javascript">
-         function mostrarTexts(){
-    var selObj = document.getElementById('scontra2');
-      var montomax  = (document.getElementById('montomax').value);
-     var montomin  = (document.getElementById('montomin').value);
-     var iniciovigencia  = (document.getElementById('iniciovigencia').value);
-     var finvigencia  = (document.getElementById('finvigencia').value);
-     var fechaentrega = (document.getElementById('fechaentrega').value);
-
-       var selIndex = selObj.options[selObj.selectedIndex].text;
-         alert(selIndex);
-         window.location="conveniosm.php?numero_contrato="+selIndex+"&monto_maximo="+montomax+"&monto_minimo="+montomin+"&inicio_vigencia="+iniciovigencia+
-"&fin_vigencia="+finvigencia+"&fecha_entrega="+fechaentrega;
-    }
-</script>
-
-
-
-
-<script lenguage="javascript" type="text/javascript">
-         function mostrarText(){
-    var selObj = document.getElementById('scontra');
-      var fechadoc  = (document.getElementById('fechadoc').value);
-       var descrip = (document.getElementById('descripcion').value);
-       var selIndex = selObj.options[selObj.selectedIndex].text;
-         alert(selIndex);
-         window.location="comprobacion.php?numero_contrato="+selIndex+"&fecha_documento="+fechadoc+"&descripcion="+descrip;
-    }
-</script>
-
-
-
-<script lenguage="javascript" type="text/javascript">
-         function mostrarText3(){
-    var selObj = document.getElementById('scontra3');
-      var fechadoc  = (document.getElementById('fechadoc2').value);
-       var descrip = (document.getElementById('descripcion2').value);
-       var selIndex = selObj.options[selObj.selectedIndex].text;
-         alert(selIndex);
-         window.location="documentosa.php?numero_contrato="+selIndex+"&fecha_documento="+fechadoc+"&descripcion="+descrip;
-    }
-</script>
-
   <div id="contec">
     <div class="container1">
       <div class="row">
         <div class='col-sm-20 col-md-20 col-ld-20'>
-          <h2 class="fuu"> COMPROBACIÓN </h2>
-          <label id="textcon" class="control-label"> Contrato: </label>
-          <select id="scontra" class="scontra" name="scontra">
-
-		  <?php
-                if (isset($_GET["flag"])) {
-              $flag=unserialize($_GET["flag"]);
-              $valor=serialize($flag);
-              foreach ($flag as $key=> $val) {
-                  ?>
-                  <option value="<?php print($val['id_contrato']); ?>"><?php print($val['numero_contrato']); ?></option>
-                  <?php
-              }
-
-}
-                  ?>
-
-          </select>
-          <div id="dfechad">
-            <label id="tfechdoc" class="control-label"> Fecha del documento: </label>
-            <input class="form-control" id="fechadoc" name="fecha" type="date" >
+          <h2 class="fuu"> FECHAS </h2>
+          <div class="dnotificacionadjudicadaf">
+            <label class="textfechaterminacion">Notificación Adjudicada:</label>
+            <input class="form-control" id="innotificacionadjudicadaf" name="innotificacionadjudicadaf" placeholder="Fecha" type="date" >
           </div>
-          <div id="divdes">
-            <label id="textdes" class="control-label"> Descripción: </label>
-            <textarea  id="descripcion" class="form-control" rows="5"></textarea>
+          <div class="dformalizacioncontratof">
+            <label class="textfechaterminacion">Formalización Contrato:</label>
+            <input class="form-control" id="informalizacioncontratof" name="informalizacioncontratof" placeholder="Fecha" type="date" >
           </div>
+          <div class="drequesicioncontratof">
+            <label class="textfechaterminacion">Requisición Contrato:</label>
+            <input class="form-control" id="inrequesicioncontratof" name="inrequesicioncontratof" placeholder="Fecha" type="date" >
+          </div>
+          <div class="dgarantiacumplimientof">
+            <label class="textfechaterminacion">Garantía Cumplimiento:</label>
+            <input class="form-control" id="ingarantiacumplimientof" name="ingarantiacumplimientof" placeholder="Fecha" type="date" >
+          </div>
+          <div class="dresicioncontratof">
+            <label class="textfechaterminacion">Resición Contrato:</label>
+            <input class="form-control" id="inresicioncontratof" name="inresicioncontratof" placeholder="Fecha" type="date" >
+          </div>
+          <div class="diniciovigenciaf">
+            <label class="textfechaterminacion">Inicio Vigencia:</label>
+            <input class="form-control" id="ininiciovigenciaf" name="ininiciovigenciaf" placeholder="Fecha" type="date" >
+          </div>
+          <div class="dsatf">
+            <label class="textfechaterminacion">SAT:</label>
+            <input class="form-control" id="insatf" name="insatf" placeholder="Fecha" type="date" >
+          </div>
+          <div class="dimssf">
+            <label class="textfechaterminacion">IMSS:</label>
+            <input class="form-control" id="inimssf" name="inimssf" placeholder="Fecha" type="date" >
+          </div>
+          <div class="dinfonavitf">
+            <label class="textfechaterminacion">Infonavit:</label>
+            <input class="form-control" id="ininfonavitf" name="ininfonavitf" placeholder="Fecha" type="date" >
+          </div>
+          <div class="dfechaentregaf">
+            <label class="textfechaterminacion">Fecha Entrega:</label>
+            <input class="form-control" id="infechaentregaf" name="infechaentregaf" placeholder="Fecha" type="date" >
+          </div>
+          <div class="dsuficienciaf">
+            <label class="textfechaterminacion">Suficiencia:</label>
+            <input class="form-control" id="insuficienciaf" name="insuficienciaf" placeholder="Fecha" type="date" >
+          </div>
+          <div class="dfinvigenciaf">
+            <label class="textfechaterminacion">Fin Vigencia:</label>
+            <input class="form-control" id="infinvigenciaf" name="infinvigenciaf" placeholder="Fecha" type="date" >
+          </div>
+          <div class="dfechadescripcion">
+            <label class="textdocumentodescripcion">Descripción:</label>
+            <textarea  id="infechadescripcion" class="form-control" rows="5" placeholder="Descripción..."></textarea>
+          </div>
+
+
           <div id="dbtncomprobacion">
-              <button type="button" id="bcomprobacion" class="btn btn-primary" onclick="mostrarText();" name="bcomprobacion"> Guardar </button>
+              <button type="submit" id="bcomprobacion" class="btn btn-primary" onclick=this.form.action="motivo.php" name="bcomprobacion"> Guardar </button>
           </div>
         </div>
       </div>
     </div>
-
-      <div id="contenedorconvenios">
-        <div class="container1">
-          <div class="row">
-            <div class='col-sm-20 col-md-20 col-ld-20'>
-                <h2 class="fuu"> CONVENIOS MODIFICADOS </h2>
-              <div id ="dcontrato">
-                <label id="textcon" class="control-label"> Contrato: </label>
-                <select id="scontra2" class="scontra2" name="scontra2">
-
-		 <?php
-                if (isset($_GET["flag"])) {
-              $flag=unserialize($_GET["flag"]);
-              $valor=serialize($flag);
-              foreach ($flag as $key=> $val) {
-                  ?>
-                  <option value="<?php print($val['id_contrato']); ?>"><?php print($val['numero_contrato']); ?></option>
-                  <?php
-              }
-
-}
-                  ?>
-
-
-                </select>
-              </div>
-            <div id="dmontomaximo">
-              <label id="textmontomaximo" class="control-label"> Monto maximo: </label>
-              <input class="form-control" id="montomax" placeholder="Monto Maximo" name="montomax" type="number" step="0.1" >
-            </div>
-            <div id="dmontominimo">
-              <label id="textmontominimo" class="control-label"> Monto minimo: </label>
-              <input class="form-control" id="montomin" placeholder="Monto Minimo" name="montomin" type="number" step="0.1" >
-            </div>
-            <div id="diniciovigencia">
-              <label id="textiniciovigencia" class="control-label"> Inicio vigencia: </label>
-              <input class="form-control" id="iniciovigencia" name="iniciovigencia" type="date" >
-            </div>
-            <div id="dfinvigencia">
-              <label id="textfinvigencia" class="control-label"> Fin vigencia: </label>
-              <input class="form-control" id="finvigencia" name="finvigencia" type="date" >
-            </div>
-            <div id="dfechaentrega">
-              <label id="textfechaentrega" class="control-label"> Fecha entraga: </label>
-              <input class="form-control" id="fechaentrega" name="fechaentrega" type="date" >
-            </div>
-            <div id="dbtncomprobacion">
-                <button type="button" id="bcomprobacion" class="btn btn-primary" onclick="mostrarTexts();" name="button"> Guardar </button>
-            </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div id="contenedorconvenios">
-        <div class="container1">
-          <div class="row">
-            <div class='col-sm-20 col-md-20 col-ld-20'>
-                <h2 class="fuu"> DOCUMENTOS ADICIONALES </h2>
-                <div id ="dcontrato2">
-                  <label id="textcon" class="control-label"> Contrato: </label>
-                  <select id="scontra3" class="scontra3" name="scontra3">
-			<?php
-                if (isset($_GET["flag"])) {
-              $flag=unserialize($_GET["flag"]);
-              $valor=serialize($flag);
-              foreach ($flag as $key=> $val) {
-                  ?>
-                  <option value="<?php print($val['id_contrato']); ?>"><?php print($val['numero_contrato']); ?></option>
-                  <?php
-              }
-
-}
-                  ?>
-
-                  </select>
-                </div>
-              <div id="dfechad">
-                  <label id="tfechdocadicional" class="control-label"> Fecha del documento: </label>
-                  <input class="form-control" id="fechadoc2" name="fecha" type="date" >
-              </div>
-              <div id="divdes">
-                  <label id="textdesadicional" class="control-label"> Descripción: </label>
-                  <textarea  id="descripcion2" class="form-control" rows="5"></textarea>
-              </div>
-              <div id="dbtncomprobacion">
-                  <button type="button" id="bcomprobacion" onclick="mostrarText3();" class="btn btn-primary" name="button"> Guardar </button>
-              </div>
-              </div>
-            </div>
-          </div>
-        </div>
-    </div>
+  </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"
     integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY"
@@ -435,6 +327,7 @@
   </script>
   <script src="https://cdn.datos.gob.mx/assets/js/main.js"></script>
   <script src="js/bootstrap.min.js"></script>
+
   <footer>
   <div class="contenedor-todo-footer">
 

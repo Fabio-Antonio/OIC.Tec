@@ -363,7 +363,7 @@
 			$flag=unserialize($_GET["flag6"]);
 			foreach($flag as $key=> $val){
 		?>
-              <option value="<?php print($val['id_proveedor']); ?>"><?php print($val['proveedor']); ?></option>
+              <option value="<?php print($val['id_proveedor']); ?>"><?php print($val['nombre']); ?></option>
 		<?php
 		}
 	}

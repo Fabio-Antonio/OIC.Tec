@@ -58,7 +58,7 @@ $valor5=serialize($flag5);
 
 }
 
-$query=$conn->prepare("SELECT id_proveedor,proveedor FROM proveedor_adjudicado");
+$query=$conn->prepare("SELECT id_proveedor,nombre FROM proveedor_adjudicado");
 
  $query->execute();
 if($query){
@@ -70,7 +70,7 @@ $valor6=serialize($flag6);
 }
 
 
-$query=$conn->prepare("SELECT id__fecha,descripcion FROM contrato_fechas");
+$query=$conn->prepare("SELECT id_fecha,descripcion FROM contrato_fechas");
 
  $query->execute();
 if($query){
@@ -86,16 +86,16 @@ $query=$conn->prepare("SELECT id_consolidado,procedimiento FROM consolidado");
  $query->execute();
 if($query){
 while($row=$query->fetch()){
-$flag2[]=$row;
+$flag8[]=$row;
 }
-$valor2=serialize($flag2);
+$valor8=serialize($flag8);
 
 }
 
 
 
 
-header("Location:contrato.php?flag=$valor&&flag2=$valor2&&flag3=$valor3&&flag4=$valor4&&flag5=$valor5&&flag6=valor6");
+header("Location:contrato.php?flag=$valor&&flag2=$valor2&&flag3=$valor3&&flag4=$valor4&&flag5=$valor5&&flag6=$valor6&&flag7=$valor7&&flag8=$valor8");
 
 
 $conn=null;

@@ -1545,8 +1545,7 @@ font-size: 11px;
       font-size: 18px;
       text-align: left;
     }
-<<<<<<< HEAD
-=======
+
 .seequirentere{
           margin-left: 20px;
           width: 300px;
@@ -1562,10 +1561,10 @@ font-size: 11px;
           -moz-box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
           box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
         }
->>>>>>> 1004ea0995d0b0a03ddedfa2cf80c461fc54b542
+
 .ddescripcionrequirente{
   margin-top: 30px;
-  margin-left: -470px;
+  margin-left: 30px;
 }
 .textdescripcionrequirente{
       background-color: #e5e2eb;

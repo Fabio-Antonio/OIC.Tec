@@ -12,7 +12,13 @@ $statement->execute();
   
 
  if($statement){
-echo "listo";
+echo "<script>alert('Datos ingresados correctamente')
+window.location.replace('captura_pro_mont.html');</script> ";
+
+}else{
+echo "<script>alert('Revisar conexión con el servidor')
+window.location.replace('captura_pro_mont.html');</script> ";
+
 }
  $conn = null;
 

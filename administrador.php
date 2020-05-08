@@ -14,9 +14,13 @@ VALUES (?, ?, ?, ?)");
 	$sql->bindParam( 4, $email);
 $sql->execute();
 if ($sql)  {
-    echo "New record created successfully";
+    echo "<script>alert('Datos ingresados correctamente')
+window.location.replace('admin.html');</script> ";
+
 } else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+    echo "<script>alert('Revisar la conexion con el servidor')
+window.location.replace('admin.html');</script> ";
+
 }
    $conn = null;
         

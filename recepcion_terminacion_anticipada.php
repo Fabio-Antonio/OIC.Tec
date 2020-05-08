@@ -254,96 +254,125 @@
 <!-- INICIA REGISTRO------------------------------------>
 <!------------------------------------------------------>
 <!------------------------------------------------------>
+
+<script lenguage="javascript" type="text/javascript">
+         function mostrarText(){
+    var selObj = document.getElementById('secontraterminacion');
+      var fecha_terminacion  = (document.getElementById('infechaterminacion').value);
+      var gastos_no_recuperables  = (document.getElementById('ingastosnorecuperables').value);
+       var monto_finiquito  = (document.getElementById('inmontofiniquito').value);
+
+      var selIndex = selObj.options[selObj.selectedIndex].text;
+         alert(selIndex);
+         window.location="terminacion_anticipada.php?numero_contrato="+selIndex+"&fecha_terminacion="+fecha_terminacion+"&gastos_no_recuperables="+gastos_no_recuperables+"&monto_finiquito="+monto_finiquito;
+    }
+</script>
+
+
+<script lenguage="javascript" type="text/javascript">
+         function mostrarTexts(){
+    var selObj = document.getElementById('secontrarecepcion');
+     var selObj2 = document.getElementById('inrequirente');
+      var descripcion  = (document.getElementById('texadescripcionrequirente').value);
+      
+      var selIndex = selObj.options[selObj.selectedIndex].text;
+      var selIndex2 = selObj2.options[selObj2.selectedIndex].text;
+         alert(selIndex);
+         window.location="recepcion.php?numero_contrato="+selIndex+"&unidad="+selIndex2+"&descripcion="+descripcion;
+    }
+</script>
+
+
   <div id="contec">
     <div class="container1">
       <div class="row">
         <div class='col-sm-20 col-md-20 col-ld-20'>
-          <h2 class="fuu"> CONTRATO </h2>
-           <div class="dunidadcompradoracontrato">
-            <label class="textcontratorecepcion">Unidad Compradora:</label>
-            <select id="seunidadcompradoracontrato" class="seunidadcompradoracontrato" name="seunidadcompradoracontrato">
-              <option value=""> </option>
-            </select>
-          </div>
-          <div class="dconsolidadocontrato">
-            <label class="textcontratorecepcion">Consolidado:</label>
-            <select id="seconsolidadocontrato" class="seconsolidadocontrato" name="seconsolidadocontrato">
-              <option value=""> </option>
-            </select>
-          </div>
-          <div class="dunidadrequirentecontrato">
-            <label class="textcontratorecepcion">Unidad Requirente:</label>
-            <select id="seunidadrequirentecontrato" class="seunidadrequirentecontrato" name="seunidadrequirentecontrato">
-              <option value=""> </option>
-            </select>
-          </div>
-          <div class="dmontonoivacontrato">
-            <label class="textcontratorecepcion">Monto No Iva:</label>
-            <select id="semontonoivacontrato" class="semontonoivacontrato" name="semontonoivacontrato">
-              <option value=""> </option>
-            </select>
-          </div>
-          <div class="dadministradorcontrato">
-            <label class="textcontratorecepcion">Administrador:</label>
-            <select id="seadministradorcontrato" class="seadministradorcontrato" name="seadministradorcontrato">
-              <option value=""> </option>
-            </select>
-          </div>
-          <div class="dfechascontrato">
-            <label class="textcontratorecepcion">Fechas:</label>
-            <select id="sefechascontrato" class="sefechascontrato" name="sefechascontrato">
-              <option value=""> </option>
-            </select>
-          </div>
-          <div class="dproveedoradjudicadocontrato">
-            <label class="textcontratorecepcion">Proveedor Adjudicado:</label>
-            <select id="seproveedoradjudicadocontrato" class="seproveedoradjudicadocontrato" name="seproveedoradjudicadocontrato">
-              <option value=""> </option>
-            </select>
-          </div>
-          <div class="dprocedimientocontratacioncontrato">
-            <label class="textcontratorecepcion">Procedimineto Contratación:</label>
+          <h2 class="fuu"> RECEPCIÓN </h2>
+          <div class="dcontratorecepcion">
+            <label class="textcontratorecepcion">Contrato:</label>
             <select id="secontrarecepcion" class="secontrarecepcion" name="secontrarecepcion">
-              <option value=""> </option>
+              
+             <?php
+			if(isset($_GET["flag"])){
+			$flag=unserialize($_GET["flag"]);
+			foreach($flag as $key=> $val){
+		?>
+              <option value="<?php print($val['id_contrato']); ?>"><?php print($val['numero_contrato']); ?></option>
+		<?php
+		}
+	}
+		?>
             </select>
           </div>
-
-
-          <div class="dnumerocontratoc">
-            <label class="textnumerocontrato">Número Contrato:</label>
-            <input type="text" class="form-control" id="innumerocontratoc" name="innumerocontratoc"  placeholder="Número Contrato">
+          <div class="ddrequirente">
+            <label class="textrequirente">Requirente:</label>
+            <select  class="inrequirente" id="inrequirente" name="inrequirente">
+            <?php
+			if(isset($_GET["flag2"])){
+			$flag=unserialize($_GET["flag2"]);
+			foreach($flag as $key=> $val){
+		?>
+              <option value="<?php print($val['id_requirente']); ?>"><?php print($val['unidad']); ?></option>
+		<?php
+		}
+	}
+           ?>
+	    </select>
           </div>
-          <div class="dprocedimientocompranetc">
-            <label class="textprocedimientocompranet">Procedimiento Compranet:</label>
-            <input type="text" class="form-control" id="inprocedimientocompranetc" name="inprocedimientocompranetc"  placeholder="Procedimiento Compranet">
+          <div class="ddescripcionrequirente">
+            <label class="textdescripcionrequirente"> Descripción:</label><br>
+            <textarea name="name" id="texadescripcionrequirente" class="form-control"  rows="3" placeholder="Descripción"></textarea>
           </div>
-          <div class="dcontratocompranetc">
-            <label class="textcontratocompranet">Contrato Compranet:</label>
-            <input type="text" class="form-control" id="incontratocompranetc" name="incontratocompranetc"  placeholder="Contrato Compranet">
-          </div>
-          <div class="dconveniointernoc">
-            <label class="textconveniointerno">Convenio Interno:</label>
-            <input type="text" class="form-control" id="inconveniointernoc" name="inconveniointernoc"  placeholder="Convenio Interno">
-          </div>
-          <div class="dobjetocontratacionc">
-            <label class="textobjetocontratacion">Objeto Contratación:</label>
-            <input type="text" class="form-control" id="inobjetocontratacionc" name="inobjetocontratacionc"  placeholder="Objeto Contratación">
-          </div>
-          <div class="dcontratoabiertoc">
-            <label class="textcontratoabierto">Contrato Abierto:</label>
-            <input type="text" class="form-control" id="incontratoabiertoc" name="incontratoabiertoc"  placeholder="Contrato Abierto">
-          </div>
-          <div class="ddocumentodescripcionc">
-            <label class="textdocumentodescripcion">Documentación Descripción:</label>
-            <Textarea  class="form-control" id="indocumentodescripcionc" name="indocumentodescripcionc"  placeholder="Documentación Descripción"></textarea>
-          </div>
-         <div id="dbtncomprobacion">
-              <button type="submit" id="bcomprobacion" class="btn btn-primary" onclick=this.form.action="motivo.php" name="bcomprobacion"> Guardar </button>
+          <div id="dbtncomprobacion">
+              <button type="button" id="bcomprobacion" class="btn btn-primary" onclick="mostrarTexts();" name="bcomprobacion"> Guardar </button>
           </div>
         </div>
       </div>
     </div>
-  </div>
+
+      <div id="contenedorconvenios">
+        <div class="container1">
+          <div class="row">
+            <div class='col-sm-20 col-md-20 col-ld-20'>
+              <h2 class="fuu"> TERMINACIÓN ANTICIPADA </h2>
+              <div class="dcontratoterminacion">
+                <label class="textcontratoterminacion">Contrato:</label>
+                <select id="secontraterminacion" class="secontraterminacion" name="secontraterminacion">
+                 <?php
+			if(isset($_GET["flag"])){
+			$flag=unserialize($_GET["flag"]);
+			foreach($flag as $key=> $val){
+		?>
+              <option value="<?php print($val['id_contrato']); ?>"><?php print($val['numero_contrato']); ?></option>
+		<?php
+		}
+	}
+		?>
+                </select>
+              </div>
+              <div class="dfechaterminacion">
+                <label class="textfechaterminacion">Fecha Terminación:</label>
+                <input class="form-control" id="infechaterminacion" name="fecha" placeholder="Fecha" type="date" >
+              </div>
+              <div class="dgastosnorecuperables">
+                <label class="textgastosnorecuperables">Gastos No Recuperables:</label>
+                <input type="number" class="form-control" id="ingastosnorecuperables" name="ingastosnorecuperables"  placeholder="Gastos No Recuperables" step="0.1">
+              </div>
+              <div class="dmontofiniquito">
+                <label class="textmontofiniquito">Monto Finiquito:</label>
+                <input type="number" class="form-control" id="inmontofiniquito" name="inmontofiniquito"  placeholder="Monto Finiquito" step="0.1">
+              </div>
+              <div id="dbtncomprobacion">
+                  <button type="button" id="bcomprobacion" class="btn btn-primary" onclick="mostrarText();" name="bcomprobacion"> Guardar </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"
     integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY"

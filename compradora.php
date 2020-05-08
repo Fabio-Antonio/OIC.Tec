@@ -12,7 +12,13 @@ $statement->execute();
   
  
  if($statement){
-echo "listo";
+echo "<script>alert('Datos ingresados correctamente')
+window.location.replace('requirente_compradora_captura.html');</script> ";
+
+}else{
+echo "<script>alert('Revisar la conexión al servidor')
+window.location.replace('requirente_compradora_captura.html');</script> ";
+
 }
  $conn=null;       
 ?>

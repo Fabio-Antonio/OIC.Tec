@@ -36,7 +36,13 @@ $statement->execute();
   
  
  if($statement){
-echo "listo";
+echo "<script>alert('Datos ingresados correctamente')
+window.location.replace('consulta_contrato.php');</script> ";
+
+}else{
+echo "<script>alert('Revisar la conexión con el servidor')
+window.location.replace('consulta_contrato.php');</script> ";
+
 }
  $conn=null;       
 ?>

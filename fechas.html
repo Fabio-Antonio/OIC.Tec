@@ -258,64 +258,68 @@
     <div class="container1">
       <div class="row">
         <div class='col-sm-20 col-md-20 col-ld-20'>
-          <h2 class="fuu"> RECEPCIÓN </h2>
-          <div class="dcontratorecepcion">
-            <label class="textcontratorecepcion">Contrato:</label>
-            <select id="secontrarecepcion" class="secontrarecepcion" name="secontrarecepcion">
-              <option value=""> </option>
-            </select>
+          <h2 class="fuu"> FECHAS </h2>
+          <div class="dnotificacionadjudicadaf">
+            <label class="textfechaterminacion">Notificación Adjudicada:</label>
+            <input class="form-control" id="innotificacionadjudicadaf" name="innotificacionadjudicadaf" placeholder="Fecha" type="date" >
           </div>
-          <div class="ddrequirente">
-            <label class="textrequirente">Requirente:</label>
-            <select  class="inrequirente" id="inrequirente" name="inrequirente">
-            <option value""></option>
-	    </select>
+          <div class="dformalizacioncontratof">
+            <label class="textfechaterminacion">Formalización Contrato:</label>
+            <input class="form-control" id="informalizacioncontratof" name="informalizacioncontratof" placeholder="Fecha" type="date" >
           </div>
-          <div class="ddescripcionrequirente">
-            <label class="textdescripcionrequirente"> Descripción:</label><br>
-            <textarea name="name" id="texadescripcionrequirente" class="form-control"  rows="3" placeholder="Descripción Requirente"></textarea>
+          <div class="drequesicioncontratof">
+            <label class="textfechaterminacion">Requisición Contrato:</label>
+            <input class="form-control" id="inrequesicioncontratof" name="inrequesicioncontratof" placeholder="Fecha" type="date" >
           </div>
+          <div class="dgarantiacumplimientof">
+            <label class="textfechaterminacion">Garantía Cumplimiento:</label>
+            <input class="form-control" id="ingarantiacumplimientof" name="ingarantiacumplimientof" placeholder="Fecha" type="date" >
+          </div>
+          <div class="dresicioncontratof">
+            <label class="textfechaterminacion">Resición Contrato:</label>
+            <input class="form-control" id="inresicioncontratof" name="inresicioncontratof" placeholder="Fecha" type="date" >
+          </div>
+          <div class="diniciovigenciaf">
+            <label class="textfechaterminacion">Inicio Vigencia:</label>
+            <input class="form-control" id="ininiciovigenciaf" name="ininiciovigenciaf" placeholder="Fecha" type="date" >
+          </div>
+          <div class="dsatf">
+            <label class="textfechaterminacion">SAT:</label>
+            <input class="form-control" id="insatf" name="insatf" placeholder="Fecha" type="date" >
+          </div>
+          <div class="dimssf">
+            <label class="textfechaterminacion">IMSS:</label>
+            <input class="form-control" id="inimssf" name="inimssf" placeholder="Fecha" type="date" >
+          </div>
+          <div class="dinfonavitf">
+            <label class="textfechaterminacion">Infonavit:</label>
+            <input class="form-control" id="ininfonavitf" name="ininfonavitf" placeholder="Fecha" type="date" >
+          </div>
+          <div class="dfechaentregaf">
+            <label class="textfechaterminacion">Fecha Entrega:</label>
+            <input class="form-control" id="infechaentregaf" name="infechaentregaf" placeholder="Fecha" type="date" >
+          </div>
+          <div class="dsuficienciaf">
+            <label class="textfechaterminacion">Suficiencia:</label>
+            <input class="form-control" id="insuficienciaf" name="insuficienciaf" placeholder="Fecha" type="date" >
+          </div>
+          <div class="dfinvigenciaf">
+            <label class="textfechaterminacion">Fin Vigencia:</label>
+            <input class="form-control" id="infinvigenciaf" name="infinvigenciaf" placeholder="Fecha" type="date" >
+          </div>
+          <div class="dfechadescripcion">
+            <label class="textdocumentodescripcion">Descripción:</label>
+            <textarea  id="infechadescripcion" class="form-control" rows="5" placeholder="Descripción..."></textarea>
+          </div>
+
+
           <div id="dbtncomprobacion">
               <button type="submit" id="bcomprobacion" class="btn btn-primary" onclick=this.form.action="motivo.php" name="bcomprobacion"> Guardar </button>
           </div>
         </div>
       </div>
     </div>
-
-      <div id="contenedorconvenios">
-        <div class="container1">
-          <div class="row">
-            <div class='col-sm-20 col-md-20 col-ld-20'>
-              <h2 class="fuu"> TERMINACIÓN ANTICIPADA </h2>
-              <div class="dcontratoterminacion">
-                <label class="textcontratoterminacion">Contrato:</label>
-                <select id="secontraterminacion" class="secontraterminacion" name="secontraterminacion">
-                  <option value=""> </option>
-                </select>
-              </div>
-              <div class="dfechaterminacion">
-                <label class="textfechaterminacion">Fecha Terminación:</label>
-                <input class="form-control" id="infechaterminacion" name="fecha" placeholder="Fecha" type="date" >
-              </div>
-              <div class="dgastosnorecuperables">
-                <label class="textgastosnorecuperables">Gastos No Recuperables:</label>
-                <input type="text" class="form-control" id="ingastosnorecuperables" name="ingastosnorecuperables"  placeholder="Gastos No Recuperables">
-              </div>
-              <div class="dmontofiniquito">
-                <label class="textmontofiniquito">Monto Finiquito:</label>
-                <input type="text" class="form-control" id="inmontofiniquito" name="inmontofiniquito"  placeholder="Monto Finiquito">
-              </div>
-              <div id="dbtncomprobacion">
-                  <button type="button" id="bcomprobacion" class="btn btn-primary" onclick="mostrarText();" name="bcomprobacion"> Guardar </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-
-    </div>
+  </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"
     integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY"

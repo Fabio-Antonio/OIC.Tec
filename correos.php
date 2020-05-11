@@ -16,8 +16,6 @@ $time3=time()+2419200;
 $dat=date("Y-m-d",$time);
 $dat2=date("Y-m-d",$time2);
 $dat3=date("Y-m-d",$time3);
- mail("16106054@ittlahuac.edu.mx","prueba","prueba",$desde);
-
 
 $query->execute();
 
@@ -32,7 +30,6 @@ while($row=$query->fetch())
         $ape=$row['apellido_paterno'];
         $email=$row['email'];
          $mensaje="prueba";
- mail("ing.fabio.a@gmail.com","prueba","prueba");
 
          if($fe==$dat){
                 $mensaje="Estimado ".$nom." ".$ape.", su contrato No.".$contrat." expira en la fecha".$fe; 

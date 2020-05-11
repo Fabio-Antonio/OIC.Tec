@@ -254,6 +254,42 @@
 <!-- INICIA REGISTRO------------------------------------>
 <!------------------------------------------------------>
 <!------------------------------------------------------>
+
+<script lenguage="javascript" type="text/javascript">
+         function mostrarText(){
+    var selObj = document.getElementById('seunidadcompradoracontrato');
+      var selObj2 = document.getElementById('secontrarecepcion');
+ var selObj3 = document.getElementById('seunidadrequirentecontrato');
+ var selObj4 = document.getElementById('seadministradorcontrato');
+ var selObj5 = document.getElementById('semontonoivacontrato');
+ var selObj6 = document.getElementById('seproveedoradjudicadocontrato');
+ var selObj7 = document.getElementById('sefechascontrato');
+ var selObj8 = document.getElementById('seconsolidadocontrato');
+ 
+      var numero_contrato  = (document.getElementById('innumerocontratoc').value);
+      var procedimiento_compranet  = (document.getElementById('inprocedimientocompranetc').value);
+       var contrato_compranet  = (document.getElementById('incontratocompranetc').value);
+        var convenio_interno  = (document.getElementById('inconveniointernoc').value);
+        var objeto_contratacion  = (document.getElementById('inobjetocontratacionc').value);
+ 	var contrato_abierto  = (document.getElementById('incontratoabiertoc').value);
+        var documentacion_descripcion  = (document.getElementById('indocumentodescripcionc').value);
+      var selIndex = selObj.options[selObj.selectedIndex].text;
+       var selIndex2 = selObj2.options[selObj2.selectedIndex].text;
+	 var selIndex3 = selObj3.options[selObj3.selectedIndex].text;
+	 var selIndex4 = selObj4.options[selObj4.selectedIndex].text;
+	 var selIndex5 = selObj5.options[selObj5.selectedIndex].text;
+	 var selIndex6 = selObj6.options[selObj6.selectedIndex].text;
+	 var selIndex7 = selObj7.options[selObj7.selectedIndex].text;
+	 var selIndex8 = selObj8.options[selObj8.selectedIndex].text;
+         alert(selIndex);
+         window.location="contrato_in.php?nombre_unidad_compradora="+selIndex+"&procedimientos="+selIndex2+"&unidad_requirente="+selIndex3+"&nombre="+selIndex4+
+        "&total="+selIndex5+"&proveedor="+selIndex6+"&descripcion="+selIndex7+"&procedimiento="+selIndex8+"&numero_contrato="+numero_contrato+
+"&procedimiento_compranet="+procedimiento_compranet+"&contrato_compranet="+contrato_compranet+"&convenio_interno="+convenio_interno+"&objeto_contratacion="
++objeto_contratacion+"&contrato_abierto="+contrato_abierto+"&documentacion_descripcion="+documentacion_descripcion;
+    }
+</script>
+
+
   <div id="contec">
     <div class="container1">
       <div class="row">
@@ -398,7 +434,7 @@
           </div>
           <div class="dcontratocompranetc">
             <label class="textcontratocompranet">Contrato Compranet:</label>
-            <input type="text" class="form-control" id="incontratocompranetc" name="incontratocompranetc"  placeholder="Contrato Compranet">
+            <input type="number" class="form-control" id="incontratocompranetc" name="incontratocompranetc"  placeholder="Contrato Compranet" step="1.0">
           </div>
           <div class="dconveniointernoc">
             <label class="textconveniointerno">Convenio Interno:</label>
@@ -406,18 +442,19 @@
           </div>
           <div class="dobjetocontratacionc">
             <label class="textobjetocontratacion">Objeto Contratación:</label>
-            <input type="text" class="form-control" id="inobjetocontratacionc" name="inobjetocontratacionc"  placeholder="Objeto Contratación">
+            <textarea  class="form-control" id="inobjetocontratacionc" name="inobjetocontratacionc"  placeholder="Objeto Contratación"></textarea>
           </div>
-          <div class="dcontratoabiertoc">
-            <label class="textcontratoabierto">Contrato Abierto:</label>
-            <input type="text" class="form-control" id="incontratoabiertoc" name="incontratoabiertoc"  placeholder="Contrato Abierto">
-          </div>
-          <div class="ddocumentodescripcionc">
+           <div class="ddocumentodescripcionc">
             <label class="textdocumentodescripcion">Documentación Descripción:</label>
             <Textarea  class="form-control" id="indocumentodescripcionc" name="indocumentodescripcionc"  placeholder="Documentación Descripción"></textarea>
           </div>
+
+          <div class="dcontratoabiertoc">
+            <label class="textcontratoabierto">Contrato Abierto:
+            <input type="checkbox" " id="incontratoabiertoc" name="incontratoabiertoc"  value="1"></label>
+          </div>          
          <div id="dbtncomprobacion">
-              <button type="submit" id="bcomprobacion" class="btn btn-primary" onclick=this.form.action="motivo.php" name="bcomprobacion"> Guardar </button>
+              <button type="button" id="bcomprobacion" class="btn btn-primary" onclick="mostrarText()" name="bcomprobacion"> Guardar </button>
           </div>
         </div>
       </div>

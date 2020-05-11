@@ -1881,6 +1881,16 @@ font-size: 11px;
     }
 .dcontratoabiertoc{
   margin-top: 30px;
+
+}
+
+#incontratoabiertoc{
+
+width:40px;
+ 
+margin-left:10px;
+margin-top:-40px;
+
 }
 .textcontratoabierto{
     background-color: #e5e2eb;
@@ -1889,11 +1899,12 @@ font-size: 11px;
     font-size: 18px;
     text-align: left;
     }
-#incontratoabiertoc{
-    width:  710px;
-    margin-left: 280px;
-    margin-top: -40px;
-    }
+#indocumentodescripcionc{
+width:710px;
+margin-left:280px;
+margin-top:-40px;
+
+}
 .ddocumentodescripcionc{
   margin-top: 30px;
 }
@@ -1908,7 +1919,7 @@ font-size: 11px;
 #indocumentodescripcionc{
     width:  710px;
     margin-left: 280px;
-    margin-top: -40px;
+    margin-top: -60px;
     }
 .dpdfc{
   margin-top: 30px;

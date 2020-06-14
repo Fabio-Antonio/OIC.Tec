@@ -256,7 +256,7 @@
 <!------------------------------------------------------>
 <script  lenguage="javascript" type="text/javascript">
          function  mostrarText(){
-    var  selObj  =  document.getElementById('secontra');
+    var  selObj  =  document.getElementById('secontrae');
       var  fecha_entrega   =(document.getElementById('infechaentregamo').value);
      var  fecha_entrega_maxima   =(document.getElementById('infechaentregamaxima').value);
      var  nombre_entregable   = (document.getElementById('innombreentregables').value);
@@ -277,7 +277,8 @@
           <h2 class="fuu"> ENTREGABLES </h2>
         <div class="dcontratoen">
           <label class="textcontratoin">Contrato:</label>
-            <select id="secontra" class="secontra" name="secontra">
+        </div>
+            <select id="secontrae" class="secontrae" name="secontra">
 		 <?php
                 if (isset($_GET["flag"])) {
               $flag=unserialize($_GET["flag"]);
@@ -289,9 +290,9 @@
               }
 
 }
-                  ?>		
+                  ?>
      </select>
-        </div>
+
         <div class="dfechaentregamo">
           <label id="textfechaentregamo" class="control-label"> Fecha entraga: </label>
           <input class="form-control" id="infechaentregamo" name="fecha_entrega" type="date" >

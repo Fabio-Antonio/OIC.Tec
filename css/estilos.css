@@ -35,7 +35,6 @@
 /*--------------------------------------------------------------*/
 /*--------------------------------------------------------------*/
 #venta1{
-
   height: 100px;
   width: 1000px;
   margin: 5px;
@@ -43,194 +42,90 @@
 
 }
 .contenedor{
-  width: 720px;
-  margin-left: 400px;
-  margin-top: 90px;
-}
-#bt1c{
-    border: 3px solid #00aae4;
-    width:300px;
-}
+  width: 1000px;
+  height: 650px;
+  margin-left: -130px;
+  margin-top: -5px;
 
-#bt1c:hover{
-  background: rgba(169,3,41,1);
-  background: -moz-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(169,3,41,1)), color-stop(44%, rgba(143,2,34,1)), color-stop(100%, rgba(109,0,25,1)));
-  background: -webkit-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  background: -o-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  background: -ms-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  background: linear-gradient(to right, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019', GradientType=1 );
 
-}
-#bt2c{
-    border: 3px solid #00aae4;
-    width:300px;
-}
-#bt2c:hover{
-  background: rgba(169,3,41,1);
-  background: -moz-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(169,3,41,1)), color-stop(44%, rgba(143,2,34,1)), color-stop(100%, rgba(109,0,25,1)));
-  background: -webkit-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  background: -o-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  background: -ms-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  background: linear-gradient(to right, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019', GradientType=1 );
-}
-#bt3c{
-    border: 3px solid #00aae4;
-    width:300px;
-}
-#bt3c:hover{
-  background: rgba(169,3,41,1);
-  background: -moz-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(169,3,41,1)), color-stop(44%, rgba(143,2,34,1)), color-stop(100%, rgba(109,0,25,1)));
-  background: -webkit-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  background: -o-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  background: -ms-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  background: linear-gradient(to right, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019', GradientType=1 );
-}
-#bt4c{
-    border: 3px solid #00aae4;
-    width:300px;
-}
-#bt4c:hover{
-  background: rgba(169,3,41,1);
-  background: -moz-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(169,3,41,1)), color-stop(44%, rgba(143,2,34,1)), color-stop(100%, rgba(109,0,25,1)));
-  background: -webkit-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  background: -o-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  background: -ms-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  background: linear-gradient(to right, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019', GradientType=1 );
-}
-#bt5c{
-    border: 3px solid #00aae4;
-    width:300px;
-}
-#bt5c:hover{
-  background: rgba(169,3,41,1);
-  background: -moz-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(169,3,41,1)), color-stop(44%, rgba(143,2,34,1)), color-stop(100%, rgba(109,0,25,1)));
-  background: -webkit-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  background: -o-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  background: -ms-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  background: linear-gradient(to right, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019', GradientType=1 );
-}
-#bt6c{
-    border: 3px solid #00aae4;
-    width:300px;
-}
-#bt6c:hover{
-  background: rgba(169,3,41,1);
-  background: -moz-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(169,3,41,1)), color-stop(44%, rgba(143,2,34,1)), color-stop(100%, rgba(109,0,25,1)));
-  background: -webkit-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  background: -o-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  background: -ms-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  background: linear-gradient(to right, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019', GradientType=1 );
-}
-#bt7c{
-    border: 3px solid #00aae4;
-    width:300px;
-}
-#bt7c:hover{
-  background: rgba(169,3,41,1);
-  background: -moz-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(169,3,41,1)), color-stop(44%, rgba(143,2,34,1)), color-stop(100%, rgba(109,0,25,1)));
-  background: -webkit-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  background: -o-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  background: -ms-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  background: linear-gradient(to right, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019', GradientType=1 );
-}
-#bt8c{
-    border: 3px solid #00aae4;
-    width:300px;
-}
-#bt8c:hover{
-  background: rgba(169,3,41,1);
-  background: -moz-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(169,3,41,1)), color-stop(44%, rgba(143,2,34,1)), color-stop(100%, rgba(109,0,25,1)));
-  background: -webkit-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  background: -o-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  background: -ms-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  background: linear-gradient(to right, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019', GradientType=1 );
-}
-#bt9c{
-    border: 3px solid #00aae4;
-    width:300px;
-}
-#bt9c:hover{
-  background: rgba(169,3,41,1);
-  background: -moz-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(169,3,41,1)), color-stop(44%, rgba(143,2,34,1)), color-stop(100%, rgba(109,0,25,1)));
-  background: -webkit-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  background: -o-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  background: -ms-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  background: linear-gradient(to right, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019', GradientType=1 );
-}
-#bt10c{
-    border: 3px solid #00aae4;
-    width:300px;
-}
-#bt10c:hover{
-  background: rgba(169,3,41,1);
-  background: -moz-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(169,3,41,1)), color-stop(44%, rgba(143,2,34,1)), color-stop(100%, rgba(109,0,25,1)));
-  background: -webkit-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  background: -o-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  background: -ms-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  background: linear-gradient(to right, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019', GradientType=1 );
-}
-#bt11c{
-    border: 3px solid #00aae4;
-    width:300px;
-}
-#bt11c:hover{
-  background: rgba(169,3,41,1);
-  background: -moz-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(169,3,41,1)), color-stop(44%, rgba(143,2,34,1)), color-stop(100%, rgba(109,0,25,1)));
-  background: -webkit-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  background: -o-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  background: -ms-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  background: linear-gradient(to right, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019', GradientType=1 );
-}
-#bt12c{
-    border: 3px solid #00aae4;
-    width:300px;
-}
-#bt12c:hover{
-  background: rgba(169,3,41,1);
-  background: -moz-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(169,3,41,1)), color-stop(44%, rgba(143,2,34,1)), color-stop(100%, rgba(109,0,25,1)));
-  background: -webkit-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  background: -o-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  background: -ms-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  background: linear-gradient(to right, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019', GradientType=1 );
-}
-.contenedor2{
-    margin-left: 400px;
-    margin-top: -10px;
-    width: 600px;
 }
 .bea{
   font-size: 50px;
 }
-#def{
-  border: 0px;
-  width: 630px;
+.dccapturas{
+  border: 2px solid #545454;
+  width: 650px;
+  height: 650px;
+  border-radius: 35px 35px 35px 35px;
+  -moz-border-radius: 35px 35px 35px 35px;
+  -webkit-border-radius: 35px 35px 35px 35px;
+  -webkit-box-shadow: -1px 10px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: -1px 10px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: -1px 10px 5px 0px rgba(0,0,0,0.75);
 }
-#cap{
-  width: 250px;
+
+
+.iconcapturas{
+  margin-left: 290px;
+}
+
+.dtextcapturas{
+  margin-top: 15px;
+  margin-left: 230px;
+}
+.textcapturas{
+  font-size: 30px;
+  color: black;
+  font-weight: bold;
+}
+.textcapturas:hover{
+  text-decoration: underline;
+
+}
+.dtext{
+  margin-top: 20px;
+}
+.aEntregables{
+  margin-left: 255px;
+}
+.dtext a{
+  color:inherit;
+  font-size: 20px;
+
+}
+.dtext a:hover{
+  text-decoration: underline;
+  font-weight: bold;
+}
+.aInconformidades{
+  margin-left: 230px;
+}
+.aFacturaspagos{
+  margin-left: 175px;
+}
+.aCargadearchivos{
+  margin-left: 170px;
+}
+.aUnidadr{
+  margin-left: 149px;
+}
+.aRecepcionT{
+  margin-left: 139px;
+}
+.aPartidasp{
+  margin-left: 135px;
+}
+.aCapturaAd{
+  margin-left: 120px;
+}
+.aConsolidadosM{
+  margin-left: 63px;
+}
+.aFundamentoLegal{
+  margin-left: 55px;
+}
+.aComprobacionC{
+  margin-left: 10px;;
 }
 /*--------------------------------------------------------------*/
 /*--------------------------------------------------------------*/
@@ -473,9 +368,11 @@
 /*--------------------------------------------------------------*/
 
 #gu{
-  margin-right: 559px;
+  margin-right: 500px;
   margin-bottom: 10px;
   margin-top: 30px;
+  width: 150px;
+  height: 40px;
 }
 #gu:hover{
   background: rgba(169,3,41,1);
@@ -488,9 +385,11 @@
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019', GradientType=1 );
 }
 #gua{
-  margin-right: 559px;
+  margin-right: 500px;
   margin-bottom: 10px;
   margin-top: 30px;
+  width: 150px;
+  height: 40px;
 }
 #gua:hover{
   background: rgba(169,3,41,1);
@@ -506,7 +405,7 @@
   margin-bottom: 10px;
 }
 #ccp1{
-  background-color: #EFEFEF;
+  background-color: #e5e2eb;
   font-size: 18px;
   text-align: left;
   border: 0px;
@@ -523,13 +422,17 @@
 /*--------------------------------------------------------------*/
 #dcapturas{
   background-color: #ddd;
-  width: 1000px;
+  width: 1030px;
   margin-left: 250px;
   margin-top: -250px;
 }
 #dcapturas1{
   border: 1px solid #bbb;
-  height: 240px;
+  height: 280px;
+}
+#dcapturas2{
+  border: 1px solid #bbb;
+  height: 380px;
 }
 #tc{
   text-align: center;
@@ -538,7 +441,59 @@
   text-align: center;
 }
 #tca{
-  margin-left: 200px;
+  margin-left: 30px;
+}
+#pro{
+  width: 480px;
+}
+.dprocediminetomontoto{
+  margin-left: 520px;
+  margin-top: -70px;
+}
+#mont{
+  width: 450px;
+}
+#montomaxi{
+  width: 480px;
+}
+#dcmnmm{
+  margin-top: -70px;
+  margin-left: 550px;
+}
+#montomini{
+  width: 450px;
+}
+#dcmntotal{
+  margin-left: 30px;
+  margin-top: 30px;
+}
+#tot{
+  width: 480px;
+}
+#noo{
+  width: 480px;
+}
+#dpadrfc{
+  margin-left: 550px;
+  margin-top: -70px;
+}
+#rfc{
+    width: 450px;
+}
+.dbtgcpc{
+  margin-top: 20px;
+}
+#dbtgcpc1{
+  margin-top: 30px;
+  margin-left: 30px;
+}
+#dbtgcpc2{
+  margin-top: 30px;
+  margin-left: 30px;
+}
+#btg{
+  width: 150px;
+  height: 40px;
 }
 #btg:hover{
   background: rgba(169,3,41,1);
@@ -649,7 +604,7 @@
 /*--------------------------------------------------------------*/
 /*--------------------------------------------------------------*/
 /*----------fin hoja lectura----------------------------------------------*/
-/*----------inicio hoja fundamento_procedimiento----------------------------------------------------*/
+/*----------inicio hoja fundamentos_procedimiento----------------------------------------------------*/
 /*--------------------------------------------------------------*/
 #funpro{
   margin-left: -150px;
@@ -660,44 +615,41 @@
   text-align:center;
   font-size: 35px;
 }
+.dfundamentot{
+  margin-left: 30px;
+}
 #fundanen{
-  width: 400px;
-  margin-left: 150px;
-  margin-top: -50px;
+  width: 480px;
+  margin-left: 30px;
 }
 #fechafun{
-  width: 300px;
-  margin-left: 100px;
-  margin-top: -50px;
+  width: 450px;
   font-size: 19px;
 }
 #opcion{
-  width: 400px;
-  margin-left: 150px;
-  margin-top: -50px;
+  width: 480px;
 }
 
 #difecha{
   width: 700px;
-  margin-left: 600px;
-  margin-top: -40px;
+  margin-left: 550px;
+  margin-top: -90px;
 }
 #diopc{
-  margin-top: 40px;
+  margin-top: 30px;
+  margin-left: 30px;
 }
-#diproc{
-  width: 700px;
-  margin-left: 0px;
+#diprocc{
+  width: 480px;
+  margin-left: 30px;
   margin-top:100px;
 }
 #proc{
-  width: 350px;
-  margin-left: 170px;
-  margin-top: -50px;
+  width: 480px;
 }
 #prc{
-  margin-left: 20px;
-  width: 200px;
+  margin-left: 550px;
+  width: 450px;
   height: 30px;
   background-color: white;
  -moz-border-radius: 5px;
@@ -716,17 +668,17 @@ box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
   margin-top:100px;
 }
 #ful{
-  width: 700px;
-  margin-left: 620px;
-  margin-top: -40px;
+  width: 500px;
+  margin-left: 550px;
+  margin-top: -85px;
 }
 #btnac{
   margin-top: 30px;
-  margin-left: 450px;
+  margin-left: 30px;
 }
 #btnca{
   margin-top: 39px;
-  margin-left: 450px;
+  margin-left: 30px;
 }
 #bca{
   width: 150px;
@@ -775,15 +727,16 @@ box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
   margin-left: -150px;
 }
 #textcon{
-  margin-left: 300px;
+  margin-left: 20px;
   background-color: #e5e2eb;
-  border: 0px;
+  border: 2px;
   font-size: 18px;
   text-align: left;
 }
 #scontra{
   margin-left: 20px;
-  width: 300px;
+  margin-top: 5px;
+  width: 460px;
   height: 35px;
   background-color: white;
  -moz-border-radius: 5px;
@@ -796,21 +749,23 @@ box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
   -moz-box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
   box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
 }
-
+.dfechado{
+  margin-left: 510px;
+  margin-top: -110px;
+}
 #dfechad{
   width: 700px;
-  margin-left: 600px;
+  margin-left: 30px;
   margin-top: -30px;
 }
 #fechadoc{
-  width: 300px;
+  width: 470px;
   height: 40px;
-  margin-left: 75px;
-  margin-top: -50px;
+  margin-left: 20px;
   font-size: 19px;
 }
 #tfechdoc{
-  margin-left: -150px;
+  margin-left: -145px;
   background-color: #e5e2eb;
   border: 0px;
   font-size: 18px;
@@ -820,18 +775,25 @@ box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
   margin-top: 40px;
 }
 #textdes{
-  margin-left: 10px;
+  margin-left: 18px;
   background-color: #e5e2eb;
   border: 0px;
   font-size: 18px;
   text-align: left;
 }
 #descripcion{
-  width: 1000px;
+  width: 985px;
   margin-left: 15px;
 }
 #contenedorconvenios{
   margin-top: 255px;
+}
+#textconm{
+  margin-left: -20px;
+  background-color: #e5e2eb;
+  border: 2px;
+  font-size: 18px;
+  text-align: left;
 }
 #dbtncomprobacion{
   margin-top: 30px;
@@ -861,15 +823,21 @@ box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
   margin-top: 50px;
 }
 #textmontomaximo{
-  margin-left: 10px;
+  margin-left: 20px;
   background-color: #e5e2eb;
   border: 0px;
   font-size: 18px;
   text-align: left;
 }
+#montomax{
+  width: 460px;
+  height: 40px;
+  margin-left: 20px;
+  font-size: 19px;
+}
 #scontra2{
   margin-left: 20px;
-  width: 300px;
+  width: 460px;
   height: 35px;
   background-color: white;
  -moz-border-radius: 5px;
@@ -882,16 +850,10 @@ box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
   -moz-box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
   box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
 }
-#montomax{
-  width: 300px;
-  height: 40px;
-  margin-left: 180px;
-  margin-top: -50px;
-  font-size: 19px;
-}
+
 #dmontominimo{
-  margin-top: -25px;
-  margin-left: 520px;
+  margin-top: -75px;
+  margin-left: 510px;
 }
 #textmontominimo{
   margin-left: 10px;
@@ -901,33 +863,32 @@ box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
   text-align: left;
 }
 #montomin{
-  width: 300px;
+  width: 480px;
   height: 40px;
-  margin-left: 180px;
-  margin-top: -50px;
+  margin-left: 10px;
   font-size: 19px;
 }
 #diniciovigencia{
   margin-top: 50px;
-  margin-left: 160px;
+  margin-left: 170px;
 }
 #textiniciovigencia{
-  margin-left: -150px;
+  margin-left: 510px;
   background-color: #e5e2eb;
   border: 0px;
   font-size: 18px;
   text-align: left;
 }
-#iniciovigencia{
-  width: 300px;
+
+#finiciovigencia{
+  width: 460px;
   height: 40px;
-  margin-left: 20px;
-  margin-top: -50px;
+  margin-left: -150px;
   font-size: 19px;
 }
 #dfinvigencia{
-  margin-top: -30px;
-  margin-left: 680px;
+  margin-top: -70px;
+  margin-left: 670px;
 }
 #textfinvigencia{
   margin-left: -150px;
@@ -937,28 +898,27 @@ box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
   text-align: left;
 }
 #finvigencia{
-  width: 300px;
+  width: 480px;
   height: 40px;
-  margin-left: 20px;
-  margin-top: -50px;
+  margin-left: -150px;
   font-size: 19px;
 }
 #dfechaentrega{
-  margin-top: 50px;
-  margin-left: 160px;
+  margin-top: -70px;
+  margin-left: 500px;
 }
 #textfechaentrega{
-  margin-left: -150px;
+  margin-left: 20px;
   background-color: #e5e2eb;
   border: 0px;
   font-size: 18px;
   text-align: left;
 }
 #fechaentrega{
-  width: 300px;
+  width: 480px;
   height: 40px;
   margin-left: 20px;
-  margin-top: -50px;
+
   font-size: 19px;
 }
 #fechadocadicional{
@@ -986,6 +946,10 @@ box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
   width: 1000px;
   margin-left: 15px;
 }
+.dfechadc{
+  margin-left: 510px;
+  margin-top: -110px;
+}
 #dfechad{
   margin-top: 40px;
   margin-left: 165px;
@@ -997,11 +961,13 @@ box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
   font-size: 18px;
   text-align: left;
 }
+#dcontrato2{
+  margin-left: 5px;
+}
 #fechadoc2{
-  width: 300px;
+  width: 470px;
   height: 40px;
-  margin-left: 80px;
-  margin-top: -50px;
+  margin-left: 15px;
   font-size: 19px;
 }
 #iniciovigencia{
@@ -1013,8 +979,8 @@ box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
 }
 
 #scontra3{
-  margin-left: 20px;
-  width: 300px;
+  margin-left: 25px;
+  width: 450px;
   height: 35px;
   background-color: white;
  -moz-border-radius: 5px;
@@ -1027,6 +993,13 @@ box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
   -moz-box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
   box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
 }
+#descripcion2{
+  width: 970px;
+  margin-left: 25px;
+}
+#textdesadicional{
+  margin-left: 25px;
+}
 
 /*--------------------------------------------------------------*/
 /*--------------------------------------------------------------*/
@@ -1035,19 +1008,18 @@ box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
 /*--------------------------------------------------------------*/
 
 .textmotivo{
-  margin-left: 300px;
+  margin-left: 30px;
   background-color: #e5e2eb;
   border: 0px;
   font-size: 18px;
   text-align: left;
 }
 #inmotivoin{
-  width: 350px;
-  margin-left: 400px;
-  margin-top: -40px;
+  width: 480px;
+  margin-left: 30px;
 }
 .dcontratoin{
-  margin-left: 80px;
+  margin-left: 30px;
   margin-top: 30px;
   width: 450px;
 }
@@ -1058,8 +1030,8 @@ box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
   text-align: left;
 }
 .secontra{
-  margin-left: 20px;
-  width: 300px;
+  margin-left: 30px;
+  width: 480px;
   height: 35px;
   background-color: white;
  -moz-border-radius: 5px;
@@ -1072,9 +1044,24 @@ box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
   -moz-box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
   box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
 }
+.secontrae{
+  margin-left: 300px;
+  width: 480px;
+  height: 35px;
+  background-color: white;
+ -moz-border-radius: 5px;
+ -webkit-border-radius:5px;
+ padding: 10px;
+}
+.secontrae:focus{
+  border: 1.5px solid #00CC99;
+  -webkit-box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
+  -moz-box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
+  box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
+}
 .dmotivoin{
-  margin-left: 500px;
-  margin-top: -40px;
+  margin-left: 550px;
+  margin-top: -70px;
 }
 .textmotivoin{
   background-color: #e5e2eb;
@@ -1083,8 +1070,8 @@ box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
   text-align: left;
 }
 .semotivo{
-  margin-left: 20px;
-  width: 300px;
+  margin-left: 550px;
+  width: 450px;
   height: 35px;
   background-color: white;
  -moz-border-radius: 5px;
@@ -1099,7 +1086,7 @@ box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
 }
 .dnombrein{
   margin-top: 30px;
-  margin-left: 80px;
+  margin-left: 30px;
 }
 .textnombrein{
   background-color: #e5e2eb;
@@ -1108,13 +1095,11 @@ box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
   text-align: left;
 }
 #innombreinco{
-  width: 500px;
-  margin-left: 250px;
-  margin-top: -40px;
+  width: 480px;
 }
 .dsentidoresolucion{
-  margin-top: 30px;
-  margin-left: 80px;
+  margin-top: -70px;
+  margin-left: 550px;
 }
 .textsentido{
   background-color: #e5e2eb;
@@ -1123,16 +1108,14 @@ box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
   text-align: left;
 }
 #insentido{
-  width: 500px;
-  margin-left: 250px;
-  margin-top: -40px;
+  width: 450px;
 }
 .dcontratoen{
   width: 430px;
   margin-left: 300px;
 }
 .dfechaentregamo{
-  margin-left: 10px;
+  margin-left: 25px;
   margin-top: 30px;
 }
 #textfechaentregamo{
@@ -1142,15 +1125,14 @@ box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
   text-align: left;
 }
 #infechaentregamo{
-  width: 300px;
+  width: 480px;
   height: 40px;
-  margin-left: 150px;
-  margin-top: -50px;
+  margin-left: ;
   font-size: 19px;
 }
 .dfechaentregamaxima{
-  margin-left: 480px;
-  margin-top: -30px;
+  margin-left: 530px;
+  margin-top: -70px;
 }
 #textfechaentregamaxima{
   background-color: #e5e2eb;
@@ -1159,15 +1141,14 @@ box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
   text-align: left;
 }
 #infechaentregamaxima{
-  width: 300px;
+  width: 470px;
   height: 40px;
-  margin-left: 230px;
-  margin-top: -50px;
+  margin-left: 1px;
   font-size: 19px;
 }
 .dnombreentregables{
   margin-top: 30px;
-  margin-left: 10px;
+  margin-left: 30px;
 }
 .textnombreentregables{
   background-color: #e5e2eb;
@@ -1176,13 +1157,13 @@ box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
   text-align: left;
 }
 #innombreentregables{
-  width: 600px;
-  margin-left: 250px;
-  margin-top: -40px;
+  width: 480px;
+
+
 }
 .dcantidadentregable{
-    margin-top: 30px;
-    margin-left: 10px;
+    margin-top: -70px;
+    margin-left: 540px;
 }
 .textcantidade{
   background-color: #e5e2eb;
@@ -1191,13 +1172,12 @@ box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
   text-align: left;
 }
 #incantidade{
-  width: 600px;
-  margin-left: 250px;
-  margin-top: -40px;
+  width: 460px;
+
 }
 .ddireccione{
   margin-top: 30px;
-  margin-left: 10px;
+  margin-left: 35px;
 }
 .textdireccione{
   background-color: #e5e2eb;
@@ -1206,13 +1186,11 @@ box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
   text-align: left;
 }
 #indireccione{
-  width: 600px;
-  margin-left: 250px;
-  margin-top: -40px;
+  width: 970px;
 }
 .ddescripcion{
   margin-top: 30px;
-  margin-left: 10px;
+  margin-left: 40px;
 }
 .textdescripcion{
   background-color: #e5e2eb;
@@ -1221,9 +1199,7 @@ box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
   text-align: left;
 }
 #descripcionn{
-  width: 600px;
-  margin-left: 250px;
-  margin-top: -40px;
+  width: 970px;
 }
 
 /*--------------------------------------------------------------*/
@@ -1231,10 +1207,16 @@ box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
 /*-----------fin motivo_inconfor_entregables---------------------------------------------*/
 /*--------------facturas_pagos_efectuados.html------------------------------------------------*/
 /*--------------------------------------------------------------*/
-
+.textmotivoc{
+  margin-left: 320px;
+  background-color: #e5e2eb;
+  border: 0px;
+  font-size: 18px;
+  text-align: left;
+}
 .fasecontra{
-    margin-left: 20px;
-    width: 300px;
+    margin-left: 320px;
+    width: 480px;
     height: 35px;
     background-color: white;
    -moz-border-radius: 5px;
@@ -1259,15 +1241,15 @@ box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
     border: 0px;
     font-size: 18px;
     text-align: left;
+    margin-left: 20px;
   }
 #innumerofactura{
-  width: 350px;
-  margin-left: 180px;
-  margin-top: -40px;
+  width: 480px;
+  margin-left: 20px;
 }
 .dmontos{
   width: 460px;
-  margin-left: 570px;
+  margin-left: 550px;
   margin-top: -40px;
 }
 .textmontos{
@@ -1277,9 +1259,8 @@ box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
     text-align: left;
   }
 #montos{
-  width: 350px;
-  margin-left: 100px;
-  margin-top: -40px;
+  width: 450px;
+
 }
 .dfechafactura{
   width: 535px;
@@ -1292,15 +1273,15 @@ box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
   border: 0px;
   font-size: 18px;
   text-align: left;
+  margin-left: 20px;
 }
 #fechafactura{
-  width: 350px;
-  margin-left: 180px;
-  margin-top: -40px;
+  width: 480px;
+  margin-left: 20px;
 }
 .dfechapago{
   margin-top: -40px;
-  margin-left: 560px;
+  margin-left: 550px;
 }
 .textfechapago{
   background-color: #e5e2eb;
@@ -1309,13 +1290,12 @@ box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
   text-align: left;
 }
 #fechapago{
-  width: 337px;
-  margin-left: 120px;
-  margin-top: -40px;
+  width: 450px;
+
 }
 .ddescripcionfactura{
   margin-top: 30px;
-  margin-left: 10px;
+  margin-left: 30px;
 }
 .textdescripcionfactura{
   background-color: #e5e2eb;
@@ -1325,19 +1305,17 @@ box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
   margin-top: -855px;
 }
 #texadescripcionfactura{
-  margin-left: 180px;
-  margin-top: -35px;
-  width: 800px;
+  width: 970px;
 }
 /*pagos efectuados*/
 .secontratopagoe{
-  margin-left: 20px;
-  width: 300px;
+  margin-left: 320px;
+  width: 480px;
   height: 35px;
   background-color: white;
  -moz-border-radius: 5px;
  -webkit-border-radius:5px;
- padding: 10px;
+  padding: 10px;
   }
 .secontratopagoe:focus{
       border: 1.5px solid #00CC99;
@@ -1355,30 +1333,30 @@ box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
   font-size: 18px;
   text-align: left;
   margin-top: -855px;
+  margin-left: 20px;
 }
 #monto{
-  width: 337px;
-  margin-left: 120px;
-  margin-top: -40px;
+  width: 480px;
+  margin-left: 20px;
 }
 .dfechapagoefectuado{
   margin-left: 520px;
-  margin-top: -26px;
+  margin-top: -70px;
 }
 .textfechapagoefectuado{
   background-color: #e5e2eb;
   border: 0px;
   font-size: 18px;
   text-align: left;
+  margin-left: 30px;
 }
 #fechapagoefectuado{
-  width: 337px;
-  margin-left: 120px;
-  margin-top: -40px;
+  width: 450px;
+  margin-left: 30px;
 }
 .ddescripcionpagos{
   margin-top: 30px;
-  margin-left: 10px;
+  margin-left: 30px;
 }
 .textdescripcionpagoefectuado{
   background-color: #e5e2eb;
@@ -1388,9 +1366,7 @@ box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
   margin-top: -855px;
 }
 #texadescripcionpagoefectuado{
-  margin-left: 150px;
-  margin-top: -35px;
-  width: 800px;
+  width: 970px;
 }
 /*--------------------------------------------------------------*/
 /*--------------------------------------------------------------*/
@@ -1405,8 +1381,8 @@ box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
     text-align: left;
   }
 .secontrapartisasp{
-      margin-left: 20px;
-      width: 300px;
+      margin-left: 30px;
+      width: 480px;
       height: 35px;
       background-color: white;
      -moz-border-radius: 5px;
@@ -1421,18 +1397,18 @@ box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
     }
 .dclavepartida{
   margin-left: 500px;
-  margin-top: -30px;
+  margin-top: -70px;
 }
 .textclavepartida{
         background-color: #e5e2eb;
         border: 0px;
         font-size: 18px;
         text-align: left;
+        margin-left: 50px;
       }
 #inclavepartida{
-    width: 337px;
-    margin-left: 155px;
-    margin-top: -40px;
+    width: 450px;
+    margin-left: 50px;
 }
 .textcontratosub{
     background-color: #e5e2eb;
@@ -1442,8 +1418,8 @@ box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
     text-align: left;
   }
 .secontatosub{
-      margin-left: 20px;
-      width: 300px;
+      margin-left: 30px;
+      width: 480px;
       height: 35px;
       background-color: white;
      -moz-border-radius: 5px;
@@ -1458,19 +1434,19 @@ box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
     }
 
 .dnumerosubpartida{
-      margin-left: 470px;
-      margin-top: -30px;
+      margin-left: 500px;
+      margin-top: -70px;
     }
 .textnumerosuboartida{
             background-color: #e5e2eb;
             border: 0px;
             font-size: 18px;
             text-align: left;
+            margin-left: 50px;
           }
 #innumerosubpartida{
-        width: 337px;
-        margin-left: 200px;
-        margin-top: -40px;
+        width: 450px;
+        margin-left: 50px;
     }
 .ddescripcionsubpartida{
       margin-top: 30px;
@@ -1482,11 +1458,11 @@ box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
       font-size: 18px;
       text-align: left;
       margin-top: -855px;
+      margin-left: 20px;
     }
 #texadescripcionsubpartida{
-      margin-left: 150px;
-      margin-top: -35px;
-      width: 800px;
+      margin-left: 20px;
+      width: 970px;
     }
 
 /*--------------------------------------------------------------*/
@@ -1502,8 +1478,8 @@ box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
     text-align: left;
   }
 .secontrarecepcion{
-      margin-left: 20px;
-      width: 300px;
+      margin-left: 30px;
+      width: 480px;
       height: 35px;
       background-color: white;
      -moz-border-radius: 5px;
@@ -1519,13 +1495,13 @@ box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
     }
 .ddrequirente{
 margin-left: 500px;
-margin-top: -35px;
+margin-top: -70px;
 width: 470px;
 font-size: 11px;
 }
 .inrequirente{
-      margin-left: 20px;
-      width: 300px;
+      margin-left: 550px;
+      width: 450px;
       height: 35px;
       background-color: white;
      -moz-border-radius: 5px;
@@ -1544,6 +1520,7 @@ font-size: 11px;
       border: 0px;
       font-size: 18px;
       text-align: left;
+      margin-left: 50px;
     }
 
 .seequirentere{
@@ -1574,9 +1551,7 @@ font-size: 11px;
       margin-top: -855px;
     }
 #texadescripcionrequirente{
-      margin-left: 130px;
-      margin-top: -35px;
-      width: 800px;
+      width: 970px;
     }
 #dbtnrecep{
   margin-top: 30px;
@@ -1595,8 +1570,8 @@ font-size: 11px;
     text-align: left;
   }
 .secontraterminacion{
-      margin-left: 20px;
-      width: 300px;
+      margin-left: 30px;
+      width: 480px;
       height: 35px;
       background-color: white;
      -moz-border-radius: 5px;
@@ -1610,8 +1585,8 @@ font-size: 11px;
       box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
     }
 .dfechaterminacion{
-  margin-left: 500px;
-  margin-top: -30px;
+  margin-left: 550px;
+  margin-top: -70px;
 }
 .textfechaterminacion{
       background-color: #e5e2eb;
@@ -1620,9 +1595,7 @@ font-size: 11px;
       text-align: left;
     }
 #infechaterminacion{
-      width: 300px;
-      margin-left: 205px;
-      margin-top: -40px;
+      width: 450px;
     }
 .dgastosnorecuperables{
   margin-top: 30px;
@@ -1636,11 +1609,11 @@ font-size: 11px;
 }
 #ingastosnorecuperables{
   width: 480px;
-  margin-left: 280px;
-  margin-top: -40px;
+  margin-left: 30px;
 }
 .dmontofiniquito{
-  margin-top: 30px;
+  margin-top: -70px;
+  margin-left: 520px;
 }
 .textmontofiniquito{
   background-color: #e5e2eb;
@@ -1650,9 +1623,8 @@ font-size: 11px;
   text-align: left;
 }
 #inmontofiniquito{
-  width: 480px;
-  margin-left: 280px;
-  margin-top: -40px;
+  width: 450px;
+  margin-left: 30px;
 }
 
 /*--------------------------------------------------------------*/
@@ -1662,16 +1634,32 @@ font-size: 11px;
 /*--------------------------------------------------------------*/
 .dprocedimientocontratacioncontrato{
   width: 650px;
-  margin-top: 30px;
-  margin-left: 3px;
+  margin-top: -70px;
+  margin-left: 520px;
 }
+.secontrarecepcionc{
+      margin-left: 30px;
+      width: 460px;
+      height: 35px;
+      background-color: white;
+     -moz-border-radius: 5px;
+     -webkit-border-radius:5px;
+     padding: 10px;
+     font-size: 11px;
+    }
+.secontrarecepcionc:focus{
+      border: 1.5px solid #00CC99;
+      -webkit-box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
+      -moz-box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
+      box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
+    }
 .dunidadcompradoracontrato{
   width: 550px;
   margin-top: 30px;
 }
 .seunidadcompradoracontrato{
-      margin-left: 20px;
-      width: 300px;
+      margin-left: 30px;
+      width: 480px;
       height: 35px;
       background-color: white;
      -moz-border-radius: 5px;
@@ -1687,12 +1675,12 @@ font-size: 11px;
 .dconsolidadocontrato{
   width: 480px;
   margin-left: 520px;
-  margin-top: -40px;
+  margin-top: -70px;
 
 }
 .seconsolidadocontrato{
       margin-left: 30px;
-      width: 300px;
+      width: 460px;
       height: 35px;
       background-color: white;
      -moz-border-radius: 5px;
@@ -1711,7 +1699,7 @@ font-size: 11px;
 }
 .seunidadrequirentecontrato{
       margin-left: 30px;
-      width: 300px;
+      width: 480px;
       height: 35px;
       background-color: white;
      -moz-border-radius: 5px;
@@ -1727,11 +1715,11 @@ font-size: 11px;
 .dmontonoivacontrato{
   width: 500px;
   margin-left: 520px;
-  margin-top: -40px;
+  margin-top: -70px;
 }
 .semontonoivacontrato{
-      margin-left: 20px;
-      width: 300px;
+      margin-left: 30px;
+      width: 460px;
       height: 35px;
       background-color: white;
      -moz-border-radius: 5px;
@@ -1747,10 +1735,11 @@ font-size: 11px;
 .dadministradorcontrato{
   width: 550px;
   margin-top: 30px;
+  margin-left: 2px;
 }
 .seadministradorcontrato{
-      margin-left: 70px;
-      width: 300px;
+      margin-left: 30px;
+      width: 480px;
       height: 35px;
       background-color: white;
      -moz-border-radius: 5px;
@@ -1766,11 +1755,11 @@ font-size: 11px;
 .dfechascontrato{
   width: 485px;
   margin-left: 520px;
-  margin-top: -40px;
+  margin-top: -70px;
 }
 .sefechascontrato{
-      margin-left: 75px;
-      width: 300px;
+      margin-left: 30px;
+      width: 460px;
       height: 35px;
       background-color: white;
      -moz-border-radius: 5px;
@@ -1786,10 +1775,11 @@ font-size: 11px;
 .dproveedoradjudicadocontrato{
   width: 560px;
   margin-top: 30px;
+  margin-left: 5px;
 }
 .seproveedoradjudicadocontrato{
-      margin-left: 5px;
-      width: 300px;
+      margin-left: 30px;
+      width: 480px;
       height: 35px;
       background-color: white;
      -moz-border-radius: 5px;
@@ -1804,6 +1794,7 @@ font-size: 11px;
     }
 .dnumerocontratoc{
   margin-top: 30px;
+  margin-left: 5px;
 }
 .textnumerocontrato{
     background-color: #e5e2eb;
@@ -1813,13 +1804,14 @@ font-size: 11px;
     text-align: left;
     }
 #innumerocontratoc{
-    width: 710px;
-    margin-left: 280px;
-    margin-top: -40px;
+    width: 480px;
+    margin-left: 30px;
+
     }
 
 .dprocedimientocompranetc{
-  margin-top: 30px;
+  margin-top: -70px;
+  margin-left: 520px;
 }
 .textprocedimientocompranet{
     background-color: #e5e2eb;
@@ -1829,13 +1821,14 @@ font-size: 11px;
     text-align: left;
     }
 #inprocedimientocompranetc{
-    width:  710px;
-    margin-left: 280px;
-    margin-top: -40px;
+    width:  460px;
+    margin-left: 30px;
+
     }
 
 .dcontratocompranetc{
   margin-top: 30px;
+  margin-left: 5px;
 }
 .textcontratocompranet{
     background-color: #e5e2eb;
@@ -1845,12 +1838,13 @@ font-size: 11px;
     text-align: left;
     }
 #incontratocompranetc{
-    width:  710px;
-    margin-left: 280px;
-    margin-top: -40px;
+    width:  480px;
+    margin-left: 30px;
+
     }
 .dconveniointernoc{
-  margin-top: 30px;
+  margin-top: -70px;
+  margin-left: 520px;
 }
 .textconveniointerno{
     background-color: #e5e2eb;
@@ -1860,12 +1854,12 @@ font-size: 11px;
     text-align: left;
     }
 #inconveniointernoc{
-    width:  710px;
-    margin-left: 280px;
-    margin-top: -40px;
+    width:  460px;
+    margin-left: 30px;
     }
 .dobjetocontratacionc{
   margin-top: 30px;
+  margin-left: 5px;
 }
 .textobjetocontratacion{
     background-color: #e5e2eb;
@@ -1875,21 +1869,20 @@ font-size: 11px;
     text-align: left;
     }
 #inobjetocontratacionc{
-    width:  710px;
-    margin-left: 280px;
-    margin-top: -40px;
+    width:  975px;
+    margin-left: 30px;
+
     }
 .dcontratoabiertoc{
   margin-top: 30px;
-
+  margin-left: 20px;
 }
 
 #incontratoabiertoc{
 
-width:40px;
- 
-margin-left:10px;
-margin-top:-40px;
+width: 60px;
+margin-left:30px;
+
 
 }
 .textcontratoabierto{
@@ -1907,6 +1900,7 @@ margin-top:-40px;
 }
 .ddocumentodescripcionc{
   margin-top: 30px;
+  margin-left: 10px;
 }
 .textdocumentodescripcion{
     background-color: #e5e2eb;
@@ -1914,12 +1908,12 @@ margin-top:-40px;
     margin-left: 30px;
     font-size: 18px;
     text-align: left;
-    width: 250px;
+
     }
 #indocumentodescripcionc{
-    width:  710px;
-    margin-left: 280px;
-    margin-top: -60px;
+    width:  970px;
+    margin-left: 30px;
+    margin-top: 5px;
     }
 .dpdfc{
   margin-top: 30px;
@@ -1947,9 +1941,8 @@ margin-top:-40px;
     width: 505px;
 }
 #innotificacionadjudicadaf{
-      width: 250px;
-      margin-left: 250px;
-      margin-top: -40px
+      width: 480px;
+
     }
 .dformalizacioncontratof{
     margin-left: 30px;
@@ -1957,9 +1950,7 @@ margin-top:-40px;
     width: 505px;
 }
 #informalizacioncontratof{
-      width: 250px;
-      margin-left: 250px;
-      margin-top: -40px
+      width: 480px;
     }
 .drequesicioncontratof{
     margin-left: 30px;
@@ -1967,9 +1958,7 @@ margin-top:-40px;
     width: 505px;
 }
 #inrequesicioncontratof{
-      width: 250px;
-      margin-left: 250px;
-      margin-top: -40px
+      width: 480px;
     }
 .dgarantiacumplimientof{
     margin-left: 30px;
@@ -1977,9 +1966,7 @@ margin-top:-40px;
     width: 505px;
 }
 #ingarantiacumplimientof{
-      width: 250px;
-      margin-left: 250px;
-      margin-top: -40px
+      width: 480px;
     }
 .dresicioncontratof{
     margin-left: 30px;
@@ -1987,9 +1974,7 @@ margin-top:-40px;
     width: 505px;
 }
 #inresicioncontratof{
-      width: 250px;
-      margin-left: 250px;
-      margin-top: -40px
+      width: 480px;
     }
 .diniciovigenciaf{
     margin-left: 30px;
@@ -1997,69 +1982,55 @@ margin-top:-40px;
     width: 505px;
 }
 #ininiciovigenciaf{
-      width: 250px;
-      margin-left: 250px;
-      margin-top: -40px
+      width: 480px;
     }
 .dsatf{
-    margin-left: 600px;
-    margin-top: -320px;
+    margin-left: 550px;
+    margin-top: -558px;
     width: 505px;
 }
 #insatf{
-      width: 250px;
-      margin-left: 145px;
-      margin-top: -40px
+      width: 450px;
     }
 .dimssf{
-    margin-left: 600px;
+    margin-left: 550px;
     margin-top: 30px;
     width: 505px;
 }
 #inimssf{
-      width: 250px;
-      margin-left: 145px;
-      margin-top: -40px
+      width: 450px;
     }
 .dinfonavitf{
-    margin-left: 600px;
+    margin-left: 550px;
     margin-top: 30px;
     width: 505px;
 }
 #ininfonavitf{
-      width: 250px;
-      margin-left: 145px;
-      margin-top: -40px
+      width: 450px;
     }
 .dfechaentregaf{
-    margin-left: 600px;
+    margin-left: 550px;
     margin-top: 30px;
     width: 505px;
 }
 #infechaentregaf{
-      width: 250px;
-      margin-left: 145px;
-      margin-top: -40px
+      width: 450px;
     }
 .dsuficienciaf{
-    margin-left: 600px;
+    margin-left: 550px;
     margin-top: 30px;
     width: 505px;
 }
 #insuficienciaf{
-      width: 250px;
-      margin-left: 145px;
-      margin-top: -40px
+      width: 450px;
     }
 .dfinvigenciaf{
-    margin-left: 600px;
+    margin-left: 550px;
     margin-top: 30px;
     width: 505px;
 }
 #infinvigenciaf{
-      width: 250px;
-      margin-left: 145px;
-      margin-top: -40px
+      width: 450px;
     }
 .dfechadescripcion{
   margin-top: 30px;
@@ -2244,8 +2215,51 @@ footer{
 /*-----------fin footer---------------------------------------------*/
 /*-----------registro---------------------------------------------------*/
 /*--------------------------------------------------------------*/
-#dregistro{
+#dregistro {
   margin-top: 200px;
+}
+
+.radioempleado{
+    margin-left: 300px;
+}
+.radioadmin{
+    margin-left: 55px;
+}
+
+.botongr{
+  margin-left: 100px;
+  width: 400px;
+  height: 50px;
+}
+#botoncr{
+  margin-left: 50px;
+  width: 150px;
+  height: 40px;
+}
+#botoncr:hover{
+  background: rgba(169,3,41,1);
+  background: -moz-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(169,3,41,1)), color-stop(44%, rgba(143,2,34,1)), color-stop(100%, rgba(109,0,25,1)));
+  background: -webkit-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
+  background: -o-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
+  background: -ms-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
+  background: linear-gradient(to right, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019', GradientType=1 );
+}
+#botongr{
+  margin-left: 30px;
+  width: 150px;
+  height: 40px;
+}
+#botongr:hover{
+  background: rgba(169,3,41,1);
+  background: -moz-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(169,3,41,1)), color-stop(44%, rgba(143,2,34,1)), color-stop(100%, rgba(109,0,25,1)));
+  background: -webkit-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
+  background: -o-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
+  background: -ms-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
+  background: linear-gradient(to right, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019', GradientType=1 );
 }
 
 

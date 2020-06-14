@@ -6,11 +6,38 @@
 */
 #venta{
   border: 1px solid #bbb;
-  height: 350px;
+  height: 550px;
   width: 750px;
   margin: 5px;
   margin-left: 350px;
   background-color: #ddd;
+}
+.dadminnombre{
+  margin-left: 30px;
+}
+#nombre{
+    width: 680px;
+}
+.dadminapp{
+  margin-top: 20px;
+  margin-left: 30px;
+}
+#apepat{
+    width: 680px;
+}
+.dadminapm{
+  margin-top: 20px;
+  margin-left: 30px;
+}
+#apemat{
+    width: 680px;
+}
+.dadmince{
+  margin-top: 20px;
+  margin-left: 30px;
+}
+#email-03{
+    width: 680px;
 }
 #en{
   margin-right: 5px;
@@ -20,8 +47,8 @@
   margin-bottom: 10px;
 }
 #en{
-  margin-left: -870px;
-  margin-top: 30px;
+  margin-left: -360px;
+  margin-top:-10px;
 }
 #env{
   border: 0px;

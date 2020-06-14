@@ -290,7 +290,9 @@
       <div class="row">
         <div class='col-sm-20 col-md-20 col-ld-20'>
           <h2 class="fuu"> FACTURAS </h2>
-            <label class="textmotivo">Contrato:</label>
+          <div class="dtextmotivocon">
+            <label class="textmotivoc">Contrato:</label>
+          </div>
             <select id="fasecontra" class="fasecontra" name="fasecontra">
 		  <?php
                 if (isset($_GET["flag"])) {
@@ -338,7 +340,8 @@
             <div class='col-sm-20 col-md-20 col-ld-20'>
               <h2 class="fuu"> PAGOS EFECTUADOS </h2>
               <div class="dcontratopagose">
-                <label  class="textmotivo">Contrato:</label>
+                <label  class="textmotivoc">Contrato:</label>
+                </div>
                 <select id="secontratopagoe" class="secontratopagoe" name="secontratopagoe">
 		<?php
                 if (isset($_GET["flag"])) {
@@ -353,7 +356,6 @@
 }
                   ?>
                 </select>
-              </div>
               <div class="dmonto">
                 <label class="textmonto">Monto:</label>
                 <input type="number" class="form-control" id="monto" placeholder="Monto" name="montos"  step="0.1">

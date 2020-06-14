@@ -296,7 +296,7 @@ window.location="inconformidades.php?motivo="+selIndex2+"&numero_contrato="+selI
               <h2 class="fuu"> INCONFORMIDADES </h2>
               <div class="dcontratoin">
                 <label class="textcontratoin">Contrato:</label>
-
+                </div>
                 <select id="secontra" class="secontra" name="secontra">
 			<?php
 			if(isset($_GET["flag"])){
@@ -310,10 +310,10 @@ window.location="inconformidades.php?motivo="+selIndex2+"&numero_contrato="+selI
 		?>
                 </select>
 
-              </div>
+
               <div class="dmotivoin">
                 <label class="textmotivoin">Motivo:</label>
-
+              </div>
                 <select id="semotivo" class="semotivo" name="semotivo">
 			  <?php
                         if(isset($_GET["flag2"])){
@@ -328,7 +328,6 @@ window.location="inconformidades.php?motivo="+selIndex2+"&numero_contrato="+selI
 
                 </select>
 
-              </div>
               <div class="dnombrein">
                 <label class="textnombrein">Nombre Inconformidad:</label>
                 <input type="text" class="form-control" id="innombreinco" name="innombreinco"  placeholder="Nombre Inconformidad">

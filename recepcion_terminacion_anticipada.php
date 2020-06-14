@@ -274,7 +274,7 @@
     var selObj = document.getElementById('secontrarecepcion');
      var selObj2 = document.getElementById('inrequirente');
       var descripcion  = (document.getElementById('texadescripcionrequirente').value);
-      
+
       var selIndex = selObj.options[selObj.selectedIndex].text;
       var selIndex2 = selObj2.options[selObj2.selectedIndex].text;
          alert(selIndex);
@@ -290,8 +290,9 @@
           <h2 class="fuu"> RECEPCIÓN </h2>
           <div class="dcontratorecepcion">
             <label class="textcontratorecepcion">Contrato:</label>
+          </div>
             <select id="secontrarecepcion" class="secontrarecepcion" name="secontrarecepcion">
-              
+
              <?php
 			if(isset($_GET["flag"])){
 			$flag=unserialize($_GET["flag"]);
@@ -303,9 +304,9 @@
 	}
 		?>
             </select>
-          </div>
           <div class="ddrequirente">
             <label class="textrequirente">Requirente:</label>
+            </div>
             <select  class="inrequirente" id="inrequirente" name="inrequirente">
             <?php
 			if(isset($_GET["flag2"])){
@@ -318,7 +319,6 @@
 	}
            ?>
 	    </select>
-          </div>
           <div class="ddescripcionrequirente">
             <label class="textdescripcionrequirente"> Descripción:</label><br>
             <textarea name="name" id="texadescripcionrequirente" class="form-control"  rows="3" placeholder="Descripción"></textarea>
@@ -337,6 +337,7 @@
               <h2 class="fuu"> TERMINACIÓN ANTICIPADA </h2>
               <div class="dcontratoterminacion">
                 <label class="textcontratoterminacion">Contrato:</label>
+              </div>
                 <select id="secontraterminacion" class="secontraterminacion" name="secontraterminacion">
                  <?php
 			if(isset($_GET["flag"])){
@@ -349,7 +350,6 @@
 	}
 		?>
                 </select>
-              </div>
               <div class="dfechaterminacion">
                 <label class="textfechaterminacion">Fecha Terminación:</label>
                 <input class="form-control" id="infechaterminacion" name="fecha" placeholder="Fecha" type="date" >

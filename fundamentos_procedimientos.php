@@ -258,7 +258,9 @@
     </div>
     <div id="tabf">
       <form method="POST">
+        <div class="dfundamentot">
           <label id="ccp" class="col-sm-20"> Fundamento: </label>
+        </div>
           <input class="form-control" id="fundanen" placeholder="Fundamento" name="fundamento" type="text">
           <div id="difecha">
             <label id="ccp" class="col-sm-20"> Fecha:   </label>
@@ -286,13 +288,13 @@
     <div id="tif">
       <h2 class="fuu"> PROCEDIMIENTOS CONTRATACIÓN</h2>
     </div>
-    <div id="diproc">
+    <div id="diprocc">
       <label id="ccp" class="col-sm-20"> Procedimientos:   </label>
       <input class="form-control" id="proc" name"proc"  placeholder="Procedimientos" type="text" >
     </div>
     <div id="ful">
       <label id="ccp" class="col-sm-20"> Fundamento legal:   </label>
-
+      </div>
  <script lenguage="javascript" type="text/javascript">
          function mostrarText(){
     var selObj = document.getElementById('prc');
@@ -319,7 +321,7 @@
                   ?>
 
       </select>
-    </div>
+
     <div id="btnca">
         <button type="button" id="bca" onclick="mostrarText();" class="btn btn-primary" name="button"> Guardar </button>
 

@@ -265,7 +265,7 @@
  var selObj6 = document.getElementById('seproveedoradjudicadocontrato');
  var selObj7 = document.getElementById('sefechascontrato');
  var selObj8 = document.getElementById('seconsolidadocontrato');
- 
+
       var numero_contrato  = (document.getElementById('innumerocontratoc').value);
       var procedimiento_compranet  = (document.getElementById('inprocedimientocompranetc').value);
        var contrato_compranet  = (document.getElementById('incontratocompranetc').value);
@@ -313,7 +313,7 @@
           <div class="dconsolidadocontrato">
             <label class="textcontratorecepcion">Consolidado:</label>
             <select id="seconsolidadocontrato" class="seconsolidadocontrato" name="seconsolidadocontrato">
-             
+
             <?php
 			if(isset($_GET["flag8"])){
 			$flag=unserialize($_GET["flag8"]);
@@ -329,7 +329,7 @@
           <div class="dunidadrequirentecontrato">
             <label class="textcontratorecepcion">Unidad Requirente:</label>
             <select id="seunidadrequirentecontrato" class="seunidadrequirentecontrato" name="seunidadrequirentecontrato">
-             
+
             <?php
 			if(isset($_GET["flag3"])){
 			$flag=unserialize($_GET["flag3"]);
@@ -345,7 +345,7 @@
           <div class="dmontonoivacontrato">
             <label class="textcontratorecepcion">Monto No Iva:</label>
             <select id="semontonoivacontrato" class="semontonoivacontrato" name="semontonoivacontrato">
-             
+
             <?php
 			if(isset($_GET["flag5"])){
 			$flag=unserialize($_GET["flag5"]);
@@ -361,7 +361,7 @@
           <div class="dadministradorcontrato">
             <label class="textcontratorecepcion">Administrador:</label>
             <select id="seadministradorcontrato" class="seadministradorcontrato" name="seadministradorcontrato">
-             
+
             <?php
 			if(isset($_GET["flag4"])){
 			$flag=unserialize($_GET["flag4"]);
@@ -377,7 +377,7 @@
           <div class="dfechascontrato">
             <label class="textcontratorecepcion">Fechas:</label>
             <select id="sefechascontrato" class="sefechascontrato" name="sefechascontrato">
-             
+
             <?php
 			if(isset($_GET["flag7"])){
 			$flag=unserialize($_GET["flag7"]);
@@ -393,7 +393,7 @@
           <div class="dproveedoradjudicadocontrato">
             <label class="textcontratorecepcion">Proveedor Adjudicado:</label>
             <select id="seproveedoradjudicadocontrato" class="seproveedoradjudicadocontrato" name="seproveedoradjudicadocontrato">
-             
+
             <?php
 			if(isset($_GET["flag6"])){
 			$flag=unserialize($_GET["flag6"]);
@@ -408,8 +408,9 @@
           </div>
           <div class="dprocedimientocontratacioncontrato">
             <label class="textcontratorecepcion">Procedimineto Contratación:</label>
-            <select id="secontrarecepcion" class="secontrarecepcion" name="secontrarecepcion">
-             
+            <!--cambie class secontrarecepcion a secontrarecepcionc" -->
+            <select id="secontrarecepcion" class="secontrarecepcionc" name="secontrarecepcion">
+
             <?php
 			if(isset($_GET["flag2"])){
 			$flag=unserialize($_GET["flag2"]);
@@ -451,8 +452,8 @@
 
           <div class="dcontratoabiertoc">
             <label class="textcontratoabierto">Contrato Abierto:
-            <input type="checkbox" " id="incontratoabiertoc" name="incontratoabiertoc"  value="1"></label>
-          </div>          
+            <input type="checkbox"  id="incontratoabiertoc" name="incontratoabiertoc"  value="1"></label>
+          </div>
          <div id="dbtncomprobacion">
               <button type="button" id="bcomprobacion" class="btn btn-primary" onclick="mostrarText()" name="bcomprobacion"> Guardar </button>
           </div>

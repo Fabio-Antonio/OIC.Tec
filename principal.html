@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
 <link href="https://cdn.datos.gob.mx/assets/css/main.css" rel="stylesheet">
 <link href="https://cdn.datos.gob.mx/bower_components/polymer/polymer.html" rel="import">
@@ -50,67 +50,26 @@
         <h1 class="bea" align="center"> B.E.S.A <h1>
           <h2 align="center">SISTEMA DE SEGUIMIENTO DE CONTRATOS</h2>
       <div class="contenedor">
-        <div class="row">
-          <div class="panel-group" id="acordion">
-          	<div class="panel panel-default" id="def">
-              <div class="panel-heading">
-                <button id="cap" class="btn btn-primary btn-lg" type="button" data-toggle="collapse" data-parent="#acordion" href="#collapseTwo">CAPTURAS</button>
-              </div>
-              <div id="collapseTwo" class="panel-collapse collapse">
-              <!------------------------------------------------------------------>
-              <!------------------------------------------------------------------>
-              <!--INGRESAR BOTONES PARA DESPLEGAR--------------------------------->
-              <!----------------------------------------------------------------->
-
-              <button id="bt" class="btn btn-danger" type="button" onclick="location.href='alta.html'">Alta de usuarios</button>
-
-<button id="bt" class="btn btn-danger" type="button" onclick="location.href='lectura.html'">Carga de archivos (PDF)(CVS)</button>
-<button id="bt" class="btn btn-danger" type="button" onclick="location.href='requirente_compradora_captura.html'">Unidad Requirente/Compradora</button>
-<button id="bt" class="btn btn-danger" type="button" onclick="location.href='consulta_contrato.php'">Comprobacion/Convenios Modificados/Documentos Adicionales</button>
-<button id="bt" class="btn btn-danger" type="button" onclick="location.href='consulta_fundamento.php'">Fundamento Legal/Procedimientos de Contratación</button>
-<button id="bt" class="btn btn-danger" type="button" onclick="location.href='consulta_contrato2.php'">Inconformidades</button>
-<button id="bt" class="btn btn-danger" type="button" onclick="location.href='consulta_contrato3.php'">Entregables</button>
-<button id="bt" class="btn btn-danger" type="button" onclick="location.href='consulta_contrato4.php'">Partidas_presupuestales/subpartida</button>
-<button id="bt" class="btn btn-danger" type="button" onclick="location.href='consulta_contrato5.php'">Facturas/pagos_efectuados</button>
-<button id="bt" class="btn btn-danger" type="button" onclick="location.href='consulta_contrato6.php'">Recepción/Terminación_Anticipada</button>
-<button id="bt" class="btn btn-danger" type="button" onclick="location.href='captura_pro_mont.html'">Consolidados/Monto no iva/Proveedor Adjudicado</button>
-<button id="bt" class="btn btn-danger" type="button" onclick="location.href='admin.html'">Captura de Administrador de Contrato</button><br><br>
-<button id="bt" class="btn btn-danger" type="button" onclick="location.href='fechas.html'">Crear Nuevo Contrato</button><br><br>
-<!-- -------------------------------------------------------------- -->
-              </div>
-            </div>
-          </div>
+        <div class="dccapturas">
+            <a href="#" class="iconcapturas"><img src="icons/icons8-archivo-64.png" alt=""></a>
+        <div class="dtextcapturas">
+            <a href="#" class="textcapturas">CAPTURAS</a>
+        </div>
+        <div class="dtext">
+          <a href="entregables.php" class="aEntregables">Entregables</a><BR>
+          <a href="consulta_contrato2.php" class="aInconformidades">Inconformidades</a><BR>
+          <a href="consulta_contrato5.php" class="aFacturaspagos">Facturas/pagos_efectuados</a><BR>
+          <a href="lectura.html" class="aCargadearchivos">Carga de archivos (PDF)(CVS)</a><BR>
+          <a href="requirente_compradora_captura.html" class="aUnidadr">Unidad Requirente/Compradora</a><BR>
+          <a href="consulta_contrato6.php" class="aRecepcionT">Recepción/Terminación_Anticipada</a><BR>
+          <a href="consulta_contrato4.php" class="aPartidasp">Partidas_presupuestales/subpartida</a><BR>
+          <a href="admin.html" class="aCapturaAd">Captura de Administrador de Contrato</a><BR>
+          <a href="captura_pro_mont.html" class="aConsolidadosM">Consolidados/Monto no iva/Proveedor Adjudicado</a><BR>
+          <a href="consulta_fundamento.php" class="aFundamentoLegal">Fundamento Legal/Procedimientos de Contratación</a><BR>
+          <a href="consulta_contrato.php" class="aComprobacionC">Comprobacion/Convenios Modificados/Documentos Adicionales</a><BR>
+        </div>
         </div>
       </div>
-    <!-- ---------------------------------------------------------------->
-    <!-- BOTON CONSULTAS-------------------------------------------------->
-    <!-- ---------------------------------------------------------------->
-    <div class="contenedor2">
-      <div class="row">
-        <div class="panel-group" id="acordion">
-          	<div class="panel panel-default" id="def">
-              <div class="panel-heading">
-                <button id="cap" class="btn btn-primary btn-lg" type="button" data-toggle="collapse" data-parent="#acordion" href="#collapseThree">CONSULTAS</button>
-              </div>
-              <div id="collapseThree" class="panel-collapse collapse">
-                <button id="bt1c" class="btn btn-secondary" type="button" onclick="location.href='numero_de_contrato.php'">Consultas por número de contrato</button>
-                <button id="bt2c" class="btn btn-secondary" type="button">Fin vigencia</button><br><br>
-                <button id="bt3c" class="btn btn-secondary" type="button">Informe montos por procedimiento</button>
-                <button id="bt4c" class="btn btn-secondary" type="button">Consultas por fecha de adjudicación</button><br><br>
-                <button id="bt5c" class="btn btn-secondary" type="button">Contratos por partida</button>
-                <button id="bt6c" class="btn btn-secondary" type="button" onclick="location.href='informe70-30.html'">Informes 70-30</button><br><br>
-                <button  id="bt7c" class="btn btn-secondary" type="button">Fecha de formalización</button>
-                <button  id="bt8c" class="btn btn-secondary" type="button">Contratos por proveedor</button><br><br>
-                <button  id="bt9c" class="btn btn-secondary" type="button">Contratos por periodo</button>
-                <button  id="bt10c" class="btn btn-secondary" type="button">Contratos y proveedores por UR</button><br><br>
-                <button  id="bt11c" class="btn btn-secondary" type="button">Fechas entregables</button>
-                <button  id="bt12c" class="btn btn-secondary" type="button">Top por contrato</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"
 			integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY"
@@ -119,6 +78,7 @@
 		<script src="js/bootstrap.min.js"></script>
 
   </main>
+  <br><br><br><br><br><br>
   <footer>
   <div class="contenedor-todo-footer">
 

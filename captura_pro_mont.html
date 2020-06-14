@@ -264,30 +264,37 @@
     </div>
     <div id ="tca">
       <form   id="con_mon"  method="POST">
-      <table class="tabla">
-          <tr>
-            <th><label id="ccp" > Procedimiento: </label></th><td><input class="form-control" id="pro" placeholder="Procedimiento" name="procedimiento" type="text"></td>
-            <th><label id="ccp" > Monto Total:   </label></th><td><input class="form-control" id="mont" placeholder="Monto Total" name="monto_total" type="number" step="0.1" ></td>
-          </tr>
-         </table>
-        <button  id="btg" onclick=this.form.action="consolidado.php" class="btn btn-primary" type="submit"> GUARDAR </button>
+        <div class="dprocediminetocapturapro">
+          <label id="ccp" > Procedimiento: </label>
+          <input class="form-control" id="pro" placeholder="Procedimiento" name="procedimiento" type="text">
+        </div>
+        <div class="dprocediminetomontoto">
+          <label id="ccp" > Monto Total:   </label>
+          <input class="form-control" id="mont" placeholder="Monto Total" name="monto_total" type="number" step="0.1" >
+        </div>
+        <div class="dbtgcpc">
+          <button  id="btg" onclick=this.form.action="consolidado.php" class="btn btn-primary" type="submit"> GUARDAR </button>
+        </div>
       </div>
 </div>
-<div id="dcapturas1">
+<div id="dcapturas2">
       <div id="tcm">
         <h2> CAPTURA MONTO NO IVA </h2>
     </div>
     <div id ="tca">
-	     <table class="tabla">
-	        <tr>
-            <th><label id="ccp" > Monto Maximo:  </label></th><td><input class="form-control" name="monto_maximo" id="montomaxi" placeholder="Monto Maximo"  type="number"  step="0.1"></td>
-            <th><label id="ccp" > Monto Minimo:  </label></th><td><input class="form-control" id="montomini" placeholder="Monto Minimo" name="monto_minimo" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <th><label id="ccp" > Total: </label></th><td><input class="form-control" id="tot" placeholder="Total" name="total" type="number" step="0.1"></td>
-          </tr>
-       </table>
-        <button  id="btg" onclick=this.form.action="monto.php" class="btn btn-primary" type="submit"> GUARDAR </button>
+	    <label id="ccp" > Monto Maximo:  </label>
+      <input class="form-control" name="monto_maximo" id="montomaxi" placeholder="Monto Maximo"  type="number"  step="0.1">
+    </div>
+    <div id ="dcmnmm">
+      <label id="ccp" > Monto Minimo:  </label>
+      <input class="form-control" id="montomini" placeholder="Monto Minimo" name="monto_minimo" type="number" step="0.1">
+    </div>
+    <div id ="dcmntotal">
+      <label id="ccp" > Total: </label>
+      <input class="form-control" id="tot" placeholder="Total" name="total" type="number" step="0.1">
+    </div>
+    <div id ="dbtgcpc1">
+      <button  id="btg" onclick=this.form.action="monto.php" class="btn btn-primary" type="submit"> GUARDAR </button>
   </div>
 </div>
 <div id="dcapturas1">
@@ -295,17 +302,19 @@
     <h2> PROVEEDOR ADJUDICADO </h2>
   </div>
   <div id ="tca">
-     <table class="tabla">
-        <tr>
-          <th><label id="ccp" class="col-sm-20"> Nombre:  </label></th><td><input class="form-control" name="nombre" id="no" placeholder="Nombre" type="text"></td>
-          <th><label id="ccp" class="col-sm-20"> RFC:  </label></th><td><input class="form-control" name="rfc" id="rfc" placeholder="RFC" type="text"></td>
-        </tr>
-     </table>
+      <label id="ccp"> Nombre:  </label>
+      <input class="form-control" name="nombre" id="noo" placeholder="Nombre" type="text">
+  </div>
+  <div id ="dpadrfc">
+    <label id="ccp" > RFC:  </label>
+    <input class="form-control" name="rfc" id="rfc" placeholder="RFC" type="text">
+  </div>
+  <div id ="dbtgcpc2">
       <button  id="btg" onclick=this.form.action="proveedor.php" class="btn btn-primary" type="submit"> GUARDAR </button>
 </div>
 </div>
 </main>
-
+</div>
     <footer>
       <div class="contenedor-todo-footer">
 

@@ -261,7 +261,7 @@
     var selObj = document.getElementById('scontra2');
       var montomax  = (document.getElementById('montomax').value);
      var montomin  = (document.getElementById('montomin').value);
-     var iniciovigencia  = (document.getElementById('iniciovigencia').value);
+     var iniciovigencia  = (document.getElementById('finiciovigencia').value);
      var finvigencia  = (document.getElementById('finvigencia').value);
      var fechaentrega = (document.getElementById('fechaentrega').value);
 
@@ -304,7 +304,9 @@
       <div class="row">
         <div class='col-sm-20 col-md-20 col-ld-20'>
           <h2 class="fuu"> COMPROBACIÓN </h2>
+          <div class="dtextcon">
           <label id="textcon" class="control-label"> Contrato: </label>
+          </div>
           <select id="scontra" class="scontra" name="scontra">
 
 		  <?php
@@ -321,9 +323,13 @@
                   ?>
 
           </select>
-          <div id="dfechad">
-            <label id="tfechdoc" class="control-label"> Fecha del documento: </label>
-            <input class="form-control" id="fechadoc" name="fecha" type="date" >
+          <div class="dfechado">
+            <div id="dfechad">
+              <label id="tfechdoc" class="control-label"> Fecha del documento: </label>
+            </div>
+            <div id="dfechadoc">
+              <input class="form-control" id="fechadoc" name="fecha" type="date" >
+            </div>
           </div>
           <div id="divdes">
             <label id="textdes" class="control-label"> Descripción: </label>
@@ -342,7 +348,9 @@
             <div class='col-sm-20 col-md-20 col-ld-20'>
                 <h2 class="fuu"> CONVENIOS MODIFICADOS </h2>
               <div id ="dcontrato">
-                <label id="textcon" class="control-label"> Contrato: </label>
+                <label id="textconm" class="control-label"> Contrato: </label>
+              </div>
+                <div id ="dscontrato2">
                 <select id="scontra2" class="scontra2" name="scontra2">
 
 		 <?php
@@ -361,26 +369,37 @@
 
                 </select>
               </div>
+              <div id="dfechaentrega">
+                <div id="dtextfechaentrega">
+                <label id="textfechaentrega" class="control-label"> Fecha entraga: </label>
+              </div>
+                <input class="form-control" id="fechaentrega" name="fechaentrega" type="date" >
+            </div>
             <div id="dmontomaximo">
-              <label id="textmontomaximo" class="control-label"> Monto maximo: </label>
+              <div id="dtextmontomaximo">
+                <label id="textmontomaximo" class="control-label"> Monto maximo: </label>
+              </div>
               <input class="form-control" id="montomax" placeholder="Monto Maximo" name="montomax" type="number" step="0.1" >
             </div>
             <div id="dmontominimo">
-              <label id="textmontominimo" class="control-label"> Monto minimo: </label>
+              <div id="dtextmontominimo">
+                <label id="textmontominimo" class="control-label"> Monto minimo: </label>
+              </div>
               <input class="form-control" id="montomin" placeholder="Monto Minimo" name="montomin" type="number" step="0.1" >
             </div>
             <div id="diniciovigencia">
-              <label id="textiniciovigencia" class="control-label"> Inicio vigencia: </label>
-              <input class="form-control" id="iniciovigencia" name="iniciovigencia" type="date" >
+              <div id="dtextiniciovigencia">
+                <label id="textiniciovigencia" class="control-label"> Inicio vigencia: </label>
+              </div>
+                <input class="form-control" id="finiciovigencia" name="iniciovigencia" type="date" >
             </div>
             <div id="dfinvigencia">
-              <label id="textfinvigencia" class="control-label"> Fin vigencia: </label>
+              <div id="dtextfinvigencia">
+                <label id="textfinvigencia" class="control-label"> Fin vigencia: </label>
+              </div>
               <input class="form-control" id="finvigencia" name="finvigencia" type="date" >
             </div>
-            <div id="dfechaentrega">
-              <label id="textfechaentrega" class="control-label"> Fecha entraga: </label>
-              <input class="form-control" id="fechaentrega" name="fechaentrega" type="date" >
-            </div>
+
             <div id="dbtncomprobacion">
                 <button type="button" id="bcomprobacion" class="btn btn-primary" onclick="mostrarTexts();" name="button"> Guardar </button>
             </div>
@@ -395,7 +414,9 @@
             <div class='col-sm-20 col-md-20 col-ld-20'>
                 <h2 class="fuu"> DOCUMENTOS ADICIONALES </h2>
                 <div id ="dcontrato2">
-                  <label id="textcon" class="control-label"> Contrato: </label>
+                    <label id="textcon" class="control-label"> Contrato: </label>
+                </div>
+                <div id ="dscontrato3">
                   <select id="scontra3" class="scontra3" name="scontra3">
 			<?php
                 if (isset($_GET["flag"])) {
@@ -412,10 +433,12 @@
 
                   </select>
                 </div>
-              <div id="dfechad">
+              <div class="dfechadc">
+                <div id="dfechad">
                   <label id="tfechdocadicional" class="control-label"> Fecha del documento: </label>
+                </div>
                   <input class="form-control" id="fechadoc2" name="fecha" type="date" >
-              </div>
+                </div>
               <div id="divdes">
                   <label id="textdesadicional" class="control-label"> Descripción: </label>
                   <textarea  id="descripcion2" class="form-control" rows="5"></textarea>

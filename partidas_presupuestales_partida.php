@@ -284,8 +284,9 @@
       <div class="row">
         <div class='col-sm-20 col-md-20 col-ld-20'>
           <h2 class="fuu">PARTIDAS PRESUPUESTALES</h2>
+          <div class="dtextcontratopartida">
             <label class="textcontratopartida">Contrato:</label>
-          
+          </div>
 	     <select id="secontrapartisasp" class="secontrapartisasp" name="secontrapartisasp">
 		<?php
 			if(isset($_GET["flag"])){
@@ -316,7 +317,7 @@
               <h2 class="fuu"> SUB PARTIDA </h2>
               <div class="dsecontratosub">
                 <label  class="textcontratosub">Contrato:</label>
-     
+              </div>
            <select id="secontatosub" class="secontatosub" name="secontatosub">
 			 <?php
                         if(isset($_GET["flag"])){
@@ -331,7 +332,6 @@
                 ?>
 
                 </select>
-              </div>
               <div class="dnumerosubpartida">
                 <label class="textnumerosuboartida">Número Sub Partida:</label>
                 <input type="number"  class="form-control" id="innumerosubpartida"  name=""  placeholder="Número Sub Partida">

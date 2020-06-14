@@ -261,6 +261,7 @@
           <h2 class="fuu"> CONTRATO </h2>
            <div class="dunidadcompradoracontrato">
             <label class="textcontratorecepcion">Unidad Compradora:</label>
+              </div>
             <select id="seunidadcompradoracontrato" class="seunidadcompradoracontrato" name="seunidadcompradoracontrato">
                 <?php
 			if(isset($_GET["flag"])){
@@ -273,11 +274,12 @@
 	}
            ?>
             </select>
-          </div>
+
           <div class="dconsolidadocontrato">
             <label class="textcontratorecepcion">Consolidado:</label>
+          </div>
             <select id="seconsolidadocontrato" class="seconsolidadocontrato" name="seconsolidadocontrato">
-             
+
             <?php
 			if(isset($_GET["flag8"])){
 			$flag=unserialize($_GET["flag8"]);
@@ -289,11 +291,12 @@
 	}
            ?>
             </select>
-          </div>
+
           <div class="dunidadrequirentecontrato">
             <label class="textcontratorecepcion">Unidad Requirente:</label>
+          </div>
             <select id="seunidadrequirentecontrato" class="seunidadrequirentecontrato" name="seunidadrequirentecontrato">
-             
+
             <?php
 			if(isset($_GET["flag3"])){
 			$flag=unserialize($_GET["flag3"]);
@@ -305,11 +308,12 @@
 	}
            ?>
             </select>
-          </div>
+
           <div class="dmontonoivacontrato">
             <label class="textcontratorecepcion">Monto No Iva:</label>
+            </div>
             <select id="semontonoivacontrato" class="semontonoivacontrato" name="semontonoivacontrato">
-             
+
             <?php
 			if(isset($_GET["flag5"])){
 			$flag=unserialize($_GET["flag5"]);
@@ -321,11 +325,12 @@
 	}
            ?>
             </select>
-          </div>
+
           <div class="dadministradorcontrato">
             <label class="textcontratorecepcion">Administrador:</label>
+          </div>
             <select id="seadministradorcontrato" class="seadministradorcontrato" name="seadministradorcontrato">
-             
+
             <?php
 			if(isset($_GET["flag4"])){
 			$flag=unserialize($_GET["flag4"]);
@@ -337,11 +342,12 @@
 	}
            ?>
             </select>
-          </div>
+
           <div class="dfechascontrato">
             <label class="textcontratorecepcion">Fechas:</label>
+            </div>
             <select id="sefechascontrato" class="sefechascontrato" name="sefechascontrato">
-             
+
             <?php
 			if(isset($_GET["flag7"])){
 			$flag=unserialize($_GET["flag7"]);
@@ -353,11 +359,12 @@
 	}
            ?>
             </select>
-          </div>
+
           <div class="dproveedoradjudicadocontrato">
             <label class="textcontratorecepcion">Proveedor Adjudicado:</label>
+          </div>
             <select id="seproveedoradjudicadocontrato" class="seproveedoradjudicadocontrato" name="seproveedoradjudicadocontrato">
-             
+
             <?php
 			if(isset($_GET["flag6"])){
 			$flag=unserialize($_GET["flag6"]);
@@ -369,11 +376,13 @@
 	}
            ?>
             </select>
-          </div>
+
           <div class="dprocedimientocontratacioncontrato">
             <label class="textcontratorecepcion">Procedimineto Contratación:</label>
-            <select id="secontrarecepcion" class="secontrarecepcion" name="secontrarecepcion">
-             
+            </div>
+            <!--cambie en class secontrarecepcion por secontrarecepcionc-->
+            <select id="secontrarecepcion" class="secontrarecepcionc" name="secontrarecepcion">
+
             <?php
 			if(isset($_GET["flag2"])){
 			$flag=unserialize($_GET["flag2"]);
@@ -385,7 +394,7 @@
 	}
            ?>
             </select>
-          </div>
+
 
 
           <div class="dnumerocontratoc">

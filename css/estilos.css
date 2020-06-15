@@ -50,9 +50,10 @@
 
 }
 .bea{
-  font-size: 50px;
+  font-size:50px;
 }
 .dccapturas{
+  
   border: 2px solid #545454;
   width: 650px;
   height: 650px;
@@ -102,6 +103,10 @@
 .aInconformidades{
   margin-left: 230px;
 }
+.nuevo{
+margin-left: 230px;
+}
+
 .aFacturaspagos{
   margin-left: 175px;
 }

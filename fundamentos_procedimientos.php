@@ -330,14 +330,7 @@
 </div>
 </div>
 </div>
-
 </div>
-
-
-
-
-
-
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"
 			integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY"
@@ -345,6 +338,46 @@
 		</script>
 		<script src="js/bootstrap.min.js"></script>
 
+    <footer>
+    <div class="contenedor-todo-footer">
+
+    <div class="contenedor-body">
+      <div class="columna1">
+        <h1> Instituto Tecnológico de Tláhuac </h1>
+        <img src="itt.png" alt="ITT">
+      </div>
+
+      <div class="columna2">
+        <h1> BESA </h1>
+        <img src="logo.png" alt="BESA">
+      </div>
+
+      <div class="columna3">
+        <h1> SEP </h1>
+        <img src="fpp.png" alt="sep">
+      </div>
+
+      <div class="columna4">
+        <h1> TECNM</h1>
+        <img src="LOGO_TECNM_BLANCO.png" alt="TECNM">
+      </div>
+
+    </div>
+
+    </div>
+
+    <div class="contenedor-footer">
+      <div class="copyright">
+        <a>&copy; 2020 Todos los Derechos Reservados</a>
+      </div>
+      <div class="autores">
+        <a>Antonio Lorenzana Fabio Antonio</a> |
+        <a>Flores Reyes Jahir</a> |
+        <a>Reyes Villafranca Jose Pedro</a>
+      </div>
+    </div>
+
+  </footer>
 
   </body>
 </html>

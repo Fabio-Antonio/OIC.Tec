@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
       <title> </title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -11,6 +12,7 @@
     <link href="https://cdn.datos.gob.mx/assets/css/main.css" rel="stylesheet">
     <link href="https://cdn.datos.gob.mx/assets/img/favicon.ico" rel="shortcut icon">
     <link href="https://cdn.datos.gob.mx/bower_components/dgm-footer/dgm-footer.html" rel="import">
+
   </head>
 
   <body class="front">
@@ -339,7 +341,7 @@
                 <label class="textcontratoterminacion">Contrato:</label>
               </div>
                 <select id="secontraterminacion" class="secontraterminacion" name="secontraterminacion">
-                 <?php
+               <?php
 			if(isset($_GET["flag"])){
 			$flag=unserialize($_GET["flag"]);
 			foreach($flag as $key=> $val){

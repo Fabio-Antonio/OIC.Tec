@@ -68,7 +68,9 @@
 .iconcapturas{
   margin-left: 290px;
 }
-
+.iconconsultas{
+  margin-left: 300px;
+}
 .dtextcapturas{
   margin-top: 15px;
   margin-left: 230px;
@@ -126,6 +128,49 @@
 }
 .aComprobacionC{
   margin-left: 10px;;
+}
+.contenedorconsultas{
+  width: 600px;
+  height: 650px;
+  margin-left: 530px;
+  margin-top: -650px;
+
+}
+.afinvigencia{
+  margin-left: 280px;
+}
+.ainformes{
+  margin-left: 270px;
+}
+.atopcon{
+  margin-left: 260px;
+}
+.afechasen{
+  margin-left: 250px;
+}
+.acontrappar{
+  margin-left: 240px;
+}
+.acontpper{
+  margin-left: 240px;
+}
+.adechadfor{
+  margin-left: 238px;
+}
+.acontrapprove{
+  margin-left: 230px;
+}
+.acontraprour{
+  margin-left: 200px;
+}
+.aconsulpnum{
+  margin-left: 190px;
+}
+.ainformemont{
+  margin-left: 187px;
+}
+.aconsultpfechda{
+  margin-left: 183px;
 }
 /*--------------------------------------------------------------*/
 /*--------------------------------------------------------------*/

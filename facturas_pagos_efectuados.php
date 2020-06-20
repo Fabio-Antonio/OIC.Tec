@@ -263,7 +263,31 @@
      var fecha_factura  = (document.getElementById('fechafactura').value);
      var fecha_pago  = (document.getElementById('fechapago').value);
      var descripcio_factura = (document.getElementById('texadescripcionfactura').value);
+     var fecha1 = new Date(fecha_factura);
+      var fecha2 = new Date(fecha_pago);
 
+     
+
+
+      if(monto<0||monto.length==0){
+        alert("El campo Monto esta fuera de rango");
+        document.getElementById("montos").focus();
+        return;
+        }
+	 if(numero_factura<0||numero_factura.length==0||!(/^[0-9]+$/.test(numero_factura))){
+        alert("El campo Numero de Factura esta fuera de rango");
+        document.getElementById("innumerofactura").focus();
+        return;
+        }
+        if(fecha1<fecha2||String(fecha_factura)==""||String(fecha_pago)==""){
+	alert("El rango de fechas es incorrecto!!");
+        return; 
+	}
+        if(descripcio_factura.length==0||!(/^[A-Za-z]+$/.test(descripcio_factura))){
+	alert("El campo Descripción está fuera de formato");
+	document.getElementById("texadescripcionfactura").focus();
+	return;
+	}	
        var selIndex = selObj.options[selObj.selectedIndex].text;
          alert(selIndex);
          window.location="facturas.php?numero_contrato="+selIndex+"&numero_factura="+numero_factura+"&monto="+monto+"&fecha_factura="+fecha_factura+"&fecha_pago="+fecha_pago+"&descripcio_factura="+descripcio_factura;
@@ -277,6 +301,23 @@
      var fecha_pago  = (document.getElementById('fechapagoefectuado').value);
      var descripcion = (document.getElementById('texadescripcionpagoefectuado').value);
 
+       if(monto.length==0||monto<0){
+        alert("El campo Monto esta fuera de rango");
+	document.getElementById("monto").focus();
+        return;
+	}
+        if(String(fecha_pago)==""){
+	alert("El campo Fecha Pago no puede estar vacío");
+        document.getElementById('fechapagoefectuado').focus();
+        return;
+	}
+	 if(descripcion.length==0||!(/^[A-Za-z]+$/.test(descripcion))){
+        alert("El campo Descripción está fuera de formato");
+        document.getElementById("texadescripcionpagoefectuado").focus();
+        return;
+        }
+
+       
        var selIndex = selObj.options[selObj.selectedIndex].text;
          alert(selIndex);
          window.location="pagos_efectuados.php?numero_contrato="+selIndex+"&monto="+monto+"&fecha_pago="+fecha_pago+"&descripcion="+descripcion;
@@ -308,11 +349,11 @@
             </select>
           <div class="dnumerofactura">
             <label class="textnumerofactura">Número Factura:</label>
-            <input type="number"  class="form-control" id="innumerofactura"  name=""  placeholder="Número Factura">
+            <input type="number"  class="form-control" id="innumerofactura"  name="factura" min="0"  placeholder="Número Factura">
           </div>
           <div class="dmontos">
             <label class="textmontos">Monto:</label>
-            <input type="number" class="form-control" id="montos" placeholder="Monto" name="montos"  step="0.1">
+            <input type="number" class="form-control" id="montos" placeholder="Monto" name="montos" min="0" step="0.1">
           </div>
           <div class="dfechafactura">
             <label class="textfechafactura">Fecha Factura:</label>
@@ -358,7 +399,7 @@
                 </select>
               <div class="dmonto">
                 <label class="textmonto">Monto:</label>
-                <input type="number" class="form-control" id="monto" placeholder="Monto" name="montos"  step="0.1">
+                <input type="number" class="form-control" id="monto" placeholder="Monto" min="0" name="montos"  step="0.1">
               </div>
               <div class="dfechapagoefectuado">
                 <label class="textfechapagoefectuado">Fecha Pago:</label>

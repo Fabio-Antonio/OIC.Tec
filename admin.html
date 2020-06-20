@@ -48,15 +48,15 @@
         <h2 align="center"> INGRESA DATOS ADMINISTRADOR </h2>
           <div class="dadminnombre">
             <label class="">Nombre:*</label>
-            <input class="form-control" id="nombre" placeholder="Nombre" type="text" required name="nombre">
+            <input class="form-control" id="nombre" placeholder="Nombre" type="text" required pattern="[A-Za-zñÑáéíóúÁÉÍÓÚ\s]*" name="nombre">
           </div>
           <div class="dadminapp">
             <label class="">Apellido Paterno:*</label>
-            <input class="form-control" id="apepat" placeholder="Apellido Paterno" type="text" required name="apellido_paterno">
+            <input class="form-control" id="apepat" placeholder="Apellido Paterno" type="text" required pattern="[A-Za-zñÑáéíóúÁÉÍÓÚ\s]*" name="apellido_paterno">
         </div>
           <div class="dadminapm">
           <label class="">Apellido Materno:*</label>
-          <input class="form-control" id="apemat" placeholder="Apellido Materno" type="text" required name="apellido_materno">
+          <input class="form-control" id="apemat" placeholder="Apellido Materno" type="text" required  pattern="[A-Za-zñÑáéíóúÁÉÍÓÚ\s]*" name="apellido_materno">
         </div>
           <div class="dadmince">
           <label id="correo" class="">Correo electrónico:*</label>

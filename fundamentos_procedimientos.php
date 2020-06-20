@@ -261,14 +261,14 @@
         <div class="dfundamentot">
           <label id="ccp" class="col-sm-20"> Fundamento: </label>
         </div>
-          <input class="form-control" id="fundanen" placeholder="Fundamento" name="fundamento" type="text">
+          <input class="form-control" id="fundanen" placeholder="Fundamento" name="fundamento" type="text" required pattern="[A-Za-z0-9\.,\s]*">
           <div id="difecha">
             <label id="ccp" class="col-sm-20"> Fecha:   </label>
-            <input class="form-control" id="fechafun" name="fecha" placeholder="Fecha" type="date" >
+            <input class="form-control" id="fechafun" name="fecha" placeholder="Fecha" type="date" required value="<?php echo date('Y-m-d');?>">
           </div>
           <div id="diopc">
             <label id="ccp" class="col-sm-20"> Opción:   </label>
-            <input class="form-control" id="opcion" name="opcion" placeholder="Opción" type="text" >
+            <input class="form-control" id="opcion" name="opcion" placeholder="Opción" maxlength="1" type="text" required>
           </div>
           <div id="btnac">
               <button type="submit" id="bac" class="btn btn-primary" onclick=this.form.action="fundamento.php" name="button"> Guardar </button>
@@ -290,7 +290,7 @@
     </div>
     <div id="diprocc">
       <label id="ccp" class="col-sm-20"> Procedimientos:   </label>
-      <input class="form-control" id="proc" name"proc"  placeholder="Procedimientos" type="text" >
+      <input class="form-control" id="proc" name="proc"  placeholder="Procedimientos" type="text" >
     </div>
     <div id="ful">
       <label id="ccp" class="col-sm-20"> Fundamento legal:   </label>
@@ -299,8 +299,14 @@
          function mostrarText(){
     var selObj = document.getElementById('prc');
       var pr  = (document.getElementById('proc').value);
-
+       if(pr.length==0||!(/^[A-Z-a-z]+$/.test(pr))){
+         alert("El campo de Procedimientos no es valido");
+         document.getElementById('proc').focus();
+         return;
+	}
        var selIndex = selObj.options[selObj.selectedIndex].text;
+
+	
          alert(selIndex);
          window.location="procedimientos.php?fundamento="+selIndex+"&procedimientos="+pr;
     }

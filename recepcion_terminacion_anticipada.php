@@ -263,8 +263,28 @@
       var fecha_terminacion  = (document.getElementById('infechaterminacion').value);
       var gastos_no_recuperables  = (document.getElementById('ingastosnorecuperables').value);
        var monto_finiquito  = (document.getElementById('inmontofiniquito').value);
-
+      
       var selIndex = selObj.options[selObj.selectedIndex].text;
+
+	if(String(fecha_terminacion)==""){
+         alert("El campo Fecha Terminación está vacío ");
+        document.getElementById("infechaterminacion").focus();
+        return;
+
+	}
+       if(gastos_no_recuperables<0||gastos_no_recuperables.length==0){
+         alert("El campo Gastos no Recuperables es invalido ");
+        document.getElementById("ingastosnorecuperables").focus();
+        return;
+
+	}
+	 if(monto_finiquito<0||monto_finiquito.length==0){
+         alert("El campo Monto Finiquito  es invalido ");
+        document.getElementById("inmontofiniquito").focus();
+        return;
+
+        }
+
          alert(selIndex);
          window.location="terminacion_anticipada.php?numero_contrato="+selIndex+"&fecha_terminacion="+fecha_terminacion+"&gastos_no_recuperables="+gastos_no_recuperables+"&monto_finiquito="+monto_finiquito;
     }
@@ -279,6 +299,12 @@
 
       var selIndex = selObj.options[selObj.selectedIndex].text;
       var selIndex2 = selObj2.options[selObj2.selectedIndex].text;
+
+        if(!(/^[A-Za-z]+$/.test(descripcion))||descripcion.length==0){
+	alert("El campo Descripción es incorrecto ");
+        document.getElementById("texadescripcionrequirente").focus();
+	return;
+	}
          alert(selIndex);
          window.location="recepcion.php?numero_contrato="+selIndex+"&unidad="+selIndex2+"&descripcion="+descripcion;
     }

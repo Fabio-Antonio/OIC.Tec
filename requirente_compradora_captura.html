@@ -261,9 +261,9 @@
         <form role="form" class="form-horizontal" action="requirente.php"method="POST" role="form">
           <h2 align="center"> UNIDAD REQUITENTE </h2>
             <label id="ccp1" class="col-sm-20">Clave Requirente: </label>
-            <input class="form-control" id="claver" placeholder="Clave Requirente" name="clave_requirente" type="number" required>
+            <input class="form-control" id="claver" placeholder="Clave Requirente" name="clave_requirente" type="text" required pattern="[A-Za-z0-9ñÑáéíóúÁÉÍÓÚ\s]*" >
             <label id="ccp1" class="col-sm-20">Unidad: </label>
-            <input class="form-control" id="uni" placeholder="Unidad" type="text" name="unidad" required>
+            <input class="form-control" id="uni" placeholder="Unidad" type="text" name="unidad" required pattern="[A-Za-z0-9ñÑáéíóúÁÉÍÓÚ\s]*"> 
             <button id="gu" class="btn btn-primary pull-right" type="submit">Guardar</button>
         </form>
       </div>
@@ -275,9 +275,9 @@
           <form role="form" class="form-horizontal" role="form" action="compradora.php"method="POST">
             <h2 align="center"> UNIDAD COMPRADORA </h2>
             <label id="ccp1" class="col-sm-20">Nombre de Unidad Compradora: </label>
-            <input class="form-control" id="nuc" placeholder="Nombre Unidad Compradora" name="nombre_unidad_compradora" type="text" required>
+            <input class="form-control" id="nuc" placeholder="Nombre Unidad Compradora" name="nombre_unidad_compradora" type="text" required pattern="[A-Za-z0-9ñÑáéíóúÁÉÍÓÚ\s]*">
             <label id="ccp1" class="col-sm-20">Número Unidad: </label>
-            <input class="form-control" id="un" placeholder="Número Unidad" name="numero_unidad" type="number" required>
+            <input class="form-control" id="un" placeholder="Número Unidad" name="numero_unidad" min="0" type="number" required>
             <button id="gua" class="btn btn-primary pull-right" type="submit">Guardar</button>
           </form>
         </div>

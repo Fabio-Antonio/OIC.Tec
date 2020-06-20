@@ -264,12 +264,60 @@
      var  direccion_entregable  =(document.getElementById('indireccione').value);
      var  descripcion  =(document.getElementById('descripcionn').value);
 
+    
        var  selIndex  = selObj.options[selObj.selectedIndex].text;
-         alert(selIndex);
+       var prueba = new Date(fecha_entrega);
+       var prueba2 = new Date(fecha_entrega_maxima);
+       
+       if(prueba>prueba2||String(fecha_entrega)==""||String(fecha_entrega_maxima)==""){
+	 	alert("El rango de fechas es incorrecto!!");
+		return;
+	}
+         if(cantidad_entregable.length==0){
+        alert("El campo cantidad entregable esta fuera del rango");
+        document.getElementById("incantidade").focus();
+        return;
+        }
+ 
+	if(nombre_entregable.length==0||nombre_entregable.length>=26){
+	alert("El campo nombre entregable esta fuera del rango");
+	document.getElementById("innombreentregables").focus();
+        return;
+	}
+	if(!(/^[A-Z]+$/i.test(nombre_entregable))){
+         alert("Los carácteres aceptados son de tipo A,B,C,a,b,c,etc.");
+          document.getElementById("indireccione").focus();
+         return;
+	}
+
+	
+ if(direccion_entregable.length==0){
+        alert("El campo dirección entregable esta fuera del rango");
+        document.getElementById("indireccione").focus();
+        return;
+        }
+        if(!(/^[A-Z]+$/i.test(direccion_entregable))){
+         alert("Los carácteres aceptados son de tipo A,B,C,a,b,c,etc.");
+          document.getElementById("indireccione").focus();
+         return;
+        }
+
+	 if(descripcion.length==0){
+        alert("El campo descripción esta fuera del rango");
+        document.getElementById("indireccione").focus();
+        return;
+        }
+        if(!(/^[A-Z]+$/i.test(descripcion))){
+         alert("Los carácteres aceptados son de tipo A,B,C,a,b,c,etc.");
+          document.getElementById("indireccione").focus();
+         return;
+        }
+	
+          alert(selIndex);
          window.location="entregable.php?numero_contrato="+selIndex+"&fecha_entrega="+fecha_entrega+"&nombre_entregable="+nombre_entregable+"&fecha_entrega_maxima="+fecha_entrega_maxima+"&cantidad_entregable="+cantidad_entregable+"&direccion_entregable="+direccion_entregable+"&descripcion="+descripcion;
     }
-</script>
 
+</script>
   <div id="contec">
     <div class="container1">
       <div class="row">
@@ -292,22 +340,22 @@
 }
                   ?>
      </select>
-
+        
         <div class="dfechaentregamo">
           <label id="textfechaentregamo" class="control-label"> Fecha entraga: </label>
-          <input class="form-control" id="infechaentregamo" name="fecha_entrega" type="date" >
+          <input class="form-control" id="infechaentregamo" name="fecha_entrega" type="date" required>
         </div>
         <div class="dfechaentregamaxima">
           <label id="textfechaentregamaxima" class="control-label"> Fecha Entraga Maxima: </label>
-          <input class="form-control" id="infechaentregamaxima" name="fecha_entrega_maxima" type="date" >
+          <input class="form-control" id="infechaentregamaxima" name="fecha_entrega_maxima" type="date" required>
         </div>
-        <div class="dnombreentregables">
+        <div class="dnombreentregables" >
           <label class="textnombreentregables"> Nombre Entregable: </label>
           <input type="text" class="form-control" id="innombreentregables" name="nombre_entregable"  placeholder="Nombre Entregable">
         </div>
         <div class="dcantidadentregable">
           <label class="textcantidade"> Cantidad Entregables:</label>
-          <input type="number" class="form-control" id="incantidade" name="cantidad_entregable"  placeholder="Cantidad Entregables">
+          <input type="number" class="form-control" id="incantidade" min="0"  name="cantidad_entregable"  placeholder="Cantidad Entregables">
         </div>
         <div class="ddireccione">
           <label class="textdireccione"> Dirección Entregable:</label>
@@ -318,8 +366,10 @@
           <textarea  id="descripcionn" class="form-control" name="descripcionn" rows="5" placeholder="Descripción"></textarea>
         </div>
         <div id="dbtncomprobacion">
-            <button type="button" id="bcomprobacion" class="btn btn-primary" onclick="mostrarText();" name="button"> Guardar </button>
+            <!--button type="button" id="bcomprobacion" class="btn btn-primary" onclick="mostrarText();" name="button"> Guardar </button>-->
+		<input type="submit" id="bcomprobacion" class="btn btn-primary" onclick="mostrarText();"  name="button" value="Guardar"/>
         </div>
+        
         </div>
       </div>
     </div>

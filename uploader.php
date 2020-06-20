@@ -2,6 +2,11 @@
 $row = 1; 
 $directorio = 'uploads/';
 $subir_archivo = $directorio.basename($_FILES['uploadedfile']['name']);
+if(preg_match("/.csv$/",$subir_archivo)==0){
+echo "<script>alert('el archivo no es .csv')
+window.location.replace('lectura.html');</script>";
+return;
+}
 
 if (move_uploaded_file($_FILES['uploadedfile']['tmp_name'], $subir_archivo)) {
      

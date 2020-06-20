@@ -262,6 +262,29 @@ var nombre_inco =document.getElementById('innombreinco').value;
 var sentido = document.getElementById('insentido').value;
 var selIndex = selObj.options[selObj.selectedIndex].text;
 var selIndex2 = selObj2.options[selObj2.selectedIndex].text;
+
+if(nombre_inco.length==0||nombre_inco.length>=45){
+alert("El campo Nombre Inconformidad se encuentra fuera del rango");
+document.getElementById("innombreinco").focus();
+return;
+}
+if(!(/^[A-Za-z]+$/i.test(nombre_inco))){
+alert("Los caracteres aceptados son de tipo A,B,C,a,b,c,etc.");
+document.getElementById("innombreinco").focus();
+return;
+}
+if(sentido.length==0){
+alert("El campo Sentido Resolucion  se encuentra fuera del rango");
+document.getElementById("insentido").focus();
+return;
+}
+if(!(/^[A-Za-z]+$/i.test(sentido))){
+alert("Los caracteres aceptados son de tipo A,B,C,a,b,c,etc.");
+document.getElementById("insentido").focus();
+return;
+}
+
+
 alert(selIndex+""+selIndex2);
 
 window.location="inconformidades.php?motivo="+selIndex2+"&numero_contrato="+selIndex+"&nombre_inconforme="+nombre_inco+"&sentido_resolucion="+sentido;
@@ -276,7 +299,7 @@ window.location="inconformidades.php?motivo="+selIndex2+"&numero_contrato="+selI
           <h2 class="fuu"> MOTIVO INCONFORMIDAD </h2>
 	<form method"POST">
           <label class="textmotivo">Motivo:</label>
-          <input type="text" class="form-control" id="inmotivoin" name="motivo"  placeholder="Motivo">
+          <input type="text" class="form-control" id="inmotivoin" name="motivo"  placeholder="Motivo" required maxlength="40" pattern="[A-Za-z0-9]*">
           <div id="dbtncomprobacion">
               <button type="submit" id="bcomprobacion" class="btn btn-primary" onclick=this.form.action="motivo.php" name="bcomprobacion"> Guardar </button>
           </div>

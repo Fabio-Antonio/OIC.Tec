@@ -1,7 +1,7 @@
 <?php
     require_once("conexion.php");
-     
-    $numero_contrato = $_GET["numero_contrato"];
+         
+         $numero_contrato = $_GET["numero_contrato"];
 	 $monto = $_GET["monto"];
          $fecha_pago = $_GET["fecha_pago"];
 	$descripcion =$_GET["descripcion"];

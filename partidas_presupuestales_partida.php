@@ -260,8 +260,14 @@
     var selObj = document.getElementById('secontrapartisasp');
       var clave_partida  = (document.getElementById('inclavepartida').value);
       var selIndex = selObj.options[selObj.selectedIndex].text;
+
+      if(clave_partida<0||clave_partida.length==0||!(/^[0-9]+$/.test(clave_partida))||clave_partida.length>5){
+        alert("El campo Clave Partida es invalido");
+        document.getElementById('inclavepartida').focus();
+        return;
+	}		
          alert(selIndex);
-         window.location="partidas_presupuestales.php?numero_contrato="+selIndex+"&clave_partida="+clave_partida;
+        window.location="partidas_presupuestales.php?numero_contrato="+selIndex+"&clave_partida="+clave_partida;
     }
 </script>
 
@@ -273,8 +279,22 @@
       var descripcion  = (document.getElementById('texadescripcionsubpartida').value);
 
       var selIndex = selObj.options[selObj.selectedIndex].text;
+        
+      if(numero_sub_partida<0||numero_sub_partida.length==0||!(/^[0-9]+$/.test(numero_sub_partida))){
+        alert("El campo Numero Subpartida es invalido");
+        document.getElementById('innumerosubpartida').focus();
+        return;
+        }
+
+        if(String(descripcion)==""||!(/^[A-Za-z]+$/.test(descripcion))){
+	 alert("El campo Descripcion es invalido");
+        document.getElementById('texadescripcionsubpartida').focus();
+        return;
+	}
+
+
          alert(selIndex);
-         window.location="sub_partida.php?numero_contrato="+selIndex+"&numero_sub_partida="+numero_sub_partida+"&descripcion="+descripcion;
+        window.location="sub_partida.php?numero_contrato="+selIndex+"&numero_sub_partida="+numero_sub_partida+"&descripcion="+descripcion;
     }
 </script>
 
@@ -301,7 +321,7 @@
             </select>
           <div class="dclavepartida">
             <label class="textclavepartida">Clave Partida:</label>
-            <input type="number"  class="form-control" id="inclavepartida"  name=""  placeholder="Clave Partida">
+            <input type="number"  class="form-control" id="inclavepartida"  name="clave" min="0"  placeholder="Clave Partida">
           </div>
           <div id="dbtncomprobacion">
               <button type="button" id="bcomprobacion" class="btn btn-primary" onclick="mostrarText();" name=""> Guardar </button>
@@ -334,7 +354,7 @@
                 </select>
               <div class="dnumerosubpartida">
                 <label class="textnumerosuboartida">Número Sub Partida:</label>
-                <input type="number"  class="form-control" id="innumerosubpartida"  name=""  placeholder="Número Sub Partida">
+                <input type="number"  class="form-control" id="innumerosubpartida"  name="sub" min="0"  placeholder="Número Sub Partida">
               </div>
               <div class="ddescripcionsubpartida">
                 <label class="textdescripcionsubpartida"> Descripción:</label><br>

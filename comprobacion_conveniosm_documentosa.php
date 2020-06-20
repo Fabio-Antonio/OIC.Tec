@@ -267,7 +267,7 @@
 
        var selIndex = selObj.options[selObj.selectedIndex].text;
          alert(selIndex);
-         window.location="conveniosm.php?numero_contrato="+selIndex+"&monto_maximo="+montomax+"&monto_minimo="+montomin+"&inicio_vigencia="+iniciovigencia+
+        // window.location="conveniosm.php?numero_contrato="+selIndex+"&monto_maximo="+montomax+"&monto_minimo="+montomin+"&inicio_vigencia="+iniciovigencia+
 "&fin_vigencia="+finvigencia+"&fecha_entrega="+fechaentrega;
     }
 </script>
@@ -281,8 +281,9 @@
       var fechadoc  = (document.getElementById('fechadoc').value);
        var descrip = (document.getElementById('descripcion').value);
        var selIndex = selObj.options[selObj.selectedIndex].text;
+       
          alert(selIndex);
-         window.location="comprobacion.php?numero_contrato="+selIndex+"&fecha_documento="+fechadoc+"&descripcion="+descrip;
+         //window.location="comprobacion.php?numero_contrato="+selIndex+"&fecha_documento="+fechadoc+"&descripcion="+descrip;
     }
 </script>
 
@@ -295,7 +296,7 @@
        var descrip = (document.getElementById('descripcion2').value);
        var selIndex = selObj.options[selObj.selectedIndex].text;
          alert(selIndex);
-         window.location="documentosa.php?numero_contrato="+selIndex+"&fecha_documento="+fechadoc+"&descripcion="+descrip;
+        // window.location="documentosa.php?numero_contrato="+selIndex+"&fecha_documento="+fechadoc+"&descripcion="+descrip;
     }
 </script>
 

@@ -1,7 +1,7 @@
 <?php
     require_once("conexion.php");     
     $nombre = $_POST["nombre"];
-    $apellido_paterno = $_POST["apellido_materno"]; 
+    $apellido_paterno = $_POST["apellido_paterno"]; 
 	 $apellido_materno = $_POST["apellido_materno"];
     $email = $_POST["email"]; 
      

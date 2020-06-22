@@ -265,9 +265,51 @@
      var finvigencia  = (document.getElementById('finvigencia').value);
      var fechaentrega = (document.getElementById('fechaentrega').value);
 
+	var fecha1= new Date(iniciovigencia);
+	 var fecha2= new Date(finvigencia);
+
+	if(String(fechaentrega)==""){
+	alert("El campo Fecha Entrega no puede estar vacío");
+        document.getElementById("fechaentrega").focus();
+        return;
+	}
+	 if(montomax<0||montomax.length==0){
+	alert("El campo Monto Máximo es invalido");
+	document.getElementById("montomax").focus();
+	return;
+	
+	}
+	  if(montomin<0||montomin.length==0){
+        alert("El campo Monto Minimo es invalido");
+        document.getElementById("montomin").focus();
+        return;
+
+        }
+	  if(montomax<montomin){
+        alert("El campo Monto Minimo no puede ser mayor al Monto Máximo");
+        document.getElementById("montomin").focus();
+        return;
+
+        }
+	 if(String(iniciovigencia)==""){
+        alert("El campo Inicio Vigencia no puede estar vacío");
+        document.getElementById("finiciovigencia").focus();
+        return;
+        }
+	 if(String(finvigencia)==""){
+        alert("El campo Fin Vigencia no puede estar vacío");
+        document.getElementById("finvigencia").focus();
+        return;
+        }
+        if(fecha1>fecha2){
+         alert("La fecha del campo  Inicio Vigencia no puede ser mayor a la fecha del campo Fin Vigencia");
+        return;
+	}	
+
+
        var selIndex = selObj.options[selObj.selectedIndex].text;
          alert(selIndex);
-        // window.location="conveniosm.php?numero_contrato="+selIndex+"&monto_maximo="+montomax+"&monto_minimo="+montomin+"&inicio_vigencia="+iniciovigencia+
+         window.location="conveniosm.php?numero_contrato="+selIndex+"&monto_maximo="+montomax+"&monto_minimo="+montomin+"&inicio_vigencia="+iniciovigencia+
 "&fin_vigencia="+finvigencia+"&fecha_entrega="+fechaentrega;
     }
 </script>
@@ -281,9 +323,20 @@
       var fechadoc  = (document.getElementById('fechadoc').value);
        var descrip = (document.getElementById('descripcion').value);
        var selIndex = selObj.options[selObj.selectedIndex].text;
-       
+
+       if(String(fechadoc)==""){
+	alert("El campo Fecha del documento no pueder estar vacio");
+        document.getElementById("fechadoc").focus();
+        return;
+	}
+        if(descrip.length==0||!(/^[A-Za-z]+$/.test(descrip))){
+	alert("El campo Descripción es invalido");
+	document.getElementById("descripcion").focus();
+        return;
+	}
+	
          alert(selIndex);
-         //window.location="comprobacion.php?numero_contrato="+selIndex+"&fecha_documento="+fechadoc+"&descripcion="+descrip;
+        window.location="comprobacion.php?numero_contrato="+selIndex+"&fecha_documento="+fechadoc+"&descripcion="+descrip;
     }
 </script>
 
@@ -295,8 +348,20 @@
       var fechadoc  = (document.getElementById('fechadoc2').value);
        var descrip = (document.getElementById('descripcion2').value);
        var selIndex = selObj.options[selObj.selectedIndex].text;
+
+        if(String(fechadoc)==""){
+        alert("El campo Fecha del documento no pueder estar vacio");
+        document.getElementById("fechadoc2").focus();
+        return;
+        }
+        if(descrip.length==0||!(/^[A-Za-z]+$/.test(descrip))){
+        alert("El campo Descripción es invalido");
+        document.getElementById("descripcion2").focus();
+        return;
+        }
+
          alert(selIndex);
-        // window.location="documentosa.php?numero_contrato="+selIndex+"&fecha_documento="+fechadoc+"&descripcion="+descrip;
+         window.location="documentosa.php?numero_contrato="+selIndex+"&fecha_documento="+fechadoc+"&descripcion="+descrip;
     }
 </script>
 
@@ -380,13 +445,13 @@
               <div id="dtextmontomaximo">
                 <label id="textmontomaximo" class="control-label"> Monto maximo: </label>
               </div>
-              <input class="form-control" id="montomax" placeholder="Monto Maximo" name="montomax" type="number" step="0.1" >
+              <input class="form-control" id="montomax" placeholder="Monto Maximo" min="0" name="montomax" type="number" step="0.1" >
             </div>
             <div id="dmontominimo">
               <div id="dtextmontominimo">
                 <label id="textmontominimo" class="control-label"> Monto minimo: </label>
               </div>
-              <input class="form-control" id="montomin" placeholder="Monto Minimo" name="montomin" type="number" step="0.1" >
+              <input class="form-control" id="montomin" placeholder="Monto Minimo" min="0" name="montomin" type="number" step="0.1" >
             </div>
             <div id="diniciovigencia">
               <div id="dtextiniciovigencia">

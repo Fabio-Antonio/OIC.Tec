@@ -266,12 +266,57 @@
  var selObj7 = document.getElementById('sefechascontrato');
  var selObj8 = document.getElementById('seconsolidadocontrato');
 
+	if(selObj.length==0){
+        alert("El campo Unidad Compradora no debe estar vacío");
+        document.getElementById("seunidadcompradoracontrato").focus();
+        return;
+        }
+          if(selObj2.length==0){
+        alert("El campo Unidad Compradora no debe estar vacío");
+        document.getElementById("secontrarecepcion").focus();
+        return;
+        }
+          if(selObj3.length==0){
+        alert("El campo Unidad Compradora no debe estar vacío");
+        document.getElementById("seunidadrequirentecontrato").focus();
+        return;
+        }
+          if(selObj4.length==0){
+        alert("El campo Unidad Compradora no debe estar vacío");
+        document.getElementById("seadministradorcontrato").focus();
+        return;
+        }
+          if(selObj5.length==0){
+        alert("El campo Unidad Compradora no debe estar vacío");
+        document.getElementById("semontonoivacontrato").focus();
+        return;
+        }
+          if(selObj6.length==0){
+        alert("El campo Unidad Compradora no debe estar vacío");
+        document.getElementById("seproveedoradjudicadocontrato").focus();
+        return;
+        }
+	   if(selObj7.length==0){
+        alert("El campo Unidad Compradora no debe estar vacío");
+        document.getElementById("sefechascontrato").focus();
+        return;
+        }
+          if(selObj8.length==0){
+        alert("El campo Unidad Compradora no debe estar vacío");
+        document.getElementById("seconsolidadocontrato").focus();
+        return;
+        }
+	
       var numero_contrato  = (document.getElementById('innumerocontratoc').value);
       var procedimiento_compranet  = (document.getElementById('inprocedimientocompranetc').value);
        var contrato_compranet  = (document.getElementById('incontratocompranetc').value);
         var convenio_interno  = (document.getElementById('inconveniointernoc').value);
         var objeto_contratacion  = (document.getElementById('inobjetocontratacionc').value);
+        if(document.getElementById("incontratoabiertoc").checked==true){
  	var contrato_abierto  = (document.getElementById('incontratoabiertoc').value);
+	}else{
+	 var contrato_abierto  = (document.getElementById('incontratoabiertoc').value=0);
+	}
         var documentacion_descripcion  = (document.getElementById('indocumentodescripcionc').value);
       var selIndex = selObj.options[selObj.selectedIndex].text;
        var selIndex2 = selObj2.options[selObj2.selectedIndex].text;
@@ -281,6 +326,41 @@
 	 var selIndex6 = selObj6.options[selObj6.selectedIndex].text;
 	 var selIndex7 = selObj7.options[selObj7.selectedIndex].text;
 	 var selIndex8 = selObj8.options[selObj8.selectedIndex].text;
+         if(numero_contrato.length==0||!(/^[A-Za-z0-9]+$/.test(numero_contrato))){
+	 alert("El campo Número Contrato es invalido");
+        document.getElementById("innumerocontratoc").focus();
+        return;
+	}
+	 if(procedimiento_compranet.length==0||!(/^[A-Za-z0-9]+$/.test(procedimiento_compranet))){
+         alert("El campo Procedimiento Compranet es invalido");
+        document.getElementById("inprocedimientocompranetc").focus();
+        return;
+        }
+	
+	 if(contrato_compranet.length==0||!(/^[0-9]+$/.test(contrato_compranet))||contrato_compranet.length>7||contrato_compranet<0){
+         alert("El campo  Contrato Compranet es invalido");
+        document.getElementById("incontratocompranetc").focus();
+        return;
+        }
+	 if(convenio_interno.length==0||!(/^[A-Za-z0-9]+$/.test(convenio_interno))){
+         alert("El campo Convenio Interno es invalido");
+        document.getElementById("inconveniointernoc").focus();
+        return;
+        }
+	 if(objeto_contratacion.length==0||!(/^[A-Za-z0-9]+$/.test(objeto_contratacion))){
+         alert("El campo Objeto Contratacion es invalido");
+        document.getElementById("inobjetocontratacionc").focus();
+        return;
+        }
+	 if(documentacion_descripcion.length==0||!(/^[A-Za-z0-9]+$/.test(documentacion_descripcion))){
+         alert("El campo Documentación Descripción es invalido");
+        document.getElementById("indocumentodescripcionc").focus();
+        return;
+        }
+
+
+
+
          alert(selIndex);
          window.location="contrato_in.php?nombre_unidad_compradora="+selIndex+"&procedimientos="+selIndex2+"&unidad_requirente="+selIndex3+"&nombre="+selIndex4+
         "&total="+selIndex5+"&proveedor="+selIndex6+"&descripcion="+selIndex7+"&procedimiento="+selIndex8+"&numero_contrato="+numero_contrato+
@@ -435,7 +515,7 @@
           </div>
           <div class="dcontratocompranetc">
             <label class="textcontratocompranet">Contrato Compranet:</label>
-            <input type="number" class="form-control" id="incontratocompranetc" name="incontratocompranetc"  placeholder="Contrato Compranet" step="1.0">
+            <input type="number" class="form-control" id="incontratocompranetc" name="incontratocompranetc"  min="0" placeholder="Contrato Compranet" step="1.0">
           </div>
           <div class="dconveniointernoc">
             <label class="textconveniointerno">Convenio Interno:</label>

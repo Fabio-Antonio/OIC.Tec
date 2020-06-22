@@ -23,7 +23,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/" id="besa">B.E.S.A</a>
+            <a class="navbar-brand" href="principal.html" id="besa">B.E.S.A</a>
           </div>
         <div class="collapse navbar-collapse" id="subenlaces">
           <ul class="nav navbar-nav navbar-right">

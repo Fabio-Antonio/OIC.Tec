@@ -306,7 +306,7 @@
         document.getElementById("seconsolidadocontrato").focus();
         return;
         }
-	
+
       var numero_contrato  = (document.getElementById('innumerocontratoc').value);
       var procedimiento_compranet  = (document.getElementById('inprocedimientocompranetc').value);
        var contrato_compranet  = (document.getElementById('incontratocompranetc').value);
@@ -336,7 +336,7 @@
         document.getElementById("inprocedimientocompranetc").focus();
         return;
         }
-	
+
 	 if(contrato_compranet.length==0||!(/^[0-9]+$/.test(contrato_compranet))||contrato_compranet.length>7||contrato_compranet<0){
          alert("El campo  Contrato Compranet es invalido");
         document.getElementById("incontratocompranetc").focus();
@@ -536,6 +536,7 @@
           </div>
          <div id="dbtncomprobacion">
               <button type="button" id="bcomprobacion" class="btn btn-primary" onclick="mostrarText()" name="bcomprobacion"> Guardar </button>
+              <button type="button" id="bregresar" class="btn btn-primary"  onclick="location.href='principal.html'" name="bregresar"> Regresar </button>
           </div>
         </div>
       </div>

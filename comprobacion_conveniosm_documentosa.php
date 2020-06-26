@@ -277,7 +277,7 @@
 	alert("El campo Monto Máximo es invalido");
 	document.getElementById("montomax").focus();
 	return;
-	
+
 	}
 	  if(montomin<0||montomin.length==0){
         alert("El campo Monto Minimo es invalido");
@@ -304,7 +304,7 @@
         if(fecha1>fecha2){
          alert("La fecha del campo  Inicio Vigencia no puede ser mayor a la fecha del campo Fin Vigencia");
         return;
-	}	
+	}
 
 
        var selIndex = selObj.options[selObj.selectedIndex].text;
@@ -334,7 +334,7 @@
 	document.getElementById("descripcion").focus();
         return;
 	}
-	
+
          alert(selIndex);
         window.location="comprobacion.php?numero_contrato="+selIndex+"&fecha_documento="+fechadoc+"&descripcion="+descrip;
     }
@@ -403,6 +403,7 @@
           </div>
           <div id="dbtncomprobacion">
               <button type="button" id="bcomprobacion" class="btn btn-primary" onclick="mostrarText();" name="bcomprobacion"> Guardar </button>
+              <button type="button" id="bregresar" class="btn btn-primary"  onclick="location.href='principal.html'" name="bregresar"> Regresar </button>
           </div>
         </div>
       </div>
@@ -468,6 +469,7 @@
 
             <div id="dbtncomprobacion">
                 <button type="button" id="bcomprobacion" class="btn btn-primary" onclick="mostrarTexts();" name="button"> Guardar </button>
+                <button type="button" id="bregresar" class="btn btn-primary"  onclick="location.href='principal.html'" name="bregresar"> Regresar </button>
             </div>
             </div>
           </div>
@@ -511,6 +513,7 @@
               </div>
               <div id="dbtncomprobacion">
                   <button type="button" id="bcomprobacion" onclick="mostrarText3();" class="btn btn-primary" name="button"> Guardar </button>
+                  <button type="button" id="bregresar" class="btn btn-primary"  onclick="location.href='principal.html'" name="bregresar"> Regresar </button>
               </div>
               </div>
             </div>

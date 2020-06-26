@@ -273,6 +273,7 @@
           <div id="btnac">
               <button type="submit" id="bac" class="btn btn-primary" onclick=this.form.action="fundamento.php" name="button"> Guardar </button>
 		</form>
+              <button type="button" id="bregresar" class="btn btn-primary"  onclick="location.href='principal.html'" name="bregresar"> Regresar </button>
           </div>
     </div>
   </div>
@@ -306,7 +307,7 @@
 	}
        var selIndex = selObj.options[selObj.selectedIndex].text;
 
-	
+
          alert(selIndex);
          window.location="procedimientos.php?fundamento="+selIndex+"&procedimientos="+pr;
     }
@@ -330,7 +331,7 @@
 
     <div id="btnca">
         <button type="button" id="bca" onclick="mostrarText();" class="btn btn-primary" name="button"> Guardar </button>
-
+        <button type="button" id="bregresar" class="btn btn-primary"  onclick="location.href='principal.html'" name="bregresar"> Regresar </button>
     </div>
   </div>
 </div>

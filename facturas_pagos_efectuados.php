@@ -266,7 +266,7 @@
      var fecha1 = new Date(fecha_factura);
       var fecha2 = new Date(fecha_pago);
 
-     
+
 
 
       if(monto<0||monto.length==0){
@@ -281,13 +281,13 @@
         }
         if(fecha1<fecha2||String(fecha_factura)==""||String(fecha_pago)==""){
 	alert("El rango de fechas es incorrecto!!");
-        return; 
+        return;
 	}
         if(descripcio_factura.length==0||!(/^[A-Za-z]+$/.test(descripcio_factura))){
 	alert("El campo Descripción está fuera de formato");
 	document.getElementById("texadescripcionfactura").focus();
 	return;
-	}	
+	}
        var selIndex = selObj.options[selObj.selectedIndex].text;
          alert(selIndex);
          window.location="facturas.php?numero_contrato="+selIndex+"&numero_factura="+numero_factura+"&monto="+monto+"&fecha_factura="+fecha_factura+"&fecha_pago="+fecha_pago+"&descripcio_factura="+descripcio_factura;
@@ -317,7 +317,7 @@
         return;
         }
 
-       
+
        var selIndex = selObj.options[selObj.selectedIndex].text;
          alert(selIndex);
          window.location="pagos_efectuados.php?numero_contrato="+selIndex+"&monto="+monto+"&fecha_pago="+fecha_pago+"&descripcion="+descripcion;
@@ -369,6 +369,7 @@
           </div>
           <div id="dbtncomprobacion">
               <button type="button" id="bcomprobacion" class="btn btn-primary" onclick="mostrarText();" name=""> Guardar </button>
+              <button type="button" id="bregresar" class="btn btn-primary"  onclick="location.href='principal.html'" name="bregresar"> Regresar </button>
           </div>
         </div>
       </div>
@@ -411,6 +412,7 @@
               </div>
               <div id="dbtncomprobacion">
                   <button type="button" id="bcomprobacion" class="btn btn-primary" onclick="mostrarTexts();" name="bcomprobacion"> Guardar </button>
+                  <button type="button" id="bregresar" class="btn btn-primary"  onclick="location.href='principal.html'" name="bregresar"> Regresar </button>
               </div>
             </div>
           </div>

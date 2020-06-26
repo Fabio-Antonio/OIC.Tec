@@ -264,11 +264,11 @@
      var  direccion_entregable  =(document.getElementById('indireccione').value);
      var  descripcion  =(document.getElementById('descripcionn').value);
 
-    
+
        var  selIndex  = selObj.options[selObj.selectedIndex].text;
        var prueba = new Date(fecha_entrega);
        var prueba2 = new Date(fecha_entrega_maxima);
-       
+
        if(prueba>prueba2||String(fecha_entrega)==""||String(fecha_entrega_maxima)==""){
 	 	alert("El rango de fechas es incorrecto!!");
 		return;
@@ -278,7 +278,7 @@
         document.getElementById("incantidade").focus();
         return;
         }
- 
+
 	if(nombre_entregable.length==0||nombre_entregable.length>=26){
 	alert("El campo nombre entregable esta fuera del rango");
 	document.getElementById("innombreentregables").focus();
@@ -290,7 +290,7 @@
          return;
 	}
 
-	
+
  if(direccion_entregable.length==0){
         alert("El campo dirección entregable esta fuera del rango");
         document.getElementById("indireccione").focus();
@@ -312,7 +312,7 @@
           document.getElementById("indireccione").focus();
          return;
         }
-	
+
           alert(selIndex);
          window.location="entregable.php?numero_contrato="+selIndex+"&fecha_entrega="+fecha_entrega+"&nombre_entregable="+nombre_entregable+"&fecha_entrega_maxima="+fecha_entrega_maxima+"&cantidad_entregable="+cantidad_entregable+"&direccion_entregable="+direccion_entregable+"&descripcion="+descripcion;
     }
@@ -340,7 +340,7 @@
 }
                   ?>
      </select>
-        
+
         <div class="dfechaentregamo">
           <label id="textfechaentregamo" class="control-label"> Fecha entraga: </label>
           <input class="form-control" id="infechaentregamo" name="fecha_entrega" type="date" required>
@@ -367,9 +367,10 @@
         </div>
         <div id="dbtncomprobacion">
             <!--button type="button" id="bcomprobacion" class="btn btn-primary" onclick="mostrarText();" name="button"> Guardar </button>-->
-		<input type="submit" id="bcomprobacion" class="btn btn-primary" onclick="mostrarText();"  name="button" value="Guardar"/>
+		        <input type="submit" id="bcomprobacion" class="btn btn-primary" onclick="mostrarText();"  name="button" value="Guardar"/>
+            <button type="button" id="bregresar" class="btn btn-primary"  onclick="location.href='principal.html'" name="bregresar"> Regresar </button>
         </div>
-        
+
         </div>
       </div>
     </div>

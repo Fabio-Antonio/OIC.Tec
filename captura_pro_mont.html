@@ -273,7 +273,8 @@
           <input class="form-control" id="mont" placeholder="Monto Total" min="0" name="monto_total" type="number" step="0.1" required >
         </div>
         <div class="dbtgcpc">
-          <button  id="btg" onclick=this.form.action="consolidado.php" class="btn btn-primary" type="submit"> GUARDAR </button>
+          <button  id="btg" onclick=this.form.action="consolidado.php" class="btn btn-primary" type="submit"> Guardar </button>
+          <button type="button" id="bregresar" class="btn btn-primary"  onclick="location.href='principal.html'" name="bregresar"> Regresar </button>
         </div>
        </form>
       </div>
@@ -297,8 +298,9 @@
       <input class="form-control" id="tot" placeholder="Total" name="total" type="number" required min="0" step="0.1">
     </div>
     <div id ="dbtgcpc1">
-      <button  id="btg" onclick=this.form.action="monto.php" class="btn btn-primary" type="submit"> GUARDAR </button>
-  </div>
+      <button  id="btg" onclick=this.form.action="monto.php" class="btn btn-primary" type="submit"> Guardar </button>
+      <button type="button" id="bregresar" class="btn btn-primary"  onclick="location.href='principal.html'" name="bregresar"> Regresar </button>
+    </div>
 </form>
 </div>
 <div id="dcapturas1">
@@ -316,8 +318,9 @@
     <input class="form-control" name="rfc" id="rfc" placeholder="RFC" type="text" required maxlength="13" minlength="13" pattern="[A-Z0-9]*">
   </div>
   <div id ="dbtgcpc2">
-      <button  id="btg" onclick=this.form.action="proveedor.php" class="btn btn-primary" type="submit"> GUARDAR </button>
-</div>
+      <button  id="btg" onclick=this.form.action="proveedor.php" class="btn btn-primary" type="submit"> Guardar </button>
+      <button type="button" id="bregresar" class="btn btn-primary"  onclick="location.href='principal.html'" name="bregresar"> Regresar </button>
+  </div>
 </form>
 </div>
 </main>

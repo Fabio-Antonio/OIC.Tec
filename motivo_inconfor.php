@@ -302,6 +302,7 @@ window.location="inconformidades.php?motivo="+selIndex2+"&numero_contrato="+selI
           <input type="text" class="form-control" id="inmotivoin" name="motivo"  placeholder="Motivo" required maxlength="40" pattern="[A-Za-z0-9]*">
           <div id="dbtncomprobacion">
               <button type="submit" id="bcomprobacion" class="btn btn-primary" onclick=this.form.action="motivo.php" name="bcomprobacion"> Guardar </button>
+              <button type="button" id="bregresar" class="btn btn-primary"  onclick="location.href='principal.html'" name="bregresar"> Regresar </button>
           </div>
 	</form>
         </div>
@@ -361,6 +362,7 @@ window.location="inconformidades.php?motivo="+selIndex2+"&numero_contrato="+selI
               </div>
               <div id="dbtncomprobacion">
                   <button type="button" id="bcomprobacion" class="btn btn-primary" onclick="mostrarText();" name="bcomprobacion"> Guardar </button>
+                  <button type="button" id="bregresar" class="btn btn-primary"  onclick="location.href='principal.html'" name="bregresar"> Regresar </button>
               </div>
             </div>
           </div>

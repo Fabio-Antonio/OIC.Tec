@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
       <title> </title>
@@ -263,7 +263,7 @@
       var fecha_terminacion  = (document.getElementById('infechaterminacion').value);
       var gastos_no_recuperables  = (document.getElementById('ingastosnorecuperables').value);
        var monto_finiquito  = (document.getElementById('inmontofiniquito').value);
-      
+
       var selIndex = selObj.options[selObj.selectedIndex].text;
 
 	if(String(fecha_terminacion)==""){
@@ -353,6 +353,7 @@
           </div>
           <div id="dbtncomprobacion">
               <button type="button" id="bcomprobacion" class="btn btn-primary" onclick="mostrarTexts();" name="bcomprobacion"> Guardar </button>
+              <button type="button" id="bregresar" class="btn btn-primary"  onclick="location.href='principal.html'" name="bregresar"> Regresar </button>
           </div>
         </div>
       </div>
@@ -392,6 +393,7 @@
               </div>
               <div id="dbtncomprobacion">
                   <button type="button" id="bcomprobacion" class="btn btn-primary" onclick="mostrarText();" name="bcomprobacion"> Guardar </button>
+                  <button type="button" id="bregresar" class="btn btn-primary"  onclick="location.href='principal.html'" name="bregresar"> Regresar </button>
               </div>
             </div>
           </div>

@@ -265,7 +265,7 @@
         alert("El campo Clave Partida es invalido");
         document.getElementById('inclavepartida').focus();
         return;
-	}		
+	}
          alert(selIndex);
         window.location="partidas_presupuestales.php?numero_contrato="+selIndex+"&clave_partida="+clave_partida;
     }
@@ -279,7 +279,7 @@
       var descripcion  = (document.getElementById('texadescripcionsubpartida').value);
 
       var selIndex = selObj.options[selObj.selectedIndex].text;
-        
+
       if(numero_sub_partida<0||numero_sub_partida.length==0||!(/^[0-9]+$/.test(numero_sub_partida))){
         alert("El campo Numero Subpartida es invalido");
         document.getElementById('innumerosubpartida').focus();
@@ -325,6 +325,7 @@
           </div>
           <div id="dbtncomprobacion">
               <button type="button" id="bcomprobacion" class="btn btn-primary" onclick="mostrarText();" name=""> Guardar </button>
+              <button type="button" id="bregresar" class="btn btn-primary"  onclick="location.href='principal.html'" name="bregresar"> Regresar </button>
           </div>
         </div>
       </div>
@@ -362,6 +363,7 @@
               </div>
               <div id="dbtncomprobacion">
                   <button type="button" id="bcomprobacion" class="btn btn-primary" onclick="mostrarTexts();" name="bcomprobacion"> Guardar </button>
+                  <button type="button" id="bregresar" class="btn btn-primary"  onclick="location.href='principal.html'" name="bregresar"> Regresar </button>
               </div>
             </div>
           </div>

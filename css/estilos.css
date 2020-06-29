@@ -67,7 +67,7 @@
 
 
 .iconcapturas{
-  margin-left: 290px;
+   margin-left: 290px;
 }
 .iconconsultas{
   margin-left: 300px;
@@ -85,6 +85,19 @@
   text-decoration: underline;
 
 }
+
+.textconsultas{
+ margin-left:15px;
+  font-size: 30px;
+  color: black;
+  font-weight: bold;
+}
+.textconsultas:hover{
+  text-decoration: underline;
+
+}
+
+
 .dtext{
   margin-top: 20px;
 }

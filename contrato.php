@@ -521,6 +521,15 @@
             <label class="textconveniointerno">Convenio Interno:</label>
             <input type="text" class="form-control" id="inconveniointernoc" name="inconveniointernoc"  placeholder="Convenio Interno">
           </div>
+          <div id="dcmmax">
+          <label id="ccp" > Monto Maximo:  </label>
+          <input class="form-control" name="monto_maximo" id="montomaxi" placeholder="Monto Maximo" required min="0"  type="number"  step="0.1">
+        </div>
+        <div id ="dcmnmm">
+          <label id="ccp" > Monto Minimo:  </label>
+          <input class="form-control" id="montomini" placeholder="Monto Minimo" name="monto_minimo" required min="0" type="number" step="0.1">
+        </div>
+
           <div class="dobjetocontratacionc">
             <label class="textobjetocontratacion">Objeto Contratación:</label>
             <textarea  class="form-control" id="inobjetocontratacionc" name="inobjetocontratacionc"  placeholder="Objeto Contratación"></textarea>
@@ -530,18 +539,25 @@
             <Textarea  class="form-control" id="indocumentodescripcionc" name="indocumentodescripcionc"  placeholder="Documentación Descripción"></textarea>
           </div>
 
-          <div class="dcontratoabiertoc">
-            <label class="textcontratoabierto">Contrato Abierto:
-            <input type="checkbox"  id="incontratoabiertoc" name="incontratoabiertoc"  value="1"></label>
+
+              <div id ="dbtgcpc1">
+                <button  id="btg" onclick=this.form.action="monto.php" class="btn btn-primary" type="submit"> Guardar </button>
+                <button type="button" id="bregresar" class="btn btn-primary"  onclick="location.href='principal.html'" name="bregresar"> Regresar </button>
+              </div>
+          </form>
           </div>
-         <div id="dbtncomprobacion">
-              <button type="button" id="bcomprobacion" class="btn btn-primary" onclick="mostrarText()" name="bcomprobacion"> Guardar </button>
-              <button type="button" id="bregresar" class="btn btn-primary"  onclick="location.href='principal.html'" name="bregresar"> Regresar </button>
-          </div>
+
+
+
         </div>
+
+
+
+
       </div>
     </div>
-  </div>
+
+
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"
     integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY"

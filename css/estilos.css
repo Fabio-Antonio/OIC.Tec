@@ -564,26 +564,7 @@ margin-top: 30px;
   margin-left: 520px;
   margin-top: -70px;
 }
-#mont{
-  width: 450px;
-}
-#montomaxi{
-  width: 480px;
-}
-#dcmnmm{
-  margin-top: -70px;
-  margin-left: 550px;
-}
-#montomini{
-  width: 450px;
-}
-#dcmntotal{
-  margin-left: 30px;
-  margin-top: 30px;
-}
-#tot{
-  width: 480px;
-}
+
 #noo{
   width: 480px;
 }
@@ -2025,6 +2006,21 @@ font-size: 11px;
     width:  460px;
     margin-left: 30px;
     }
+#dcmmax{
+  margin-top: 30px;
+  margin-left: 35px;
+}
+#montomaxi{
+    width: 480px;
+}
+#dcmnmm{
+    margin-top: -60px;
+    margin-left: 550px;
+}
+#montomini{
+    width: 460px;
+}
+
 .dobjetocontratacionc{
   margin-top: 30px;
   margin-left: 5px;
@@ -2098,7 +2094,6 @@ margin-top:-40px;
     margin-left: 280px;
     margin-top: -40px;
     }
-
 /*--------------------------------------------------------------*/
 /*--------------------------------------------------------------*/
 /*-----------fin contrato---------------------------------------------*/

@@ -84,8 +84,27 @@ $valor8=serialize($flag8);
 
 
 
-header("Location:contrato.php?flag=$valor&&flag2=$valor2&&flag3=$valor3&&flag4=$valor4&&flag5=$valor5&&flag6=$valor6&&flag8=$valor8");
+//header("Location:contrato.php?flag=$valor&&flag2=$valor2&&flag3=$valor3&&flag4=$valor4&&flag5=$valor5&&flag6=$valor6&&flag8=$valor8");
 
 
 $conn=null;
+
+$ch = curl_init();
+ 
+// definimos la URL a la que hacemos la petición
+curl_setopt($ch, CURLOPT_URL,"http://192.168.1.68:8888/besa/contrato.php");
+// indicamos el tipo de petición: POST
+curl_setopt($ch, CURLOPT_POST, TRUE);
+// definimos cada uno de los parámetros
+curl_setopt($ch, CURLOPT_POSTFIELDS, "flag=$valor&flag2=$valor2&flag3=$valor3&flag4=$valor4&flag5=$valor5&flag6=$valor6&flag8=$valor8");
+ 
+
+ curl_exec ($ch);
+ $error= curl_error($ch);
+ echo $error;
+// cerramos la sesión cURL
+curl_close ($ch);
+
+
+
 ?>

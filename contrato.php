@@ -372,8 +372,8 @@
             <label class="textcontratorecepcion">Unidad Compradora:</label>
             <select id="seunidadcompradoracontrato" class="seunidadcompradoracontrato" name="seunidadcompradoracontrato">
                 <?php
-			if(isset($_GET["flag"])){
-			$flag=unserialize($_GET["flag"]);
+			if(isset($_POST["flag"])){
+			$flag=unserialize($_POST["flag"]);
 			foreach($flag as $key=> $val){
 		?>
               <option value="<?php print($val['id_unidad_compradora']); ?>"><?php print($val['nombre_unidad_compradora']); ?></option>
@@ -388,8 +388,8 @@
             <select id="seconsolidadocontrato" class="seconsolidadocontrato" name="seconsolidadocontrato">
 
             <?php
-			if(isset($_GET["flag8"])){
-			$flag=unserialize($_GET["flag8"]);
+			if(isset($_POST["flag8"])){
+			$flag=unserialize($_POST["flag8"]);
 			foreach($flag as $key=> $val){
 		?>
               <option value="<?php print($val['id_consolidado']); ?>"><?php print($val['procedimiento']); ?></option>
@@ -404,8 +404,8 @@
             <select id="seunidadrequirentecontrato" class="seunidadrequirentecontrato" name="seunidadrequirentecontrato">
 
             <?php
-			if(isset($_GET["flag3"])){
-			$flag=unserialize($_GET["flag3"]);
+			if(isset($_POST["flag3"])){
+			$flag=unserialize($_POST["flag3"]);
 			foreach($flag as $key=> $val){
 		?>
               <option value="<?php print($val['id_requirente']); ?>"><?php print($val['unidad']); ?></option>
@@ -420,8 +420,8 @@
             <select id="semontonoivacontrato" class="semontonoivacontrato" name="semontonoivacontrato">
 
             <?php
-			if(isset($_GET["flag5"])){
-			$flag=unserialize($_GET["flag5"]);
+			if(isset($_POST["flag5"])){
+			$flag=unserialize($_POST["flag5"]);
 			foreach($flag as $key=> $val){
 		?>
               <option value="<?php print($val['id_monto_no_iva']); ?>"><?php print($val['total']); ?></option>
@@ -436,8 +436,8 @@
             <select id="seadministradorcontrato" class="seadministradorcontrato" name="seadministradorcontrato">
 
             <?php
-			if(isset($_GET["flag4"])){
-			$flag=unserialize($_GET["flag4"]);
+			if(isset($_POST["flag4"])){
+			$flag=unserialize($_POST["flag4"]);
 			foreach($flag as $key=> $val){
 		?>
               <option value="<?php print($val['id_administrador']); ?>"><?php print($val['nombre']); ?></option>
@@ -453,8 +453,8 @@
             <select id="seproveedoradjudicadocontrato" class="seproveedoradjudicadocontrato" name="seproveedoradjudicadocontrato">
 
             <?php
-			if(isset($_GET["flag6"])){
-			$flag=unserialize($_GET["flag6"]);
+			if(isset($_POST["flag6"])){
+			$flag=unserialize($_POST["flag6"]);
 			foreach($flag as $key=> $val){
 		?>
               <option value="<?php print($val['id_proveedor']); ?>"><?php print($val['nombre']); ?></option>
@@ -470,8 +470,8 @@
             <select id="secontrarecepcion" class="secontrarecepcionc" name="secontrarecepcion">
 
             <?php
-			if(isset($_GET["flag2"])){
-			$flag=unserialize($_GET["flag2"]);
+			if(isset($_POST["flag2"])){
+			$flag=unserialize($_POST["flag2"]);
 			foreach($flag as $key=> $val){
 		?>
               <option value="<?php print($val['id_procedimiento_contratacion']); ?>"><?php print($val['procedimientos']); ?></option>

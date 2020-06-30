@@ -70,16 +70,6 @@ $valor6=serialize($flag6);
 }
 
 
-$query=$conn->prepare("SELECT id_fecha,descripcion FROM contrato_fechas");
-
- $query->execute();
-if($query){
-while($row=$query->fetch()){
-$flag7[]=$row;
-}
-$valor7=serialize($flag7);
-
-}
 
 $query=$conn->prepare("SELECT id_consolidado,procedimiento FROM consolidado");
 
@@ -94,8 +84,7 @@ $valor8=serialize($flag8);
 
 
 
-
-header("Location:contrato.php?flag=$valor&&flag2=$valor2&&flag3=$valor3&&flag4=$valor4&&flag5=$valor5&&flag6=$valor6&&flag7=$valor7&&flag8=$valor8");
+header("Location:contrato.php?flag=$valor&&flag2=$valor2&&flag3=$valor3&&flag4=$valor4&&flag5=$valor5&&flag6=$valor6&&flag8=$valor8");
 
 
 $conn=null;

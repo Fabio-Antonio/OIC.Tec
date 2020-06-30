@@ -104,20 +104,6 @@ $dato6=$row['id_proveedor'];
 }
 
 
-$query=$conn->prepare("SELECT id_fecha  FROM contrato_fechas  WHERE descripcion=?");
-$query->bindParam(1, $descripcion);
-$query->execute();
-
-if($query)
-{
-while($row=$query->fetch())
-        {
-$dato7=$row['id_fecha'];
-
-}
-
-}
-
 $query=$conn->prepare("SELECT id_consolidado  FROM consolidado  WHERE procedimiento=?");
 $query->bindParam(1, $procedimiento);
 $query->execute();
@@ -135,33 +121,32 @@ $dato8=$row['id_consolidado'];
 
 
 $statement = $conn->prepare("INSERT INTO contrato (id_unidad_compradora,id_procedimiento_contratacion,id_unidad_requirente,id_administrador,
-id_monto_no_iva,id_proveedor_adjudicado,id_fechas,id_consolidado,numero_contrato,procedimiento_compranet,contrato_compranet,convenio_interno
-,objeto_contratacion,contrato_abierto,documentacion_descirpcion)VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+id_monto_no_iva,id_proveedor_adjudicado,id_consolidado,numero_contrato,procedimiento_compranet,contrato_compranet,convenio_interno
+,objeto_contratacion,contrato_abierto,documentacion_descirpcion)VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
 $statement->bindValue(1, $dato);
 $statement->bindValue(2, $dato2);
 $statement->bindValue(3, $dato3);
 $statement->bindValue(4, $dato4);
 $statement->bindValue(5, $dato5);
 $statement->bindValue(6, $dato6);
-$statement->bindValue(7, $dato7);
-$statement->bindValue(8, $dato8);
-$statement->bindParam(9, $numero_contrato);
-$statement->bindParam(10, $procedimiento_compranet);
-$statement->bindParam(11, $contrato_compranet);
-$statement->bindParam(12, $convenio_interno);
-$statement->bindParam(13, $objeto_contratacion);
-$statement->bindParam(14, $contrato_abierto);
-$statement->bindParam(15, $documentacion_descripcion);
+$statement->bindValue(7, $dato8);
+$statement->bindParam(8, $numero_contrato);
+$statement->bindParam(9, $procedimiento_compranet);
+$statement->bindParam(10, $contrato_compranet);
+$statement->bindParam(11, $convenio_interno);
+$statement->bindParam(12, $objeto_contratacion);
+$statement->bindParam(13, $contrato_abierto);
+$statement->bindParam(14, $documentacion_descripcion);
 $statement->execute();
    
   
  
  if($statement){
 echo "<script>alert('Datos insertados correctamente')
-window.location.replace('fechas.html');</script>";
+window.location.replace('consulta_contrato7.php');</script>";
 }else{
 echo "<script>alert('Revise la conexión con el servidor e intente de nuevo')
-window.location.replace('fechas.html');</script>";
+window.location.replace('consulta_contrato7.php');</script>";
 
 }
  $conn=null;       

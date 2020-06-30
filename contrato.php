@@ -263,7 +263,6 @@
  var selObj4 = document.getElementById('seadministradorcontrato');
  var selObj5 = document.getElementById('semontonoivacontrato');
  var selObj6 = document.getElementById('seproveedoradjudicadocontrato');
- var selObj7 = document.getElementById('sefechascontrato');
  var selObj8 = document.getElementById('seconsolidadocontrato');
 
 	if(selObj.length==0){
@@ -296,11 +295,6 @@
         document.getElementById("seproveedoradjudicadocontrato").focus();
         return;
         }
-	   if(selObj7.length==0){
-        alert("El campo Unidad Compradora no debe estar vacío");
-        document.getElementById("sefechascontrato").focus();
-        return;
-        }
           if(selObj8.length==0){
         alert("El campo Unidad Compradora no debe estar vacío");
         document.getElementById("seconsolidadocontrato").focus();
@@ -324,7 +318,6 @@
 	 var selIndex4 = selObj4.options[selObj4.selectedIndex].text;
 	 var selIndex5 = selObj5.options[selObj5.selectedIndex].text;
 	 var selIndex6 = selObj6.options[selObj6.selectedIndex].text;
-	 var selIndex7 = selObj7.options[selObj7.selectedIndex].text;
 	 var selIndex8 = selObj8.options[selObj8.selectedIndex].text;
          if(numero_contrato.length==0||!(/^[A-Za-z0-9]+$/.test(numero_contrato))){
 	 alert("El campo Número Contrato es invalido");
@@ -363,7 +356,7 @@
 
          alert(selIndex);
          window.location="contrato_in.php?nombre_unidad_compradora="+selIndex+"&procedimientos="+selIndex2+"&unidad_requirente="+selIndex3+"&nombre="+selIndex4+
-        "&total="+selIndex5+"&proveedor="+selIndex6+"&descripcion="+selIndex7+"&procedimiento="+selIndex8+"&numero_contrato="+numero_contrato+
+        "&total="+selIndex5+"&proveedor="+selIndex6+"&procedimiento="+selIndex8+"&numero_contrato="+numero_contrato+
 "&procedimiento_compranet="+procedimiento_compranet+"&contrato_compranet="+contrato_compranet+"&convenio_interno="+convenio_interno+"&objeto_contratacion="
 +objeto_contratacion+"&contrato_abierto="+contrato_abierto+"&documentacion_descripcion="+documentacion_descripcion;
     }
@@ -453,22 +446,7 @@
 	}
            ?>
             </select>
-          </div>
-          <div class="dfechascontrato">
-            <label class="textcontratorecepcion">Fechas:</label>
-            <select id="sefechascontrato" class="sefechascontrato" name="sefechascontrato">
-
-            <?php
-			if(isset($_GET["flag7"])){
-			$flag=unserialize($_GET["flag7"]);
-			foreach($flag as $key=> $val){
-		?>
-              <option value="<?php print($val['id_fecha']); ?>"><?php print($val['descripcion']); ?></option>
-		<?php
-		}
-	}
-           ?>
-            </select>
+          
           </div>
           <div class="dproveedoradjudicadocontrato">
             <label class="textcontratorecepcion">Proveedor Adjudicado:</label>
@@ -539,6 +517,9 @@
             <Textarea  class="form-control" id="indocumentodescripcionc" name="indocumentodescripcionc"  placeholder="Documentación Descripción"></textarea>
           </div>
 
+              <div id="dbtncomprobacion2">
+              <button type="button" id="bcomprobacion" class="btn btn-primary"  onclick="location.href='fechas.html';" name="bcomprobacion"> Siguiente: </but$
+          </div>
 
               <div id ="dbtgcpc1">
                 <button  id="btg" onclick=this.form.action="monto.php" class="btn btn-primary" type="submit"> Guardar </button>

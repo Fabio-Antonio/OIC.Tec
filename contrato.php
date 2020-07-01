@@ -415,22 +415,7 @@
            ?>
             </select>
           </div>
-          <div class="dmontonoivacontrato">
-            <label class="textcontratorecepcion">Monto No Iva:</label>
-            <select id="semontonoivacontrato" class="semontonoivacontrato" name="semontonoivacontrato">
-
-            <?php
-			if(isset($_POST["flag5"])){
-			$flag=unserialize($_POST["flag5"]);
-			foreach($flag as $key=> $val){
-		?>
-              <option value="<?php print($val['id_monto_no_iva']); ?>"><?php print($val['total']); ?></option>
-		<?php
-		}
-	}
-           ?>
-            </select>
-          </div>
+        
           <div class="dadministradorcontrato">
             <label class="textcontratorecepcion">Administrador:</label>
             <select id="seadministradorcontrato" class="seadministradorcontrato" name="seadministradorcontrato">
@@ -446,7 +431,7 @@
 	}
            ?>
             </select>
-          
+
           </div>
           <div class="dproveedoradjudicadocontrato">
             <label class="textcontratorecepcion">Proveedor Adjudicado:</label>
@@ -517,13 +502,11 @@
             <Textarea  class="form-control" id="indocumentodescripcionc" name="indocumentodescripcionc"  placeholder="Documentación Descripción"></textarea>
           </div>
 
-              <div id="dbtncomprobacion2">
-              <button type="button" id="bcomprobacion" class="btn btn-primary"  onclick="location.href='fechas.html';" name="bcomprobacion"> Siguiente: </but$
-          </div>
 
               <div id ="dbtgcpc1">
                 <button  id="btg" onclick=this.form.action="monto.php" class="btn btn-primary" type="submit"> Guardar </button>
                 <button type="button" id="bregresar" class="btn btn-primary"  onclick="location.href='principal.html'" name="bregresar"> Regresar </button>
+                  <button type="button" id="bcomprobacion" class="btn btn-primary"  onclick="location.href='fechas.html';" name="bcomprobacion"> Siguiente: </button>
               </div>
           </form>
           </div>

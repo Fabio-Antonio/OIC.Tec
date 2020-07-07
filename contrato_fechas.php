@@ -8,29 +8,39 @@
    $resicion_contrato =$_POST["inresicioncontratof"];
    $inicio_vigencia = $_POST["ininiciovigenciaf"];
    $sat = $_POST["insatf"];
-   $imms = $_POST["inimssf"];
+   $imss = $_POST["inimssf"];
    $infonavit = $_POST["ininfonavitf"];
    $fecha_entrega = $_POST["infechaentregaf"];
    $suficiencia = $_POST["insuficienciaf"];
    $fin_vigencia = $_POST["infinvigenciaf"];
-   $descripcion = $_POST["infechadescripcion"];
+   $numero_contrato = $_POST["infechadescripcion"];
 
-     
- $statement = $conn->prepare("INSERT INTO contrato_fechas (notificacion_adjudicada,formalizacion_contrato,inicio_vigencia,fin_vigencia,sat,imss,
-infonavit,garantia_cumplimiento,fecha_entrega,suficiencia,requisicion_contrato,resicion_contrato,descripcion)VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)");
-$statement->bindParam(1, $notificacion_adjudicada);
-$statement->bindParam(2, $formalizacion_contrato);
-$statement->bindParam(3, $inicio_vigencia);
-$statement->bindParam(4, $fin_vigencia);
-$statement->bindParam(5, $sat);
-$statement->bindParam(6, $imss);
-$statement->bindParam(7, $infonavit);
-$statement->bindParam(8, $garantia_cumplimiento);
-$statement->bindParam(9, $fecha_entrega);
-$statement->bindParam(10, $suficiencia);
-$statement->bindParam(11, $requisicion_contrato);
-$statement->bindParam(12, $resicion_contrato);
-$statement->bindParam(13, $descripcion);
+$query=$conn->prepare("SELECT id_contrato FROM contrato WHERE numero_contrato=?");
+$query->bindParam(1,$numero_contrato);
+$query->execute();
+if($query){
+while($row=$query->fetch()){
+$dato=$row['id_contrato'];
+}
+}
+
+    
+ $statement = $conn->prepare("INSERT INTO contrato_fechas (id_contrato,notificacion_adjudicada,formalizacion_contrato,inicio_vigencia,fin_vigencia,sat,imss,
+infonavit,garantia_cumplimiento,fecha_entrega,suficiencia,requisicion_contrato,resicion_contrato)VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)");
+$statement->bindValue(1, $dato);
+$statement->bindParam(2, $notificacion_adjudicada);
+$statement->bindParam(3, $formalizacion_contrato);
+$statement->bindParam(4, $inicio_vigencia);
+$statement->bindParam(5, $fin_vigencia);
+$statement->bindParam(6, $sat);
+$statement->bindParam(7, $imss);
+$statement->bindParam(8, $infonavit);
+$statement->bindParam(9, $garantia_cumplimiento);
+$statement->bindParam(10, $fecha_entrega);
+$statement->bindParam(11, $suficiencia);
+$statement->bindParam(12, $requisicion_contrato);
+$statement->bindParam(13, $resicion_contrato);
+
 
 $statement->execute();
    

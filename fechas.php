@@ -24,7 +24,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/" id="besa">B.E.S.A</a>
+          <a class="navbar-brand" href="principal.html" id="besa">B.E.S.A</a>
         </div>
         <div class="collapse navbar-collapse" id="subenlaces">
           <ul class="nav navbar-nav navbar-right">
@@ -254,181 +254,196 @@
 <!-- INICIA REGISTRO------------------------------------>
 <!------------------------------------------------------>
 <!------------------------------------------------------>
+<script lenguage="javascript" type="text/javascript">
+function mostrarText(){
+var notificacion_adjudicada=(document.getElementById("innotificacionadjudicadaf").value);
+var formalizacion_contrato= (document.getElementById("informalizacioncontratof").value);
+var requisicion_contrato= (document.getElementById("inrequesicioncontratof").value);
+var garantia_cumplimiento= (document.getElementById("ingarantiacumplimientof").value);
+var resicion_contrato= (document.getElementById("inresicioncontratof").value);
+var inicio_vigencia= (document.getElementById("ininiciovigenciaf").value);
+var sat= (document.getElementById("insatf").value);
+var imss= (document.getElementById("inimssf").value);
+var infonavit= (document.getElementById("ininfonavitf").value);
+var fecha_entrega= (document.getElementById("infechaentregaf").value);
+var suficiencia= (document.getElementById("insuficienciaf").value);
+var fin_vigencia= (document.getElementById("infinvigenciaf").value);
+var descripcion= (document.getElementById("infechadescripcion").value);
+var fecha1= new Date(inicio_vigencia);
+var fecha2= new Date(fin_vigencia);
+var fecha3= new Date(fecha_entrega);
+if(String(notificacion_adjudicada)==""){
+alert("El campo Notificacion Adjudicada no puede ser vacío");
+document.getElementById("innotificacionadjudicadaf").focus();
+return;
+}
+if(String(formalizacion_contrato)==""){
+alert("El campo Formalización Contrato no puede ser vacío");
+document.getElementById("informalizacioncontratof").focus();
+return;
+}
+if(String(requisicion_contrato)==""){
+alert("El campo Requisicion Contrato no puede ser vacío");
+document.getElementById("inrequesicioncontratof").focus();
+return;
+}
+if(String(garantia_cumplimiento)==""){
+alert("El campo Garantia Cumplimiento no puede ser vacío");
+document.getElementById("ingarantiacumpliminetof").focus();
+return;
+}
+if(String(resicion_contrato)==""){
+alert("El campo Resicion Contrato no puede ser vacío");
+document.getElementById("inresicioncontratof").focus();
+return;
+}
+if(String(inicio_vigencia)==""){
+alert("El campo Inicio Vigencia no puede ser vacío");
+document.getElementById("ininiciovigenciaf").focus();
+return;
+}
+if(String(sat)==""){
+alert("El campo SAT no puede ser vacío");
+document.getElementById("insatf").focus();
+return;
+}
+
+if(String(imss)==""){
+alert("El campo IMSS no puede ser vacío");
+document.getElementById("inimssf").focus();
+return;
+}
+if(String(infonavit)==""){
+alert("El campo INFONAVIT  no puede ser vacío");
+document.getElementById("ininfonavitf").focus();
+return;
+}
+
+if(String(fecha_entrega)==""){
+alert("El campo Fecha Entrega  no puede ser vacío");
+document.getElementById("infechaenregaf").focus();
+return;
+}
+if(String(suficiencia)==""){
+alert("El campo Suficiencia no puede ser vacío");
+document.getElementById("insuficienciaf").focus();
+return;
+}
+
+if(String(fin_vigencia)==""){
+alert("El campo Fin  Vigencia no puede ser vacío");
+document.getElementById("infinvigenciaf").focus();
+return;
+}
+if(descripcion.length==0||!(/^[A-Za-z0-9]+$/.test(descripcion))){
+alert("El campo Etiqueta es inválido");
+document.getElementById("infechadescripcion").focus();
+return;
+}
+if(fecha2<fecha1){
+alert("La fecha de inicio de vigencia no puede ser mayor a la fecha de fin de vigencia");
+document.getElementById("ininiciovigenciaf").focus();
+return;
+}
+
+if(fecha3<fecha1||fecha3>fecha2){
+alert("La fecha de entrega es inválida");
+document.getElementById("infechaentregaf").focus();
+return;
+}
+
+$.post('contrato_fechas.php', {
+              "innotificacionadjudicadaf": notificacion_adjudicada,
+              "informalizacioncontratof": formalizacion_contrato,
+              "inrequesicioncontratof": requisicion_contrato,
+              "ingarantiacumplimientof": garantia_cumplimiento,
+		 "inresicioncontratof": resicion_contrato,
+		 "ininiciovigenciaf": inicio_vigencia,
+		 "insatf": sat,
+		 "inimssf": imss,
+		 "ininfonavitf": infonavit,
+		 "infechaentregaf": fecha_entrega,
+		 "insuficienciaf": suficiencia,
+		 "infinvigenciaf": fin_vigencia,
+		 "infechadescripcion": descripcion
+
+
+          },function(data) {
+             alert('datos ingresados correctamente', data);
+          });
+
+}
+</script>
   <div id="contec">
     <div class="container1">
       <div class="row">
         <div class='col-sm-20 col-md-20 col-ld-20'>
-          <h2 class="fuu"> CONTRATO </h2>
-           <div class="dunidadcompradoracontrato">
-            <label class="textcontratorecepcion">Unidad Compradora:</label>
-              </div>
-            <select id="seunidadcompradoracontrato" class="seunidadcompradoracontrato" name="seunidadcompradoracontrato">
-                <?php
-			if(isset($_GET["flag"])){
-			$flag=unserialize($_GET["flag"]);
-			foreach($flag as $key=> $val){
-		?>
-              <option value="<?php print($val['id_unidad_compradora']); ?>"><?php print($val['nombre_unidad_compradora']); ?></option>
-		<?php
-		}
-	}
-           ?>
-            </select>
-
-          <div class="dconsolidadocontrato">
-            <label class="textcontratorecepcion">Consolidado:</label>
+          <h2 class="fuu"> FECHAS </h2>
+          <div class="dfechadescripcion">
+            <label class="textdocumentodescripcion">Numero de contrato:</label>
+            <input type="text"  id="infechadescripcion" class="form-control" name="infechadescripcion" value="<?php $numero_contrato=$_POST['innumerocontratoc']; echo $numero_contrato;?>" placeholder="Etiqueta" required>
           </div>
-            <select id="seconsolidadocontrato" class="seconsolidadocontrato" name="seconsolidadocontrato">
-
-            <?php
-			if(isset($_GET["flag8"])){
-			$flag=unserialize($_GET["flag8"]);
-			foreach($flag as $key=> $val){
-		?>
-              <option value="<?php print($val['id_consolidado']); ?>"><?php print($val['procedimiento']); ?></option>
-		<?php
-		}
-	}
-           ?>
-            </select>
-
-          <div class="dunidadrequirentecontrato">
-            <label class="textcontratorecepcion">Unidad Requirente:</label>
+          <div class="dnotificacionadjudicadaf">
+             <form role="form" class="form-horizontal">
+            <label class="textfechaterminacion">Notificación Adjudicada:</label>
+            <input class="form-control" id="innotificacionadjudicadaf" name="innotificacionadjudicadaf" placeholder="Fecha" type="date" required>
           </div>
-            <select id="seunidadrequirentecontrato" class="seunidadrequirentecontrato" name="seunidadrequirentecontrato">
-
-            <?php
-			if(isset($_GET["flag3"])){
-			$flag=unserialize($_GET["flag3"]);
-			foreach($flag as $key=> $val){
-		?>
-              <option value="<?php print($val['id_requirente']); ?>"><?php print($val['unidad']); ?></option>
-		<?php
-		}
-	}
-           ?>
-            </select>
-
-          <div class="dmontonoivacontrato">
-            <label class="textcontratorecepcion">Monto No Iva:</label>
-            </div>
-            <select id="semontonoivacontrato" class="semontonoivacontrato" name="semontonoivacontrato">
-
-            <?php
-			if(isset($_GET["flag5"])){
-			$flag=unserialize($_GET["flag5"]);
-			foreach($flag as $key=> $val){
-		?>
-              <option value="<?php print($val['id_monto_no_iva']); ?>"><?php print($val['total']); ?></option>
-		<?php
-		}
-	}
-           ?>
-            </select>
-
-          <div class="dadministradorcontrato">
-            <label class="textcontratorecepcion">Administrador:</label>
+          <div class="dformalizacioncontratof">
+            <label class="textfechaterminacion">Formalización Contrato:</label>
+            <input class="form-control" id="informalizacioncontratof" name="informalizacioncontratof" placeholder="Fecha" type="date" required >
           </div>
-            <select id="seadministradorcontrato" class="seadministradorcontrato" name="seadministradorcontrato">
-
-            <?php
-			if(isset($_GET["flag4"])){
-			$flag=unserialize($_GET["flag4"]);
-			foreach($flag as $key=> $val){
-		?>
-              <option value="<?php print($val['id_administrador']); ?>"><?php print($val['nombre']); ?></option>
-		<?php
-		}
-	}
-           ?>
-            </select>
-
-          <div class="dfechascontrato">
-            <label class="textcontratorecepcion">Fechas:</label>
-            </div>
-            <select id="sefechascontrato" class="sefechascontrato" name="sefechascontrato">
-
-            <?php
-			if(isset($_GET["flag7"])){
-			$flag=unserialize($_GET["flag7"]);
-			foreach($flag as $key=> $val){
-		?>
-              <option value="<?php print($val['id_fecha']); ?>"><?php print($val['descripcion']); ?></option>
-		<?php
-		}
-	}
-           ?>
-            </select>
-
-          <div class="dproveedoradjudicadocontrato">
-            <label class="textcontratorecepcion">Proveedor Adjudicado:</label>
+          <div class="drequesicioncontratof">
+            <label class="textfechaterminacion">Requisición Contrato:</label>
+            <input class="form-control" id="inrequesicioncontratof" name="inrequesicioncontratof" placeholder="Fecha" type="date" required>
           </div>
-            <select id="seproveedoradjudicadocontrato" class="seproveedoradjudicadocontrato" name="seproveedoradjudicadocontrato">
+          <div class="dgarantiacumplimientof">
+            <label class="textfechaterminacion">Garantía Cumplimiento:</label>
+            <input class="form-control" id="ingarantiacumplimientof" name="ingarantiacumplimientof" placeholder="Fecha" type="date" required>
+          </div>
+          <div class="dresicioncontratof">
+            <label class="textfechaterminacion">Resición Contrato:</label>
+            <input class="form-control" id="inresicioncontratof" name="inresicioncontratof" placeholder="Fecha" type="date" required>
+          </div>
+          <div class="diniciovigenciaf">
+            <label class="textfechaterminacion">Inicio Vigencia:</label>
+            <input class="form-control" id="ininiciovigenciaf" name="ininiciovigenciaf" placeholder="Fecha" type="date" required>
+          </div>
+          <div class="dsatf">
+            <label class="textfechaterminacion">SAT:</label>
+            <input class="form-control" id="insatf" name="insatf" placeholder="Fecha" type="date" required >
+          </div>
+          <div class="dimssf">
+            <label class="textfechaterminacion">IMSS:</label>
+            <input class="form-control" id="inimssf" name="inimssf" placeholder="Fecha" type="date" required>
+          </div>
+          <div class="dinfonavitf">
+            <label class="textfechaterminacion">Infonavit:</label>
+            <input class="form-control" id="ininfonavitf" name="ininfonavitf" placeholder="Fecha" type="date" required >
+          </div>
+          <div class="dfechaentregaf">
+            <label class="textfechaterminacion">Fecha Entrega:</label>
+            <input class="form-control" id="infechaentregaf" name="infechaentregaf" placeholder="Fecha" type="date" required>
+          </div>
+          <div class="dsuficienciaf">
+            <label class="textfechaterminacion">Suficiencia:</label>
+            <input class="form-control" id="insuficienciaf" name="insuficienciaf" placeholder="Fecha" type="date" required>
+          </div>
+          <div class="dfinvigenciaf">
+            <label class="textfechaterminacion">Fin Vigencia:</label>
+            <input class="form-control" id="infinvigenciaf" name="infinvigenciaf" placeholder="Fecha" type="date" required>
+          </div>
 
-            <?php
-			if(isset($_GET["flag6"])){
-			$flag=unserialize($_GET["flag6"]);
-			foreach($flag as $key=> $val){
-		?>
-              <option value="<?php print($val['id_proveedor']); ?>"><?php print($val['proveedor']); ?></option>
-		<?php
-		}
-	}
-           ?>
-            </select>
-
-          <div class="dprocedimientocontratacioncontrato">
-            <label class="textcontratorecepcion">Procedimineto Contratación:</label>
-            </div>
-            <!--cambie en class secontrarecepcion por secontrarecepcionc-->
-            <select id="secontrarecepcion" class="secontrarecepcionc" name="secontrarecepcion">
-
-            <?php
-			if(isset($_GET["flag2"])){
-			$flag=unserialize($_GET["flag2"]);
-			foreach($flag as $key=> $val){
-		?>
-              <option value="<?php print($val['id_procedimiento_contratacion']); ?>"><?php print($val['procedimientos']); ?></option>
-		<?php
-		}
-	}
-           ?>
-            </select>
 
 
-
-          <div class="dnumerocontratoc">
-            <label class="textnumerocontrato">Número Contrato:</label>
-            <input type="text" class="form-control" id="innumerocontratoc" name="innumerocontratoc"  placeholder="Número Contrato">
+          <div id="dbtncomprobacion">
+              <button  id="bcomprobacion" class="btn btn-primary"  type="button" onclick="mostrarText();"  name="bcomprobacion"> Guardar </button>
           </div>
-          <div class="dprocedimientocompranetc">
-            <label class="textprocedimientocompranet">Procedimiento Compranet:</label>
-            <input type="text" class="form-control" id="inprocedimientocompranetc" name="inprocedimientocompranetc"  placeholder="Procedimiento Compranet">
+          <div id="dbtncomprobacion3">
+            <button type="button" id="bregresar" class="btn btn-primary"  onclick="location.href='consulta_contrato7.php'" name="bregresar"> Regresar </button>
           </div>
-          <div class="dcontratocompranetc">
-            <label class="textcontratocompranet">Contrato Compranet:</label>
-            <input type="text" class="form-control" id="incontratocompranetc" name="incontratocompranetc"  placeholder="Contrato Compranet">
-          </div>
-          <div class="dconveniointernoc">
-            <label class="textconveniointerno">Convenio Interno:</label>
-            <input type="text" class="form-control" id="inconveniointernoc" name="inconveniointernoc"  placeholder="Convenio Interno">
-          </div>
-          <div class="dobjetocontratacionc">
-            <label class="textobjetocontratacion">Objeto Contratación:</label>
-            <input type="text" class="form-control" id="inobjetocontratacionc" name="inobjetocontratacionc"  placeholder="Objeto Contratación">
-          </div>
-          <div class="dcontratoabiertoc">
-            <label class="textcontratoabierto">Contrato Abierto:</label>
-            <input type="text" class="form-control" id="incontratoabiertoc" name="incontratoabiertoc"  placeholder="Contrato Abierto">
-          </div>
-          <div class="ddocumentodescripcionc">
-            <label class="textdocumentodescripcion">Documentación Descripción:</label>
-            <Textarea  class="form-control" id="indocumentodescripcionc" name="indocumentodescripcionc"  placeholder="Documentación Descripción"></textarea>
-          </div>
-         <div id="dbtncomprobacion">
-              <button type="submit" id="bcomprobacion" class="btn btn-primary" onclick=this.form.action="motivo.php" name="bcomprobacion"> Guardar </button>
           </div>
         </div>
+        </form>
       </div>
     </div>
   </div>

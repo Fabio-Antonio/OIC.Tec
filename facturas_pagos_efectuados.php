@@ -336,8 +336,8 @@
           </div>
             <select id="fasecontra" class="fasecontra" name="fasecontra">
 		  <?php
-                if (isset($_GET["flag"])) {
-              $flag=unserialize($_GET["flag"]);
+                if (isset($_POST["flag"])) {
+              $flag=unserialize($_POST["flag"]);
               foreach ($flag as $key=> $val) {
                   ?>
               <option value="<?php print($val['id_contrato']); ?>"><?php print($val['numero_contrato']); ?></option>
@@ -386,8 +386,8 @@
                 </div>
                 <select id="secontratopagoe" class="secontratopagoe" name="secontratopagoe">
 		<?php
-                if (isset($_GET["flag"])) {
-              $flag=unserialize($_GET["flag"]);
+                if (isset($_POST["flag"])) {
+              $flag=unserialize($_POST["flag"]);
               $valor=serialize($flag);
               foreach ($flag as $key=> $val) {
                   ?>

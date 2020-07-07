@@ -261,7 +261,6 @@
       var selObj2 = document.getElementById('secontrarecepcion');
  var selObj3 = document.getElementById('seunidadrequirentecontrato');
  var selObj4 = document.getElementById('seadministradorcontrato');
- var selObj5 = document.getElementById('semontonoivacontrato');
  var selObj6 = document.getElementById('seproveedoradjudicadocontrato');
  var selObj8 = document.getElementById('seconsolidadocontrato');
 
@@ -271,32 +270,28 @@
         return;
         }
           if(selObj2.length==0){
-        alert("El campo Unidad Compradora no debe estar vacío");
+        alert("El campo Procedimiento de contratación  no debe estar vacío");
         document.getElementById("secontrarecepcion").focus();
         return;
         }
           if(selObj3.length==0){
-        alert("El campo Unidad Compradora no debe estar vacío");
+        alert("El campo Unidad requirente no debe estar vacío");
         document.getElementById("seunidadrequirentecontrato").focus();
         return;
         }
           if(selObj4.length==0){
-        alert("El campo Unidad Compradora no debe estar vacío");
+        alert("El campo Administrador  no debe estar vacío");
         document.getElementById("seadministradorcontrato").focus();
         return;
         }
-          if(selObj5.length==0){
-        alert("El campo Unidad Compradora no debe estar vacío");
-        document.getElementById("semontonoivacontrato").focus();
-        return;
-        }
+         
           if(selObj6.length==0){
-        alert("El campo Unidad Compradora no debe estar vacío");
+        alert("El campo Proveedor adjudicado  no debe estar vacío");
         document.getElementById("seproveedoradjudicadocontrato").focus();
         return;
         }
           if(selObj8.length==0){
-        alert("El campo Unidad Compradora no debe estar vacío");
+        alert("El campo Consolidado no debe estar vacío");
         document.getElementById("seconsolidadocontrato").focus();
         return;
         }
@@ -306,17 +301,18 @@
        var contrato_compranet  = (document.getElementById('incontratocompranetc').value);
         var convenio_interno  = (document.getElementById('inconveniointernoc').value);
         var objeto_contratacion  = (document.getElementById('inobjetocontratacionc').value);
-        if(document.getElementById("incontratoabiertoc").checked==true){
+         var monto_maximo  = (document.getElementById('montomaxi').value);
+	 var monto_minimo  = (document.getElementById('montomini').value);
+        /*if(document.getElementById("incontratoabiertoc").checked==true){
  	var contrato_abierto  = (document.getElementById('incontratoabiertoc').value);
 	}else{
 	 var contrato_abierto  = (document.getElementById('incontratoabiertoc').value=0);
-	}
+	}*/
         var documentacion_descripcion  = (document.getElementById('indocumentodescripcionc').value);
       var selIndex = selObj.options[selObj.selectedIndex].text;
        var selIndex2 = selObj2.options[selObj2.selectedIndex].text;
 	 var selIndex3 = selObj3.options[selObj3.selectedIndex].text;
 	 var selIndex4 = selObj4.options[selObj4.selectedIndex].text;
-	 var selIndex5 = selObj5.options[selObj5.selectedIndex].text;
 	 var selIndex6 = selObj6.options[selObj6.selectedIndex].text;
 	 var selIndex8 = selObj8.options[selObj8.selectedIndex].text;
          if(numero_contrato.length==0||!(/^[A-Za-z0-9]+$/.test(numero_contrato))){
@@ -330,7 +326,7 @@
         return;
         }
 
-	 if(contrato_compranet.length==0||!(/^[0-9]+$/.test(contrato_compranet))||contrato_compranet.length>7||contrato_compranet<0){
+	 if(contrato_compranet.length==0||!(/^[0-9]+$/.test(contrato_compranet))||contrato_compranet.length>7||contrato_compranet<0||contrato_compranet.length<7){
          alert("El campo  Contrato Compranet es invalido");
         document.getElementById("incontratocompranetc").focus();
         return;
@@ -350,16 +346,50 @@
         document.getElementById("indocumentodescripcionc").focus();
         return;
         }
+	if(monto_maximo.length==0||!(/^[0-9]+$/.test(monto_maximo))||monto_maximo<0){
+         alert("El Monto maximo es incorrecto");
+        document.getElementById("montomaxi").focus();
+        return;
+        }
+	if(monto_minimo.length==0||!(/^[0-9]+$/.test(monto_minimo))||monto_minimo<0){
+         alert("El campo  Monto minimo  es invalido");
+        document.getElementById("montomini").focus();
+        return;
+        }
+	if(monto_minimo>monto_maximo){
+	alert("El campo  Monto minimo  es mayor al campo Monto maximo");
+        document.getElementById("montomini").focus();
+        return;
 
-
-
-
-         alert(selIndex);
-         window.location="contrato_in.php?nombre_unidad_compradora="+selIndex+"&procedimientos="+selIndex2+"&unidad_requirente="+selIndex3+"&nombre="+selIndex4+
-        "&total="+selIndex5+"&proveedor="+selIndex6+"&procedimiento="+selIndex8+"&numero_contrato="+numero_contrato+
+	}
+	
+/*window.location="contrato_in.php?nombre_unidad_compradora="+selIndex+"&procedimientos="+selIndex2+"&unidad_requirente="+selIndex3+"&nombre="+selIndex4+
+        "&proveedor="+selIndex6+"&procedimiento="+selIndex8+"&numero_contrato="+numero_contrato+
 "&procedimiento_compranet="+procedimiento_compranet+"&contrato_compranet="+contrato_compranet+"&convenio_interno="+convenio_interno+"&objeto_contratacion="
-+objeto_contratacion+"&contrato_abierto="+contrato_abierto+"&documentacion_descripcion="+documentacion_descripcion;
-    }
++objeto_contratacion+"&documentacion_descripcion="+documentacion_descripcion+"&monto_maximo="+monto_maximo+"&monto_minimo="+monto_minimo;*/
+          
+          $.post('contrato_in.php',{
+		"nombre_unidad_compradora":selIndex,
+		"procedimientos":selIndex2,
+		"unidad_requirente":selIndex3,
+		"nombre":selIndex4,
+        	"proveedor":selIndex6,
+		"procedimiento":selIndex8,
+		"numero_contrato":numero_contrato,
+		"procedimiento_compranet":procedimiento_compranet,
+		"contrato_compranet":contrato_compranet,
+		"convenio_interno":convenio_interno,
+		"objeto_contratacion":objeto_contratacion,
+		"documentacion_descripcion":documentacion_descripcion,
+		"monto_maximo":monto_maximo,
+		"monto_minimo":monto_minimo
+	
+	},function(data){
+	alert('Datos ingresados correctamente',data);
+	});
+
+
+        }
 </script>
 
 
@@ -466,8 +496,8 @@
            ?>
             </select>
           </div>
-
-
+	
+	<form action="fechas.php" method="POST">
           <div class="dnumerocontratoc">
             <label class="textnumerocontrato">Número Contrato:</label>
             <input type="text" class="form-control" id="innumerocontratoc" name="innumerocontratoc"  placeholder="Número Contrato">
@@ -504,9 +534,9 @@
 
 
               <div id ="dbtgcpc1">
-                <button  id="btg" onclick=this.form.action="monto.php" class="btn btn-primary" type="submit"> Guardar </button>
-                <button type="button" id="bregresar" class="btn btn-primary"  onclick="location.href='principal.html'" name="bregresar"> Regresar </button>
-                  <button type="button" id="bcomprobacion" class="btn btn-primary"  onclick="location.href='fechas.html';" name="bcomprobacion"> Siguiente: </button>
+                <button  id="btg" onclick="mostrarText();" class="btn btn-primary" type="button"> Guardar </button>
+		 <button type="submit" id="bcomprobacion" class="btn btn-primary"  name="bcomprobacion"> Siguiente</button>
+                  
               </div>
           </form>
           </div>

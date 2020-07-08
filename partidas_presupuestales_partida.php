@@ -309,8 +309,8 @@
           </div>
 	     <select id="secontrapartisasp" class="secontrapartisasp" name="secontrapartisasp">
 		<?php
-			if(isset($_GET["flag"])){
-			$flag=unserialize($_GET["flag"]);
+			if(isset($_POST["flag"])){
+			$flag=unserialize($_POST["flag"]);
 			foreach($flag as $key=> $val){
 		?>
               <option value="<?php print($val['id_contrato']); ?>"><?php print($val['numero_contrato']); ?></option>
@@ -341,8 +341,8 @@
               </div>
            <select id="secontatosub" class="secontatosub" name="secontatosub">
 			 <?php
-                        if(isset($_GET["flag"])){
-                        $flag=unserialize($_GET["flag"]);
+                        if(isset($_POST["flag"])){
+                        $flag=unserialize($_POST["flag"]);
                         foreach($flag as $key=> $val){
                 ?>
 

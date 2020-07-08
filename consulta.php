@@ -4,9 +4,13 @@
     $flag=$_GET['flag'];
     $res=json_decode($flag,true);
    echo $numero_contrato;
-    $statement = $conn->prepare("SELECT numero_contrato,contrato_compranet,nombre_unidad_compradora,numero_unidad,procedimiento,monto_total,unidad,clave_requirente,monto_maximo,monto_minimo,objeto_contratacion,procedimientos,(SELECT fundamento FROM fundamento_legal WHERE fundamento_legal.id_fundamento_legal = procedimientos_contratacion.id_fundamento_legal)as fundamento,suficiencia,inicio_vigencia,fin_vigencia,notificacion_adjudicada,formalizacion_contrato,resicion_contrato,sat,imss,infonavit,garantia_cumplimiento FROM contrato  INNER JOIN unidad_compradora ON contrato.id_unidad_compradora=unidad_compradora.id_unidad_compradora
-INNER JOIN consolidado ON contrato.id_consolidado =consolidado.id_consolidado INNER JOIN unidad_requirente ON contrato.id_unidad_requirente=unidad_requirente.id_requirente INNER JOIN monto_no_iva ON contrato.id_monto_no_iva=monto_no_iva.id_monto_no_iva
-INNER JOIN procedimientos_contratacion ON contrato.id_procedimiento_contratacion=procedimientos_contratacion.id_procedimiento_contratacion INNER JOIN  contrato_fechas ON contrato.id_fechas =contrato_fechas.id_fecha WHERE  numero_contrato= ?");
+    $statement = $conn->prepare("SELECT numero_contrato,contrato_compranet,nombre_unidad_compradora,numero_unidad,procedimiento,monto_total,unidad,
+clave_requirente,monto_max,monto_min,objeto_contratacion,procedimientos,(SELECT fundamento FROM fundamento_legal WHERE fundamento_legal.id_fundamento_legal =
+procedimientos_contratacion.id_fundamento_legal)as fundamento,suficiencia,inicio_vigencia,fin_vigencia,notificacion_adjudicada,formalizacion_contrato,resicion_contrato
+,sat,imss,infonavit,garantia_cumplimiento FROM contrato  INNER JOIN unidad_compradora ON contrato.id_unidad_compradora=unidad_compradora.id_unidad_compradora
+INNER JOIN consolidado ON contrato.id_consolidado =consolidado.id_consolidado INNER JOIN unidad_requirente ON contrato.id_unidad_requirente=unidad_requirente.
+id_requirente INNER JOIN procedimientos_contratacion ON contrato.id_procedimiento_contratacion=procedimientos_contratacion.id_procedimiento_contratacion INNER JOIN
+  contrato_fechas ON contrato.id_contrato =contrato_fechas.id_contrato WHERE  numero_contrato= ? ");
 
 $statement->bindParam(1, $numero_contrato);
 $statement->execute();
@@ -27,8 +31,8 @@ $statement->execute();
 	$monto_total=$row["monto_total"];
 	$unidad=$row["unidad"];
 	$clave_requirente=$row["clave_requirente"];
-	$monto_maximo=$row["monto_maximo"];
-	$monto_minimo=$row["monto_minimo"];
+	$monto_maximo=$row["monto_max"];
+	$monto_minimo=$row["monto_min"];
 	$objeto_contratacion=$row["objeto_contratacion"];
 	$procedimientos=$row["procedimientos"];
 	$fundamento=$row["fundamento"];

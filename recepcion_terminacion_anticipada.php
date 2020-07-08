@@ -322,8 +322,8 @@
             <select id="secontrarecepcion" class="secontrarecepcion" name="secontrarecepcion">
 
              <?php
-			if(isset($_GET["flag"])){
-			$flag=unserialize($_GET["flag"]);
+			if(isset($_POST["flag"])){
+			$flag=unserialize($_POST["flag"]);
 			foreach($flag as $key=> $val){
 		?>
               <option value="<?php print($val['id_contrato']); ?>"><?php print($val['numero_contrato']); ?></option>
@@ -337,8 +337,8 @@
             </div>
             <select  class="inrequirente" id="inrequirente" name="inrequirente">
             <?php
-			if(isset($_GET["flag2"])){
-			$flag=unserialize($_GET["flag2"]);
+			if(isset($_POST["flag2"])){
+			$flag=unserialize($_POST["flag2"]);
 			foreach($flag as $key=> $val){
 		?>
               <option value="<?php print($val['id_requirente']); ?>"><?php print($val['unidad']); ?></option>
@@ -369,8 +369,8 @@
               </div>
                 <select id="secontraterminacion" class="secontraterminacion" name="secontraterminacion">
                <?php
-			if(isset($_GET["flag"])){
-			$flag=unserialize($_GET["flag"]);
+			if(isset($_POST["flag"])){
+			$flag=unserialize($_POST["flag"]);
 			foreach($flag as $key=> $val){
 		?>
               <option value="<?php print($val['id_contrato']); ?>"><?php print($val['numero_contrato']); ?></option>

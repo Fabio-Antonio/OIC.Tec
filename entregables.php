@@ -328,8 +328,8 @@
         </div>
             <select id="secontrae" class="secontrae" name="secontra">
 		 <?php
-                if (isset($_GET["flag"])) {
-              $flag=unserialize($_GET["flag"]);
+                if (isset($_POST["flag"])) {
+              $flag=unserialize($_POST["flag"]);
               $valor=serialize($flag);
               foreach ($flag as $key=> $val) {
                   ?>

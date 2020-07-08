@@ -10,9 +10,17 @@ while($row=$query->fetch()){
 $flag[]=$row;
 }
 $valor=serialize($flag);
-header("Location:facturas_pagos_efectuados.php?flag=$valor");
 
 }
 
 $conn=null;
+
+$ch=null;
+$ch= curl_init();
+curl_setopt($ch,CURLOPT_URL,"http://192.168.1.68:8888/besa/facturas_pagos_efectuados.php");
+curl_setopt($ch,CURLOPT_POST,TRUE);
+curl_setopt($ch,CURLOPT_POSTFIELDS,"flag=$valor");
+curl_exec($ch);
+curl_close($ch);
+
 ?>

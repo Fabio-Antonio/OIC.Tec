@@ -193,7 +193,7 @@ margin-left: 230px;
 #nuevo{
 width: 150px;
 height: 40px;
-margin-left: 200px;
+margin-left: 230px;
 margin-top: 60px;
 }
 #nuevo:hover{
@@ -210,8 +210,8 @@ margin-top: 60px;
 #cons{
 width: 150px;
 height: 40px;
-margin-left: 270px;
-margin-top: 30px;
+margin-left: 263px;
+margin-top: 27px;
 }
 #cons:hover{
   background: rgba(169,3,41,1);
@@ -861,7 +861,7 @@ box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
   margin-left: 20px;
   margin-top: 5px;
   width: 460px;
-  height: 35px;
+  height: 37.5px;
   background-color: white;
  -moz-border-radius: 5px;
  -webkit-border-radius:5px;
@@ -980,7 +980,7 @@ box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
 #scontra2{
   margin-left: 20px;
   width: 460px;
-  height: 35px;
+  height: 38px;
   background-color: white;
  -moz-border-radius: 5px;
  -webkit-border-radius:5px;
@@ -1123,7 +1123,7 @@ box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
 #scontra3{
   margin-left: 25px;
   width: 450px;
-  height: 35px;
+  height: 37.5px;
   background-color: white;
  -moz-border-radius: 5px;
  -webkit-border-radius:5px;
@@ -1174,7 +1174,7 @@ box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
 .secontra{
   margin-left: 30px;
   width: 480px;
-  height: 35px;
+  height: 37.5px;
   background-color: white;
  -moz-border-radius: 5px;
  -webkit-border-radius:5px;
@@ -1189,7 +1189,7 @@ box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
 .secontrae{
   margin-left: 300px;
   width: 480px;
-  height: 35px;
+  height: 37.5px;
   background-color: white;
  -moz-border-radius: 5px;
  -webkit-border-radius:5px;
@@ -1214,7 +1214,7 @@ box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
 .semotivo{
   margin-left: 550px;
   width: 450px;
-  height: 35px;
+  height: 38px;
   background-color: white;
  -moz-border-radius: 5px;
  -webkit-border-radius:5px;
@@ -1359,7 +1359,7 @@ box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
 .fasecontra{
     margin-left: 320px;
     width: 480px;
-    height: 35px;
+    height: 37.5px;
     background-color: white;
    -moz-border-radius: 5px;
    -webkit-border-radius:5px;
@@ -1453,7 +1453,7 @@ box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
 .secontratopagoe{
   margin-left: 320px;
   width: 480px;
-  height: 35px;
+  height: 38px;
   background-color: white;
  -moz-border-radius: 5px;
  -webkit-border-radius:5px;
@@ -1525,7 +1525,7 @@ box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
 .secontrapartisasp{
       margin-left: 30px;
       width: 480px;
-      height: 35px;
+      height: 37.5px;
       background-color: white;
      -moz-border-radius: 5px;
      -webkit-border-radius:5px;
@@ -1562,7 +1562,7 @@ box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
 .secontatosub{
       margin-left: 30px;
       width: 480px;
-      height: 35px;
+      height: 38px;
       background-color: white;
      -moz-border-radius: 5px;
      -webkit-border-radius:5px;
@@ -1622,12 +1622,12 @@ box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
 .secontrarecepcion{
       margin-left: 30px;
       width: 480px;
-      height: 35px;
+      height: 37.5px;
       background-color: white;
      -moz-border-radius: 5px;
      -webkit-border-radius:5px;
      padding: 10px;
-     font-size: 11px;
+     
     }
 .secontrarecepcion:focus{
       border: 1.5px solid #00CC99;
@@ -1644,7 +1644,7 @@ font-size: 11px;
 .inrequirente{
       margin-left: 550px;
       width: 450px;
-      height: 35px;
+      height: 38px;
       background-color: white;
      -moz-border-radius: 5px;
      -webkit-border-radius:5px;
@@ -1668,7 +1668,7 @@ font-size: 11px;
 .seequirentere{
           margin-left: 20px;
           width: 300px;
-          height: 35px;
+          height: 37.5px;
           background-color: white;
          -moz-border-radius: 5px;
          -webkit-border-radius:5px;
@@ -1714,7 +1714,7 @@ font-size: 11px;
 .secontraterminacion{
       margin-left: 30px;
       width: 480px;
-      height: 35px;
+      height: 38px;
       background-color: white;
      -moz-border-radius: 5px;
      -webkit-border-radius:5px;
@@ -1782,12 +1782,12 @@ font-size: 11px;
 .secontrarecepcionc{
       margin-left: 30px;
       width: 460px;
-      height: 35px;
+      height:37.9px;
       background-color: white;
      -moz-border-radius: 5px;
      -webkit-border-radius:5px;
      padding: 10px;
-     font-size: 11px;
+    
     }
 .secontrarecepcionc:focus{
       border: 1.5px solid #00CC99;
@@ -1802,12 +1802,12 @@ font-size: 11px;
 .seunidadcompradoracontrato{
       margin-left: 30px;
       width: 480px;
-      height: 35px;
+      height: 37.5px;
       background-color: white;
      -moz-border-radius: 5px;
      -webkit-border-radius:5px;
      padding: 10px;
-     font-size: 11px;
+     
     }
 .seunidadcompradoracontrato:focus{
       border: 1.5px solid #00CC99;
@@ -1824,12 +1824,12 @@ font-size: 11px;
 .seconsolidadocontrato{
       margin-left: 30px;
       width: 460px;
-      height: 35px;
+      height: 37.5px;
       background-color: white;
      -moz-border-radius: 5px;
      -webkit-border-radius:5px;
      padding: 10px;
-     font-size: 11px;
+     
     }
 .seconsolidadocontrato:focus{
       border: 1.5px solid #00CC99;
@@ -1844,12 +1844,12 @@ font-size: 11px;
 .seunidadrequirentecontrato{
       margin-left: 30px;
       width: 480px;
-      height: 35px;
+      height: 37.5px;
       background-color: white;
      -moz-border-radius: 5px;
      -webkit-border-radius:5px;
      padding: 10px;
-     font-size: 11px;
+     
     }
 .seunidadrequirentecontrato:focus{
       border: 1.5px solid #00CC99;
@@ -1886,12 +1886,12 @@ font-size: 11px;
 .seadministradorcontrato{
       margin-left: 30px;
       width: 460px;
-      height: 35px;
+      height: 37.5px;
       background-color: white;
      -moz-border-radius: 5px;
      -webkit-border-radius:5px;
      padding: 10px;
-     font-size: 11px;
+     
     }
 .seadministradorcontrato:focus{
       border: 1.5px solid #00CC99;
@@ -1928,12 +1928,12 @@ font-size: 11px;
 .seproveedoradjudicadocontrato{
       margin-left: 30px;
       width: 480px;
-      height: 35px;
+      height: 37.5px;
       background-color: white;
      -moz-border-radius: 5px;
      -webkit-border-radius:5px;
      padding: 10px;
-     font-size: 11px;
+     
     }
 .seproveedoradjudicadocontrato:focus{
       border: 1.5px solid #00CC99;

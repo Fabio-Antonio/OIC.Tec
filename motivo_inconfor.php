@@ -323,8 +323,8 @@ window.location="inconformidades.php?motivo="+selIndex2+"&numero_contrato="+selI
                 </div>
                 <select id="secontra" class="secontra" name="secontra">
 			<?php
-			if(isset($_GET["flag"])){
-                         $flag=unserialize($_GET["flag"]);
+			if(isset($_POST["flag"])){
+                         $flag=unserialize($_POST["flag"]);
 			foreach($flag as $key => $val){
 			?>
                   <option value="<?php print($val['id_contrato']); ?>"><?php print($val['numero_contrato']); ?> </option>
@@ -340,14 +340,18 @@ window.location="inconformidades.php?motivo="+selIndex2+"&numero_contrato="+selI
               </div>
                 <select id="semotivo" class="semotivo" name="semotivo">
 			  <?php
-                        if(isset($_GET["flag2"])){
-                         $flag=unserialize($_GET["flag2"]);
+                        if(isset($_POST["flag2"])){
+                         $flag=unserialize($_POST["flag2"]);
                         foreach($flag as $key => $val){
                         ?>
                   <option value="<?php print($val['id_motivo']); ?>"><?php print($val['motivo']); ?></option>
 		 <?php
                         }
-                }
+                }else{
+                ?>
+		<option value="1">Vacío</option>
+		<?php
+		}
                 ?>
 
                 </select>

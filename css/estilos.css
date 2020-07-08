@@ -2094,6 +2094,21 @@ margin-top:-40px;
     margin-left: 280px;
     margin-top: -40px;
     }
+.check{
+
+  margin-top: 30px;
+}
+.tche{
+  background-color: #e5e2eb;
+  border: 0px;
+  margin-left: 45px;
+  font-size: 18px;
+  text-align: left;
+}
+.ch{
+  margin-left: 230px;
+  margin-top: -30px;
+}
 /*--------------------------------------------------------------*/
 /*--------------------------------------------------------------*/
 /*-----------fin contrato---------------------------------------------*/

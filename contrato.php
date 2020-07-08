@@ -415,7 +415,7 @@
            ?>
             </select>
           </div>
-        
+
           <div class="dadministradorcontrato">
             <label class="textcontratorecepcion">Administrador:</label>
             <select id="seadministradorcontrato" class="seadministradorcontrato" name="seadministradorcontrato">
@@ -501,7 +501,15 @@
             <label class="textdocumentodescripcion">Documentación Descripción:</label>
             <Textarea  class="form-control" id="indocumentodescripcionc" name="indocumentodescripcionc"  placeholder="Documentación Descripción"></textarea>
           </div>
+          <div class="check">
+            <label class="tche">
+              Contrato Abierto
+          </label>
+        </div>
+        <div class="ch">
+              <input type="checkbox">
 
+          </div>
 
               <div id ="dbtgcpc1">
                 <button  id="btg" onclick=this.form.action="monto.php" class="btn btn-primary" type="submit"> Guardar </button>

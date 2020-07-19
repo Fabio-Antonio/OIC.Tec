@@ -17,7 +17,7 @@
   var chart = new CanvasJS.Chart("chartContainer", {
   	animationEnabled: true,
   	title: {
-  		text: "GRAFICA"
+  		text: "Portcentaje de Vigencias"
   	},
   	data: [{
   		type: "pie",
@@ -286,38 +286,53 @@
           <h2 class="fuu"> CONSULTA POR VIGENCIA </h2>
           <div class="botones">
             <div class="botondo">
-                <button type="button" name="buttond" class="botond">12 MESES</button>
+                <button type="button" name="buttond" onclick="window.location.href='consulta_vigencia_verde.php'" class="botond">12 MESES</button>
             </div>
             <div class="botontr">
-                <button type="button" name="buttont" class="botont">3 MESES</button>
+                <button type="button" onclick="window.location.href='consulta_vigencia_ama.php'"name="buttont" class="botont">3 MESES</button>
             </div>
             <div class="botonve">
-                <button type="button" name="buttonv" class="botonv">VENCIDO</button>
+                <button type="button" name="buttonv"  onclick="window.location.href='consulta_vigencia_rojo.php'"  class="botonv">VENCIDO</button>
             </div>
           </div>
-          <div id="Layer1" style="width:980px; height:500px; overflow: scroll;">
-          <table class="table table-bordered">
+          <div id="Layer1">
+          <table class="table table-responsive">
             <tr>
+              <th>Id</th> 
               <th>Número de Contrato</th>
               <th>Unidad Requirente</th>
               <th>Fecha de Inicio</th>
               <th>Fecha Finalización</th>
-              <th>Convenio Modificado</th>
             </tr>
-            <tr>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-            </tr>
-            <tr>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-            </tr>
+           <?php
+$arr=unserialize($_POST["flag"]);
+
+
+       foreach((array)$arr as $key=>$value)
+          {
+
+ ?>
+
+ <tr>
+               <td>
+                   <?php echo $key; ?>
+             </td>
+                     <?php foreach((array)$value as $key=>$value)
+                       {
+                     ?>
+              <td>
+                    <?php echo $value;?>
+             </td>
+                    <?php
+                     }
+                    ?>
+
+        </tr>
+        <?php
+        }
+       ?>
+
+
 
           </table>
         </div>

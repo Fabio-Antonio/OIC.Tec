@@ -12,7 +12,7 @@
    $contrato_compranet=$_POST["contrato_compranet"];
      $convenio_interno = $_POST["convenio_interno"];
  $objeto_contratacion = $_POST["objeto_contratacion"];
-   $contrato_abierto="1";
+   $contrato_abierto=$_POST["contrato_abierto"];
      $documentacion_descripcion = $_POST["documentacion_descripcion"];
  	$monto_maximo= $_POST["monto_maximo"];
 	$monto_minimo= $_POST["monto_minimo"];

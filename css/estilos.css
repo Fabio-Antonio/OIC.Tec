@@ -848,7 +848,8 @@ box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
 /*-----------inicio Comprobacion_conveniosm_documentosa---------------------------------------------------*/
 /*--------------------------------------------------------------*/
 #contec{
-  margin-left: -150px;
+  margin-left: -170px;
+  margin-top: 100px;
 }
 #textcon{
   margin-left: 20px;
@@ -2284,10 +2285,9 @@ footer{
 .contenedor-todo-footer{
   width: 100%;
   max-width: 1200px;
-  margin: auto;
   padding: 20px;
-
-}
+ margin:auto;
+} 
 .contenedor-body{
   display: flex;
   justify-content: space-between;
@@ -2456,6 +2456,7 @@ footer{
 /*inicio consulta_por_vigencia.html*/
 #Layer1{
   margin-left: 30px;
+  margin-right:18px;
   background: #FFFFFF;
   margin-top: 30px;
 }
@@ -2598,45 +2599,3 @@ footer{
   margin-bottom: .25rem;
 }
 
-/*estilos modal*/
-
-.modal {
-        position: fixed;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-        opacity: 0;
-        visibility: hidden;
-        transform: scale(1.1);
-        transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
-    }
-    .modal-content {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: white;
-        padding: 1rem 1.5rem;
-        width: 24rem;
-        border-radius: 0.5rem;
-    }
-    .close-button {
-        float: right;
-        width: 1.5rem;
-        line-height: 1.5rem;
-        text-align: center;
-        cursor: pointer;
-        border-radius: 0.25rem;
-        background-color: lightgray;
-    }
-    .close-button:hover {
-        background-color: darkgray;
-    }
-    .show-modal {
-        opacity: 1;
-        visibility: visible;
-        transform: scale(1.0);
-        transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
-    }

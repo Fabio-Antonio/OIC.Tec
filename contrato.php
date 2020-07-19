@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
       <title> </title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link href="css/estilos.css" rel="stylesheet">
     <link href="https://cdn.datos.gob.mx/assets/css/main.css" rel="stylesheet">
     <link href="https://cdn.datos.gob.mx/assets/img/favicon.ico" rel="shortcut icon">
@@ -249,6 +249,50 @@
   </div>
 </div>
 </main>
+
+<div class="modal fade" role="dialog" id="my-modal" aria-labelledby="modal-title">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color:#27C44D;">
+                    <h3 class="modal-title" id="modal-title">B.E.S.A</h3>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Los datos se han ingresado correctamente!!
+                    </p>
+                </div>
+                <div class="modal-footer">
+                <button class="btn btn-primary" data-dismiss="modal">Ok</button>                    </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+<div class="modal fade" role="dialog" id="my-modal2"  aria-labelledby="modal-title">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header"style="background-color:#D0021B;">
+                    <h3 class="modal-title" id="modal-title">B.E.S.A</h3>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Los datos no son compatibles!!
+                    </p>
+                </div>
+                <div class="modal-footer">
+                <button class="btn btn-primary" data-dismiss="modal">Ok</button>                    </div>
+            </div>
+        </div>
+    </div>
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+
+
 <!------------------------------------------------------>
 <!------------------------------------------------------>
 <!-- INICIA REGISTRO------------------------------------>
@@ -265,33 +309,53 @@
  var selObj8 = document.getElementById('seconsolidadocontrato');
 
 	if(selObj.length==0){
-        alert("El campo Unidad Compradora no debe estar vacío");
+        $(function(){
+                $('#my-modal2').modal('show')
+                });
+
         document.getElementById("seunidadcompradoracontrato").focus();
         return;
         }
           if(selObj2.length==0){
-        alert("El campo Procedimiento de contratación  no debe estar vacío");
+        $(function(){
+                $('#my-modal2').modal('show')
+                });
+
         document.getElementById("secontrarecepcion").focus();
         return;
         }
           if(selObj3.length==0){
-        alert("El campo Unidad requirente no debe estar vacío");
+        $(function(){
+                $('#my-modal2').modal('show')
+                });
+
+            
         document.getElementById("seunidadrequirentecontrato").focus();
         return;
         }
           if(selObj4.length==0){
-        alert("El campo Administrador  no debe estar vacío");
+        $(function(){
+                $('#my-modal2').modal('show')
+                });
+
         document.getElementById("seadministradorcontrato").focus();
         return;
         }
          
           if(selObj6.length==0){
-        alert("El campo Proveedor adjudicado  no debe estar vacío");
+        $(function(){
+                $('#my-modal2').modal('show')
+                });
+
         document.getElementById("seproveedoradjudicadocontrato").focus();
         return;
         }
           if(selObj8.length==0){
-        alert("El campo Consolidado no debe estar vacío");
+        $(function(){
+                $('#my-modal2').modal('show')
+                });
+
+                
         document.getElementById("seconsolidadocontrato").focus();
         return;
         }
@@ -303,11 +367,11 @@
         var objeto_contratacion  = (document.getElementById('inobjetocontratacionc').value);
          var monto_maximo  = (document.getElementById('montomaxi').value);
 	 var monto_minimo  = (document.getElementById('montomini').value);
-        /*if(document.getElementById("incontratoabiertoc").checked==true){
- 	var contrato_abierto  = (document.getElementById('incontratoabiertoc').value);
+        if(document.getElementById("incontratoabiertoc").checked==true){
+ 	var contrato_abierto  = (document.getElementById('incontratoabiertoc').value=1);
 	}else{
 	 var contrato_abierto  = (document.getElementById('incontratoabiertoc').value=0);
-	}*/
+	}
         var documentacion_descripcion  = (document.getElementById('indocumentodescripcionc').value);
       var selIndex = selObj.options[selObj.selectedIndex].text;
        var selIndex2 = selObj2.options[selObj2.selectedIndex].text;
@@ -316,38 +380,59 @@
 	 var selIndex6 = selObj6.options[selObj6.selectedIndex].text;
 	 var selIndex8 = selObj8.options[selObj8.selectedIndex].text;
          if(numero_contrato.length==0||!(/^[A-Za-z0-9]+$/.test(numero_contrato))){
-	 alert("El campo Número Contrato es invalido");
+	 $(function(){
+                $('#my-modal2').modal('show')
+                });
+
         document.getElementById("innumerocontratoc").focus();
         return;
 	}
 	 if(procedimiento_compranet.length==0||!(/^[A-Za-z0-9]+$/.test(procedimiento_compranet))){
-         alert("El campo Procedimiento Compranet es invalido");
+ 	$(function(){
+                $('#my-modal2').modal('show')
+                });
+
         document.getElementById("inprocedimientocompranetc").focus();
         return;
         }
 
 	 if(contrato_compranet.length==0||!(/^[0-9]+$/.test(contrato_compranet))||contrato_compranet.length>7||contrato_compranet<0||contrato_compranet.length<7){
-         alert("El campo  Contrato Compranet es invalido");
+         $(function(){
+                $('#my-modal2').modal('show')
+                });
+
         document.getElementById("incontratocompranetc").focus();
         return;
         }
 	 if(convenio_interno.length==0||!(/^[A-Za-z0-9]+$/.test(convenio_interno))){
-         alert("El campo Convenio Interno es invalido");
+         $(function(){
+                $('#my-modal2').modal('show')
+                });
+
         document.getElementById("inconveniointernoc").focus();
         return;
         }
 	 if(objeto_contratacion.length==0||!(/^[A-Za-z0-9]+$/.test(objeto_contratacion))){
-         alert("El campo Objeto Contratacion es invalido");
+         $(function(){
+                $('#my-modal2').modal('show')
+                });
+
         document.getElementById("inobjetocontratacionc").focus();
         return;
         }
 	 if(documentacion_descripcion.length==0||!(/^[A-Za-z0-9]+$/.test(documentacion_descripcion))){
-         alert("El campo Documentación Descripción es invalido");
+         $(function(){
+                $('#my-modal2').modal('show')
+                });
+
         document.getElementById("indocumentodescripcionc").focus();
         return;
         }
 	if(monto_maximo.length==0||!(/^[0-9]+$/.test(monto_maximo))||monto_maximo<0){
-         alert("El Monto maximo es incorrecto");
+	$(function(){
+                $('#my-modal2').modal('show')
+                });
+
         document.getElementById("montomaxi").focus();
         return;
         }
@@ -357,7 +442,10 @@
         return;
         }
 	if(monto_minimo>monto_maximo){
-	alert("El campo  Monto minimo  es mayor al campo Monto maximo");
+	$(function(){
+                $('#my-modal2').modal('show')
+                });
+
         document.getElementById("montomini").focus();
         return;
 
@@ -381,12 +469,13 @@
 		"convenio_interno":convenio_interno,
 		"objeto_contratacion":objeto_contratacion,
 		"documentacion_descripcion":documentacion_descripcion,
+		"contrato_abierto":contrato_abierto,
 		"monto_maximo":monto_maximo,
 		"monto_minimo":monto_minimo
 	
 	},function(data){
-	alert('Datos ingresados correctamente',data);
-	});
+	 $('#my-modal').modal('show')
+                });
 
 
         }
@@ -537,7 +626,7 @@
           </label>
         </div>
         <div class="ch">
-              <input type="checkbox">
+              <input type="checkbox" id="incontratoabiertoc">
 
           </div>
 

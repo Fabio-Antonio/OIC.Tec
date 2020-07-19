@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
       <title> Entregables</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link href="css/estilos.css" rel="stylesheet">
     <link href="https://cdn.datos.gob.mx/assets/css/main.css" rel="stylesheet">
     <link href="https://cdn.datos.gob.mx/assets/img/favicon.ico" rel="shortcut icon">
@@ -249,6 +249,45 @@
   </div>
 </div>
 </main>
+
+
+<div class="modal fade" role="dialog" id="my-modal" aria-labelledby="modal-title">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color:#27C44D;">
+                    <h3 class="modal-title" id="modal-title">B.E.S.A</h3>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Los datos se han ingresado correctamente!!
+                    </p>
+                </div>
+                <div class="modal-footer">
+                <button class="btn btn-primary" data-dismiss="modal">Ok</button>                    </div>
+            </div>
+        </div>
+    </div>
+
+<div class="modal fade" role="dialog" id="my-modal2"  aria-labelledby="modal-title">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header"style="background-color:#D0021B;">
+                    <h3 class="modal-title" id="modal-title">B.E.S.A</h3>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Los datos no son compatibles!!
+                    </p>
+                </div>
+                <div class="modal-footer">
+                <button class="btn btn-primary" data-dismiss="modal">Ok</button>                    </div>
+            </div>
+        </div>
+    </div>
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
 <!------------------------------------------------------>
 <!------------------------------------------------------>
 <!-- INICIA REGISTRO------------------------------------>
@@ -270,52 +309,83 @@
        var prueba2 = new Date(fecha_entrega_maxima);
 
        if(prueba>prueba2||String(fecha_entrega)==""||String(fecha_entrega_maxima)==""){
-	 	alert("El rango de fechas es incorrecto!!");
+	 	
+              $(function(){
+                $('#my-modal2').modal('show')
+                });
+
 		return;
 	}
          if(cantidad_entregable.length==0){
-        alert("El campo cantidad entregable esta fuera del rango");
-        document.getElementById("incantidade").focus();
+         $(function(){
+                $('#my-modal2').modal('show')
+		 document.getElementById("incantidade").focus();
+
+                });
         return;
         }
 
 	if(nombre_entregable.length==0||nombre_entregable.length>=26){
-	alert("El campo nombre entregable esta fuera del rango");
+	 $(function(){
+                $('#my-modal2').modal('show')
+                });
+
 	document.getElementById("innombreentregables").focus();
         return;
 	}
 	if(!(/^[A-Z]+$/i.test(nombre_entregable))){
-         alert("Los carácteres aceptados son de tipo A,B,C,a,b,c,etc.");
-          document.getElementById("indireccione").focus();
+          $(function(){
+                $('#my-modal2').modal('show')
+                });
+
+          document.getElementById("innombreentregables").focus();
          return;
 	}
 
 
  if(direccion_entregable.length==0){
-        alert("El campo dirección entregable esta fuera del rango");
+         $(function(){
+                $('#my-modal2').modal('show')
+                });
+
         document.getElementById("indireccione").focus();
         return;
         }
         if(!(/^[A-Z]+$/i.test(direccion_entregable))){
-         alert("Los carácteres aceptados son de tipo A,B,C,a,b,c,etc.");
+          $(function(){
+                $('#my-modal2').modal('show')
+                });
+
           document.getElementById("indireccione").focus();
          return;
         }
 
 	 if(descripcion.length==0){
-        alert("El campo descripción esta fuera del rango");
-        document.getElementById("indireccione").focus();
+         $(function(){
+                $('#my-modal2').modal('show')
+                });
+
+        document.getElementById("descripcionn").focus();
         return;
         }
         if(!(/^[A-Z]+$/i.test(descripcion))){
-         alert("Los carácteres aceptados son de tipo A,B,C,a,b,c,etc.");
-          document.getElementById("indireccione").focus();
+          $(function(){
+                $('#my-modal2').modal('show')
+                });
+
+          document.getElementById("descripcionn").focus();
          return;
         }
 
-          alert(selIndex);
-         window.location="entregable.php?numero_contrato="+selIndex+"&fecha_entrega="+fecha_entrega+"&nombre_entregable="+nombre_entregable+"&fecha_entrega_maxima="+fecha_entrega_maxima+"&cantidad_entregable="+cantidad_entregable+"&direccion_entregable="+direccion_entregable+"&descripcion="+descripcion;
+         
+         //window.location="entregable.php?numero_contrato="+selIndex+"&fecha_entrega="+fecha_entrega+"&nombre_entregable="+nombre_entregable+"&fecha_entrega_maxima="+fecha_entrega_maxima+"&cantidad_entregable="+cantidad_entregable+"&direccion_entregable="+direccion_entregable+"&descripcion="+descripcion;
+	      $(function(){
+                $('#my-modal').modal('show')
+                });
+                
+
     }
+
 
 </script>
   <div id="contec">
@@ -378,13 +448,7 @@
 
 
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"
-    integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY"
-    crossorigin="anonymous">
-  </script>
-  <script src="https://cdn.datos.gob.mx/assets/js/main.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-
+ 
   <footer>
   <div class="contenedor-todo-footer">
 

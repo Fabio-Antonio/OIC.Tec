@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
       <title> </title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">    
     <link href="css/estilos.css" rel="stylesheet">
     <link href="https://cdn.datos.gob.mx/assets/css/main.css" rel="stylesheet">
     <link href="https://cdn.datos.gob.mx/assets/img/favicon.ico" rel="shortcut icon">
@@ -249,6 +249,53 @@
   </div>
 </div>
 </main>
+
+
+
+
+<div class="modal fade" role="dialog" id="my-modal" aria-labelledby="modal-title">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color:#27C44D;">
+                    <h3 class="modal-title" id="modal-title">B.E.S.A</h3>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Los datos se han ingresado correctamente!!
+                    </p>
+                </div>
+                <div class="modal-footer">
+                <button class="btn btn-primary" data-dismiss="modal">Ok</button>                    </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+<div class="modal fade" role="dialog" id="my-modal2"  aria-labelledby="modal-title">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header"style="background-color:#D0021B;">
+                    <h3 class="modal-title" id="modal-title">B.E.S.A</h3>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Los datos no son compatibles!!
+                    </p>
+                </div>
+                <div class="modal-footer">
+                <button class="btn btn-primary" data-dismiss="modal">Ok</button>                    </div>
+            </div>
+        </div>
+    </div>
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+
+
 <!------------------------------------------------------>
 <!------------------------------------------------------>
 <!-- INICIA REGISTRO------------------------------------>
@@ -273,37 +320,58 @@ var fecha1= new Date(inicio_vigencia);
 var fecha2= new Date(fin_vigencia);
 var fecha3= new Date(fecha_entrega);
 if(String(notificacion_adjudicada)==""){
-alert("El campo Notificacion Adjudicada no puede ser vacío");
+ $(function(){
+                $('#my-modal2').modal('show')
+                });
+
 document.getElementById("innotificacionadjudicadaf").focus();
 return;
 }
 if(String(formalizacion_contrato)==""){
-alert("El campo Formalización Contrato no puede ser vacío");
+ $(function(){
+                $('#my-modal2').modal('show')
+                });
+
 document.getElementById("informalizacioncontratof").focus();
 return;
 }
 if(String(requisicion_contrato)==""){
-alert("El campo Requisicion Contrato no puede ser vacío");
+ $(function(){
+                $('#my-modal2').modal('show')
+                });
+
 document.getElementById("inrequesicioncontratof").focus();
 return;
 }
 if(String(garantia_cumplimiento)==""){
-alert("El campo Garantia Cumplimiento no puede ser vacío");
+ $(function(){
+                $('#my-modal2').modal('show')
+                });
+
 document.getElementById("ingarantiacumpliminetof").focus();
 return;
 }
 if(String(resicion_contrato)==""){
-alert("El campo Resicion Contrato no puede ser vacío");
+ $(function(){
+                $('#my-modal2').modal('show')
+                });
+
 document.getElementById("inresicioncontratof").focus();
 return;
 }
 if(String(inicio_vigencia)==""){
-alert("El campo Inicio Vigencia no puede ser vacío");
+ $(function(){
+                $('#my-modal2').modal('show')
+                });
+
 document.getElementById("ininiciovigenciaf").focus();
 return;
 }
 if(String(sat)==""){
-alert("El campo SAT no puede ser vacío");
+ $(function(){
+                $('#my-modal2').modal('show')
+                });
+
 document.getElementById("insatf").focus();
 return;
 }
@@ -314,40 +382,61 @@ document.getElementById("inimssf").focus();
 return;
 }
 if(String(infonavit)==""){
-alert("El campo INFONAVIT  no puede ser vacío");
+ $(function(){
+                $('#my-modal2').modal('show')
+                });
+
 document.getElementById("ininfonavitf").focus();
 return;
 }
 
 if(String(fecha_entrega)==""){
-alert("El campo Fecha Entrega  no puede ser vacío");
+ $(function(){
+                $('#my-modal2').modal('show')
+                });
+
 document.getElementById("infechaenregaf").focus();
 return;
 }
 if(String(suficiencia)==""){
-alert("El campo Suficiencia no puede ser vacío");
+ $(function(){
+                $('#my-modal2').modal('show')
+                });
+
 document.getElementById("insuficienciaf").focus();
 return;
 }
 
 if(String(fin_vigencia)==""){
-alert("El campo Fin  Vigencia no puede ser vacío");
+ $(function(){
+                $('#my-modal2').modal('show')
+                });
+
 document.getElementById("infinvigenciaf").focus();
 return;
 }
 if(descripcion.length==0||!(/^[A-Za-z0-9]+$/.test(descripcion))){
-alert("El campo Etiqueta es inválido");
+ $(function(){
+                $('#my-modal2').modal('show')
+                });
+
 document.getElementById("infechadescripcion").focus();
 return;
 }
 if(fecha2<fecha1){
-alert("La fecha de inicio de vigencia no puede ser mayor a la fecha de fin de vigencia");
+ $(function(){
+                $('#my-modal2').modal('show')
+                });
+
 document.getElementById("ininiciovigenciaf").focus();
 return;
 }
 
 if(fecha3<fecha1||fecha3>fecha2){
-alert("La fecha de entrega es inválida");
+ $(function(){
+                $('#my-modal2').modal('show')
+                });
+
 document.getElementById("infechaentregaf").focus();
 return;
 }
@@ -369,7 +458,8 @@ $.post('contrato_fechas.php', {
 
 
           },function(data) {
-             alert('datos ingresados correctamente', data);
+               $('#my-modal').modal('show')
+
           });
 
 }

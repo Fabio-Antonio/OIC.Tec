@@ -14,25 +14,20 @@
     <script>
     window.onload = function() {
 
-         <?php $total=$_POST["total"];?>
-        var total ='<?=$total?>';
-        <?php $total1=$_POST["total1"];?>
-         var total1 ='<?=$total1?>';
-         <?php $total2=$_POST["total2"];?>
-         var total2 ='<?=$total2?>';
-         <?php $total3=$_POST["total3"];?>
-         var total3 ='<?=$total3?>';
-          total1=((total1*100)/total);
-                total2=((total2*100)/total);
-               total3=((total3*100)/total);
-
-
-
-
-
   var chart = new CanvasJS.Chart("chartContainer", {
-        
+        var = "<?php $total=$_POST["total"]; echo '=.
 
+
+
+
+
+
+
+
+
+
+
+$total;'?>"
   	animationEnabled: true,
   	title: {
   		text: "Portcentaje de Vigencias"
@@ -44,9 +39,9 @@
   		yValueFormatString: "##0.00\"%\"",
   		indexLabel: "{label} {y}",
   		dataPoints: [
-  			{y: total2, label: "6  Meses",color: "rgb(0,255,0)",},
-  			{y: total1, label: "3 Meses",color: "rgb(255,255,0)",},
-  			{y: total3, label: "Vencido",color: "rgb(255,0,0)",}
+  			{y: 79.55, label: "6  Meses",color: "rgb(0,255,0)",},
+  			{y: 7.31, label: "3 Meses",color: "rgb(255,255,0)",},
+  			{y: 7.06, label: "Vencido",color: "rgb(255,0,0)",}
   		]
   	}]
   });

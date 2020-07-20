@@ -1,10 +1,10 @@
 <?php
    require_once("conexion.php");
-
+   require_once("consultas_vigencia.php");   
     $statement = $conn->prepare("SELECT c.numero_contrato, u.unidad, f.inicio_vigencia, f.fin_vigencia FROM contrato AS c
 INNER JOIN unidad_requirente AS u ON c.id_unidad_requirente = u.id_requirente
 INNER JOIN contrato_fechas AS f ON c.id_contrato = f.id_contrato
-WHERE f.fin_vigencia > DATE(NOW()) AND f.fin_vigencia < DATE(NOW()) + INTERVAL 6 MONTH");    
+WHERE f.fin_vigencia > DATE(NOW())+ INTERVAL 3 MONTH  AND f.fin_vigencia < DATE(NOW()) + INTERVAL 6 MONTH");    
     
 $statement->execute();
 
@@ -18,19 +18,19 @@ if($statement){
 window.location.replace('consulta_vigencia.php');</script>";
        return;
 	} 
-   $valor=serialize($flag);
+   $valor2=serialize($flag);
 }else{
 echo "<script>alert('La consulta a la base de datos es incorrecta')
 window.location.replace('principal.html');</script>";
 }
 
 
-$conn=null;
+ $conn=null;
 
 $ch =curl_init();
 curl_setopt($ch,CURLOPT_URL,"http://192.168.1.68:8888/besa/consulta_por_vigencia.php");
 curl_setopt($ch,CURLOPT_POST,TRUE);
-curl_setopt($ch,CURLOPT_POSTFIELDS,"flag=$valor");
+curl_setopt($ch,CURLOPT_POSTFIELDS,"flag=$valor2&total=$total&total1=$total1&total2=$total2&total3=$total3");
 curl_exec($ch);
 $error=curl_error($ch);
 curl_close($ch);

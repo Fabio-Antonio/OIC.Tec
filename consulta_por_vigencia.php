@@ -31,14 +31,14 @@
 
 
   var chart = new CanvasJS.Chart("chartContainer", {
-        
+
 
   	animationEnabled: true,
   	title: {
   		text: "Portcentaje de Vigencias"
   	},
   	data: [{
-		
+
   		type: "pie",
   		startAngle: 240,
   		yValueFormatString: "##0.00\"%\"",
@@ -69,6 +69,7 @@
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="principal.html" id="besa">B.E.S.A</a>
+            <a> <img data-v-4a3754a3="" src="icons/sfp.png" alt="logo gobierno de méxico" class="logos" style="width: 30%; margin-top: 5px; margin-bottom: -25px; "></a>
         </div>
         <div class="collapse navbar-collapse" id="subenlaces">
           <ul class="nav navbar-nav navbar-right">
@@ -313,11 +314,14 @@
             <div class="botonve">
                 <button type="button" name="buttonv"  onclick="window.location.href='consulta_vigencia_rojo.php'"  class="botonv">VENCIDO</button>
             </div>
+            <div class="botonto">
+                <button type="button" name="buttonto"  class="botontod">TODO</button>
+            </div>
           </div>
           <div id="Layer1">
           <table class="table table-responsive">
             <tr>
-              <th>Id</th> 
+              <th>Id</th>
               <th>Número de Contrato</th>
               <th>Unidad Requirente</th>
               <th>Fecha de Inicio</th>
@@ -359,6 +363,9 @@ $arr=unserialize($_POST["flag"]);
           <div id="chartContainer" style="height: 300px; width: 980px;"></div>
             <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
         </div>
+        <div class="bregg">
+          <button type="button" id="bregresar" class="btn btn-primary"  onclick="location.href='principal.html'" name="bregresar"> Regresar </button>
+        </div>
           </div>
         </div>
       </div>
@@ -383,18 +390,8 @@ $arr=unserialize($_POST["flag"]);
     </div>
 
     <div class="columna2">
-      <h1> BESA </h1>
-      <img src="logo.png" alt="BESA">
-    </div>
-
-    <div class="columna3">
-      <h1> SEP </h1>
-      <img src="fpp.png" alt="sep">
-    </div>
-
-    <div class="columna4">
       <h1> TECNM</h1>
-      <img src="LOGO_TECNM_BLANCO.png" alt="TECNM">
+      <img src="LogoTecNMBlanco.png" alt="TECNM">
     </div>
 
   </div>

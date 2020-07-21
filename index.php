@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 <link href="https://cdn.datos.gob.mx/assets/css/main.css" rel="stylesheet">
 <link href="https://cdn.datos.gob.mx/bower_components/polymer/polymer.html" rel="import">
-
+<link href="css/estilos.css" rel="stylesheet">
 
 <head>
 
@@ -164,7 +164,7 @@ body{
 ::-moz-input-placeholder{
    color: rgba(255,255,255,0.6);
 }
-</style>   
+</style>
 
 </head>
 
@@ -176,7 +176,7 @@ body{
 
 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#subenlaces">
 
-<span class="sr-only">Interruptor de Navegación</span>
+<span class="sr-only">Interruptor de Navegaciï¿½n</span>
 
 <span class="icon-bar"></span>
 
@@ -187,36 +187,7 @@ body{
 </button>
 
 <a class="navbar-brand" href="/">BESA</a>
-
-</div>
-
-<div class="collapse navbar-collapse" id="subenlaces">
-
-<ul class="nav navbar-nav navbar-right">
-
-<li><a href="#">Enlace</a></li>
-
-<li class="dropdown">
-
-<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Desplegable <span class="caret"></span></a>
-
-<ul class="dropdown-menu" role="menu">
-
-<li><a href="#">Acción</a></li>
-
-<li><a href="#">Otra acción</a></li>
-
-<li><a href="#">Algo más aquí</a></li>
-
-<li class="divider"></li>
-
-<li><a href="#">Enlace separado</a></li>
-
-</ul>
-
-</li>
-
-</ul>
+  <a> <img data-v-4a3754a3="" src="icons/sfp.png" alt="logo gobierno de mÃ©xico" class="logos" style="width: 30%; margin-top: 5px; margin-bottom: -25px; "></a>
 
 </div>
 
@@ -230,24 +201,24 @@ body{
 
   <div class="body"></div>
 		<div class="grad"></div>
-    <div style="position: relative; left: 0; top: 0;">
-		<img src="sep.png" class='eye'/></div>
+    <div style="position: relative; left: 50px; top: 0;">
+		<img src="icons/sfp.png" class='eye' style="width: 500px; height: 150px; margin-top: 50px;  "/></div>
 		<div class="header">
 			<div><span> BESA </span></div>
 		</div>
 		<br>
-		<div class="login">		
+		<div class="login">
 
         <form  role="form" id="formlg" action="login.php" method="POST">
 <div class="form-group">
-  <label class="control-label" for="email-01">Usuario:</label>	
+  <label class="control-label" for="email-01">Usuario:</label>
 <input class="form-control" id="email-01" type="text" pattern="[A-Za-z0-9_-]{1,8}" required placeholder="username" name="nombre">
-</div>	
+</div>
 	<div class="form-group">
-       <label class="control-label" for="password-01">Password:</label>      
-	
+       <label class="control-label" for="password-01">Password:</label>
+
  <input class="form-control" id="password-01" type="password" placeholder="password" pattern="[A-Za-z0-9_-]{1,8}" required name="password">
-</div>	
+</div>
 				<button class="btn btn-primary btn-lg" type="submit">Entrar</button>
         </form>
 		</div>

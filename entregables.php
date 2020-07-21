@@ -25,6 +25,7 @@
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="principal.html" id="besa">B.E.S.A</a>
+          <a> <img data-v-4a3754a3="" src="icons/sfp.png" alt="logo gobierno de méxico" class="logos" style="width: 30%; margin-top: 5px; margin-bottom: -25px; "></a>
         </div>
         <div class="collapse navbar-collapse" id="subenlaces">
           <ul class="nav navbar-nav navbar-right">
@@ -309,7 +310,7 @@
        var prueba2 = new Date(fecha_entrega_maxima);
 
        if(prueba>prueba2||String(fecha_entrega)==""||String(fecha_entrega_maxima)==""){
-	 	
+
               $(function(){
                 $('#my-modal2').modal('show')
                 });
@@ -377,12 +378,12 @@
          return;
         }
 
-         
+
          //window.location="entregable.php?numero_contrato="+selIndex+"&fecha_entrega="+fecha_entrega+"&nombre_entregable="+nombre_entregable+"&fecha_entrega_maxima="+fecha_entrega_maxima+"&cantidad_entregable="+cantidad_entregable+"&direccion_entregable="+direccion_entregable+"&descripcion="+descripcion;
 	      $(function(){
                 $('#my-modal').modal('show')
                 });
-                
+
 
     }
 
@@ -448,7 +449,7 @@
 
 
 
- 
+
   <footer>
   <div class="contenedor-todo-footer">
 
@@ -458,20 +459,9 @@
       <h1> Instituto Tecnológico de Tláhuac </h1>
       <img src="itt.png" alt="ITT">
     </div>
-
     <div class="columna2">
-      <h1> BESA </h1>
-      <img src="logo.png" alt="BESA">
-    </div>
-
-    <div class="columna3">
-      <h1> SEP </h1>
-      <img src="fpp.png" alt="sep">
-    </div>
-
-    <div class="columna4">
       <h1> TECNM</h1>
-      <img src="LOGO_TECNM_BLANCO.png" alt="TECNM">
+      <img src="LogoTecNMBlanco.png" alt="TECNM">
     </div>
 
   </div>

@@ -25,6 +25,7 @@
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="principal.html" id="besa">B.E.S.A</a>
+          <a> <img data-v-4a3754a3="" src="icons/sfp.png" alt="logo gobierno de méxico" class="logos" style="width: 30%; margin-top: 5px; margin-bottom: -25px; "></a>
         </div>
         <div class="collapse navbar-collapse" id="subenlaces">
           <ul class="nav navbar-nav navbar-right">
@@ -329,7 +330,7 @@
                 $('#my-modal2').modal('show')
                 });
 
-            
+
         document.getElementById("seunidadrequirentecontrato").focus();
         return;
         }
@@ -341,7 +342,7 @@
         document.getElementById("seadministradorcontrato").focus();
         return;
         }
-         
+
           if(selObj6.length==0){
         $(function(){
                 $('#my-modal2').modal('show')
@@ -355,7 +356,7 @@
                 $('#my-modal2').modal('show')
                 });
 
-                
+
         document.getElementById("seconsolidadocontrato").focus();
         return;
         }
@@ -450,12 +451,12 @@
         return;
 
 	}
-	
+
 /*window.location="contrato_in.php?nombre_unidad_compradora="+selIndex+"&procedimientos="+selIndex2+"&unidad_requirente="+selIndex3+"&nombre="+selIndex4+
         "&proveedor="+selIndex6+"&procedimiento="+selIndex8+"&numero_contrato="+numero_contrato+
 "&procedimiento_compranet="+procedimiento_compranet+"&contrato_compranet="+contrato_compranet+"&convenio_interno="+convenio_interno+"&objeto_contratacion="
 +objeto_contratacion+"&documentacion_descripcion="+documentacion_descripcion+"&monto_maximo="+monto_maximo+"&monto_minimo="+monto_minimo;*/
-          
+
           $.post('contrato_in.php',{
 		"nombre_unidad_compradora":selIndex,
 		"procedimientos":selIndex2,
@@ -472,7 +473,7 @@
 		"contrato_abierto":contrato_abierto,
 		"monto_maximo":monto_maximo,
 		"monto_minimo":monto_minimo
-	
+
 	},function(data){
 	 $('#my-modal').modal('show')
                 });
@@ -585,7 +586,7 @@
            ?>
             </select>
           </div>
-	
+
 	<form action="fechas.php" method="POST">
           <div class="dnumerocontratoc">
             <label class="textnumerocontrato">Número Contrato:</label>
@@ -633,7 +634,7 @@
               <div id ="dbtgcpc1">
                 <button  id="btg" onclick="mostrarText();" class="btn btn-primary" type="button"> Guardar </button>
 		 <button type="submit" id="bcomprobacion" class="btn btn-primary"  name="bcomprobacion"> Siguiente</button>
-                  
+
               </div>
           </form>
           </div>
@@ -665,20 +666,9 @@
       <h1> Instituto Tecnológico de Tláhuac </h1>
       <img src="itt.png" alt="ITT">
     </div>
-
     <div class="columna2">
-      <h1> BESA </h1>
-      <img src="logo.png" alt="BESA">
-    </div>
-
-    <div class="columna3">
-      <h1> SEP </h1>
-      <img src="fpp.png" alt="sep">
-    </div>
-
-    <div class="columna4">
       <h1> TECNM</h1>
-      <img src="LOGO_TECNM_BLANCO.png" alt="TECNM">
+      <img src="LogoTecNMBlanco.png" alt="TECNM">
     </div>
 
   </div>

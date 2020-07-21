@@ -23,6 +23,7 @@
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="principal.html" id="besa">B.E.S.A</a>
+            <a> <img data-v-4a3754a3="" src="icons/sfp.png" alt="logo gobierno de méxico" class="logos" style="width: 30%; margin-top: 5px; margin-bottom: -25px; "></a>
         </div>
         <div class="collapse navbar-collapse" id="subenlaces">
           <ul class="nav navbar-nav navbar-right">
@@ -450,6 +451,7 @@ $garantia_cumplimiento="";
         </div>
         </div>
         </div>
+      </div>
 <script language="javascript" type="text/javascript">
 
 function saludo(){
@@ -467,5 +469,35 @@ function saludo(){
 		<script src="js/bootstrap.min.js"></script>
 
  </main>
+
+ <footer>
+ <div class="contenedor-todo-footer">
+
+ <div class="contenedor-body">
+   <div class="columna1">
+     <h1> Instituto Tecnológico de Tláhuac </h1>
+     <img src="itt.png" alt="ITT">
+   </div>
+   <div class="columna2">
+     <h1> TECNM</h1>
+     <img src="LogoTecNMBlanco.png" alt="TECNM">
+   </div>
+
+ </div>
+
+ </div>
+
+ <div class="contenedor-footer">
+   <div class="copyright">
+     <a>&copy; 2020 Todos los Derechos Reservados</a>
+   </div>
+   <div class="autores">
+     <a>Antonio Lorenzana Fabio Antonio</a> |
+     <a>Flores Reyes Jahir</a> |
+     <a>Reyes Villafranca Jose Pedro</a>
+   </div>
+ </div>
+
+</footer>
   </body>
 </html>

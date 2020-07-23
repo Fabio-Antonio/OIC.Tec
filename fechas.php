@@ -266,7 +266,7 @@
                     </p>
                 </div>
                 <div class="modal-footer">
-                <button class="btn btn-primary" data-dismiss="modal">Ok</button>                    </div>
+                <button class="btn btn-primary" onclick="window.location.href='principal.html'">Ok</button>                    </div>
             </div>
         </div>
     </div>
@@ -528,9 +528,6 @@ $.post('contrato_fechas.php', {
 
           <div id="dbtncomprobacion">
               <button  id="bcomprobacion" class="btn btn-primary"  type="button" onclick="mostrarText();"  name="bcomprobacion"> Guardar </button>
-          </div>
-          <div id="dbtncomprobacion3">
-            <button type="button" id="bregresar" class="btn btn-primary"  onclick="location.href='consulta_contrato7.php'" name="bregresar"> Regresar </button>
           </div>
           </div>
         </div>

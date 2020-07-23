@@ -8,11 +8,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <title> B.E.S.A </title>
-
-        <link href="css/estilos.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="css/estilos.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
         <link href="https://cdn.datos.gob.mx/assets/css/main.css" rel="stylesheet">
+	
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
     <link href="https://cdn.datos.gob.mx/assets/img/favicon.ico" rel="shortcut icon">
     <link href="https://cdn.datos.gob.mx/bower_components/dgm-footer/dgm-footer.html" rel="import">
 
@@ -52,56 +55,140 @@
         </div>
       </div>
     </nav>
+	
+
+	<!-- Sidebar -->
+<div class="w3-sidebar w3-bar-block w3-animate-left" style="display:none;z-index:5" id="mySidebar">
+  <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Close &times;</button>
+  <img src="icons/sfp.png" alt="sfp" width="145" height="40">
+  <a href="#" class="w3-bar-item w3-button">Inicio</a>
+  <a href="#" class="w3-bar-item w3-button">Usuarios</a>
+  <a href="#" class="w3-bar-item w3-button">Contacto</a>
+  <a href="index.php" class="w3-bar-item w3-button">Logout -></a>
+
+</div>
+
+<!-- Page Content -->
+<div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+
+<div>
+  <button class="w3-button w3-white w3-xxlarge" onclick="w3_open()">&#9776;</button>
+  
+</div>
+     
+<script>
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+
 
       <div id="venta111">
 
         <h1 class="bea" align="center"> B.E.S.A <h1>
           <h2 align="center">SISTEMA DE SEGUIMIENTO DE CONTRATOS</h2>
-      <div class="contenedor">
-        <div class="dccapturas">
-            <a href="#" class="iconcapturas"><img src="icons/formulario.png" alt=""></a>
-        <div class="dtextcapturas">
-            <a href="#" class="textcapturas">CAPTURAS</a>
-        </div>
-        <div class="dtext">
-          <a href="consulta_contrato3.php" class="aEntregables">Entregables</a><BR>
-          <a href="consulta_contrato2.php" class="aInconformidades">Inconformidades</a><BR>
-          <a href="consulta_contrato5.php" class="aFacturaspagos">Facturas/pagos_efectuados</a><BR>
-          <a href="lectura.html" class="aCargadearchivos">Carga de archivos (PDF)(CVS)</a><BR>
-          <a href="requirente_compradora_captura.html" class="aUnidadr">Unidad Requirente/Compradora</a><BR>
-          <a href="consulta_contrato6.php" class="aRecepcionT">Recepción/Terminación_Anticipada</a><BR>
-          <a href="consulta_contrato4.php" class="aPartidasp">Partidas_presupuestales/subpartida</a><BR>
-          <a href="admin.html" class="aCapturaAd">Captura de Administrador de Contrato</a><BR>
-          <a href="captura_pro_mont.html" class="aConsolidadosM">Consolidados/Proveedor Adjudicado</a><BR>
-          <a href="consulta_fundamento.php" class="aFundamentoLegal">Fundamento Legal/Procedimientos de Contratación</a><BR>
-          <a href="consulta_contrato.php" class="aComprobacionC">Comprobacion/Convenios Modificados/Documentos Adicionales</a><BR>
-          <button class="btn btn-primary" id="nuevo" type="button" onclick="location.href='consulta_contrato7.php'">Nuevo contrato</button>
-	</div>
-        </div>
-      </div>
-      <div class="contenedorconsultas">
-        <div class="dccapturas">
-            <a href="#" class="iconconsultas"><img src="icons/buscar.png" alt=""></a>
-        <div class="dtextcapturas">
-            <a href="#" class="textconsultas">CONSULTAS</a>
-        </div>
-        <div class="dtext">
-          <a href="consulta_vigencia.php" class="afinvigencia">Fin vigencia</a><BR>
-          <a href="" class="ainformes">Informes 70-30</a><BR>
-          <a href="" class="atopcon">Top por contrato</a><BR>
-          <a href="" class="afechasen">Fechas entregables</a><BR>
-          <a href="" class="acontrappar">Contratos por partida</a><BR>
-          <a href="" class="acontpper">Contratos por periodo</a><BR>
-          <a href="" class="adechadfor">Fecha de formalización</a><BR>
-          <a href="" class="acontrapprove">Contratos por proveedor</a><BR>
-          <a href="" class="acontraprour">Contratos y proveedores por UR</a><BR>
-          <a href="" class="aconsulpnum">Consultas por número de contrato</a><BR>
-          <a href="" class="ainformemont">Informe montos por procedimiento</a><BR>
-          <a href="" class="aconsultpfechda">Consultas por fecha de adjudicación</a><BR>
-	<button class="btn btn-primary" id="cons" onclick="location.href='numero_de_contrato.php'"type="button">Consulta</button>
-        </div>
-        </div>
-      </div>
+     <h3 align="center">CAPTURAS</h3>
+  
+ <div class="container">   
+    <div class="card-group">
+  <div class="card">
+    <img class="card-img-top" src="icons/actores.jpg" alt="Card image cap" width="20%">
+    <div class="card-body">
+      <h5 class="card-title">Actores</h5>
+       <a href="consulta_contrato3.php" >Entregables</a><BR>
+          <a href="consulta_contrato2.php">Inconformidades</a><BR>
+          <a href="consulta_contrato5.php">Facturas/pagos_efectuados</a><BR>
+          <a href="lectura.html">Carga de archivos (PDF)(CVS)</a><BR>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="icons/engrane.jpg" alt="Card image cap"  width="20%">
+    <div class="card-body">
+      <h5 class="card-title">Administración</h5>
+       <a href="requirente_compradora_captura.html">Unidad Requirente/Compradora</a><BR>
+          <a href="consulta_contrato6.php">Recepción/Terminación_Anticipada</a><BR>
+          <a href="consulta_contrato4.php">Partidas_presupuestales/subpartida</a><BR>
+          <a href="admin.html">Captura de Administrador de Contrato</a><BR>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="icons/balanza.jpg" alt="Card image cap"  width="20%">
+    <div class="card-body">
+      <h5 class="card-title">Legal</h5>
+       <a href="captura_pro_mont.html">Consolidados/Proveedor Adjudicado</a><BR>
+       <a href="consulta_fundamento.php">Fundamento Legal/Procedimientos de Contratación</a><BR>
+       <a href="consulta_contrato.php">Comprobacion/Convenios Modificados/Documentos Adicionales</a><BR>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+  </div>
+
+</div>             
+ <a class="btn btn-primary" id="nuevo" href="consulta_contrato7.php">Nuevo contrato</a>
+
+  </div>  
+ <h3 align="center">CONSULTAS</h3>
+
+<div class="container">
+<div class="card-group">
+  <div class="card">
+    <img class="card-img-top" src="icons/calendario.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Vigencias</h5>
+       <a href="consulta_vigencia.php">Fin vigencia</a><BR>
+          <a href="consulta_70_30.php">Informes 70-30</a><BR>
+          <a href="">Top por contrato</a><BR>
+          <a href="">Fechas entregables</a><BR>
+
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="icons/grafica.png" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Producción</h5>
+          <a href="">Contratos por partida</a><BR>
+          <a href="">Contratos por periodo</a><BR>
+          <a href="">Fecha de formalización</a><BR>
+          <a href="">Contratos por proveedor</a><BR>
+
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="icons/guardar.png" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Administración</h5>
+       <a href="" >Consultas por número de contrato</a><BR>
+          <a href="">Informe montos por procedimiento</a><BR>
+          <a href="">Consultas por fecha de adjudicación</a><BR>
+
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+  </div>
+</div>
+<a class="btn btn-primary" id="cons" href="numero_de_contrato.php">Consulta contrato</a>
+
+</div>
 
 
 </main>
@@ -158,8 +245,7 @@
     </div>
 
 
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
 <script>
                 (function(){
                 $(function(){

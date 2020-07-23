@@ -199,8 +199,8 @@ margin-left: 230px;
 #nuevo{
 width: 150px;
 height: 40px;
-margin-left: 230px;
-margin-top: 60px;
+margin-left: 460px;
+margin-top: 10px;
 }
 #nuevo:hover{
   background: rgba(169,3,41,1);
@@ -216,7 +216,7 @@ margin-top: 60px;
 #cons{
 width: 150px;
 height: 40px;
-margin-left: 263px;
+margin-left: 460px;
 margin-top: 27px;
 }
 #cons:hover{

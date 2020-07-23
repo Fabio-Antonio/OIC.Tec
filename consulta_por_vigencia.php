@@ -315,11 +315,11 @@
                 <button type="button" name="buttonv"  onclick="window.location.href='consulta_vigencia_rojo.php'"  class="botonv">VENCIDO</button>
             </div>
             <div class="botonto">
-                <button type="button" name="buttonto"  class="botontod">TODO</button>
+                <button type="button" name="buttonto" onclick="window.location.href='consulta_vigencia.php'"  class="botontod">TODO</button>
             </div>
           </div>
           <div id="Layer1">
-          <table class="table table-responsive">
+          <table class="table table-striped">
             <tr>
               <th>Id</th>
               <th>Número de Contrato</th>

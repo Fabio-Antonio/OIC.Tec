@@ -14,6 +14,10 @@
     <script>
     window.onload = function() {
 
+    <?php $total=$_POST["flag"];?>
+    var total='<?=$total?>';
+    var set=(70*100)/total;
+    var trein=(30*100)/total;
   var chart = new CanvasJS.Chart("chartContainer", {
   	animationEnabled: true,
   	title: {
@@ -25,8 +29,8 @@
   		yValueFormatString: "##0.00\"%\"",
   		indexLabel: "{label} {y}",
   		dataPoints: [
-  			{y: 79.55, label: "(70)",color: "rgb(30,144,255)",},
-  			{y: 7.31, label: "(30)",color: "rgb(128,0,128)",}
+  			{y: 70, label: "total"+set,color: "rgb(30,144,255)",},
+  			{y: 30, label: "total"+trein,color: "rgb(128,0,128)",}
   		]
   	}]
   });
@@ -286,21 +290,21 @@
         <div class='col-sm-20 col-md-20 col-ld-20'>
           <h2 class="fuu"> INFORME PROCEDIMIENTOS 70-30 </h2>
           <div id="Layer70">
-          <table class="table table table-bordered">
+          <table class="table table-striped">
             <tr>
               <th>Categoria</th>
               <th>Monto Total</th>
             </tr>
             <tr>
-              <td></td>
-              <td></td>
+              <td>70%</td>
+              <td><?php $total=$_POST["flag"]; $set=(70*100)/$total; echo $set;?></td>
             </tr>
             <tr>
-              <td></td>
-              <td></td>
+              <td>30%</td>
+              <td><?php $total=$_POST["flag"]; $tre=(30*100)/$total; echo $tre;?></td>
             </tr>
           </table>
-        </div>
+        </div><br>
         <div class="grafica">
           <div id="chartContainer" style="height: 300px; width: 980px;"></div>
             <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>

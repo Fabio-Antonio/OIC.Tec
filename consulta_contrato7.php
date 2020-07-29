@@ -47,16 +47,6 @@ $valor4=serialize($flag4);
 }
 
 
-$query=$conn->prepare("SELECT id_monto_no_iva,total FROM monto_no_iva");
-
- $query->execute();
-if($query){
-while($row=$query->fetch()){
-$flag5[]=$row;
-}
-$valor5=serialize($flag5);
-
-}
 
 $query=$conn->prepare("SELECT id_proveedor,nombre FROM proveedor_adjudicado");
 
@@ -94,7 +84,7 @@ curl_setopt($ch, CURLOPT_URL,"http://192.168.1.68:8888/besa/contrato.php");
 // indicamos el tipo de petición: POST
 curl_setopt($ch, CURLOPT_POST, TRUE);
 // definimos cada uno de los parámetros
-curl_setopt($ch, CURLOPT_POSTFIELDS, "flag=$valor&flag2=$valor2&flag3=$valor3&flag4=$valor4&flag5=$valor5&flag6=$valor6&flag8=$valor8");
+curl_setopt($ch, CURLOPT_POSTFIELDS, "flag=$valor&flag2=$valor2&flag3=$valor3&flag4=$valor4&flag6=$valor6&flag8=$valor8");
  
 
  curl_exec ($ch);

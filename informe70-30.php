@@ -14,14 +14,25 @@
     <script>
     window.onload = function() {
 
-    <?php $total=$_POST["flag"];?>
-    var total='<?=$total?>';
-    var set=(70*100)/total;
-    var trein=(30*100)/total;
+    <?php $total=$_POST["total"];?>
+	 <?php $total2=$_POST["total2"];?>
+    <?php $valor=$_POST["treinta"];?>
+	  <?php $valor2=$_POST["setenta"];?>
+
+    var treinta =Number('<?=$total?>');
+    var cien_treinta=Number('<?=$valor?>');
+     var setenta =Number('<?=$total2?>');
+    var cien_setenta=Number('<?=$valor2?>');
+    var consumo_30=(treinta*100)/cien_treinta;
+      var consumo_70=(setenta*100)/cien_setenta;
+      var cien_total=cien_treinta+cien_setenta;
+      var globalt=100-(((setenta+treinta)*100)/cien_total);
+      var globals=(((setenta+treinta)*100)/cien_total);
+    alert(cien_total);
   var chart = new CanvasJS.Chart("chartContainer", {
   	animationEnabled: true,
   	title: {
-  		text: "GRAFICA 70-30"
+  		text: "Consumo del 30%"
   	},
   	data: [{
   		type: "pie",
@@ -29,17 +40,60 @@
   		yValueFormatString: "##0.00\"%\"",
   		indexLabel: "{label} {y}",
   		dataPoints: [
-  			{y: 70, label: "total"+set,color: "rgb(30,144,255)",},
-  			{y: 30, label: "total"+trein,color: "rgb(128,0,128)",}
+  			{y: 100-consumo_30, label: "Libre",color: "rgb(30,144,255)",},
+  			{y: consumo_30, label: "Ocupado",color: "rgb(128,0,128)",}
+
   		]
   	}]
-  });
+	
+
+        });
   chart.render();
+
+ var chart2 = new CanvasJS.Chart("chartContainer2", {
+        animationEnabled: true,
+        title: {
+                text: "Consumo 70%"
+        },
+        data: [{
+                type: "pie",
+                startAngle: 240,
+                yValueFormatString: "##0.00\"%\"",
+                indexLabel: "{label} {y}",
+                dataPoints: [
+                        {y: 100-consumo_70, label: "libre",color: "rgb(30,144,255)",},
+                        {y: consumo_70, label: "ocupado",color: "rgb(128,0,128)",}
+
+                ]
+        }]
+
+
+        });
+  chart2.render();
+
+ var chart3 = new CanvasJS.Chart("chartContainer3", {
+        animationEnabled: true,
+        title: {
+                text: "Consumo del Presupuesto Anual"
+        },
+        data: [{
+                type: "pie",
+                startAngle: 240,
+                yValueFormatString: "##0.00\"%\"",
+                indexLabel: "{label} {y}",
+                dataPoints: [
+                        {y: globalt, label: "libre",color: "rgb(30,144,255)",},
+                        {y: globals, label: "ocupado",color: "rgb(128,0,128)",}
+
+                ]
+        }]
+
+
+        });
+  chart3.render();
 
   }
 </script>
-
-
   </head>
 
   <body class="front">
@@ -292,23 +346,120 @@
           <div id="Layer70">
           <table class="table table-striped">
             <tr>
-              <th>Categoria</th>
-              <th>Monto Total</th>
+              
+              <th>Administración</th>
+		<th>Titular</th>
+		<th>Total</th>
+		<th>70%</th>
+		<th>30%</th>
+
             </tr>
             <tr>
-              <td>70%</td>
-              <td><?php $total=$_POST["flag"]; $set=(70*100)/$total; echo $set;?></td>
+              <td><?php $inicio_administracion=$_POST["inicio_administracion"]; echo $inicio_administracion;?></td>
+              <td><?php $titular=$_POST["titular"]; echo $titular;?></td>
+		 <td><?php $totals=$_POST["totals"]; echo $totals;?></td>
+		 <td><?php $setenta=$_POST["setenta"]; echo $setenta;?></td>
+		 <td><?php $treinta=$_POST["treinta"]; echo $treinta;?></td>
+
             </tr>
-            <tr>
-              <td>30%</td>
-              <td><?php $total=$_POST["flag"]; $tre=(30*100)/$total; echo $tre;?></td>
-            </tr>
+           
           </table>
-        </div><br>
+        </div>
+                  
+	<div id="Layer70">
+          <table class="table table-striped">
+        <tr>
+        <th>Id</th>
+        <th>Numero de Contrato</th>
+        <th>Monto Maximo</th>
+        <th>Procedimiento</th>
+
+        </tr>
+         <?php
+$arr=unserialize($_POST["valor"]);
+
+
+       foreach((array)$arr as $key=>$value)
+          {
+
+ ?>
+
+ <tr>
+               <td>
+                   <?php echo $key; ?>
+             </td>
+                     <?php foreach((array)$value as $key=>$value)
+                       {
+                     ?>
+              <td>
+                    <?php echo $value;?>
+               </td>
+                    <?php
+                     }
+                    ?>
+
+        </tr>
+        <?php
+
+        }
+       ?>
+
+
+          </table>
+       <table  class="table table-striped">
+        <tr>
+         <th>Id</th>
+        <th>Numero de Contrato</th>
+        <th>Monto Maximo</th>
+        <th>Procedimiento</th>
+
+	</tr>
+	  <?php
+$arr=unserialize($_POST["valor2"]);
+
+
+       foreach((array)$arr as $key=>$value)
+          {
+
+ ?>
+
+ <tr>
+               <td>
+                   <?php echo $key; ?>
+             </td>
+                     <?php foreach((array)$value as $key=>$value)
+                       {
+                     ?>
+              <td>
+                    <?php echo $value;?>
+               </td>
+                    <?php
+                     }
+                    ?>
+
+        </tr>
+        <?php
+
+        }
+       ?>
+
+	</table>
+        </div>
         <div class="grafica">
-          <div id="chartContainer" style="height: 300px; width: 980px;"></div>
+          <div id="chartContainer" style="height: 300px; width: 980px;margin-top:160px"></div>
             <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
         </div>
+
+	 <div class="grafica">
+          <div id="chartContainer2" style="height: 300px; width: 980px;margin-top:0px"></div>
+            <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+        </div>
+	  <div class="grafica">
+          <div id="chartContainer3" style="height: 300px; width: 980px;margin-top:0px"></div>
+            <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+        </div>
+
+
         <div class="breg70">
           <button type="button" id="bregresar" class="btn btn-primary"  onclick="location.href='principal.html'" name="bregresar"> Regresar </button>
         </div>

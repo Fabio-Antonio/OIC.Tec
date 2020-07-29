@@ -388,7 +388,7 @@
         document.getElementById("innumerocontratoc").focus();
         return;
 	}
-	 if(procedimiento_compranet.length==0||!(/^[A-Za-z0-9]+$/.test(procedimiento_compranet))){
+	 if(procedimiento_compranet.length==0||!(/^[A-Za-z0-9\s]*$/.test(procedimiento_compranet))){
  	$(function(){
                 $('#my-modal2').modal('show')
                 });
@@ -405,7 +405,7 @@
         document.getElementById("incontratocompranetc").focus();
         return;
         }
-	 if(convenio_interno.length==0||!(/^[A-Za-z0-9]+$/.test(convenio_interno))){
+	 if(convenio_interno.length==0||!(/^[A-Za-z0-9\s]*$/.test(convenio_interno))){
          $(function(){
                 $('#my-modal2').modal('show')
                 });
@@ -413,7 +413,7 @@
         document.getElementById("inconveniointernoc").focus();
         return;
         }
-	 if(objeto_contratacion.length==0||!(/^[A-Za-z0-9]+$/.test(objeto_contratacion))){
+	 if(objeto_contratacion.length==0||!(/^[A-Za-z0-9\s]*$/.test(objeto_contratacion))){
          $(function(){
                 $('#my-modal2').modal('show')
                 });
@@ -421,7 +421,7 @@
         document.getElementById("inobjetocontratacionc").focus();
         return;
         }
-	 if(documentacion_descripcion.length==0||!(/^[A-Za-z0-9]+$/.test(documentacion_descripcion))){
+	 if(documentacion_descripcion.length==0||!(/^[A-Za-z0-9\s]*$/.test(documentacion_descripcion))){
          $(function(){
                 $('#my-modal2').modal('show')
                 });

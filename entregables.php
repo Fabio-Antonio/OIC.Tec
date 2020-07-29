@@ -389,11 +389,9 @@
 
 
 </script>
-  <div id="contec">
-    <div class="container1">
-      <div class="row">
-        <div class='col-sm-20 col-md-20 col-ld-20'>
-          <h2 class="fuu"> ENTREGABLES </h2>
+  >
+	<form role="form">
+          <h2 class="fuu">ENTREGABLES </h2>
         <div class="dcontratoen">
           <label class="textcontratoin">Contrato:</label>
         </div>
@@ -441,11 +439,8 @@
 		        <input type="submit" id="bcomprobacion" class="btn btn-primary" onclick="mostrarText();"  name="button" value="Guardar"/>
             <button type="button" id="bregresar" class="btn btn-primary"  onclick="location.href='principal.html'" name="bregresar"> Regresar </button>
         </div>
-
-        </div>
-      </div>
-    </div>
-  </div>
+        </form>
+  
 
 
 

@@ -35,7 +35,7 @@ if($statement){
        $total1=$row["total"];
 
     }
-    if($total1==0){
+    if($total1==null){
         echo "<script>alert('No se encontraron resultados')
 window.location.replace('consulta_vigencia.php');</script>";
        return;
@@ -58,7 +58,7 @@ if($statement){
        $total2=$row["total"];
 
     }
-    if($total2==0){
+    if($total2==null){
         echo "<script>alert('No se encontraron resultados')
 window.location.replace('consulta_vigencia.php');</script>";
        return;
@@ -82,7 +82,7 @@ if($statement){
 
     }
 
- if($total3==0){
+ if($total3==null){
         echo "<script>alert('No se encontraron resultados')
 window.location.replace('consulta_vigencia.php');</script>";
        return;

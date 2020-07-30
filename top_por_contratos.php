@@ -13,6 +13,8 @@
     <link href="https://cdn.datos.gob.mx/bower_components/dgm-footer/dgm-footer.html" rel="import">
     <script>
       window.onload = function () {
+       var contrato;
+       var monto;
 		
         var chart = new CanvasJS.Chart("chartContainer", {
 	         animationEnabled: true,
@@ -29,18 +31,27 @@
 	                   data: [{
 		                     type: "column",
 		                             dataPoints: [
-			                                { y: 300878, label: "V" },
-			                                { y: 266455,  label: "S" },
-			                                { y: 169709,  label: "C" },
-			                                { y: 158400,  label: "I" },
-			                                { y: 142503,  label: "I" },
-			                                { y: 101500, label: "K" },
-			                                { y: 97800,  label: "U" },
-			                                { y: 80000,  label: "R" }
+
+	 <?php
+                if (isset($_POST['flag'])) {
+              $flag=unserialize($_POST['flag']);
+              
+
+              foreach ($flag as $key=> $val) {
+
+                  ?>	
+							<?php $contrato=$val['numero_contrato'];$monto=$val["monto_max"];?>			
+			                                { y: monto=Number('<?=$monto?>'), label:contrato='<?=$contrato?>'},
+			                                 <?php
+                                }
+                                }
+                                ?>
+
 		                                  ]
 	                                   }]
                                    });
                                    chart.render();
+				
                                  }
        </script>
   </head>
@@ -302,7 +313,34 @@
 		<th>Proveedor Adjudicado</th>
 		<th> Monto Mximo</th>
               </tr>
+              <?php
+$arr=unserialize($_POST["flag"]);
 
+
+       foreach((array)$arr as $key=>$value)
+          {
+
+ ?>
+
+ <tr>
+               <td>
+                   <?php echo $key; ?>
+             </td>
+                     <?php foreach((array)$value as $key=>$value)
+                       {
+                     ?>
+              <td>
+                    <?php echo $value;?>
+               </td>
+                    <?php
+                     }
+                    ?>
+
+        </tr>
+        <?php
+
+        }
+       ?>
           </table>
         </div>
         <div id="chartContainer" ></div>

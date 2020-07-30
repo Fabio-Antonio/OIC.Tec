@@ -11,7 +11,7 @@
     <link href="https://cdn.datos.gob.mx/assets/css/main.css" rel="stylesheet">
     <link href="https://cdn.datos.gob.mx/assets/img/favicon.ico" rel="shortcut icon">
     <link href="https://cdn.datos.gob.mx/bower_components/dgm-footer/dgm-footer.html" rel="import">
-    <script>
+    <!--<script>
     window.onload = function() {
 
          <?php $total=$_POST["total"];?>
@@ -53,6 +53,31 @@
   chart.render();
 
   }
+</script>
+-->
+<script>
+  window.onload = function() {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+  animationEnabled: true,
+  title: {
+    text: "GRAFICA"
+  },
+  data: [{
+    type: "pie",
+    startAngle: 240,
+    yValueFormatString: "##0.00\"%\"",
+    indexLabel: "{label} {y}",
+    dataPoints: [
+      {y: 79.55, label: "12 Meses",color: "rgb(0,255,0)",},
+      {y: 7.31, label: "3 Meses",color: "rgb(255,255,0)",},
+      {y: 7.06, label: "Vencido",color: "rgb(255,0,0)",}
+    ]
+  }]
+});
+chart.render();
+
+}
 </script>
 
   </head>

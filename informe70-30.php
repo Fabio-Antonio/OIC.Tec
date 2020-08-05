@@ -28,7 +28,7 @@
       var cien_total=cien_treinta+cien_setenta;
       var globalt=100-(((setenta+treinta)*100)/cien_total);
       var globals=(((setenta+treinta)*100)/cien_total);
-    alert(cien_total);
+    
   var chart = new CanvasJS.Chart("chartContainer", {
   	animationEnabled: true,
   	title: {
@@ -74,7 +74,7 @@
  var chart3 = new CanvasJS.Chart("chartContainer3", {
         animationEnabled: true,
         title: {
-                text: "Consumo del Presupuesto Anual"
+                text: "Consumo de la Partida Presupuestal"
         },
         data: [{
                 type: "pie",
@@ -107,7 +107,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="principal.html" id="besa">B.E.S.A</a>
+          <a class="navbar-brand" href="principal.php" id="besa">B.E.S.A</a>
             <a> <img data-v-4a3754a3="" src="icons/sfp.png" alt="logo gobierno de méxico" class="logos" style="width: 30%; margin-top: 5px; margin-bottom: -25px; "></a>
         </div>
         <div class="collapse navbar-collapse" id="subenlaces">
@@ -345,29 +345,37 @@
           <h2 class="fuu"> INFORME PROCEDIMIENTOS 70-30 </h2>
           <div id="Layer70">
           <table class="table table-striped">
+           <tr>
+        <th>Presupuesto por partida</th>
+        </tr>
             <tr>
               
-              <th>Administración</th>
-		<th>Titular</th>
-		<th>Total</th>
+              <th>Clave</th>
+		<th>Presupuesto</th>
 		<th>70%</th>
 		<th>30%</th>
 
             </tr>
             <tr>
-              <td><?php $inicio_administracion=$_POST["inicio_administracion"]; echo $inicio_administracion;?></td>
-              <td><?php $titular=$_POST["titular"]; echo $titular;?></td>
+              
+                 <td><?php $claves=$_POST["claves"]; echo $claves;?></td>
 		 <td><?php $totals=$_POST["totals"]; echo $totals;?></td>
 		 <td><?php $setenta=$_POST["setenta"]; echo $setenta;?></td>
 		 <td><?php $treinta=$_POST["treinta"]; echo $treinta;?></td>
-
+                  <td><?php $claves=$_POST["claves"]; echo $claves;?></td>
+ 
             </tr>
            
           </table>
-        </div>
-                  
-	<div id="Layer70">
+        
+        </div> 
+         
+	<div id="Layer70" style="margin-top:120px">
+
           <table class="table table-striped">
+        <tr>
+	<th>30%</th>
+	</tr>
         <tr>
         <th>Id</th>
         <th>Numero de Contrato</th>
@@ -406,7 +414,14 @@ $arr=unserialize($_POST["valor"]);
 
 
           </table>
+      </div>
+
+	<div id="Layer70" style="margin-top:120px">
+
        <table  class="table table-striped">
+	<tr>
+        <th>70%</th>
+        </tr>
         <tr>
          <th>Id</th>
         <th>Numero de Contrato</th>
@@ -446,22 +461,22 @@ $arr=unserialize($_POST["valor2"]);
 	</table>
         </div>
         <div class="grafica">
-          <div id="chartContainer" style="height: 300px; width: 980px;margin-top:160px"></div>
+          <div id="chartContainer" style=" height: 300px; width: 980px;margin-top:200px"></div>
             <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
         </div>
 
 	 <div class="grafica">
-          <div id="chartContainer2" style="height: 300px; width: 980px;margin-top:0px"></div>
+          <div id="chartContainer2" style="height: 300px; width: 980px;margin-left:30px"></div>
             <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
         </div>
 	  <div class="grafica">
-          <div id="chartContainer3" style="height: 300px; width: 980px;margin-top:0px"></div>
+          <div id="chartContainer3" style="height: 300px; width: 980px;margin-left:30px"></div>
             <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
         </div>
 
 
         <div class="breg70">
-          <button type="button" id="bregresar" class="btn btn-primary"  onclick="location.href='principal.html'" name="bregresar"> Regresar </button>
+          <button type="button" id="bregresar" class="btn btn-primary"  onclick="location.href='principal.php'" name="bregresar"> Regresar </button>
         </div>
           </div>
         </div>

@@ -21,10 +21,25 @@ $dato=$row['id_contrato'];
 }
 
 
+$query=$conn->prepare("SELECT id FROM partida_presupuesto  WHERE clave=?");
+$query->bindParam(1, $clave_partida);
+$query->execute();
 
-$statement = $conn->prepare("INSERT INTO partidas_presupuestales (id_contrato,clave_partida)VALUES(?,?)");
+if($query)
+{
+while($row=$query->fetch())
+        {
+$dato2=$row['id'];
+
+}
+
+}
+
+
+
+$statement = $conn->prepare("INSERT INTO partidas_presupuestales (id_contrato,id_presupuesto)VALUES(?,?)");
 $statement->bindValue(1, $dato);
-$statement->bindValue(2, $clave_partida);
+$statement->bindValue(2, $dato2);
 $statement->execute();
    
   

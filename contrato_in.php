@@ -6,7 +6,7 @@
      $unidad_requirente = $_POST["unidad_requirente"];
         $nombre = $_POST["nombre"];
      $proveedor = $_POST["proveedor"];
-   $procedimiento=$_POST["procedimiento"];
+   $procedimientos=$_POST["procedimientos"];
      $numero_contrato = $_POST["numero_contrato"];
  $procedimiento_compranet = $_POST["procedimiento_compranet"];
    $contrato_compranet=$_POST["contrato_compranet"];
@@ -16,7 +16,7 @@
      $documentacion_descripcion = $_POST["documentacion_descripcion"];
  	$monto_maximo= $_POST["monto_maximo"];
 	$monto_minimo= $_POST["monto_minimo"];
- 
+        $consolidado=$_POST["consolidado"]; 
 $query=$conn->prepare("SELECT id_unidad_compradora FROM unidad_compradora  WHERE nombre_unidad_compradora=?");
 $query->bindParam(1, $nombre_unidad_compradora);
 $query->execute();
@@ -94,7 +94,7 @@ $dato6=$row['id_proveedor'];
 
 
 $query=$conn->prepare("SELECT id_consolidado  FROM consolidado  WHERE procedimiento=?");
-$query->bindParam(1, $procedimiento);
+$query->bindParam(1, $consolidado);
 $query->execute();
 
 if($query)

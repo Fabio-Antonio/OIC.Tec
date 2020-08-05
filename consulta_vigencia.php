@@ -92,7 +92,7 @@ $statement->execute();
 if($statement){
     while($row = $statement->fetch(PDO::FETCH_ASSOC)){
        $total3=$row["total"];
-
+      
     }
 
  if($total3==null){

@@ -1,9 +1,9 @@
 <?php
     require_once("conexion.php");
      
-    $procedimiento = $_GET["procedimientos"];
+    $procedimiento = $_POST["procedimientos"];
    		
-     $fundamento = $_GET["fundamento"];
+     $fundamento = $_POST["fundamento"];
 echo "bandera";
 $query=$conn->prepare("SELECT id_fundamento_legal FROM fundamento_legal WHERE fundamento=?");
 $query->bindParam(1, $fundamento);

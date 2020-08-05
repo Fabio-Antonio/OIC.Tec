@@ -24,7 +24,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="principal.html" id="besa">B.E.S.A</a>
+          <a class="navbar-brand" href="principal.php" id="besa">B.E.S.A</a>
           <a> <img data-v-4a3754a3="" src="icons/sfp.png" alt="logo gobierno de méxico" class="logos" style="width: 30%; margin-top: 5px; margin-bottom: -25px; "></a>
         </div>
         <div class="collapse navbar-collapse" id="subenlaces">
@@ -259,8 +259,9 @@
 <script lenguage="javascript" type="text/javascript">
          function mostrarText(){
     var selObj = document.getElementById('secontrapartisasp');
-      var clave_partida  = (document.getElementById('inclavepartida').value);
+      var selObj2 = document.getElementById('inclavepartida');
       var selIndex = selObj.options[selObj.selectedIndex].text;
+    var clave_partida  = selObj2.options[selObj2.selectedIndex].text;
 
       if(clave_partida<0||clave_partida.length==0||!(/^[0-9]+$/.test(clave_partida))||clave_partida.length>5){
         alert("El campo Clave Partida es invalido");
@@ -322,11 +323,23 @@
             </select>
           <div class="dclavepartida">
             <label class="textclavepartida">Clave Partida:</label>
-            <input type="number"  class="form-control" id="inclavepartida"  name="clave" min="0"  placeholder="Clave Partida">
+             <select id="inclavepartida" class="form-control" name="clavepartida">
+                <?php
+                        if(isset($_POST["flag2"])){
+                        $flag=unserialize($_POST["flag2"]);
+                        foreach($flag as $key=> $val){
+                ?>
+              <option value="<?php print($val['id']); ?>"><?php print($val['clave']); ?></option>
+                <?php
+                }
+        }
+                ?>
+            </select>
+
           </div>
           <div id="dbtncomprobacion">
               <button type="button" id="bcomprobacion" class="btn btn-primary" onclick="mostrarText();" name=""> Guardar </button>
-              <button type="button" id="bregresar" class="btn btn-primary"  onclick="location.href='principal.html'" name="bregresar"> Regresar </button>
+              <button type="button" id="bregresar" class="btn btn-primary"  onclick="location.href='principal.php'" name="bregresar"> Regresar </button>
           </div>
         </div>
       </div>
@@ -364,7 +377,7 @@
               </div>
               <div id="dbtncomprobacion">
                   <button type="button" id="bcomprobacion" class="btn btn-primary" onclick="mostrarTexts();" name="bcomprobacion"> Guardar </button>
-                  <button type="button" id="bregresar" class="btn btn-primary"  onclick="location.href='principal.html'" name="bregresar"> Regresar </button>
+                  <button type="button" id="bregresar" class="btn btn-primary"  onclick="location.href='principal.php'" name="bregresar"> Regresar </button>
               </div>
             </div>
           </div>

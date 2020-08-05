@@ -24,7 +24,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="principal.html" id="besa">B.E.S.A</a>
+          <a class="navbar-brand" href="principal.php" id="besa">B.E.S.A</a>
           <a> <img data-v-4a3754a3="" src="icons/sfp.png" alt="logo gobierno de méxico" class="logos" style="width: 30%; margin-top: 5px; margin-bottom: -25px; "></a>
         </div>
         <div class="collapse navbar-collapse" id="subenlaces">
@@ -303,7 +303,7 @@ window.location="inconformidades.php?motivo="+selIndex2+"&numero_contrato="+selI
           <input type="text" class="form-control" id="inmotivoin" name="motivo"  placeholder="Motivo" required maxlength="40" pattern="[A-Za-z0-9]*">
           <div id="dbtncomprobacion">
               <button type="submit" id="bcomprobacion" class="btn btn-primary" onclick=this.form.action="motivo.php" name="bcomprobacion"> Guardar </button>
-              <button type="button" id="bregresar" class="btn btn-primary"  onclick="location.href='principal.html'" name="bregresar"> Regresar </button>
+              <button type="button" id="bregresar" class="btn btn-primary"  onclick="location.href='principal.php'" name="bregresar"> Regresar </button>
           </div>
 	</form>
         </div>
@@ -367,7 +367,7 @@ window.location="inconformidades.php?motivo="+selIndex2+"&numero_contrato="+selI
               </div>
               <div id="dbtncomprobacion">
                   <button type="button" id="bcomprobacion" class="btn btn-primary" onclick="mostrarText();" name="bcomprobacion"> Guardar </button>
-                  <button type="button" id="bregresar" class="btn btn-primary"  onclick="location.href='principal.html'" name="bregresar"> Regresar </button>
+                  <button type="button" id="bregresar" class="btn btn-primary"  onclick="location.href='principal.php'" name="bregresar"> Regresar </button>
               </div>
             </div>
           </div>

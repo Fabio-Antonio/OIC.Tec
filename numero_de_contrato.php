@@ -14,8 +14,27 @@ $flag[]=$row;
 }
 
 $valor=serialize($flag);
-header("Location:consulta_numero_contrato.php?flag=$valor");
+//header("Location:consulta_numero_contrato.php?flag=$valor");
 	}
 
 $conn = null;
+
+
+$ch = curl_init();
+
+// definimos la URL a la que hacemos la petición
+curl_setopt($ch, CURLOPT_URL,"http://192.168.1.68:8888/besa/consulta_numero_contrato.php");
+// indicamos el tipo de petición: POST
+curl_setopt($ch, CURLOPT_POST, TRUE);
+// definimos cada uno de los parámetros
+curl_setopt($ch, CURLOPT_POSTFIELDS, "flag=$valor");
+
+
+ curl_exec ($ch);
+ $error= curl_error($ch);
+ echo $error;
+// cerramos la sesión cURL
+curl_close ($ch);
+
+
 ?>

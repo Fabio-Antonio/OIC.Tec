@@ -186,7 +186,7 @@ body{
 
 </button>
 
-<a class="navbar-brand" href="/">BESA</a>
+<a class="navbar-brand" href="/">B.E.S.A</a>
   <a> <img data-v-4a3754a3="" src="icons/lf.png" alt="logo gobierno de méxico" class="logos" style="width: 30%; margin-top: 5px; margin-bottom: -25px; "></a>
 
 </div>
@@ -201,10 +201,10 @@ body{
 
   <div class="body"></div>
 		<div class="grad"></div>
-    <div style="position: relative; left: 50px; top: 0;">
-		<img src="icons/lf.png" class='eye' style="width: 500px; height: 150px; margin-top: 50px;  "/></div>
+    <div style="position: relative; left: 80px; top: 0;">
+		<img src="icons/lf.png" class='eye' style="width: 500px; height: 210px; margin-top: 50px;  "/></div>
 		<div class="header">
-			<div><span> BESA </span></div>
+			<div><span> B.E.S.A </span></div>
 		</div>
 		<br>
 		<div class="login">

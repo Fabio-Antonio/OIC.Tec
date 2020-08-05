@@ -9,7 +9,8 @@ $asunto="Pronta vigencia de contrato";
 require_once("conexion.php");
 
 
-$query=$conn->prepare("SELECT numero_contrato,fin_vigencia,nombre,apellido_paterno,email FROM contrato INNER JOIN contrato_fechas ON contrato.id_fechas = contrato_fechas.id_fecha INNER JOIN administrador ON contrato.id_administrador = administrador.id_administrador");
+$query=$conn->prepare("SELECT numero_contrato,fin_vigencia,nombre,apellido_paterno,email FROM contrato INNER JOIN contrato_fechas ON
+contrato.id_contrato = contrato_fechas.id_contrato INNER JOIN administrador ON contrato.id_administrador = administrador.id_administrador");
 $time=time()+259200;
 $time2=time()+1296000;
 $time3=time()+2419200;

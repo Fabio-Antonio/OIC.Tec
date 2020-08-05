@@ -1,9 +1,9 @@
 <?php
     require_once("conexion.php");
 
-    $unidad = $_POST["unidad"];
+    $unidad = $_POST["uni"];
 
-     $clave_requirente = $_POST["clave_requirente"];
+     $clave_requirente = $_POST["claver"];
     $statement = $conn->prepare("INSERT INTO unidad_requirente (clave_requirente,unidad)VALUES(?,?)");
 $statement->bindParam(1, $clave_requirente);
 $statement->bindParam(2, $unidad);

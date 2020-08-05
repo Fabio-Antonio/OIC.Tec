@@ -24,7 +24,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="principal.html" id="besa">B.E.S.A</a>
+          <a class="navbar-brand" href="principal.php" id="besa">B.E.S.A</a>
           <a> <img data-v-4a3754a3="" src="icons/sfp.png" alt="logo gobierno de méxico" class="logos" style="width: 30%; margin-top: 5px; margin-bottom: -25px; "></a>
         </div>
         <div class="collapse navbar-collapse" id="subenlaces">
@@ -366,8 +366,8 @@
        var contrato_compranet  = (document.getElementById('incontratocompranetc').value);
         var convenio_interno  = (document.getElementById('inconveniointernoc').value);
         var objeto_contratacion  = (document.getElementById('inobjetocontratacionc').value);
-         var monto_maximo  = (document.getElementById('montomaxi').value);
-	 var monto_minimo  = (document.getElementById('montomini').value);
+         var monto_maximo  =Number((document.getElementById('montomaxi').value));
+	 var monto_minimo  = Number((document.getElementById('montomini').value));
         if(document.getElementById("incontratoabiertoc").checked==true){
  	var contrato_abierto  = (document.getElementById('incontratoabiertoc').value=1);
 	}else{
@@ -429,7 +429,7 @@
         document.getElementById("indocumentodescripcionc").focus();
         return;
         }
-	if(monto_maximo.length==0||!(/^[0-9]+$/.test(monto_maximo))||monto_maximo<0){
+	if(monto_maximo.length==0||!(/^[0-9.]+$/.test(monto_maximo))||monto_maximo<0){
 	$(function(){
                 $('#my-modal2').modal('show')
                 });
@@ -437,8 +437,11 @@
         document.getElementById("montomaxi").focus();
         return;
         }
-	if(monto_minimo.length==0||!(/^[0-9]+$/.test(monto_minimo))||monto_minimo<0){
-         alert("El campo  Monto minimo  es invalido");
+	if(monto_minimo.length==0||!(/^[0-9.]+$/.test(monto_minimo))||monto_minimo<0){
+        $(function(){
+                $('#my-modal2').modal('show')
+                });
+
         document.getElementById("montomini").focus();
         return;
         }
@@ -451,7 +454,7 @@
         return;
 
 	}
-
+ alert(selIndex2);
 /*window.location="contrato_in.php?nombre_unidad_compradora="+selIndex+"&procedimientos="+selIndex2+"&unidad_requirente="+selIndex3+"&nombre="+selIndex4+
         "&proveedor="+selIndex6+"&procedimiento="+selIndex8+"&numero_contrato="+numero_contrato+
 "&procedimiento_compranet="+procedimiento_compranet+"&contrato_compranet="+contrato_compranet+"&convenio_interno="+convenio_interno+"&objeto_contratacion="
@@ -463,7 +466,7 @@
 		"unidad_requirente":selIndex3,
 		"nombre":selIndex4,
         	"proveedor":selIndex6,
-		"procedimiento":selIndex8,
+		"consolidado":selIndex8,
 		"numero_contrato":numero_contrato,
 		"procedimiento_compranet":procedimiento_compranet,
 		"contrato_compranet":contrato_compranet,

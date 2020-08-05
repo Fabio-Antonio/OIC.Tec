@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <title> B.E.S.A </title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/estilos.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
     <link href="https://cdn.datos.gob.mx/assets/css/main.css" rel="stylesheet">
     <link href="https://cdn.datos.gob.mx/assets/img/favicon.ico" rel="shortcut icon">
     <link href="https://cdn.datos.gob.mx/bower_components/dgm-footer/dgm-footer.html" rel="import">
@@ -23,7 +25,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="principal.html" id="besa">B.E.S.A</a>
+            <a class="navbar-brand" href="principal.php" id="besa">B.E.S.A</a>
             <a> <img data-v-4a3754a3="" src="icons/sfp.png" alt="logo gobierno de méxico" class="logos" style="width: 30%; margin-top: 5px; margin-bottom: -25px; "></a>
           </div>
         <div class="collapse navbar-collapse" id="subenlaces">
@@ -249,6 +251,49 @@
   <!---------------------------------------------------------------------->
   <!---inicia las capturas----------------------------------------->
   <!---------------------------------------------------------------------->
+
+
+<div class="modal fade" role="dialog" id="my-modal" aria-labelledby="modal-title"  rel="stylesheet"
+ href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color:#27C44D;">
+                    <h3 class="modal-title" id="modal-title">B.E.S.A</h3>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Los datos se han ingresado correctamente!!
+                    </p>
+                </div>
+                <div class="modal-footer">
+                <button class="btn btn-primary" data-dismiss="modal">Ok</button>                    </div>
+            </div>
+        </div>
+    </div>
+
+<div class="modal fade" role="dialog" id="my-modal2"  aria-labelledby="modal-title"   rel="stylesheet"
+ href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header"style="background-color:#D0021B;">
+                    <h3 class="modal-title" id="modal-title">B.E.S.A</h3>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Los datos no son compatibles!!
+                    </p>
+                </div>
+                <div class="modal-footer">
+                <button class="btn btn-primary" data-dismiss="modal">Ok</button>                    </div>
+            </div>
+        </div>
+    </div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
   <div id="funpro">
     <div class="container1">
       <div class="row">
@@ -258,7 +303,7 @@
       <h2 class="fuu"> FUNDAMENTO LEGAL</h2>
     </div>
     <div id="tabf">
-      <form method="POST">
+      <form>
         <div class="dfundamentot">
           <label id="ccp" class="col-sm-20"> Fundamento: </label>
         </div>
@@ -272,9 +317,9 @@
             <input class="form-control" id="opcion" name="opcion" placeholder="Opción" maxlength="1" type="text" required>
           </div>
           <div id="btnac">
-              <button type="submit" id="bac" class="btn btn-primary" onclick=this.form.action="fundamento.php" name="button"> Guardar </button>
+              <button type="button" id="bac" class="btn btn-primary" onclick="ingresar2();" name="button"> Guardar </button>
 		</form>
-              <button type="button" id="bregresar" class="btn btn-primary"  onclick="location.href='principal.html'" name="bregresar"> Regresar </button>
+              <button type="button" id="bregresar" class="btn btn-primary"  onclick="location.href='principal.php'" name="bregresar"> Regresar </button>
           </div>
     </div>
   </div>
@@ -301,23 +346,126 @@
          function mostrarText(){
     var selObj = document.getElementById('prc');
       var pr  = (document.getElementById('proc').value);
-       if(pr.length==0||!(/^[A-Z-a-z]+$/.test(pr))){
-         alert("El campo de Procedimientos no es valido");
+
+
+	  if(selObj.length==0){
+       
+        document.getElementById("prc").focus();
+	 $(function(){
+                $('#my-modal2').modal('show')
+                });
+
+        return;
+        }
+
+       if(pr.length==0||!(/^[A-Z-a-z0-9ñÑáéíóúÁÉÍÓÚ,.°\s]*$/.test(pr))){
          document.getElementById('proc').focus();
+	 $(function(){
+
+	  $('#my-modal2').modal('show')
+                });
+
          return;
 	}
+
+
        var selIndex = selObj.options[selObj.selectedIndex].text;
 
+    if(selIndex.length==0||!(/^[A-Z-a-z0-9ñÑáéíóúÁÉÍÓÚ,.°\s]*$/.test(selIndex))){
+         document.getElementById('prc').focus();
+	  $(function(){
+                $('#my-modal2').modal('show')
+                });
 
-         alert(selIndex);
-         window.location="procedimientos.php?fundamento="+selIndex+"&procedimientos="+pr;
-    }
+
+         return;
+        }
+
+        
+
+        // window.location="procedimientos.php?fundamento="+selIndex+"&procedimientos="+pr;
+
+$.post('procedimientos.php',{
+"fundamento":selIndex,
+"procedimientos":pr
+},function(data){
+
+$('#my-modal').modal('show')
+
+});
+}
+
+    
 </script>
+
+<script   lenguaje="javascript" type="text/javascript">
+function ingresar2(){
+var fundamento= (document.getElementById("fundanen").value);
+var fecha= (document.getElementById("fechafun").value);
+var opcion= (document.getElementById("opcion").value);
+
+
+if(fundamento.length==0||fundamento.lenth>45){
+
+document.getElementById("fundanen").focus();
+ $(function(){
+                $('#my-modal2').modal('show')
+                });
+
+return;
+}
+if(!(/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ,.°\s]*$/i.test(fundamento))){
+document.getElementById("fundanen").focus();
+ $(function(){
+                $('#my-modal2').modal('show')
+                });
+
+return;
+
+}
+if(opcion.length==0||opcion.lenth>1){
+document.getElementById("opcion").focus();
+ $(function(){
+                $('#my-modal2').modal('show')
+                });
+
+return;
+}
+
+if(!(/^[a-zA-Z]*$/i.test(opcion))){
+
+document.getElementById("un").focus();
+ $(function(){
+                $('#my-modal2').modal('show')
+                });
+
+return;
+
+}
+
+
+
+$.post('fundamento.php',{
+"fundamento":fundamento,
+"fecha":fecha,
+"opcion":opcion
+
+},function(data){
+
+$('#my-modal').modal('show')
+
+});
+}
+</script>
+
+
+
+
            <select id="prc" class="prc" name="prc">
 
                    <?php
-                if (isset($_GET["flag"])) {
-              $flag=unserialize($_GET["flag"]);
+                if (isset($_POST["flag"])) {
+              $flag=unserialize($_POST["flag"]);
               $valor=serialize($flag);
               foreach ($flag as $key=> $val) {
                   ?>
@@ -332,7 +480,7 @@
 
     <div id="btnca">
         <button type="button" id="bca" onclick="mostrarText();" class="btn btn-primary" name="button"> Guardar </button>
-        <button type="button" id="bregresar" class="btn btn-primary"  onclick="location.href='principal.html'" name="bregresar"> Regresar </button>
+        <button type="button" id="bregresar" class="btn btn-primary"  onclick="location.href='principal.php'" name="bregresar"> Regresar </button>
     </div>
   </div>
 </div>
@@ -340,12 +488,7 @@
 </div>
 </div>
 
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"
-			integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY"
-			crossorigin="anonymous">
-		</script>
-		<script src="js/bootstrap.min.js"></script>
-
+		
     <footer>
     <div class="contenedor-todo-footer">
 

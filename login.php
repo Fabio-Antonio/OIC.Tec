@@ -1,6 +1,7 @@
 <?php
     require_once("conexion.php");
-     
+     session_start();
+    
     $nombre = $_POST["nombre"];
     $password = $_POST["password"];  		
     
@@ -11,11 +12,10 @@ $statement->bindParam(2, $password);
 $statement->execute();
        if($statement->rowCount()>0){
        while ($row = $statement->fetch()){
-    $response["success"] = true; 
-        
+
         if($row['permiso']=="administrador"){
-       
-        header("location:principal.html");
+       $_SESSION['usuario']=$nombre;
+        header("location:principal.php");
        
 	}else if($row['permiso']=="empleado"){
 	header("location:lectura.html");

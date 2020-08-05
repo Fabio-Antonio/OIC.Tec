@@ -22,7 +22,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="principal.html" id="besa">B.E.S.A</a>
+          <a class="navbar-brand" href="principal.php" id="besa">B.E.S.A</a>
             <a> <img data-v-4a3754a3="" src="icons/sfp.png" alt="logo gobierno de méxico" class="logos" style="width: 30%; margin-top: 5px; margin-bottom: -25px; "></a>
         </div>
         <div class="collapse navbar-collapse" id="subenlaces">
@@ -271,8 +271,8 @@
 	    <div class="dropdown-menu open" role="combobox">
               <ul id="lista" class="dropdown-menu inner" role="listbox" aria-expanded="false">
 		 <?php
-                if (isset($_GET['flag'])) {
-              $flag=unserialize($_GET['flag']);
+                if (isset($_POST['flag'])) {
+              $flag=unserialize($_POST['flag']);
               $valor=json_encode($flag);
 
               foreach ($flag as $key=> $val) {
@@ -285,7 +285,7 @@
                   <span class="glyphicon glyphicon-ok check-mark"></span>
                 </a>
               </li>
-		 <?php
+x		 <?php
               }
 
 }
@@ -307,7 +307,8 @@
                 var Variable='<?=$valor?>';
                 var sOptionVal = $(this).val();
                  var bool=confirm("Se desea consultar: "+value2);
-  if(bool){
+  
+   if(bool){
          window.location="consulta.php?numero_contrato="+value2+"&flag="+Variable;
  	}else{
 alert("solicitud cancelada");

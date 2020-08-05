@@ -1,11 +1,11 @@
 <?php
    require_once("conexion.php");
 
-   $titular=$_POST["titular"];
- $presupuesto=$_POST["presupuesto"];
+   $presupuesto=$_POST["presupuesto"];
+ $clave=$_POST["clave"];
    
-    $statement = $conn->prepare("CALL fecha_presupuesto(DATE(NOW()),?,?)");    
-    $statement->bindParam(1,$titular);
+    $statement = $conn->prepare("INSERT INTO partida_presupuesto(clave,presupuesto)VALUES(?,?)");    
+    $statement->bindParam(1,$clave);
 	 $statement->bindValue(2,$presupuesto);
 
 $statement->execute();
@@ -15,7 +15,7 @@ if($statement){
   
 }else{
 echo "<script>alert('La insersion a la base de datos es incorrecta')
-window.location.replace('principal.html');</script>";
+window.location.replace('principal.php');</script>";
 }
 
 

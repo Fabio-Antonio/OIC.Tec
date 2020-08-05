@@ -68,7 +68,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="principal.html" id="besa">B.E.S.A</a>
+          <a class="navbar-brand" href="principal.php" id="besa">B.E.S.A</a>
             <a> <img data-v-4a3754a3="" src="icons/sfp.png" alt="logo gobierno de méxico" class="logos" style="width: 30%; margin-top: 5px; margin-bottom: -25px; "></a>
         </div>
         <div class="collapse navbar-collapse" id="subenlaces">
@@ -343,10 +343,10 @@ $arr=unserialize($_POST["flag"]);
        ?>
           </table>
         </div>
-        <div id="chartContainer" ></div>
+        <div id="chartContainer" style="margin-top:120px" ></div>
           <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
         <div class="breggt">
-          <button type="button" id="bregresar" class="btn btn-primary"  onclick="location.href='principal.html'" name="bregresar"> Regresar </button>
+          <button type="button" id="bregresar" class="btn btn-primary"  onclick="location.href='principal.php'" name="bregresar"> Regresar </button>
         </div>
           </div>
         </div>

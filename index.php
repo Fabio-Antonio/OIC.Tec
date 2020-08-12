@@ -168,31 +168,21 @@ body{
 
 </head>
 
-<nav class="navbar navbar-inverse sub-navbar navbar-fixed-top">
+<nav class="navbar navbar-inverse sub-navbar navbar-fixed-top" style="height: 55px; ">
+  <div class="container">
+    <div class="navbar-header" style="margin-top: 10px;">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#subenlaces">
+      <span class="sr-only">Interruptor de Navegación</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="principal.php" id="besa2" >B.E.S.A</a>
+      <a> <img data-v-4a3754a3="" src="icons/lf.png" alt="logo gobierno de méxico" class="logos" style="width: 80%;height: 50%; margin-top: -100px; margin-bottom: -25px; margin-left: 420px "></a>
+    </div>
 
-<div class="container">
-
-<div class="navbar-header">
-
-<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#subenlaces">
-
-<span class="sr-only">Interruptor de Navegaci�n</span>
-
-<span class="icon-bar"></span>
-
-<span class="icon-bar"></span>
-
-<span class="icon-bar"></span>
-
-</button>
-
-<a class="navbar-brand" href="/">B.E.S.A</a>
-  <a> <img data-v-4a3754a3="" src="icons/lf.png" alt="logo gobierno de méxico" class="logos" style="width: 30%; margin-top: 5px; margin-bottom: -25px; "></a>
-
-</div>
-
-</div>
-
+    
+  </div>
 </nav>
 
 

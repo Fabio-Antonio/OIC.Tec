@@ -13,23 +13,24 @@
 		  </head>
   <body class="front">
     <main>
-    <nav class="navbar navbar-inverse sub-navbar navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#subenlaces">
+      <nav class="navbar navbar-inverse sub-navbar navbar-fixed-top" style="height: 55px; ">
+        <div class="container">
+          <div class="navbar-header" style="margin-top: 10px;">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#subenlaces">
             <span class="sr-only">Interruptor de Navegación</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="principal.php" id="besa">B.E.S.A</a>
-            <a> <img data-v-4a3754a3="" src="icons/sfp.png" alt="logo gobierno de méxico" class="logos" style="width: 30%; margin-top: 5px; margin-bottom: -25px; "></a>
-        </div>
-        <div class="collapse navbar-collapse" id="subenlaces">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Enlace</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Desplegable <span class="caret"></span></a>
+            </button>
+            <a class="navbar-brand" href="principal.php" id="besa2" >B.E.S.A</a>
+            <a> <img data-v-4a3754a3="" src="icons/lf.png" alt="logo gobierno de méxico" class="logos" style="width: 80%;height: 50%; margin-top: -100px; margin-bottom: -25px; margin-left: 420px "></a>
+          </div>
+
+          <div class="collapse navbar-collapse" id="subenlaces" style=" width:108%; margin-top: -30px;">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#">Enlace</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Desplegable <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="#">Acción</a></li>
                 <li><a href="#">Otra acción</a></li>
@@ -39,15 +40,15 @@
               </ul>
             </li>
           </ul>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
     <br><br><br><br>
-    <!-----------------------  -------------------------->
-    <!-----------------------  -------------------------->
-    <!----------------------- INICIO DE MENU A LA IZQUIERDA  -------------------------->
-    <!-----------------------  -------------------------->
-    <!-----------------------  -------------------------->
+    <!------------------------------------------------->
+    <!------------------------------------------------->
+    <!---------INICIO DE MENU A LA IZQUIERDA-------------------------->
+    <!------------------------------------------------->
+    <!------------------------------------------------->
 
     <div id="contenedorizquierda">
 
@@ -251,208 +252,245 @@
   </div>
 
 <div id="centro">
-  <div class="container1">
-    <div class="row">
-      <div class='col-sm-150 col-md-150 col-ld-150'>
+  <div class="container1" >
+    <div class="row" id="todo">
+      <div class='col-sm-150 col-md-150 col-ld-150' id="todo">
+        <div id="tit">
+          <h2 class="ts">CONSULTA POR NÚMERO DE CONTRATO </h2>
+        </div>
 
-      <div id="tit">
-        <h1 class="tb"> B.E.S.A </h1>
-        <h2 class="ts"> Sistema de Seguimiento a Contratos</h2>
-      </div>
-      <div id="selec">
-        <h3 class="selc"> Seleccionar el contrato a consultar </h3>
-        <!--inicio de buscar -->
-        <div id="busca">
-          <div class="btn-group bootstrap-select form-control hidden-xs hidden-sm">
-          <button type="button" class="btn dropdown-toggle bs-placeholder btn-default" id="drop" data-toggle="dropdown" role="button" title="Filtrar por tema">
-            <span class="filter-option pull-left">Buscar</span>
-            <span class="bs-caret"></span>
+
+        <!--select-->
+        <div id="selec">
+          <h3 class="selc"> Seleccionar el contrato a consultar </h3>
+          <!--inicio de buscar -->
+          <div id="busca">
+            <div class="btn-group bootstrap-select form-control hidden-xs hidden-sm">
+            <button type="button" class="btn dropdown-toggle bs-placeholder btn-default" id="drop" data-toggle="dropdown" role="button" title="Filtrar por tema">
+              <span class="filter-option pull-left">Buscar</span>
+              <span class="bs-caret"></span>
+            </button>
+        <div class="dropdown-menu open" role="combobox">
+                <ul id="lista" class="dropdown-menu inner" role="listbox" aria-expanded="false">
+       <?php
+                  if (isset($_POST['flag'])) {
+                $flag=unserialize($_POST['flag']);
+                $valor=json_encode($flag);
+
+                foreach ($flag as $key=> $val) {
+
+                    ?>
+
+                 <li data-original-index="<?php print($val['id_contrato']);?>" id="<?php print($val['id_contrato']);?>">
+                  <a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false">
+                    <span  class="text"><?php print($val['numero_contrato']); ?></span>
+                    <span class="glyphicon glyphicon-ok check-mark"></span>
+                  </a>
+                </li>
+  x		 <?php
+                }
+
+  }
+
+  ?>
+
+      </ul>
+            </div>
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+          <script lenguage="javascript" type="text/javascript">
+
+              $("#lista li").on("click",function() {
+                  var value = $(this).text();
+      var value2=value.trim();
+                  var Variable='<?=$valor?>';
+                  var sOptionVal = $(this).val();
+                   var bool=confirm("Se desea consultar: "+value2);
+
+     if(bool){
+           window.location="consulta.php?numero_contrato="+value2+"&flag="+Variable;
+    }else{
+  alert("solicitud cancelada");
+  }
+            });
+             </script>
+
+          </div>
+  <div class="modal later-modal">
+    <p>Select a time to deliver.</p>
+  </div>
+       <button id ="ser"  class="btn btn-primary">
+          <div class="glyphicon glyphicon-search"></div>
           </button>
-	    <div class="dropdown-menu open" role="combobox">
-              <ul id="lista" class="dropdown-menu inner" role="listbox" aria-expanded="false">
-		 <?php
-                if (isset($_POST['flag'])) {
-              $flag=unserialize($_POST['flag']);
-              $valor=json_encode($flag);
-
-              foreach ($flag as $key=> $val) {
-
-                  ?>
-
-               <li data-original-index="<?php print($val['id_contrato']);?>" id="<?php print($val['id_contrato']);?>">
-                <a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false">
-                  <span  class="text"><?php print($val['numero_contrato']); ?></span>
-                  <span class="glyphicon glyphicon-ok check-mark"></span>
-                </a>
-              </li>
-x		 <?php
-              }
-
-}
-
-?>
-
-    </ul>
           </div>
 
 
+   <?php
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  if (isset($_GET['numero_contrato'])) {
 
-        <script lenguage="javascript" type="text/javascript">
 
-            $("#lista li").on("click",function() {
-                var value = $(this).text();
-		var value2=value.trim();
-                var Variable='<?=$valor?>';
-                var sOptionVal = $(this).val();
-                 var bool=confirm("Se desea consultar: "+value2);
-  
-   if(bool){
-         window.location="consulta.php?numero_contrato="+value2+"&flag="+Variable;
- 	}else{
-alert("solicitud cancelada");
-}
-          });
-           </script>
+                $numero_contrato=$_GET["numero_contrato"];
+               $contrato_compranet=$_GET["contrato_compranet"];
+       $numero_unidad=$_GET["numero_unidad"];
+               $nombre_unidad_compradora=$_GET["nombre_unidad_compradora"];
+       $procedimiento=$_GET["procedimiento"];
+               $monto_total=$_GET["monto_total"];
+       $unidad=$_GET["unidad"];
+               $clave_requirente=$_GET["clave_requirente"];
+                $monto_maximo=$_GET["monto_maximo"];
+               $monto_minimo=$_GET["monto_minimo"];
+       $objeto_contratacion=$_GET["objeto_contratacion"];
+               $procedimientos=$_GET["procedimientos"];
+       $fundamento=$_GET["fundamento"];
+               $suficiencia=$_GET["suficiencia"];
+       $inicio_vigencia=$_GET["inicio_vigencia"];
+               $fin_vigencia=$_GET["fin_vigencia"];
+       $notificacion_adjudicada=$_GET["notificacion_adjudicada"];
+               $formalizacion_contrato=$_GET["formalizacion_contrato"];
+       $resicion_contrato=$_GET["resicion_contrato"];
+               $sat=$_GET["sat"];
+       $imss=$_GET["imss"];
+               $infonavit=$_GET["infonavit"];
+      $garantia_cumplimiento=$_GET["garantia_cumplimiento"];
+      }else{
+  $numero_contrato="";
+  $contrato_compranet="";
+   $numero_unidad="";
+   $nombre_unidad_compradora="";
+  $procedimiento="";
+   $monto_total="";
+  $unidad="";
+   $clave_requirente="";
+  $monto_maximo="";
+  $monto_minimo="";
+  $objeto_contratacion="";
+  $procedimientos="";
+  $fundamento="";
+  $suficiencia="";
+   $inicio_vigencia="";
+  $fin_vigencia="";
+  $notificacion_adjudicada="";
+  $formalizacion_contrato="";
+  $resicion_contrato="";
+  $sat="";
+  $imss="";
+  $infonavit="";
+  $garantia_cumplimiento="";
+  }
+         ?>
 
+       </div>
+
+
+
+        <!--final select-->
+
+         <div class="dtextnumcontracon">
+           <label class = "textnumcontracon">Numero de contrato</label>
+           <input  id ="intextnumcontracon" class="form-control" type="text" placeholder="NÚMERO DE CONTRATO"  readonly="readonly" value="<?php echo $numero_contrato;?>">
+         </div>
+
+        <div class="dtextnumcontratocomcon">
+          <label class="textnumcontratocomcon">Número Contrato Compranet</label>
+          <input id="intextnumcontratocomcon" class="form-control"  placeholder="Número Contrato Compranet" type="text"  readonly="readonly" value="<?php echo $contrato_compranet; ?>" >
         </div>
-<div class="modal later-modal">
-  <p>Select a time to deliver.</p>
+        <div class="dtextsufipresupcon">
+          <label class="textsufipresupcon">Suficiencia Presupuestal</label>
+          <input id="intextsufipresupcon" class="form-control" placeholder="Suficiencia Presupuestas" type="text"  readonly="readonly"  value="<?php echo $suficiencia ?>">
+        </div>
+        <div class="dtextproceconsocon">
+          <label class="textproceconsocon">Procedimiento Consolidado</label>
+          <input id="indtextproceconsocon" class="form-control"  placeholder="Procedimiento Consolidado" type="text"  readonly="readonly" value="<?php echo $procedimiento ?>">
+        </div>
+        <div class="dtextiniciovigcon">
+          <label class="textiniciovigcon">Inicio Vigencia</label>
+          <input id="indtextiniciovigcon" class="form-control" placeholder="Inicio Vigencia" type="text"  readonly="readonly"  value="<?php echo $inicio_vigencia ?>" >
+        </div>
+        <div class="dtextfinvigenciacon">
+          <label class="textfinvigenciacon">Fin Vigencia</label>
+          <input id="indtextfinvigenciacon" class="form-control" placeholder="Fin Vigencia" type="text"  readonly="readonly" value="<?php echo $fin_vigencia ?>">
+        </div>
+        <div class="dtextfechadnotifadcon">
+          <label class="textfechadnotifadcon">Fecha de Notificación Adjudicación</label>
+          <input id="indtextfechadnotifadcon" class="form-control" placeholder="Fecha de Notificación Adjudicación" type="text"  readonly="readonly" value="<?php echo $notificacion_adjudicada ?>"  >
+        </div>
+        <div class="dtextfechadformalcon">
+            <label class="textfechadformalcon">Fecha de Formalización</label>
+            <input id="indtextfechadformalcon" class="form-control" placeholder="Fecha de Formalización" type="text"  readonly="readonly" value="<?php echo $formalizacion_contrato ?>" >
+        </div>
+        <div class="dtextmontototconcon">
+            <label class="textmontototconcon">Monto Total Consolidado</label>
+            <input id="indtextmontototconcon" class="form-control"  placeholder="Monto Total Consolidado" type="text"  readonly="readonly" value="<?php echo "$".$monto_total ?>">
+        </div>
+        <div class="dunidadrequircon">
+            <label class="unidadrequircon">Unidad Requirente</label>
+            <input id="indunidadrequircon" class="form-control" placeholder="Unidad Requirente" type="text"  readonly="readonly" value="<?php echo $unidad ?>">
+        </div>
+        <div class="dtextmontmaxcon">
+          <label class="textmontmaxcon">Monto Máximo</label>
+          <input id="indtextmontmaxcon" class="form-control" placeholder="Monto Máximo" type="text"  readonly="readonly" value="<?php echo "$".$monto_maximo ?>">
+        </div>
+        <div class="dtextmontmincon">
+          <label class="textmontmincon">Monto Minimo</label>
+          <input id="indtextmontmincon" class="form-control" placeholder="Monto Minimo" type="text"  readonly="readonly" value="">
+        </div>
+        <div class="dtextopinsatcon">
+          <label class="textopinsatcon">Opinion SAT</label>
+          <input id="indtextopinsatcon" class="form-control"  placeholder="Opinion SAT" type="text"  readonly="readonly" value="<?php echo $sat ?>">
+        </div>
+        <div class="dtextopinininfocon">
+            <label class="textopinininfocon">Opinion INFONAVIT</label>
+            <input id="indtextopinininfocon" class="form-control" placeholder="Opinion INFONAVIT" type="text"  readonly="readonly" value="<?php echo $infonavit ?>">
+        </div>
+        <div class="dtextobjetconcon">
+            <label class="textobjetconcon">Objeto del Contrato</label>
+            <input id="indtextobjetconcon" class="form-control" placeholder="Objeto del Contrato" type="text"  readonly="readonly" value="<?php echo $objeto_contratacion ?>">
+        </div>
+        <div class="dtextfundalegcon">
+            <label class="textfundalegcon">Fundamento Legal</label>
+            <input id="indtextfundalegcon" class="form-control"  placeholder="Fundamento Legal" type="text"  readonly="readonly"  value="<?php echo $fundamento ?>">
+        </div>
+        <div class="dtextgarantidconcon">
+            <label class="textgarantidconcon">Garantia de Contratación</label>
+            <input id="indtextgarantidconcon" class="form-control" placeholder="Procedimiento de Contratación" type="text"  readonly="readonly" value="<?php echo $procedimientos ?>">
+        </div>
+        <div class="dtextgarantcumpcon">
+            <label class="textgarantcumpcon">Garantia de Cumplimiento</label>
+            <input id="indtextgarantcumpcon" class="form-control" placeholder="Garantia de Cumplimiento" type="text"  readonly="readonly" value="<?php echo $garantia_cumplimiento ?>" >
+        </div>
+        <div class="dtextunidadcomcon">
+          <label class="textunidadcomcon">Número Unidad Compradora</label>
+          <input id="intextunidadcomcon" class="form-control" placeholder="Número de Unidad Compradora" type="text"  readonly="readonly" value="<?php echo $numero_unidad ?>">
+          <textarea id="texatextunidadcomcon" class="form-control" placeholder="" rows="3"  readonly="readonly" ><?php echo $nombre_unidad_compradora ?></textarea>
+        </div>
+        <div class="dtextresicon">
+            <label class="textresicon">Rescision</label>
+            <input id="indtextresicon" class="form-control"  placeholder="Rescision" type="text"  readonly="readonly" value="<?php echo $resicion_contrato ?>" >
+            <textarea id="texadtextresicon" class="form-control" placeholder="" rows="3"  readonly="readonly"> <?php echo $clave_requirente ?></textarea>
+        </div>
+        <div class="dche">
+            <label id="ccp" class="col-sm-20">Contrato Abierto</label>
+            <input id="ck" type="checkbox" name="Entregables">
+        </div>
+
+
+      <div id="dbtdescargar">
+       <button class="btn btn-primary btn-lg" onclick="saludo();" id="btdescargar" > Descargar pdf </button>
+      </div>
+      <div id="dbtregcon">
+       <button class="btn btn-primary btn-lg" id="btregrecon" > Regresar </button>
+      </div>
+
+      </div>
+    </div>
+  </div>
 </div>
-     <button id ="ser"  class="btn btn-primary">
-        <div class="glyphicon glyphicon-search"></div>
-        </button>
-        </div>
-      </div>
-    </div>
-
- <?php
-
-if (isset($_GET['numero_contrato'])) {
 
 
-              $numero_contrato=$_GET["numero_contrato"];
-             $contrato_compranet=$_GET["contrato_compranet"];
-		 $numero_unidad=$_GET["numero_unidad"];
-             $nombre_unidad_compradora=$_GET["nombre_unidad_compradora"];
-		 $procedimiento=$_GET["procedimiento"];
-             $monto_total=$_GET["monto_total"];
-		 $unidad=$_GET["unidad"];
-             $clave_requirente=$_GET["clave_requirente"];
-              $monto_maximo=$_GET["monto_maximo"];
-             $monto_minimo=$_GET["monto_minimo"];
-		 $objeto_contratacion=$_GET["objeto_contratacion"];
-             $procedimientos=$_GET["procedimientos"];
-		 $fundamento=$_GET["fundamento"];
-             $suficiencia=$_GET["suficiencia"];
-		 $inicio_vigencia=$_GET["inicio_vigencia"];
-             $fin_vigencia=$_GET["fin_vigencia"];
-		 $notificacion_adjudicada=$_GET["notificacion_adjudicada"];
-             $formalizacion_contrato=$_GET["formalizacion_contrato"];
-		 $resicion_contrato=$_GET["resicion_contrato"];
-             $sat=$_GET["sat"];
-		 $imss=$_GET["imss"];
-             $infonavit=$_GET["infonavit"];
-		$garantia_cumplimiento=$_GET["garantia_cumplimiento"];
-		}else{
-$numero_contrato="";
-$contrato_compranet="";
- $numero_unidad="";
- $nombre_unidad_compradora="";
-$procedimiento="";
- $monto_total="";
-$unidad="";
- $clave_requirente="";
-$monto_maximo="";
-$monto_minimo="";
-$objeto_contratacion="";
-$procedimientos="";
-$fundamento="";
-$suficiencia="";
- $inicio_vigencia="";
-$fin_vigencia="";
-$notificacion_adjudicada="";
-$formalizacion_contrato="";
-$resicion_contrato="";
-$sat="";
-$imss="";
-$infonavit="";
-$garantia_cumplimiento="";
-}
-       ?>
-
-     </div>
-     </div>
-     </div>
-
-    <!-- inicio de mostrar consulta -->
-    <div id="centro2">
-      <div class="container1">
-        <div class="row">
-          <div class='col-sm-350 col-md-350 col-ld-350'>
-
-      <h2 class="con"> Consulta fecha adjudicación y formalización </h2>
-      <br>
-      <div>
-           <table class="tabla">
-            <tr>
-                <th><label id="ccp" class="col-sm-20">Numero de contrato</label></th>
-       <td> <input id="cp" class="form-control" type="text" placeholder="NÚMERO DE CONTRATO"  readonly="readonly" value="<?php echo $numero_contrato;?>"</td>
-
-            </tr>
-            <tr>
-              <th><label id="ccp" class="col-sm-20">Número Contrato Compranet</label></th><td><input class="form-control" id="cp" placeholder="Número Contrato Compranet" type="text"  readonly="readonly" value="<?php echo $contrato_compranet; ?>" ></td>
-              <th><label id="ccp" class="col-sm-20">Suficiencia Presupuestal</label></th><td><input class="form-control" id="sp" placeholder="Suficiencia Presupuestas" type="text"  readonly="readonly"  value="<?php echo $suficiencia ?>"></td>
-            </tr>
-            <tr>
-              <th><label id="ccp" class="col-sm-20">Número Unidad Compradora</label></th><td><input class="form-control" id="uc" placeholder="Número de Unidad Compradora" type="text"  readonly="readonly" value="<?php echo $numero_unidad ?>"></td>
-              <th><label id="ccp" class="col-sm-20">Inicio Vigencia</label></th><td><input class="form-control" id="iv" placeholder="Inicio Vigencia" type="text"  readonly="readonly"  value="<?php echo $inicio_vigencia ?>" ></td>
-            </tr>
-              <th><label id="ccp" class="col-sm-20"></label></th><td><textarea class="form-control" placeholder="" rows="3"  readonly="readonly" ><?php echo $nombre_unidad_compradora ?></textarea></td>
-              <th><label id="ccp" class="col-sm-20">Fin Vigencia</label></th><td><input class="form-control" id="fv" placeholder="Fin Vigencia" type="text"  readonly="readonly" value="<?php echo $fin_vigencia ?>"></td>
-            <tr>
-              <th><label id="ccp" class="col-sm-20">Procedimiento Consolidado</label></th><td><input class="form-control" id="pc" placeholder="Procedimiento Consolidado" type="text"  readonly="readonly" value="<?php echo $procedimiento ?>"></td>
-              <th><label id="ccp" class="col-sm-20">Fecha de Notificación Adjudicación</label></th><td><input class="form-control" id="fa" placeholder="Fecha de Notificación Adjudicación" type="text"  readonly="readonly" value="<?php echo $notificacion_adjudicada ?>"  ></td>
-            </tr>
-            <tr>
-              <th><label id="ccp" class="col-sm-20">Monto Total Consolidado</label></th><td><input class="form-control" id="mt" placeholder="Monto Total Consolidado" type="text"  readonly="readonly" value="<?php echo "$".$monto_total ?>"></td>
-              <th><label id="ccp" class="col-sm-20">Fecha de Formalización</label></th><td><input class="form-control" id="ff" placeholder="Fecha de Formalización" type="text"  readonly="readonly" value="<?php echo $formalizacion_contrato ?>" ></td>
-            </tr>
-            <tr>
-              <th><label id="ccp" class="col-sm-20">Unidad Requirente</label></th><td><input class="form-control" id="ur" placeholder="Unidad Requirente" type="text"  readonly="readonly" value="<?php echo $unidad ?>"></td>
-              <th><label id="ccp" class="col-sm-20">Rescision</label></th><td><input class="form-control" id="r" placeholder="Rescision" type="text"  readonly="readonly" value="<?php echo $resicion_contrato ?>" ></td>
-            </tr>
-            <tr>
-              <th><label id="ccp" class="col-sm-20"></label></th><td><textarea class="form-control" placeholder="" rows="3"  readonly="readonly"> <?php echo $clave_requirente ?></textarea></td>
-              <th><label id="ccp" class="col-sm-20">Opinion SAT</label></th><td><input class="form-control" id="os" placeholder="Opinion SAT" type="text"  readonly="readonly" value="<?php echo $sat ?>"></td>
-            </tr>
-            <tr>
-              <th><label id="ccp" class="col-sm-20">Monto Máximo</label></th><td><input class="form-control" id="mm" placeholder="Monto Máximo" type="text"  readonly="readonly" value="<?php echo "$".$monto_maximo ?>"></td>
-              <th><label id="ccp" class="col-sm-20">Opinion INFONAVIT</label></th><td><input class="form-control" id="oi" placeholder="Opinion INFONAVIT" type="text"  readonly="readonly" value="<?php echo $infonavit ?>"></td>
-            </tr>
-            <tr>
-              <th><label id="ccp" class="col-sm-20">Objeto del Contrato</label></th><td><input class="form-control" id="oc" placeholder="Objeto del Contrato" type="text"  readonly="readonly" value="<?php echo $objeto_contratacion ?>"></td>
-              <th><label id="ccp" class="col-sm-20">Garantia de Cumplimiento</label></th><td><input class="form-control" id="gc" placeholder="Garantia de Cumplimiento" type="text"  readonly="readonly" value="<?php echo $garantia_cumplimiento ?>" ></td>
-            </tr>
-            <tr>
-              <th><label id="ccp" class="col-sm-20">Garantia de Contratación</label></th><td><input class="form-control" id="pdc" placeholder="Procedimiento de Contratación" type="text"  readonly="readonly" value="<?php echo $procedimientos ?>"></td>
-              <th><label id="ccp" class="col-sm-20">Fundamento Legal</label></th><td><input class="form-control" id="fl" placeholder="Fundamento Legal" type="text"  readonly="readonly"  value="<?php echo $fundamento ?>"></td>
-            </tr>
-            <tr>
-                <th><label id="ccp" class="col-sm-20">Contrato Abierto</label></th><td><input id="ck" type="checkbox" name="Entregables"></td>
-            </tr>
-
-          </table>
-    </div>
-
-<div id="dbtdescargar">
-           <button class="btn btn-primary btn-lg" onclick="saludo();" id="btdescargar" > Descargar pdf </button>
-          </div>
-        </div>
-        </div>
-        </div>
-      </div>
 <script language="javascript" type="text/javascript">
 
 function saludo(){

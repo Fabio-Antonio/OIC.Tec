@@ -22,11 +22,11 @@
          var total2 ='<?=$total2?>';
          <?php $total3=$_POST["total3"];?>
          var total3 ='<?=$total3?>';
-        
+
           total1=((total1*100)/total);
                 total2=((total2*100)/total);
               total3=((total3*100)/total);
-		
+
 
 
 
@@ -60,23 +60,24 @@
 
   <body class="front">
     <main>
-    <nav class="navbar navbar-inverse sub-navbar navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#subenlaces">
+      <nav class="navbar navbar-inverse sub-navbar navbar-fixed-top" style="height: 55px">
+        <div class="container">
+          <div class="navbar-header" >
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#subenlaces">
             <span class="sr-only">Interruptor de Navegación</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="principal.php" id="besa">B.E.S.A</a>
-            <a> <img data-v-4a3754a3="" src="icons/sfp.png" alt="logo gobierno de méxico" class="logos" style="width: 30%; margin-top: 5px; margin-bottom: -25px; "></a>
-        </div>
-        <div class="collapse navbar-collapse" id="subenlaces">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Enlace</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Desplegable <span class="caret"></span></a>
+            </button>
+            <a class="navbar-brand" href="principal.php" id="besa" >B.E.S.A</a>
+            <a> <img data-v-4a3754a3="" src="icons/lf.png" alt="logo gobierno de méxico" class="logos" style="width: 80%;height: 50%; margin-top: -50px; margin-bottom: -25px; margin-left: 420px "></a>
+          </div>
+
+          <div class="collapse navbar-collapse" id="subenlaces" style=" width:110%; margin-top: -30px;">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#">Enlace</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Desplegable <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="#">Acción</a></li>
                 <li><a href="#">Otra acción</a></li>
@@ -86,9 +87,9 @@
               </ul>
             </li>
           </ul>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
     <br><br><br><br>
     <!-- ----------------------------------------------->
     <!-- ----------------------------------------------->

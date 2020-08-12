@@ -40,34 +40,19 @@ window.location.replace('index.php');</script>";
 
     <main>
 	<div id="contene">
-      <nav class="navbar navbar-inverse sub-navbar navbar-fixed-top">
-        <div class="container">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#subenlaces">
-            <span class="sr-only">Interruptor de Navegación</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/" id="besa" style=" margin-left: -730px;">B.E.S.A</a>
-            <a> <img data-v-4a3754a3="" src="icons/lf.png" alt="logo gobierno de méxico" class="logos" style="width: 30%; margin-top: 5px; margin-bottom: -25px; margin-left: -600px; "></a>
-          </div>
-
-          <div class="collapse navbar-collapse" id="subenlaces">
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href="#">Enlace</a></li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Desplegable <span class="caret"></span></a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="#">Acción</a></li>
-                <li><a href="#">Otra acción</a></li>
-                <li><a href="#">Algo más aquí</a></li>
-                <li class="divider"></li>
-                <li><a href="#">Enlace separado</a></li>
-              </ul>
-            </li>
-          </ul>
+    <nav class="navbar navbar-inverse sub-navbar navbar-fixed-top" style="height: 55px">
+      <div class="container">
+        <div class="navbar-header" >
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#subenlaces">
+          <span class="sr-only">Interruptor de Navegación</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="principal.php" id="besa" style="margin-left: -470px;">B.E.S.A</a>
+          <a> <img data-v-4a3754a3="" src="icons/lf.png" alt="logo gobierno de méxico" class="logos" style="width: 80%;height: 50%; margin-top: -40px; margin-bottom: -25px; margin-left: 20px "></a>
         </div>
+
       </div>
     </nav>
 
@@ -82,7 +67,7 @@ window.location.replace('index.php');</script>";
 <div class="w3-sidebar w3-bar-block w3-animate-left" style="display:none;z-index:5" id="mySidebar">
   <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Cerrar &times;</button>
   <img src="icons/lf.png" alt="sfp" width="145" height="60">
-  <a  class="w3-bar-item w3-button"><?php echo $_SESSION['usuario'];?></a>  
+  <a  class="w3-bar-item w3-button"><?php echo $_SESSION['usuario'];?></a>
   <a href="#" class="w3-bar-item w3-button">Inicio</a>
   <a href="alta.html" class="w3-bar-item w3-button">Usuarios</a>
   <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal2" >Contacto</a>
@@ -191,11 +176,11 @@ function w3_close() {
     <img class="card-img-top" src="icons/grafica.png" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title">Producción</h5>
-        
+
            <a  href="#"  data-toggle="modal" data-target="#mymodal4">Informes 70-30</a><BR>
           <a href="consulta_top.php">Top por contrato</a><BR>
 	    <a href="">Informe montos por procedimiento</a><BR>
-          
+
 
     </div>
     <div class="card-footer">
@@ -355,7 +340,7 @@ function w3_close() {
                        Ingresa la clave de Partida
                     </h3>
 
-			
+
  <div class="form-group">
     <label class="control-label" for="email-01">Clave:</label>
     <input class="form-control" id="clav" placeholder="Clave" type="number" required>

@@ -45,7 +45,7 @@
           </div>
         </div>
       </nav>
-    <br><br><br><br>
+    <br><br><br>
     <!-- ----------------------------------------------->
     <!-- ----------------------------------------------->
     <!--INICIO DE MENU A LA IZQUIERDA-------------------------->
@@ -55,11 +55,9 @@
 
 
 
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar" aria-controls="exCollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation">
-              &#9776;
-              </button>
-              <div class="collapse" id="exCollapsingNavbar">
-              <div class="bg-inverse p-a-1">
+
+
+              <div class="bg-inverse p-a-1" style="margin-top: 1px">
 
 
     <div class="panel-group ficha-collapse" id="filter-by">
@@ -367,7 +365,7 @@
     }
 </script>
 
-  <div id="contec">
+  <div id="contecom">
     <div class="container1">
       <div class="row">
         <div class='col-sm-20 col-md-20 col-ld-20'>

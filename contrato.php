@@ -7,6 +7,7 @@
     <meta name="description" content="">
       <title> </title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/estilos.css" rel="stylesheet">
     <link href="https://cdn.datos.gob.mx/assets/css/main.css" rel="stylesheet">
     <link href="https://cdn.datos.gob.mx/assets/img/favicon.ico" rel="shortcut icon">
@@ -51,18 +52,16 @@
     <!--INICIO DE MENU A LA IZQUIERDA-------------------------->
     <!-- ----------------------------------------------->
     <!-- ----------------------------------------------->
-    <div id="contenedorizquierda">
+    <div id="contenedorizquierdac">
 
 
 
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar" aria-controls="exCollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation">
-              &#9776;
-              </button>
-              <div class="collapse" id="exCollapsingNavbar">
-              <div class="bg-inverse p-a-1">
 
 
-    <div class="panel-group ficha-collapse" id="filter-by">
+              <div class="bg-inverse p-a-1" style="margin-top: 1px">
+
+
+    <div class="panel-group ficha-collapse" id="filter-by" >
       <center>
       <h3> B.E.S.A </h3>
       <h3> Consultas </h3>
@@ -249,7 +248,7 @@
       </div>
     </div>
   </div>
-</div>
+  </div>
 </main>
 
 <div class="modal fade" role="dialog" id="my-modal" aria-labelledby="modal-title">
@@ -372,7 +371,7 @@
         var convenio_interno  = (document.getElementById('inconveniointernoc').value);
         var objeto_contratacion  = (document.getElementById('inobjetocontratacionc').value);
          var max=(document.getElementById('montomaxi').value);
-         
+
          var monto_maximo  =Number(max.replace(",",""));
 	 var monto_minimo  = Number(min.replace(",",""));
         if(document.getElementById("incontratoabiertoc").checked==true){
@@ -665,13 +664,13 @@
     </div>
 
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"
+      integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY"
+      crossorigin="anonymous">
+    </script>
+  
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"
-    integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY"
-    crossorigin="anonymous">
-  </script>
-  <script src="https://cdn.datos.gob.mx/assets/js/main.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+
 
 <script>
 
@@ -711,7 +710,7 @@ $("#montomini").on({
 
 $(':checkbox').click(function() {
     $('input:text').attr('disabled',! this.checked)
-    document.querySelector('#ccp').innerText = 'Monto maximo'; 
+    document.querySelector('#ccp').innerText = 'Monto maximo';
 });
 </script>
 

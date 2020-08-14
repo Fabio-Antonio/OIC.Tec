@@ -257,6 +257,11 @@ margin-top: 27px;
   width: 200px;
   height: 260px;
 }
+#contenedorizquierdac{
+  margin-top: -90px;
+  width: 200px;
+  height: 260px;
+}
 
 .navbar-toggler{
   margin-left: 20px;

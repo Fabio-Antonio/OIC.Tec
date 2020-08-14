@@ -21,7 +21,7 @@ window.location.replace('principl.html');</script>";
   
 }else{
 echo "<script>alert('La consulta a la base de datos es incorrecta')
-window.location.replace('principal.html');</script>";
+window.location.replace('principal.php');</script>";
 }
 
 
@@ -45,7 +45,7 @@ window.location.replace('principl.html');</script>";
 
 }else{
 echo "<script>alert('La consulta a la base de datos es incorrecta')
-window.location.replace('principal.html');</script>";
+window.location.replace('principal.php');</script>";
 }
 
 $valor=serialize($flag);
@@ -69,7 +69,7 @@ window.location.replace('principl.html');</script>";
 
 }else{
 echo "<script>alert('La consulta a la base de datos es incorrecta')
-window.location.replace('principal.html');</script>";
+window.location.replace('principal.php');</script>";
 }
 
 
@@ -96,7 +96,7 @@ window.location.replace('principal.html');</script>";
 
 }else{
 echo "<script>alert('La consulta a la base de datos es incorrecta')
-window.location.replace('principal.html');</script>";
+window.location.replace('principal.php');</script>";
 }
 
 
@@ -115,13 +115,13 @@ if($statement){
     }
     if($total2==null){
         echo "<script>alert('No se encontraron resultados5')
-window.location.replace('principal.html');</script>";
+window.location.replace('principal.php');</script>";
        return;
         }
 
 }else{
 echo "<script>alert('La consulta a la base de datos es incorrecta')
-window.location.replace('principal.html');</script>";
+window.location.replace('principal.php');</script>";
 }
 
 
@@ -129,7 +129,7 @@ window.location.replace('principal.html');</script>";
  $conn=null;
 
 $ch =curl_init();
-curl_setopt($ch,CURLOPT_URL,"http://192.168.1.68:8888/besa/informe70-30.php");
+curl_setopt($ch,CURLOPT_URL,"http://192.168.0.38:8888/besa/informe70-30.php");
 curl_setopt($ch,CURLOPT_POST,TRUE);
 curl_setopt($ch,CURLOPT_POSTFIELDS,"totals=$totals&setenta=$setenta&treinta=$treinta&valor=$valor&valor2=$valor2&total=$total&total2=$total2&claves=$claves");
 curl_exec($ch);

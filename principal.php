@@ -6,8 +6,6 @@ $verificar=$_SESSION['usuario'];
 if($verificar==null||$verificar==''){
  echo "<script> alert ('Debe iniciar sessión')
 window.location.replace('index.php');</script>";
-;
-
 
 
 }
@@ -309,12 +307,12 @@ function w3_close() {
                         <form role="form" id="formulario">
   <div class="form-group">
     <label class="control-label" for="email-01">Clave:</label>
-    <input class="form-control" id="clave" placeholder="Clave de partida" type="email" required>
+    <input class="form-control" id="clave" placeholder="Clave de partida" type="text" required>
   </div>
 
  <div class="form-group">
     <label class="control-label" for="email-01">Presupuesto:</label>
-    <input class="form-control" id="presupuesto" placeholder="presupuesto" type="number" required>
+    <input class="form-control" id="presupuesto" placeholder="presupuesto" type="text" required>
   </div>
 
  <button class="btn btn-default btn-success" type="button" name="submit" onclick="ingresar();">Enviar</button>
@@ -365,12 +363,12 @@ function ingresar(){
 var clave= (document.getElementById("clave").value);
 var presupuesto= (document.getElementById("presupuesto").value);
 
-if(clave.length==0||clave.lenth>45){
+if(clave.length==0||clave.lenth>4){
 alert("El campo no cumple con la longitud correcta");
 document.getElementById("clave").focus();
 return;
 }
-if(!(/^[0-9.\s]*$/i.test(clave))){
+if(!(/^[0-9\s]*$/i.test(clave))){
 alert("El contiene caracteres no permitidos");
 document.getElementById("clave").focus();
 return;
@@ -382,7 +380,7 @@ alert("El campo no cumple con la longitud correcta");
 document.getElementById("presupuesto").focus();
 return;
 }
-if(!(/^[0-9.\s]*$/i.test(presupuesto))){
+if(!(/^[0-9,.\s]*$/i.test(presupuesto))){
 alert("El contiene caracteres no permitidos");
 document.getElementById("presupuesto").focus();
 return;
@@ -465,7 +463,21 @@ window.location="consulta_70_30.php?clav="+clav;
 }
 </script>
 
+<script>
 
+$("#presupuesto").on({
+  "focus": function(event) {
+    $(event.target).select();
+  },
+  "keyup": function(event) {
+    $(event.target).val(function(index, value) {
+      return value.replace(/\D/g, "")
+        .replace(/([0-9])([0-9]{2})$/, '$1.$2')
+        .replace(/\B(?=(\d{3})+(?!\d)\.?)/g, ",");
+    });
+  }
+});
+</script>
 
 
 

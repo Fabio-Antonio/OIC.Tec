@@ -28,7 +28,7 @@ $valor2=serialize($flag2);
 $conn=null;
 $ch=null;
 $ch= curl_init();
-curl_setopt($ch,CURLOPT_URL,"http://192.168.1.68:8888/besa/motivo_inconfor.php");
+curl_setopt($ch,CURLOPT_URL,"http://192.168.0.38:8888/besa/motivo_inconfor.php");
 curl_setopt($ch,CURLOPT_POST,TRUE);
 curl_setopt($ch,CURLOPT_POSTFIELDS,"flag=$valor&flag2=$valor2");
 curl_exec($ch);

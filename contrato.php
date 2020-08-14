@@ -301,6 +301,10 @@
 <!------------------------------------------------------>
 <!------------------------------------------------------>
 
+
+
+
+
 <script lenguage="javascript" type="text/javascript">
          function mostrarText(){
     var selObj = document.getElementById('seunidadcompradoracontrato');
@@ -361,18 +365,22 @@
         document.getElementById("seconsolidadocontrato").focus();
         return;
         }
-
+      var min=0;
       var numero_contrato  = (document.getElementById('innumerocontratoc').value);
       var procedimiento_compranet  = (document.getElementById('inprocedimientocompranetc').value);
        var contrato_compranet  = (document.getElementById('incontratocompranetc').value);
         var convenio_interno  = (document.getElementById('inconveniointernoc').value);
         var objeto_contratacion  = (document.getElementById('inobjetocontratacionc').value);
-         var monto_maximo  =Number((document.getElementById('montomaxi').value));
-	 var monto_minimo  = Number((document.getElementById('montomini').value));
+         var max=(document.getElementById('montomaxi').value);
+         
+         var monto_maximo  =Number(max.replace(",",""));
+	 var monto_minimo  = Number(min.replace(",",""));
         if(document.getElementById("incontratoabiertoc").checked==true){
  	var contrato_abierto  = (document.getElementById('incontratoabiertoc').value=1);
+          min=(document.getElementById('montomini').value);
+         var monto_minimo  = Number(min.replace(",",""));
 	}else{
-	 var contrato_abierto  = (document.getElementById('incontratoabiertoc').value=0);
+	 var monto_minimo  = min;
 	}
         var documentacion_descripcion  = (document.getElementById('indocumentodescripcionc').value);
       var selIndex = selObj.options[selObj.selectedIndex].text;
@@ -430,7 +438,8 @@
         document.getElementById("indocumentodescripcionc").focus();
         return;
         }
-	if(monto_maximo.length==0||!(/^[0-9.]+$/.test(monto_maximo))||monto_maximo<0){
+
+	if(monto_maximo.length==0||!(/^[0-9,.]+$/.test(monto_maximo))||monto_maximo<0){
 	$(function(){
                 $('#my-modal2').modal('show')
                 });
@@ -438,7 +447,8 @@
         document.getElementById("montomaxi").focus();
         return;
         }
-	if(monto_minimo.length==0||!(/^[0-9.]+$/.test(monto_minimo))||monto_minimo<0){
+
+	if(monto_minimo.length==0||!(/^[0-9,.]+$/.test(monto_minimo))||monto_minimo<0){
         $(function(){
                 $('#my-modal2').modal('show')
                 });
@@ -446,6 +456,7 @@
         document.getElementById("montomini").focus();
         return;
         }
+
 	if(monto_minimo>monto_maximo){
 	$(function(){
                 $('#my-modal2').modal('show')
@@ -609,12 +620,12 @@
             <input type="text" class="form-control" id="inconveniointernoc" name="inconveniointernoc"  placeholder="Convenio Interno">
           </div>
           <div id="dcmmax">
-          <label id="ccp" > Monto Maximo:  </label>
-          <input class="form-control" name="monto_maximo" id="montomaxi" placeholder="Monto Maximo" required min="0"  type="number"  step="0.1">
+          <label id="ccp" > Total:  </label>
+          <input class="form-control" name="monto_maximo" id="montomaxi" placeholder="Monto Maximo" required  type="text">
         </div>
         <div id ="dcmnmm">
           <label id="ccp" > Monto Minimo:  </label>
-          <input class="form-control" id="montomini" placeholder="Monto Minimo" name="monto_minimo" required min="0" type="number" step="0.1">
+          <input class="form-control" id="montomini" disabled="disabled" placeholder="Monto Minimo" name="monto_minimo" required  type="text">
         </div>
 
           <div class="dobjetocontratacionc">
@@ -661,6 +672,48 @@
   </script>
   <script src="https://cdn.datos.gob.mx/assets/js/main.js"></script>
   <script src="js/bootstrap.min.js"></script>
+
+<script>
+
+$("#montomaxi").on({
+  "focus": function(event) {
+    $(event.target).select();
+  },
+  "keyup": function(event) {
+    $(event.target).val(function(index, value) {
+      return value.replace(/\D/g, "")
+        .replace(/([0-9])([0-9]{2})$/, '$1.$2')
+        .replace(/\B(?=(\d{3})+(?!\d)\.?)/g, ",");
+    });
+  }
+});
+</script>
+
+<script>
+
+$("#montomini").on({
+  "focus": function(event) {
+    $(event.target).select();
+  },
+  "keyup": function(event) {
+    $(event.target).val(function(index, value) {
+      return value.replace(/\D/g, "")
+        .replace(/([0-9])([0-9]{2})$/, '$1.$2')
+        .replace(/\B(?=(\d{3})+(?!\d)\.?)/g, ",");
+    });
+  }
+});
+</script>
+
+
+
+<script>
+
+$(':checkbox').click(function() {
+    $('input:text').attr('disabled',! this.checked)
+    document.querySelector('#ccp').innerText = 'Monto maximo'; 
+});
+</script>
 
   <footer>
   <div class="contenedor-todo-footer">

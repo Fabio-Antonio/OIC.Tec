@@ -1,9 +1,19 @@
 <?php
-   require_once("conexion.php");
 
+session_start();
+$verificar=$_SESSION['usuario'];
+
+if($verificar==null||$verificar==''){
+ echo "<script> alert ('Debe iniciar sessión')
+window.location.replace('index.php');</script>";
+
+}
+
+   require_once("conexion.php");
+    $clave="";
    $presupuesto=$_POST["presupuesto"];
  $clave=$_POST["clave"];
-   
+   $presupuesto=str_replace(",","",$presupuesto);
     $statement = $conn->prepare("INSERT INTO partida_presupuesto(clave,presupuesto)VALUES(?,?)");    
     $statement->bindParam(1,$clave);
 	 $statement->bindValue(2,$presupuesto);

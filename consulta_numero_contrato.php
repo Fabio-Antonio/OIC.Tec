@@ -287,7 +287,7 @@
                     <span class="glyphicon glyphicon-ok check-mark"></span>
                   </a>
                 </li>
-  x		 <?php
+  		 <?php
                 }
 
   }
@@ -330,32 +330,34 @@
 
    <?php
 
-  if (isset($_GET['numero_contrato'])) {
+  if (isset($_POST['numero_contrato'])) {
 
 
-                $numero_contrato=$_GET["numero_contrato"];
-               $contrato_compranet=$_GET["contrato_compranet"];
-       $numero_unidad=$_GET["numero_unidad"];
-               $nombre_unidad_compradora=$_GET["nombre_unidad_compradora"];
-       $procedimiento=$_GET["procedimiento"];
-               $monto_total=$_GET["monto_total"];
-       $unidad=$_GET["unidad"];
-               $clave_requirente=$_GET["clave_requirente"];
-                $monto_maximo=$_GET["monto_maximo"];
-               $monto_minimo=$_GET["monto_minimo"];
-       $objeto_contratacion=$_GET["objeto_contratacion"];
-               $procedimientos=$_GET["procedimientos"];
-       $fundamento=$_GET["fundamento"];
-               $suficiencia=$_GET["suficiencia"];
-       $inicio_vigencia=$_GET["inicio_vigencia"];
-               $fin_vigencia=$_GET["fin_vigencia"];
-       $notificacion_adjudicada=$_GET["notificacion_adjudicada"];
-               $formalizacion_contrato=$_GET["formalizacion_contrato"];
-       $resicion_contrato=$_GET["resicion_contrato"];
-               $sat=$_GET["sat"];
-       $imss=$_GET["imss"];
-               $infonavit=$_GET["infonavit"];
-      $garantia_cumplimiento=$_GET["garantia_cumplimiento"];
+                $numero_contrato=$_POST["numero_contrato"];
+               $contrato_compranet=$_POST["contrato_compranet"];
+       $numero_unidad=$_POST["numero_unidad"];
+               $nombre_unidad_compradora=$_POST["nombre_unidad_compradoras"];
+       $procedimiento=$_POST["procedimiento"];
+               $monto_total=$_POST["monto_total"];
+       $unidad=$_POST["unidad"];
+               $clave_requirente=$_POST["clave_requirente"];
+                $monto_maximo=$_POST["monto_maximo"];
+               $monto_minimo=$_POST["monto_minimo"];
+       $objeto_contratacion=$_POST["objeto_contratacion"];
+               $procedimientos=$_POST["procedimientos"];
+       $fundamento=$_POST["fundamento"];
+               $suficiencia=$_POST["suficiencia"];
+       $inicio_vigencia=$_POST["inicio_vigencia"];
+               $fin_vigencia=$_POST["fin_vigencia"];
+       $notificacion_adjudicada=$_POST["notificacion_adjudicada"];
+               $formalizacion_contrato=$_POST["formalizacion_contrato"];
+       $resicion_contrato=$_POST["resicion_contrato"];
+               $sat=$_POST["sat"];
+       $imss=$_POST["imss"];
+               $infonavit=$_POST["infonavit"];
+      $garantia_cumplimiento=$_POST["garantia_cumplimiento"];
+
+      
       }else{
   $numero_contrato="";
   $contrato_compranet="";
@@ -436,7 +438,7 @@
         </div>
         <div class="dtextmontmincon">
           <label class="textmontmincon">Monto Minimo</label>
-          <input id="indtextmontmincon" class="form-control" placeholder="Monto Minimo" type="text"  readonly="readonly" value="">
+          <input id="indtextmontmincon" class="form-control" placeholder="Monto Minimo" type="text"  readonly="readonly" value="<?php echo "$".$monto_minimo ?>">
         </div>
         <div class="dtextopinsatcon">
           <label class="textopinsatcon">Opinion SAT</label>
@@ -464,8 +466,8 @@
         </div>
         <div class="dtextunidadcomcon">
           <label class="textunidadcomcon">Número Unidad Compradora</label>
-          <input id="intextunidadcomcon" class="form-control" placeholder="Número de Unidad Compradora" type="text"  readonly="readonly" value="<?php echo $numero_unidad ?>">
-          <textarea id="texatextunidadcomcon" class="form-control" placeholder="" rows="3"  readonly="readonly" ><?php echo $nombre_unidad_compradora ?></textarea>
+          <input id="intextunidadcomcon" class="form-control" placeholder="Número de Unidad Compradora" type="text"  readonly="readonly" value="<?php echo $numero_unidad; ?>">
+          <textarea id="texatextunidadcomcon" class="form-control" placeholder="" rows="3"  readonly="readonly" ><?php echo $nombre_unidad_compradora; ?></textarea>
         </div>
         <div class="dtextresicon">
             <label class="textresicon">Rescision</label>

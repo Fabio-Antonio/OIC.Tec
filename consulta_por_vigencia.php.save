@@ -12,12 +12,7 @@
     <link href="https://cdn.datos.gob.mx/assets/css/main.css" rel="stylesheet">
     <link href="https://cdn.datos.gob.mx/assets/img/favicon.ico" rel="shortcut icon">
     <link href="https://cdn.datos.gob.mx/bower_components/dgm-footer/dgm-footer.html" rel="import">
-	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-	<script src="https://cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
-	<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.js"></script>
-	
-
+    
         
     <script>
     window.onload = function() {
@@ -29,7 +24,6 @@
          <?php $total2=$_POST["total2"];?>
          var total2 ='<?=$total2?>';
          <?php $total3=$_POST["total3"];?>
-
          var total3 ='<?=$total3?>';
 
           total1=((total1*100)/total);
@@ -330,8 +324,7 @@
             </div>
           </div>
           <div id="Layer1">
-          <table id="myTable" class="display">
-	 <thead>	
+          <table id="myTable" class="table table-striped table-bordered">
             <tr>
               <th>Id</th>
               <th>Número de Contrato</th>
@@ -339,7 +332,6 @@
               <th>Fecha de Inicio</th>
               <th>Fecha Finalización</th>
             </tr>
-	 </thead>	
            <?php
 $arr=unserialize($_POST["flag"]);
 
@@ -348,7 +340,7 @@ $arr=unserialize($_POST["flag"]);
           {
 
  ?>
-<tbody>
+
  <tr>
                <td>
                    <?php echo $key+1; ?>
@@ -369,12 +361,22 @@ $arr=unserialize($_POST["flag"]);
        ?>
 
 
-</tbody>
+
           </table>
 
  </div>
 
 
+
+<ul class="pagination">
+  <li><a href="#">&laquo;</a></li>
+  <li><a href="#">1</a></li>
+  <li><a href="#">2</a></li>
+  <li><a href="#">3</a></li>
+  <li><a href="#">4</a></li>
+  <li><a href="#">5</a></li>
+  <li><a href="#">&raquo;</a></li>
+</ul>
 
 
         <div class="grafica">
@@ -389,16 +391,19 @@ $arr=unserialize($_POST["flag"]);
       </div>
     </div>
 
+        
 
-<script>
+ 
+
+ <script>
 
 $(document).ready(function() {
     $('#myTable').DataTable( {
         "pagingType": "full_numbers"
     } );
 } );
-</script>        
 
+</script>
 
   <footer>
   <div class="contenedor-todo-footer">

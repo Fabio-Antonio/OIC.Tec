@@ -58,7 +58,7 @@ window.location.replace('principal.html');</script>";
 $conn=null;
 
 $ch =curl_init();
-curl_setopt($ch,CURLOPT_URL,"http://192.168.1.68:8888/besa/consulta_por_vigencia.php");
+curl_setopt($ch,CURLOPT_URL,"http://192.168.0.38:8888/besa/consulta_por_vigencia.php");
 curl_setopt($ch,CURLOPT_POST,TRUE);
 curl_setopt($ch,CURLOPT_POSTFIELDS,"flag=$valor&total=$total&total1=$total1&total2=$total2&total3=$total3");
 curl_exec($ch);

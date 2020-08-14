@@ -3,7 +3,7 @@
     $numero_contrato = $_GET['numero_contrato'];
     $flag=$_GET['flag'];
     $res=json_decode($flag,true);
-   echo $numero_contrato;
+   
     $statement = $conn->prepare("SELECT numero_contrato,contrato_compranet,nombre_unidad_compradora,numero_unidad,procedimiento,monto_total,unidad,
 clave_requirente,monto_max,monto_min,objeto_contratacion,procedimientos,(SELECT fundamento FROM fundamento_legal WHERE fundamento_legal.id_fundamento_legal =
 procedimientos_contratacion.id_fundamento_legal)as fundamento,suficiencia,inicio_vigencia,fin_vigencia,notificacion_adjudicada,formalizacion_contrato,resicion_contrato
@@ -16,16 +16,13 @@ $statement->bindParam(1, $numero_contrato);
 $statement->execute();
              
    
-    $response = array();
-   
-    $response["success"] = false;  
-    
+      
     
     while($row = $statement->fetch()){   
  	
         $numero_contrato=$row["numero_contrato"];
 	$contrato_compranet=$row["contrato_compranet"];    
- 	$nombre_unidad_compradora=$row["nombre_unidad_compradora"];
+ 	$nombre_unidad_compradoras=$row["nombre_unidad_compradora"];
 	$numero_unidad=$row["numero_unidad"];
 	$procedimiento=$row["procedimiento"];
 	$monto_total=$row["monto_total"];
@@ -46,15 +43,32 @@ $statement->execute();
 	$imss=$row["imss"];
 	$infonavit=$row["infonavit"];
 	$garantia_cumplimiento=$row["garantia_cumplimiento"];
-	
-	
-    $response["success"] = true; 
-        
+
    $valor=serialize($res);
-  header("location: consulta_numero_contrato.php?numero_contrato=$numero_contrato&contrato_compranet=$contrato_compranet&nombre_unidad_compradora=$nombre_unidad_compradora&numero_unidad=$numero_unidad&procedimiento=$procedimiento&monto_total=$monto_total&unidad=$unidad&clave_requirente=$clave_requirente&monto_maximo=$monto_maximo&monto_minimo=$monto_minimo&objeto_contratacion=$objeto_contratacion&procedimientos=$procedimientos&fundamento=$fundamento&suficiencia=$suficiencia&inicio_vigencia=$inicio_vigencia&fin_vigencia=$fin_vigencia&notificacion_adjudicada=$notificacion_adjudicada&formalizacion_contrato=$formalizacion_contrato&resicion_contrato=$resicion_contrato&sat=$sat&imss=$imss&infonavit=$infonavit&garantia_cumplimiento=$garantia_cumplimiento&flag=$valor") ;
-       
-   
+
     }  
+$conn=null;
+
+$ch = curl_init();
+
+// definimos la URL a la que hacemos la petición
+curl_setopt($ch, CURLOPT_URL,"http://192.168.0.38:8888/besa/consulta_numero_contrato.php");
+// indicamos el tipo de petición: POST
+curl_setopt($ch, CURLOPT_POST, TRUE);
+// definimos cada uno de los parámetros
+curl_setopt($ch, CURLOPT_POSTFIELDS, "numero_contrato=$numero_contrato&contrato_compranet=$contrato_compranet&nombre_unidad_compradoras=$nombre_unidad_compradoras&numero_unidad=$numero_unidad&procedimiento=$procedimiento&monto_total=$monto_total&unidad=$unidad
+&clave_requirente=$clave_requirente&monto_maximo=$monto_maximo&monto_minimo=$monto_minimo&objeto_contratacion=$objeto_contratacion
+&procedimientos=$procedimientos&fundamento=$fundamento&suficiencia=$suficiencia&inicio_vigencia=$inicio_vigencia
+&fin_vigencia=$fin_vigencia&notificacion_adjudicada=$notificacion_adjudicada&formalizacion_contrato=$formalizacion_contrato
+&resicion_contrato=$resicion_contrato&sat=$sat&imss=$imss&infonavit=$infonavit&garantia_cumplimiento=$garantia_cumplimiento&flag=$valor");
+
+
+ curl_exec ($ch);
+ $error= curl_error($ch);
+ echo $error;
+// cerramos la sesión cURL
+curl_close ($ch);
+
    
    
         

@@ -11,6 +11,11 @@
     <link href="https://cdn.datos.gob.mx/assets/css/main.css" rel="stylesheet">
     <link href="https://cdn.datos.gob.mx/assets/img/favicon.ico" rel="shortcut icon">
     <link href="https://cdn.datos.gob.mx/bower_components/dgm-footer/dgm-footer.html" rel="import">
+	 <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="https://cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
+        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.js"></script>
+
     <script>
       window.onload = function () {
        var contrato;
@@ -306,7 +311,8 @@
         <div class='col-sm-20 col-md-20 col-ld-20'>
           <h2 class="fuu"> TOP MONTOS POR CONTRATOS </h2>
           <div id="Layert">
-          <table class="table table-bordered">
+          <table id="myTable" class="display">
+           <thead>
             <tr>
 		<th>Id</th>
 		<th>Número de Contrato</th>
@@ -314,6 +320,7 @@
 		<th>Proveedor Adjudicado</th>
 		<th> Monto Mximo</th>
               </tr>
+	 </thead>	
               <?php
 $arr=unserialize($_POST["flag"]);
 
@@ -322,10 +329,10 @@ $arr=unserialize($_POST["flag"]);
           {
 
  ?>
-
+<tbody>
  <tr>
                <td>
-                   <?php echo $key; ?>
+                   <?php echo $key+1; ?>
              </td>
                      <?php foreach((array)$value as $key=>$value)
                        {
@@ -342,9 +349,20 @@ $arr=unserialize($_POST["flag"]);
 
         }
        ?>
+</tbody>
           </table>
+
+<script>
+
+$(document).ready(function() {
+    $('#myTable').DataTable( {
+        "pagingType": "full_numbers"
+    } );
+} );
+</script>
+
         </div>
-        <div id="chartContainer" style="margin-top:120px" ></div>
+        <div id="chartContainer" style="margin-top:300px" ></div>
           <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
         <div class="breggt">
           <button type="button" id="bregresar" class="btn btn-primary"  onclick="location.href='principal.php'" name="bregresar"> Regresar </button>
@@ -355,15 +373,7 @@ $arr=unserialize($_POST["flag"]);
     </div>
 
 
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"
-    integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY"
-    crossorigin="anonymous">
-  </script>
-  <script src="https://cdn.datos.gob.mx/assets/js/main.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-
-  <footer>
+    <footer>
   <div class="contenedor-todo-footer">
 
   <div class="contenedor-body">

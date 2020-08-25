@@ -11,6 +11,13 @@
     <link href="https://cdn.datos.gob.mx/assets/css/main.css" rel="stylesheet">
     <link href="https://cdn.datos.gob.mx/assets/img/favicon.ico" rel="shortcut icon">
     <link href="https://cdn.datos.gob.mx/bower_components/dgm-footer/dgm-footer.html" rel="import">
+
+	  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="https://cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
+        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.js"></script>
+
+
     <script>
     window.onload = function() {
 
@@ -32,7 +39,7 @@
   var chart = new CanvasJS.Chart("chartContainer", {
   	animationEnabled: true,
   	title: {
-  		text: "Consumo del 30%"
+	  		text: "Consumo del 30%"
   	},
   	data: [{
   		type: "pie",
@@ -359,11 +366,11 @@
             </tr>
             <tr>
 
-                 <td><?php $claves=$_POST["claves"]; echo $claves;?></td>
+                 <td><?php $claves=$_POST["cl"]; echo $claves;?></td>
 		 <td><?php $totals=$_POST["totals"]; echo $totals;?></td>
 		 <td><?php $setenta=$_POST["setenta"]; echo $setenta;?></td>
 		 <td><?php $treinta=$_POST["treinta"]; echo $treinta;?></td>
-                  <td><?php $claves=$_POST["claves"]; echo $claves;?></td>
+                 
 
             </tr>
 
@@ -371,96 +378,81 @@
 
         </div>
 
-	<div id="Layer70" style="margin-top:120px">
+	<div id="Layer70" style="margin-top:120px;margin-bottom:130px;">
 
-          <table class="table table-striped">
+          <table id="myTable"  class="table table-striped">
+	  <thead>
         <tr>
-	<th>30%</th>
-	</tr>
-        <tr>
-        <th>Id</th>
         <th>Numero de Contrato</th>
         <th>Monto Maximo</th>
         <th>Procedimiento</th>
 
         </tr>
-         <?php
-$arr=unserialize($_POST["valor"]);
-
-
-       foreach((array)$arr as $key=>$value)
-          {
-
- ?>
-
- <tr>
-               <td>
-                   <?php echo $key; ?>
-             </td>
-                     <?php foreach((array)$value as $key=>$value)
-                       {
-                     ?>
-              <td>
-                    <?php echo $value;?>
-               </td>
-                    <?php
-                     }
-                    ?>
-
-        </tr>
-        <?php
-
-        }
-       ?>
-
-
+	  </thead>
           </table>
-      </div>
+      
+<script>
+$( document ).ready(function() {
 
-	<div id="Layer70" style="margin-top:120px">
+var claves='<?=$claves?>';
+var table = $('#myTable').dataTable({
+"bProcessing": true,
+"sAjaxSource": "consulta_70_30t.php?clavest="+claves,
+"bPaginate":true,
+"sPaginationType":"full_numbers",
+"iDisplayLength": 5,
+"aoColumns": [
+{ mData: 'numero_contrato' } ,
+{ mData: 'monto_max', render: $.fn.dataTable.render.number( ',', '.', 2) },
+{ mData: 'procedimientos' },
 
-       <table  class="table table-striped">
-	<tr>
-        <th>70%</th>
-        </tr>
+]
+});
+});
+
+</script>
+</div>
+
+	<div id="Layer70" style="margin-top:130px">
+
+       <table  id="myTable2" class="table table-striped">
+	  <thead>
+
+	
         <tr>
-         <th>Id</th>
         <th>Numero de Contrato</th>
         <th>Monto Maximo</th>
         <th>Procedimiento</th>
 
 	</tr>
-	  <?php
-$arr=unserialize($_POST["valor2"]);
-
-
-       foreach((array)$arr as $key=>$value)
-          {
-
- ?>
-
- <tr>
-               <td>
-                   <?php echo $key; ?>
-             </td>
-                     <?php foreach((array)$value as $key=>$value)
-                       {
-                     ?>
-              <td>
-                    <?php echo $value;?>
-               </td>
-                    <?php
-                     }
-                    ?>
-
-        </tr>
-        <?php
-
-        }
-       ?>
+	  </thead>
 
 	</table>
+
+ <script>
+        $( document ).ready(function() {
+var claves='<?=$claves?>';
+
+var table = $('#myTable2').dataTable({
+"bProcessing": true,
+"sAjaxSource": "consulta_70_30a.php?clavest="+claves,
+"bPaginate":true,
+"sPaginationType":"full_numbers",
+"iDisplayLength": 5,
+"aoColumns": [
+{ mData: 'numero_contrato' } ,
+{ mData: 'monto_max' , render: $.fn.dataTable.render.number( ',', '.', 2)},
+{ mData: 'procedimientos' },
+
+]
+});
+});
+
+
+        </script>
+
         </div>
+
         <div class="grafica">
           <div id="chartContainer" style=" height: 300px; width: 980px;margin-top:200px"></div>
             <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
@@ -485,13 +477,6 @@ $arr=unserialize($_POST["valor2"]);
     </div>
 
 
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"
-    integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY"
-    crossorigin="anonymous">
-  </script>
-  <script src="https://cdn.datos.gob.mx/assets/js/main.js"></script>
-  <script src="js/bootstrap.min.js"></script>
 
   <footer>
   <div class="contenedor-todo-footer">

@@ -16,7 +16,7 @@ $valor=serialize($flag);
 $conn=null;
 $ch=null;
 $ch= curl_init();
-curl_setopt($ch,CURLOPT_URL,"http://192.168.0.38:8888/besa/top_por_contratos.php");
+curl_setopt($ch,CURLOPT_URL,"http://besa-pruebas.com:8888/besa/top_por_contratos.php");
 curl_setopt($ch,CURLOPT_POST,TRUE);
 curl_setopt($ch,CURLOPT_POSTFIELDS,"flag=$valor");
 curl_exec($ch);

@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
       <title> </title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/estilos.css" rel="stylesheet">
+    
+     <link href="css/estilos.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"  rel="stylesheet" >
+
     <link href="https://cdn.datos.gob.mx/assets/css/main.css" rel="stylesheet">
     <link href="https://cdn.datos.gob.mx/assets/img/favicon.ico" rel="shortcut icon">
     <link href="https://cdn.datos.gob.mx/bower_components/dgm-footer/dgm-footer.html" rel="import">
@@ -52,16 +53,13 @@
     <!--INICIO DE MENU A LA IZQUIERDA-------------------------->
     <!-- ----------------------------------------------->
     <!-- ----------------------------------------------->
-    <div id="contenedorizquierdac">
+    
 
+<div id="contenedorizquierda">
+              
 
-
-
-
-              <div class="bg-inverse p-a-1" style="margin-top: 1px">
-
-
-    <div class="panel-group ficha-collapse" id="filter-by" >
+    <div class="panel-group ficha-collapse" id="filter-by" <div class="collapse" id="exCollapsingNavbar">
+              <div class="bg-inverse p-a-1">
       <center>
       <h3> B.E.S.A </h3>
       <h3> Consultas </h3>
@@ -248,8 +246,11 @@
       </div>
     </div>
   </div>
-  </div>
-</main>
+</div>
+
+
+
+
 
 <div class="modal fade" role="dialog" id="my-modal" aria-labelledby="modal-title">
         <div class="modal-dialog" role="document">
@@ -288,7 +289,7 @@
         </div>
     </div>
 
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 
@@ -373,12 +374,14 @@
          var max=(document.getElementById('montomaxi').value);
 
          var monto_maximo  =Number(max.replace(",",""));
-	 var monto_minimo  = Number(min.replace(",",""));
+	 var monto_minimo  = min;
         if(document.getElementById("incontratoabiertoc").checked==true){
  	var contrato_abierto  = (document.getElementById('incontratoabiertoc').value=1);
           min=(document.getElementById('montomini').value);
          var monto_minimo  = Number(min.replace(",",""));
 	}else{
+         var contrato_abierto  = (document.getElementById('incontratoabiertoc').value=0);
+
 	 var monto_minimo  = min;
 	}
         var documentacion_descripcion  = (document.getElementById('indocumentodescripcionc').value);
@@ -664,14 +667,7 @@
     </div>
 
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"
-      integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY"
-      crossorigin="anonymous">
-    </script>
-  
-
-
-
+    
 <script>
 
 $("#montomaxi").on({

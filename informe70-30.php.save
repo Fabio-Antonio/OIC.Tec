@@ -11,55 +11,97 @@
     <link href="https://cdn.datos.gob.mx/assets/css/main.css" rel="stylesheet">
     <link href="https://cdn.datos.gob.mx/assets/img/favicon.ico" rel="shortcut icon">
     <link href="https://cdn.datos.gob.mx/bower_components/dgm-footer/dgm-footer.html" rel="import">
-	 
+
+	  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="https://cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js"></script>
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
+        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.js"></script>
 
 
     <script>
-      window.onload = function () {
-       var contrato;
-       var monto;
+    window.onload = function() {
 
-        var chart = new CanvasJS.Chart("chartContainer", {
-	         animationEnabled: true,
-	          theme: "light2", // "light1", "light2", "dark1", "dark2"
-	           title:{
-		             text: "TOP POR CONTRATOS"
-	              },
-	               axisY: {
-		                 title: "MONTO $"
-	                  },
-                    axisX: {
-                        title: "CONTRATO"
-                       },
-	                   data: [{
-		                     type: "column",
-		                             dataPoints: [
+    <?php $total=$_POST["total"];?>
+	 <?php $total2=$_POST["total2"];?>
+    <?php $valor=$_POST["treinta"];?>
+	  <?php $valor2=$_POST["setenta"];?>
 
-	 <?php
-                if (isset($_POST['flag'])) {
-              $flag=unserialize($_POST['flag']);
+    var treinta =Number('<?=$total?>');
+    var cien_treinta=Number('<?=$valor?>');
+     var setenta =Number('<?=$total2?>');
+    var cien_setenta=Number('<?=$valor2?>');
+    var consumo_30=(treinta*100)/cien_treinta;
+      var consumo_70=(setenta*100)/cien_setenta;
+      var cien_total=cien_treinta+cien_setenta;
+      var globalt=100-(((setenta+treinta)*100)/cien_total);
+      var globals=(((setenta+treinta)*100)/cien_total);
+
+  var chart = new CanvasJS.Chart("chartContainer", {
+  	animationEnabled: true,
+  	title: {
+	  		text: "Consumo del 30%"
+  	},
+  	data: [{
+  		type: "pie",
+  		startAngle: 240,
+  		yValueFormatString: "##0.00\"%\"",
+  		indexLabel: "{label} {y}",
+  		dataPoints: [
+  			{y: 100-consumo_30, label: "Libre",color: "rgb(30,144,255)",},
+  			{y: consumo_30, label: "Ocupado",color: "rgb(128,0,128)",}
+
+  		]
+  	}]
 
 
-              foreach ($flag as $key=> $val) {
+        });
+  chart.render();
 
-                  ?>
-							<?php $contrato=$val['numero_contrato'];$monto=$val["monto_max"];?>
-			                                { y: monto=Number('<?=$monto?>'), label:contrato='<?=$contrato?>'},
-			                                 <?php
-                                }
-                                }
-                                ?>
+ var chart2 = new CanvasJS.Chart("chartContainer2", {
+        animationEnabled: true,
+        title: {
+                text: "Consumo 70%"
+        },
+        data: [{
+                type: "pie",
+                startAngle: 240,
+                yValueFormatString: "##0.00\"%\"",
+                indexLabel: "{label} {y}",
+                dataPoints: [
+                        {y: 100-consumo_70, label: "libre",color: "rgb(30,144,255)",},
+                        {y: consumo_70, label: "ocupado",color: "rgb(128,0,128)",}
 
-		                                  ]
-	                                   }]
-                                   });
-                                   chart.render();
+                ]
+        }]
 
-                                 }
-       </script>
+
+        });
+  chart2.render();
+
+ var chart3 = new CanvasJS.Chart("chartContainer3", {
+        animationEnabled: true,
+        title: {
+                text: "Consumo de la Partida Presupuestal"
+        },
+        data: [{
+                type: "pie",
+                startAngle: 240,
+                yValueFormatString: "##0.00\"%\"",
+                indexLabel: "{label} {y}",
+                dataPoints: [
+                        {y: globalt, label: "libre",color: "rgb(30,144,255)",},
+                        {y: globals, label: "ocupado",color: "rgb(128,0,128)",}
+
+                ]
+        }]
+
+
+        });
+  chart3.render();
+
+  }
+</script>
   </head>
-
 
   <body class="front">
     <main>
@@ -308,79 +350,123 @@
     <div class="container1">
       <div class="row">
         <div class='col-sm-20 col-md-20 col-ld-20'>
-          <h2 class="fuu"> TOP MONTOS POR CONTRATOS </h2>
-          <div id="Layert">
-          <table id="myTable" class="display">
-           <thead>
-            <tr>
-		<th>Id</th>
-		<th>Número de Contrato</th>
-		<th>Unidad Requirente</th>
-		<th>Proveedor Adjudicado</th>
-		<th> Monto Mximo</th>
-              </tr>
-	 </thead>	
-              <?php
-$arr=unserialize($_POST["flag"]);
-
-
-       foreach((array)$arr as $key=>$value)
-          {
-
- ?>
-<tbody>
- <tr>
-               <td>
-                   <?php echo $key+1; ?>
-             </td>
-                     <?php foreach((array)$value as $key=>$value)
-                       {
-                     ?>
-              <td>
-                    <?php echo $value;?>
-               </td>
-                    <?php
-                     }
-                    ?>
-
+          <h2 class="fuu"> INFORME PROCEDIMIENTOS 70-30 </h2>
+          <div id="Layer70">
+          <table class="table table-striped">
+           <tr>
+        <th>Presupuesto por partida</th>
         </tr>
-        <?php
+            <tr>
 
-        }
-       ?>
-</tbody>
-<tfoot>
- <tr>
-                <th>Id</th>
-                <th>Número de Contrato</th>
-                <th>Unidad Requirente</th>
-                <th>Proveedor Adjudicado</th>
-                <th> Monto Mximo</th>
-              </tr>
+              <th>Clave</th>
+		<th>Presupuesto</th>
+		<th>70%</th>
+		<th>30%</th>
 
+            </tr>
+            <tr>
 
-</tfoot>
+                 <td><?php $claves=$_POST["claves"]; echo $claves;?></td>
+		 <td><?php $totals=$_POST["totals"]; echo $totals;?></td>
+		 <td><?php $setenta=$_POST["setenta"]; echo $setenta;?></td>
+		 <td><?php $treinta=$_POST["treinta"]; echo $treinta;?></td>
+                 
 
+            </tr>
 
           </table>
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
-        <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
-
-<script>
-$(document).ready(function() {
-    $('#myTable').DataTable( {
-      "language": {
-            "decimal": ",",
-            "thousands": "."
-        } 
-    } );
-} )
-</script>
 
         </div>
-        <div id="chartContainer" style="margin-top:400px" ></div>
-          <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-        <div class="breggt">
+
+	<div id="Layer70" style="margin-top:120px">
+
+          <table id="myTable"class="display">
+	  <thead>
+        <tr>
+        <th>Id</th>
+        <th>Numero de Contrato</th>
+        <th>Monto Maximo</th>
+        <th>Procedimiento</th>
+
+        </tr>
+	  </thead>
+          </table>
+      </div>
+<script>
+$( document ).ready(function() {
+var table = $('#myTable').dataTable({
+"bProcessing": true,
+"sAjaxSource": "consulta_70_30t.php?claves=",
+"bPaginate":true,
+"sPaginationType":"full_numbers",
+"iDisplayLength": 5,
+"aoColumns": [
+{ mData: 'numero_contrato' } ,
+{ mData: 'monto_max' },
+{ mData: 'procedimientos' },
+
+]
+});
+});
+
+</script>
+
+
+	<div id="Layer70" style="margin-top:120px">
+
+       <table  id="myTable2"class="display">
+	  <thead>
+
+	
+        <tr>
+         <th>Id</th>
+        <th>Numero de Contrato</th>
+        <th>Monto Maximo</th>
+        <th>Procedimiento</th>
+
+	</tr>
+	  </thead>
+
+	</table>
+        </div>
+
+
+	<script>
+	$( document ).ready(function() {
+var table = $('#myTable2').dataTable({
+"bProcessing": true,
+"sAjaxSource": "consulta_70_30a.php?claves=$claves",
+"bPaginate":true,
+"sPaginationType":"full_numbers",
+"iDisplayLength": 5,
+"aoColumns": [
+{ mData: 'numero_contrato' } ,
+{ mData: 'monto_max' },
+{ mData: 'procedimientos' },
+
+]
+});
+});
+
+
+	</script>
+
+        <div class="grafica">
+          <div id="chartContainer" style=" height: 300px; width: 980px;margin-top:200px"></div>
+            <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+        </div>
+
+	 <div class="grafica">
+          <div id="chartContainer2" style="height: 300px; width: 980px;margin-left:30px"></div>
+            <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+        </div>
+	  <div class="grafica">
+          <div id="chartContainer3" style="height: 300px; width: 980px;margin-left:30px"></div>
+            <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+        </div>
+
+
+        <div class="breg70">
           <button type="button" id="bregresar" class="btn btn-primary"  onclick="location.href='principal.php'" name="bregresar"> Regresar </button>
         </div>
           </div>
@@ -389,7 +475,8 @@ $(document).ready(function() {
     </div>
 
 
-    <footer>
+
+  <footer>
   <div class="contenedor-todo-footer">
 
   <div class="contenedor-body">

@@ -69,7 +69,7 @@ window.location.replace('index.php');</script>";
   <a href="#" class="w3-bar-item w3-button">Inicio</a>
   <a href="alta.html" class="w3-bar-item w3-button">Usuarios</a>
   <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal2" >Contacto</a>
-   <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal3">Partidas Presupuestales</a>
+   <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal3">Nueva Partida</a>
 
   <a href="cerrar.php" class="w3-bar-item w3-button">Logout -></a>
 
@@ -108,9 +108,11 @@ function w3_close() {
     <img class="card-img-top" src="icons/actores.jpg" alt="Card image cap" width="20%">
     <div class="card-body">
       <h5 class="card-title">Actores</h5>
-	 <a href="requirente_compradora_captura.html">Unidad Requirente/Compradora</a><BR>
-	<a href="admin.html">Captura de Administrador de Contrato</a><BR>
-	 <a href="captura_pro_mont.html">Consolidados/Proveedor Adjudicado</a><BR>
+	 <a href="requirente_compradora_captura.html">Unidad Requirente</a><BR>
+	  <a href="requirente_compradora_captura.html">Unidad Compradora</a><BR>
+	<a href="admin.html">Administrador de Contrato</a><BR>
+	 <a href="captura_pro_mont.html">Consolidados</a><BR>
+	 <a href="captura_pro_mont.html">Proveedor Adjudicado</a><BR>
 
     </div>
     <div class="card-footer">
@@ -138,9 +140,11 @@ function w3_close() {
     <div class="card-body">
       <h5 class="card-title">Legal</h5>
 
-       <a href="consulta_fundamento.php">Fundamento Legal/Procedimientos de Contratación</a><BR>
+       <a href="consulta_fundamento.php">Fundamento Legal</a><BR>
+	 <a href="consulta_fundamento.php">Procedimientos de Contratación</a><BR>
 	 <a href="consulta_contrato2.php">Inconformidades</a><BR>
-          <a href="consulta_contrato5.php">Facturas/pagos_efectuados</a><BR>
+          <a href="consulta_contrato5.php">Facturas</a><BR>
+	<a href="consulta_contrato5.php">Pagos_efectuados</a><BR>
 
       </div>
     <div class="card-footer">

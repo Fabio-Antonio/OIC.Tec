@@ -12,11 +12,9 @@
     <link href="https://cdn.datos.gob.mx/assets/css/main.css" rel="stylesheet">
     <link href="https://cdn.datos.gob.mx/assets/img/favicon.ico" rel="shortcut icon">
     <link href="https://cdn.datos.gob.mx/bower_components/dgm-footer/dgm-footer.html" rel="import">
-	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-	<script src="https://cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
-	<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.js"></script>
 	
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
+		
 
         
     <script>
@@ -330,47 +328,18 @@
             </div>
           </div>
           <div id="Layer1">
-          <table id="myTable" class="display">
+          <table id="myTable" class="display"  style="width:100%"> 
 	 <thead>	
             <tr>
-              <th>Id</th>
               <th>Número de Contrato</th>
               <th>Unidad Requirente</th>
               <th>Fecha de Inicio</th>
               <th>Fecha Finalización</th>
             </tr>
-	 </thead>	
-           <?php
-$arr=unserialize($_POST["flag"]);
+	 </thead>
 
-
-       foreach((array)$arr as $key=>$value)
-          {
-
- ?>
-<tbody>
- <tr>
-               <td>
-                   <?php echo $key+1; ?>
-             </td>
-                     <?php foreach((array)$value as $key=>$value)
-                       {
-                     ?>
-              <td>
-                    <?php echo $value;?>
-             </td>
-                    <?php
-                     }
-                    ?>
-
-        </tr>
-        <?php
-        }
-       ?>
-
-
-</tbody>
           </table>
+
 
  </div>
 
@@ -389,15 +358,6 @@ $arr=unserialize($_POST["flag"]);
       </div>
     </div>
 
-
-<script>
-
-$(document).ready(function() {
-    $('#myTable').DataTable( {
-        "pagingType": "full_numbers"
-    } );
-} );
-</script>        
 
 
   <footer>
@@ -430,5 +390,32 @@ $(document).ready(function() {
   </div>
 
 </footer>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+
+<script>
+
+$( document ).ready(function() {
+var table = $('#myTable').dataTable({
+"bProcessing": true,
+"sAjaxSource": "consulta_vigenciat.php",
+"bPaginate":true,
+"sPaginationType":"full_numbers",
+"iDisplayLength": 5,
+"aoColumns": [
+{ mData: 'numero_contrato' } ,
+{ mData: 'unidad' },
+{ mData: 'inicio_vigencia' },
+{ mData: 'fin_vigencia' },
+
+
+]
+});
+});
+</script>
+
+
   </body>
+
 </html>

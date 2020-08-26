@@ -11,7 +11,7 @@
     <link href="https://cdn.datos.gob.mx/assets/css/main.css" rel="stylesheet">
     <link href="https://cdn.datos.gob.mx/assets/img/favicon.ico" rel="shortcut icon">
     <link href="https://cdn.datos.gob.mx/bower_components/dgm-footer/dgm-footer.html" rel="import">
-	 
+
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
 
 
@@ -319,7 +319,7 @@
 		<th>Proveedor Adjudicado</th>
 		<th> Monto Mximo</th>
               </tr>
-	 </thead>	
+	 </thead>
               <?php
 $arr=unserialize($_POST["flag"]);
 
@@ -372,7 +372,7 @@ $(document).ready(function() {
       "language": {
             "decimal": ",",
             "thousands": "."
-        } 
+        }
     } );
 } )
 </script>
@@ -390,34 +390,114 @@ $(document).ready(function() {
 
 
     <footer>
-  <div class="contenedor-todo-footer">
 
-  <div class="contenedor-body">
-    <div class="columna1">
-      <h1> Instituto Tecnológico de Tláhuac </h1>
-      <img src="itt.png" alt="ITT">
+      <div class="contenedor-todo-footer">
+
+      <div class="contenedor-body">
+
+        <div class="columna1">
+          <h1>  </h1>
+          <img src="itt.png" alt="ITT">
+          <h1> </h1>
+          <img src="indice.png" alt="TECNM">
+          <h1> </h1>
+          <img src="ff.png" alt="logo gobierno de méxico" >
+        </div>
+
+        <div class="columna2">
+          <h1>B.E.S.A</h1>
+          <ul class="list-unstyled">
+        <li>
+          <p align="center">
+          <img src="icons/user.svg" alt="">
+           Responsable del programa: Ing. David Rogelio Rodríguez Arias
+         </p>
+        </li>
+        <li>
+          <div class="tel">
+          <p align="justify">
+          <img src="icons/mail.svg" alt="">
+           drrodriguez@nube.sep.gob.mx
+           </div>
+        </p>
+        </li>
+        <li>
+          <div class="tel">
+          <p align="justify">
+          <img src="icons/phone.svg" alt="">
+           36018650 ext. 66125
+           </div>
+        </p>
+        </li>
+      </ul>
+        </div>
+
+        <div class="columna3">
+          <h1>Órgano Interno de Control de la SEP</h1>
+          <ul class="list-unstyled">
+        <li>
+          <p align="center">
+          <img src="icons/home.svg" alt="">
+           Avenida Universidad #1074, col. Xoco, alcaldía Benito Juárez, C.P. 03330, CDMX
+         </p>
+        </li>
+      </li>
+      <li>
+      <div class="tel2">
+      <p align="justify">
+      <img src="icons/mail.svg" alt="">
+       arturo.orci@nube.sep.gob.mx
+       </div>
+    </p>
+    </li>
+        <li>
+          <div class="tel2">
+          <p align="justify">
+          <img src="icons/phone.svg" alt="">
+          36068650 ext.66429
+           </div>
+        </p>
+        </li>
+      </ul>
+
+        </div>
+
+        <div class="columna4">
+        <h1>Instituto Tecnológico de Tláhuac</h1>
+        <ul class="list-unstyled">
+        <div class="tel2">
+          <li>
+        <p align="center">
+        <img src="icons/home.svg" alt="">
+         Av. Estanislao Ramírez # 301 Colonia Ampliación Selene C.P. 13430 Tláhuac CDMX
+       </p>
+      </li>
     </div>
-
-    <div class="columna2">
-      <h1> TECNM</h1>
-      <img src="LogoTecNMBlanco.png" alt="TECNM">
-    </div>
-
+      <li>
+        <div class="tel2">
+        <p align="justify">
+        <img src="icons/phone.svg" alt="">
+         7312-5614 | 7312-5616 | 5841-0560|
+         </div>
+      </p>
+      </li>
+    </ul>
   </div>
+      </div>
 
-  </div>
+      </div>
 
-  <div class="contenedor-footer">
-    <div class="copyright">
-      <a>&copy; 2020 Todos los Derechos Reservados</a>
-    </div>
-    <div class="autores">
-      <a>Antonio Lorenzana Fabio Antonio</a> |
-      <a>Flores Reyes Jahir</a> |
-      <a>Reyes Villafranca Jose Pedro</a>
-    </div>
-  </div>
+      <div class="contenedor-footer">
+        <div class="copyright">
+          <a>&copy; 2020 Todos los Derechos Reservados</a>
+        </div>
+        <div class="autores">
+          <a>Antonio Lorenzana Fabio Antonio</a> |
+          <a>Flores Reyes Jahir</a> |
+          <a>Reyes Villafranca Jose Pedro</a>
+        </div>
+      </div>
 
-</footer>
+    </footer>
   </body>
 </html>

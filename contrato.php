@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
       <title> </title>
-    
+
      <link href="css/estilos.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"  rel="stylesheet" >
 
@@ -53,10 +53,10 @@
     <!--INICIO DE MENU A LA IZQUIERDA-------------------------->
     <!-- ----------------------------------------------->
     <!-- ----------------------------------------------->
-    
+
 
 <div id="contenedorizquierda">
-              
+
 
     <div class="panel-group ficha-collapse" id="filter-by" <div class="collapse" id="exCollapsingNavbar">
               <div class="bg-inverse p-a-1">
@@ -667,7 +667,7 @@
     </div>
 
 
-    
+
 <script>
 
 $("#montomaxi").on({
@@ -710,19 +710,100 @@ $(':checkbox').click(function() {
 });
 </script>
 
-  <footer>
+<footer>
+
   <div class="contenedor-todo-footer">
 
   <div class="contenedor-body">
+
     <div class="columna1">
-      <h1> Instituto Tecnológico de Tláhuac </h1>
+      <h1>  </h1>
       <img src="itt.png" alt="ITT">
-    </div>
-    <div class="columna2">
-      <h1> TECNM</h1>
-      <img src="LogoTecNMBlanco.png" alt="TECNM">
+      <h1> </h1>
+      <img src="indice.png" alt="TECNM">
+      <h1> </h1>
+      <img src="ff.png" alt="logo gobierno de méxico" >
     </div>
 
+    <div class="columna2">
+      <h1>B.E.S.A</h1>
+      <ul class="list-unstyled">
+    <li>
+      <p align="center">
+      <img src="icons/user.svg" alt="">
+       Responsable del programa: Ing. David Rogelio Rodríguez Arias
+     </p>
+    </li>
+    <li>
+      <div class="tel">
+      <p align="justify">
+      <img src="icons/mail.svg" alt="">
+       drrodriguez@nube.sep.gob.mx
+       </div>
+    </p>
+    </li>
+    <li>
+      <div class="tel">
+      <p align="justify">
+      <img src="icons/phone.svg" alt="">
+       36018650 ext. 66125
+       </div>
+    </p>
+    </li>
+  </ul>
+    </div>
+
+    <div class="columna3">
+      <h1>Órgano Interno de Control de la SEP</h1>
+      <ul class="list-unstyled">
+    <li>
+      <p align="center">
+      <img src="icons/home.svg" alt="">
+       Avenida Universidad #1074, col. Xoco, alcaldía Benito Juárez, C.P. 03330, CDMX
+     </p>
+    </li>
+  </li>
+  <li>
+  <div class="tel2">
+  <p align="justify">
+  <img src="icons/mail.svg" alt="">
+   arturo.orci@nube.sep.gob.mx
+   </div>
+</p>
+</li>
+    <li>
+      <div class="tel2">
+      <p align="justify">
+      <img src="icons/phone.svg" alt="">
+      36068650 ext.66429
+       </div>
+    </p>
+    </li>
+  </ul>
+
+    </div>
+
+    <div class="columna4">
+    <h1>Instituto Tecnológico de Tláhuac</h1>
+    <ul class="list-unstyled">
+    <div class="tel2">
+      <li>
+    <p align="center">
+    <img src="icons/home.svg" alt="">
+     Av. Estanislao Ramírez # 301 Colonia Ampliación Selene C.P. 13430 Tláhuac CDMX
+   </p>
+  </li>
+</div>
+  <li>
+    <div class="tel2">
+    <p align="justify">
+    <img src="icons/phone.svg" alt="">
+     7312-5614 | 7312-5616 | 5841-0560|
+     </div>
+  </p>
+  </li>
+</ul>
+</div>
   </div>
 
   </div>

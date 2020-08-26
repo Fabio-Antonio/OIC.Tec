@@ -1121,7 +1121,7 @@ margin-top: 27px;
   background-color: white;
  -moz-border-radius: 5px;
  -webkit-border-radius:5px;
- padding: 10px;
+
 }
 #prc:focus{
   border: 1.5px solid #00CC99;
@@ -1215,7 +1215,6 @@ box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
   background-color: white;
  -moz-border-radius: 5px;
  -webkit-border-radius:5px;
- padding: 10px;
 }
 #scontra:focus{
   border: 1.5px solid #00CC99;
@@ -1334,7 +1333,6 @@ box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
   background-color: white;
  -moz-border-radius: 5px;
  -webkit-border-radius:5px;
- padding: 10px;
 }
 #scontra2:focus{
   border: 1.5px solid #00CC99;
@@ -1477,7 +1475,6 @@ box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
   background-color: white;
  -moz-border-radius: 5px;
  -webkit-border-radius:5px;
- padding: 10px;
 }
 #scontra3:focus{
   border: 1.5px solid #00CC99;
@@ -1528,7 +1525,6 @@ box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
   background-color: white;
  -moz-border-radius: 5px;
  -webkit-border-radius:5px;
- padding: 10px;
 }
 .secontra:focus{
   border: 1.5px solid #00CC99;
@@ -1543,7 +1539,7 @@ box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
   background-color: white;
  -moz-border-radius: 5px;
  -webkit-border-radius:5px;
- padding: 10px;
+
 }
 .secontrae:focus{
   border: 1.5px solid #00CC99;
@@ -1568,7 +1564,6 @@ box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
   background-color: white;
  -moz-border-radius: 5px;
  -webkit-border-radius:5px;
- padding: 10px;
 }
 .semotivo:focus{
   border: 1.5px solid #00CC99;
@@ -1713,7 +1708,6 @@ box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
     background-color: white;
    -moz-border-radius: 5px;
    -webkit-border-radius:5px;
-   padding: 10px;
   }
 .fasecontra:focus{
     border: 1.5px solid #00CC99;
@@ -1807,7 +1801,7 @@ box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
   background-color: white;
  -moz-border-radius: 5px;
  -webkit-border-radius:5px;
-  padding: 10px;
+
   }
 .secontratopagoe:focus{
       border: 1.5px solid #00CC99;
@@ -1879,7 +1873,6 @@ box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
       background-color: white;
      -moz-border-radius: 5px;
      -webkit-border-radius:5px;
-     padding: 10px;
     }
 .secontrapartisasp:focus{
       border: 1.5px solid #00CC99;
@@ -1898,10 +1891,21 @@ box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
         text-align: left;
         margin-left: 50px;
       }
+
 #inclavepartida{
-    width: 450px;
-    margin-left: 50px;
-}
+      margin-left: 50px;
+      width: 460px;
+      height: 37.5px;
+      background-color: white;
+     -moz-border-radius: 5px;
+     -webkit-border-radius:5px;
+    }
+#inclavepartida:focus{
+      border: 1.5px solid #00CC99;
+      -webkit-box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
+      -moz-box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
+      box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
+    }
 .textcontratosub{
     background-color: #e5e2eb;
     border: 0px;
@@ -1916,7 +1920,7 @@ box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
       background-color: white;
      -moz-border-radius: 5px;
      -webkit-border-radius:5px;
-     padding: 10px;
+
     }
 .secontatosub:focus{
       border: 1.5px solid #00CC99;
@@ -1976,7 +1980,6 @@ box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
       background-color: white;
      -moz-border-radius: 5px;
      -webkit-border-radius:5px;
-     padding: 10px;
 
     }
 .secontrarecepcion:focus{
@@ -1998,7 +2001,7 @@ font-size: 11px;
       background-color: white;
      -moz-border-radius: 5px;
      -webkit-border-radius:5px;
-     padding: 10px;
+
     }
 .inrequirente:focus{
       border: 1.5px solid #00CC99;
@@ -2022,7 +2025,6 @@ font-size: 11px;
           background-color: white;
          -moz-border-radius: 5px;
          -webkit-border-radius:5px;
-         padding: 10px;
         }
 .seequirentere:focus{
           border: 1.5px solid #00CC99;
@@ -2068,7 +2070,7 @@ font-size: 11px;
       background-color: white;
      -moz-border-radius: 5px;
      -webkit-border-radius:5px;
-     padding: 10px;
+     
     }
 .secontraterminacion:focus{
       border: 1.5px solid #00CC99;
@@ -2136,7 +2138,7 @@ font-size: 11px;
       background-color: white;
      -moz-border-radius: 5px;
      -webkit-border-radius:5px;
-     padding: 10px;
+
 
     }
 .secontrarecepcionc:focus{
@@ -2156,7 +2158,6 @@ font-size: 11px;
       background-color: white;
      -moz-border-radius: 5px;
      -webkit-border-radius:5px;
-     padding: 10px;
 
     }
 .seunidadcompradoracontrato:focus{
@@ -2178,7 +2179,6 @@ font-size: 11px;
       background-color: white;
      -moz-border-radius: 5px;
      -webkit-border-radius:5px;
-     padding: 10px;
 
     }
 .seconsolidadocontrato:focus{
@@ -2198,7 +2198,6 @@ font-size: 11px;
       background-color: white;
      -moz-border-radius: 5px;
      -webkit-border-radius:5px;
-     padding: 10px;
 
     }
 .seunidadrequirentecontrato:focus{
@@ -2240,7 +2239,6 @@ font-size: 11px;
       background-color: white;
      -moz-border-radius: 5px;
      -webkit-border-radius:5px;
-     padding: 10px;
 
     }
 .seadministradorcontrato:focus{
@@ -2282,7 +2280,6 @@ font-size: 11px;
       background-color: white;
      -moz-border-radius: 5px;
      -webkit-border-radius:5px;
-     padding: 10px;
 
     }
 .seproveedoradjudicadocontrato:focus{
@@ -2643,7 +2640,8 @@ footer{
 
 .columna1{
   max-width: 600px;
-  margin-left: 100px;
+  margin-left: -80px;
+  margin-top: -20px;
 }
 .columna1 h1{
   font-size: 15px;
@@ -2651,52 +2649,51 @@ footer{
 
 }
 .columna1 img{
-  width: 80px;
+  width: 50px;
   margin-top: 20px;
-  margin-left: 105px;
+  margin-left: 10px;
+  border-radius: 50%;
 }
 
 .columna2{
   max-width: 400px;
-  margin-right: 100px;
+  margin-right: -10px;
 }
 .columna2 h1{
   font-size: 15px;
   text-align: center;
 }
-.columna2 img{
-  width: 150px;
+.tel{
+  margin-left: 20px;
   margin-top: 20px;
-
+}
+.tel2{
+  margin-left: 20px;
+  margin-top: 20px;
 }
 
 .columna3{
+  margin-right: -5px;
   max-width: 400px;
-  margin-left: 250px;
+
 }
 .columna3 h1{
   font-size: 15px;
   text-align: center;
 }
-.columna3 img{
-  width: 100px;
-  height: 50px;
-  margin-top: 20px;
-}
+
+
 
 .columna4{
+  margin-right: -80px;
   max-width: 400px;
-  margin-left: 200px;
 }
 .columna4 h1{
   font-size: 15px;
+  text-align: center;
 
 }
-.columna4 img{
-  width: 50px;
-  height: 50px;
-  margin-top: 20px;
-}
+
 
 .contenedor-footer{
   width: 100%;

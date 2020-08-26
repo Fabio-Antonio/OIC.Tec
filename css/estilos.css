@@ -793,6 +793,36 @@ margin-top: 27px;
   margin-top: 60px;
   height: 75px;
 }
+#table7030{
+  border: 2px solid black;
+
+}
+
+.titth{
+
+  font-size: 20px;
+  width: 100%;
+  text-align: right;
+}
+#table7030 tr:nth-child{
+  background-color: #ddd;
+}
+#Layer701{
+  margin-left: 30px;
+  margin-right:18px;
+  background: #FFFFFF;
+  margin-top: 210px;
+  height: 100%;
+  border: 2px solid black;
+}
+#Layer702{
+  margin-left: 30px;
+  margin-right:18px;
+  background: #FFFFFF;
+  margin-top: 20px;
+  height: 100%;
+  border: 2px solid black;
+}
 .breg70{
   margin-left: 30px;
   margin-top: 30px;
@@ -2070,7 +2100,7 @@ font-size: 11px;
       background-color: white;
      -moz-border-radius: 5px;
      -webkit-border-radius:5px;
-     
+
     }
 .secontraterminacion:focus{
       border: 1.5px solid #00CC99;
@@ -2805,6 +2835,11 @@ footer{
   margin-right:18px;
   background: #FFFFFF;
   margin-top: 30px;
+  border: 1px solid black;
+}
+
+.tablemy tr:nth-child{
+  background-color: #ddd;
 }
 #contepr{
   margin-left: -170px;
@@ -2921,7 +2956,8 @@ footer{
   margin-top: 30px;
 }
 .bregg{
-  margin-left: 40px;
+  margin-left: 30px;
+  margin-top: 20px;
 }
 /*fin consulta_por_vigencia.html*/
 /*top por contratos*/

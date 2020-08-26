@@ -352,9 +352,9 @@
         <div class='col-sm-20 col-md-20 col-ld-20'>
           <h2 class="fuu"> INFORME PROCEDIMIENTOS 70-30 </h2>
           <div id="Layer70">
-          <table class="table table-striped">
+          <table class="table table-striped" id="table7030">
            <tr>
-        <th>Presupuesto por partida</th>
+        <th class="titth">Presupuesto por partida</th>
         </tr>
             <tr>
 
@@ -378,9 +378,9 @@
 
         </div>
 
-	<div id="Layer70" style="margin-top:120px;margin-bottom:130px;">
+	<div id="Layer701" >
 
-          <table id="myTable"  class="table table-striped">
+          <table id="myTable"  class="tablemy">
 	  <thead>
         <tr>
         <th>Numero de Contrato</th>
@@ -413,9 +413,9 @@ var table = $('#myTable').dataTable({
 </script>
 </div>
 
-	<div id="Layer70" style="margin-top:130px">
+	<div id="Layer702" >
 
-       <table  id="myTable2" class="table table-striped">
+       <table  id="myTable2" class="tablemy">
 	  <thead>
 
 

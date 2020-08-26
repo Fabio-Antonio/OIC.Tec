@@ -328,7 +328,7 @@
             </div>
           </div>
           <div id="Layer1">
-          <table id="myTable" class="display"  style="width:100%">
+          <table id="myTable" class="tablemy"  style="width:100%">
 	 <thead>
             <tr>
               <th>Número de Contrato</th>

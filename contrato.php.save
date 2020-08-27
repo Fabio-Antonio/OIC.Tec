@@ -55,11 +55,18 @@
     <!-- ----------------------------------------------->
 
 
-<div id="contenedorizquierda">
+ <div id="contenedorizquierda">
 
-             
-    <div class="panel-group ficha-collapse" id="filter-by" <div class="collapse" id="exCollapsingNavbar">
+
+
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar" aria-controls="exCollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation">
+              &#9776;
+              </button>
+              <div class="collapse" id="exCollapsingNavbar">
               <div class="bg-inverse p-a-1">
+
+
+    <div class="panel-group ficha-collapse" id="filter-by">
       <center>
       <h3> B.E.S.A </h3>
       <h3> Consultas </h3>
@@ -223,29 +230,8 @@
           </h4>
           <button type="button" class="collpase-button collapsed" data-parent="#filter-by" data-toggle="collapse" href="#fee" onclick="location.href='../consulta_por_numero_de_contrato/consulta_numero_contrato.html'"></button>
         </div>
-        <div class="panel-collapse collapse" id="fee">
-          <div class="panel-body">
-            <a href="#">Autonomo (52)</a>
-          </div>
-        </div>
-      </div>
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h4 class="panel-title">
-            <a data-parent="#filter-by" data-toggle="collapse" href="#tmc" aria-expanded="false" aria-controls="tmc">
-              Top Montos por Contrato
-            </a>
-          </h4>
-          <button type="button" class="collpase-button collapsed" data-parent="#filter-by" data-toggle="collapse" href="#tmc"></button>
-        </div>
-        <div class="panel-collapse collapse" id="tmc">
-          <div class="panel-body">
-            <a href="#">Autonomo (52)</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+        <div class="panel-coll
+
 
 
 <div class="modal fade" role="dialog" id="my-modal" aria-labelledby="modal-title">
@@ -264,7 +250,7 @@
             </div>
         </div>
     </div>
-   </div>
+
 
 
 

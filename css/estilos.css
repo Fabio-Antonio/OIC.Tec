@@ -795,7 +795,7 @@ margin-top: 27px;
 }
 #table7030{
   border: 2px solid black;
-
+  
 }
 
 #table7030 tr:nth-child{
@@ -805,7 +805,7 @@ margin-top: 27px;
   margin-left: 30px;
   margin-right:18px;
   background: #FFFFFF;
-  margin-top: 130px;
+  margin-top: 0px;
   height: 100%;
   border: 2px solid black;
 }
@@ -1105,6 +1105,7 @@ margin-top: 27px;
 .fuu{
   text-align:center;
   font-size: 35px;
+  margin-top:60px;
 }
 .dfundamentot{
   margin-left: 30px;

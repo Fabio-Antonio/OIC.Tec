@@ -351,6 +351,7 @@
       <div class="row">
         <div class='col-sm-20 col-md-20 col-ld-20'>
           <h2 class="fuu"> INFORME PROCEDIMIENTOS 70-30 </h2>
+	
           <div id="Layer70">
           <table class="table table-striped" id="table7030">
            <tr>
@@ -378,7 +379,10 @@
 
         </div>
 
+ <h2 class="fuu">Contratos</h2>
+
 	<div id="Layer701" >
+<h2>Contratos Correspondientes al 30%</h2>
 
           <table id="myTable"  class="tablemy">
 	  <thead>
@@ -414,7 +418,7 @@ var table = $('#myTable').dataTable({
 </div>
 
 	<div id="Layer702" >
-
+<h2>Contratos Correspondientes al 70%</h2>
        <table  id="myTable2" class="tablemy">
 	  <thead>
 
@@ -452,9 +456,9 @@ var table = $('#myTable2').dataTable({
         </script>
 
         </div>
-
+        <h2 class="fuu">Gráficas</h2>
         <div class="grafica">
-          <div id="chartContainer" style=" height: 300px; width: 980px;margin-top:200px"></div>
+          <div id="chartContainer" style=" height: 300px; width: 980px;margin-top:0px"></div>
             <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
         </div>
 

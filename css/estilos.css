@@ -798,12 +798,6 @@ margin-top: 27px;
 
 }
 
-.titth{
-
-  font-size: 20px;
-  width: 100%;
-  text-align: right;
-}
 #table7030 tr:nth-child{
   background-color: #ddd;
 }
@@ -811,7 +805,7 @@ margin-top: 27px;
   margin-left: 30px;
   margin-right:18px;
   background: #FFFFFF;
-  margin-top: 210px;
+  margin-top: 130px;
   height: 100%;
   border: 2px solid black;
 }
@@ -2967,6 +2961,7 @@ footer{
   background: #FFFFFF;
   margin-top: 30px;
   height: 210px;
+  border: 2px solid black;
 }
 #chartContainer{
   height: 400px;

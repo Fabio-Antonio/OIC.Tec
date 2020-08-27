@@ -310,7 +310,7 @@
         <div class='col-sm-20 col-md-20 col-ld-20'>
           <h2 class="fuu"> TOP MONTOS POR CONTRATOS </h2>
           <div id="Layert">
-          <table id="myTable" class="display">
+          <table id="myTable" class="tablemy">
            <thead>
             <tr>
 		<th>Id</th>

@@ -354,7 +354,7 @@
           <div id="Layer70">
           <table class="table table-striped" id="table7030">
            <tr>
-        <th class="titth">Presupuesto por partida</th>
+        <th>Presupuesto por partida</th>
         </tr>
             <tr>
 

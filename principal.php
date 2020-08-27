@@ -56,44 +56,46 @@ window.location.replace('index.php');</script>";
 
 
 
-	<!-- Sidebar -->
-  <div class="barra">
 
 
-<!-- Sidebar -->
+    <!-- Sidebar -->
+    <div class="barra">
 
-<div class="w3-sidebar w3-bar-block w3-animate-left" style="display:none;z-index:5" id="mySidebar">
-  <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Cerrar &times;</button>
-  <img src="icons/lf.png" alt="sfp" width="145" height="60">
-  <a  class="w3-bar-item w3-button"><?php echo $_SESSION['usuario'];?></a>
-  <a href="#" class="w3-bar-item w3-button">Inicio</a>
-  <a href="alta.html" class="w3-bar-item w3-button">Usuarios</a>
-  <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal2" >Contacto</a>
-   <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal3">Nueva Partida</a>
 
-  <a href="cerrar.php" class="w3-bar-item w3-button">Logout -></a>
+    <!-- Sidebar -->
 
-</div>
+    <div class="w3-sidebar w3-bar-block w3-animate-left" style="display:none;z-index:5" id="mySidebar">
+    <button  id="ce" class="w3-bar-item w3-button w3-large" onclick="w3_close()">Cerrar &times;</button>
+    <img src="icons/lf.png" alt="sfp" width="145" height="60">
+    <a  class="w3-bar-item w3-button"></a>
+    <a href="#" class="w3-bar-item w3-button">Inicio</a>
+    <a href="alta.html" class="w3-bar-item w3-button">Usuarios</a>
+    <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal2" >Contacto</a>
+     <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal3">Nueva Partida</a>
 
-<!-- Page Content -->
-<div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+    <a href="cerrar.php" class="w3-bar-item w3-button">Logout -></a>
 
-<div>
-  <button class="w3-button w3-white w3-xxlarge" onclick="w3_open()">&#9776;</button>
-</div>
-</div>
+    </div>
 
-<script>
-function w3_open() {
-  document.getElementById("mySidebar").style.display = "block";
-  document.getElementById("myOverlay").style.display = "block";
-}
+    <!-- Page Content -->
+    <div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
 
-function w3_close() {
-  document.getElementById("mySidebar").style.display = "none";
-  document.getElementById("myOverlay").style.display = "none";
-}
-</script>
+    <div>
+    <button class="w3-button w3-white w3-xxlarge" onclick="w3_open()">&#9776;</button>
+    </div>
+    </div>
+    </div>
+    <script>
+    function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+    }
+
+    function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+    }
+    </script>
 
 
       <div id="venta111">

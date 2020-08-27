@@ -1,3 +1,16 @@
+.barraizquierda{
+  margin-top: -100px;
+}
+#mySidebar{
+  background-color: #12322b;
+}
+#ce {
+  color: white;
+}
+#mySidebar a {
+  color: white;
+}
+
 #tipodeusuario{
   margin-left: 200px;
 }
@@ -19,6 +32,10 @@
 }
 .container1{
   margin-left: 400px;
+
+}
+.contenedort{
+  margin-top: 250px;
 }
 .subtitulo{
   text-align: center;
@@ -288,7 +305,7 @@ margin-top: 27px;
   width: 700px;
   height: 100%;
   margin-left: -160px;
-  margin-top: 20px;
+  margin-top: 250px;
   min-height: calc(100vh - 100px -100%);
 }
 .tb{
@@ -795,7 +812,7 @@ margin-top: 27px;
 }
 #table7030{
   border: 2px solid black;
-  
+
 }
 
 #table7030 tr:nth-child{
@@ -834,6 +851,9 @@ margin-top: 27px;
   margin-top: 30px;
   width: 150px;
   height: 40px;
+}
+.conttt{
+  margin-top: 260px;
 }
 #gu:hover{
   background: rgba(169,3,41,1);
@@ -902,7 +922,7 @@ margin-top: 27px;
   background-color: #ddd;
   width: 1030px;
   margin-left: 250px;
-  margin-top: -250px;
+  margin-top: 10px;
   margin-bottom: 20px;
   min-height: calc(100vh - 100px -100%);
 }
@@ -1039,7 +1059,7 @@ margin-top: 27px;
 .container11{
   width: 1000px;
   margin-left: 250px;
-  margin-top: -250px;
+  margin-top: 10px;
 }
 .row2 {
   margin-bottom: 1rem;
@@ -1099,7 +1119,7 @@ margin-top: 27px;
 /*--------------------------------------------------------------*/
 #funpro{
   margin-left: -150px;
-  margin-top: -250px;
+  margin-top: 250px;
   min-height: calc(100vh - 100px -100%);
 }
 .fuu{
@@ -1117,6 +1137,7 @@ margin-top: 27px;
 #fechafun{
   width: 450px;
   font-size: 19px;
+  margin-top: -8px;
 }
 #opcion{
   width: 480px;
@@ -1162,7 +1183,7 @@ box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
 #ful{
   width: 500px;
   margin-left: 550px;
-  margin-top: -85px;
+  margin-top: -100px;
 }
 #btnac{
   margin-top: 30px;
@@ -1217,12 +1238,12 @@ box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
 /*--------------------------------------------------------------*/
 #contec{
   margin-left: -170px;
-  margin-top: 50px;
+  margin-top: 250px;
   min-height: calc(100vh - 100px -100%);
 }
 #contecom{
   margin-left: -170px;
-  margin-top: 10px;
+  margin-top: 250px;
   min-height: calc(100vh - 100px -100%);
 }
 #textcon{
@@ -2838,6 +2859,7 @@ footer{
 }
 #contepr{
   margin-left: -170px;
+  margin-top: 250px;
   min-height: calc(100vh - 100px -100%);
 }
 .botones{

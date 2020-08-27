@@ -1,3 +1,15 @@
+.barraizquierda{
+  margin-top:-15px ;
+}
+#mySidebar{
+  background-color: #12322b;
+}
+#ce {
+  color: white;
+}
+#mySidebar a {
+  color: white;
+}
 #besa{
   font-size: 25px;
 }
@@ -95,17 +107,58 @@
 /*--------------------------------------------------------------*/
 footer{
   width: 100%;
+  background-color: #000000;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  display: flex;
+}
+#contenedor-footer{
+  width: 100%;
+  height: 150px;
+  max-width: 1200px;
+  margin: auto;
+  justify-content:space-between;
+  display: flex;
+}
+#itt{
+  margin-left: 10px;
+
+}
+.ittl{
+  font-size: 22px;
+  color: #c7c7c7;
+}
+.imgitt{
+  margin-top: 30px;
+  height: 90px;
+  width: 150px;
+}
+#itm{
+  margin-left: 1000px;
+  margin-top: -50px;
+}
+.itme{
+  font-size: 22px;
+  color: #c7c7c7;
+}
+.imgtec{
+  margin-top: 90px;
+  height: 80px;
+}
+
+
+
+footer{
+  width: 100%;
   background: #202020;
   color: white;
-  margin-top: 20px;
 
 }
 .contenedor-todo-footer{
   width: 100%;
   max-width: 1200px;
-  margin: auto;
   padding: 20px;
-
+ margin:auto;
 }
 .contenedor-body{
   display: flex;
@@ -114,7 +167,8 @@ footer{
 
 .columna1{
   max-width: 600px;
-  margin-left: 100px;
+  margin-left: -80px;
+  margin-top: -20px;
 }
 .columna1 h1{
   font-size: 15px;
@@ -122,27 +176,54 @@ footer{
 
 }
 .columna1 img{
-  width: 80px;
+  width: 50px;
   margin-top: 20px;
-  margin-left: 70px;
+  margin-left: 10px;
+  border-radius: 50%;
 }
 
 .columna2{
   max-width: 400px;
-  margin-right: 100px;
+  margin-right: -10px;
 }
 .columna2 h1{
   font-size: 15px;
   text-align: center;
 }
-.columna2 img{
-  width: 150px;
+.tel{
+  margin-left: 20px;
   margin-top: 20px;
+}
+.tel2{
+  margin-left: 20px;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.columna3{
+  margin-right: -5px;
+  max-width: 400px;
+
+}
+.columna3 h1{
+  font-size: 15px;
+  text-align: center;
+}
+
+
+.columna4{
+  margin-right: -80px;
+  max-width: 400px;
+}
+.columna4 h1{
+  font-size: 15px;
+  text-align: center;
 
 }
 
+
 .contenedor-footer{
-  width: 99%;
+  width: 100%;
   background-color: #101010;
   display: flex;
   justify-content:space-between;
@@ -178,9 +259,5 @@ footer{
   }
 }
 .front{
-  height: 0px;
-}
-
-.eti{
-  margin-top: 0px;
+  height: 10px;
 }

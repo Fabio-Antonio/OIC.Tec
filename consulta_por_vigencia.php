@@ -14,7 +14,7 @@
     <link href="https://cdn.datos.gob.mx/bower_components/dgm-footer/dgm-footer.html" rel="import">
 
 	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
-
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 
     <script>
@@ -77,7 +77,7 @@
             <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="principal.php" id="besa" >B.E.S.A</a>
-            <a> <img data-v-4a3754a3="" src="icons/lf.png" alt="logo gobierno de méxico" class="logos" style="width: 80%;height: 50%; margin-top: -50px; margin-bottom: -25px; margin-left: 420px "></a>
+            <a> <img data-v-4a3754a3="" src="icons/lf.png" alt="logo gobierno de méxico" class="logos" style="width: 80%;height: 50%; margin-top: -100px; margin-bottom: -25px; margin-left: 420px "></a>
           </div>
 
           <div class="collapse navbar-collapse" id="subenlaces" style=" width:110%; margin-top: -30px;">
@@ -103,206 +103,49 @@
     <!--INICIO DE MENU A LA IZQUIERDA-------------------------->
     <!-- ----------------------------------------------->
     <!-- ----------------------------------------------->
-    <div id="contenedorizquierda">
 
-
-
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar" aria-controls="exCollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation">
-              &#9776;
-              </button>
-              <div class="collapse" id="exCollapsingNavbar">
-              <div class="bg-inverse p-a-1">
-
-
-    <div class="panel-group ficha-collapse" id="filter-by">
-      <center>
-      <h3> B.E.S.A </h3>
-      <h3> Consultas </h3>
-      </center>
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h4 class="panel-title">
-            <a data-parent="#filter-by" data-toggle="collapse" href="#consultanc" aria-expanded="false" aria-controls="consultanc">
-              SUBIR ARCHIVO
-            </a>
-          </h4>
-          <button type="button" class="collpase-button collapsed" data-parent="#filter-by" data-toggle="collapse" href="#consultanc"></button>
-        </div>
-        <div class="panel-collapse collapse" id="consultanc">
-          <div class="panel-body">
-            <a href="#" >SUBIR ARCHIVO (PDF,EXCEL)</a>
-          </div>
-        </div>
-      </div>
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h4 class="panel-title">
-            <a data-parent="#filter-by" data-toggle="collapse" href="#finv" aria-expanded="false" aria-controls="finv">
-              Fin Vigencia
-            </a>
-          </h4>
-          <button type="button" class="collpase-button collapsed" data-parent="#filter-by" data-toggle="collapse" href="#finv"></button>
-        </div>
-        <div class="panel-collapse collapse" id="finv">
-          <div class="panel-body">
-            <a href="#">Autonomo (52)</a>
-          </div>
-        </div>
-      </div>
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h4 class="panel-title">
-            <a data-parent="#filter-by" data-toggle="collapse" href="#orgs" aria-expanded="false" aria-controls="im">
-              Informe Montos por Procedimiento
-            </a>
-          </h4>
-          <button type="button" class="collpase-button collapsed" data-parent="#filter-by" data-toggle="collapse" href="#im"></button>
-        </div>
-        <div class="panel-collapse collapse" id="im">
-          <div class="panel-body">
-            <a href="#">CONABIO (4679)</a>
-          </div>
-        </div>
-      </div>
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h4 class="panel-title">
-            <a data-parent="#filter-by" data-toggle="collapse" href="#cf" aria-expanded="false" aria-controls="cf">
-              Consulta Fechas Adjudicación
-            </a>
-          </h4>
-          <button type="button" class="collpase-button collapsed" data-parent="#filter-by" data-toggle="collapse" href="#cf"></button>
-        </div>
-        <div class="panel-collapse collapse" id="cf">
-          <div class="panel-body">
-            <a href="#">Cuidades Inteligentes (29)</a>
-          </div>
-        </div>
-      </div>
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h4 class="panel-title">
-            <a data-parent="#filter-by" data-toggle="collapse" href="#cop" aria-expanded="false" aria-controls="cop">
-              Contrato por Partida
-            </a>
-          </h4>
-          <button type="button" class="collpase-button collapsed" data-parent="#filter-by" data-toggle="collapse" href="#cop"></button>
-        </div>
-        <div class="panel-collapse collapse" id="cop">
-          <div class="panel-body">
-            <a href="#">Autonomo (52)</a>
-          </div>
-        </div>
-      </div>
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h4 class="panel-title">
-            <a data-parent="#filter-by" data-toggle="collapse" href="#in37" aria-expanded="false" aria-controls="in37">
-              Informe 70-30
-            </a>
-          </h4>
-          <button type="button" class="collpase-button collapsed" data-parent="#filter-by" data-toggle="collapse" href="#in37"></button>
-        </div>
-        <div class="panel-collapse collapse" id="in37">
-          <div class="panel-body">
-            <a href="../informe70-30/informe70-30.html">Informe Procedimiento 70-30</a>
-          </div>
-        </div>
-      </div>
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h4 class="panel-title">
-            <a data-parent="#filter-by" data-toggle="collapse" href="#fef" aria-expanded="false" aria-controls="fef">
-              Fecha de Formalización
-            </a>
-          </h4>
-          <button type="button" class="collpase-button collapsed" data-parent="#filter-by" data-toggle="collapse" href="#fef"></button>
-        </div>
-        <div class="panel-collapse collapse" id="fef">
-          <div class="panel-body">
-            <a href="#">Autonomo (52)</a>
-          </div>
-        </div>
-      </div>
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h4 class="panel-title">
-            <a data-parent="#filter-by" data-toggle="collapse" href="#cop" aria-expanded="false" aria-controls="cop">
-              Contratos por Proveedor
-            </a>
-          </h4>
-          <button type="button" class="collpase-button collapsed" data-parent="#filter-by" data-toggle="collapse" href="#cop"></button>
-        </div>
-        <div class="panel-collapse collapse" id="cop">
-          <div class="panel-body">
-            <a href="#">Autonomo (52)</a>
-          </div>
-        </div>
-      </div>
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h4 class="panel-title">
-            <a data-parent="#filter-by" data-toggle="collapse" href="#copp" aria-expanded="false" aria-controls="copp">
-              Contratos por Periodo
-            </a>
-          </h4>
-          <button type="button" class="collpase-button collapsed" data-parent="#filter-by" data-toggle="collapse" href="#copp"></button>
-        </div>
-        <div class="panel-collapse collapse" id="copp">
-          <div class="panel-body">
-            <a href="#">Autonomo (52)</a>
-          </div>
-        </div>
-      </div>
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h4 class="panel-title">
-            <a data-parent="#filter-by" data-toggle="collapse" href="#cpur" aria-expanded="false" aria-controls="cpur">
-              Contratos y Proveedor por UR
-            </a>
-          </h4>
-          <button type="button" class="collpase-button collapsed" data-parent="#filter-by" data-toggle="collapse" href="#cpur"></button>
-        </div>
-        <div class="panel-collapse collapse" id="cpur">
-          <div class="panel-body">
-            <a href="#">Autonomo (52)</a>
-          </div>
-        </div>
-      </div>
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h4 class="panel-title">
-            <a data-parent="#filter-by" data-toggle="collapse" href="#fee" aria-expanded="false" aria-controls="fee">
-              Fechas Entregables
-            </a>
-          </h4>
-          <button type="button" class="collpase-button collapsed" data-parent="#filter-by" data-toggle="collapse" href="#fee" onclick="location.href='../consulta_por_numero_de_contrato/consulta_numero_contrato.html'"></button>
-        </div>
-        <div class="panel-collapse collapse" id="fee">
-          <div class="panel-body">
-            <a href="#">Autonomo (52)</a>
-          </div>
-        </div>
-      </div>
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h4 class="panel-title">
-            <a data-parent="#filter-by" data-toggle="collapse" href="#tmc" aria-expanded="false" aria-controls="tmc">
-              Top Montos por Contrato
-            </a>
-          </h4>
-          <button type="button" class="collpase-button collapsed" data-parent="#filter-by" data-toggle="collapse" href="#tmc"></button>
-        </div>
-        <div class="panel-collapse collapse" id="tmc">
-          <div class="panel-body">
-            <a href="#">Autonomo (52)</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 </main>
+<div class="barraizquierda">
+
+
+<!-- Sidebar -->
+<div class="barra">
+
+
+<!-- Sidebar -->
+
+<div class="w3-sidebar w3-bar-block w3-animate-left" style="display:none;z-index:5" id="mySidebar">
+<button  id="ce" class="w3-bar-item w3-button w3-large" onclick="w3_close()">Cerrar &times;</button>
+<img src="icons/lf.png" alt="sfp" width="145" height="60">
+<a  class="w3-bar-item w3-button"></a>
+<a href="#" class="w3-bar-item w3-button">Inicio</a>
+<a href="alta.html" class="w3-bar-item w3-button">Usuarios</a>
+<a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal2" >Contacto</a>
+ <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal3">Nueva Partida</a>
+
+<a href="cerrar.php" class="w3-bar-item w3-button">Logout -></a>
+
+</div>
+
+<!-- Page Content -->
+<div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+
+<div>
+<button class="w3-button w3-white w3-xxlarge" onclick="w3_open()">&#9776;</button>
+</div>
+</div>
+</div>
+<script>
+function w3_open() {
+document.getElementById("mySidebar").style.display = "block";
+document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+document.getElementById("mySidebar").style.display = "none";
+document.getElementById("myOverlay").style.display = "none";
+}
+</script>
 <!------------------------------------------------------>
 <!------------------------------------------------------>
 <!-- INICIA REGISTRO------------------------------------>

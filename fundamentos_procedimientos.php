@@ -117,7 +117,7 @@
                     </p>
                 </div>
                 <div class="modal-footer">
-                <button class="btn btn-primary" data-dismiss="modal">Ok</button>                    </div>
+                <button class="btn btn-primary" onclik="location.href='consulta_fundamento.php'" data-dismiss="modal">Ok</button>                    </div>
             </div>
         </div>
     </div>
@@ -164,8 +164,8 @@
             <input class="form-control" id="fechafun" name="fecha" placeholder="Fecha" type="date" required value="<?php echo date('Y-m-d');?>">
           </div>
           <div id="diopc">
-            <label id="ccp" class="col-sm-20"> Opción:   </label>
-            <input class="form-control" id="opcion" name="opcion" placeholder="Opción" maxlength="1" type="text" required>
+            <label id="ccp" class="col-sm-20"> Descripción:   </label>
+            <textarea id="descripcion2" class="form-control" rows=5></textarea>
           </div>
           <div id="btnac">
               <button type="button" id="bac" class="btn btn-primary" onclick="ingresar2();" name="button"> Guardar </button>
@@ -222,7 +222,7 @@
 
        var selIndex = selObj.options[selObj.selectedIndex].text;
 
-    if(selIndex.length==0||!(/^[A-Z-a-z0-9ñÑáéíóúÁÉÍÓÚ,.°\s]*$/.test(selIndex))){
+    if(selIndex.length==0||!(/^[A-Z-a-z0-9ñÑáéíóúÁÉÍÓÚ,.°()\s]*$/.test(selIndex))){
          document.getElementById('prc').focus();
 	  $(function(){
                 $('#my-modal2').modal('show')
@@ -253,7 +253,7 @@ $('#my-modal').modal('show')
 function ingresar2(){
 var fundamento= (document.getElementById("fundanen").value);
 var fecha= (document.getElementById("fechafun").value);
-var opcion= (document.getElementById("opcion").value);
+var descripcion= (document.getElementById("descripcion2").value);
 
 
 if(fundamento.length==0||fundamento.lenth>45){
@@ -274,8 +274,8 @@ document.getElementById("fundanen").focus();
 return;
 
 }
-if(opcion.length==0||opcion.lenth>1){
-document.getElementById("opcion").focus();
+if(descripcion.length==0||descripcion.lenth>500){
+document.getElementById("descripción2").focus();
  $(function(){
                 $('#my-modal2').modal('show')
                 });
@@ -283,9 +283,9 @@ document.getElementById("opcion").focus();
 return;
 }
 
-if(!(/^[a-zA-Z]*$/i.test(opcion))){
+if(!(/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ,.°\s]*$/i.test(descripcion))){
 
-document.getElementById("un").focus();
+document.getElementById("descripcion2").focus();
  $(function(){
                 $('#my-modal2').modal('show')
                 });
@@ -299,7 +299,7 @@ return;
 $.post('fundamento.php',{
 "fundamento":fundamento,
 "fecha":fecha,
-"opcion":opcion
+"descripcion":descripcion
 
 },function(data){
 

@@ -1,12 +1,15 @@
 <?php
 require_once("conexion.php");
 
-$clav=$_GET["clavest"];
- $statement = $conn->prepare("SELECT numero_contrato, monto_max, procedimientos FROM partidas_presupuestales AS pp INNER JOIN contrato AS c ON pp.id_contrato
- = c.id_contrato INNER JOIN procedimientos_contratacion AS pc ON c.id_procedimiento_contratacion = pc.id_procedimiento_contratacion INNER JOIN partida_presupuesto
- AS ppr ON pp.id_presupuesto = ppr.id WHERE pc.id_procedimiento_contratacion >= 4 AND pc.id_procedimiento_contratacion <= 7 AND ppr.clave = ?");
+$unidada=$_GET["unidada"];
+ $statement = $conn->prepare("SELECT numero_contrato, monto_max, procedimientos FROM partidas_presupuestales AS pp
+INNER JOIN unidad_compradora AS uc ON pp.id_unidad = uc.id_unidad_compradora
+INNER JOIN contrato AS c ON c.id_unidad_compradora = uc.id_unidad_compradora
+INNER JOIN procedimientos_contratacion AS pc ON c.id_procedimiento_contratacion = pc.id_procedimiento_contratacion
+INNER JOIN partida_presupuesto AS ppr ON pp.id_presupuesto = ppr.id
+WHERE pc.id_procedimiento_contratacion >= 2 AND pc.id_procedimiento_contratacion <= 4 AND uc.nombre_unidad_compradora = ?");
 
-$statement->bindParam(1,$clav);
+$statement->bindParam(1,$unidada);
 $statement->execute();
 
 if($statement){

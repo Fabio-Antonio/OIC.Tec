@@ -110,6 +110,7 @@ window.location.replace('index.php');</script>";
     <img class="card-img-top" src="icons/actores.jpg" alt="Card image cap" width="20%">
     <div class="card-body">
       <h5 class="card-title">Actores</h5>
+	<a href="consulta_contrato3.php" >Entregables</a><BR>
 	 <a href="requirente_compradora_captura.html">Unidad Requirente</a><BR>
 	  <a href="requirente_compradora_captura.html">Unidad Compradora</a><BR>
 	<a href="admin.html">Administrador de Contrato</a><BR>
@@ -125,7 +126,6 @@ window.location.replace('index.php');</script>";
     <img class="card-img-top" src="icons/engrane.jpg" alt="Card image cap"  width="20%">
     <div class="card-body">
       <h5 class="card-title">Administración</h5>
-           <a href="consulta_contrato3.php" >Entregables</a><BR>
      		 <a href="lectura.html">Carga de archivos (PDF)(CVS)</a><BR>
 		   <a href="consulta_contrato.php">Comprobacion/Convenios Modificados/Documentos Adicionales</a><BR>
 
@@ -165,7 +165,7 @@ window.location.replace('index.php');</script>";
   <div class="card">
     <img class="card-img-top" src="icons/calendario.jpg" alt="Card image cap">
     <div class="card-body">
-      <h5 class="card-title">Vigencias</h5>
+      <h5 class="card-title">Calendario</h5>
        <a href="consulta_vigencia.php">Fin vigencia</a><BR>
           <a href="">Consultas por fecha de adjudicación</a><BR>
           <a href="">Fechas entregables</a><BR>
@@ -353,12 +353,12 @@ window.location.replace('index.php');</script>";
                 </div>
                 <div class="modal-body">
                     <h3>
-                        Contacta al administrador
+                        Contacto
                     </h3>
 
 			<form role="form" id="formulario">
   <div class="form-group">
-    <label class="control-label" for="email-01">E-mail:</label>
+    <label class="control-label" for="email-01">E-mail de destino:</label>
     <input class="form-control" id="mail" placeholder="Ejemplo e-mail@e-mail.com" type="email" required>
   </div>
 
@@ -420,13 +420,27 @@ window.location.replace('index.php');</script>";
                 </div>
                 <div class="modal-body">
                     <h3>
-                       Ingresa la clave de Partida
+                       Selecciona la Unidad Compradora
                     </h3>
 
 
  <div class="form-group">
-    <label class="control-label" for="email-01">Clave:</label>
-    <input class="form-control" id="clav" placeholder="Clave" type="number" required>
+    <label class="control-label" for="email-01">Unidad Compradora:</label>
+  <select id="unidadc" name="unidad">
+                         <?php
+			require_once("consulta_principal.php");
+                        
+                        foreach($flag as $key=> $val){
+                ?>
+
+                  <option value="<?php print($val['id_unidad_compradora']); ?>"><?php print($val['nombre_unidad_compradora']); ?></option>
+                    <?php
+                }
+        
+                ?>
+
+                </select>
+    
   </div>
 
  <button class="btn btn-default btn-success" type="button" name="submit" onclick="ingresar3();">Enviar</button>
@@ -435,7 +449,7 @@ window.location.replace('index.php');</script>";
 
                 </div>
                 <div class="modal-footer">
-                <button class="btn btn-primary" data-dismiss="modal">Ok</button>                    </div>
+                     </div>
             </div>
         </div>
     </div>
@@ -529,21 +543,17 @@ alert("listo");
 
 <script   lenguaje="javascript" type="text/javascript">
 function ingresar3(){
-var clav= (document.getElementById("clav").value);
+ var selObj = document.getElementById('unidadc');
+       var nombre_unidad_compradora  = selObj.options[selObj.selectedIndex].text;
 
-if(clav.length==0||clav.lenth>45){
-alert("El campo no cumple con la longitud correcta");
-document.getElementById("clav").focus();
-return;
-}
-if(!(/^[0-9.\s]*$/i.test(clav))){
-alert("El contiene caracteres no permitidos");
-document.getElementById("clav").focus();
-return;
+      if(nombre_unidad_compradora.length==0||!(/^[A-Za-z0-9]+$/.test(nombre_unidad_compradora))||nombre_unidad_compradora.length>50){
+        alert("El campo Unidad Compradora es invalido");
+        document.getElementById('unidadc').focus();
+        return;
+        }
 
-}
 
-window.location="consulta_70_30.php?clav="+clav;
+window.location="consulta_70_30.php?nombre_unidad_compradora="+nombre_unidad_compradora;
 
 }
 </script>

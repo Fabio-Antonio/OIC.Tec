@@ -25,7 +25,7 @@ $conn = null;
 $ch = curl_init();
 
 // definimos la URL a la que hacemos la petición
-curl_setopt($ch, CURLOPT_URL,"http://192.168.0.38:8888/besa/fundamentos_procedimientos.php");
+curl_setopt($ch, CURLOPT_URL,"http://besa-pruebas.com:8888/besa/fundamentos_procedimientos.php");
 // indicamos el tipo de petición: POST
 curl_setopt($ch, CURLOPT_POST, TRUE);
 // definimos cada uno de los parámetros

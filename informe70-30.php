@@ -60,7 +60,7 @@
  var chart2 = new CanvasJS.Chart("chartContainer2", {
         animationEnabled: true,
         title: {
-                text: "Consumo 70%"
+                text: "Consumo del 70%"
         },
         data: [{
                 type: "pie",
@@ -81,7 +81,7 @@
  var chart3 = new CanvasJS.Chart("chartContainer3", {
         animationEnabled: true,
         title: {
-                text: "Consumo de la Partida Presupuestal"
+                text: "Consumo Total  de la Partida Presupuestal"
         },
         data: [{
                 type: "pie",
@@ -201,7 +201,8 @@ document.getElementById("myOverlay").style.display = "none";
         <th>Presupuesto por partida</th>
         </tr>
             <tr>
-
+		<th>Unidad Compradora</th>
+		<th>Numero de Unidad</th>
               <th>Clave</th>
 		<th>Presupuesto</th>
 		<th>70%</th>
@@ -209,7 +210,8 @@ document.getElementById("myOverlay").style.display = "none";
 
             </tr>
             <tr>
-
+		 <td><?php $unidad=$_POST["unidad"]; echo $unidad;?></td>
+                 <td><?php $numero_unidad=$_POST["numero_unidad"]; echo $numero_unidad;?></td>
                  <td><?php $claves=$_POST["cl"]; echo $claves;?></td>
 		 <td><?php $totals=$_POST["totals"]; echo $totals;?></td>
 		 <td><?php $setenta=$_POST["setenta"]; echo $setenta;?></td>
@@ -241,10 +243,26 @@ document.getElementById("myOverlay").style.display = "none";
 <script>
 $( document ).ready(function() {
 
-var claves='<?=$claves?>';
+var unidad='<?=$unidad?>';
 var table = $('#myTable').dataTable({
+"language": {
+            "lengthMenu": "Mostrar _MENU_ Inserciones por página",
+            "zeroRecords": "No se encontraron resultados - lo siento",
+            "search":  "Buscar:",
+            "info": "Mostrar páginas _PAGE_ of _PAGES_",
+            "infoEmpty": "No existen registros",
+            "infoFiltered": "(filtered from _MAX_ total records)",
+	    "loadingRecords": "Cargando...",		 
+
+         "paginate": {
+                "first":      "Primero",
+                "previous":   "Previa",
+                "next":       "Siguiente",
+                "last":       "Última"
+            },
+},
 "bProcessing": true,
-"sAjaxSource": "consulta_70_30t.php?clavest="+claves,
+"sAjaxSource": "consulta_70_30t.php?unidada="+unidad,
 "bPaginate":true,
 "sPaginationType":"full_numbers",
 "iDisplayLength": 5,
@@ -278,11 +296,28 @@ var table = $('#myTable').dataTable({
 
  <script>
         $( document ).ready(function() {
-var claves='<?=$claves?>';
+var unidad='<?=$unidad?>';
 
 var table = $('#myTable2').dataTable({
+"language": {
+            "lengthMenu": "Mostrar _MENU_ Inserciones por página",
+            "zeroRecords": "No se encontraron resultados - lo siento",
+            "search":  "Buscar:",
+            "info": "Mostrar páginas _PAGE_ of _PAGES_",
+            "infoEmpty": "No existen registros",
+            "infoFiltered": "(filtered from _MAX_ total records)",
+            "loadingRecords": "Cargando...",
+
+         "paginate": {
+                "first":      "Primero",
+                "previous":   "Previa",
+                "next":       "Siguiente",
+                "last":       "Última"
+            },
+},
+
 "bProcessing": true,
-"sAjaxSource": "consulta_70_30a.php?clavest="+claves,
+"sAjaxSource": "consulta_70_30a.php?unidada="+unidad,
 "bPaginate":true,
 "sPaginationType":"full_numbers",
 "iDisplayLength": 5,

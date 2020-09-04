@@ -3,12 +3,12 @@
 
        $fundamento = $_POST["fundamento"];  
        $fecha = $_POST["fecha"];
-       $opcion = $_POST["opcion"];
+       $descripcion  = $_POST["descripcion"];
    
- $statement = $conn->prepare("INSERT INTO fundamento_legal (fundamento,fecha,opcion)VALUES(?,?,?)");
+ $statement = $conn->prepare("INSERT INTO fundamento_legal (fundamento,fecha,descripcion)VALUES(?,?,?)");
 $statement->bindParam(1, $fundamento);
 $statement->bindParam(2, $fecha);
-$statement->bindParam(3, $opcion);
+$statement->bindParam(3, $descripcion);
 $statement->execute();      
 
   

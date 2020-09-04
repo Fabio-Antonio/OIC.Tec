@@ -5,15 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-      <title> </title>
+      <title>Top por Contrato </title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/estilos.css" rel="stylesheet">
     <link href="https://cdn.datos.gob.mx/assets/css/main.css" rel="stylesheet">
     <link href="https://cdn.datos.gob.mx/assets/img/favicon.ico" rel="shortcut icon">
     <link href="https://cdn.datos.gob.mx/bower_components/dgm-footer/dgm-footer.html" rel="import">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
-
+     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">    
 
     <script>
       window.onload = function () {
@@ -153,7 +152,9 @@ document.getElementById("myOverlay").style.display = "none";
         <div class='col-sm-20 col-md-20 col-ld-20'>
           <h2 class="fuu"> TOP MONTOS POR CONTRATOS </h2>
           <div id="Layert">
-          <table id="myTable" class="tablemy">
+         <h2>Contratos más altos</h2>
+          <table id="myTable" class="Display">
+	
            <thead>
             <tr>
 		<th>Id</th>
@@ -192,36 +193,41 @@ $arr=unserialize($_POST["flag"]);
         }
        ?>
 </tbody>
-<tfoot>
- <tr>
-                <th>Id</th>
-                <th>Número de Contrato</th>
-                <th>Unidad Requirente</th>
-                <th>Proveedor Adjudicado</th>
-                <th> Monto Mximo</th>
-              </tr>
 
-
-</tfoot>
 
 
           </table>
+
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
         <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
-
 <script>
 $(document).ready(function() {
     $('#myTable').DataTable( {
       "language": {
-            "decimal": ",",
-            "thousands": "."
-        }
+            "lengthMenu": "Mostrar _MENU_ Inserciones por página",
+            "zeroRecords": "No se encontraron resultados - lo siento",
+            "search":  "Buscar:",
+            "info": "Mostrar páginas _PAGE_ of _PAGES_",
+            "infoEmpty": "No existen registros",
+            "infoFiltered": "(filtered from _MAX_ total records)",
+            "loadingRecords": "Cargando...",
+
+         "paginate": {
+                "first":      "Primero",
+                "previous":   "Previa",
+                "next":       "Siguiente",
+                "last":       "Última"
+            },
+},
+
     } );
 } )
 </script>
-
         </div>
-        <div id="chartContainer" style="margin-top:400px" ></div>
+        
+        <div id="chartContainer" style="margin-top:560px" ></div>
+	
+
           <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
         <div class="breggt">
           <button type="button" id="bregresar" class="btn btn-primary"  onclick="location.href='principal.php'" name="bregresar"> Regresar </button>

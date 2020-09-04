@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-      <title> </title>
+      <title>Partidas Presupuestales </title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/estilos.css" rel="stylesheet">
     <link href="https://cdn.datos.gob.mx/assets/css/main.css" rel="stylesheet">
@@ -114,7 +114,7 @@ document.getElementById("myOverlay").style.display = "none";
         return;
 	}
          alert(selIndex);
-        window.location="partidas_presupuestales.php?numero_contrato="+selIndex+"&clave_partida="+clave_partida;
+        window.location="partidas_presupuestales.php?nombre_unidad_compradora="+selIndex+"&clave_partida="+clave_partida;
     }
 </script>
 
@@ -152,7 +152,7 @@ document.getElementById("myOverlay").style.display = "none";
         <div class='col-sm-20 col-md-20 col-ld-20'>
           <h2 class="fuu">PARTIDAS PRESUPUESTALES</h2>
           <div class="dtextcontratopartida">
-            <label class="textcontratopartida">Contrato:</label>
+            <label class="textcontratopartida">Unidad Compradora:</label>
           </div>
 	     <select id="secontrapartisasp" class="secontrapartisasp" name="secontrapartisasp">
 		<?php
@@ -160,7 +160,7 @@ document.getElementById("myOverlay").style.display = "none";
 			$flag=unserialize($_POST["flag"]);
 			foreach($flag as $key=> $val){
 		?>
-              <option value="<?php print($val['id_contrato']); ?>"><?php print($val['numero_contrato']); ?></option>
+              <option value="<?php print($val['id_unidad_compradora']); ?>"><?php print($val['nombre_unidad_compradora']); ?></option>
 		<?php
 		}
 	}
@@ -205,7 +205,7 @@ document.getElementById("myOverlay").style.display = "none";
                         foreach($flag as $key=> $val){
                 ?>
 
-                  <option value="<?php print($val['id_contrato']); ?>"><?php print($val['numero_contrato']); ?></option>
+                  <option value="<?php print($val['id_unidad_compradora']); ?>"><?php print($val['nombre_unidad_compradora']); ?></option>
 		    <?php
                 }
         }

@@ -48,10 +48,10 @@ $statement->execute();
  
  if($statement){
 echo "<script>alert('Datos ingresados correctamente')
-window.location.replace('fechas.html');</script> ";
+window.location.replace('fechas.php');</script> ";
 }else{
 echo "<script>alert('Revisar la conexión al servidor')
-window.location.replace('fechas.html');</script> ";
+window.location.replace('fechas.php');</script> ";
 
 
 }

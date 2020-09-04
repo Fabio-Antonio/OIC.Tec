@@ -1,6 +1,7 @@
 <?php
     require_once("conexion.php");
-     session_start();
+session_start();
+     
     
     $nombre = $_POST["nombre"];
     $password = $_POST["password"];  		
@@ -14,11 +15,13 @@ $statement->execute();
        while ($row = $statement->fetch()){
 
         if($row['permiso']=="administrador"){
-       $_SESSION['usuario']=$nombre;
-        header("location:principal.php");
        
+     $_SESSION['usuario']=$nombre;
+
+
+ header("location:principal.php");
 	}else if($row['permiso']=="empleado"){
-	header("location:lectura.html");
+	header("location:principal.php");
 	}       
 
 }

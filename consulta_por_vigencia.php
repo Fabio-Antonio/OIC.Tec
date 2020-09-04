@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <meta name="description" content="">
-      <title> </title>
+      <title>Vigencia </title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/estilos.css" rel="stylesheet">
     <link href="https://cdn.datos.gob.mx/assets/css/main.css" rel="stylesheet">
@@ -320,6 +320,25 @@ document.getElementById("myOverlay").style.display = "none";
 
 $( document ).ready(function() {
 var table = $('#myTable').dataTable({
+
+ "language": {
+            "lengthMenu": "Mostrar _MENU_ Inserciones por página",
+            "zeroRecords": "No se encontraron resultados - lo siento",
+            "search":  "Buscar:",
+            "info": "Mostrar páginas _PAGE_ of _PAGES_",
+            "infoEmpty": "No existen registros",
+            "infoFiltered": "(filtered from _MAX_ total records)",
+            "loadingRecords": "Cargando...",
+
+         "paginate": {
+                "first":      "Primero",
+                "previous":   "Previa",
+                "next":       "Siguiente",
+                "last":       "Última"
+            },
+},
+
+
 "bProcessing": true,
 "sAjaxSource": "consulta_vigenciat.php",
 "bPaginate":true,

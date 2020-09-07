@@ -426,21 +426,21 @@ window.location.replace('index.php');</script>";
 
  <div class="form-group">
     <label class="control-label" for="email-01">Unidad Compradora:</label>
-  <select id="unidadc" name="unidad">
+  <select id="unidadcom" name="unidad">
                          <?php
 			require_once("consulta_principal.php");
-                        
+
                         foreach($flag as $key=> $val){
                 ?>
 
                   <option value="<?php print($val['id_unidad_compradora']); ?>"><?php print($val['nombre_unidad_compradora']); ?></option>
                     <?php
                 }
-        
+
                 ?>
 
                 </select>
-    
+
   </div>
 
  <button class="btn btn-default btn-success" type="button" name="submit" onclick="ingresar3();">Enviar</button>

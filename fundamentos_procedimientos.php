@@ -165,7 +165,7 @@
           </div>
           <div id="diopc">
             <label id="ccp" class="col-sm-20"> Descripción:   </label>
-            <textarea id="descripcion2" class="form-control" rows=5></textarea>
+            <textarea id="descripcionfunda" class="form-control" rows=5></textarea>
           </div>
           <div id="btnac">
               <button type="button" id="bac" class="btn btn-primary" onclick="ingresar2();" name="button"> Guardar </button>

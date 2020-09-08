@@ -11,7 +11,17 @@ $flag[]=$row;
 }
 $valor=serialize($flag);
 
+ if($flag==null){
+        echo "<script>alert('Debe regitrar al menos una unidad compradora')
+window.location.replace('principal.php');</script>";
+       return;
+        }
+
+}else{
+echo "<script>alert('La consulta a la base de datos es incorrecta')
+window.location.replace('principal.php');</script>";
 }
+
 
 
 
@@ -24,7 +34,17 @@ $flag2[]=$row;
 }
 $valor2=serialize($flag2);
 
+ if($flag==null){
+        echo "<script>alert('Debe crear una partida presupuestal')
+window.location.replace('principal.php');</script>";
+       return;
+        }
+
+}else{
+echo "<script>alert('La consulta a la base de datos es incorrecta')
+window.location.replace('principal.php');</script>";
 }
+
 
 
 

@@ -30,7 +30,7 @@ $valor2=serialize($flag2);
 $conn=null;
 $ch=null;
 $ch= curl_init();
-curl_setopt($ch,CURLOPT_URL,"http://192.168.1.68:8888/besa/recepcion_terminacion_anticipada.php");
+curl_setopt($ch,CURLOPT_URL,"http://besa-pruebas.com:8888/besa/recepcion_terminacion_anticipada.php");
 curl_setopt($ch,CURLOPT_POST,TRUE);
 curl_setopt($ch,CURLOPT_POSTFIELDS,"flag=$valor&flag2=$valor2");
 curl_exec($ch);

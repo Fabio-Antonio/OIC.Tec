@@ -129,8 +129,10 @@ window.location.replace('index.php');</script>";
      		 <a href="lectura.html">Carga de archivos (PDF)(CVS)</a><BR>
 		   <a href="consulta_contrato.php">Comprobacion/Convenios Modificados/Documentos Adicionales</a><BR>
 
-          <a href="consulta_contrato6.php">Recepción/Terminación_Anticipada</a><BR>
-          <a href="consulta_contrato4.php">Partidas_presupuestales/subpartida</a><BR>
+          <a href="consulta_contrato6.php">Recepción</a><BR>
+	 <a href="consulta_contrato6.php">Terminación Anticipada</a><BR>
+
+          <a href="consulta_contrato4.php">Partidas Presupuestales</a><BR>
 
     </div>
     <div class="card-footer">
@@ -146,7 +148,7 @@ window.location.replace('index.php');</script>";
 	 <a href="consulta_fundamento.php">Procedimientos de Contratación</a><BR>
 	 <a href="consulta_contrato2.php">Inconformidades</a><BR>
           <a href="consulta_contrato5.php">Facturas</a><BR>
-	<a href="consulta_contrato5.php">Pagos_efectuados</a><BR>
+	<a href="consulta_contrato5.php">Pagos Efectuados</a><BR>
 
       </div>
     <div class="card-footer">

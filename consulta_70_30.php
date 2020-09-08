@@ -20,8 +20,8 @@ if($statement){
 	$unidad=$row["nombre_unidad_compradora"];
 	$numero_unidad=$row['numero_unidad'];
     } 
-    if($claves=null){
-	echo "<script>alert('No se encontraron resultados 1')
+    if($cl=null){
+	echo "<script>alert('No se encontraron resultados')
 window.location.replace('principal.php');</script>";
        return;
 	} 
@@ -46,7 +46,7 @@ if($statement){
        $total=$row["total"];
     }
     if($total==null){
-        echo "<script>alert('No se encontraron resultados4')
+        echo "<script>alert('No se encontraron resultados')
 window.location.replace('principal.php');</script>";
        return;
         }

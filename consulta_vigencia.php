@@ -17,10 +17,19 @@ if($statement){
        $total=$row["total"];
 
     }
+
+ if($total==null){
+        echo "<script>alert('No se encontraron resultados')
+window.location.replace('consulta_vigencia.php');</script>";
+       return;
+        }
+
 }else{
 echo "<script>alert('La consulta a la base de datos es incorrecta')
 window.location.replace('principal.php');</script>";
 }
+
+
 
  $statement = $conn->prepare("SELECT COUNT(*) AS total FROM contrato AS c
 INNER JOIN unidad_requirente AS u ON c.id_unidad_requirente = u.id_requirente

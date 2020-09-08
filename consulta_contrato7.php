@@ -11,7 +11,17 @@ $flag[]=$row;
 }
 $valor=serialize($flag);
 
+ if($flag==null){
+        echo "<script>alert('Debe ingresar una unidad compradora')
+window.location.replace('principal.php');</script>";
+       return;
+        }
+
+}else{
+echo "<script>alert('La consulta a la base de datos es incorrecta')
+window.location.replace('principal.php');</script>";
 }
+
 
  $query=$conn->prepare("SELECT id_procedimiento_contratacion,procedimientos FROM procedimientos_contratacion");
 
@@ -22,7 +32,17 @@ $flag2[]=$row;
 }
 $valor2=serialize($flag2);
 
+ if($flag==null){
+        echo "<script>alert('No se encontraron procedimientos de contratación')
+window.location.replace('principal.php');</script>";
+       return;
+        }
+
+}else{
+echo "<script>alert('La consulta a la base de datos es incorrecta')
+window.location.replace('principal.php');</script>";
 }
+
 
 $query=$conn->prepare("SELECT id_requirente,unidad FROM unidad_requirente");
 
@@ -33,7 +53,17 @@ $flag3[]=$row;
 }
 $valor3=serialize($flag3);
 
+ if($flag==null){
+        echo "<script>alert('Debe Ingresar una unidad requirente')
+window.location.replace('principal.php');</script>";
+       return;
+        }
+
+}else{
+echo "<script>alert('La consulta a la base de datos es incorrecta')
+window.location.replace('principal.php');</script>";
 }
+
 
 $query=$conn->prepare("SELECT id_administrador,nombre FROM administrador");
 
@@ -44,7 +74,17 @@ $flag4[]=$row;
 }
 $valor4=serialize($flag4);
 
+ if($flag==null){
+        echo "<script>alert('Debe ingresar un administrador de contrato')
+window.location.replace('principal.php');</script>";
+       return;
+        }
+
+}else{
+echo "<script>alert('La consulta a la base de datos es incorrecta')
+window.location.replace('principal.php');</script>";
 }
+
 
 
 
@@ -57,7 +97,17 @@ $flag6[]=$row;
 }
 $valor6=serialize($flag6);
 
+ if($flag==null){
+        echo "<script>alert('Debe ingresar un provedor adjudicado')
+window.location.replace('principal.php');</script>";
+       return;
+        }
+
+}else{
+echo "<script>alert('La consulta a la base de datos es incorrecta')
+window.location.replace('principal.php');</script>";
 }
+
 
 
 
@@ -70,7 +120,17 @@ $flag8[]=$row;
 }
 $valor8=serialize($flag8);
 
+ if($flag==null){
+        echo "<script>alert('No se encontraron consolidados')
+window.location.replace('principal.php');</script>";
+       return;
+        }
+
+}else{
+echo "<script>alert('La consulta a la base de datos es incorrecta')
+window.location.replace('principal.php');</script>";
 }
+
 
 
 

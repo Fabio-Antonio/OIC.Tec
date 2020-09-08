@@ -1,9 +1,9 @@
 <?php
     require_once("conexion.php");
      
-    $nombre_unidad_compradora = $_GET["nombre_unidad_compradora"];
+    $nombre_unidad_compradora = $_POST["nombre_unidad_compradora"];
    		
-     $clave_partida = $_GET["clave_partida"];
+     $clave_partida = $_POST["clave_partida"];
 	 
 
 $query=$conn->prepare("SELECT id_unidad_compradora FROM unidad_compradora  WHERE nombre_unidad_compradora=?");

@@ -6,12 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
       <title>Partidas Presupuestales </title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/estilos.css" rel="stylesheet">
+	 <link href="css/estilos.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"  rel="stylesheet" >
+
     <link href="https://cdn.datos.gob.mx/assets/css/main.css" rel="stylesheet">
     <link href="https://cdn.datos.gob.mx/assets/img/favicon.ico" rel="shortcut icon">
     <link href="https://cdn.datos.gob.mx/bower_components/dgm-footer/dgm-footer.html" rel="import">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	
+
   </head>
 
   <body class="front">
@@ -101,6 +104,47 @@ document.getElementById("myOverlay").style.display = "none";
 <!------------------------------------------------------>
 <!------------------------------------------------------>
 
+
+<div class="modal fade" role="dialog" id="my-modal" aria-labelledby="modal-title">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color:#27C44D;">
+                    <h3 class="modal-title" id="modal-title">B.E.S.A</h3>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Los datos se han ingresado correctamente!!
+                    </p>
+                </div>
+                <div class="modal-footer">
+                <button class="btn btn-primary" data-dismiss="modal">Ok</button>                    </div>
+            </div>
+        </div>
+    </div>
+
+
+<div class="modal fade" role="dialog" id="my-modal2"  aria-labelledby="modal-title">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header"style="background-color:#D0021B;">
+                    <h3 class="modal-title" id="modal-title">B.E.S.A</h3>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Los datos no son compatibles!!
+                    </p>
+                </div>
+                <div class="modal-footer">
+                <button class="btn btn-primary" data-dismiss="modal">Ok</button>                    </div>
+            </div>
+        </div>
+    </div>
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+
 <script lenguage="javascript" type="text/javascript">
          function mostrarText(){
     var selObj = document.getElementById('secontrapartisasp');
@@ -109,12 +153,20 @@ document.getElementById("myOverlay").style.display = "none";
     var clave_partida  = selObj2.options[selObj2.selectedIndex].text;
 
       if(clave_partida<0||clave_partida.length==0||!(/^[0-9]+$/.test(clave_partida))||clave_partida.length>5){
-        alert("El campo Clave Partida es invalido");
+        $(function(){
+	$('#my-modal2').modal('show');
+	});
         document.getElementById('inclavepartida').focus();
         return;
 	}
          alert(selIndex);
-        window.location="partidas_presupuestales.php?nombre_unidad_compradora="+selIndex+"&clave_partida="+clave_partida;
+       // window.location="partidas_presupuestales.php?nombre_unidad_compradora="+selIndex+"&clave_partida="+clave_partida;
+	$.post('partidas_presupuestales.php',{
+	"nombre_unidad_compradora":selIndex,
+	"clave_partida":clave_partida
+	},function(data){
+		$('#my-modal').modal('show')
+		});
     }
 </script>
 
@@ -144,6 +196,9 @@ document.getElementById("myOverlay").style.display = "none";
         window.location="sub_partida.php?numero_contrato="+selIndex+"&numero_sub_partida="+numero_sub_partida+"&descripcion="+descripcion;
     }
 </script>
+
+
+
 
 
   <div id="contec">
@@ -230,12 +285,7 @@ document.getElementById("myOverlay").style.display = "none";
       </div>
     </div>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"
-    integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY"
-    crossorigin="anonymous">
-  </script>
-  <script src="https://cdn.datos.gob.mx/assets/js/main.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+ 
   <footer>
 
     <div class="contenedor-todo-footer">

@@ -24,18 +24,15 @@ echo "<script>alert('La consulta a la base de datos es incorrecta')
 window.location.replace('principal.php');</script>";
 }
 
+$results = array(
+"sEcho" => 1,
+"iTotalRecords" => count($flag),
+"iTotalDisplayRecords" => count($flag),
+"aaData"=>$flag);
+echo json_encode($results);
 
 
-$valor=serialize($flag);
 
 
-$conn=null;
-$ch=null;
-$ch= curl_init();
-curl_setopt($ch,CURLOPT_URL,"http://besa-pruebas.com:8888/besa/top_por_contratos.php");
-curl_setopt($ch,CURLOPT_POST,TRUE);
-curl_setopt($ch,CURLOPT_POSTFIELDS,"flag=$valor");
-curl_exec($ch);
-curl_close($ch);
 
 ?>

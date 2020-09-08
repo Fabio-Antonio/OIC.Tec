@@ -253,7 +253,7 @@ $('#my-modal').modal('show')
 function ingresar2(){
 var fundamento= (document.getElementById("fundanen").value);
 var fecha= (document.getElementById("fechafun").value);
-var descripcion= (document.getElementById("descripcion2").value);
+var descripcion= (document.getElementById("descripcionfunda").value);
 
 
 if(fundamento.length==0||fundamento.lenth>45){
@@ -275,7 +275,7 @@ return;
 
 }
 if(descripcion.length==0||descripcion.lenth>500){
-document.getElementById("descripción2").focus();
+document.getElementById("descripciónfunda").focus();
  $(function(){
                 $('#my-modal2').modal('show')
                 });
@@ -285,7 +285,7 @@ return;
 
 if(!(/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ,.°\s]*$/i.test(descripcion))){
 
-document.getElementById("descripcion2").focus();
+document.getElementById("descripcionfunda").focus();
  $(function(){
                 $('#my-modal2').modal('show')
                 });

@@ -196,10 +196,8 @@ document.getElementById("myOverlay").style.display = "none";
           <h2 class="fuu"> INFORME PROCEDIMIENTOS 70-30 </h2>
 
           <div id="Layer70">
-          <table class="table table-striped" id="table7030">
-           <tr>
-        <th>Presupuesto por partida</th>
-        </tr>
+          <table class="table table-bordered" id="table7030">
+            <caption>Presupuesto Unidad Compradora</caption>
             <tr>
 		<th>Unidad Compradora</th>
 		<th>Numero de Unidad</th>
@@ -213,9 +211,9 @@ document.getElementById("myOverlay").style.display = "none";
 		 <td><?php $unidad=$_POST["unidad"]; echo $unidad;?></td>
                  <td><?php $numero_unidad=$_POST["numero_unidad"]; echo $numero_unidad;?></td>
                  <td><?php $claves=$_POST["cl"]; echo $claves;?></td>
-		 <td><?php $totals=$_POST["totals"]; echo $totals;?></td>
-		 <td><?php $setenta=$_POST["setenta"]; echo $setenta;?></td>
-		 <td><?php $treinta=$_POST["treinta"]; echo $treinta;?></td>
+		 <td><?php $totals=$_POST["totals"]; $tot=number_format($totals); echo '$'.$tot;?></td>
+		 <td><?php $setenta=$_POST["setenta"]; $se= number_format($setenta);echo '$'.$se;?></td>
+		 <td><?php $treinta=$_POST["treinta"]; $tr= number_format($treinta);echo '$'.$tr;?></td>
 
 
             </tr>
@@ -268,7 +266,7 @@ var table = $('#myTable').dataTable({
 "iDisplayLength": 5,
 "aoColumns": [
 { mData: 'numero_contrato' } ,
-{ mData: 'monto_max', render: $.fn.dataTable.render.number( ',', '.', 2) },
+{ mData: 'monto_max', render: $.fn.dataTable.render.number( ',', '.', 2,'$') },
 { mData: 'procedimientos' },
 
 ]
@@ -323,7 +321,7 @@ var table = $('#myTable2').dataTable({
 "iDisplayLength": 5,
 "aoColumns": [
 { mData: 'numero_contrato' } ,
-{ mData: 'monto_max' , render: $.fn.dataTable.render.number( ',', '.', 2)},
+{ mData: 'monto_max' , render: $.fn.dataTable.render.number( ',', '.', 2,'$')},
 { mData: 'procedimientos' },
 
 ]

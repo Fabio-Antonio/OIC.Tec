@@ -12,7 +12,11 @@
     <link href="https://cdn.datos.gob.mx/assets/img/favicon.ico" rel="shortcut icon">
     <link href="https://cdn.datos.gob.mx/bower_components/dgm-footer/dgm-footer.html" rel="import">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">    
+      <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="https://cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
+        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.js"></script>
+    
 
     <script>
       window.onload = function () {
@@ -157,53 +161,22 @@ document.getElementById("myOverlay").style.display = "none";
 	
            <thead>
             <tr>
-		<th>Id</th>
 		<th>Número de Contrato</th>
 		<th>Unidad Requirente</th>
 		<th>Proveedor Adjudicado</th>
 		<th> Monto Mximo</th>
               </tr>
 	 </thead>
-              <?php
-$arr=unserialize($_POST["flag"]);
-
-
-       foreach((array)$arr as $key=>$value)
-          {
-
- ?>
-<tbody>
- <tr>
-               <td>
-                   <?php echo $key+1; ?>
-             </td>
-                     <?php foreach((array)$value as $key=>$value)
-                       {
-                     ?>
-              <td>
-                    <?php echo $value;?>
-               </td>
-                    <?php
-                     }
-                    ?>
-
-        </tr>
-        <?php
-
-        }
-       ?>
-</tbody>
-
-
+             
 
           </table>
 
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
-        <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+
 <script>
-$(document).ready(function() {
-    $('#myTable').DataTable( {
-      "language": {
+$( document ).ready(function() {
+
+var table = $('#myTable').dataTable({
+"language": {
             "lengthMenu": "Mostrar _MENU_ Inserciones por página",
             "zeroRecords": "No se encontraron resultados - lo siento",
             "search":  "Buscar:",
@@ -219,13 +192,26 @@ $(document).ready(function() {
                 "last":       "Última"
             },
 },
+"bProcessing": true,
+"sAjaxSource": "consulta_topt.php",
+"bPaginate":true,
+"sPaginationType":"full_numbers",
+"iDisplayLength": 5,
+"aoColumns": [
+{ mData: 'numero_contrato' } ,
+{ mData: 'unidad' } ,
+{ mData: 'nombre' } ,
+{ mData: 'monto_max', render: $.fn.dataTable.render.number(',', '.', 2,'$') },
 
-    } );
-} )
+
+]
+});
+});
+
 </script>
         </div>
         
-        <div id="chartContainer" style="margin-top:560px" ></div>
+        <div id="chartContainer" style="margin-top:260px" ></div>
 	
 
           <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>

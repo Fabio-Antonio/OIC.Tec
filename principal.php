@@ -394,6 +394,19 @@ window.location.replace('index.php');</script>";
     <label class="control-label" for="email-01">Clave:</label>
     <input class="form-control" id="clave" placeholder="Clave de partida" type="text" required>
   </div>
+<div class="form-group">
+    <label class="control-label" for="email-01">Artículo 2000:</label>
+    <input class="cl" id="2000" placeholder="Articulo 2000" type="text" required onChange="suma();">
+  </div>
+<div class="form-group">
+    <label class="control-label" for="email-01">Artículo 3000:</label>
+    <input class="cl" id="3000" placeholder="Artículo 3000" type="text" required onChange="suma();">
+  </div>
+<div class="form-group">
+    <label class="control-label" for="email-01">Artículo 5000:</label>
+    <input class="cl" id="5000" placeholder="Artículo 5000" type="text" required onChange="suma();">
+  </div>
+
 
  <div class="form-group">
     <label class="control-label" for="email-01">Presupuesto:</label>
@@ -543,12 +556,12 @@ alert("listo");
 
 <script   lenguaje="javascript" type="text/javascript">
 function ingresar3(){
- var selObj = document.getElementById('unidadc');
+ var selObj = document.getElementById('unidadcom');
        var nombre_unidad_compradora  = selObj.options[selObj.selectedIndex].text;
 
       if(nombre_unidad_compradora.length==0||!(/^[A-Za-z0-9]+$/.test(nombre_unidad_compradora))||nombre_unidad_compradora.length>50){
         alert("El campo Unidad Compradora es invalido");
-        document.getElementById('unidadc').focus();
+        document.getElementById('unidadcom').focus();
         return;
         }
 
@@ -558,9 +571,10 @@ window.location="consulta_70_30.php?nombre_unidad_compradora="+nombre_unidad_com
 }
 </script>
 
+
 <script>
 
-$("#presupuesto").on({
+$("#2000").on({
   "focus": function(event) {
     $(event.target).select();
   },
@@ -574,8 +588,66 @@ $("#presupuesto").on({
 });
 </script>
 
+<script>
 
+$("#3000").on({
+  "focus": function(event) {
+    $(event.target).select();
+  },
+  "keyup": function(event) {
+    $(event.target).val(function(index, value) {
+      return value.replace(/\D/g, "")
+        .replace(/([0-9])([0-9]{2})$/, '$1.$2')
+        .replace(/\B(?=(\d{3})+(?!\d)\.?)/g, ",");
+    });
+  }
+});
+</script>
 
+<script>
+
+$("#5000").on({
+  "focus": function(event) {
+    $(event.target).select();
+  },
+  "keyup": function(event) {
+    $(event.target).val(function(index, value) {
+      return value.replace(/\D/g, "")
+        .replace(/([0-9])([0-9]{2})$/, '$1.$2')
+        .replace(/\B(?=(\d{3})+(?!\d)\.?)/g, ",");
+    });
+  }
+});
+</script>
+<script type="text/javascript">
+function suma() {
+      var add = 0;
+	var cantidad;
+      $('.cl').each(function() {
+          if (!$(this).val().length==0) {
+              
+             cantidad= $(this).val().replace(/,/g,"");
+		
+               add+=Number(cantidad);
+            
+          }
+      });
+      $('#presupuesto').val(format(add));
+  };
+</script>
+
+<script>
+
+function format(n) {
+  n = n.toString()
+  while (true) {
+    var n2 = n.replace(/(\d)(\d{3})($|,|\.)/g, '$1,$2$3')
+    if (n == n2) break
+    n = n2
+  }
+  return n
+}
+</script>
 
   </body>
 </html>

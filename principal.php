@@ -31,7 +31,7 @@ window.location.replace('index.php');</script>";
 
     <link href="https://cdn.datos.gob.mx/assets/img/favicon.ico" rel="shortcut icon">
     <link href="https://cdn.datos.gob.mx/bower_components/dgm-footer/dgm-footer.html" rel="import">
-
+<script src="https://kit.fontawesome.com/263207fda3.js" crossorigin="anonymous"></script>
 
   </head>
   <body class="front">
@@ -47,10 +47,13 @@ window.location.replace('index.php');</script>";
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="principal.php" id="besa" style="margin-left: -470px;">B.E.S.A</a>
+          <a class="navbar-brand" href="principal.php" id="besa" style="margin-left: -430px;">B.E.S.A</a>
           <a> <img data-v-4a3754a3="" src="icons/lf.png" alt="logo gobierno de méxico" class="logos" style="width: 80%;height: 50%; margin-top: -40px; margin-bottom: -25px; margin-left: 20px "></a>
         </div>
 
+      </div>
+      <div class="notificacionmenu">
+            <button type="button" id="hola"><i class="fas fa-bell"></i></button>
       </div>
     </nav>
 
@@ -627,11 +630,11 @@ function suma() {
 	var cantidad;
       $('.cl').each(function() {
           if (!$(this).val().length==0) {
-              
+
              cantidad= $(this).val().replace(/,/g,"");
-		
+
                add+=Number(cantidad);
-            
+
           }
       });
       $('#presupuesto').val(format(add));

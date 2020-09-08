@@ -272,6 +272,16 @@ margin-top: 27px;
 -moz-box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
 box-shadow: 0px 0px 30px -10px rgba(0,204,153,1);
 }
+#hola{
+    background-color:#222 ;
+    color: #fff;
+    border: none;
+    font-size: 24px;
+}
+
+.notificacionmenu{
+  margin-top: -10px;
+}
 /*--------------------------------------------------------------*/
 /*--------------------------------------------------------------*/
 /*---------------- fin estilos de la ventana principal----------------------------------------------*/

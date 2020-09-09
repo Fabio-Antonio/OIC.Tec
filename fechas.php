@@ -309,6 +309,35 @@ $.post('contrato_fechas.php', {
 
 }
 </script>
+
+
+<script>
+$(document).ready(function(){
+    
+$('#infinvigenciaf').change(function(){
+	 var inicio_vigencia= $('#ininiciovigenciaf').val();
+var fecha1= new Date(inicio_vigencia);
+
+      var $this = $(this);
+      var insertedVal = $this.val();
+      var fecha2= new Date(insertedVal);
+      
+      if (fecha2 < fecha1 ){
+	
+
+         $this.css({"color":"red","border":"1px solid red"});
+      }else{
+	 $this.css({"color":"green","border":"1px solid green"});
+
+	}
+   })
+});
+
+
+</script>
+
+
+
   <div id="contec">
     <div class="container1">
       <div class="row">
@@ -319,7 +348,7 @@ $.post('contrato_fechas.php', {
             <input type="text"  id="infechadescripcion" class="form-control" name="infechadescripcion" value="<?php $numero_contrato=$_POST['innumerocontratoc']; echo $numero_contrato;?>" placeholder="Etiqueta" required>
           </div>
           <div class="dnotificacionadjudicadaf">
-             <form role="form" class="form-horizontal">
+             <form role="form" id="myform" class="form-horizontal">
             <label class="textfechaterminacion">Notificación Adjudicada:</label>
             <input class="form-control" id="innotificacionadjudicadaf" name="innotificacionadjudicadaf" placeholder="Fecha" type="date" required>
           </div>

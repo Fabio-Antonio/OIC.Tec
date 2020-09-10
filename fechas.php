@@ -313,7 +313,7 @@ $.post('contrato_fechas.php', {
 
 <script>
 $(document).ready(function(){
-    
+
 $('#infinvigenciaf').change(function(){
 	 var inicio_vigencia= $('#ininiciovigenciaf').val();
 var fecha1= new Date(inicio_vigencia);
@@ -321,9 +321,9 @@ var fecha1= new Date(inicio_vigencia);
       var $this = $(this);
       var insertedVal = $this.val();
       var fecha2= new Date(insertedVal);
-      
+
       if (fecha2 < fecha1 ){
-	
+
 
          $this.css({"color":"red","border":"1px solid red"});
       }else{
@@ -365,9 +365,7 @@ var fecha1= new Date(inicio_vigencia);
             <input class="form-control" id="ingarantiacumplimientof" name="ingarantiacumplimientof" placeholder="Fecha" type="date" required>
           </div>
           <div class="dresicioncontratof">
-            <label class="textfechaterminacion">Resición Contrato:</label>
-            <input class="form-control" id="inresicioncontratof" name="inresicioncontratof" placeholder="Fecha" type="date" required>
-          </div>
+            
           <div class="diniciovigenciaf">
             <label class="textfechaterminacion">Inicio Vigencia:</label>
             <input class="form-control" id="ininiciovigenciaf" name="ininiciovigenciaf" placeholder="Fecha" type="date" required>
@@ -385,8 +383,7 @@ var fecha1= new Date(inicio_vigencia);
             <input class="form-control" id="ininfonavitf" name="ininfonavitf" placeholder="Fecha" type="date" required >
           </div>
           <div class="dfechaentregaf">
-            <label class="textfechaterminacion">Fecha Entrega:</label>
-            <input class="form-control" id="infechaentregaf" name="infechaentregaf" placeholder="Fecha" type="date" required>
+
           </div>
           <div class="dsuficienciaf">
             <label class="textfechaterminacion">Suficiencia:</label>

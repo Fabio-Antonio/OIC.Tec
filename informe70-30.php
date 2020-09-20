@@ -210,7 +210,7 @@ document.getElementById("myOverlay").style.display = "none";
             <tr>
 		 <td><?php $unidad=$_POST["unidad"]; echo $unidad;?></td>
                  <td><?php $numero_unidad=$_POST["numero_unidad"]; echo $numero_unidad;?></td>
-                 <td><?php $claves=$_POST["cl"]; echo $claves;?></td>
+                 <td><?php $claves=$_POST["cli"]; echo $claves;?></td>
 		 <td><?php $totals=$_POST["totals"]; $tot=number_format($totals); echo '$'.$tot;?></td>
 		 <td><?php $setenta=$_POST["setenta"]; $se= number_format($setenta);echo '$'.$se;?></td>
 		 <td><?php $treinta=$_POST["treinta"]; $tr= number_format($treinta);echo '$'.$tr;?></td>

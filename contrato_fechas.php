@@ -5,12 +5,10 @@
     $formalizacion_contrato = $_POST["informalizacioncontratof"];
     $requisicion_contrato = $_POST["inrequesicioncontratof"];
     $garantia_cumplimiento =$_POST["ingarantiacumplimientof"];
-   $resicion_contrato =$_POST["inresicioncontratof"];
    $inicio_vigencia = $_POST["ininiciovigenciaf"];
    $sat = $_POST["insatf"];
    $imss = $_POST["inimssf"];
    $infonavit = $_POST["ininfonavitf"];
-   $fecha_entrega = $_POST["infechaentregaf"];
    $suficiencia = $_POST["insuficienciaf"];
    $fin_vigencia = $_POST["infinvigenciaf"];
    $numero_contrato = $_POST["infechadescripcion"];
@@ -26,7 +24,7 @@ $dato=$row['id_contrato'];
 
     
  $statement = $conn->prepare("INSERT INTO contrato_fechas (id_contrato,notificacion_adjudicada,formalizacion_contrato,inicio_vigencia,fin_vigencia,sat,imss,
-infonavit,garantia_cumplimiento,fecha_entrega,suficiencia,requisicion_contrato,resicion_contrato)VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)");
+infonavit,garantia_cumplimiento,suficiencia,requisicion_contrato)VALUES(?,?,?,?,?,?,?,?,?,?,?)");
 $statement->bindValue(1, $dato);
 $statement->bindParam(2, $notificacion_adjudicada);
 $statement->bindParam(3, $formalizacion_contrato);
@@ -36,10 +34,8 @@ $statement->bindParam(6, $sat);
 $statement->bindParam(7, $imss);
 $statement->bindParam(8, $infonavit);
 $statement->bindParam(9, $garantia_cumplimiento);
-$statement->bindParam(10, $fecha_entrega);
-$statement->bindParam(11, $suficiencia);
-$statement->bindParam(12, $requisicion_contrato);
-$statement->bindParam(13, $resicion_contrato);
+$statement->bindParam(10, $suficiencia);
+$statement->bindParam(11, $requisicion_contrato);
 
 
 $statement->execute();

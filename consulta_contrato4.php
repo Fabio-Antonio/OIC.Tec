@@ -13,13 +13,13 @@ $valor=serialize($flag);
 
  if($flag==null){
         echo "<script>alert('Debe regitrar al menos una unidad compradora')
-window.location.replace('principal.php');</script>";
+window.location.replace('principal');</script>";
        return;
         }
 
 }else{
 echo "<script>alert('La consulta a la base de datos es incorrecta')
-window.location.replace('principal.php');</script>";
+window.location.replace('principal');</script>";
 }
 
 
@@ -36,13 +36,13 @@ $valor2=serialize($flag2);
 
  if($flag==null){
         echo "<script>alert('Debe crear una partida presupuestal')
-window.location.replace('principal.php');</script>";
+window.location.replace('principal');</script>";
        return;
         }
 
 }else{
 echo "<script>alert('La consulta a la base de datos es incorrecta')
-window.location.replace('principal.php');</script>";
+window.location.replace('principal');</script>";
 }
 
 
@@ -52,7 +52,7 @@ window.location.replace('principal.php');</script>";
 $conn=null;
 $ch=null;
 $ch= curl_init();
-curl_setopt($ch,CURLOPT_URL,"http://besa-pruebas.com:8888/besa/partidas_presupuestales_partida.php");
+curl_setopt($ch,CURLOPT_URL,"http://besa-pruebas.com:8888/besa/partidas_presupuestales_partida");
 curl_setopt($ch,CURLOPT_POST,TRUE);
 curl_setopt($ch,CURLOPT_POSTFIELDS,"flag=$valor&flag2=$valor2");
 curl_exec($ch);

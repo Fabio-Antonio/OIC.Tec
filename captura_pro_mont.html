@@ -7,12 +7,17 @@
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
       <meta name="description" content="">
       <title> B.E.S.A </title>
-      <link href="css/bootstrap.min.css" rel="stylesheet">
-      <link href="css/estilos.css" rel="stylesheet">
-      <link href="https://cdn.datos.gob.mx/assets/css/main.css" rel="stylesheet">
-      <link href="https://cdn.datos.gob.mx/assets/img/favicon.ico" rel="shortcut icon">
-      <link href="https://cdn.datos.gob.mx/bower_components/dgm-footer/dgm-footer.html" rel="import">
-      	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+       <link rel="stylesheet" href="css/estilos.css">
+
+        <link href="https://cdn.datos.gob.mx/assets/css/main.css" rel="stylesheet">
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link href="https://cdn.datos.gob.mx/assets/img/favicon.ico" rel="shortcut icon">
+    <link href="https://cdn.datos.gob.mx/bower_components/dgm-footer/dgm-footer.html" rel="import">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
     </head>
 
   </head>
@@ -27,7 +32,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="principal.php" id="besa" >B.E.S.A</a>
+            <a class="navbar-brand" href="principal" id="besa" >B.E.S.A</a>
             <a> <img data-v-4a3754a3="" src="icons/lf.png" alt="logo gobierno de méxico" class="logos" style="width: 80%;height: 50%; margin-top: -100px; margin-bottom: -25px; margin-left: 420px "></a>
           </div>
 
@@ -95,11 +100,109 @@
     document.getElementById("myOverlay").style.display = "none";
     }
     </script>
+
+<div class="modal fade" role="dialog" id="my-modal" aria-labelledby="modal-title"  rel="stylesheet"
+ href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color:#27C44D;">
+                    <h3 class="modal-title" id="modal-title">B.E.S.A</h3>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Los datos se han ingresado correctamente!!
+                    </p>
+                </div>
+                <div class="modal-footer">
+                <button class="btn btn-primary" data-dismiss="modal">Ok</button>                    </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<div class="modal fade" role="dialog" id="my-modal2"  aria-labelledby="modal-title"   rel="stylesheet"
+ href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header"style="background-color:#D0021B;">
+                    <h3 class="modal-title" id="modal-title">B.E.S.A</h3>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Los datos no son compatibles!!
+                    </p>
+                </div>
+                <div class="modal-footer">
+                <button class="btn btn-primary" data-dismiss="modal">Ok</button>                    </div>
+            </div>
+        </div>
+    </div>
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
   <!--------------------------------------------->
   <!--------------------------------------------->
   <!---capturas-------------------------------->
   <!--------------------------------------------->
   <!--------------------------------------------->
+
+
+<script   lenguaje="javascript" type="text/javascript">
+function ingresar(){
+var nombre= (document.getElementById("noo").value);
+var rfc= (document.getElementById("rfc").value);
+
+if(rfc.length==0||rfc.lenth>13){
+
+document.getElementById("rfc").focus();
+ $(function(){
+                $('#my-modal2').modal('show')
+                });
+
+return;
+}
+if(!(/^[0-9A-Za-z]*$/i.test(rfc))){
+document.getElementById("rfc").focus();
+ $(function(){
+                $('#my-modal2').modal('show')
+                });
+
+return;
+
+}
+
+if(nombre.length==0||nombre.lenth>45){
+document.getElementById("noo").focus();
+ $(function(){
+                $('#my-modal2').modal('show')
+                });
+
+return;
+}
+if(!(/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ.\s]*$/i.test(nombre))){
+
+document.getElementById("noo").focus();
+ $(function(){
+                $('#my-modal2').modal('show')
+                });
+
+return;
+
+}
+$.post('proveedor.php',{
+"noo":nombre,
+"rfc":rfc
+},function(data){
+
+$('#my-modal').modal('show')
+
+});
+}
+</script>
+
 
   <div id="dcapturas">
     <div id="dcapturas1">
@@ -107,7 +210,7 @@
       <h2> CAPTURA PROCEDIMIENTO CONSOLIDADO </h2>
     </div>
     <div id ="tca">
-      <form   id="con_mon"  method="POST">
+      <form   id="con_mon">
         <div class="dprocediminetocapturapro">
           <label id="ccp" > Procedimiento: </label>
           <input class="form-control" id="pro" placeholder="Procedimiento" name="procedimiento" required pattern="[A-Za-zZñÑáéíóúÁÉÍÓÚ\.\s]*" type="text">
@@ -117,8 +220,8 @@
           <input class="form-control" id="mont" placeholder="Monto Total" min="0" name="monto_total" type="number" step="0.1" required >
         </div>
         <div class="dbtgcpc">
-          <button  id="btg" onclick=this.form.action="consolidado.php" class="btn btn-primary" type="submit"> Guardar </button>
-          <button type="button" id="bregresar" class="btn btn-primary"  onclick="location.href='principal.php'" name="bregresar"> Regresar </button>
+          <button  id="btg" onclick="" class="btn btn-primary" type="button"> Guardar </button>
+          <button type="button" id="bregresar" class="btn btn-primary"  onclick="location.href='principal'" name="bregresar"> Regresar </button>
         </div>
        </form>
       </div>
@@ -139,8 +242,8 @@
     <input class="form-control" name="rfc" id="rfc" placeholder="RFC" type="text" required maxlength="13" minlength="13" pattern="[A-Z0-9]*">
   </div>
   <div id ="dbtgcpc2">
-      <button  id="btg" onclick=this.form.action="proveedor.php" class="btn btn-primary" type="submit"> Guardar </button>
-      <button type="button" id="bregresar" class="btn btn-primary"  onclick="location.href='principal.php'" name="bregresar"> Regresar </button>
+      <button  id="btg" onclick="ingresar();" class="btn btn-primary" type="button"> Guardar </button>
+      <button type="button" id="bregresar" class="btn btn-primary"  onclick="location.href='principal'" name="bregresar"> Regresar </button>
   </div>
 </form>
 </div>
@@ -257,10 +360,6 @@
 
 </footer>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"
-			integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY"
-			crossorigin="anonymous">
-		</script>
-		<script src="js/bootstrap.min.js"></script>
+
   </body>
 </html>

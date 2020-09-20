@@ -1,7 +1,7 @@
 <?php
     require_once("conexion.php");
 
-       $nombre = $_POST["nombre"];  
+       $nombre = $_POST["noo"];  
        $rfc = $_POST["rfc"];
    
  $statement = $conn->prepare("INSERT INTO proveedor_adjudicado (nombre,rfc)VALUES(?,?)");

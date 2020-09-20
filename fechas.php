@@ -67,7 +67,7 @@
 <button  id="ce" class="w3-bar-item w3-button w3-large" onclick="w3_close()">Cerrar &times;</button>
 <img src="icons/lf.png" alt="sfp" width="145" height="60">
 <a  class="w3-bar-item w3-button"></a>
-<a href="#" class="w3-bar-item w3-button">Inicio</a>
+<a href="principal.php" class="w3-bar-item w3-button">Inicio</a>
 <a href="alta.html" class="w3-bar-item w3-button">Usuarios</a>
 <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal2" >Contacto</a>
  <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal3">Nueva Partida</a>
@@ -126,7 +126,7 @@ document.getElementById("myOverlay").style.display = "none";
                 </div>
                 <div class="modal-body">
                     <p>
-                        Los datos no son compatibles!!
+                        Algunos campos están vacíos!!
                     </p>
                 </div>
                 <div class="modal-footer">
@@ -152,25 +152,21 @@ var notificacion_adjudicada=(document.getElementById("innotificacionadjudicadaf"
 var formalizacion_contrato= (document.getElementById("informalizacioncontratof").value);
 var requisicion_contrato= (document.getElementById("inrequesicioncontratof").value);
 var garantia_cumplimiento= (document.getElementById("ingarantiacumplimientof").value);
-var resicion_contrato= (document.getElementById("inresicioncontratof").value);
 var inicio_vigencia= (document.getElementById("ininiciovigenciaf").value);
 var sat= (document.getElementById("insatf").value);
 var imss= (document.getElementById("inimssf").value);
 var infonavit= (document.getElementById("ininfonavitf").value);
-var fecha_entrega= (document.getElementById("infechaentregaf").value);
 var suficiencia= (document.getElementById("insuficienciaf").value);
 var fin_vigencia= (document.getElementById("infinvigenciaf").value);
 var descripcion= (document.getElementById("infechadescripcion").value);
-var fecha1= new Date(inicio_vigencia);
-var fecha2= new Date(fin_vigencia);
-var fecha3= new Date(fecha_entrega);
+
 if(String(notificacion_adjudicada)==""){
  $(function(){
                 $('#my-modal2').modal('show')
                 });
 
 document.getElementById("innotificacionadjudicadaf").focus();
-return;
+
 }
 if(String(formalizacion_contrato)==""){
  $(function(){
@@ -178,7 +174,7 @@ if(String(formalizacion_contrato)==""){
                 });
 
 document.getElementById("informalizacioncontratof").focus();
-return;
+
 }
 if(String(requisicion_contrato)==""){
  $(function(){
@@ -186,7 +182,7 @@ if(String(requisicion_contrato)==""){
                 });
 
 document.getElementById("inrequesicioncontratof").focus();
-return;
+
 }
 if(String(garantia_cumplimiento)==""){
  $(function(){
@@ -194,23 +190,16 @@ if(String(garantia_cumplimiento)==""){
                 });
 
 document.getElementById("ingarantiacumpliminetof").focus();
-return;
-}
-if(String(resicion_contrato)==""){
- $(function(){
-                $('#my-modal2').modal('show')
-                });
 
-document.getElementById("inresicioncontratof").focus();
-return;
 }
+
 if(String(inicio_vigencia)==""){
  $(function(){
                 $('#my-modal2').modal('show')
                 });
 
 document.getElementById("ininiciovigenciaf").focus();
-return;
+
 }
 if(String(sat)==""){
  $(function(){
@@ -218,13 +207,16 @@ if(String(sat)==""){
                 });
 
 document.getElementById("insatf").focus();
-return;
+
 }
 
 if(String(imss)==""){
-alert("El campo IMSS no puede ser vacío");
+ $(function(){
+ $('#my-modal2').modal('show')
+                });
+
 document.getElementById("inimssf").focus();
-return;
+
 }
 if(String(infonavit)==""){
  $(function(){
@@ -232,24 +224,17 @@ if(String(infonavit)==""){
                 });
 
 document.getElementById("ininfonavitf").focus();
-return;
+
 }
 
-if(String(fecha_entrega)==""){
- $(function(){
-                $('#my-modal2').modal('show')
-                });
 
-document.getElementById("infechaenregaf").focus();
-return;
-}
 if(String(suficiencia)==""){
  $(function(){
                 $('#my-modal2').modal('show')
                 });
 
 document.getElementById("insuficienciaf").focus();
-return;
+
 }
 
 if(String(fin_vigencia)==""){
@@ -258,7 +243,7 @@ if(String(fin_vigencia)==""){
                 });
 
 document.getElementById("infinvigenciaf").focus();
-return;
+
 }
 if(descripcion.length==0||!(/^[A-Za-z0-9]+$/.test(descripcion))){
  $(function(){
@@ -266,37 +251,21 @@ if(descripcion.length==0||!(/^[A-Za-z0-9]+$/.test(descripcion))){
                 });
 
 document.getElementById("infechadescripcion").focus();
-return;
-}
-if(fecha2<fecha1){
- $(function(){
-                $('#my-modal2').modal('show')
-                });
 
-document.getElementById("ininiciovigenciaf").focus();
-return;
 }
 
-if(fecha3<fecha1||fecha3>fecha2){
- $(function(){
-                $('#my-modal2').modal('show')
-                });
 
-document.getElementById("infechaentregaf").focus();
-return;
-}
+
 
 $.post('contrato_fechas.php', {
               "innotificacionadjudicadaf": notificacion_adjudicada,
               "informalizacioncontratof": formalizacion_contrato,
               "inrequesicioncontratof": requisicion_contrato,
               "ingarantiacumplimientof": garantia_cumplimiento,
-		 "inresicioncontratof": resicion_contrato,
 		 "ininiciovigenciaf": inicio_vigencia,
 		 "insatf": sat,
 		 "inimssf": imss,
 		 "ininfonavitf": infonavit,
-		 "infechaentregaf": fecha_entrega,
 		 "insuficienciaf": suficiencia,
 		 "infinvigenciaf": fin_vigencia,
 		 "infechadescripcion": descripcion
@@ -316,13 +285,13 @@ $(document).ready(function(){
 
 $('#infinvigenciaf').change(function(){
 	 var inicio_vigencia= $('#ininiciovigenciaf').val();
-var fecha1= new Date(inicio_vigencia);
+var fecha_inicio_vigencia= new Date(inicio_vigencia);
 
       var $this = $(this);
       var insertedVal = $this.val();
-      var fecha2= new Date(insertedVal);
+      var fecha_fin_vigencia= new Date(insertedVal);
 
-      if (fecha2 < fecha1 ){
+      if (fecha_fin_vigencia  <= fecha_inicio_vigencia ){
 
 
          $this.css({"color":"red","border":"1px solid red"});
@@ -335,6 +304,203 @@ var fecha1= new Date(inicio_vigencia);
 
 
 </script>
+
+<script>
+$(document).ready(function(){
+
+$('#informalizacioncontratof').change(function(){
+         var notificacion_adjudicada= $('#innotificacionadjudicadaf').val();
+var fecha_notificacion_adjudicada= new Date(notificacion_adjudicada);
+
+      var $this = $(this);
+      var insertedVal = $this.val();
+      var formalizacion_contrato = new Date(insertedVal);
+      
+      if (formalizacion_contrato < fecha_notificacion_adjudicada||formalizacion_contrato>fecha_notificacion_adjudicada.setDate(fecha_notificacion_adjudicada.getDate()+15) ){
+
+
+         $this.css({"color":"red","border":"1px solid red"});
+      }else{
+         $this.css({"color":"green","border":"1px solid green"});
+
+        }
+   })
+});
+
+
+
+</script>
+
+<script>
+$(document).ready(function(){
+$('#insatf').change(function(){
+         var notificacion_adjudicada= $('#innotificacionadjudicadaf').val();
+	var fecha_notificacion_adjudicada= new Date(notificacion_adjudicada);
+ 	var formalizacion_contrato= $('#informalizacioncontratof').val();
+	var fecha_formalizacion_contrato= new Date(formalizacion_contrato);
+        var $this = $(this);
+      var insertedVal = $this.val();
+      var sat = new Date(insertedVal);
+   if (sat>fecha_formalizacion_contrato||sat<fecha_notificacion_adjudicada.setDate(fecha_notificacion_adjudicada.getDate()-30)){
+
+         $this.css({"color":"red","border":"1px solid red"});
+      }else{
+         $this.css({"color":"green","border":"1px solid green"});
+
+        }
+   })
+});
+
+</script>
+
+<script>
+$(document).ready(function(){
+$('#inimssf').change(function(){
+         var notificacion_adjudicada= $('#innotificacionadjudicadaf').val();
+        var fecha_notificacion_adjudicada= new Date(notificacion_adjudicada);
+        var formalizacion_contrato= $('#informalizacioncontratof').val();
+        var fecha_formalizacion_contrato= new Date(formalizacion_contrato);
+        var $this = $(this);
+      var insertedVal = $this.val();
+      var imss = new Date(insertedVal);
+   if (imss>fecha_formalizacion_contrato||imss<fecha_notificacion_adjudicada.setDate(fecha_notificacion_adjudicada.getDate()-30)){
+
+         $this.css({"color":"red","border":"1px solid red"});
+      }else{
+         $this.css({"color":"green","border":"1px solid green"});
+
+        }
+   })
+});
+
+</script>
+
+<script>
+$(document).ready(function(){
+$('#ininfonavitf').change(function(){
+         var notificacion_adjudicada= $('#innotificacionadjudicadaf').val();
+        var fecha_notificacion_adjudicada= new Date(notificacion_adjudicada);
+        var formalizacion_contrato= $('#informalizacioncontratof').val();
+        var fecha_formalizacion_contrato= new Date(formalizacion_contrato);
+        var $this = $(this);
+      var insertedVal = $this.val();
+      var infonavit = new Date(insertedVal);
+   if (infonavit>fecha_formalizacion_contrato||infonavit<fecha_notificacion_adjudicada.setDate(fecha_notificacion_adjudicada.getDate()-30)){
+
+         $this.css({"color":"red","border":"1px solid red"});
+      }else{
+         $this.css({"color":"green","border":"1px solid green"});
+
+        }
+   })
+});
+
+</script>
+
+<script>
+$(document).ready(function(){
+
+$('#ingarantiacumplimientof').change(function(){
+         var notificacion_adjudicada= $('#innotificacionadjudicadaf').val();
+var fecha_notificacion_adjudicada= new Date(notificacion_adjudicada);
+
+      var $this = $(this);
+      var insertedVal = $this.val();
+      var garantia_cumplimiento = new Date(insertedVal);
+
+      if (garantia_cumplimiento < fecha_notificacion_adjudicada||garantia_cumplimiento>fecha_notificacion_adjudicada.setDate(fecha_notificacion_adjudicada.getDate()+10)){
+
+
+         $this.css({"color":"red","border":"1px solid red"});
+      }else{
+         $this.css({"color":"green","border":"1px solid green"});
+
+        }
+   })
+});
+
+
+
+</script>
+
+<script>
+$(document).ready(function(){
+
+$('#inrequesicioncontratof').change(function(){
+         var notificacion_adjudicada= $('#innotificacionadjudicadaf').val();
+var fecha_notificacion_adjudicada= new Date(notificacion_adjudicada);
+
+      var $this = $(this);
+      var insertedVal = $this.val();
+      var requisicion = new Date(insertedVal);
+
+      if (requisicion>=fecha_notificacion_adjudicada){
+
+
+         $this.css({"color":"red","border":"1px solid red"});
+      }else{
+         $this.css({"color":"green","border":"1px solid green"});
+
+        }
+   })
+});
+
+
+
+</script>
+
+
+<script>
+$(document).ready(function(){
+
+$('#insuficienciaf').change(function(){
+         var notificacion_adjudicada= $('#innotificacionadjudicadaf').val();
+var fecha_notificacion_adjudicada= new Date(notificacion_adjudicada);
+
+      var $this = $(this);
+      var insertedVal = $this.val();
+      var suficiencia = new Date(insertedVal);
+
+      if (suficiencia>=fecha_notificacion_adjudicada){
+
+
+         $this.css({"color":"red","border":"1px solid red"});
+      }else{
+         $this.css({"color":"green","border":"1px solid green"});
+
+        }
+   })
+});
+
+
+
+</script>
+<script>
+$(document).ready(function(){
+$('#ininiciovigenciaf').change(function(){
+         var notificacion_adjudicada= $('#innotificacionadjudicadaf').val();
+var fecha_notificacion_adjudicada= new Date(notificacion_adjudicada);
+
+      var $this = $(this);
+      var insertedVal = $this.val();
+      var inicio_vigencia = new Date(insertedVal);
+
+      if (inicio_vigencia<fecha_notificacion_adjudicada){
+
+
+         $this.css({"color":"red","border":"1px solid red"});
+      }else{
+         $this.css({"color":"green","border":"1px solid green"});
+
+        }
+   })
+});
+
+
+
+</script>
+
+
 
 
 
@@ -349,7 +515,7 @@ var fecha1= new Date(inicio_vigencia);
           </div>
           <div class="dnotificacionadjudicadaf">
              <form role="form" id="myform" class="form-horizontal">
-            <label class="textfechaterminacion">Notificación Adjudicada:</label>
+            <label class="textfechaterminacion">Notificación de Adjudicación:</label>
             <input class="form-control" id="innotificacionadjudicadaf" name="innotificacionadjudicadaf" placeholder="Fecha" type="date" required>
           </div>
           <div class="dformalizacioncontratof">

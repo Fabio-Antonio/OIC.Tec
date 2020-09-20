@@ -1,7 +1,7 @@
 <?php
    require_once("conexion.php");
-    $numero_contrato = $_GET['numero_contrato'];
-    $flag=$_GET['flag'];
+    $numero_contrato = $_POST['numero_contrato'];
+    $flag=$_POST['flag'];
     $res=json_decode($flag,true);
    
     $statement = $conn->prepare("SELECT numero_contrato,contrato_compranet,nombre_unidad_compradora,numero_unidad,procedimiento,monto_total,unidad,

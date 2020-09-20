@@ -64,7 +64,7 @@
     <button  id="ce" class="w3-bar-item w3-button w3-large" onclick="w3_close()">Cerrar &times;</button>
     <img src="icons/lf.png" alt="sfp" width="145" height="60">
     <a  class="w3-bar-item w3-button"></a>
-    <a href="#" class="w3-bar-item w3-button">Inicio</a>
+    <a href="principal.php" class="w3-bar-item w3-button">Inicio</a>
     <a href="alta.html" class="w3-bar-item w3-button">Usuarios</a>
     <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal2" >Contacto</a>
      <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal3">Nueva Partida</a>
@@ -115,7 +115,7 @@
         <div class="dropdown-menu open" role="combobox">
                 <ul id="lista" class="dropdown-menu inner" role="listbox" aria-expanded="false">
        <?php
-                  if (isset($_POST['flag'])) {
+                 
                 $flag=unserialize($_POST['flag']);
                 $valor=json_encode($flag);
 
@@ -132,7 +132,6 @@
   		 <?php
                 }
 
-  }
 
   ?>
 
@@ -153,7 +152,13 @@
                    var bool=confirm("Se desea consultar: "+value2);
 
      if(bool){
-           window.location="consulta.php?numero_contrato="+value2+"&flag="+Variable;
+          // window.location="consulta.php?numero_contrato="+value2+"&flag="+Variable;
+	  $.post({url: "consulta.php", 
+    data: { "numero_contrato": value2, "flag": Variable }
+   }).done(function( data ) { 
+        $( "main" ).html(data);
+    });
+
     }else{
   alert("solicitud cancelada");
   }
@@ -198,7 +203,6 @@
        $imss=$_POST["imss"];
                $infonavit=$_POST["infonavit"];
       $garantia_cumplimiento=$_POST["garantia_cumplimiento"];
-
 
       }else{
   $numero_contrato="";
@@ -309,6 +313,7 @@
         <div class="dtextunidadcomcon">
           <label class="textunidadcomcon">Número Unidad Compradora</label>
           <input id="intextunidadcomcon" class="form-control" placeholder="Número de Unidad Compradora" type="text"  readonly="readonly" value="<?php echo $numero_unidad; ?>">
+	   <label class="textunidadcomcon">Unidad Compradora</label>	
           <textarea id="texatextunidadcomcon" class="form-control" placeholder="" rows="3"  readonly="readonly" ><?php echo $nombre_unidad_compradora; ?></textarea>
         </div>
         <div class="dtextresicon">
@@ -326,7 +331,7 @@
        <button class="btn btn-primary btn-lg" onclick="saludo();" id="btdescargar" > Descargar pdf </button>
       </div>
       <div id="dbtregcon">
-       <button class="btn btn-primary btn-lg" id="btregrecon" > Regresar </button>
+       <button class="btn btn-primary btn-lg" id="btregrecon" onclick="window.location.href='principal.php'"> Regresar </button>
       </div>
 
       </div>

@@ -19,9 +19,9 @@ $statement->execute();
      $_SESSION['usuario']=$nombre;
 
 
- header("location:principal.php");
+ header("location:principal");
 	}else if($row['permiso']=="empleado"){
-	header("location:principal.php");
+	header("location:principal");
 	}       
 
 }
@@ -29,7 +29,7 @@ $statement->execute();
 	}else {
           echo "<script>
                 alert('el usuario no fue encontrado')
-                window.location=('index.php');
+                window.location=('index');
     </script>";
 	}
 

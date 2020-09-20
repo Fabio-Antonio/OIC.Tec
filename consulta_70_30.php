@@ -13,7 +13,7 @@ $statement->execute();
 
 if($statement){
     while($row = $statement->fetch(PDO::FETCH_ASSOC)){   
-        $cl=$row["clave"];
+        $cli=$row["clave"];
 	$totals=$row["presupuesto"];
 	$setenta=$row["setenta"];
 	$treinta=$row["treinta"];
@@ -89,7 +89,7 @@ window.location.replace('principal.php');</script>";
 $ch =curl_init();
 curl_setopt($ch,CURLOPT_URL,"http://besa-pruebas.com:8888/besa/informe70-30.php");
 curl_setopt($ch,CURLOPT_POST,TRUE);
-curl_setopt($ch,CURLOPT_POSTFIELDS,"totals=$totals&setenta=$setenta&treinta=$treinta&total=$total&total2=$total2&cl=$cl&unidad=$unidad&numero_unidad=$numero_unidad");
+curl_setopt($ch,CURLOPT_POSTFIELDS,"totals=$totals&setenta=$setenta&treinta=$treinta&total=$total&total2=$total2&cli=$cli&unidad=$unidad&numero_unidad=$numero_unidad");
 curl_exec($ch);
 $error=curl_error($ch);
 curl_close($ch);

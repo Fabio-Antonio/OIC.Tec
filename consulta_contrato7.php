@@ -65,7 +65,7 @@ window.location.replace('principal.php');</script>";
 }
 
 
-$query=$conn->prepare("SELECT id_administrador,nombre FROM administrador");
+$query=$conn->prepare("SELECT id_administrador,nombre,apellido_paterno,apellido_materno FROM administrador");
 
  $query->execute();
 if($query){

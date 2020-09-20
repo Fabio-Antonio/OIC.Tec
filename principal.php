@@ -5,7 +5,7 @@ $verificar=$_SESSION['usuario'];
 
 if($verificar==null||$verificar==''){
  echo "<script> alert ('Debe iniciar sessión')
-window.location.replace('index.php');</script>";
+window.location.replace('index');</script>";
 
 
 }
@@ -71,6 +71,7 @@ window.location.replace('index.php');</script>";
     <button  id="ce" class="w3-bar-item w3-button w3-large" onclick="w3_close()">Cerrar &times;</button>
     <img src="icons/lf.png" alt="sfp" width="145" height="60">
     <a  class="w3-bar-item w3-button"></a>
+    <a href="#" class="w3-bar-item w3-button"><?php echo $_SESSION['usuario'];?></a>
     <a href="#" class="w3-bar-item w3-button">Inicio</a>
     <a href="alta.html" class="w3-bar-item w3-button">Usuarios</a>
     <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal2" >Contacto</a>
@@ -117,8 +118,8 @@ window.location.replace('index.php');</script>";
 	 <a href="requirente_compradora_captura.html">Unidad Requirente</a><BR>
 	  <a href="requirente_compradora_captura.html">Unidad Compradora</a><BR>
 	<a href="admin.html">Administrador de Contrato</a><BR>
-	 <a href="captura_pro_mont.html">Consolidados</a><BR>
-	 <a href="captura_pro_mont.html">Proveedor Adjudicado</a><BR>
+	 <a href="captura_pro_mont">Consolidados</a><BR>
+	 <a href="captura_pro_mont">Proveedor Adjudicado</a><BR>
 
     </div>
     <div class="card-footer">
@@ -130,12 +131,12 @@ window.location.replace('index.php');</script>";
     <div class="card-body">
       <h5 class="card-title">Administración</h5>
      		 <a href="lectura.html">Carga de archivos (PDF)(CVS)</a><BR>
-		   <a href="consulta_contrato.php">Comprobacion/Convenios Modificados/Documentos Adicionales</a><BR>
+		   <a href="consulta_contrato">Comprobacion/Convenios Modificados/Documentos Adicionales</a><BR>
 
-          <a href="consulta_contrato6.php">Recepción</a><BR>
-	 <a href="consulta_contrato6.php">Terminación Anticipada</a><BR>
+          <a href="consulta_contrato6">Recepción</a><BR>
+	 <a href="consulta_contrato6">Terminación Anticipada</a><BR>
 
-          <a href="consulta_contrato4.php">Partidas Presupuestales</a><BR>
+          <a href="consulta_contrato4">Partidas Presupuestales</a><BR>
 
     </div>
     <div class="card-footer">
@@ -147,11 +148,11 @@ window.location.replace('index.php');</script>";
     <div class="card-body">
       <h5 class="card-title">Legal</h5>
 
-       <a href="consulta_fundamento.php">Fundamento Legal</a><BR>
-	 <a href="consulta_fundamento.php">Procedimientos de Contratación</a><BR>
-	 <a href="consulta_contrato2.php">Inconformidades</a><BR>
-          <a href="consulta_contrato5.php">Facturas</a><BR>
-	<a href="consulta_contrato5.php">Pagos Efectuados</a><BR>
+       <a href="consulta_fundamento">Fundamento Legal</a><BR>
+	 <a href="consulta_fundamento">Procedimientos de Contratación</a><BR>
+	 <a href="consulta_contrato2">Inconformidades</a><BR>
+          <a href="consulta_contrato5">Facturas</a><BR>
+	<a href="consulta_contrato5">Pagos Efectuados</a><BR>
 
       </div>
     <div class="card-footer">
@@ -160,7 +161,7 @@ window.location.replace('index.php');</script>";
   </div>
 
 </div>
- <a class="btn btn-primary" id="nuevo" href="consulta_contrato7.php">Nuevo contrato</a>
+ <a class="btn btn-primary" id="nuevo" href="consulta_contrato7">Nuevo contrato</a>
 
   </div>
  <h3 align="center">CONSULTAS</h3>
@@ -171,7 +172,7 @@ window.location.replace('index.php');</script>";
     <img class="card-img-top" src="icons/calendario.jpg" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title">Calendario</h5>
-       <a href="consulta_vigencia.php">Fin vigencia</a><BR>
+       <a href="consulta_vigencia">Fin vigencia</a><BR>
           <a href="">Consultas por fecha de adjudicación</a><BR>
           <a href="">Fechas entregables</a><BR>
            <a href="">Fecha de formalización</a><BR>
@@ -187,7 +188,7 @@ window.location.replace('index.php');</script>";
       <h5 class="card-title">Producción</h5>
 
            <a  href="#"  data-toggle="modal" data-target="#mymodal4">Informes 70-30</a><BR>
-          <a href="consulta_top.php">Top por contrato</a><BR>
+          <a href="consulta_top">Top por contrato</a><BR>
 	    <a href="">Informe montos por procedimiento</a><BR>
 
 
@@ -211,7 +212,7 @@ window.location.replace('index.php');</script>";
     </div>
   </div>
 </div>
-<a class="btn btn-primary" id="cons" href="numero_de_contrato.php">Consulta contrato</a>
+<a class="btn btn-primary" id="cons" href="numero_de_contrato">Consulta contrato</a>
 
 </div>
 

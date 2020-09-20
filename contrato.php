@@ -126,7 +126,7 @@
                 </div>
                 <div class="modal-body">
                     <p>
-                        Los datos no son compatibles!!
+                        Algunos campos no son compatibles!!
                     </p>
                 </div>
                 <div class="modal-footer">
@@ -231,12 +231,12 @@
 	 var monto_minimo  = min;
 	}
         var documentacion_descripcion  = (document.getElementById('indocumentodescripcionc').value);
-      var selIndex = selObj.options[selObj.selectedIndex].text;
-       var selIndex2 = selObj2.options[selObj2.selectedIndex].text;
-	 var selIndex3 = selObj3.options[selObj3.selectedIndex].text;
-	 var selIndex4 = selObj4.options[selObj4.selectedIndex].text;
-	 var selIndex6 = selObj6.options[selObj6.selectedIndex].text;
-	 var selIndex8 = selObj8.options[selObj8.selectedIndex].text;
+      var selIndex = selObj.options[selObj.selectedIndex].value;
+       var selIndex2 = selObj2.options[selObj2.selectedIndex].value;
+	 var selIndex3 = selObj3.options[selObj3.selectedIndex].value;
+	 var selIndex4 = selObj4.options[selObj4.selectedIndex].value;
+	 var selIndex6 = selObj6.options[selObj6.selectedIndex].value;
+	 var selIndex8 = selObj8.options[selObj8.selectedIndex].value;
          if(numero_contrato.length==0||!(/^[A-Za-z0-9]+$/.test(numero_contrato))){
 	 $(function(){
                 $('#my-modal2').modal('show')
@@ -341,7 +341,7 @@
 	 $('#my-modal').modal('show')
                 });
 
-
+		$('#btg').attr("disabled", true);
         }
 </script>
 
@@ -408,7 +408,7 @@
 			$flag=unserialize($_POST["flag4"]);
 			foreach($flag as $key=> $val){
 		?>
-              <option value="<?php print($val['id_administrador']); ?>"><?php print($val['nombre']); ?></option>
+              <option value="<?php print($val['id_administrador']); ?>"><?php print($val['nombre']);echo " ";  print($val["apellido_paterno"]); echo " "; print($val["apellido_materno"]);  ?></option>
 		<?php
 		}
 	}

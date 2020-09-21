@@ -402,15 +402,15 @@ window.location.replace('index');</script>";
   </div>
 <div class="form-group">
     <label class="control-label" for="email-01">Artículo 2000:</label>
-    <input class="cl" id="2000" placeholder="Articulo 2000" type="text" required onChange="suma();">
+    <input class="cl" id="2000" placeholder="Capítulo 2000" type="text" required onChange="suma();">
   </div>
 <div class="form-group">
     <label class="control-label" for="email-01">Artículo 3000:</label>
-    <input class="cl" id="3000" placeholder="Artículo 3000" type="text" required onChange="suma();">
+    <input class="cl" id="3000" placeholder="Capítulo 3000" type="text" required onChange="suma();">
   </div>
 <div class="form-group">
     <label class="control-label" for="email-01">Artículo 5000:</label>
-    <input class="cl" id="5000" placeholder="Artículo 5000" type="text" required onChange="suma();">
+    <input class="cl" id="5000" placeholder="Capítulo 5000" type="text" required onChange="suma();">
   </div>
 
 

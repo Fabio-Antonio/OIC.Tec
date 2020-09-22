@@ -1,6 +1,6 @@
 <?php
   require_once("conexion.php");
-
+ require_once("url.php");
 
    $query=$conn->prepare("SELECT id_unidad_compradora,nombre_unidad_compradora FROM unidad_compradora");
 
@@ -48,11 +48,12 @@ window.location.replace('principal');</script>";
 
 
 
-
 $conn=null;
 $ch=null;
 $ch= curl_init();
-curl_setopt($ch,CURLOPT_URL,"http://besa-pruebas.com:8888/besa/partidas_presupuestales_partida");
+$url=$path."/besa/partidas_presupuestales_partida.php";
+
+curl_setopt($ch,CURLOPT_URL,$url);
 curl_setopt($ch,CURLOPT_POST,TRUE);
 curl_setopt($ch,CURLOPT_POSTFIELDS,"flag=$valor&flag2=$valor2");
 curl_exec($ch);

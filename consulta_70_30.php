@@ -1,5 +1,7 @@
 <?php
    require_once("conexion.php");
+  require_once("url.php");
+
    $nombre_unidad_compradora=$_GET["nombre_unidad_compradora"];
 
  $statement = $conn->prepare("SELECT clave,presupuesto,(presupuesto*70)/100 AS setenta,(presupuesto*30)/100 AS treinta,
@@ -87,7 +89,9 @@ window.location.replace('principal.php');</script>";
  $conn=null;
 
 $ch =curl_init();
-curl_setopt($ch,CURLOPT_URL,"http://besa-pruebas.com:8888/besa/informe70-30.php");
+
+$url=$path."/besa/informe70-30.php";
+curl_setopt($ch,CURLOPT_URL,$url);
 curl_setopt($ch,CURLOPT_POST,TRUE);
 curl_setopt($ch,CURLOPT_POSTFIELDS,"totals=$totals&setenta=$setenta&treinta=$treinta&total=$total&total2=$total2&cli=$cli&unidad=$unidad&numero_unidad=$numero_unidad");
 curl_exec($ch);

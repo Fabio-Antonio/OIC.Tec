@@ -401,15 +401,15 @@ window.location.replace('index');</script>";
     <input class="form-control" id="clave" placeholder="Clave de partida" type="text" required>
   </div>
 <div class="form-group">
-    <label class="control-label" for="email-01">Artículo 2000:</label>
+    <label class="control-label" for="email-01">Capítulo 2000:</label>
     <input class="cl" id="2000" placeholder="Capítulo 2000" type="text" required onChange="suma();">
   </div>
 <div class="form-group">
-    <label class="control-label" for="email-01">Artículo 3000:</label>
+    <label class="control-label" for="email-01">Capítulo 3000:</label>
     <input class="cl" id="3000" placeholder="Capítulo 3000" type="text" required onChange="suma();">
   </div>
 <div class="form-group">
-    <label class="control-label" for="email-01">Artículo 5000:</label>
+    <label class="control-label" for="email-01">Capítulo 5000:</label>
     <input class="cl" id="5000" placeholder="Capítulo 5000" type="text" required onChange="suma();">
   </div>
 

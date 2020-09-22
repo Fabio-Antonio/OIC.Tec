@@ -1,5 +1,8 @@
 <?php
    require_once("conexion.php");
+
+	 require_once("url.php");
+
 $total=0;
 $total1=0;
 $total2=0;
@@ -124,7 +127,8 @@ fclose($abrir);
 $conn=null;
 
 $ch =curl_init();
-curl_setopt($ch,CURLOPT_URL,"http://192.168.1.70:8888/besa/consulta_por_vigencia.php");
+$url=$path."/besa/consulta_por_vigencia.php";
+curl_setopt($ch,CURLOPT_URL,$url);
 curl_setopt($ch,CURLOPT_POST,TRUE);
 curl_setopt($ch,CURLOPT_POSTFIELDS,"total=$total&total1=$total1&total2=$total2&total3=$total3");
 curl_exec($ch);

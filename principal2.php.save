@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<link href="https://cdn.datos.gob.mx/assets/css/main.css" rel="stylesheet">
-<link href="https://cdn.datos.gob.mx/bower_components/polymer/polymer.html" rel="import">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +12,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/estile.css">
 </head>
+
 <body>
     <header class="site-header">
         <div class="contenedor encabezado">
@@ -25,6 +25,7 @@
             <span></span>
         </div>
     </header>
+
     <!-- Sidebar -->
     <div class="barra">
         <!-- Sidebar -->
@@ -38,16 +39,19 @@
             <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal3">Nueva Partida</a>
             <a href="cerrar.php" class="w3-bar-item w3-button">Logout -></a>
         </div>
+
         <!-- Page Content -->
         <div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
         <div>
             <button class="w3-button w3-white w3-xxlarge" onclick="w3_open()">&#9776;</button>
         </div>
     </div>
+
     <div class="titulo_principal contenedor">
         <h1>B.E.S.A</h1>
         <h2>SISTEMA DE SEGUIMIENTO DE CONTRATOS</h2>
     </div>
+
     <main class="contenedor seccion">
         <div class="capturas">
             <div class="tarjeta">
@@ -65,6 +69,8 @@
                 </ul>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet, perferendis!</p>
             </div>
+
+
             <div class="tarjeta">
                 <div class="img_tarjeta">
                     <img src="img/engranes.jpg" alt="ad,imistracion">
@@ -83,6 +89,8 @@
                 </ul>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet, perferendis!</p>
             </div>
+
+
             <div class="tarjeta">
                 <div class="img_tarjeta">
                     <img src="img/legal.jpg" alt="legal">
@@ -98,6 +106,7 @@
                 </ul>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet, perferendis!</p>
             </div>
+
             <div class="tarjeta">
                 <div class="img_tarjeta">
                     <img src="img/calendario.jpg" alt="calendario">
@@ -111,6 +120,8 @@
                 </ul>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet, perferendis!</p>
             </div>
+
+
             <div class="tarjeta">
                 <div class="img_tarjeta">
                     <img src="img/pastel.jpg" alt="pastel">
@@ -123,6 +134,8 @@
                 </ul>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet, perferendis!</p>
             </div>
+
+
             <div class="tarjeta">
                 <div class="img_tarjeta">
                     <img src="img/proveedor.jpg" alt="proveedor">
@@ -135,8 +148,12 @@
                 </ul>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet, perferendis!</p>
             </div>
+
+
+
         </div>
     </main>
+
     <footer class="site-footer">
         <div class="contenedor display-footer">
             <div class="footer-img">
@@ -150,12 +167,14 @@
                     <img src="img/ff.png" alt="ittlahuac">
                 </div>
             </div>
+
             <div class="info-besa">
                 <h4>B.E.S.A</h4>
                 <p><i class="fas fa-user"></i> Responsable del programa: Ing. David Rogelio Rodríguez Arias </p>
                 <p><i class="fas fa-envelope"></i> drrodriguez@nube.sep.gob.mx </p>
                 <p><i class="fas fa-phone-square-alt"></i> 36018650 ext. 66125</p>
             </div>
+
             <div class="info-sep">
                 <h4>Órgano Interno De Control De La SEP</h4>
                 <p><i class="fas fa-home"></i> Avenida Universidad #1074, col. Xoco, alcaldía Benito Juárez, C.P. 03330,
@@ -163,6 +182,7 @@
                 <p><i class="fas fa-envelope"></i> arturo.orci@nube.sep.gob.mx</p>
                 <p><i class="fas fa-phone-square-alt"></i> 36068650 ext.66429</p>
             </div>
+
             <div class="info-tec">
                 <h4>Instituto Tecnológico de Tláhuac</h4>
                 <p><i class="fas fa-home"></i> Av. Estanislao Ramírez # 301 Colonia Ampliación Selene C.P. 13430 Tláhuac
@@ -170,22 +190,15 @@
                 <p><i class="fas fa-phone-square-alt"></i> 7312-5614 | 7312-5616 | 5841-0560| </p>
             </div>
         </div>
+
         <div class="copyright">
             <p><span>&copy 2020 Todos Los Derechos Reservados</span></p>
             <p><span>Antonio Lorenzana Fabio Enrique</span> | <span>Flores Reyes Jahir</span> | <span> Reyes Villafranca
                     Jose Pedro</span></p>
         </div>
     </footer>
-    <!--MODALS-->
-    <div class="modal fade" role="dialog" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" id="my-modal" aria-labelledby="modal-title">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h3 class="modal-title" id="modal-title">B.E.S.A</h3>
-                </div>
-                <div class="modal-body">
-                    <p>
-                        Bienvenido al Sistema B.E.S.A
+
+   nvenido al Sistema B.E.S.A
                     </p>
                 </div>
                 <div class="modal-footer">
@@ -196,6 +209,7 @@
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
     <script>
     (function() {
         $(function() {
@@ -204,16 +218,20 @@
     }());
     </script>
      
+
+
     <script src="https://kit.fontawesome.com/263207fda3.js" crossorigin="anonymous"></script>
     <script>
     function w3_open() {
         document.getElementById("mySidebar").style.display = "block";
         document.getElementById("myOverlay").style.display = "block";
     }
+
     function w3_close() {
         document.getElementById("mySidebar").style.display = "none";
         document.getElementById("myOverlay").style.display = "none";
     }
     </script>
 </body>
+
 </html>

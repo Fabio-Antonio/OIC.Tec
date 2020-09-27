@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Sistema B.E.S.A</title>
+    <link  rel="shortcut icon" href="https://cdn.datos.gob.mx/assets/img/favicon.ico"> 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
@@ -26,7 +27,7 @@
     <main class="login">
         <div class="contenedor formularios-logo">
             <h1>B.E.S.A</h1>
-            <form action="" class="formulario-logo">
+            <form action="login.php" method="post" class="formulario-logo">
                 <div class="campo">
                     <label for="email-01">USUARIO</label>
                     <input type="text" name="nombre" id="email-01" placeholder="Username">

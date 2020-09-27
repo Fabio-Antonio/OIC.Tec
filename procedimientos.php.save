@@ -5,8 +5,8 @@
    		
      $fundamento = $_POST["fundamento"];
 	$informe=$_POST["informe"];
-echo $procedimiento.$fundamento.$informe;
 
+echo $procedimiento." ".$f    
 $statement = $conn->prepare("INSERT INTO procedimientos_contratacion (id_fundamento_legal,procedimientos,setenta_treinta)VALUES(?,?,?)");
 $statement->bindValue(1, $fundamento);
 $statement->bindParam(2, $procedimiento);

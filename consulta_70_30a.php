@@ -8,7 +8,7 @@ INNER JOIN unidad_compradora AS uc ON pp.id_unidad = uc.id_unidad_compradora
 INNER JOIN contrato AS c ON c.id_unidad_compradora = uc.id_unidad_compradora
 INNER JOIN procedimientos_contratacion AS pc ON c.id_procedimiento_contratacion = pc.id_procedimiento_contratacion
 INNER JOIN partida_presupuesto AS ppr ON pp.id_presupuesto = ppr.id
-WHERE (pc.id_procedimiento_contratacion = 1 OR (pc.id_procedimiento_contratacion >= 5 AND pc.id_procedimiento_contratacion <= 9)) AND uc.nombre_unidad_compradora = ?;");
+WHERE pc.setenta_treinta = 70  AND uc.nombre_unidad_compradora = ?;");
 
 $statement->bindParam(1,$unidada);
 $statement->execute();

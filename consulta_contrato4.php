@@ -2,7 +2,8 @@
   require_once("conexion.php");
  require_once("url.php");
 
-   $query=$conn->prepare("SELECT id_unidad_compradora,nombre_unidad_compradora FROM unidad_compradora");
+   $query=$conn->prepare("SELECT id_unidad_compradora, nombre_unidad_compradora FROM unidad_compradora
+WHERE id_unidad_compradora NOT IN (SELECT id_unidad FROM partidas_presupuestales)");
 
  $query->execute();
 if($query){
@@ -25,7 +26,8 @@ window.location.replace('principal.php');</script>";
 
 
 
- $query=$conn->prepare("SELECT id,clave FROM partida_presupuesto");
+ $query=$conn->prepare("SELECT id, clave FROM partida_presupuesto
+WHERE id NOT IN (SELECT id_presupuesto FROM  partidas_presupuestales)");
 
  $query->execute();
 if($query){

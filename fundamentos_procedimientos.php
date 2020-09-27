@@ -197,8 +197,15 @@
          function mostrarText(){
     var selObj = document.getElementById('prc');
       var pr  = (document.getElementById('proc').value);
+	var rate_value;
 
 
+	if (document.getElementById('70').checked) {
+  rate_value = document.getElementById('70').value;
+}
+if (document.getElementById('30').checked) {
+  rate_value = document.getElementById('30').value;
+}
 	  if(selObj.length==0){
 
         document.getElementById("prc").focus();
@@ -220,25 +227,24 @@
 	}
 
 
-       var selIndex = selObj.options[selObj.selectedIndex].text;
+       var selIndex = selObj.options[selObj.selectedIndex].value;
 
-    if(selIndex.length==0||!(/^[A-Z-a-z0-9ñÑáéíóúÁÉÍÓÚ,.°()\s]*$/.test(selIndex))){
+    if(selIndex.length==0){
          document.getElementById('prc').focus();
 	  $(function(){
                 $('#my-modal2').modal('show')
                 });
 
-
          return;
         }
-
 
 
         // window.location="procedimientos.php?fundamento="+selIndex+"&procedimientos="+pr;
 
 $.post('procedimientos.php',{
 "fundamento":selIndex,
-"procedimientos":pr
+"procedimientos":pr,
+"informe":rate_value
 },function(data){
 
 $('#my-modal').modal('show')
@@ -311,7 +317,6 @@ $('#my-modal').modal('show')
 
 
 
-
            <select id="prc" class="prc" name="prc">
 
                    <?php
@@ -328,6 +333,17 @@ $('#my-modal').modal('show')
                   ?>
 
       </select>
+     <label id="ccp" class="col-sm-20"> Correspondiente al informe:   </label>
+<div class="radio">
+  <label>
+    <input type="radio" name="radio-01" id="70" value="70" checked="checked"> 70%
+  </label>
+  <label>
+    <input type="radio" name="radio-01" id="30" value="30" checked="checked"> 30%
+  </label>
+</div>
+
+
 
     <div id="btnca">
         <button type="button" id="bca" onclick="mostrarText();" class="btn btn-primary" name="button"> Guardar </button>

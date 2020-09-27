@@ -308,3 +308,82 @@ form.administrador input:not([type='submit']){
     width: 90%;
 }
 
+/*Pagina Principal*/
+/*Contenedor de titulos*/
+
+.titulo_principal{
+    text-align: center;
+    font-family: 'Mukta', sans-serif;
+}
+.titulo_principal::after{
+    content: '';
+    display: block;
+    width: 10rem;
+    height: .1rem;
+    background-color:#0c9;
+}
+.titulo_principal h1{
+    font-weight: 900;
+    font-size: 5.6rem;
+    color: #222;
+    margin: 0;
+}
+.titulo_principal h2{
+    font-weight: 300;
+    color:#545454 ;
+    margin: 0;
+}
+
+/*Tarjetas*/
+.tarjeta{
+    border: #222 .1rem solid;
+    font-family: 'Mukta', sans-serif;
+}
+.img_tarjeta{
+    width: 39rem;
+    border-bottom: #0c9 .1rem solid;
+}
+.tarjeta h3{
+    font-weight: 400;
+    text-align: center;
+}
+.tarjeta ul{
+    list-style: none;
+    font-weight: 300;
+    color: #545454;
+    font-size: 2rem;
+    line-height: 1.5;
+}
+.tarjeta ul i{
+    color: #0c9;
+}
+.tarjeta ul li:hover{
+    color: #000;
+    transform: scale(1.05);
+}
+.tarjeta p{
+    color: #545454;
+    background-color: #00000008;
+    margin: 0;
+    padding: 1rem 0;
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+
+/*Contenedor capturas*/
+.capturas{
+    display: grid;
+    row-gap: 1rem;
+}
+@media (min-width: 480px) {
+    .capturas{
+        grid-template-columns: repeat(2,1fr);
+        gap: 1rem;
+    }
+}
+@media (min-width: 768px) {
+    .capturas{
+        grid-template-columns: repeat(3,1fr);
+        gap: 1rem;
+    }
+}

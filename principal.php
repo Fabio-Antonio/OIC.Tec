@@ -1,4 +1,4 @@
-<?php
+<!--<?php
 error_reporting(0);
 session_start();
 $verificar=$_SESSION['usuario'];
@@ -10,7 +10,7 @@ window.location.replace('index');</script>";
 
 }
 
-?>
+?>-->
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <link href="https://cdn.datos.gob.mx/assets/css/main.css" rel="stylesheet">

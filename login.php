@@ -19,9 +19,9 @@ $statement->execute();
      $_SESSION['usuario']=$nombre;
 
 
- header("location:principal.php");
+ header("location:principal2.php");
 	}else if($row['permiso']=="empleado"){
-	header("location:principal.php");
+	header("location:principal2.php");
 	}       
 
 }

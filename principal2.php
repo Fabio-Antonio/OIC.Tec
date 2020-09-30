@@ -131,7 +131,8 @@ window.location.replace('index');</script>";
                 </div>
                 <h3>PRODUCCIÓN</h3>
                 <ul>
-                    <li><i class="fas fa-plus-circle" data-toggle="modal" data-target="#mymodal4"></i> Informe 70-30</li>
+                    <li><i class="fas fa-plus-circle" data-toggle="modal" data-target="#mymodal4"></i> Informe 70-30
+                    </li>
                     <li><i class="fas fa-plus-circle"></i> <a href="consulta_top.php">Top por Contrato</a></li>
                     <li><i class="fas fa-plus-circle"></i> Informe Montos por Procedimiento</li>
                 </ul>
@@ -209,15 +210,6 @@ window.location.replace('index');</script>";
             </div>
         </div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script>
-    (function() {
-        $(function() {
-            $('#my-modal').modal('show')
-        });
-    }());
-    </script>
 
     <script src="https://kit.fontawesome.com/263207fda3.js" crossorigin="anonymous"></script>
     <script>
@@ -231,7 +223,8 @@ window.location.replace('index');</script>";
         document.getElementById("myOverlay").style.display = "none";
     }
     </script>
-    <div class="modal fade" role="dialog" id="my-modal" aria-labelledby="modal-title">
+    <div class="modal fade" role="dialog" id="my-modal"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" aria-labelledby="modal-title">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -250,7 +243,8 @@ window.location.replace('index');</script>";
     </div>
 
 
-    <div class="modal fade" role="dialog" id="mymodal2" aria-labelledby="modal-title">
+    <div class="modal fade" role="dialog" id="mymodal2"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" aria-labelledby="modal-title">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -286,7 +280,8 @@ window.location.replace('index');</script>";
 
 
 
-    <div class="modal fade" role="dialog" id="mymodal3" aria-labelledby="modal-title">
+    <div class="modal fade" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" role="dialog"
+        id="mymodal3" aria-labelledby="modal-title">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -338,7 +333,8 @@ window.location.replace('index');</script>";
 
 
 
-    <div class="modal fade" role="dialog" id="mymodal4" aria-labelledby="modal-title">
+    <div class="modal fade" role="dialog" id="mymodal4" aria-labelledby="modal-title"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -381,8 +377,16 @@ window.location.replace('index');</script>";
             </div>
         </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-
+    <script>
+    (function() {
+        $(function() {
+            $('#my-modal').modal('show')
+        });
+    }());
+    </script>
 
 
     <script lenguaje="javascript" type="text/javascript">

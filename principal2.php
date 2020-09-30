@@ -81,7 +81,7 @@ window.location.replace('index');</script>";
             </div>
             <div class="tarjeta">
                 <div class="img_tarjeta">
-                    <img src="img/engranes.jpg" alt="ad,imistracion">
+                    <img src="img/engranes.png" alt="admistracion">
                 </div>
                 <h3>ADMINISTRACIÓN</h3>
                 <ul>

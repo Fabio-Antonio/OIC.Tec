@@ -10,13 +10,14 @@ window.location.replace('index.php');</script>";
 }
 
    require_once("conexion.php");
-    $clave="";
    $presupuesto=$_POST["presupuesto"];
  $clave=$_POST["clave"];
-   $presupuesto=str_replace(",","",$presupuesto);
-    $statement = $conn->prepare("INSERT INTO partida_presupuesto(clave,presupuesto)VALUES(?,?)");    
+ $partida=$_POST["partida"];
+   $presupuesto=str_replace([',','$'],"",$presupuesto);
+    $statement = $conn->prepare("INSERT INTO partida_presupuesto(clave,nombre,presupuesto)VALUES(?,?,?)");    
     $statement->bindParam(1,$clave);
-	 $statement->bindValue(2,$presupuesto);
+    $statement->bindParam(2,$partida);
+    $statement->bindValue(3,$presupuesto);
 
 $statement->execute();
 

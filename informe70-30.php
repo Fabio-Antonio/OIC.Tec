@@ -240,7 +240,8 @@ document.getElementById("myOverlay").style.display = "none";
 
 <script>
 $( document ).ready(function() {
-
+<?php $id_partida=$_POST["id_partida"];?>
+var partida= '<?=$id_partida?>';
 var unidad='<?=$unidad?>';
 var table = $('#myTable').dataTable({
 "language": {
@@ -260,7 +261,7 @@ var table = $('#myTable').dataTable({
             },
 },
 "bProcessing": true,
-"sAjaxSource": "consulta_70_30t.php?unidada="+unidad,
+"sAjaxSource": "consulta_70_30t.php?unidada="+unidad+"&id_partida="+partida,
 "bPaginate":true,
 "sPaginationType":"full_numbers",
 "iDisplayLength": 5,
@@ -294,6 +295,8 @@ var table = $('#myTable').dataTable({
 
  <script>
         $( document ).ready(function() {
+          <?php $id_partida=$_POST["id_partida"];?>
+var partida= '<?=$id_partida?>';
 var unidad='<?=$unidad?>';
 
 var table = $('#myTable2').dataTable({
@@ -315,7 +318,7 @@ var table = $('#myTable2').dataTable({
 },
 
 "bProcessing": true,
-"sAjaxSource": "consulta_70_30a.php?unidada="+unidad,
+"sAjaxSource": "consulta_70_30a.php?unidada="+unidad+"&id_partida="+partida,
 "bPaginate":true,
 "sPaginationType":"full_numbers",
 "iDisplayLength": 5,

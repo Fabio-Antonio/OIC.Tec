@@ -12,10 +12,21 @@ while($row=$query->fetch())
 	{
 $flag[]=$row;
 }
+if($flag==null){
+  echo "<script>alert('No se encontraron resultados')
+window.location.replace('principal2.php');</script>";
+ return;
+  }
+
+}else{
+echo "<script>alert('La consulta a la base de datos es incorrecta')
+window.location.replace('principal2.php');</script>";
+}
+
 
 $valor=serialize($flag);
 //header("Location:consulta_numero_contrato.php?flag=$valor");
-	}
+	
 
 $conn = null;
 

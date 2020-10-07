@@ -149,16 +149,27 @@ document.getElementById("myOverlay").style.display = "none";
          function mostrarText(){
     var selObj = document.getElementById('secontrapartisasp');
       var selObj2 = document.getElementById('inclavepartida');
-      var selIndex = selObj.options[selObj.selectedIndex].text;
-    var clave_partida  = selObj2.options[selObj2.selectedIndex].text;
+      var selIndex = selObj.options[selObj.selectedIndex].value;
+    var clave_partida  = selObj2.options[selObj2.selectedIndex].value;
 
-      if(clave_partida<0||clave_partida.length==0||!(/^[0-9]+$/.test(clave_partida))||clave_partida.length>5){
+      if(clave_partida<0||clave_partida.length==0){
         $(function(){
 	$('#my-modal2').modal('show');
 	});
         document.getElementById('inclavepartida').focus();
         return;
-	}
+  }
+
+  if(selIndex<0||selIndex.length==0){
+        $(function(){
+	$('#my-modal2').modal('show');
+	});
+        document.getElementById('secontrapartisasp').focus();
+        return;
+  }
+  
+
+
          alert(selIndex);
        // window.location="partidas_presupuestales.php?nombre_unidad_compradora="+selIndex+"&clave_partida="+clave_partida;
 	$.post('partidas_presupuestales.php',{
@@ -229,7 +240,7 @@ document.getElementById("myOverlay").style.display = "none";
                         $flag=unserialize($_POST["flag2"]);
                         foreach($flag as $key=> $val){
                 ?>
-              <option value="<?php print($val['id']); ?>"><?php print($val['clave']); ?></option>
+              <option value="<?php print($val['id']); ?>"><?php print($val['clave']); echo " "; print($val['nombre']); ?></option>
                 <?php
                 }
         }

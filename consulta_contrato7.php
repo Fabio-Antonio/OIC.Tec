@@ -2,8 +2,12 @@
   require_once("conexion.php");
   require_once("url.php");
 
-   $query=$conn->prepare("SELECT id_unidad_compradora,nombre_unidad_compradora FROM unidad_compradora");
+  $partida_presupuestal=$_GET["partida_presupuestal"];
 
+   $query=$conn->prepare("SELECT id_unidad_compradora,nombre_unidad_compradora FROM partidas_presupuestales
+   AS pp INNER JOIN unidad_compradora AS uc ON pp.id_unidad = uc.id_unidad_compradora INNER JOIN 
+   partida_presupuesto AS po ON po.id = pp.id_presupuesto WHERE po.id = ?");
+$query->bindValue(1,$partida_presupuestal);
  $query->execute();
 if($query){
 while($row=$query->fetch()){
@@ -144,7 +148,7 @@ curl_setopt($ch, CURLOPT_URL,$url);
 // indicamos el tipo de petición: POST
 curl_setopt($ch, CURLOPT_POST, TRUE);
 // definimos cada uno de los parámetros
-curl_setopt($ch, CURLOPT_POSTFIELDS, "flag=$valor&flag2=$valor2&flag3=$valor3&flag4=$valor4&flag6=$valor6&flag8=$valor8");
+curl_setopt($ch, CURLOPT_POSTFIELDS, "flag=$valor&flag2=$valor2&flag3=$valor3&flag4=$valor4&flag6=$valor6&flag8=$valor8&partida=$partida_presupuestal");
 /*curl_setopt($ch, CURLOPT_HEADER, 0);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 0);
     curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);

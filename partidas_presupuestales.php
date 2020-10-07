@@ -6,40 +6,10 @@
      $clave_partida = $_POST["clave_partida"];
 	 
 
-$query=$conn->prepare("SELECT id_unidad_compradora FROM unidad_compradora  WHERE nombre_unidad_compradora=?");
-$query->bindParam(1, $nombre_unidad_compradora);
-$query->execute();
-
-if($query)
-{
-while($row=$query->fetch())
-        {
-$dato=$row['id_unidad_compradora'];
-
-}
-
-}
-
-
-$query=$conn->prepare("SELECT id FROM partida_presupuesto  WHERE clave=?");
-$query->bindParam(1, $clave_partida);
-$query->execute();
-
-if($query)
-{
-while($row=$query->fetch())
-        {
-$dato2=$row['id'];
-
-}
-
-}
-
-
 
 $statement = $conn->prepare("INSERT INTO partidas_presupuestales (id_unidad,id_presupuesto)VALUES(?,?)");
-$statement->bindValue(1, $dato);
-$statement->bindValue(2, $dato2);
+$statement->bindValue(1, $nombre_unidad_compradora);
+$statement->bindValue(2, $clave_partida);
 $statement->execute();
    
   

@@ -333,13 +333,17 @@ $('#my-modal').modal('show')
                   ?>
 
       </select>
-     <label id="ccp" class="col-sm-20"> Correspondiente al informe:   </label>
-<div class="radio">
+      <div class="textcorres">
+      <label id="ccp" class="col-sm-20"> Correspondiente al informe:   </label>
+      </div>
+<div class="radiod">
   <label>
     <input type="radio" name="radio-01" id="70" value="70" checked="checked"> 70%
-  </label>
-  <label>
-    <input type="radio" name="radio-01" id="30" value="30" checked="checked"> 30%
+    <i></i>
+  </label >
+  <label class="treintaradio">
+    <input  type="radio" name="radio-01" id="30" value="30" checked="checked"> 30%
+    <i></i>
   </label>
 </div>
 

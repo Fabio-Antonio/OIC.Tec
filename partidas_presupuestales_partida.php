@@ -70,7 +70,7 @@
 <button  id="ce" class="w3-bar-item w3-button w3-large" onclick="w3_close()">Cerrar &times;</button>
 <img src="icons/lf.png" alt="sfp" width="145" height="60">
 <a  class="w3-bar-item w3-button"></a>
-<a href="principal.php" class="w3-bar-item w3-button">Inicio</a>
+<a href="principal2.php" class="w3-bar-item w3-button">Inicio</a>
 <a href="alta.html" class="w3-bar-item w3-button">Usuarios</a>
 <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal2" >Contacto</a>
  <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal3">Nueva Partida</a>
@@ -216,7 +216,8 @@ document.getElementById("myOverlay").style.display = "none";
     <div class="container1">
       <div class="row">
         <div class='col-sm-20 col-md-20 col-ld-20'>
-          <h2 class="fuu">PARTIDAS PRESUPUESTALES</h2>
+          <h2 class="fuu">Asignación de Partidas</h2>
+          <h4> Asigne una partida a una unidad compradora</h4>
           <div class="dtextcontratopartida">
             <label class="textcontratopartida">Unidad Compradora:</label>
           </div>

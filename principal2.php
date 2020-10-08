@@ -1,15 +1,13 @@
 <!--<?php
-error_reporting(0);
-session_start();
-$verificar=$_SESSION['usuario'];
+    error_reporting(0);
+    session_start();
+    $verificar = $_SESSION['usuario'];
 
-if($verificar==null||$verificar==''){
- echo "<script> alert ('Debe iniciar sessión')
+    if ($verificar == null || $verificar == '') {
+        echo "<script> alert ('Debe iniciar sessión')
 window.location.replace('index');</script>";
-
-
-}
-?>-->
+    }
+    ?>-->
 <!DOCTYPE html>
 <html lang="en">
 <link href="https://cdn.datos.gob.mx/assets/css/main.css" rel="stylesheet">
@@ -45,8 +43,8 @@ window.location.replace('index');</script>";
         <div class="w3-sidebar w3-bar-block w3-animate-left" style="display:none;z-index:5" id="mySidebar">
             <button id="ce" class="w3-bar-item w3-button w3-large" onclick="w3_close()">Cerrar &times;</button>
             <img src="img/lf.png" alt="sfp" width="145" height="60">
-            <a href="#" class="w3-bar-item w3-button"><?php echo $_SESSION['usuario'];?></a>
-            <a href="principal.php" class="w3-bar-item w3-button">Inicio</a>
+            <a href="#" class="w3-bar-item w3-button"><?php echo $_SESSION['usuario']; ?></a>
+            <a href="principal2.php" class="w3-bar-item w3-button">Inicio</a>
             <a href="alta.html" class="w3-bar-item w3-button">Usuarios</a>
             <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal2">Contacto</a>
             <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal3">Nueva Partida</a>
@@ -269,7 +267,7 @@ window.location.replace('index');</script>";
 
 
 
-    
+
 
     <div class="modal fade" role="dialog" id="mymodal4" aria-labelledby="modal-title"
         href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -288,35 +286,37 @@ window.location.replace('index');</script>";
                             <label class="control-label" for="email-01">Unidad Compradora:</label>
                             <select id="unidadcom" name="unidad">
                                 <?php
-			require_once("consulta_principal.php");
+                                require_once("consulta_principal.php");
 
-                        foreach($flag as $key=> $val){
-                ?>
+                                foreach ($flag as $key => $val) {
+                                ?>
 
                                 <option value="<?php print($val['id_unidad_compradora']); ?>">
                                     <?php print($val['nombre_unidad_compradora']); ?></option>
                                 <?php
-                }
+                                }
 
-                ?>
+                                ?>
 
                             </select>
-                          
+
 
                             <label class="control-label" for="email-01">Partida Presupuestal:</label>
                             <select id="partidass" name="partidass">
                                 <?php
-			require_once("consulta_partida.php");
+                                require_once("consulta_partida.php");
 
-                        foreach($flag2 as $key=> $val){
-                ?>
+                                foreach ($flag2 as $key => $val) {
+                                ?>
 
                                 <option value="<?php print($val['id']); ?>">
-                                    <?php print($val['clave']); echo " "; print($val['nombre']); ?></option>
+                                    <?php print($val['clave']);
+                                        echo " ";
+                                        print($val['nombre']); ?></option>
                                 <?php
-                }
+                                }
 
-                ?>
+                                ?>
 
                             </select>
 
@@ -333,7 +333,7 @@ window.location.replace('index');</script>";
 
                 </div>
                 <div class="modal-footer">
-                <button class="btn btn-primary" data-dismiss="modal">cerrar</button>
+                    <button class="btn btn-primary" data-dismiss="modal">cerrar</button>
                 </div>
             </div>
         </div>
@@ -358,17 +358,19 @@ window.location.replace('index');</script>";
                             <label class="control-label" for="email-01">Partida Presupuestal:</label>
                             <select id="partidas" name="partidas">
                                 <?php
-			require_once("consulta_partida.php");
+                                require_once("consulta_partida.php");
 
-                        foreach($flag2 as $key=> $val){
-                ?>
+                                foreach ($flag2 as $key => $val) {
+                                ?>
 
                                 <option value="<?php print($val['id']); ?>">
-                                    <?php print($val['clave']); echo " "; print($val['nombre']); ?></option>
+                                    <?php print($val['clave']);
+                                        echo " ";
+                                        print($val['nombre']); ?></option>
                                 <?php
-                }
+                                }
 
-                ?>
+                                ?>
 
                             </select>
 
@@ -381,7 +383,7 @@ window.location.replace('index');</script>";
 
                 </div>
                 <div class="modal-footer">
-                <button class="btn btn-primary" data-dismiss="modal">cerrar</button>
+                    <button class="btn btn-primary" data-dismiss="modal">cerrar</button>
                 </div>
             </div>
         </div>
@@ -404,7 +406,8 @@ window.location.replace('index');</script>";
                             <label class="control-label" for="email-01">Clave:</label>
                             <input class="form-control" id="clave" placeholder="Ejemplo:58101" type="text" required>
                             <label class="control-label" for="email-01">Partida:</label>
-                            <input class="form-control" id="partida" placeholder="Ejemplo: Terrenos" type="text" required>
+                            <input class="form-control" id="partida" placeholder="Ejemplo: Terrenos" type="text"
+                                required>
 
                             <div class="form-group">
                                 <label class="control-label" for="email-01">Presupuesto:</label>
@@ -422,7 +425,7 @@ window.location.replace('index');</script>";
             </div>
         </div>
     </div>
-    
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="js/funciones_principal.js"></script>

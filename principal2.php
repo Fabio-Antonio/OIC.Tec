@@ -83,7 +83,7 @@ window.location.replace('index');</script>";
                     <li><i class="fas fa-plus-circle"></i> Consolidados</li>
                     <li><i class="fas fa-plus-circle"></i> <a href="captura_pro_mont.html">Proveedor Adjudicado</a></li>
                 </ul>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet, perferendis!</p>
+                <p></p>
             </div>
             <div class="tarjeta">
                 <div class="img_tarjeta">
@@ -98,10 +98,10 @@ window.location.replace('index');</script>";
                     </li>
                     <li><i class="fas fa-plus-circle"></i> Recepción</li>
                     <li><i class="fas fa-plus-circle"></i> Terminación Anticipada</li>
-                    <li><i class="fas fa-plus-circle"></i><a href="consulta_contrato4.php"> Partidas Presupuestales</a>
+                    <li><i class="fas fa-plus-circle"></i><a href="consulta_contrato4.php"> Asignación de Partidas</a>
                     </li>
                 </ul>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet, perferendis!</p>
+                <p></p>
             </div>
             <div class="tarjeta">
                 <div class="img_tarjeta">
@@ -116,7 +116,7 @@ window.location.replace('index');</script>";
                     <li><i class="fas fa-plus-circle"></i> Facturas</li>
                     <li><i class="fas fa-plus-circle"></i> Pagos Efectuados</li>
                 </ul>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet, perferendis!</p>
+                <p></p>
             </div>
             <div class="tarjeta">
                 <div class="img_tarjeta">
@@ -129,7 +129,7 @@ window.location.replace('index');</script>";
                     <li><i class="fas fa-plus-circle"></i> Fechas Entregables</li>
                     <li><i class="fas fa-plus-circle"></i> Fecha de FOrmalización</li>
                 </ul>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet, perferendis!</p>
+                <p></p>
             </div>
             <div class="tarjeta">
                 <div class="img_tarjeta">
@@ -142,7 +142,7 @@ window.location.replace('index');</script>";
                     <li><i class="fas fa-plus-circle"></i> <a href="consulta_top.php">Top por Contrato</a></li>
                     <li><i class="fas fa-plus-circle"></i> Informe Montos por Procedimiento</li>
                 </ul>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet, perferendis!</p>
+                <p></p>
             </div>
             <div class="tarjeta">
                 <div class="img_tarjeta">
@@ -154,7 +154,7 @@ window.location.replace('index');</script>";
                     <li><i class="fas fa-plus-circle"></i> Contrato por Proveedor</li>
                     <li><i class="fas fa-plus-circle"></i> Contratos por Partida</li>
                 </ul>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet, perferendis!</p>
+                <p></p>
             </div>
         </div>
     </main>
@@ -402,9 +402,9 @@ window.location.replace('index');</script>";
                     <form role="form" id="formulario">
                         <div class="form-group">
                             <label class="control-label" for="email-01">Clave:</label>
-                            <input class="form-control" id="clave" placeholder="Clave de partida" type="text" required>
+                            <input class="form-control" id="clave" placeholder="Ejemplo:58101" type="text" required>
                             <label class="control-label" for="email-01">Partida:</label>
-                            <input class="form-control" id="partida" placeholder="Partida" type="text" required>
+                            <input class="form-control" id="partida" placeholder="Ejemplo: Terrenos" type="text" required>
 
                             <div class="form-group">
                                 <label class="control-label" for="email-01">Presupuesto:</label>

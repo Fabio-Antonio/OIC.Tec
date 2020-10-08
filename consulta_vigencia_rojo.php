@@ -1,7 +1,7 @@
 <?php
    require_once("conexion.php");
    require_once("consultas_vigencia.php");
-
+   require_once("url.php");
     $statement = $conn->prepare("SELECT c.numero_contrato, u.unidad, f.inicio_vigencia, f.fin_vigencia FROM contrato AS c
 INNER JOIN unidad_requirente AS u ON c.id_unidad_requirente = u.id_requirente
 INNER JOIN contrato_fechas AS f ON c.id_contrato = f.id_contrato
@@ -24,7 +24,7 @@ window.location.replace('consulta_vigencia.php');</script>";
    $valor=serialize($flag);
 }else{
 echo "<script>alert('La consulta a la base de datos es incorrecta')
-window.location.replace('principal.php');</script>";
+window.location.replace('principal2.php');</script>";
 }
 
 $archivo = 'consulta_vigenciat.php';
@@ -50,7 +50,9 @@ fclose($abrir);
 $conn=null;
 
 $ch =curl_init();
-curl_setopt($ch,CURLOPT_URL,"http://besa-pruebas.com:8888/besa/consulta_por_vigencia.php");
+$url=$path."/besa/consulta_por_vigencia.php";
+curl_setopt($ch,CURLOPT_URL,$url);
+curl_setopt($ch,CURLOPT_POST,TRUE);
 curl_setopt($ch,CURLOPT_POST,TRUE);
 curl_setopt($ch,CURLOPT_POSTFIELDS,"flag=$valor&total=$total&total1=$total1&total2=$total2&total3=$total3");
 curl_exec($ch);
@@ -58,7 +60,7 @@ $error=curl_error($ch);
 curl_close($ch);
 if($error){
 echo "<script>alert('Los datos no se enviaron correctamente')
-window.location.replace('principal.html');</script>";
+window.location.replace('principal2.php');</script>";
         }
 
 ?>

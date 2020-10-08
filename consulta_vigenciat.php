@@ -17,7 +17,7 @@ window.location.replace('consulta_vigencia.php');</script>";
         }
 }else{
 echo "<script>alert('La consulta a la base de datos es incorrecta')
-window.location.replace('principal.php');</script>";
+window.location.replace('principal2.php');</script>";
 }
 
 $results = array(

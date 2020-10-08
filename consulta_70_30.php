@@ -5,7 +5,7 @@
    $nombre_unidad_compradora=$_GET["nombre_unidad_compradora"];
    $id_partida=$_GET["id_partida"];
 
- $statement = $conn->prepare("SELECT clave,presupuesto,(presupuesto*70)/100 AS setenta,(presupuesto*30)/100 AS treinta,
+ $statement = $conn->prepare("SELECT clave,nombre,presupuesto,(presupuesto*70)/100 AS setenta,(presupuesto*30)/100 AS treinta,
 nombre_unidad_compradora, numero_unidad
 FROM partidas_presupuestales AS pp
 INNER JOIN partida_presupuesto AS pp2 ON pp.id_presupuesto = pp2.id
@@ -18,9 +18,10 @@ $statement->execute();
 if($statement){
     while($row = $statement->fetch(PDO::FETCH_ASSOC)){   
         $cli=$row["clave"];
+        $nombre_presupuesto=$row["nombre"];
 	$totals=$row["presupuesto"];
 	$setenta=$row["setenta"];
-	$treinta=$row["treinta"];
+    $treinta=$row["treinta"];
 	$unidad=$row["nombre_unidad_compradora"];
 	$numero_unidad=$row['numero_unidad'];
     } 
@@ -61,7 +62,7 @@ window.location.replace('principal2.php');</script>";
 
 }else{
 echo "<script>alert('La consulta a la base de datos es incorrecta')
-window.location.replace('principal.php');</script>";
+window.location.replace('principal2.php');</script>";
 }
 
 
@@ -82,13 +83,13 @@ if($statement){
     }
     if($total2==null){
         echo "<script>alert('No se encontraron resultados5')
-window.location.replace('principal.php');</script>";
+window.location.replace('principal2.php');</script>";
        return;
         }
 
 }else{
 echo "<script>alert('La consulta a la base de datos es incorrecta')
-window.location.replace('principal.php');</script>";
+window.location.replace('principal2.php');</script>";
 }
 
 
@@ -100,7 +101,7 @@ $ch =curl_init();
 $url=$path."/besa/informe70-30.php";
 curl_setopt($ch,CURLOPT_URL,$url);
 curl_setopt($ch,CURLOPT_POST,TRUE);
-curl_setopt($ch,CURLOPT_POSTFIELDS,"totals=$totals&setenta=$setenta&treinta=$treinta&total=$total&total2=$total2&cli=$cli&unidad=$unidad&numero_unidad=$numero_unidad&id_partida=$id_partida");
+curl_setopt($ch,CURLOPT_POSTFIELDS,"totals=$totals&setenta=$setenta&treinta=$treinta&total=$total&total2=$total2&cli=$cli&unidad=$unidad&numero_unidad=$numero_unidad&id_partida=$id_partida&nombre_presupuesto=$nombre_presupuesto");
 curl_setopt($ch, CURLOPT_HEADER, 0);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 0);
     curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
@@ -113,7 +114,7 @@ $error=curl_error($ch);
 curl_close($ch);
 if($error){
 echo "<script>alert('Los datos no se enviaron correctamente')
-window.location.replace('principal.html');</script>";
+window.location.replace('principa2.php');</script>";
         }
 
 ?>

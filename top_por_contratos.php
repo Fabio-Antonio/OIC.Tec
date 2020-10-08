@@ -216,7 +216,7 @@ var table = $('#myTable').dataTable({
 
           <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
         <div class="breggt">
-          <button type="button" id="bregresar" class="btn btn-primary"  onclick="location.href='principal.php'" name="bregresar"> Regresar </button>
+          <button type="button" id="bregresar" class="btn btn-primary"  onclick="location.href='principal2.php'" name="bregresar"> Regresar </button>
         </div>
           </div>
         </div>

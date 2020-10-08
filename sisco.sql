@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 20-09-2020 a las 20:08:25
+-- Tiempo de generación: 08-10-2020 a las 03:22:46
 -- Versión del servidor: 5.6.21
 -- Versión de PHP: 5.6.3
 
@@ -58,7 +58,7 @@ CREATE TABLE IF NOT EXISTS `administrador` (
   `apellido_paterno` varchar(15) DEFAULT NULL,
   `apellido_materno` varchar(15) DEFAULT NULL,
   `email` varchar(50) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `administrador`
@@ -67,7 +67,8 @@ CREATE TABLE IF NOT EXISTS `administrador` (
 INSERT INTO `administrador` (`id_administrador`, `nombre`, `apellido_paterno`, `apellido_materno`, `email`) VALUES
 (1, 'Fabio', 'Antonio', 'Lorenzana', 'ing.fabio.a@gmail.com'),
 (2, '﻿José Pedro', 'Reyes', 'Villafranca', 'pedrorvilla01@hotmail.com'),
-(3, 'Jahir', 'Flores', 'Reyes', 'jahirfloresreyes20@gmail.com ');
+(3, 'Jahir', 'Flores', 'Reyes', 'jahirfloresreyes20@gmail.com '),
+(5, 'David Rogelio', 'Rodríguez', 'Arias', 'drrodriguez@nube.sep.gob.mx');
 
 -- --------------------------------------------------------
 
@@ -115,6 +116,7 @@ CREATE TABLE IF NOT EXISTS `contrato` (
   `id_administrador` int(11) DEFAULT NULL,
   `id_proveedor_adjudicado` int(11) DEFAULT NULL,
   `id_consolidado` int(11) DEFAULT NULL,
+  `id_partida` int(11) NOT NULL,
   `numero_contrato` varchar(30) DEFAULT NULL,
   `procedimiento_compranet` varchar(26) DEFAULT NULL,
   `contrato_compranet` int(11) DEFAULT NULL,
@@ -125,26 +127,17 @@ CREATE TABLE IF NOT EXISTS `contrato` (
   `monto_max` decimal(10,2) DEFAULT NULL,
   `monto_min` decimal(10,2) DEFAULT NULL,
   `pdf` varchar(25) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `contrato`
 --
 
-INSERT INTO `contrato` (`id_contrato`, `id_unidad_compradora`, `id_procedimiento_contratacion`, `id_unidad_requirente`, `id_administrador`, `id_proveedor_adjudicado`, `id_consolidado`, `numero_contrato`, `procedimiento_compranet`, `contrato_compranet`, `convenio_interno`, `objeto_contratacion`, `contrato_abierto`, `documentacion_descirpcion`, `monto_max`, `monto_min`, `pdf`) VALUES
-(1, 1, 1, 1, 1, 1, 1, 'AN4567', 'procedimiento prueba', 1234567, 'convenio prueba', 'Inmuebles', 0, 'Digital', '30000.00', '0.00', NULL),
-(2, 1, 2, 2, 1, 1, 1, 'BN5678', 'procedimiento prueba', 1234567, 'convenio prueba', 'Muebles', 1, 'Digital', '50000.00', '20906.79', NULL),
-(3, 1, 9, 2, 1, 1, 1, 'CN4567', 'procedimiento prueba', 1234567, 'convenio prueba', 'Muebles', 0, 'Digital', '100345.00', '0.00', NULL),
-(4, 2, 1, 2, 1, 1, 1, 'AT6234', 'procedimiento prueba', 1234567, 'convenio prueba', 'Muebles', 0, 'Digital', '100345.00', '0.00', NULL),
-(5, 2, 3, 1, 1, 1, 1, 'CF3456', 'procedimiento prueba', 1234567, 'convenio prueba', 'Muebles', 1, 'Digital', '70000.00', '50000.00', NULL),
-(6, 3, 7, 1, 1, 1, 1, 'PPP456', 'procedimiento prueba', 1234567, 'convenio prueba', 'Oficinas', 0, 'Digital', '100000.00', '0.00', NULL),
-(7, 3, 3, 2, 1, 1, 1, 'FF4367', 'procedimiento prueba', 1234567, 'convenio prueba', 'Equipo de computo', 1, 'Digital', '65000.00', '45000.00', NULL),
-(8, 4, 4, 3, 1, 1, 1, 'AVT45', 'procedimiento prueba', 1234567, 'convenio prueba', 'Inmueble', 1, 'Digital', '100245.00', '45000.00', NULL),
-(9, 4, 1, 3, 1, 1, 1, 'SQ3456', 'Prueba', 1234567, 'Convenio Prueba', 'Inmuebles', 0, 'Digital', '68547.00', '0.00', NULL),
-(10, 4, 9, 3, 1, 1, 1, 'CS4532', 'procedimiento prueba', 1234567, 'convenio prueba', 'Inmuebles', 0, 'Digital', '245879.00', '0.00', NULL),
-(11, 1, 2, 2, 1, 1, 1, 'AP5621', 'procedimiento prueba', 1234567, 'convenio prueba', 'Inmuebles', 1, 'Digital', '56890.00', '12456.00', NULL),
-(12, 4, 4, 1, 1, 1, 1, 'TTG345', 'procedimiento prueba', 1234567, 'convenio prueba', 'Inmuebles', 0, 'Digital', '89345.60', '0.00', NULL),
-(13, 2, 3, 3, 1, 1, 1, 'HJ2211', 'procedimiento prueba', 1234567, 'convenio prueba', 'Inmueble', 1, 'Digital', '56789.00', '14678.00', NULL);
+INSERT INTO `contrato` (`id_contrato`, `id_unidad_compradora`, `id_procedimiento_contratacion`, `id_unidad_requirente`, `id_administrador`, `id_proveedor_adjudicado`, `id_consolidado`, `id_partida`, `numero_contrato`, `procedimiento_compranet`, `contrato_compranet`, `convenio_interno`, `objeto_contratacion`, `contrato_abierto`, `documentacion_descirpcion`, `monto_max`, `monto_min`, `pdf`) VALUES
+(14, 7, 4, 3, 1, 1, 1, 8, 'AN4567', 'procedimiento prueba', 1234567, 'convenio prueba', 'Inmueble', 0, 'Digital', '245879.00', '0.00', NULL),
+(15, 9, 5, 1, 1, 1, 1, 9, 'BN5678', 'procedimiento prueba', 1234567, 'convenio prueba', 'Sistema Operativo', 0, 'Digital', '456789.00', '0.00', NULL),
+(16, 7, 5, 2, 1, 1, 1, 8, 'CN4567', 'procedimiento prueba', 1234567, 'convenio prueba', 'Inmueble', 0, 'Digital', '356978.00', '0.00', NULL),
+(17, 9, 4, 3, 1, 2, 1, 9, 'DN5678', 'procedimiento prueba', 1234567, 'convenio prueba', 'Licencia de paqueteria Ofice', 0, 'Digital', '489349.00', '0.00', NULL);
 
 -- --------------------------------------------------------
 
@@ -167,26 +160,17 @@ CREATE TABLE IF NOT EXISTS `contrato_fechas` (
   `suficiencia` date DEFAULT NULL,
   `requisicion_contrato` date DEFAULT NULL,
   `resicion_contrato` date DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `contrato_fechas`
 --
 
 INSERT INTO `contrato_fechas` (`id_fecha`, `id_contrato`, `notificacion_adjudicada`, `formalizacion_contrato`, `inicio_vigencia`, `fin_vigencia`, `sat`, `imss`, `infonavit`, `garantia_cumplimiento`, `fecha_entrega`, `suficiencia`, `requisicion_contrato`, `resicion_contrato`) VALUES
-(1, 1, '2020-09-03', '2020-09-03', '2020-09-03', '2020-12-06', '2020-09-03', '2020-09-03', '2020-09-03', '2020-09-03', '2020-12-03', '2020-09-03', '2020-09-03', '2020-09-03'),
-(2, 2, '2020-09-03', '2020-09-03', '2020-09-03', '2020-11-18', '2020-09-03', '2020-09-03', '2020-09-03', '2020-09-03', '2020-11-03', '2020-09-03', '2020-09-03', '2020-09-03'),
-(3, 3, '2020-09-03', '2020-09-03', '2020-09-03', '2021-01-05', '2020-09-03', '2020-09-03', '2020-09-03', '2020-09-03', '2021-01-03', '2020-09-03', '2020-09-03', '2020-09-03'),
-(4, 4, '2020-09-03', '2020-09-03', '2020-09-03', '2020-12-23', '2020-09-03', '2020-09-03', '2020-09-03', '2020-09-03', '2020-12-10', '2020-09-03', '2020-09-03', '2020-09-03'),
-(5, 5, '2020-09-03', '2020-09-03', '2020-09-03', '2020-11-14', '2020-09-03', '2020-09-03', '2020-09-03', '2020-09-03', '2020-11-12', '2020-09-03', '2020-09-03', '2020-09-03'),
-(6, 6, '2020-09-07', '2020-09-07', '2020-09-07', '2020-12-09', '2020-09-07', '2020-09-07', '2020-09-07', '2020-09-07', '2020-12-09', '2020-09-07', '2020-09-07', '2020-09-07'),
-(7, 7, '2020-09-07', '2020-09-07', '2020-09-07', '2020-11-14', '2020-09-07', '2020-09-07', '2020-09-07', '2020-09-07', '2020-11-13', '2020-09-07', '2020-09-07', '2020-09-07'),
-(8, 8, '2020-09-08', '2020-09-08', '2020-09-08', '2020-11-17', '2020-09-08', '2020-09-08', '2020-09-08', '2020-09-08', '2020-11-09', '2020-09-08', '2020-09-08', '2020-09-08'),
-(9, 9, '2020-09-08', '2020-09-08', '2020-09-08', '2020-12-14', '2020-09-08', '2020-09-08', '2020-09-08', '2020-09-08', '2020-12-11', '2020-09-08', '2020-09-08', '2020-09-08'),
-(10, 10, '2020-09-10', '2020-09-17', '2020-09-11', '2021-01-10', '2020-08-12', '2020-08-12', '2020-08-12', '2020-09-17', NULL, '2020-09-09', '2020-09-09', NULL),
-(11, 11, '2020-09-10', '2020-09-18', '2020-09-11', '2020-11-25', '2020-08-12', '2020-08-12', '2020-09-12', '2020-09-18', NULL, '2020-09-08', '2020-09-08', NULL),
-(12, 12, '2020-09-18', '2020-09-22', '2020-09-19', '2020-12-12', '2020-08-19', '2020-08-19', '2020-08-19', '2020-09-23', NULL, '2020-09-16', '2020-09-16', NULL),
-(13, 13, '2020-09-20', '2020-09-29', '2020-09-22', '2021-01-09', '2020-08-28', '2020-08-23', '2020-09-28', '2020-09-30', NULL, '2020-09-19', '2020-09-18', NULL);
+(14, 14, '2020-10-06', '2020-10-14', '2020-10-06', '2021-01-21', '2020-09-16', '2020-09-16', '2020-09-16', '2020-10-14', NULL, '2020-10-04', '2020-10-04', NULL),
+(15, 15, '2020-10-06', '2020-10-15', '2020-10-06', '2021-02-14', '2020-09-16', '2020-09-16', '2020-09-16', '2020-10-14', NULL, '2020-10-04', '2020-10-04', NULL),
+(16, 16, '2020-10-06', '2020-10-08', '2020-10-08', '2021-03-18', '2020-09-09', '2020-09-09', '2020-09-09', '2020-10-14', NULL, '2020-10-04', '2020-10-04', NULL),
+(17, 17, '2020-10-06', '2020-10-07', '2020-10-08', '2020-11-20', '2020-09-19', '2020-09-19', '2020-09-19', '2020-10-14', NULL, '2020-10-04', '2020-10-04', NULL);
 
 -- --------------------------------------------------------
 
@@ -347,17 +331,17 @@ CREATE TABLE IF NOT EXISTS `partidas_presupuestales` (
 `id_partida` int(11) NOT NULL,
   `id_unidad` int(11) DEFAULT NULL,
   `id_presupuesto` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `partidas_presupuestales`
 --
 
 INSERT INTO `partidas_presupuestales` (`id_partida`, `id_unidad`, `id_presupuesto`) VALUES
-(1, 1, 1),
-(2, 2, 2),
-(3, 3, 3),
-(4, 4, 4);
+(7, 7, 8),
+(8, 8, 9),
+(9, 9, 9),
+(10, 9, 8);
 
 -- --------------------------------------------------------
 
@@ -368,18 +352,17 @@ INSERT INTO `partidas_presupuestales` (`id_partida`, `id_unidad`, `id_presupuest
 CREATE TABLE IF NOT EXISTS `partida_presupuesto` (
 `id` int(11) NOT NULL,
   `clave` int(6) DEFAULT NULL,
+  `nombre` varchar(100) COLLATE utf8_spanish2_ci NOT NULL,
   `presupuesto` decimal(10,2) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
 
 --
 -- Volcado de datos para la tabla `partida_presupuesto`
 --
 
-INSERT INTO `partida_presupuesto` (`id`, `clave`, `presupuesto`) VALUES
-(1, 45678, '2456780.00'),
-(2, 46723, '4345123.00'),
-(3, 88902, '1920000.50'),
-(4, 66542, '2280000.00');
+INSERT INTO `partida_presupuesto` (`id`, `clave`, `nombre`, `presupuesto`) VALUES
+(8, 58301, 'Edificios y locales', '8940245.00'),
+(9, 59101, 'Software', '4789456.00');
 
 -- --------------------------------------------------------
 
@@ -405,23 +388,24 @@ CREATE TABLE IF NOT EXISTS `penalizaciones` (
 CREATE TABLE IF NOT EXISTS `procedimientos_contratacion` (
 `id_procedimiento_contratacion` int(11) NOT NULL,
   `id_fundamento_legal` int(11) DEFAULT NULL,
-  `procedimientos` varchar(100) CHARACTER SET utf8 DEFAULT NULL
+  `procedimientos` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `setenta_treinta` tinyint(4) NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci;
 
 --
 -- Volcado de datos para la tabla `procedimientos_contratacion`
 --
 
-INSERT INTO `procedimientos_contratacion` (`id_procedimiento_contratacion`, `id_fundamento_legal`, `procedimientos`) VALUES
-(1, 1, 'Licitación Pública'),
-(2, 2, 'Adjudicación Directa por artículo 42 de la LAASSP II'),
-(3, 3, 'Adjudicación Directa por artículo 42 de la LAASSP III'),
-(4, 4, 'Adjudicación Directa por artículo 42 de la LAASSP'),
-(5, 5, 'Adjudicación Directa por artículo 41 de la LAASSP II'),
-(6, 6, 'Adjudicación Directa por artículo 41 de la LAASSP I'),
-(7, 7, 'Adjudicación Directa por artículo 41 de la LAASSP II Comité'),
-(8, 8, 'Adjudicación Directa por artículo 41 de la LAASSP I Requirente'),
-(9, 9, 'Contratación al amparo del artículo 1° de la LAASSP');
+INSERT INTO `procedimientos_contratacion` (`id_procedimiento_contratacion`, `id_fundamento_legal`, `procedimientos`, `setenta_treinta`) VALUES
+(1, 1, 'Licitación Pública', 70),
+(2, 2, 'Adjudicación Directa por artículo 42 de la LAASSP II', 30),
+(3, 3, 'Adjudicación Directa por artículo 42 de la LAASSP III', 30),
+(4, 4, 'Adjudicación Directa por artículo 42 de la LAASSP', 30),
+(5, 5, 'Adjudicación Directa por artículo 41 de la LAASSP II', 70),
+(6, 6, 'Adjudicación Directa por artículo 41 de la LAASSP I', 70),
+(7, 7, 'Adjudicación Directa por artículo 41 de la LAASSP II Comité', 70),
+(8, 8, 'Adjudicación Directa por artículo 41 de la LAASSP I Requirente', 70),
+(9, 9, 'Contratación al amparo del artículo 1° de la LAASSP', 70);
 
 -- --------------------------------------------------------
 
@@ -492,19 +476,18 @@ CREATE TABLE IF NOT EXISTS `terminacion_anticipada` (
 
 CREATE TABLE IF NOT EXISTS `unidad_compradora` (
 `id_unidad_compradora` int(11) NOT NULL,
-  `nombre_unidad_compradora` varchar(50) DEFAULT NULL,
+  `nombre_unidad_compradora` varchar(150) DEFAULT NULL,
   `numero_unidad` varchar(20) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `unidad_compradora`
 --
 
 INSERT INTO `unidad_compradora` (`id_unidad_compradora`, `nombre_unidad_compradora`, `numero_unidad`) VALUES
-(1, 'TECNM', '34TR7'),
-(2, 'UNAM', '567T'),
-(3, 'UAM', '45RTY'),
-(4, 'ENP', '45ERZ');
+(7, 'Dirección General Adjunta de Adquisiciones y Control de Bienes', '5000998'),
+(8, 'Oficialía Mayor', '006000993'),
+(9, 'Subdirección de Contratación de Servicios', '004000999');
 
 -- --------------------------------------------------------
 
@@ -566,7 +549,7 @@ ALTER TABLE `consolidado`
 -- Indices de la tabla `contrato`
 --
 ALTER TABLE `contrato`
- ADD PRIMARY KEY (`id_contrato`), ADD KEY `unidad_compradora_FK` (`id_unidad_compradora`), ADD KEY `procedimiento_contratacion_FK` (`id_procedimiento_contratacion`), ADD KEY `unidad_requirente_FK` (`id_unidad_requirente`), ADD KEY `administrador_FK` (`id_administrador`), ADD KEY `proveedor_FK` (`id_proveedor_adjudicado`), ADD KEY `consolidado` (`id_consolidado`);
+ ADD PRIMARY KEY (`id_contrato`), ADD KEY `unidad_compradora_FK` (`id_unidad_compradora`), ADD KEY `procedimiento_contratacion_FK` (`id_procedimiento_contratacion`), ADD KEY `unidad_requirente_FK` (`id_unidad_requirente`), ADD KEY `administrador_FK` (`id_administrador`), ADD KEY `proveedor_FK` (`id_proveedor_adjudicado`), ADD KEY `consolidado` (`id_consolidado`), ADD KEY `id_partida` (`id_partida`);
 
 --
 -- Indices de la tabla `contrato_fechas`
@@ -702,7 +685,7 @@ ALTER TABLE `visitas`
 -- AUTO_INCREMENT de la tabla `administrador`
 --
 ALTER TABLE `administrador`
-MODIFY `id_administrador` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+MODIFY `id_administrador` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT de la tabla `comprobacion`
 --
@@ -717,12 +700,12 @@ MODIFY `id_consolidado` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 -- AUTO_INCREMENT de la tabla `contrato`
 --
 ALTER TABLE `contrato`
-MODIFY `id_contrato` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=14;
+MODIFY `id_contrato` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=18;
 --
 -- AUTO_INCREMENT de la tabla `contrato_fechas`
 --
 ALTER TABLE `contrato_fechas`
-MODIFY `id_fecha` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=14;
+MODIFY `id_fecha` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=18;
 --
 -- AUTO_INCREMENT de la tabla `convenios_modificados`
 --
@@ -772,12 +755,12 @@ MODIFY `id_pago_efectuado` int(11) NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT de la tabla `partidas_presupuestales`
 --
 ALTER TABLE `partidas_presupuestales`
-MODIFY `id_partida` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+MODIFY `id_partida` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT de la tabla `partida_presupuesto`
 --
 ALTER TABLE `partida_presupuesto`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT de la tabla `penalizaciones`
 --
@@ -812,7 +795,7 @@ MODIFY `id_terminacion` int(11) NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT de la tabla `unidad_compradora`
 --
 ALTER TABLE `unidad_compradora`
-MODIFY `id_unidad_compradora` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+MODIFY `id_unidad_compradora` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT de la tabla `unidad_requirente`
 --
@@ -839,6 +822,7 @@ ADD CONSTRAINT `comprobacion_contrato_FK` FOREIGN KEY (`id_contrato`) REFERENCES
 ALTER TABLE `contrato`
 ADD CONSTRAINT `administrador_FK` FOREIGN KEY (`id_administrador`) REFERENCES `administrador` (`id_administrador`) ON DELETE CASCADE ON UPDATE CASCADE,
 ADD CONSTRAINT `consolidado` FOREIGN KEY (`id_consolidado`) REFERENCES `consolidado` (`id_consolidado`),
+ADD CONSTRAINT `contrato_ibfk_1` FOREIGN KEY (`id_partida`) REFERENCES `partida_presupuesto` (`id`),
 ADD CONSTRAINT `procedimiento_contratacion_FK` FOREIGN KEY (`id_procedimiento_contratacion`) REFERENCES `procedimientos_contratacion` (`id_procedimiento_contratacion`) ON DELETE CASCADE ON UPDATE CASCADE,
 ADD CONSTRAINT `proveedor_FK` FOREIGN KEY (`id_proveedor_adjudicado`) REFERENCES `proveedor_adjudicado` (`id_proveedor`) ON DELETE CASCADE ON UPDATE CASCADE,
 ADD CONSTRAINT `unidad_compradora_FK` FOREIGN KEY (`id_unidad_compradora`) REFERENCES `unidad_compradora` (`id_unidad_compradora`) ON DELETE CASCADE ON UPDATE CASCADE,

@@ -29,7 +29,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="principal.php" id="besa2">B.E.S.A</a>
+                    <a class="navbar-brand" href="principal2.php" id="besa2">B.E.S.A</a>
                     <a> <img data-v-4a3754a3="" src="icons/lf.png" alt="logo gobierno de méxico" class="logos"
                             style="width: 80%;height: 50%; margin-top: -100px; margin-bottom: -25px; margin-left: 420px "></a>
                 </div>

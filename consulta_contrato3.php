@@ -12,13 +12,13 @@ $flag[]=$row;
 $valor=serialize($flag);
  if($flag==null){
         echo "<script>alert('No se han registrado contratos')
-window.location.replace('principal.php');</script>";
+window.location.replace('principal2.php');</script>";
        return;
         }
 
 }else{
 echo "<script>alert('La consulta a la base de datos es incorrecta')
-window.location.replace('principal.php');</script>";
+window.location.replace('principal2.php');</script>";
 }
 
 

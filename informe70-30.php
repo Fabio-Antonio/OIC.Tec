@@ -114,7 +114,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="principal.php" id="besa2" >B.E.S.A</a>
+            <a class="navbar-brand" href="principal2.php" id="besa2" >B.E.S.A</a>
             <a> <img data-v-4a3754a3="" src="icons/lf.png" alt="logo gobierno de méxico" class="logos" style="width: 80%;height: 50%; margin-top: -100px; margin-bottom: -25px; margin-left: 420px "></a>
           </div>
 
@@ -196,12 +196,13 @@ document.getElementById("myOverlay").style.display = "none";
           <h2 class="fuu"> INFORME PROCEDIMIENTOS 70-30 </h2>
 
           <div id="Layer70">
-          <table class="table table-bordered" id="table7030">
+          <table class="table table" id="table7030">
             <caption>Presupuesto Unidad Compradora</caption>
             <tr>
 		<th>Unidad Compradora</th>
 		<th>Numero de Unidad</th>
               <th>Clave</th>
+              <th>Partida</th>
 		<th>Presupuesto</th>
 		<th>70%</th>
 		<th>30%</th>
@@ -211,6 +212,7 @@ document.getElementById("myOverlay").style.display = "none";
 		 <td><?php $unidad=$_POST["unidad"]; echo $unidad;?></td>
                  <td><?php $numero_unidad=$_POST["numero_unidad"]; echo $numero_unidad;?></td>
                  <td><?php $claves=$_POST["cli"]; echo $claves;?></td>
+                 <td><?php $partida=$_POST["nombre_presupuesto"]; echo $partida;?></td>
 		 <td><?php $totals=$_POST["totals"]; $tot=number_format($totals); echo '$'.$tot;?></td>
 		 <td><?php $setenta=$_POST["setenta"]; $se= number_format($setenta);echo '$'.$se;?></td>
 		 <td><?php $treinta=$_POST["treinta"]; $tr= number_format($treinta);echo '$'.$tr;?></td>
@@ -352,7 +354,7 @@ var table = $('#myTable2').dataTable({
 
 
         <div class="breg70">
-          <button type="button" id="bregresar" class="btn btn-primary"  onclick="location.href='principal.php'" name="bregresar"> Regresar </button>
+          <button type="button" id="bregresar" class="btn btn-primary"  onclick="location.href='principal2.php'" name="bregresar"> Regresar </button>
         </div>
           </div>
         </div>

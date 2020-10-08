@@ -77,7 +77,7 @@ window.location.replace('consulta_vigencia.php');</script>";
    
 }else{
 echo "<script>alert('La consulta a la base de datos es incorrecta')
-window.location.replace('principal.php');</script>";
+window.location.replace('principal2.php');</script>";
 }
 
 $statement = $conn->prepare("SELECT COUNT(*) AS total FROM contrato AS c
@@ -101,7 +101,7 @@ window.location.replace('consulta_vigencia.php');</script>";
 
 }else{
 echo "<script>alert('La consulta a la base de datos es incorrecta')
-window.location.replace('principal.php');</script>";
+window.location.replace('principal2.php');</script>";
 }
 
 $archivo = 'consulta_vigenciat.php';
@@ -143,7 +143,7 @@ $error=curl_error($ch);
 curl_close($ch);
 if($error){
 echo "<script>alert('Los datos no se enviaron correctamente')
-window.location.replace('principal.html');</script>";
+window.location.replace('principal2.php');</script>";
         }
 
 ?>

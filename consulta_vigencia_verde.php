@@ -1,7 +1,8 @@
 <?php
    require_once("conexion.php");
    require_once("consultas_vigencia.php");   
-    
+   require_once("url.php");
+
 $archivo = 'consulta_vigenciat.php';
 $abrir = fopen($archivo,'r+');
 $contenido = fread($abrir,filesize($archivo));
@@ -24,7 +25,8 @@ fclose($abrir);
  $conn=null;
 
 $ch =curl_init();
-curl_setopt($ch,CURLOPT_URL,"http://besa-pruebas.com:8888/besa/consulta_por_vigencia.php");
+$url=$path."/besa/consulta_por_vigencia.php";
+curl_setopt($ch,CURLOPT_URL,$url);
 curl_setopt($ch,CURLOPT_POST,TRUE);
 curl_setopt($ch,CURLOPT_POSTFIELDS,"total=$total&total1=$total1&total2=$total2&total3=$total3");
 curl_exec($ch);

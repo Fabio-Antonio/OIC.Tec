@@ -17,13 +17,13 @@ $valor=serialize($flag);
 
  if($flag==null){
         echo "<script>alert('Debe ingresar una unidad compradora')
-window.location.replace('principal.php');</script>";
+window.location.replace('principal2.php');</script>";
        return;
         }
 
 }else{
 echo "<script>alert('La consulta a la base de datos es incorrecta')
-window.location.replace('principal.php');</script>";
+window.location.replace('principal2.php');</script>";
 }
 
 
@@ -38,13 +38,13 @@ $valor2=serialize($flag2);
 
  if($flag==null){
         echo "<script>alert('No se encontraron procedimientos de contratación')
-window.location.replace('principal.php');</script>";
+window.location.replace('principal2.php');</script>";
        return;
         }
 
 }else{
 echo "<script>alert('La consulta a la base de datos es incorrecta')
-window.location.replace('principal.php');</script>";
+window.location.replace('principal2.php');</script>";
 }
 
 
@@ -59,13 +59,13 @@ $valor3=serialize($flag3);
 
  if($flag==null){
         echo "<script>alert('Debe Ingresar una unidad requirente')
-window.location.replace('principal.php');</script>";
+window.location.replace('principal2.php');</script>";
        return;
         }
 
 }else{
 echo "<script>alert('La consulta a la base de datos es incorrecta')
-window.location.replace('principal.php');</script>";
+window.location.replace('principal2.php');</script>";
 }
 
 
@@ -80,13 +80,13 @@ $valor4=serialize($flag4);
 
  if($flag==null){
         echo "<script>alert('Debe ingresar un administrador de contrato')
-window.location.replace('principal.php');</script>";
+window.location.replace('principal2.php');</script>";
        return;
         }
 
 }else{
 echo "<script>alert('La consulta a la base de datos es incorrecta')
-window.location.replace('principal.php');</script>";
+window.location.replace('principal2.php');</script>";
 }
 
 
@@ -103,13 +103,13 @@ $valor6=serialize($flag6);
 
  if($flag==null){
         echo "<script>alert('Debe ingresar un provedor adjudicado')
-window.location.replace('principal.php');</script>";
+window.location.replace('principal2.php');</script>";
        return;
         }
 
 }else{
 echo "<script>alert('La consulta a la base de datos es incorrecta')
-window.location.replace('principal.php');</script>";
+window.location.replace('principal2.php');</script>";
 }
 
 
@@ -126,13 +126,13 @@ $valor8=serialize($flag8);
 
  if($flag==null){
         echo "<script>alert('No se encontraron consolidados')
-window.location.replace('principal.php');</script>";
+window.location.replace('principal2.php');</script>";
        return;
         }
 
 }else{
 echo "<script>alert('La consulta a la base de datos es incorrecta')
-window.location.replace('principal.php');</script>";
+window.location.replace('principal2.php');</script>";
 }
 
 

@@ -269,8 +269,8 @@ main.principal-administrador h1::after{
 
 form.administrador{
     display: grid;
-    background-color: #d8d8d8; 
-    row-gap: 3rem;  
+    background-color: #d8d8d8;
+    row-gap: 3rem;
     padding: 2rem 3rem;
 }
 
@@ -387,4 +387,340 @@ form.administrador input:not([type='submit']){
         grid-template-columns: repeat(3,1fr);
         gap: 1rem;
     }
+}
+
+
+/*Captura consolidador
+  Adjuntos al consolidado
+*/
+.main-captura-pro-mont {
+  height: 255vh;
+  width: 1010px;
+  margin: 0 auto;
+
+}
+.contenedor-gris-procedimiento-consolidado {
+  height: 250vh;
+  width: 1010px;
+  display: grid;
+  grid-gap: 10px;
+  background-color: #d8d8d8;
+  grid-template-areas:
+  "contenedor-captura-procedimiento"
+  "contenedor-adjunto-consolidado"
+  "tabla-captura-cantidad";
+  grid-template-rows: 240px 750px;
+
+}
+.contenedor-gris-procedimiento-consolidado .contenedor-captura-procedimiento{
+  grid-area: contenedor-captura-procedimiento;
+}
+.contenedor-gris-procedimiento-consolidado .contenedor-adjunto-consolidado{
+ grid-area: contenedor-adjunto-consolidado;
+}
+.contenedor-gris-procedimiento-consolidado .tabla-captura-cantidad{
+  grid-area: tabla-captura-cantidad;
+}
+.contenedor-captura-procedimiento {
+  display: grid;
+  grid-template-areas:
+    "captura-procedimiento-consolidado captura-procedimiento-consolidado"
+    "consolidador-captura proveedor-captura"
+    "numero-lisitacion-captura monto-total-captura"
+    "btn-captura-procedimiento btn-captura-procedimiento";
+  grid-template-columns: repeat(2 1fr);
+  grid-template-rows: 150px 100px 120px;
+}
+.main-captura-pro-mont h1::after {
+  content: "";
+  display: block;
+  width: 10rem;
+  height: 0.2rem;
+  background-color: #0c9;
+}
+
+/*Nombramos los elementos*/
+.contenedor-captura-procedimiento h1 {
+  grid-area: captura-procedimiento-consolidado;
+  text-align: center;
+}
+.contenedor-captura-procedimiento .consolidador-captura {
+  grid-area: consolidador-captura;
+}
+.contenedor-captura-procedimiento .proveedor-captura{
+  grid-area: proveedor-captura;
+}
+.contenedor-captura-procedimiento .numero-lisitacion-captura{
+  grid-area: numero-lisitacion-captura;
+}
+.contenedor-captura-procedimiento .monto-total-captura{
+  grid-area: monto-total-captura;
+}
+.contenedor-captura-procedimiento .btn-captura-procedimiento {
+  grid-area: btn-captura-procedimiento;
+}
+
+
+.contenedor-gris-procedimiento-consolidado input {
+  width: 450px;
+  height: 40px;
+  background-color: #fff;
+  color: #000;
+  border: 0.2rem solid rgba(0, 0, 0, 0.15);
+  padding: 1rem 0.2rem;
+  border-radius: 1rem;
+}
+
+.contenedor-gris-procedimiento-consolidado select
+{
+  width: 450px;
+  height: 40px;
+  background-color: #fff;
+  color: #000;
+  border: 0.2rem solid rgba(0, 0, 0, 0.15);
+  border-radius: 1rem;
+}
+
+.consolidador-captura,
+.proveedor-captura,
+.numero-lisitacion-captura,
+.monto-total-captura  {
+  padding-left: 25px;
+}
+
+/*Adjuntos al consolidado*/
+
+.contenedor-adjunto-consolidado {
+  display: grid;
+  padding-top: 200px;
+  grid-template-areas:
+    "proveedor-adjudicado proveedor-adjudicado"
+    "adjunto-nombre adjunto-unidad-requirente"
+    "adjunto_cantidad-maxima adjunto-cantidad-minima"
+    "adjunto-monto ."
+    "btn-proveedor btn-proveedor";
+  grid-template-columns: repeat(2 1fr);
+  grid-template-rows: 150px 100px 110px 120px 50px;
+}
+/*Nombramos los elementos*/
+.contenedor-adjunto-consolidado h1 {
+  grid-area: proveedor-adjudicado;
+  text-align: center;
+}
+.contenedor-adjunto-consolidado .adjunto-nombre {
+  grid-area: adjunto-nombre;
+}
+.contenedor-adjunto-consolidado.adjunto-unidad-requirente {
+  grid-area: adjunto-unidad-requirente;
+}
+.contenedor-adjunto-consolidado .adjunto-monto{
+  grid-area: adjunto-monto;
+}
+.contenedor-adjunto-consolidado .adjunto_cantidad-maxima{
+  grid-area: adjunto_cantidad-maxima;
+}
+.contenedor-adjunto-consolidado .adjunto-cantidad-minima{
+  grid-area: adjunto-cantidad-minima;
+}
+.contenedor-proveedor-adjudicado .btn-proveedor {
+  grid-area: btn-proveedor;
+}
+
+.adjunto-nombre,
+.adjunto-unidad-requirente,
+.adjunto-monto,
+.adjunto_cantidad-maxima,
+.adjunto-cantidad-minima{
+  padding-left: 25px;
+}
+
+/*Tabla captura cantidad*/
+.tabla-captura-cantidad{
+  display: grid;
+  grid-template-areas:
+   "titulotabla"
+   "tabla-de-captura"
+  ;
+  grid-template-rows: 150px 0px;
+}
+.tabla-captura-cantidad h1 {
+  grid-area: titulotabla;
+  text-align: center;
+}
+.tabla-captura-cantidad .tabla-de-captura{
+  grid-area: tabla-de-captura;
+
+}
+.tabla-captura-cantidad{
+  overflow-x: auto;
+
+}
+.tabla-de-captura{
+  background-color: #fff;
+  min-width: 900px;
+  font-size: .85em;
+  border: 1px solid rgba(181, 213, 144, 0.5);
+  color: #666;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+.tabla-de-captura td, .tabla-de-captura th {
+  padding: .8em;
+  border-bottom: 1px solid rgba(181, 213, 144, 0.5);
+}
+.tabla-de-captura th {
+  background: #1A8CFF;
+  color: #fff;
+  font-weight: normal;
+  text-align: right;
+ }
+.tabla-de-captura td {
+  text-align: right; }
+.tabla-de-captura td:before {
+  content: "";
+  color: #1A8CFF;
+}
+.tabla-de-captura td:after {
+  content: ".00";
+}
+.tabla-de-captura td:first-of-type {
+  text-align: left;
+}
+
+.tabla-de-captura tr:hover {
+  background: rgba(181, 213, 144, 0.2);
+}
+.tabla-de-captura tr td:nth-child(2n) {
+  background: rgba(181, 213, 144, 0.2);
+}
+
+.tabla-de-captura td:first-child {
+  position: absolute;
+  background: #fff;
+  width: 8em;
+}
+.tabla-de-captura th:first-child {
+  width: 8em;
+}
+.tabla-de-captura tr:hover td:first-child {
+  background: #1A8CFF;
+  color: #fff;
+}
+.tabla-de-captura tr:nth-child(2) td:first-child {
+  box-shadow: 0 -2.7em 0 -6px #1A8CFF, -6px -2.7em 0 -6px #1A8CFF;
+}
+
+/*Captura Procedimiento
+  Proveedor Adjudicado para ipad
+*/
+@media screen and (max-width: 768px) {
+  .main-captura-pro-mont {
+    height: 160vh;
+    width: 650px;
+    margin: 0 auto;
+  }
+  .contenedor-gris-procedimiento-consolidado {
+    height: 155vh;
+    width: 650px;
+    display: grid;
+    grid-template-rows: 240px 550px;
+
+  }
+
+  .contenedor-captura-procedimiento{
+    grid-template-rows: 200px 100px 120px;
+  }
+  .contenedor-adjunto-consolidado{
+    grid-template-rows: 120px 100px 130px 120px;
+  }
+  .contenedor-gris-procedimiento-consolidado input {
+    width: 280px;
+    height: 40px;
+  }
+
+  .contenedor-gris-procedimiento-consolidado select{
+    width: 280px;
+    height: 40px;
+  }
+  .tabla-de-captura{
+    margin: 0;
+    border:2px solid red;
+    background-color: #fff;
+    width: 600px;
+    min-height: calc(100vh - 100px -100%);
+
+  }
+
+  .tabla-captura-cantidad{
+    padding-top: 150px;
+    grid-template-columns: 10px;
+    padding-left: 25px;
+  }
+
+
+}
+
+/*Captura Procedimiento
+  Proveedor Adjudicado para celular
+*/
+
+@media screen and (max-width: 375px) {
+  .main-captura-pro-mont {
+    height: 320vh;
+    width: 650px;
+    margin: 0 auto;
+  }
+  .contenedor-gris-procedimiento-consolidado {
+    height: 315vh;
+    width: 370px;
+    display: grid;
+    grid-gap: 10px;
+    background-color: #d8d8d8;
+    grid-template-rows: 490px 200px;
+  }
+  .contenedor-captura-procedimiento {
+    display: grid;
+    grid-template-areas:
+      "captura-procedimiento-consolidado"
+      "consolidador-captura"
+      "proveedor-captura"
+      "numero-lisitacion-captura"
+      "monto-total-captura"
+      "btn-captura-procedimiento";
+    grid-template-rows: 200px repeat(3, 100px) 110px;
+  }
+  .btn-captura-procedimiento,
+  .btn-proveedor {
+    padding-left: 20px;
+  }
+
+.contenedor-adjunto-consolidado {
+  display: grid;
+  grid-template-areas:
+    "proveedor-adjudicado"
+    "adjunto-nombre"
+    "adjunto-unidad-requirente"
+    "adjunto_cantidad-maxima"
+    "adjunto-cantidad-minima"
+    "adjunto-monto"
+    "btn-proveedor";
+  grid-template-rows: 200px 100px 100px 130px 100px 100px;
+}
+
+.tabla-de-captura{
+  margin: 0;
+  border:2px solid red;
+  background-color: #fff;
+  width: 370px;
+  min-height: calc(100vh - 100px -100%);
+}
+
+.tabla-captura-cantidad{
+  display: grid;
+  padding-top: 790px;
+  padding-left: 0px;
+}
+
 }

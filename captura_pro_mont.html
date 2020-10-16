@@ -150,82 +150,11 @@
   <!--------------------------------------------->
 
 
-<script   lenguaje="javascript" type="text/javascript">
-function ingresar(){
-var nombre= (document.getElementById("noo").value);
-var rfc= (document.getElementById("rfc").value);
+<script   lenguaje="javascript" type="text/javascript" src="js/funciones_proveedor.js">
 
-if(rfc.length==0||rfc.lenth>13){
-
-document.getElementById("rfc").focus();
- $(function(){
-                $('#my-modal2').modal('show')
-                });
-
-return;
-}
-if(!(/^[0-9A-Za-z]*$/i.test(rfc))){
-document.getElementById("rfc").focus();
- $(function(){
-                $('#my-modal2').modal('show')
-                });
-
-return;
-
-}
-
-if(nombre.length==0||nombre.lenth>45){
-document.getElementById("noo").focus();
- $(function(){
-                $('#my-modal2').modal('show')
-                });
-
-return;
-}
-if(!(/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ.\s]*$/i.test(nombre))){
-
-document.getElementById("noo").focus();
- $(function(){
-                $('#my-modal2').modal('show')
-                });
-
-return;
-
-}
-$.post('proveedor.php',{
-"noo":nombre,
-"rfc":rfc
-},function(data){
-
-$('#my-modal').modal('show')
-
-});
-}
 </script>
 
 
-  <div id="dcapturas">
-    <div id="dcapturas1">
-    <div id="tc">
-      <h2> CAPTURA PROCEDIMIENTO CONSOLIDADO </h2>
-    </div>
-    <div id ="tca">
-      <form   id="con_mon">
-        <div class="dprocediminetocapturapro">
-          <label id="ccp" > Procedimiento: </label>
-          <input class="form-control" id="pro" placeholder="Procedimiento" name="procedimiento" required pattern="[A-Za-zZñÑáéíóúÁÉÍÓÚ\.\s]*" type="text">
-        </div>
-        <div class="dprocediminetomontoto">
-          <label id="ccp" > Monto Total:   </label>
-          <input class="form-control" id="mont" placeholder="Monto Total" min="0" name="monto_total" type="number" step="0.1" required >
-        </div>
-        <div class="dbtgcpc">
-          <button  id="btg" onclick="" class="btn btn-primary" type="button"> Guardar </button>
-          <button type="button" id="bregresar" class="btn btn-primary"  onclick="location.href='principal2.php'" name="bregresar"> Regresar </button>
-        </div>
-       </form>
-      </div>
-</div>
 
 <div id="dcapturas1">
   <div id="tcm">

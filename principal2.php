@@ -78,7 +78,7 @@ window.location.replace('index');</script>";
                     <li><i class="fas fa-plus-circle"></i> <a href="requirente_compradora_captura.html">Unidad
                             Compradora</a></li>
                     <li><i class="fas fa-plus-circle"></i><a href="admin.html"> Administrador de Contrato</a></li>
-                    <li><i class="fas fa-plus-circle"></i> Consolidados</li>
+                    <li><i class="fas fa-plus-circle"></i> <a href="captura_pro_mont2.html">Consolidado</a></li>
                     <li><i class="fas fa-plus-circle"></i> <a href="captura_pro_mont.html">Proveedor Adjudicado</a></li>
                 </ul>
                 <p></p>

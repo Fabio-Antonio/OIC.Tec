@@ -309,6 +309,126 @@ form.administrador input:not([type='submit']){
     width: 90%;
 }
 
+/*Alta*/
+
+.main-alta {
+  height: 500px;
+  width: 100vh;
+  margin: 0 auto;
+}
+
+.contenedor-gris {
+  height: 480px;
+  width: 675px;
+  display: grid;
+  grid-gap: 10px;
+  background-color: #d8d8d8;
+  grid-template-areas:
+    "altausuario altausuario"
+    "usuario contraseña"
+    "radioalta radioalta"
+    "btnalta btnalta";
+  grid-template-columns: repeat(2 1fr);
+  grid-template-rows: 100px 100px 180px 50px;
+  min-height: calc(100vh - 100px -100%);
+  min-width: calc(100vh - 100px -100%);
+}
+
+/*Nombramos los elementos*/
+.contenedor-gris h1 {
+  grid-area: altausuario;
+  text-align: center;
+  height: 100px;
+}
+.main-alta h1::after {
+  content: "";
+  display: block;
+  width: 10rem;
+  height: 0.2rem;
+  background-color: #0c9;
+}
+.usuario-alta {
+  grid-area: usuario;
+}
+.contraseña-alta {
+  grid-area: contraseña;
+}
+.radio-alta {
+  grid-area: radioalta;
+  padding-left: 220px;
+}
+.btn-alta {
+  grid-area: btnalta;
+}
+
+.usuario-alta,
+.contraseña-alta {
+  padding: 25px;
+  height: 100px;
+}
+
+.usuario-alta input,
+.contraseña-alta input {
+  width: 280px;
+  height: 40px;
+  background-color: #fff;
+  color: #000;
+  border: 0.2rem solid rgba(0, 0, 0, 0.15);
+  padding: 1rem 0.2rem;
+  border-radius: 1rem;
+}
+
+input:hover {
+  -webkit-box-shadow: 1px 1px 3px 1.5px rgba(71, 173, 92, 1);
+  -moz-box-shadow: 1px 1px 3px 1.5px rgba(71, 173, 92, 1);
+  box-shadow: 1px 1px 3px 1.5px rgba(71, 173, 92, 1);
+}
+select:hover{
+  -webkit-box-shadow: 1px 1px 3px 1.5px rgba(71, 173, 92, 1);
+  -moz-box-shadow: 1px 1px 3px 1.5px rgba(71, 173, 92, 1);
+  box-shadow: 1px 1px 3px 1.5px rgba(71, 173, 92, 1);
+}
+
+/*Alta para ipad*/
+@media screen and (max-width: 768px) {
+  .main-alta {
+    height: 500px;
+    width: 100vh;
+    padding-left: 45px;
+  }
+}
+/*Alta para celular*/
+@media screen and (max-width: 375px) {
+  .main-alta {
+    height: 550px;
+    width: 100vh;
+    margin: 0 auto;
+    padding-bottom: 580px;
+    padding-left: 0px;
+  }
+  .contenedor-gris {
+    height: 550px;
+    width: 375px;
+    display: grid;
+    grid-gap: 10px;
+    background-color: #d8d8d8;
+    grid-template-areas:
+      "altausuario"
+      "usuario "
+      "contraseña"
+      "radioalta"
+      "btnalta";
+    grid-template-rows: 80px 80px 120px 140px;
+  }
+  .radio-alta {
+    padding-left: 20px;
+  }
+  .btn-alta {
+    padding-left: 30px;
+  }
+}
+
+
 /*Pagina Principal*/
 /*Contenedor de titulos*/
 

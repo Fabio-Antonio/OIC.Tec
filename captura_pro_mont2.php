@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
-
+<link href="https://cdn.datos.gob.mx/assets/css/main.css" rel="stylesheet">
+<link href="https://cdn.datos.gob.mx/bower_components/polymer/polymer.html" rel="import">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alta</title>
+    <title>Consolidado</title>
+    <link rel="shortcut icon" href="https://cdn.datos.gob.mx/assets/img/favicon.ico">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/estile.css">
+
 </head>
 
 <body>
@@ -33,7 +37,7 @@
             <button id="ce" class="w3-bar-item w3-button w3-large" onclick="w3_close()">Cerrar &times;</button>
             <img src="img/lf.png" alt="sfp" width="145" height="60">
             <a class="w3-bar-item w3-button"></a>
-            <a href="#" class="w3-bar-item w3-button">Inicio</a>
+            <a href="principal2.php" class="w3-bar-item w3-button">Inicio</a>
             <a href="alta.html" class="w3-bar-item w3-button">Usuarios</a>
             <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal2">Contacto</a>
             <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal3">Nueva Partida</a>
@@ -54,25 +58,43 @@
                 <h1> CAPTURA DEL CONSOLIDADOR </h1>
                 <div class="consolidador-captura">
                     <label> Consolidador: </label>
-                    <select name="" id="">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
+                    <select name="consolidador" id="consolidador">
+                        <?php
+                                $flag=unserialize($_POST["flag"]);
+                                foreach ($flag as $key => $val) {
+                                ?>
+
+                        <option value="<?php print($val['id_requirente']); ?>">
+                            <?php print($val['unidad']); ?></option>
+                        <?php
+                                }
+
+                                ?>
                     </select>
                 </div>
                 <div class="proveedor-captura">
                     <label> Proveedor: </label>
-                    <select name="" id="">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
+                    <select name="proveedor" id="proveedor">
+                        <?php
+                    $flag=unserialize($_POST["flag2"]);
+                                foreach ($flag as $key => $val) {
+                                ?>
+
+                        <option value="<?php print($val['id_proveedor']); ?>">
+                            <?php print($val['nombre']); ?></option>
+                        <?php
+                                }
+
+                                ?>
                     </select>
                 </div>
                 <div class="numero-lisitacion-captura">
                     <label for="">Número De Lisitación:</label>
-                    <input type="text" name="" id="">
+                    <input type="text" name="lisitacion" id="licitacion">
                 </div>
                 <div class="monto-total-captura">
                     <label for="">Monto Total:</label>
-                    <input type="text" name="" id="">
+                    <input type="text" name="monto" id="monto">
                 </div>
                 <div class="botones btn-captura-procedimiento">
                     <button id="btg" onclick="" class="btn btn-verde" type="button"> Guardar </button>
@@ -85,11 +107,24 @@
                 <h1> ADJUNTOS AL CONSOLIDADO </h1>
                 <div class="adjunto-nombre">
                     <label> Nombre Del Agregado: </label>
-                    <select name="" id=""></select>
+
+                    </select>
                 </div>
                 <div class="adjunto-unidad-requirente">
                     <label> Unidad Requirente: </label>
-                    <select name="" id=""></select>
+                    <select name="consolidado" id="consolidado">
+                        <?php
+                                $flag=unserialize($_POST["flag"]);
+                                foreach ($flag as $key => $val) {
+                                ?>
+
+                        <option value="<?php print($val['id_requirente']); ?>">
+                            <?php print($val['unidad']); ?></option>
+                        <?php
+                                }
+
+                                ?>
+                    </select>
                 </div>
                 <div class="adjunto-monto">
                     <label for="">Monto:</label>
@@ -120,46 +155,6 @@
                         <th>Número De Lisitación</th>
                         <th>Monto Total</th>
                     </tr>
-                    <tr>
-                        <td>hola</td>
-                        <td>gola</td>
-                        <td>sfffd</td>
-                        <td>dffddf</td>
-                    </tr>
-                    <tr>
-                        <td>hola</td>
-                        <td>gola</td>
-                        <td>sfffd</td>
-                        <td>dffddf</td>
-                    </tr>
-                    <tr>
-                        <td>hola</td>
-                        <td>gola</td>
-                        <td>sfffd</td>
-                        <td>dffddf</td>
-                    </tr>
-                    <tr>
-                        <td>hola</td>
-                        <td>gola</td>
-                        <td>sfffd</td>
-                        <td>dffddf</td>
-
-                    </tr>
-                    <tr>
-                        <td>hola</td>
-                        <td>gola</td>
-                        <td>sfffd</td>
-                        <td>dffddf</td>
-
-                    </tr>
-                    <tr>
-                        <td>hola</td>
-                        <td>gola</td>
-                        <td>sfffd</td>
-                        <td>dffddf</td>
-
-                    </tr>
-
                 </table>
             </div>
         </div>
@@ -210,21 +205,64 @@
         </div>
     </footer>
 
+    <!-- Modals -->
+
+    <div class="modal fade" role="dialog" id="my-modal" aria-labelledby="modal-title">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color:#27C44D;">
+                    <h3 class="modal-title" id="modal-title">B.E.S.A</h3>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Los datos se han ingresado correctamente!!
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" data-dismiss="modal">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" role="dialog" id="my-modal2" aria-labelledby="modal-title">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color:#D0021B;">
+                    <h3 class="modal-title" id="modal-title">B.E.S.A</h3>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Los datos no son compatibles!!
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" data-dismiss="modal">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
 
 
 
 
     <script src="https://kit.fontawesome.com/263207fda3.js" crossorigin="anonymous"></script>
     <script>
-        function w3_open() {
-            document.getElementById("mySidebar").style.display = "block";
-            document.getElementById("myOverlay").style.display = "block";
-        }
+    function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("myOverlay").style.display = "block";
+    }
 
-        function w3_close() {
-            document.getElementById("mySidebar").style.display = "none";
-            document.getElementById("myOverlay").style.display = "none";
-        }
+    function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("myOverlay").style.display = "none";
+    }
     </script>
 
 </body>

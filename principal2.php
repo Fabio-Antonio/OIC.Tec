@@ -78,7 +78,7 @@ window.location.replace('index');</script>";
                     <li><i class="fas fa-plus-circle"></i> <a href="requirente_compradora_captura.html">Unidad
                             Compradora</a></li>
                     <li><i class="fas fa-plus-circle"></i><a href="admin.html"> Administrador de Contrato</a></li>
-                    <li><i class="fas fa-plus-circle"></i> <a href="captura_pro_mont2.html">Consolidado</a></li>
+                    <li><i class="fas fa-plus-circle"></i> <a href="consulta_requirente.php">Consolidado</a></li>
                     <li><i class="fas fa-plus-circle"></i> <a href="captura_pro_mont.html">Proveedor Adjudicado</a></li>
                 </ul>
                 <p></p>
@@ -125,7 +125,7 @@ window.location.replace('index');</script>";
                     <li><i class="fas fa-plus-circle"></i> <a href="consulta_vigencia.php">Fin VIgencia</a></li>
                     <li><i class="fas fa-plus-circle"></i> Consultas por Fecha de Adjudicación</li>
                     <li><i class="fas fa-plus-circle"></i> Fechas Entregables</li>
-                    <li><i class="fas fa-plus-circle"></i> Fecha de FOrmalización</li>
+                    <li><i class="fas fa-plus-circle"></i> Fecha de Formalización</li>
                 </ul>
                 <p></p>
             </div>

@@ -115,26 +115,6 @@ window.location.replace('principal2.php');</script>";
 
 
 
-$query=$conn->prepare("SELECT id_consolidado,procedimiento FROM consolidado");
-
- $query->execute();
-if($query){
-while($row=$query->fetch()){
-$flag8[]=$row;
-}
-$valor8=serialize($flag8);
-
- if($flag==null){
-        echo "<script>alert('No se encontraron consolidados')
-window.location.replace('principal2.php');</script>";
-       return;
-        }
-
-}else{
-echo "<script>alert('La consulta a la base de datos es incorrecta')
-window.location.replace('principal2.php');</script>";
-}
-
 
 
 
@@ -148,14 +128,14 @@ curl_setopt($ch, CURLOPT_URL,$url);
 // indicamos el tipo de petición: POST
 curl_setopt($ch, CURLOPT_POST, TRUE);
 // definimos cada uno de los parámetros
-curl_setopt($ch, CURLOPT_POSTFIELDS, "flag=$valor&flag2=$valor2&flag3=$valor3&flag4=$valor4&flag6=$valor6&flag8=$valor8&partida=$partida_presupuestal");
-/*curl_setopt($ch, CURLOPT_HEADER, 0);
+curl_setopt($ch, CURLOPT_POSTFIELDS, "flag=$valor&flag2=$valor2&flag3=$valor3&flag4=$valor4&flag6=$valor6&partida=$partida_presupuestal");
+curl_setopt($ch, CURLOPT_HEADER, 0);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 0);
     curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
     curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);
 curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.1.2) Gecko/20090729 Firefox/3.5.2 GTB5');
- */
+
 
  curl_exec ($ch);
  $error= curl_error($ch);

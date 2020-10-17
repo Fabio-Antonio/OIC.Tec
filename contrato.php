@@ -168,7 +168,7 @@
             var selObj3 = document.getElementById('seunidadrequirentecontrato');
             var selObj4 = document.getElementById('seadministradorcontrato');
             var selObj6 = document.getElementById('seproveedoradjudicadocontrato');
-            var selObj8 = document.getElementById('seconsolidadocontrato');
+            //var selObj8 = document.getElementById('seconsolidadocontrato');
 
             if (selObj.length == 0) {
                 $(function() {
@@ -212,7 +212,7 @@
                 document.getElementById("seproveedoradjudicadocontrato").focus();
                 return;
             }
-            if (selObj8.length == 0) {
+            /*if (selObj8.length == 0) {
                 $(function() {
                     $('#my-modal2').modal('show')
                 });
@@ -220,7 +220,7 @@
 
                 document.getElementById("seconsolidadocontrato").focus();
                 return;
-            }
+            }*/
             var min = 0;
             var numero_contrato = (document.getElementById('innumerocontratoc').value);
             var procedimiento_compranet = (document.getElementById('inprocedimientocompranetc').value);
@@ -246,7 +246,7 @@
             var selIndex3 = selObj3.options[selObj3.selectedIndex].value;
             var selIndex4 = selObj4.options[selObj4.selectedIndex].value;
             var selIndex6 = selObj6.options[selObj6.selectedIndex].value;
-            var selIndex8 = selObj8.options[selObj8.selectedIndex].value;
+            //var selIndex8 = selObj8.options[selObj8.selectedIndex].value;
             if (numero_contrato.length == 0 || !(/^[A-Za-z0-9]+$/.test(numero_contrato))) {
                 $(function() {
                     $('#my-modal2').modal('show')
@@ -281,7 +281,7 @@
                 document.getElementById("inconveniointernoc").focus();
                 return;
             }
-            if (objeto_contratacion.length == 0 || !(/^[A-Za-z0-9\s]*$/.test(objeto_contratacion))) {
+            if (objeto_contratacion.length == 0 || !(/^[A-Za-z0-9ñÑáéíóúÁÉÍÓÚ\s]*$/.test(objeto_contratacion))) {
                 $(function() {
                     $('#my-modal2').modal('show')
                 });
@@ -289,7 +289,7 @@
                 document.getElementById("inobjetocontratacionc").focus();
                 return;
             }
-            if (documentacion_descripcion.length == 0 || !(/^[A-Za-z0-9\s]*$/.test(documentacion_descripcion))) {
+            if (documentacion_descripcion.length == 0 || !(/^[A-Za-z0-9ñÑáéíóúÁÉÍÓÚ\s]*$/.test(documentacion_descripcion))) {
                 $(function() {
                     $('#my-modal2').modal('show')
                 });
@@ -337,7 +337,7 @@
                 "unidad_requirente": selIndex3,
                 "nombre": selIndex4,
                 "proveedor": selIndex6,
-                "consolidado": selIndex8,
+                //"consolidado": selIndex8,
                 "partida": partida,
                 "numero_contrato": numero_contrato,
                 "procedimiento_compranet": procedimiento_compranet,

@@ -157,207 +157,6 @@
 
 
 
-
-
-        <script lenguage="javascript" type="text/javascript">
-        function mostrarText() {
-            <?php $partida=$_POST['partida'];?>
-            var partida = Number('<?=$partida?>');
-            var selObj = document.getElementById('seunidadcompradoracontrato');
-            var selObj2 = document.getElementById('secontrarecepcion');
-            var selObj3 = document.getElementById('seunidadrequirentecontrato');
-            var selObj4 = document.getElementById('seadministradorcontrato');
-            var selObj6 = document.getElementById('seproveedoradjudicadocontrato');
-            //var selObj8 = document.getElementById('seconsolidadocontrato');
-
-            if (selObj.length == 0) {
-                $(function() {
-                    $('#my-modal2').modal('show')
-                });
-
-                document.getElementById("seunidadcompradoracontrato").focus();
-                return;
-            }
-            if (selObj2.length == 0) {
-                $(function() {
-                    $('#my-modal2').modal('show')
-                });
-
-                document.getElementById("secontrarecepcion").focus();
-                return;
-            }
-            if (selObj3.length == 0) {
-                $(function() {
-                    $('#my-modal2').modal('show')
-                });
-
-
-                document.getElementById("seunidadrequirentecontrato").focus();
-                return;
-            }
-            if (selObj4.length == 0) {
-                $(function() {
-                    $('#my-modal2').modal('show')
-                });
-
-                document.getElementById("seadministradorcontrato").focus();
-                return;
-            }
-
-            if (selObj6.length == 0) {
-                $(function() {
-                    $('#my-modal2').modal('show')
-                });
-
-                document.getElementById("seproveedoradjudicadocontrato").focus();
-                return;
-            }
-            /*if (selObj8.length == 0) {
-                $(function() {
-                    $('#my-modal2').modal('show')
-                });
-
-
-                document.getElementById("seconsolidadocontrato").focus();
-                return;
-            }*/
-            var min = 0;
-            var numero_contrato = (document.getElementById('innumerocontratoc').value);
-            var procedimiento_compranet = (document.getElementById('inprocedimientocompranetc').value);
-            var contrato_compranet = (document.getElementById('incontratocompranetc').value);
-            var convenio_interno = (document.getElementById('inconveniointernoc').value);
-            var objeto_contratacion = (document.getElementById('inobjetocontratacionc').value);
-            var max = (document.getElementById('montomaxi').value);
-
-            var monto_maximo = Number(max.replace(",", ""));
-            var monto_minimo = min;
-            if (document.getElementById("incontratoabiertoc").checked == true) {
-                var contrato_abierto = (document.getElementById('incontratoabiertoc').value = 1);
-                min = (document.getElementById('montomini').value);
-                var monto_minimo = Number(min.replace(",", ""));
-            } else {
-                var contrato_abierto = (document.getElementById('incontratoabiertoc').value = 0);
-
-                var monto_minimo = min;
-            }
-            var documentacion_descripcion = (document.getElementById('indocumentodescripcionc').value);
-            var selIndex = selObj.options[selObj.selectedIndex].value;
-            var selIndex2 = selObj2.options[selObj2.selectedIndex].value;
-            var selIndex3 = selObj3.options[selObj3.selectedIndex].value;
-            var selIndex4 = selObj4.options[selObj4.selectedIndex].value;
-            var selIndex6 = selObj6.options[selObj6.selectedIndex].value;
-            //var selIndex8 = selObj8.options[selObj8.selectedIndex].value;
-            if (numero_contrato.length == 0 || !(/^[A-Za-z0-9]+$/.test(numero_contrato))) {
-                $(function() {
-                    $('#my-modal2').modal('show')
-                });
-
-                document.getElementById("innumerocontratoc").focus();
-                return;
-            }
-            if (procedimiento_compranet.length == 0 || !(/^[A-Za-z0-9\s]*$/.test(procedimiento_compranet))) {
-                $(function() {
-                    $('#my-modal2').modal('show')
-                });
-
-                document.getElementById("inprocedimientocompranetc").focus();
-                return;
-            }
-
-            if (contrato_compranet.length == 0 || !(/^[0-9]+$/.test(contrato_compranet)) || contrato_compranet.length >
-                7 || contrato_compranet < 0 || contrato_compranet.length < 7) {
-                $(function() {
-                    $('#my-modal2').modal('show')
-                });
-
-                document.getElementById("incontratocompranetc").focus();
-                return;
-            }
-            if (convenio_interno.length == 0 || !(/^[A-Za-z0-9\s]*$/.test(convenio_interno))) {
-                $(function() {
-                    $('#my-modal2').modal('show')
-                });
-
-                document.getElementById("inconveniointernoc").focus();
-                return;
-            }
-            if (objeto_contratacion.length == 0 || !(/^[A-Za-z0-9ñÑáéíóúÁÉÍÓÚ\s]*$/.test(objeto_contratacion))) {
-                $(function() {
-                    $('#my-modal2').modal('show')
-                });
-
-                document.getElementById("inobjetocontratacionc").focus();
-                return;
-            }
-            if (documentacion_descripcion.length == 0 || !(/^[A-Za-z0-9ñÑáéíóúÁÉÍÓÚ\s]*$/.test(documentacion_descripcion))) {
-                $(function() {
-                    $('#my-modal2').modal('show')
-                });
-
-                document.getElementById("indocumentodescripcionc").focus();
-                return;
-            }
-
-            if (monto_maximo.length == 0 || !(/^[0-9,.]+$/.test(monto_maximo)) || monto_maximo < 0) {
-                $(function() {
-                    $('#my-modal2').modal('show')
-                });
-
-                document.getElementById("montomaxi").focus();
-                return;
-            }
-
-            if (monto_minimo.length == 0 || !(/^[0-9,.]+$/.test(monto_minimo)) || monto_minimo < 0) {
-                $(function() {
-                    $('#my-modal2').modal('show')
-                });
-
-                document.getElementById("montomini").focus();
-                return;
-            }
-
-            if (monto_minimo > monto_maximo) {
-                $(function() {
-                    $('#my-modal2').modal('show')
-                });
-
-                document.getElementById("montomini").focus();
-                return;
-
-            }
-            alert(selIndex2);
-            /*window.location="contrato_in.php?nombre_unidad_compradora="+selIndex+"&procedimientos="+selIndex2+"&unidad_requirente="+selIndex3+"&nombre="+selIndex4+
-                    "&proveedor="+selIndex6+"&procedimiento="+selIndex8+"&numero_contrato="+numero_contrato+
-            "&procedimiento_compranet="+procedimiento_compranet+"&contrato_compranet="+contrato_compranet+"&convenio_interno="+convenio_interno+"&objeto_contratacion="
-            +objeto_contratacion+"&documentacion_descripcion="+documentacion_descripcion+"&monto_maximo="+monto_maximo+"&monto_minimo="+monto_minimo;*/
-
-            $.post('contrato_in.php', {
-                "nombre_unidad_compradora": selIndex,
-                "procedimientos": selIndex2,
-                "unidad_requirente": selIndex3,
-                "nombre": selIndex4,
-                "proveedor": selIndex6,
-                //"consolidado": selIndex8,
-                "partida": partida,
-                "numero_contrato": numero_contrato,
-                "procedimiento_compranet": procedimiento_compranet,
-                "contrato_compranet": contrato_compranet,
-                "convenio_interno": convenio_interno,
-                "objeto_contratacion": objeto_contratacion,
-                "documentacion_descripcion": documentacion_descripcion,
-                "contrato_abierto": contrato_abierto,
-                "monto_maximo": monto_maximo,
-                "monto_minimo": monto_minimo
-
-            }, function(data) {
-                $('#my-modal').modal('show')
-            });
-
-            $('#btg').attr("disabled", true);
-        }
-        </script>
-
-
         <div id="contec">
             <div class="container1">
                 <div class="row">
@@ -547,46 +346,6 @@
         </div>
 
 
-
-        <script>
-        $("#montomaxi").on({
-            "focus": function(event) {
-                $(event.target).select();
-            },
-            "keyup": function(event) {
-                $(event.target).val(function(index, value) {
-                    return value.replace(/\D/g, "")
-                        .replace(/([0-9])([0-9]{2})$/, '$1.$2')
-                        .replace(/\B(?=(\d{3})+(?!\d)\.?)/g, ",");
-                });
-            }
-        });
-        </script>
-
-        <script>
-        $("#montomini").on({
-            "focus": function(event) {
-                $(event.target).select();
-            },
-            "keyup": function(event) {
-                $(event.target).val(function(index, value) {
-                    return value.replace(/\D/g, "")
-                        .replace(/([0-9])([0-9]{2})$/, '$1.$2')
-                        .replace(/\B(?=(\d{3})+(?!\d)\.?)/g, ",");
-                });
-            }
-        });
-        </script>
-
-
-
-        <script>
-        $(':checkbox').click(function() {
-            $('input:text').attr('disabled', !this.checked)
-            document.querySelector('#ccp').innerText = 'Monto maximo';
-        });
-        </script>
-
         <footer>
 
             <div class="contenedor-todo-footer">
@@ -697,6 +456,205 @@
             </div>
 
         </footer>
+
+        <script  lenguage="javascript" type="text/javascript">
+       function mostrarText() {
+    <?php $partida=$_POST['partida'];?>
+    var partida = Number('<?=$partida?>');
+    var selObj = document.getElementById('seunidadcompradoracontrato');
+    var selObj2 = document.getElementById('secontrarecepcion');
+    var selObj3 = document.getElementById('seunidadrequirentecontrato');
+    var selObj4 = document.getElementById('seadministradorcontrato');
+    var selObj6 = document.getElementById('seproveedoradjudicadocontrato');
+    //var selObj8 = document.getElementById('seconsolidadocontrato');
+
+    if (selObj.length == 0) {
+        $(function() {
+            $('#my-modal2').modal('show')
+        });
+
+        document.getElementById("seunidadcompradoracontrato").focus();
+        return;
+    }
+    if (selObj2.length == 0) {
+        $(function() {
+            $('#my-modal2').modal('show')
+        });
+
+        document.getElementById("secontrarecepcion").focus();
+        return;
+    }
+    if (selObj3.length == 0) {
+        $(function() {
+            $('#my-modal2').modal('show')
+        });
+
+
+        document.getElementById("seunidadrequirentecontrato").focus();
+        return;
+    }
+    if (selObj4.length == 0) {
+        $(function() {
+            $('#my-modal2').modal('show')
+        });
+
+        document.getElementById("seadministradorcontrato").focus();
+        return;
+    }
+
+    if (selObj6.length == 0) {
+        $(function() {
+            $('#my-modal2').modal('show')
+        });
+
+        document.getElementById("seproveedoradjudicadocontrato").focus();
+        return;
+    }
+    /*if (selObj8.length == 0) {
+        $(function() {
+            $('#my-modal2').modal('show')
+        });
+
+
+        document.getElementById("seconsolidadocontrato").focus();
+        return;
+    }*/
+    var min = 0;
+    var numero_contrato = (document.getElementById('innumerocontratoc').value);
+    var procedimiento_compranet = (document.getElementById('inprocedimientocompranetc').value);
+    var contrato_compranet = (document.getElementById('incontratocompranetc').value);
+    var convenio_interno = (document.getElementById('inconveniointernoc').value);
+    var objeto_contratacion = (document.getElementById('inobjetocontratacionc').value);
+    var max = (document.getElementById('montomaxi').value);
+
+    var monto_maximo = Number(max.replace(",", ""));
+    var monto_minimo = min;
+    if (document.getElementById("incontratoabiertoc").checked == true) {
+        var contrato_abierto = (document.getElementById('incontratoabiertoc').value = 1);
+        min = (document.getElementById('montomini').value);
+        var monto_minimo = Number(min.replace(",", ""));
+    } else {
+        var contrato_abierto = (document.getElementById('incontratoabiertoc').value = 0);
+
+        var monto_minimo = min;
+    }
+    var documentacion_descripcion = (document.getElementById('indocumentodescripcionc').value);
+    var selIndex = selObj.options[selObj.selectedIndex].value;
+    var selIndex2 = selObj2.options[selObj2.selectedIndex].value;
+    var selIndex3 = selObj3.options[selObj3.selectedIndex].value;
+    var selIndex4 = selObj4.options[selObj4.selectedIndex].value;
+    var selIndex6 = selObj6.options[selObj6.selectedIndex].value;
+    //var selIndex8 = selObj8.options[selObj8.selectedIndex].value;
+    if (numero_contrato.length == 0 || !(/^[A-Za-z0-9]+$/.test(numero_contrato))) {
+        $(function() {
+            $('#my-modal2').modal('show')
+        });
+
+        document.getElementById("innumerocontratoc").focus();
+        return;
+    }
+    if (procedimiento_compranet.length == 0 || !(/^[A-Za-z0-9ñÑÁÉÍÓÚáéíóú\-\s]*$/.test(procedimiento_compranet))) {
+        $(function() {
+            $('#my-modal2').modal('show')
+        });
+
+        document.getElementById("inprocedimientocompranetc").focus();
+        return;
+    }
+
+    if (contrato_compranet.length == 0 || !(/^[0-9]+$/.test(contrato_compranet)) || contrato_compranet.length >
+        7 || contrato_compranet < 0 || contrato_compranet.length < 7) {
+        $(function() {
+            $('#my-modal2').modal('show')
+        });
+
+        document.getElementById("incontratocompranetc").focus();
+        return;
+    }
+    if (convenio_interno.length == 0 || !(/^[A-Za-z0-9ñÑáéíóúÁÉÍÓÚ.,\s]*$/.test(convenio_interno))) {
+        $(function() {
+            $('#my-modal2').modal('show')
+        });
+
+        document.getElementById("inconveniointernoc").focus();
+        return;
+    }
+    if (objeto_contratacion.length == 0 || !(/^[A-Za-z0-9ñÑáéíóúÁÉÍÓÚ.,\s]*$/.test(objeto_contratacion))) {
+        $(function() {
+            $('#my-modal2').modal('show')
+        });
+
+        document.getElementById("inobjetocontratacionc").focus();
+        return;
+    }
+    if (documentacion_descripcion.length == 0 || !(/^[A-Za-z0-9ñÑáéíóúÁÉÍÓÚ.,\s]*$/.test(documentacion_descripcion))) {
+        $(function() {
+            $('#my-modal2').modal('show')
+        });
+
+        document.getElementById("indocumentodescripcionc").focus();
+        return;
+    }
+
+    if (monto_maximo.length == 0 || !(/^[0-9,.]+$/.test(monto_maximo)) || monto_maximo < 0) {
+        $(function() {
+            $('#my-modal2').modal('show')
+        });
+
+        document.getElementById("montomaxi").focus();
+        return;
+    }
+
+    if (monto_minimo.length == 0 || !(/^[0-9,.]+$/.test(monto_minimo)) || monto_minimo < 0) {
+        $(function() {
+            $('#my-modal2').modal('show')
+        });
+
+        document.getElementById("montomini").focus();
+        return;
+    }
+
+    if (monto_minimo > monto_maximo) {
+        $(function() {
+            $('#my-modal2').modal('show')
+        });
+
+        document.getElementById("montomini").focus();
+        return;
+
+    }
+    /*window.location="contrato_in.php?nombre_unidad_compradora="+selIndex+"&procedimientos="+selIndex2+"&unidad_requirente="+selIndex3+"&nombre="+selIndex4+
+            "&proveedor="+selIndex6+"&procedimiento="+selIndex8+"&numero_contrato="+numero_contrato+
+    "&procedimiento_compranet="+procedimiento_compranet+"&contrato_compranet="+contrato_compranet+"&convenio_interno="+convenio_interno+"&objeto_contratacion="
+    +objeto_contratacion+"&documentacion_descripcion="+documentacion_descripcion+"&monto_maximo="+monto_maximo+"&monto_minimo="+monto_minimo;*/
+
+    $.post('contrato_in.php', {
+        "nombre_unidad_compradora": selIndex,
+        "procedimientos": selIndex2,
+        "unidad_requirente": selIndex3,
+        "nombre": selIndex4,
+        "proveedor": selIndex6,
+        //"consolidado": selIndex8,
+        "partida": partida,
+        "numero_contrato": numero_contrato,
+        "procedimiento_compranet": procedimiento_compranet,
+        "contrato_compranet": contrato_compranet,
+        "convenio_interno": convenio_interno,
+        "objeto_contratacion": objeto_contratacion,
+        "documentacion_descripcion": documentacion_descripcion,
+        "contrato_abierto": contrato_abierto,
+        "monto_maximo": monto_maximo,
+        "monto_minimo": monto_minimo
+
+    }, function(data) {
+        $('#my-modal').modal('show')
+    });
+
+    $('#btg').attr("disabled", true);
+}
+        </script>
+        <script  lenguage="javascript" src="js/funciones_contrato.js" type="text/javascript">
+        </script>
 </body>
 
 </html>

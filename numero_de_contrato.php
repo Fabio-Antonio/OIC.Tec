@@ -39,13 +39,12 @@ curl_setopt($ch, CURLOPT_URL,$url);
 curl_setopt($ch, CURLOPT_POST, TRUE);
 // definimos cada uno de los parámetros
 curl_setopt($ch, CURLOPT_POSTFIELDS, "flag=$valor");
-/*curl_setopt($ch, CURLOPT_HEADER, 0);
+curl_setopt($ch, CURLOPT_HEADER, 0);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 0);
     curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
     curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);
 curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.1.2) Gecko/20090729 Firefox/3.5.2 GTB5');
-*/
 
  curl_exec ($ch);
  $error= curl_error($ch);

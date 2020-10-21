@@ -48,7 +48,7 @@ window.location.replace('index');</script>";
             <a href="alta.html" class="w3-bar-item w3-button">Usuarios</a>
             <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal2">Contacto</a>
             <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal3">Nueva Partida</a>
-            <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal5">Nueva Contrato</a>
+            <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal5">Nuevo Contrato</a>
             <a href="numero_de_contrato.php" class="w3-bar-item w3-button">Consulta de Contrato</a>
 
 

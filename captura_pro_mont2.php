@@ -89,15 +89,15 @@
                     </select>
                 </div>
                 <div class="numero-lisitacion-captura">
-                    <label for="">Número De Lisitación:</label>
-                    <input type="text" name="lisitacion" id="licitacion">
+                    <label for="">Número de Licitación:</label>
+                    <input type="text" name="licitacion" id="licitacion">
                 </div>
                 <div class="monto-total-captura">
                     <label for="">Monto Total:</label>
                     <input type="text" name="monto" id="monto">
                 </div>
                 <div class="botones btn-captura-procedimiento">
-                    <button id="btg" onclick="" class="btn btn-verde" type="button"> Guardar </button>
+                    <button id="btg" onclick="mostrarText();" class="btn btn-verde" type="button"> Guardar </button>
                     <button type="button" id="bregresar" class="btn btn-verde" onclick="location.href='principal2.php'"
                         name="bregresar"> Regresar </button>
                 </div>
@@ -243,10 +243,10 @@
             </div>
         </div>
     </div>
-
+     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
+    <script src="js/funciones_consolidado.js"> </script>                            
 
 
 

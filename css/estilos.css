@@ -9,7 +9,7 @@
 }
 #mySidebar a {
   color: white;
-}
+} 
 
 #tipodeusuario{
   margin-left: 200px;
@@ -2236,6 +2236,7 @@ font-size: 11px;
 .dunidadcompradoracontrato{
   width: 550px;
   margin-top: 30px;
+  margin-left: 250px;
 }
 .seunidadcompradoracontrato{
       margin-left: 30px;
@@ -2254,8 +2255,8 @@ font-size: 11px;
     }
 .dconsolidadocontrato{
   width: 480px;
-  margin-left: 520px;
-  margin-top: -70px;
+  margin-left: 20px;
+  margin-top: 30px;
 
 }
 .seconsolidadocontrato{
@@ -2539,6 +2540,18 @@ margin-top:-40px;
   text-align: left;
 }
 .ch{
+  margin-left: 230px;
+  margin-top: -30px;
+}
+.checonsolodidado{
+  width: 500px;
+  margin-left: 570px;
+  margin-top: -55px;
+}
+.check2{
+  margin-top: 30px;
+}
+.ch2{
   margin-left: 230px;
   margin-top: -30px;
 }

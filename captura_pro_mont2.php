@@ -2,6 +2,7 @@
 <html lang="es">
 <link href="https://cdn.datos.gob.mx/assets/css/main.css" rel="stylesheet">
 <link href="https://cdn.datos.gob.mx/bower_components/polymer/polymer.html" rel="import">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +14,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/estile.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.js">
+    </script>
 
 </head>
 
@@ -55,7 +61,7 @@
 
         <div class="contenedor-gris-procedimiento-consolidado">
             <div class="contenedor-captura-procedimiento">
-                <h1> CAPTURA DEL CONSOLIDADOR </h1>
+                <h1> Consolidado </h1>
                 <div class="consolidador-captura">
                     <label> Consolidador: </label>
                     <select name="consolidador" id="consolidador">
@@ -104,12 +110,8 @@
             </div>
 
             <div class="contenedor-adjunto-consolidado">
-                <h1> ADJUNTOS AL CONSOLIDADO </h1>
-                <div class="adjunto-nombre">
-                    <label> Nombre Del Agregado: </label>
+                <h1>Participantes</h1>
 
-                    </select>
-                </div>
                 <div class="adjunto-unidad-requirente">
                     <label> Unidad Requirente: </label>
                     <select name="consolidado" id="consolidado">
@@ -128,15 +130,15 @@
                 </div>
                 <div class="adjunto-monto">
                     <label for="">Monto:</label>
-                    <input type="number" name="" id="">
+                    <input type="text" name="mont" id="mont">
                 </div>
                 <div class="adjunto_cantidad-maxima">
                     <label for="">Cantidad Maxima Del Producto:</label>
-                    <input type="number" name="" id="">
+                    <input type="number" name="max" id="max">
                 </div>
                 <div class="adjunto-cantidad-minima">
                     <label for="">Cantidad Minima Del Producto:</label>
-                    <input type="number" name="" id="">
+                    <input type="number" name="min" id="min">
                 </div>
                 <div class="botones btn-proveedor">
                     <button id="btg" onclick="ingresar();" class="btn btn-verde" type="button"> Guardar </button>
@@ -147,14 +149,15 @@
 
             <div class="tabla-captura-cantidad">
                 <h1>TABLA</h1>
-                <table class="tabla-de-captura">
-                    <tr>
-                        <th>Número</th>
-                        <th>Consolidador</th>
-                        <th>Proveedor</th>
-                        <th>Número De Lisitación</th>
-                        <th>Monto Total</th>
-                    </tr>
+                <table class="Display" id="myTable">
+                    <thead>
+                        <th>Unidad Requirente</th>
+                        <th>Licitacion</th>
+                        <th>Maximo</th>
+                        <th>Minimo</th>
+                        <th>Monto</th>
+                        </tr>
+                    </thead>
                 </table>
             </div>
         </div>
@@ -243,10 +246,10 @@
             </div>
         </div>
     </div>
-     
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script src="js/funciones_consolidado.js"> </script>                            
+    <script src="js/funciones_consolidado.js"> </script>
 
 
 

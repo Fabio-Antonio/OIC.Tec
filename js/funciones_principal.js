@@ -133,7 +133,20 @@ function ingresar4() {
 
 
     window.location = "../besa/consulta_contrato7.php?partida_presupuestal=" + partida_presupuestal;
+    
+   /* $.ajax({
 
+        url:"../besa/consulta_contrato7.php",
+        type: "POST",
+        data: {
+            partida_presupuestal: partida_presupuestal ,
+        },
+        success: function(respuesta){
+            //$('main').html(respuesta.url);
+            window.location.replace(respuesta);
+        }
+
+}); */
 }
 
 $("#presupuesto").on({

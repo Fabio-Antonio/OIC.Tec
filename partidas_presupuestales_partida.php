@@ -223,13 +223,13 @@ document.getElementById("myOverlay").style.display = "none";
           </div>
 	     <select id="secontrapartisasp" class="secontrapartisasp" name="secontrapartisasp">
 		<?php
-			if(isset($_POST["flag"])){
-			$flag=unserialize($_POST["flag"]);
+			require_once('consulta_contrato4.php');
+			
 			foreach($flag as $key=> $val){
 		?>
               <option value="<?php print($val['id_unidad_compradora']); ?>"><?php print($val['nombre_unidad_compradora']); ?></option>
 		<?php
-		}
+		
 	}
 		?>
             </select>
@@ -237,13 +237,13 @@ document.getElementById("myOverlay").style.display = "none";
             <label class="textclavepartida">Clave Partida:</label>
              <select id="inclavepartida" name="clavepartida">
                 <?php
-                        if(isset($_POST["flag2"])){
-                        $flag=unserialize($_POST["flag2"]);
-                        foreach($flag as $key=> $val){
+                        require_once('consulta_contrato4.php');
+                        
+                        foreach($flag2 as $key=> $val){
                 ?>
               <option value="<?php print($val['id']); ?>"><?php print($val['clave']); echo " "; print($val['nombre']); ?></option>
                 <?php
-                }
+                
         }
                 ?>
             </select>
@@ -267,14 +267,14 @@ document.getElementById("myOverlay").style.display = "none";
               </div>
            <select id="secontatosub" class="secontatosub" name="secontatosub">
 			 <?php
-                        if(isset($_POST["flag"])){
-                        $flag=unserialize($_POST["flag"]);
+                        
+                       require_once('consulta_contrato4.php');
                         foreach($flag as $key=> $val){
                 ?>
 
                   <option value="<?php print($val['id_unidad_compradora']); ?>"><?php print($val['nombre_unidad_compradora']); ?></option>
 		    <?php
-                }
+                
         }
                 ?>
 

@@ -66,7 +66,7 @@
                     <label> Consolidador: </label>
                     <select name="consolidador" id="consolidador">
                         <?php
-                                $flag=unserialize($_POST["flag"]);
+                                 require_once("consulta_requirente.php");
                                 foreach ($flag as $key => $val) {
                                 ?>
 
@@ -82,8 +82,8 @@
                     <label> Proveedor: </label>
                     <select name="proveedor" id="proveedor">
                         <?php
-                    $flag=unserialize($_POST["flag2"]);
-                                foreach ($flag as $key => $val) {
+                                require_once("consulta_requirente.php");
+                                foreach ($flag2 as $key => $val) {
                                 ?>
 
                         <option value="<?php print($val['id_proveedor']); ?>">
@@ -116,7 +116,7 @@
                     <label> Unidad Requirente: </label>
                     <select name="consolidado" id="consolidado">
                         <?php
-                                $flag=unserialize($_POST["flag"]);
+                                require_once("consulta_requirente.php");
                                 foreach ($flag as $key => $val) {
                                 ?>
 

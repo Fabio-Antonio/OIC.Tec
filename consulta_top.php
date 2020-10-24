@@ -13,11 +13,10 @@ $flag[]=$row;
 }
 
 
-
  if($flag==null){
         echo "<script>alert('No se encontraron resultados')
 window.location.replace('principal2.php');</script>";
-       return;
+        return;
         }
 
 }else{
@@ -33,8 +32,8 @@ $conn=null;
 $ch=null;
 $ch= curl_init();
 
-$url=$path."/besa/top_por_contratos.php";
 
+$url=$path."/besa/top_por_contratos.php";
 curl_setopt($ch,CURLOPT_URL,$url);
 curl_setopt($ch,CURLOPT_POST,TRUE);
 curl_setopt($ch,CURLOPT_POSTFIELDS,"flag=$valor");

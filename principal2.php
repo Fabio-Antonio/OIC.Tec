@@ -78,7 +78,7 @@ window.location.replace('index');</script>";
                     <li><i class="fas fa-plus-circle"></i> <a href="requirente_compradora_captura.html">Unidad
                             Compradora</a></li>
                     <li><i class="fas fa-plus-circle"></i><a href="admin.html"> Administrador de Contrato</a></li>
-                    <li><i class="fas fa-plus-circle"></i> <a href="consulta_requirente.php">Consolidado</a></li>
+                    <li><i class="fas fa-plus-circle"></i> <a href="captura_pro_mont2.php">Consolidado</a></li>
                     <li><i class="fas fa-plus-circle"></i> <a href="captura_pro_mont.html">Proveedor Adjudicado</a></li>
                 </ul>
                 <p></p>
@@ -96,7 +96,7 @@ window.location.replace('index');</script>";
                     </li>
                     <li><i class="fas fa-plus-circle"></i> Recepción</li>
                     <li><i class="fas fa-plus-circle"></i> Terminación Anticipada</li>
-                    <li><i class="fas fa-plus-circle"></i><a href="consulta_contrato4.php"> Asignación de Partidas</a>
+                    <li><i class="fas fa-plus-circle"></i><a href="partidas_presupuestales_partida.php"> Asignación de Partidas</a>
                     </li>
                 </ul>
                 <p></p>

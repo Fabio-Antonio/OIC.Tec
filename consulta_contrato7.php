@@ -1,8 +1,8 @@
 <?php
   require_once("conexion.php");
   require_once("url.php");
-
-  $partida_presupuestal=$_GET["partida_presupuestal"];
+  $flag8="";
+  $partida_presupuestal=$_GET["partida_presupuestal"]; 
 
    $query=$conn->prepare("SELECT id_unidad_compradora,nombre_unidad_compradora FROM partidas_presupuestales
    AS pp INNER JOIN unidad_compradora AS uc ON pp.id_unidad = uc.id_unidad_compradora INNER JOIN 
@@ -57,7 +57,7 @@ $flag3[]=$row;
 }
 $valor3=serialize($flag3);
 
- if($flag==null){
+ if($flag3==null){
         echo "<script>alert('Debe Ingresar una unidad requirente')
 window.location.replace('principal2.php');</script>";
        return;
@@ -78,7 +78,7 @@ $flag4[]=$row;
 }
 $valor4=serialize($flag4);
 
- if($flag==null){
+ if($flag4==null){
         echo "<script>alert('Debe ingresar un administrador de contrato')
 window.location.replace('principal2.php');</script>";
        return;
@@ -101,7 +101,7 @@ $flag6[]=$row;
 }
 $valor6=serialize($flag6);
 
- if($flag==null){
+ if($flag6==null){
         echo "<script>alert('Debe ingresar un provedor adjudicado')
 window.location.replace('principal2.php');</script>";
        return;
@@ -112,13 +112,17 @@ echo "<script>alert('La consulta a la base de datos es incorrecta')
 window.location.replace('principal2.php');</script>";
 }
 
+$query=$conn->prepare("SELECT id_consolidado,unidad,licitacion FROM consolidado AS co INNER JOIN unidad_requirente AS ur ON co.id_requirente = ur.id_requirente");
 
-
-
-
-
-
-
+ $query->execute();
+if($query){
+while($row=$query->fetch()){
+$flag8[]=$row;
+}
+$valor8=serialize($flag8);
+}else{
+      $valor8="vacio";  
+}
 $conn=null;
 
 $ch = curl_init();
@@ -128,7 +132,7 @@ curl_setopt($ch, CURLOPT_URL,$url);
 // indicamos el tipo de petición: POST
 curl_setopt($ch, CURLOPT_POST, TRUE);
 // definimos cada uno de los parámetros
-curl_setopt($ch, CURLOPT_POSTFIELDS, "flag=$valor&flag2=$valor2&flag3=$valor3&flag4=$valor4&flag6=$valor6&partida=$partida_presupuestal");
+curl_setopt($ch, CURLOPT_POSTFIELDS, "flag=$valor&flag2=$valor2&flag3=$valor3&flag4=$valor4&flag6=$valor6&partida=$partida_presupuestal&flag8=$valor8");
 curl_setopt($ch, CURLOPT_HEADER, 0);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 0);
     curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
@@ -142,7 +146,5 @@ curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en
  echo $error;
 // cerramos la sesión cURL
 curl_close ($ch);
-
-
 
 ?>

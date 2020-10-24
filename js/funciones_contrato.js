@@ -28,11 +28,21 @@ $("#montomini").on({
 
 
 
-$(':checkbox').click(function() {
-    $('input:text').attr('disabled', !this.checked)
-    document.querySelector('#ccp').innerText = 'Monto maximo';
+$('#incontratoabiertoc').on('change', function() {
+    if ($(this).is(':checked') ) {
+       $( "#montomini" ).prop( "disabled", false );
+       document.querySelector('#ccp').innerText = 'Monto maximo';
+    } else {
+       $( "#montomini" ).prop( "disabled", true );
+       document.querySelector('#ccp').innerText = 'Monto total';
+   }
 });
 
-
-
+$('#checkconsolidado').on('change', function() {
+    if ($(this).is(':checked') ) {
+       $( "#seconsolidadocontrato" ).prop( "disabled", false );
+    } else {
+       $( "#seconsolidadocontrato" ).prop( "disabled", true );
+   }
+});
 

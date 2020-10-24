@@ -167,14 +167,14 @@
                             <select id="seunidadcompradoracontrato" class="seunidadcompradoracontrato"
                                 name="seunidadcompradoracontrato">
                                 <?php
-                                if (isset($_POST["flag"])) {
-                                    $flag = unserialize($_POST["flag"]);
+                                                                        
+                                    $flag=unserialize($_POST["flag"]);
                                     foreach ($flag as $key => $val) {
                                 ?>
                                 <option value="<?php print($val['id_unidad_compradora']); ?>">
                                     <?php print($val['nombre_unidad_compradora']); ?></option>
                                 <?php
-                                    }
+                                    
                                 }
                                 ?>
                             </select>
@@ -186,14 +186,13 @@
                                 name="seunidadrequirentecontrato">
 
                                 <?php
-                                if (isset($_POST["flag3"])) {
-                                    $flag = unserialize($_POST["flag3"]);
+                                    $flag=unserialize($_POST["flag3"]);
                                     foreach ($flag as $key => $val) {
                                 ?>
                                 <option value="<?php print($val['id_requirente']); ?>"><?php print($val['unidad']); ?>
                                 </option>
                                 <?php
-                                    }
+                                    
                                 }
                                 ?>
                             </select>
@@ -205,8 +204,7 @@
                                 name="seadministradorcontrato">
 
                                 <?php
-                                if (isset($_POST["flag4"])) {
-                                    $flag = unserialize($_POST["flag4"]);
+                                    $flag=unserialize($_POST["flag4"]);
                                     foreach ($flag as $key => $val) {
                                 ?>
                                 <option value="<?php print($val['id_administrador']); ?>">
@@ -217,7 +215,7 @@
                                             print($val["apellido_materno"]);  ?>
                                 </option>
                                 <?php
-                                    }
+                                    
                                 }
                                 ?>
                             </select>
@@ -229,14 +227,13 @@
                                 name="seproveedoradjudicadocontrato">
 
                                 <?php
-                                if (isset($_POST["flag6"])) {
-                                    $flag = unserialize($_POST["flag6"]);
+                                    $flag=unserialize($_POST["flag6"]);
                                     foreach ($flag as $key => $val) {
                                 ?>
                                 <option value="<?php print($val['id_proveedor']); ?>"><?php print($val['nombre']); ?>
                                 </option>
                                 <?php
-                                    }
+                                    
                                 }
                                 ?>
                             </select>
@@ -247,14 +244,13 @@
                             <select id="secontrarecepcion" class="secontrarecepcionc" name="secontrarecepcion">
 
                                 <?php
-                                if (isset($_POST["flag2"])) {
-                                    $flag = unserialize($_POST["flag2"]);
+                                    $flag=unserialize($_POST["flag2"]);
                                     foreach ($flag as $key => $val) {
                                 ?>
                                 <option value="<?php print($val['id_procedimiento_contratacion']); ?>">
                                     <?php print($val['procedimientos']); ?></option>
                                 <?php
-                                    }
+                                    
                                 }
                                 ?>
                             </select>
@@ -318,25 +314,30 @@
                                     </label>
                                 </div>
                                 <div class="ch2">
-                                    <input type="checkbox" id="">
+                                    <input type="checkbox" id="checkconsolidado">
 
                                 </div>
                             </div>
                             <div class="dconsolidadocontrato">
                                 <label class="textcontratorecepcion">Consolidado:</label>
                                 <select id="seconsolidadocontrato" class="seconsolidadocontrato"
-                                    name="seconsolidadocontrato">
+                                    name="seconsolidadocontrato" disabled="disabled">
 
                                     <?php
-                                    if (isset($_POST["flag8"])) {
-                                        $flag = unserialize($_POST["flag8"]);
-                                        foreach ($flag as $key => $val) {
+                                        $flag=unserialize($_POST["flag8"]);
+                                        if(!$flag="vacio"){
+                                        foreach ($flag8 as $key => $val) {
                                     ?>
                                     <option value="<?php print($val['id_consolidado']); ?>">
                                         <?php print($val['procedimiento']); ?></option>
                                     <?php
                                         }
-                                    }
+                                    }else{
+                                            ?>
+                                    <option value="">Vacío</option>
+                                        <?php
+                                        }
+
                                     ?>
                                 </select>
                             </div>
@@ -536,6 +537,7 @@
                 return;
             }*/
             var min = 0;
+            var con=0;
             var numero_contrato = (document.getElementById('innumerocontratoc').value);
             var procedimiento_compranet = (document.getElementById('inprocedimientocompranetc').value);
             var contrato_compranet = (document.getElementById('incontratocompranetc').value);
@@ -554,6 +556,17 @@
 
                 var monto_minimo = min;
             }
+
+            if (document.getElementById("checkconsolidado").checked == true) {
+                var selObj8 = document.getElementById('seconsolidadocontrato');
+                var consolidado = selObj8.options[selObj8.selectedIndex].value;
+            } else {
+                consolidado=con;
+                
+            }
+
+
+
             var documentacion_descripcion = (document.getElementById('indocumentodescripcionc').value);
             var selIndex = selObj.options[selObj.selectedIndex].value;
             var selIndex2 = selObj2.options[selObj2.selectedIndex].value;
@@ -652,7 +665,7 @@
                 "unidad_requirente": selIndex3,
                 "nombre": selIndex4,
                 "proveedor": selIndex6,
-                //"consolidado": selIndex8,
+                "consolidado": consolidado,
                 "partida": partida,
                 "numero_contrato": numero_contrato,
                 "procedimiento_compranet": procedimiento_compranet,

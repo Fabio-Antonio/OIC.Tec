@@ -66,32 +66,32 @@
                     <label> Consolidador: </label>
                     <select name="consolidador" id="consolidador">
                         <?php
-                                 require_once("consulta_requirente.php");
-                                foreach ($flag as $key => $val) {
-                                ?>
+                        require_once("consulta_requirente.php");
+                        foreach ($flag as $key => $val) {
+                        ?>
 
                         <option value="<?php print($val['id_requirente']); ?>">
                             <?php print($val['unidad']); ?></option>
                         <?php
-                                }
+                        }
 
-                                ?>
+                        ?>
                     </select>
                 </div>
                 <div class="proveedor-captura">
                     <label> Proveedor: </label>
                     <select name="proveedor" id="proveedor">
                         <?php
-                                require_once("consulta_requirente.php");
-                                foreach ($flag2 as $key => $val) {
-                                ?>
+                        require_once("consulta_requirente.php");
+                        foreach ($flag2 as $key => $val) {
+                        ?>
 
                         <option value="<?php print($val['id_proveedor']); ?>">
                             <?php print($val['nombre']); ?></option>
                         <?php
-                                }
+                        }
 
-                                ?>
+                        ?>
                     </select>
                 </div>
                 <div class="numero-lisitacion-captura">
@@ -116,16 +116,16 @@
                     <label> Unidad Requirente: </label>
                     <select name="consolidado" id="consolidado">
                         <?php
-                                require_once("consulta_requirente.php");
-                                foreach ($flag as $key => $val) {
-                                ?>
+                        require_once("consulta_requirente.php");
+                        foreach ($flag as $key => $val) {
+                        ?>
 
                         <option value="<?php print($val['id_requirente']); ?>">
                             <?php print($val['unidad']); ?></option>
                         <?php
-                                }
+                        }
 
-                                ?>
+                        ?>
                     </select>
                 </div>
                 <div class="adjunto-monto">
@@ -140,11 +140,11 @@
                     <label for="">Cantidad Minima Del Producto:</label>
                     <input type="number" name="min" id="min">
                 </div>
-                <div class="botones btn-proveedor">
+                <!-- <div class="botones btn-proveedor">
                     <button id="btg" onclick="ingresar();" class="btn btn-verde" type="button"> Guardar </button>
                     <button type="button" id="bregresar" class="btn btn-verde" onclick="location.href='principal2.php'"
                         name="bregresar"> Eliminar </button>
-                </div>
+                </div>-->
             </div>
 
             <div class="tabla-captura-cantidad">
@@ -159,6 +159,9 @@
                         </tr>
                     </thead>
                 </table>
+            </div>
+            <div class="botones btn-listo-tabla">
+                <button id="" class="btn btn-verde" type="button"> Listo </button>
             </div>
         </div>
     </main>
@@ -247,7 +250,7 @@
         </div>
     </div>
 
-    
+
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="js/funciones_consolidado.js"> </script>
 

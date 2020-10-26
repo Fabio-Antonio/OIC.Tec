@@ -325,11 +325,11 @@
 
                                     <?php
                                         $flag=unserialize($_POST["flag8"]);
-                                        if(!$flag="vacio"){
-                                        foreach ($flag8 as $key => $val) {
+                                        if($flag!="vacio"){
+                                        foreach ($flag as $key => $val) {
                                     ?>
                                     <option value="<?php print($val['id_consolidado']); ?>">
-                                        <?php print($val['procedimiento']); ?></option>
+                                        <?php print($val['licitacion']); ?></option>
                                     <?php
                                         }
                                     }else{
@@ -544,7 +544,7 @@
             var convenio_interno = (document.getElementById('inconveniointernoc').value);
             var objeto_contratacion = (document.getElementById('inobjetocontratacionc').value);
             var max = (document.getElementById('montomaxi').value);
-
+	     var consolidado;
             var monto_maximo = Number(max.replace(",", ""));
             var monto_minimo = min;
             if (document.getElementById("incontratoabiertoc").checked == true) {
@@ -559,7 +559,7 @@
 
             if (document.getElementById("checkconsolidado").checked == true) {
                 var selObj8 = document.getElementById('seconsolidadocontrato');
-                var consolidado = selObj8.options[selObj8.selectedIndex].value;
+                 consolidado = selObj8.options[selObj8.selectedIndex].value;
             } else {
                 consolidado=con;
                 
@@ -659,7 +659,11 @@
             "&procedimiento_compranet="+procedimiento_compranet+"&contrato_compranet="+contrato_compranet+"&convenio_interno="+convenio_interno+"&objeto_contratacion="
             +objeto_contratacion+"&documentacion_descripcion="+documentacion_descripcion+"&monto_maximo="+monto_maximo+"&monto_minimo="+monto_minimo;*/
 
-            $.post('contrato_in.php', {
+            $.ajax({
+            type: "POST",
+            url: 'contrato_in.php',
+            
+            data:{
                 "nombre_unidad_compradora": selIndex,
                 "procedimientos": selIndex2,
                 "unidad_requirente": selIndex3,
@@ -675,13 +679,24 @@
                 "documentacion_descripcion": documentacion_descripcion,
                 "contrato_abierto": contrato_abierto,
                 "monto_maximo": monto_maximo,
-                "monto_minimo": monto_minimo
+                "monto_minimo": monto_minimo,
+            },
+            dataType: 'JSON',
+            success : function(data) {
+                if(data.success==true){
+                    $(function() {
+                    $('#my-modal').modal('show')
+                });  
+                $('#btg').attr("disabled", true)   
+                }else{
+                    $(function() {
+                    $('#my-modal2').modal('show')
+                });
+                }
+            }
 
-            }, function(data) {
-                $('#my-modal').modal('show')
             });
 
-            $('#btg').attr("disabled", true);
         }
         </script>
         <script lenguage="javascript" src="js/funciones_contrato.js" type="text/javascript">

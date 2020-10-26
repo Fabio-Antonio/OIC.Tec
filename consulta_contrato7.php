@@ -1,7 +1,7 @@
 <?php
   require_once("conexion.php");
   require_once("url.php");
-  $flag8="";
+  
   $partida_presupuestal=$_GET["partida_presupuestal"]; 
 
    $query=$conn->prepare("SELECT id_unidad_compradora,nombre_unidad_compradora FROM partidas_presupuestales

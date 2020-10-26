@@ -511,7 +511,7 @@ var fecha_notificacion_adjudicada= new Date(notificacion_adjudicada);
           <h2 class="fuu"> FECHAS </h2>
           <div class="dfechadescripcion">
             <label class="textdocumentodescripcion">Numero de contrato:</label>
-            <input type="text"  id="infechadescripcion" class="form-control" name="infechadescripcion" value="<?php $numero_contrato=$_POST['innumerocontratoc']; echo $numero_contrato;?>" placeholder="Etiqueta" required>
+            <input type="text"  id="infechadescripcion" class="form-control" name="infechadescripcion" value="<?php $numero_contrato=$_GET['numero_contrato']; echo $numero_contrato;?>" placeholder="Etiqueta" required>
           </div>
           <div class="dnotificacionadjudicadaf">
              <form role="form" id="myform" class="form-horizontal">

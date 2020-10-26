@@ -3,8 +3,8 @@
   require_once("url.php");
   
   $partida_presupuestal=$_GET["partida_presupuestal"]; 
-
-   $query=$conn->prepare("SELECT id_unidad_compradora,nombre_unidad_compradora FROM partidas_presupuestales
+   $flag8=null;
+      $query=$conn->prepare("SELECT id_unidad_compradora,nombre_unidad_compradora FROM partidas_presupuestales
    AS pp INNER JOIN unidad_compradora AS uc ON pp.id_unidad = uc.id_unidad_compradora INNER JOIN 
    partida_presupuesto AS po ON po.id = pp.id_presupuesto WHERE po.id = ?");
 $query->bindValue(1,$partida_presupuestal);
@@ -115,11 +115,13 @@ window.location.replace('principal2.php');</script>";
 $query=$conn->prepare("SELECT id_consolidado,unidad,licitacion FROM consolidado AS co INNER JOIN unidad_requirente AS ur ON co.id_requirente = ur.id_requirente");
 
  $query->execute();
+ 
 if($query){
 while($row=$query->fetch()){
 $flag8[]=$row;
 }
 $valor8=serialize($flag8);
+
 }else{
       $valor8="vacio";  
 }

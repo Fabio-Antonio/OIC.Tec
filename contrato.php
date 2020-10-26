@@ -116,7 +116,7 @@
                         </p>
                     </div>
                     <div class="modal-footer">
-                        <button class="btn btn-primary" data-dismiss="modal">Ok</button>
+                        <button class="btn btn-primary" onclick="cambio();">Ok</button>
                     </div>
                 </div>
             </div>

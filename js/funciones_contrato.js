@@ -46,3 +46,7 @@ $('#checkconsolidado').on('change', function() {
    }
 });
 
+function cambio(){
+    var numero_contrato = (document.getElementById('innumerocontratoc').value);
+    window.location = "../besa/fechas.php?numero_contrato="+numero_contrato;
+}

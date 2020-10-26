@@ -1,6 +1,6 @@
 <?php
     require_once("conexion.php");
-     
+     $res=false;
     $nombre_unidad_compradora = $_POST["nombre_unidad_compradora"];
    $procedimientos=$_POST["procedimientos"];		
      $unidad_requirente = $_POST["unidad_requirente"];
@@ -44,9 +44,12 @@ else{
 
 }
 }
- 
+
+
+if($consolidado!=0){ 
 echo json_encode(array("success"=>comprovar($consolidado,$unidad_requirente,$monto_maximo,$conn)));
 $res= comprovar($consolidado,$unidad_requirente,$monto_maximo,$conn);
+}
 
 if($res==true){
   $statement = $conn->prepare("INSERT INTO contrato (id_unidad_compradora,id_procedimiento_contratacion,id_unidad_requirente,id_administrador,
@@ -71,5 +74,27 @@ if($res==true){
   $statement->execute();
    $conn=null; 
   }      
-
+   if($consolidado==0){
+    $statement = $conn->prepare("INSERT INTO contrato (id_unidad_compradora,id_procedimiento_contratacion,id_unidad_requirente,id_administrador,
+  id_proveedor_adjudicado,id_partida,numero_contrato,procedimiento_compranet,contrato_compranet,convenio_interno
+  ,objeto_contratacion,contrato_abierto,documentacion_descirpcion,monto_max,monto_min)VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+  $statement->bindValue(1, $nombre_unidad_compradora);
+  $statement->bindValue(2, $procedimientos);
+  $statement->bindValue(3, $unidad_requirente);
+  $statement->bindValue(4, $nombre);
+  $statement->bindValue(5, $proveedor);
+  $statement->bindValue(6, $partida);
+  $statement->bindParam(7, $numero_contrato);
+  $statement->bindParam(8, $procedimiento_compranet);
+  $statement->bindParam(9, $contrato_compranet);
+  $statement->bindParam(10, $convenio_interno);
+  $statement->bindParam(11, $objeto_contratacion);
+  $statement->bindParam(12, $contrato_abierto);
+  $statement->bindParam(13, $documentacion_descripcion);
+  $statement->bindValue(14, $monto_maximo);
+  $statement->bindValue(15, $monto_minimo);
+  $statement->execute();
+   $conn=null; 
+   echo json_encode(array("success"=>true));
+   }
 ?>

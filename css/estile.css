@@ -512,7 +512,7 @@ select:hover{
 
 /*Captura consolidador
   Adjuntos al consolidado
-*/
+
 .main-captura-pro-mont {
   height: 255vh;
   width: 1010px;
@@ -784,7 +784,7 @@ select:hover{
 
 /*Captura Procedimiento
   Proveedor Adjudicado para celular
-
+*/
 
 @media screen and (max-width: 375px) {
   .main-captura-pro-mont {

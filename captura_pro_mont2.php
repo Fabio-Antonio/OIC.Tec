@@ -140,11 +140,11 @@
                     <label for="">Cantidad Minima Del Producto:</label>
                     <input type="number" name="min" id="min">
                 </div>
-                <!-- <div class="botones btn-proveedor">
+                 <div class="botones btn-proveedor">
                     <button id="btg" onclick="ingresar();" class="btn btn-verde" type="button"> Guardar </button>
                     <button type="button" id="bregresar" class="btn btn-verde" onclick="location.href='principal2.php'"
                         name="bregresar"> Eliminar </button>
-                </div>-->
+                </div>
             </div>
 
             <div class="tabla-captura-cantidad">

@@ -225,7 +225,7 @@
                         </script>
                     </div>
 
-                    <div id="chartContainer" style="margin-top:260px"></div>
+                    <div id="chartContainer" style="margin-top:300px"></div>
 
 
                     <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>

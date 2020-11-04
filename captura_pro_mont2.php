@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
-<!--<link href="https://cdn.datos.gob.mx/assets/css/main.css" rel="stylesheet">
+<link href="https://cdn.datos.gob.mx/assets/css/main.css" rel="stylesheet">
 <link href="https://cdn.datos.gob.mx/bower_components/polymer/polymer.html" rel="import">
--->
+
 <head>
-    <!--<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consolidado</title>
     <link rel="shortcut icon" href="https://cdn.datos.gob.mx/assets/img/favicon.ico">
@@ -16,7 +16,7 @@
     <script src="https://cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.js">
-    </script>-->
+    </script>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/estile.css">
 
@@ -66,7 +66,7 @@
                     <label> Consolidador: </label>
                     <select name="consolidador" id="consolidador">
                         <?php
-                    /*    require_once("consulta_requirente.php");
+                        require_once("consulta_requirente.php");
                        foreach ($flag as $key => $val) {
                         ?>
 
@@ -74,7 +74,7 @@
                             <?php print($val['unidad']); ?></option>
                         <?php
                         }
-*/
+
                         ?>
                     </select>
                 </div>
@@ -82,14 +82,14 @@
                     <label> Proveedor: </label>
                     <select name="proveedor" id="proveedor">
                         <?php
-                       /* require_once("consulta_requirente.php");
+                        require_once("consulta_requirente.php");
                         foreach ($flag2 as $key => $val) {
                         ?>
 
                         <option value="<?php print($val['id_proveedor']); ?>">
                             <?php print($val['nombre']); ?></option>
                         <?php
-                        }*/
+                        }
 
                         ?>
                     </select>
@@ -120,7 +120,7 @@
                     <label> Unidad Requirente: </label>
                     <select name="consolidado" id="consolidado">
                         <?php
-                    /*    require_once("consulta_requirente.php");
+                        require_once("consulta_requirente.php");
                         foreach ($flag as $key => $val) {
                         ?>
 
@@ -128,7 +128,7 @@
                             <?php print($val['unidad']); ?></option>
                         <?php
                         }
-*/
+
                         ?>
                     </select>
                 </div>
@@ -227,7 +227,7 @@
 
     <!-- Modals -->
 
-  <!--  <div class="modal fade" role="dialog" id="my-modal" aria-labelledby="modal-title">
+    <div class="modal fade" role="dialog" id="my-modal" aria-labelledby="modal-title">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header" style="background-color:#27C44D;">
@@ -262,7 +262,7 @@
                 </div>
             </div>
         </div>
-    </div>-->
+    </div>
 
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>

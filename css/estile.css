@@ -515,13 +515,14 @@ select:hover{
   Adjuntos al consolidado
 */
 .main-captura-pro-mont {
-  height: 175vh;
+  height: 310vh;
   width: 1010px;
   margin: 0 auto;
+  
 
 }
 .contenedor-gris-procedimiento-consolidado {
-  height: 170vh;
+  height: 300vh;
   width: 1010px;
   display: grid;
   grid-gap: 10px;
@@ -530,7 +531,7 @@ select:hover{
   "contenedor-captura-procedimiento"
   "contenedor-adjunto-consolidado"
   "tabla-captura-cantidad";
-  grid-template-rows: 240px 550px;
+  grid-template-rows: 450px 800px;
 
 }
 .contenedor-gris-procedimiento-consolidado .contenedor-captura-procedimiento{
@@ -548,9 +549,10 @@ select:hover{
     "captura-procedimiento-consolidado captura-procedimiento-consolidado"
     "consolidador-captura proveedor-captura"
     "numero-lisitacion-captura monto-total-captura"
+    "descripcion-consolidado ."
     "btn-captura-procedimiento btn-captura-procedimiento";
   grid-template-columns: repeat(2 1fr);
-  grid-template-rows: 150px 100px 120px;
+  grid-template-rows: 150px 100px 100px 200px;
 }
 .main-captura-pro-mont h1::after {
   content: "";
@@ -576,6 +578,9 @@ select:hover{
 }
 .contenedor-captura-procedimiento .monto-total-captura{
   grid-area: monto-total-captura;
+}
+.contenedor-captura-procedimiento .descripcion-consolidado{
+  grid-area: descripcion-consolidado;
 }
 .contenedor-captura-procedimiento .btn-captura-procedimiento {
   grid-area: btn-captura-procedimiento;
@@ -605,7 +610,8 @@ select:hover{
 .consolidador-captura,
 .proveedor-captura,
 .numero-lisitacion-captura,
-.monto-total-captura  {
+.monto-total-captura,
+.descripcion-consolidado  {
   padding-left: 25px;
 }
 
@@ -616,10 +622,12 @@ select:hover{
   padding-top: 200px;
   grid-template-areas:
     "proveedor-adjudicado proveedor-adjudicado"
-    "adjunto-unidad-requirente adjunto-monto"
-    "adjunto_cantidad-maxima adjunto-cantidad-minima";
+    "adjunto-unidad-requirente adjunto-contrato"
+    "adjunto-monto adjunto-monto-minimo"
+    "adjunto_cantidad-maxima adjunto-cantidad-minima"
+    "btn-proveedor btn-proveedor";
   grid-template-columns: repeat(2 1fr);
-  grid-template-rows: 150px 120px ;
+  grid-template-rows: 150px 120px 120px 100px 50px;
 }
 /*Nombramos los elementos*/
 .contenedor-adjunto-consolidado h1 {
@@ -630,8 +638,14 @@ select:hover{
 .contenedor-adjunto-consolidado.adjunto-unidad-requirente {
   grid-area: adjunto-unidad-requirente;
 }
+.contenedor-adjunto-consolidado .adjunto-contrato{
+  grid-area: adjunto-contrato;
+}
 .contenedor-adjunto-consolidado .adjunto-monto{
   grid-area: adjunto-monto;
+}
+.contenedor-adjunto-consolidado .adjunto-monto-minimo{
+  grid-area: adjunto-monto-minimo;
 }
 .contenedor-adjunto-consolidado .adjunto_cantidad-maxima{
   grid-area: adjunto_cantidad-maxima;
@@ -639,24 +653,26 @@ select:hover{
 .contenedor-adjunto-consolidado .adjunto-cantidad-minima{
   grid-area: adjunto-cantidad-minima;
 }
-
+.contenedor-adjunto-consolidado .btn-proveedor{
+  grid-area: btn-proveedor;
+}
 
 
 .adjunto-unidad-requirente,
 .adjunto-monto,
-.adjunto_cantidad-maxima,
-.adjunto-cantidad-minima{
+.adjunto_cantidad-maxima{
   padding-left: 25px;
 }
 
 /*Tabla captura cantidad*/
 .tabla-captura-cantidad{
   display: grid;
+  height: 500px;
   grid-template-areas:
    "titulotabla"
    "tabla-de-captura"
   ;
- grid-template-rows: 80px 120px;
+ grid-template-rows: 80px 100px;
 }
 .tabla-captura-cantidad h1 {
   grid-area: titulotabla;
@@ -728,20 +744,21 @@ select:hover{
 }
 
 .btn-listo-tabla{
-  height: 40px;
-  
+  height: 50px;
 }
 /*Captura Procedimiento
   Proveedor Adjudicado para ipad
 */
 @media screen and (max-width: 768px) {
   .main-captura-pro-mont {
-    height: 160vh;
+    height: 100vh;
     width: 650px;
+    border: 2px solid red;
     margin: 0 auto;
   }
   .contenedor-gris-procedimiento-consolidado {
-    height: 155vh;
+    height: 50vh;
+    border: 2px solid red;
     width: 650px;
     display: grid;
     grid-template-rows: 240px 550px;
@@ -767,6 +784,7 @@ select:hover{
     margin: 0;
     background-color: #fff;
     width: 600px;
+    
 
   }
 
@@ -774,6 +792,7 @@ select:hover{
     padding-top: 50px;
     grid-template-columns: 1fr;
     padding-left: 25px;
+   
   }
 
 
@@ -790,7 +809,7 @@ select:hover{
     margin: 0 auto;
   }
   .contenedor-gris-procedimiento-consolidado {
-    height: 240vh;
+    height: 100vh;
     width: 370px;
     display: grid;
     grid-gap: 10px;
@@ -799,12 +818,14 @@ select:hover{
   }
   .contenedor-captura-procedimiento {
     display: grid;
+    
     grid-template-areas:
       "captura-procedimiento-consolidado"
       "consolidador-captura"
       "proveedor-captura"
       "numero-lisitacion-captura"
       "monto-total-captura"
+      "descripcion-consolidado"
       "btn-captura-procedimiento";
     grid-template-rows: 100px repeat(3, 100px) 110px;
   }

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
-<link href="https://cdn.datos.gob.mx/assets/css/main.css" rel="stylesheet">
+<!--<link href="https://cdn.datos.gob.mx/assets/css/main.css" rel="stylesheet">
 <link href="https://cdn.datos.gob.mx/bower_components/polymer/polymer.html" rel="import">
-
+-->
 <head>
-    <meta charset="UTF-8">
+    <!--<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consolidado</title>
     <link rel="shortcut icon" href="https://cdn.datos.gob.mx/assets/img/favicon.ico">
@@ -12,13 +12,13 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/estile.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.js">
-    </script>
+    </script>-->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/estile.css">
 
 </head>
 
@@ -66,15 +66,15 @@
                     <label> Consolidador: </label>
                     <select name="consolidador" id="consolidador">
                         <?php
-                        require_once("consulta_requirente.php");
-                        foreach ($flag as $key => $val) {
+                    /*    require_once("consulta_requirente.php");
+                       foreach ($flag as $key => $val) {
                         ?>
 
                         <option value="<?php print($val['id_requirente']); ?>">
                             <?php print($val['unidad']); ?></option>
                         <?php
                         }
-
+*/
                         ?>
                     </select>
                 </div>
@@ -82,14 +82,14 @@
                     <label> Proveedor: </label>
                     <select name="proveedor" id="proveedor">
                         <?php
-                        require_once("consulta_requirente.php");
+                       /* require_once("consulta_requirente.php");
                         foreach ($flag2 as $key => $val) {
                         ?>
 
                         <option value="<?php print($val['id_proveedor']); ?>">
                             <?php print($val['nombre']); ?></option>
                         <?php
-                        }
+                        }*/
 
                         ?>
                     </select>
@@ -101,6 +101,10 @@
                 <div class="monto-total-captura">
                     <label for="">Monto Total:</label>
                     <input type="text" name="monto" id="monto">
+                </div>
+                <div class="descripcion-consolidado">
+                    <label for="">Descripción</label>
+                    <textarea name="" id="" cols="29" rows="5"></textarea>
                 </div>
                 <div class="botones btn-captura-procedimiento">
                     <button id="btg" onclick="mostrarText();" class="btn btn-verde" type="button"> Guardar </button>
@@ -116,7 +120,7 @@
                     <label> Unidad Requirente: </label>
                     <select name="consolidado" id="consolidado">
                         <?php
-                        require_once("consulta_requirente.php");
+                    /*    require_once("consulta_requirente.php");
                         foreach ($flag as $key => $val) {
                         ?>
 
@@ -124,13 +128,23 @@
                             <?php print($val['unidad']); ?></option>
                         <?php
                         }
-
+*/
                         ?>
+                    </select>
+                </div>
+                <div class="adjunto-contrato">
+                    <label> Contrato: </label>
+                    <select name="" id="">
+                        <option value=""></option>
                     </select>
                 </div>
                 <div class="adjunto-monto">
                     <label for="">Monto:</label>
                     <input type="text" name="mont" id="mont">
+                </div>
+                <div class="adjunto-monto-minimo">
+                    <label for="">Monto Minimo:</label>
+                    <input type="text" name="" id="">
                 </div>
                 <div class="adjunto_cantidad-maxima">
                     <label for="">Cantidad Maxima Del Producto:</label>
@@ -213,7 +227,7 @@
 
     <!-- Modals -->
 
-    <div class="modal fade" role="dialog" id="my-modal" aria-labelledby="modal-title">
+  <!--  <div class="modal fade" role="dialog" id="my-modal" aria-labelledby="modal-title">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header" style="background-color:#27C44D;">
@@ -248,7 +262,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>-->
 
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>

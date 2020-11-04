@@ -303,11 +303,11 @@
                                     Contrato Abierto
                                 </label>
                             </div>
-                            <div class="ch">
+                           <div class="ch">
                                 <input type="checkbox" id="incontratoabiertoc">
 
                             </div>
-                            <div class="checonsolodidado">
+                             <!--<div class="checonsolodidado">
                                 <div class="check2">
                                     <label class="tche">
                                         Consolidado
@@ -340,7 +340,7 @@
 
                                     ?>
                                 </select>
-                            </div>
+                            </div>-->
 
                             <div id="dbtgcpc1">
                                 <button id="btg" onclick="mostrarText();" class="btn btn-primary" type="button"> Guardar

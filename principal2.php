@@ -135,8 +135,7 @@ window.location.replace('index');</script>";
                 </div>
                 <h3>PRODUCCIÓN</h3>
                 <ul>
-                    <li><i class="fas fa-plus-circle" data-toggle="modal" data-target="#mymodal4"></i> Informe 70-30
-                    </li>
+                    <li><i class="fas fa-plus-circle" data-toggle="modal" data-target="#mymodal4"></i> Informe 70-30</li>
                     <li><i class="fas fa-plus-circle"></i> <a href="consulta_top.php">Top por Contrato</a></li>
                     <li><i class="fas fa-plus-circle"></i> Informe Montos por Procedimiento</li>
                 </ul>

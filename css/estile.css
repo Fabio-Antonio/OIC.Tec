@@ -515,14 +515,12 @@ select:hover{
   Adjuntos al consolidado
 */
 .main-captura-pro-mont {
-  height: 310vh;
+  height: 410vh;
   width: 1010px;
   margin: 0 auto;
-  
-
 }
 .contenedor-gris-procedimiento-consolidado {
-  height: 300vh;
+  height: 400vh;
   width: 1010px;
   display: grid;
   grid-gap: 10px;
@@ -531,7 +529,7 @@ select:hover{
   "contenedor-captura-procedimiento"
   "contenedor-adjunto-consolidado"
   "tabla-captura-cantidad";
-  grid-template-rows: 450px 800px;
+  grid-template-rows: 450px 1250px;
 
 }
 .contenedor-gris-procedimiento-consolidado .contenedor-captura-procedimiento{
@@ -586,7 +584,15 @@ select:hover{
   grid-area: btn-captura-procedimiento;
 }
 
-
+.contenedor-gris-procedimiento-consolidado textarea{
+  width: 450px;
+  height: 150px;
+  background-color: #fff;
+  color: #000;
+  border: 0.2rem solid rgba(0, 0, 0, 0.15);
+  padding: 1rem 0.2rem;
+  border-radius: 1rem;
+}
 .contenedor-gris-procedimiento-consolidado input {
   width: 450px;
   height: 40px;
@@ -622,12 +628,17 @@ select:hover{
   padding-top: 200px;
   grid-template-areas:
     "proveedor-adjudicado proveedor-adjudicado"
-    "adjunto-unidad-requirente adjunto-contrato"
+    "adjunto-unidad-requirente adjunto-compradora"
     "adjunto-monto adjunto-monto-minimo"
-    "adjunto_cantidad-maxima adjunto-cantidad-minima"
+    "adjunto-administrador adjunto-proveedor-adjudicado"
+    "adjunto-procedimiento-contratacion adjunto-numero-contrato"
+    "adjunto-procedimiento-compranet adjunto-contrato-compranet"
+    "adjunto-convenio-interno adjunto-total"
+    "adjunto-objeto-contratacion ."
+    "adjunto-contrato-abierto adjunto-contrato-abierto"
     "btn-proveedor btn-proveedor";
   grid-template-columns: repeat(2 1fr);
-  grid-template-rows: 150px 120px 120px 100px 50px;
+  grid-template-rows: 150px 100px 100px 100px 100px 100px 100px 100px 100px 50px;
 }
 /*Nombramos los elementos*/
 .contenedor-adjunto-consolidado h1 {
@@ -647,21 +658,58 @@ select:hover{
 .contenedor-adjunto-consolidado .adjunto-monto-minimo{
   grid-area: adjunto-monto-minimo;
 }
-.contenedor-adjunto-consolidado .adjunto_cantidad-maxima{
-  grid-area: adjunto_cantidad-maxima;
+.contenedor-adjunto-consolidado .adjunto-administrador{
+  grid-area: adjunto-administrador;
 }
-.contenedor-adjunto-consolidado .adjunto-cantidad-minima{
-  grid-area: adjunto-cantidad-minima;
+.contenedor-adjunto-consolidado .adjunto-proveedor-adjudicado{
+  grid-area: adjunto-proveedor-adjudicado;
+}
+.contenedor-adjunto-consolidado .adjunto-procedimiento-contratacion{
+  grid-area: adjunto-procedimiento-contratacion;
+}
+.contenedor-adjunto-consolidado .adjunto-numero-contrato{
+  grid-area: adjunto-numero-contrato;
+}
+.contenedor-adjunto-consolidado .adjunto-procedimiento-compranet{
+  grid-area: adjunto-procedimiento-compranet;
+}
+.contenedor-adjunto-consolidado .adjunto-contrato-compranet{
+  grid-area: adjunto-contrato-compranet;
+}
+.contenedor-adjunto-consolidado .adjunto-convenio-interno{
+  grid-area: adjunto-convenio-interno;
+}
+.contenedor-adjunto-consolidado .adjunto-total{
+  grid-area: adjunto-total;
+}
+.contenedor-adjunto-consolidado .adjunto-objeto-contratacion{
+  grid-area: adjunto-objeto-contratacion;
+}
+.contenedor-adjunto-consolidado .adjunto-contrato-abierto{
+  grid-area: adjunto-contrato-abierto;
+}
+.contenedor-adjunto-consolidado .adjunto-numero-contrato{
+  grid-area: adjunto-numero-contrato;
 }
 .contenedor-adjunto-consolidado .btn-proveedor{
   grid-area: btn-proveedor;
 }
 
 
+.adjunto-administrador,
+.adjunto-procedimiento-contratacion,
+.adjunto-procedimiento-compranet,
+.adjunto-convenio-interno,
+.adjunto-objeto-contratacion,
+.adjunto-contrato-abierto,
 .adjunto-unidad-requirente,
-.adjunto-monto,
-.adjunto_cantidad-maxima{
+.adjunto-monto{
   padding-left: 25px;
+}
+.adjunto-contrato-abierto input{
+  width: 50px;
+  height: 30px;
+  margin-left: 100px;
 }
 
 /*Tabla captura cantidad*/

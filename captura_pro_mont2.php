@@ -104,7 +104,7 @@
                 </div>
                 <div class="descripcion-consolidado">
                     <label for="">Descripción</label>
-                    <textarea name="" id="" cols="29" rows="5"></textarea>
+                    <textarea name="" id="" cols="30" rows="5"></textarea>
                 </div>
                 <div class="botones btn-captura-procedimiento">
                     <button id="btg" onclick="mostrarText();" class="btn btn-verde" type="button"> Guardar </button>
@@ -119,6 +119,12 @@
                 <div class="adjunto-unidad-requirente">
                     <label> Unidad Requirente: </label>
                     <select name="consolidado" id="consolidado">
+                   <option value=""></option>
+                    </select>
+                </div>
+                <div class="adjunto-compradora">
+                    <label> Unidad Compradora: </label>
+                    <select name="" id="">
                         <?php
                         require_once("consulta_requirente.php");
                         foreach ($flag as $key => $val) {
@@ -132,12 +138,6 @@
                         ?>
                     </select>
                 </div>
-                <div class="adjunto-contrato">
-                    <label> Contrato: </label>
-                    <select name="" id="">
-                        <option value=""></option>
-                    </select>
-                </div>
                 <div class="adjunto-monto">
                     <label for="">Monto:</label>
                     <input type="text" name="mont" id="mont">
@@ -146,13 +146,51 @@
                     <label for="">Monto Minimo:</label>
                     <input type="text" name="" id="">
                 </div>
-                <div class="adjunto_cantidad-maxima">
-                    <label for="">Cantidad Maxima Del Producto:</label>
-                    <input type="number" name="max" id="max">
+                <div class="adjunto-administrador">
+                    <label for="">Administrador:</label>
+                    <select name="" id="">
+                        <option value=""></option>
+                    </select>
                 </div>
-                <div class="adjunto-cantidad-minima">
-                    <label for="">Cantidad Minima Del Producto:</label>
-                    <input type="number" name="min" id="min">
+                <div class="adjunto-proveedor-adjudicado">
+                    <label for="">Proveedor Adjudicado:</label>
+                    <select name="" id="">
+                        <option value=""></option>
+                    </select>
+                </div>
+                <div class="adjunto-procedimiento-contratacion">
+                    <label for="">Procedimineto Contratación:</label>
+                    <select name="" id="">
+                        <option value=""></option>
+                    </select>
+                </div>
+                <div class="adjunto-numero-contrato">
+                    <label for="">Número Contrato:</label>
+                    <input type="text" name="" id="">
+                </div>
+                <div class="adjunto-procedimiento-compranet">
+                    <label for="">Procedimiento Compranet:</label>
+                    <input type="text" name="" id="">
+                </div>
+                <div class="adjunto-contrato-compranet">
+                    <label for="">Contrato Compranet:</label>
+                    <input type="number" name="" id="">
+                </div>
+                <div class="adjunto-convenio-interno">
+                    <label for="">Convenio Interno:</label>
+                    <input type="text" name="" id="">
+                </div>
+                <div class="adjunto-total">
+                    <label for="">Total:</label>
+                    <input type="text" name="" id="">
+                </div>
+                <div class="adjunto-objeto-contratacion">
+                    <label for="">Objeto Contratación:</label>
+                    <input type="text" name="" id="">
+                </div>
+                <div class="adjunto-contrato-abierto">
+                    <label for="">Contraro Abierto</label>
+                    <input type="checkbox" name="" id="">
                 </div>
                  <div class="botones btn-proveedor">
                     <button id="btg" onclick="ingresar();" class="btn btn-verde" type="button"> Guardar </button>

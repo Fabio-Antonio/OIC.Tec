@@ -143,6 +143,26 @@
             </div>
         </div>
 
+
+        <div class="modal fade" role="dialog" id="my-modal3" aria-labelledby="modal-title">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header" style="background-color:#D0021B;">
+                        <h3 class="modal-title" id="modal-title">B.E.S.A</h3>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            Este contrato ya ha sido creado con anterioridad!!
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary" data-dismiss="modal">Ok</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
@@ -537,15 +557,13 @@
                 return;
             }*/
             var min = 0;
-            var con=0;
             var numero_contrato = (document.getElementById('innumerocontratoc').value);
             var procedimiento_compranet = (document.getElementById('inprocedimientocompranetc').value);
             var contrato_compranet = (document.getElementById('incontratocompranetc').value);
             var convenio_interno = (document.getElementById('inconveniointernoc').value);
             var objeto_contratacion = (document.getElementById('inobjetocontratacionc').value);
             var max = (document.getElementById('montomaxi').value);
-	     var consolidado;
-            var monto_maximo = Number(max.replace(",", ""));
+	        var monto_maximo = Number(max.replace(",", ""));
             var monto_minimo = min;
             if (document.getElementById("incontratoabiertoc").checked == true) {
                 var contrato_abierto = (document.getElementById('incontratoabiertoc').value = 1);
@@ -555,14 +573,6 @@
                 var contrato_abierto = (document.getElementById('incontratoabiertoc').value = 0);
 
                 var monto_minimo = min;
-            }
-
-            if (document.getElementById("checkconsolidado").checked == true) {
-                var selObj8 = document.getElementById('seconsolidadocontrato');
-                 consolidado = selObj8.options[selObj8.selectedIndex].value;
-            } else {
-                consolidado=con;
-                
             }
 
 
@@ -659,17 +669,13 @@
             "&procedimiento_compranet="+procedimiento_compranet+"&contrato_compranet="+contrato_compranet+"&convenio_interno="+convenio_interno+"&objeto_contratacion="
             +objeto_contratacion+"&documentacion_descripcion="+documentacion_descripcion+"&monto_maximo="+monto_maximo+"&monto_minimo="+monto_minimo;*/
 
-            $.ajax({
-            type: "POST",
-            url: 'contrato_in.php',
+          $.post('contrato_in.php', {
             
-            data:{
                 "nombre_unidad_compradora": selIndex,
                 "procedimientos": selIndex2,
                 "unidad_requirente": selIndex3,
                 "nombre": selIndex4,
                 "proveedor": selIndex6,
-                "consolidado": consolidado,
                 "partida": partida,
                 "numero_contrato": numero_contrato,
                 "procedimiento_compranet": procedimiento_compranet,
@@ -680,23 +686,20 @@
                 "contrato_abierto": contrato_abierto,
                 "monto_maximo": monto_maximo,
                 "monto_minimo": monto_minimo,
-            },
-            dataType: 'JSON',
-            success : function(data) {
-                if(data.success==true){
+            },function(data) {
+                var response = jQuery.parseJSON(data);
+                if(response.success==true){
                     $(function() {
                     $('#my-modal').modal('show')
                 });  
                 $('#btg').attr("disabled", true)   
                 }else{
                     $(function() {
-                    $('#my-modal2').modal('show')
+                    $('#my-modal3').modal('show')
                 });
                 }
-            }
 
           });
-
         }
         </script>
         <script lenguage="javascript" src="js/funciones_contrato.js" type="text/javascript">

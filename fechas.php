@@ -502,8 +502,6 @@ var fecha_notificacion_adjudicada= new Date(notificacion_adjudicada);
 
 
 
-
-
   <div id="contec">
     <div class="container1">
       <div class="row">

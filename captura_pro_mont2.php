@@ -176,16 +176,16 @@
                     <label for="">Contrato Compranet:</label>
                     <input type="number" name="" id="">
                 </div>
-                <div class="adjunto-convenio-interno">
-                    <label for="">Convenio Interno:</label>
-                    <input type="text" name="" id="">
-                </div>
-                <div class="adjunto-total">
-                    <label for="">Total:</label>
-                    <input type="text" name="" id="">
+                <div class="adjunto-descripcion-documentacion">
+                    <label for="">Descripción Documentación:</label>
+                    <textarea name="" id="" cols="30" rows="5"></textarea>
                 </div>
                 <div class="adjunto-objeto-contratacion">
                     <label for="">Objeto Contratación:</label>
+                    <textarea name="" id="" cols="30" rows="5"></textarea>
+                </div>
+                <div class="adjunto-convenio-interno">
+                    <label for="">Convenio Interno:</label>
                     <input type="text" name="" id="">
                 </div>
                 <div class="adjunto-contrato-abierto">

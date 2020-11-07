@@ -529,7 +529,7 @@ select:hover{
   "contenedor-captura-procedimiento"
   "contenedor-adjunto-consolidado"
   "tabla-captura-cantidad";
-  grid-template-rows: 450px 1250px;
+  grid-template-rows: 400px 1280px;
 
 }
 .contenedor-gris-procedimiento-consolidado .contenedor-captura-procedimiento{
@@ -633,12 +633,12 @@ select:hover{
     "adjunto-administrador adjunto-proveedor-adjudicado"
     "adjunto-procedimiento-contratacion adjunto-numero-contrato"
     "adjunto-procedimiento-compranet adjunto-contrato-compranet"
-    "adjunto-convenio-interno adjunto-total"
-    "adjunto-objeto-contratacion ."
-    "adjunto-contrato-abierto adjunto-contrato-abierto"
+    "adjunto-descripcion-documentacion adjunto-objeto-contratacion"
+    "adjunto-convenio-interno ."
+    " adjunto-contrato-abierto  adjunto-contrato-abierto"
     "btn-proveedor btn-proveedor";
   grid-template-columns: repeat(2 1fr);
-  grid-template-rows: 150px 100px 100px 100px 100px 100px 100px 100px 100px 50px;
+  grid-template-rows: 150px 100px 100px 100px 100px 100px 210px 100px 80px;
 }
 /*Nombramos los elementos*/
 .contenedor-adjunto-consolidado h1 {
@@ -676,17 +676,17 @@ select:hover{
 .contenedor-adjunto-consolidado .adjunto-contrato-compranet{
   grid-area: adjunto-contrato-compranet;
 }
-.contenedor-adjunto-consolidado .adjunto-convenio-interno{
-  grid-area: adjunto-convenio-interno;
-}
-.contenedor-adjunto-consolidado .adjunto-total{
-  grid-area: adjunto-total;
+.contenedor-adjunto-consolidado .adjunto-descripcion-documentacion{
+  grid-area: adjunto-descripcion-documentacion;
 }
 .contenedor-adjunto-consolidado .adjunto-objeto-contratacion{
   grid-area: adjunto-objeto-contratacion;
 }
 .contenedor-adjunto-consolidado .adjunto-contrato-abierto{
   grid-area: adjunto-contrato-abierto;
+}
+.contenedor-adjunto-consolidado .adjunto-convenio-interno{
+  grid-area: adjunto-convenio-interno;
 }
 .contenedor-adjunto-consolidado .adjunto-numero-contrato{
   grid-area: adjunto-numero-contrato;
@@ -700,7 +700,7 @@ select:hover{
 .adjunto-procedimiento-contratacion,
 .adjunto-procedimiento-compranet,
 .adjunto-convenio-interno,
-.adjunto-objeto-contratacion,
+.adjunto-descripcion-documentacion,
 .adjunto-contrato-abierto,
 .adjunto-unidad-requirente,
 .adjunto-monto{

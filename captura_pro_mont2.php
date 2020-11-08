@@ -78,28 +78,12 @@
                         ?>
                     </select>
                 </div>
-                <div class="proveedor-captura">
-                    <label> Proveedor: </label>
-                    <select name="proveedor" id="proveedor">
-                        <?php
-                        require_once("consulta_requirente.php");
-                        foreach ($flag2 as $key => $val) {
-                        ?>
-
-                        <option value="<?php print($val['id_proveedor']); ?>">
-                            <?php print($val['nombre']); ?></option>
-                        <?php
-                        }
-
-                        ?>
-                    </select>
-                </div>
                 <div class="numero-lisitacion-captura">
                     <label for="">Número de Licitación:</label>
                     <input type="text" name="licitacion" id="licitacion">
                 </div>
                 <div class="monto-total-captura">
-                    <label for="">Monto Total:</label>
+                    <label for="">Monto:</label>
                     <input type="text" name="monto" id="monto">
                 </div>
                 <div class="descripcion-consolidado">
@@ -113,108 +97,7 @@
                 </div>
             </div>
 
-            <div class="contenedor-adjunto-consolidado">
-                <h1>Participantes</h1>
-
-                <div class="adjunto-unidad-requirente">
-                    <label> Unidad Requirente: </label>
-                    <select name="consolidado" id="consolidado">
-                   <option value=""></option>
-                    </select>
-                </div>
-                <div class="adjunto-compradora">
-                    <label> Unidad Compradora: </label>
-                    <select name="" id="">
-                        <?php
-                        require_once("consulta_requirente.php");
-                        foreach ($flag as $key => $val) {
-                        ?>
-
-                        <option value="<?php print($val['id_requirente']); ?>">
-                            <?php print($val['unidad']); ?></option>
-                        <?php
-                        }
-
-                        ?>
-                    </select>
-                </div>
-                <div class="adjunto-monto">
-                    <label for="">Monto:</label>
-                    <input type="text" name="mont" id="mont">
-                </div>
-                <div class="adjunto-monto-minimo">
-                    <label for="">Monto Minimo:</label>
-                    <input type="text" name="" id="">
-                </div>
-                <div class="adjunto-administrador">
-                    <label for="">Administrador:</label>
-                    <select name="" id="">
-                        <option value=""></option>
-                    </select>
-                </div>
-                <div class="adjunto-proveedor-adjudicado">
-                    <label for="">Proveedor Adjudicado:</label>
-                    <select name="" id="">
-                        <option value=""></option>
-                    </select>
-                </div>
-                <div class="adjunto-procedimiento-contratacion">
-                    <label for="">Procedimineto Contratación:</label>
-                    <select name="" id="">
-                        <option value=""></option>
-                    </select>
-                </div>
-                <div class="adjunto-numero-contrato">
-                    <label for="">Número Contrato:</label>
-                    <input type="text" name="" id="">
-                </div>
-                <div class="adjunto-procedimiento-compranet">
-                    <label for="">Procedimiento Compranet:</label>
-                    <input type="text" name="" id="">
-                </div>
-                <div class="adjunto-contrato-compranet">
-                    <label for="">Contrato Compranet:</label>
-                    <input type="number" name="" id="">
-                </div>
-                <div class="adjunto-descripcion-documentacion">
-                    <label for="">Descripción Documentación:</label>
-                    <textarea name="" id="" cols="30" rows="5"></textarea>
-                </div>
-                <div class="adjunto-objeto-contratacion">
-                    <label for="">Objeto Contratación:</label>
-                    <textarea name="" id="" cols="30" rows="5"></textarea>
-                </div>
-                <div class="adjunto-convenio-interno">
-                    <label for="">Convenio Interno:</label>
-                    <input type="text" name="" id="">
-                </div>
-                <div class="adjunto-contrato-abierto">
-                    <label for="">Contraro Abierto</label>
-                    <input type="checkbox" name="" id="">
-                </div>
-                 <div class="botones btn-proveedor">
-                    <button id="btg" onclick="ingresar();" class="btn btn-verde" type="button"> Guardar </button>
-                    <button type="button" id="bregresar" class="btn btn-verde" onclick="location.href='principal2.php'"
-                        name="bregresar"> Eliminar </button>
-                </div>
-            </div>
-
-            <div class="tabla-captura-cantidad">
-                <h1>TABLA</h1>
-                <table class="Display" id="myTable">
-                    <thead>
-                        <th>Unidad Requirente</th>
-                        <th>Licitacion</th>
-                        <th>Maximo</th>
-                        <th>Minimo</th>
-                        <th>Monto</th>
-                        </tr>
-                    </thead>
-                </table>
-            </div>
-            <div class="botones btn-listo-tabla">
-                <button id="" class="btn btn-verde" type="button"> Listo </button>
-            </div>
+            
         </div>
     </main>
 

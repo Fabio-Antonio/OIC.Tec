@@ -88,7 +88,7 @@
                 </div>
                 <div class="descripcion-consolidado">
                     <label for="">Descripción</label>
-                    <textarea name="" id="" cols="30" rows="5"></textarea>
+                    <textarea name="descripcion" id="descripcion" cols="30" rows="5"></textarea>
                 </div>
                 <div class="botones btn-captura-procedimiento">
                     <button id="btg" onclick="mostrarText();" class="btn btn-verde" type="button"> Guardar </button>

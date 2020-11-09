@@ -503,7 +503,7 @@
             var selObj3 = document.getElementById('seunidadrequirentecontrato');
             var selObj4 = document.getElementById('seadministradorcontrato');
             var selObj6 = document.getElementById('seproveedoradjudicadocontrato');
-            //var selObj8 = document.getElementById('seconsolidadocontrato');
+            var selObj8 = document.getElementById('seconsolidadocontrato');
 
             if (selObj.length == 0) {
                 $(function() {
@@ -547,7 +547,7 @@
                 document.getElementById("seproveedoradjudicadocontrato").focus();
                 return;
             }
-            /*if (selObj8.length == 0) {
+            if (selObj8.length == 0) {
                 $(function() {
                     $('#my-modal2').modal('show')
                 });
@@ -555,8 +555,10 @@
 
                 document.getElementById("seconsolidadocontrato").focus();
                 return;
-            }*/
+            }
             var min = 0;
+            var valor =0;
+            var envío;
             var numero_contrato = (document.getElementById('innumerocontratoc').value);
             var procedimiento_compranet = (document.getElementById('inprocedimientocompranetc').value);
             var contrato_compranet = (document.getElementById('incontratocompranetc').value);
@@ -574,8 +576,17 @@
 
                 var monto_minimo = min;
             }
+           
+            if(document.getElementById("checkconsolidado").checked == true){
+                
+                var selObj8 = document.getElementById('seconsolidadocontrato');
+                var selIndex8 = selObj8.options[selObj8.selectedIndex].value;
+                envio = selIndex8;
+                alert(envio);
+            }else{
+                envio=valor;
 
-
+            }
 
             var documentacion_descripcion = (document.getElementById('indocumentodescripcionc').value);
             var selIndex = selObj.options[selObj.selectedIndex].value;
@@ -686,6 +697,7 @@
                 "contrato_abierto": contrato_abierto,
                 "monto_maximo": monto_maximo,
                 "monto_minimo": monto_minimo,
+                "consolidado": envio,
             },function(data) {
                 var response = jQuery.parseJSON(data);
                 if(response.success==true){

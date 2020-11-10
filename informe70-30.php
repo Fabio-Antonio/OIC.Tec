@@ -201,8 +201,6 @@ document.getElementById("myOverlay").style.display = "none";
             <tr>
 		<th>Unidad Compradora</th>
 		<th>Numero de Unidad</th>
-              <th>Clave</th>
-              <th>Partida</th>
 		<th>Presupuesto</th>
 		<th>70%</th>
 		<th>30%</th>
@@ -211,8 +209,6 @@ document.getElementById("myOverlay").style.display = "none";
             <tr>
 		 <td><?php $unidad=$_POST["unidad"]; echo $unidad;?></td>
                  <td><?php $numero_unidad=$_POST["numero_unidad"]; echo $numero_unidad;?></td>
-                 <td><?php $claves=$_POST["cli"]; echo $claves;?></td>
-                 <td><?php $partida=$_POST["nombre_presupuesto"]; echo $partida;?></td>
 		 <td><?php $totals=$_POST["totals"]; $tot=number_format($totals); echo '$'.$tot;?></td>
 		 <td><?php $setenta=$_POST["setenta"]; $se= number_format($setenta);echo '$'.$se;?></td>
 		 <td><?php $treinta=$_POST["treinta"]; $tr= number_format($treinta);echo '$'.$tr;?></td>
@@ -235,15 +231,14 @@ document.getElementById("myOverlay").style.display = "none";
         <th>Numero de Contrato</th>
         <th>Monto Maximo</th>
         <th>Procedimiento</th>
-
+        <th>Partida presupuestal</th>
         </tr>
 	  </thead>
           </table>
 
 <script>
 $( document ).ready(function() {
-<?php $id_partida=$_POST["id_partida"];?>
-var partida= '<?=$id_partida?>';
+
 var unidad='<?=$unidad?>';
 var table = $('#myTable').dataTable({
 "language": {
@@ -263,7 +258,7 @@ var table = $('#myTable').dataTable({
             },
 },
 "bProcessing": true,
-"sAjaxSource": "consulta_70_30t.php?unidada="+unidad+"&id_partida="+partida,
+"sAjaxSource": "consulta_70_30t.php?unidada="+unidad,
 "bPaginate":true,
 "sPaginationType":"full_numbers",
 "iDisplayLength": 5,
@@ -271,6 +266,7 @@ var table = $('#myTable').dataTable({
 { mData: 'numero_contrato' } ,
 { mData: 'monto_max', render: $.fn.dataTable.render.number( ',', '.', 2,'$') },
 { mData: 'procedimientos' },
+{ mData: 'nombre' },
 
 ]
 });
@@ -289,6 +285,7 @@ var table = $('#myTable').dataTable({
         <th>Numero de Contrato</th>
         <th>Monto Maximo</th>
         <th>Procedimiento</th>
+        <th>Partida presupuestal</th>
 
 	</tr>
 	  </thead>
@@ -297,8 +294,6 @@ var table = $('#myTable').dataTable({
 
  <script>
         $( document ).ready(function() {
-          <?php $id_partida=$_POST["id_partida"];?>
-var partida= '<?=$id_partida?>';
 var unidad='<?=$unidad?>';
 
 var table = $('#myTable2').dataTable({
@@ -310,7 +305,6 @@ var table = $('#myTable2').dataTable({
             "infoEmpty": "No existen registros",
             "infoFiltered": "(filtered from _MAX_ total records)",
             "loadingRecords": "Cargando...",
-
          "paginate": {
                 "first":      "Primero",
                 "previous":   "Previa",
@@ -320,7 +314,7 @@ var table = $('#myTable2').dataTable({
 },
 
 "bProcessing": true,
-"sAjaxSource": "consulta_70_30a.php?unidada="+unidad+"&id_partida="+partida,
+"sAjaxSource": "consulta_70_30a.php?unidada="+unidad,
 "bPaginate":true,
 "sPaginationType":"full_numbers",
 "iDisplayLength": 5,
@@ -328,6 +322,8 @@ var table = $('#myTable2').dataTable({
 { mData: 'numero_contrato' } ,
 { mData: 'monto_max' , render: $.fn.dataTable.render.number( ',', '.', 2,'$')},
 { mData: 'procedimientos' },
+{ mData: 'nombre' },
+
 
 ]
 });

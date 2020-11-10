@@ -276,9 +276,7 @@ window.location.replace('index');</script>";
                     <h3 class="modal-title" id="modal-title">B.E.S.A</h3>
                 </div>
                 <div class="modal-body">
-                    <h3>
-                        Selecciona la Unidad Compradora
-                    </h3>
+                    
 
                     <form role="form" id="formulario">
                         <div class="form-group">
@@ -292,26 +290,6 @@ window.location.replace('index');</script>";
 
                                 <option value="<?php print($val['id_unidad_compradora']); ?>">
                                     <?php print($val['nombre_unidad_compradora']); ?></option>
-                                <?php
-                                }
-
-                                ?>
-
-                            </select>
-
-
-                            <label class="control-label" for="email-01">Partida Presupuestal:</label>
-                            <select id="partidass" name="partidass">
-                                <?php
-                                require_once("consulta_partida.php");
-
-                                foreach ($flag2 as $key => $val) {
-                                ?>
-
-                                <option value="<?php print($val['id']); ?>">
-                                    <?php print($val['clave']);
-                                        echo " ";
-                                        print($val['nombre']); ?></option>
                                 <?php
                                 }
 

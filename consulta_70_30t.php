@@ -2,17 +2,10 @@
 require_once("conexion.php");
 
 $unidada=$_GET["unidada"];
-$id_partida=$_GET["id_partida"];
 
- $statement = $conn->prepare("SELECT DISTINCT  numero_contrato, monto_max, procedimientos FROM partidas_presupuestales AS pp
-INNER JOIN unidad_compradora AS uc ON pp.id_unidad = uc.id_unidad_compradora
-INNER JOIN contrato AS c ON c.id_unidad_compradora = uc.id_unidad_compradora
-INNER JOIN procedimientos_contratacion AS pc ON c.id_procedimiento_contratacion = pc.id_procedimiento_contratacion
-INNER JOIN partida_presupuesto AS ppr ON pp.id_presupuesto = ppr.id
-WHERE pc.setenta_treinta = 30 AND uc.nombre_unidad_compradora = ? AND c.id_partida = ? ;");
+ $statement = $conn->prepare("SELECT numero_contrato, monto_max, procedimientos,nombre FROM contrato AS c INNER JOIN unidad_compradora AS uc ON c.id_unidad_compradora = uc.id_unidad_compradora INNER JOIN partida_presupuesto AS pp ON c.id_partida = pp.id INNER JOIN procedimientos_contratacion AS pc ON c.id_procedimiento_contratacion = pc.id_procedimiento_contratacion WHERE pc.setenta_treinta = 30 AND uc.nombre_unidad_compradora = ?;");
 
 $statement->bindParam(1,$unidada);
-$statement->bindValue(2,$id_partida);
 $statement->execute();
 
 if($statement){

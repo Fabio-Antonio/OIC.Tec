@@ -3,25 +3,20 @@
   require_once("url.php");
 
    $nombre_unidad_compradora=$_GET["nombre_unidad_compradora"];
-   $id_partida=$_GET["id_partida"];
+  
 
- $statement = $conn->prepare("SELECT clave,nombre,presupuesto,(presupuesto*70)/100 AS setenta,(presupuesto*30)/100 AS treinta,
-nombre_unidad_compradora, numero_unidad
-FROM partidas_presupuestales AS pp
+$statement = $conn->prepare("SELECT nombre_unidad_compradora, numero_unidad, SUM(presupuesto) AS presupuesto, (SUM(presupuesto)*70)/100 AS setenta,(SUM(presupuesto)*30)/100 AS treinta FROM partidas_presupuestales AS pp
 INNER JOIN partida_presupuesto AS pp2 ON pp.id_presupuesto = pp2.id
 INNER JOIN unidad_compradora AS uc ON pp.id_unidad = uc.id_unidad_compradora
-WHERE uc.nombre_unidad_compradora = ? AND pp2.id = ? ;");    
-$statement->bindParam(1,$nombre_unidad_compradora); 
-$statement->bindValue(2,$id_partida);   
+WHERE uc.nombre_unidad_compradora = ?;");    
+$statement->bindParam(1,$nombre_unidad_compradora);   
 $statement->execute();
 
 if($statement){
     while($row = $statement->fetch(PDO::FETCH_ASSOC)){   
-        $cli=$row["clave"];
-        $nombre_presupuesto=$row["nombre"];
 	$totals=$row["presupuesto"];
 	$setenta=$row["setenta"];
-    $treinta=$row["treinta"];
+        $treinta=$row["treinta"];
 	$unidad=$row["nombre_unidad_compradora"];
 	$numero_unidad=$row['numero_unidad'];
     } 
@@ -36,16 +31,9 @@ echo "<script>alert('La consulta a la base de datos es incorrecta')
 window.location.replace('principal2.php');</script>";
 }
 
- $statement = $conn->prepare("SELECT SUM(monto_max) AS total FROM partidas_presupuestales AS pp
-INNER JOIN unidad_compradora AS uc ON pp.id_unidad = uc.id_unidad_compradora
-INNER JOIN contrato AS c ON c.id_unidad_compradora = uc.id_unidad_compradora
-INNER JOIN procedimientos_contratacion AS pc ON c.id_procedimiento_contratacion = pc.id_procedimiento_contratacion
-INNER JOIN partida_presupuesto AS ppr ON pp.id_presupuesto = ppr.id WHERE pc.setenta_treinta = 30 AND uc.nombre_unidad_compradora = ? AND  ppr.id = ?
- AND c.id_partida = ? ;");
+ $statement = $conn->prepare("SELECT SUM(monto_max) AS total FROM contrato AS c INNER JOIN procedimientos_contratacion AS pc ON c.id_procedimiento_contratacion = pc.id_procedimiento_contratacion INNER JOIN unidad_compradora AS uc ON c.id_unidad_compradora = uc.id_unidad_compradora WHERE pc.setenta_treinta = 30 AND uc.nombre_unidad_compradora = ? ");
 
 $statement->bindParam(1,$nombre_unidad_compradora);
-$statement->bindValue(2,$id_partida);
-$statement->bindParam(3,$id_partida);
 
 $statement->execute();
 
@@ -67,14 +55,8 @@ window.location.replace('principal2.php');</script>";
 
 
 
- $statement = $conn->prepare("SELECT SUM(monto_max) AS total FROM partidas_presupuestales AS pp
-INNER JOIN unidad_compradora AS uc ON pp.id_unidad = uc.id_unidad_compradora
-INNER JOIN contrato AS c ON c.id_unidad_compradora = uc.id_unidad_compradora
-INNER JOIN procedimientos_contratacion AS pc ON c.id_procedimiento_contratacion = pc.id_procedimiento_contratacion
-INNER JOIN partida_presupuesto AS ppr ON pp.id_presupuesto
-= ppr.id WHERE pc.setenta_treinta = 70  AND uc.nombre_unidad_compradora = ? AND ppr.id = ?;");
+ $statement = $conn->prepare("SELECT SUM(monto_max) AS total FROM contrato AS c INNER JOIN procedimientos_contratacion AS pc ON c.id_procedimiento_contratacion = pc.id_procedimiento_contratacion INNER JOIN unidad_compradora AS uc ON c.id_unidad_compradora = uc.id_unidad_compradora WHERE pc.setenta_treinta = 70 AND uc.nombre_unidad_compradora = ?");
 $statement->bindParam(1,$nombre_unidad_compradora);
-$statement->bindParam(2,$id_partida);
 $statement->execute();
 
 if($statement){
@@ -101,7 +83,7 @@ header_remove("X-Frame-Options");
 $url=$path."/besa/informe70-30.php";
 curl_setopt($ch,CURLOPT_URL,$url);
 curl_setopt($ch,CURLOPT_POST,TRUE);
-curl_setopt($ch,CURLOPT_POSTFIELDS,"totals=$totals&setenta=$setenta&treinta=$treinta&total=$total&total2=$total2&cli=$cli&unidad=$unidad&numero_unidad=$numero_unidad&id_partida=$id_partida&nombre_presupuesto=$nombre_presupuesto");
+curl_setopt($ch,CURLOPT_POSTFIELDS,"totals=$totals&setenta=$setenta&treinta=$treinta&total=$total&total2=$total2&unidad=$unidad&numero_unidad=$numero_unidad");
 curl_setopt($ch, CURLOPT_HEADER, 0);
    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 0);
     curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);

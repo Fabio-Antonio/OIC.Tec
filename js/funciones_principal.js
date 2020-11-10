@@ -98,9 +98,8 @@ function ingresar2() {
 
 function ingresar3() {
     var selObj = document.getElementById('unidadcom');
-    var selObj2 = document.getElementById('partidass');
     var nombre_unidad_compradora = selObj.options[selObj.selectedIndex].text;
-    var id_partida=selObj2.options[selObj2.selectedIndex].value;
+    
 
     if (nombre_unidad_compradora.length == 0 ) {
         alert("El campo Unidad Compradora es invalido");
@@ -109,14 +108,9 @@ function ingresar3() {
     }
 
 
-    if (id_partida.length == 0 || id_partida<0){
-        alert("El campo Partida_Presupuestal es invalido");
-        document.getElementById('partidass').focus();
-        return;
-    }
 
 
-    window.location = "../besa/consulta_70_30.php?nombre_unidad_compradora=" + nombre_unidad_compradora+"&id_partida="+id_partida;
+    window.location = "../besa/consulta_70_30.php?nombre_unidad_compradora=" + nombre_unidad_compradora;
 
 }
 

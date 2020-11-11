@@ -1,9 +1,23 @@
 
 (function() {
-    $(function() {
-        $('#my-modal').modal('show')
-    });
+   
+    if(localStorage.getItem("modal")=="false"){
+   
+    
+       }else{
+        $(function() {
+            $('#my-modal').modal('show')
+        });
+        localStorage.setItem("modal","false");  
+       }
 }());
+
+function cerrar(){
+    localStorage.clear();
+    window.location="../besa/cerrar.php";
+}
+
+
 
 function ingresar() {
     var clave = (document.getElementById("clave").value);

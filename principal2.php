@@ -1,4 +1,4 @@
-<!--<?php
+<?php
     error_reporting(0);
     session_start();
     $verificar = $_SESSION['usuario'];
@@ -7,7 +7,7 @@
         echo "<script> alert ('Debe iniciar sessión')
 window.location.replace('index');</script>";
     }
-    ?>-->
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 <link href="https://cdn.datos.gob.mx/assets/css/main.css" rel="stylesheet">
@@ -52,7 +52,7 @@ window.location.replace('index');</script>";
             <a href="numero_de_contrato.php" class="w3-bar-item w3-button">Consulta de Contrato</a>
 
 
-            <a href="cerrar.php" class="w3-bar-item w3-button">Logout -></a>
+            <a onclick="cerrar();" class="w3-bar-item w3-button">Logout -></a>
         </div>
         <!-- Page Content -->
         <div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>

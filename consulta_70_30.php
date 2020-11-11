@@ -2,14 +2,14 @@
    require_once("conexion.php");
   require_once("url.php");
 
-   $nombre_unidad_compradora=$_GET["nombre_unidad_compradora"];
+   $id_unidad_compradora=$_GET["id_unidad_compradora"];
   
 
 $statement = $conn->prepare("SELECT nombre_unidad_compradora, numero_unidad, SUM(presupuesto) AS presupuesto, (SUM(presupuesto)*70)/100 AS setenta,(SUM(presupuesto)*30)/100 AS treinta FROM partidas_presupuestales AS pp
 INNER JOIN partida_presupuesto AS pp2 ON pp.id_presupuesto = pp2.id
 INNER JOIN unidad_compradora AS uc ON pp.id_unidad = uc.id_unidad_compradora
-WHERE uc.nombre_unidad_compradora = ?;");    
-$statement->bindParam(1,$nombre_unidad_compradora);   
+WHERE uc.id_unidad_compradora = ?;");    
+$statement->bindParam(1,$id_unidad_compradora);   
 $statement->execute();
 
 if($statement){
@@ -31,9 +31,9 @@ echo "<script>alert('La consulta a la base de datos es incorrecta')
 window.location.replace('principal2.php');</script>";
 }
 
- $statement = $conn->prepare("SELECT SUM(monto_max) AS total FROM contrato AS c INNER JOIN procedimientos_contratacion AS pc ON c.id_procedimiento_contratacion = pc.id_procedimiento_contratacion INNER JOIN unidad_compradora AS uc ON c.id_unidad_compradora = uc.id_unidad_compradora WHERE pc.setenta_treinta = 30 AND uc.nombre_unidad_compradora = ? ");
+ $statement = $conn->prepare("SELECT SUM(monto_max) AS total FROM contrato AS c INNER JOIN procedimientos_contratacion AS pc ON c.id_procedimiento_contratacion = pc.id_procedimiento_contratacion INNER JOIN unidad_compradora AS uc ON c.id_unidad_compradora = uc.id_unidad_compradora WHERE pc.setenta_treinta = 30 AND uc.id_unidad_compradora = ? ");
 
-$statement->bindParam(1,$nombre_unidad_compradora);
+$statement->bindParam(1,$id_unidad_compradora);
 
 $statement->execute();
 
@@ -55,8 +55,8 @@ window.location.replace('principal2.php');</script>";
 
 
 
- $statement = $conn->prepare("SELECT SUM(monto_max) AS total FROM contrato AS c INNER JOIN procedimientos_contratacion AS pc ON c.id_procedimiento_contratacion = pc.id_procedimiento_contratacion INNER JOIN unidad_compradora AS uc ON c.id_unidad_compradora = uc.id_unidad_compradora WHERE pc.setenta_treinta = 70 AND uc.nombre_unidad_compradora = ?");
-$statement->bindParam(1,$nombre_unidad_compradora);
+ $statement = $conn->prepare("SELECT SUM(monto_max) AS total FROM contrato AS c INNER JOIN procedimientos_contratacion AS pc ON c.id_procedimiento_contratacion = pc.id_procedimiento_contratacion INNER JOIN unidad_compradora AS uc ON c.id_unidad_compradora = uc.id_unidad_compradora WHERE pc.setenta_treinta = 70 AND uc.id_unidad_compradora = ?");
+$statement->bindParam(1,$id_unidad_compradora);
 $statement->execute();
 
 if($statement){

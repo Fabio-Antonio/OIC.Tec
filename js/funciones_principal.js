@@ -112,10 +112,10 @@ function ingresar2() {
 
 function ingresar3() {
     var selObj = document.getElementById('unidadcom');
-    var nombre_unidad_compradora = selObj.options[selObj.selectedIndex].text;
+    var id_unidad_compradora = selObj.options[selObj.selectedIndex].value;
     
 
-    if (nombre_unidad_compradora.length == 0 ) {
+    if (id_unidad_compradora.length == 0 ) {
         alert("El campo Unidad Compradora es invalido");
         document.getElementById('unidadcom').focus();
         return;
@@ -124,7 +124,7 @@ function ingresar3() {
 
 
 
-    window.location = "../besa/consulta_70_30.php?nombre_unidad_compradora=" + nombre_unidad_compradora;
+    window.location = "../besa/consulta_70_30.php?id_unidad_compradora=" + id_unidad_compradora;
 
 }
 

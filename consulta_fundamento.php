@@ -24,7 +24,7 @@ $conn = null;
 
 $ch = curl_init();
 header_remove("X-Frame-Options");
-$url=$path."/besa/informe70-30.php";
+$url=$path."/besa/fundamentos_procedimientos.php";
 // definimos la URL a la que hacemos la petición
 curl_setopt($ch, CURLOPT_URL,$url);
 // indicamos el tipo de petición: POST

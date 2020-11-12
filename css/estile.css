@@ -739,3 +739,133 @@ textarea:hover{
 }
 
 }
+
+
+/*Entregables*/
+.main-entregables {
+  height: 130vh;
+  width: 1010px;
+  margin: 0 auto;
+}
+.contenedor-gris-one{
+  height: 120vh;
+  width: 1010px;
+  grid-gap: 10px;
+  background-color: #d8d8d8;
+  
+}
+.contenedor-gris-entregables{
+  grid-area: contenedor-gris-entregables;
+}
+.contenedor-gris-entregables {
+  display: grid;
+  grid-template-areas:
+    "entregables entregables"
+    "contrato-entregables fechaentrega-entregables"
+    "fechaentregamaxima-entregables nombreentregable-entregables"
+    "cantidadentregable-entregables direccionentregable-entregables"
+    "descripcion-entregables descripcion-entregables"
+    "btn-entregables btn-entregables"
+    ;
+    grid-template-columns: repeat(2 1fr);
+    grid-template-rows: 100px 100px 100px 100px 250px;
+  
+}
+
+/*Nombramos los elementos*/
+.contenedor-gris-entregables h1{
+  grid-area: entregables;
+  text-align: center;
+}
+.contenedor-gris-entregables .contrato-entregables{
+  grid-area: contrato-entregables;
+}
+.contenedor-gris-entregables .fechaentrega-entregables{
+  grid-area: fechaentrega-entregables;
+}
+.contenedor-gris-entregables .fechaentregamaxima-entregables{
+  grid-area: fechaentregamaxima-entregables;
+}
+.contenedor-gris-entregables .nombreentregable-entregables{
+  grid-area: nombreentregable-entregables;
+}
+.contenedor-gris-entregables .cantidadentregable-entregables{
+  grid-area: cantidadentregable-entregables;
+}
+.contenedor-gris-entregables .direccionentregable-entregables{
+  grid-area: direccionentregable-entregables;
+}
+.contenedor-gris-entregables .descripcion-entregables{
+  grid-area: descripcion-entregables;
+}
+.contenedor-gris-entregables .btn-entregables{
+  grid-area: btn-entregables;
+}
+
+
+.contenedor-gris-entregables h1::after {
+  content: "";
+  display: block;
+  width: 10rem;
+  height: 0.2rem;
+  background-color: #0c9;
+}
+.contenedor-gris-entregables textarea{
+  width: 950px;
+  height: 150px;
+  background-color: #fff;
+  color: #000;
+  border: 0.2rem solid rgba(0, 0, 0, 0.15);
+  padding: 1rem 0.2rem;
+  border-radius: 1rem;
+}
+.contenedor-gris-entregables input {
+  width: 450px;
+  height: 40px;
+  background-color: #fff;
+  color: #000;
+  border: 0.2rem solid rgba(0, 0, 0, 0.15);
+  padding: 1rem 0.2rem;
+  border-radius: 1rem;
+}
+
+.contenedor-gris-entregables select
+{
+  width: 450px;
+  height: 40px;
+  background-color: #fff;
+  color: #000;
+  border: 0.2rem solid rgba(0, 0, 0, 0.15);
+  border-radius: 1rem;
+}
+
+.contrato-entregables,
+.fechaentregamaxima-entregables,
+.cantidadentregable-entregables,
+.descripcion-entregables{
+  padding-left: 25px;
+}
+
+input[type=submit]{
+  display: inline-block;
+  padding: 1rem 3rem;
+  color: #fff;
+  border-radius: 1rem;
+  cursor: pointer;
+  background-color: #0c9;
+  border-color: #0c9;
+  width: 130px;
+  height: 50px;
+  font-size: 15px;
+}
+
+input[type=submit]:hover{
+background: rgba(169,3,41,1);
+background: -moz-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(169,3,41,1)), color-stop(44%, rgba(143,2,34,1)), color-stop(100%, rgba(109,0,25,1)));
+background: -webkit-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
+background: -o-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
+background: -ms-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
+background: linear-gradient(to right, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019', GradientType=1 );
+}

@@ -1,56 +1,32 @@
 <?php
     require_once("conexion.php");
      
-    $numero_contrato = $_GET["numero_contrato"];
-   		
-     $fecha_entrega = $_GET["fecha_entrega"];
-	$nombre_entregable = $_GET["nombre_entregable"];
-	$fecha_entrega_maxima=$_GET["fecha_entrega_maxima"];
-	$cantidad_entregable=$_GET["cantidad_entregable"];
-	$direccion_entregable=$_GET["direccion_entregable"];
-	$descripcion=$_GET['descripcion'];
-
-$query=$conn->prepare("SELECT id_contrato FROM contrato  WHERE numero_contrato=?");
-$query->bindParam(1, $numero_contrato);
-$query->execute();
-
-if($query)
-{
-while($row=$query->fetch())
-        {
-$dato=$row['id_contrato'];
-
-
-}
-
-
-}
+    $numero_contrato = $_POST["numero_contrato"];
+     $fecha_entrega = $_POST["fecha_entrega"];
+	$nombre_entregable = $_POST["nombre_entregable"];
+	$cantidad_entregable=$_POST["cantidad_entregable"];
+	$direccion_entregable=$_POST["direccion_entregable"];
+	$descripcion=$_POST['descripcion'];
 
 
 
-
-$statement = $conn->prepare("INSERT INTO entregables (id_contrato,fecha_entrega,nombre_entregable,fecha_entrega_maxima,cantidad_entregable,direccion_entregable,descripcion)VALUES(?,?,?,?,?,?,?)");
-$statement->bindValue(1, $dato);
+$statement = $conn->prepare("INSERT INTO entregables (id_contrato,fecha_entrega,nombre_entregable,cantidad_entregable,direccion_entregable,descripcion)VALUES(?,?,?,?,?,?)");
+$statement->bindValue(1, $numero_contrato);
 $statement->bindParam(2, $fecha_entrega);
 $statement->bindParam(3, $nombre_entregable);
-$statement->bindParam(4, $fecha_entrega_maxima);
-$statement->bindValue(5, $cantidad_entregable);
-$statement->bindParam(6, $direccion_entregable);
-$statement->bindParam(7, $descripcion);
+$statement->bindValue(4, $cantidad_entregable);
+$statement->bindParam(5, $direccion_entregable);
+$statement->bindParam(6, $descripcion);
 
 
 
 
 $statement->execute();
-   
-  
  
  if($statement){
-echo "<script>alert('Datos agregados correctamente')
-window.location.replace('consulta_contrato3.php');</script>";
+	echo json_encode(array("success"=>true));
 }else{
-echo "<script>alert('Error de conexion')
-window.location.replace('consulta_contrato3.php');</script>";
+	echo json_encode(array("success"=>false));
 }
- $conn=null;       
+    
 ?>

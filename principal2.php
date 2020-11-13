@@ -96,7 +96,8 @@ window.location.replace('index');</script>";
                     </li>
                     <li><i class="fas fa-plus-circle"></i> Recepción</li>
                     <li><i class="fas fa-plus-circle"></i> Terminación Anticipada</li>
-                    <li><i class="fas fa-plus-circle"></i><a href="partidas_presupuestales_partida.php"> Asignación de Partidas</a>
+                    <li><i class="fas fa-plus-circle"></i><a href="partidas_presupuestales_partida.php"> Asignación de
+                            Partidas</a>
                     </li>
                 </ul>
                 <p></p>
@@ -135,7 +136,8 @@ window.location.replace('index');</script>";
                 </div>
                 <h3>PRODUCCIÓN</h3>
                 <ul>
-                    <li><i class="fas fa-plus-circle" data-toggle="modal" data-target="#mymodal4"></i> Informe 70-30</li>
+                    <li><i class="fas fa-plus-circle" data-toggle="modal" data-target="#mymodal4"></i> Informe 70-30
+                    </li>
                     <li><i class="fas fa-plus-circle"></i> <a href="consulta_top.php">Top por Contrato</a></li>
                     <li><i class="fas fa-plus-circle"></i> Informe Montos por Procedimiento</li>
                 </ul>
@@ -276,7 +278,7 @@ window.location.replace('index');</script>";
                     <h3 class="modal-title" id="modal-title">B.E.S.A</h3>
                 </div>
                 <div class="modal-body">
-                    
+
 
                     <form role="form" id="formulario">
                         <div class="form-group">
@@ -385,15 +387,14 @@ window.location.replace('index');</script>";
                             <label class="control-label" for="email-01">Partida:</label>
                             <input class="form-control" id="partida" placeholder="Ejemplo: Terrenos" type="text"
                                 required>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="email-01">Presupuesto:</label>
+                            <input class="form-control" id="presupuesto" placeholder="presupuesto" type="text" required>
+                        </div>
 
-                            <div class="form-group">
-                                <label class="control-label" for="email-01">Presupuesto:</label>
-                                <input class="form-control" id="presupuesto" placeholder="presupuesto" type="text"
-                                    required>
-                            </div>
-
-                            <button class="btn btn-default btn-success" type="button" name="submit"
-                                onclick="ingresar();">Enviar</button>
+                        <button class="btn btn-default btn-success" type="button" name="submit"
+                            onclick="ingresar();">Enviar</button>
                     </form>
                 </div>
                 <div class="modal-footer">

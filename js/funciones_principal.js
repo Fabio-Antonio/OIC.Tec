@@ -94,7 +94,7 @@ function ingresar2() {
         document.getElementById("mensaje").focus();
         return;
     }
-    if (!(/^[a-zA-Z0-9.\s]*$/i.test(mensaje))) {
+    if (!(/^[a-zA-Z0-9zñÑáéíóúÁÉÍÓÚ.\s]*$/i.test(mensaje))) {
         alert("El contiene caracteres no permitidos");
         document.getElementById("mensaje").focus();
         return;

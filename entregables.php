@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<link href="https://cdn.datos.gob.mx/assets/css/main.css" rel="stylesheet">
+<link href="https://cdn.datos.gob.mx/bower_components/polymer/polymer.html" rel="import">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,8 +14,7 @@
     <link href="https://cdn.datos.gob.mx/bower_components/dgm-footer/dgm-footer.html" rel="import">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/estile.css">
 
@@ -105,98 +105,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 
-    <script lenguage="javascript" type="text/javascript">
-    function mostrarText() {
-        var selObj = document.getElementById('secontrae');
-        var fecha_entrega = (document.getElementById('infechaentregamo').value);
-        var fecha_entrega_maxima = (document.getElementById('infechaentregamaxima').value);
-        var nombre_entregable = (document.getElementById('innombreentregables').value);
-        var cantidad_entregable = (document.getElementById('incantidade').value);
-        var direccion_entregable = (document.getElementById('indireccione').value);
-        var descripcion = (document.getElementById('descripcionn').value);
-
-
-        var selIndex = selObj.options[selObj.selectedIndex].text;
-        var prueba = new Date(fecha_entrega);
-        var prueba2 = new Date(fecha_entrega_maxima);
-
-        if (prueba > prueba2 || String(fecha_entrega) == "" || String(fecha_entrega_maxima) == "") {
-
-            $(function() {
-                $('#my-modal2').modal('show')
-            });
-
-            return;
-        }
-        if (cantidad_entregable.length == 0) {
-            $(function() {
-                $('#my-modal2').modal('show')
-                document.getElementById("incantidade").focus();
-
-            });
-            return;
-        }
-
-        if (nombre_entregable.length == 0 || nombre_entregable.length >= 26) {
-            $(function() {
-                $('#my-modal2').modal('show')
-            });
-
-            document.getElementById("innombreentregables").focus();
-            return;
-        }
-        if (!(/^[A-Z]+$/i.test(nombre_entregable))) {
-            $(function() {
-                $('#my-modal2').modal('show')
-            });
-
-            document.getElementById("innombreentregables").focus();
-            return;
-        }
-
-
-        if (direccion_entregable.length == 0) {
-            $(function() {
-                $('#my-modal2').modal('show')
-            });
-
-            document.getElementById("indireccione").focus();
-            return;
-        }
-        if (!(/^[A-Z]+$/i.test(direccion_entregable))) {
-            $(function() {
-                $('#my-modal2').modal('show')
-            });
-
-            document.getElementById("indireccione").focus();
-            return;
-        }
-
-        if (descripcion.length == 0) {
-            $(function() {
-                $('#my-modal2').modal('show')
-            });
-
-            document.getElementById("descripcionn").focus();
-            return;
-        }
-        if (!(/^[A-Z]+$/i.test(descripcion))) {
-            $(function() {
-                $('#my-modal2').modal('show')
-            });
-
-            document.getElementById("descripcionn").focus();
-            return;
-        }
-
-
-        //window.location="entregable.php?numero_contrato="+selIndex+"&fecha_entrega="+fecha_entrega+"&nombre_entregable="+nombre_entregable+"&fecha_entrega_maxima="+fecha_entrega_maxima+"&cantidad_entregable="+cantidad_entregable+"&direccion_entregable="+direccion_entregable+"&descripcion="+descripcion;
-        $(function() {
-            $('#my-modal').modal('show')
-        });
-
-
-    }
+    <script lenguage="javascript" src="js/funciones_entregables.js"type="text/javascript">
     </script>
 
     <main class="main-entregables">
@@ -248,8 +157,8 @@
                     </div>
                     <div class="botones btn-entregables">
                         <!--button type="button" id="bcomprobacion" class="btn btn-primary" onclick="mostrarText();" name="button"> Guardar </button>-->
-                        <input type="submit" id="bcomprobacion" class="btn-verde-submit" onclick="mostrarText();"
-                            name="button" value="Guardar" />
+                        <button type="button" id="bcomprobacion" class="btn-verde-submit" onclick="mostrarText();"
+                            name="button" value="Guardar" ></button>
                         <button type="button" id="bregresar" class="btn btn-verde"
                             onclick="location.href='principal2.php'" name="bregresar"> Regresar </button>
                     </div>

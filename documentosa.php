@@ -6,7 +6,6 @@
      $fecha_documento = $_GET["fecha_documento"];
 	$descripcion = $_GET["descripcion"];
 
-echo "bandera";
 $query=$conn->prepare("SELECT id_contrato FROM contrato  WHERE numero_contrato=?");
 $query->bindParam(1, $numero_contrato);
 $query->execute();
@@ -30,8 +29,6 @@ $statement = $conn->prepare("INSERT INTO documentos_adicionales (id_contrato,fec
 $statement->bindValue(1, $dato);
 $statement->bindParam(2, $fecha_documento);
 $statement->bindParam(3, $descripcion);
-
-$statement->execute();
    
   
  

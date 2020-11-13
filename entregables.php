@@ -226,10 +226,6 @@
                         <label> Fecha entraga: </label>
                         <input id="infechaentregamo" name="fecha_entrega" type="date" required>
                     </div>
-                    <div class="fechaentregamaxima-entregables">
-                        <label> Fecha Entraga Maxima: </label>
-                        <input id="infechaentregamaxima" name="fecha_entrega_maxima" type="date" required>
-                    </div>
                     <div class="nombreentregable-entregables">
                         <label> Nombre Entregable: </label>
                         <input type="text" id="innombreentregables" name="nombre_entregable"

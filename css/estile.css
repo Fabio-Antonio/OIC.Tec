@@ -543,8 +543,8 @@ select:hover{
   display: grid;
   grid-template-areas:
     "captura-procedimiento-consolidado captura-procedimiento-consolidado"
-    "consolidador-captura consolidador-captura"
-    "numero-lisitacion-captura monto-total-captura"
+    "consolidador-captura numero-lisitacion-captura"
+    "monto-total-captura ."
     "descripcion-consolidado descripcion-consolidado"
     "btn-captura-procedimiento btn-captura-procedimiento";
   grid-template-columns: repeat(2 1fr);
@@ -611,11 +611,8 @@ textarea:hover{
   border: 0.2rem solid rgba(0, 0, 0, 0.15);
   border-radius: 1rem;
 }
-.consolidador-captura{
-  margin: 0 auto;
-  width: 450px;
-}
 
+.consolidador-captura,
 .numero-lisitacion-captura,
 .monto-total-captura,
 .descripcion-consolidado{
@@ -762,8 +759,8 @@ textarea:hover{
   grid-template-areas:
     "entregables entregables"
     "contrato-entregables fechaentrega-entregables"
-    "fechaentregamaxima-entregables nombreentregable-entregables"
-    "cantidadentregable-entregables direccionentregable-entregables"
+    "nombreentregable-entregables cantidadentregable-entregables"
+    "direccionentregable-entregables ."
     "descripcion-entregables descripcion-entregables"
     "btn-entregables btn-entregables"
     ;
@@ -782,9 +779,6 @@ textarea:hover{
 }
 .contenedor-gris-entregables .fechaentrega-entregables{
   grid-area: fechaentrega-entregables;
-}
-.contenedor-gris-entregables .fechaentregamaxima-entregables{
-  grid-area: fechaentregamaxima-entregables;
 }
 .contenedor-gris-entregables .nombreentregable-entregables{
   grid-area: nombreentregable-entregables;
@@ -840,8 +834,8 @@ textarea:hover{
 }
 
 .contrato-entregables,
-.fechaentregamaxima-entregables,
-.cantidadentregable-entregables,
+.nombreentregable-entregables,
+.direccionentregable-entregables,
 .descripcion-entregables{
   padding-left: 25px;
 }

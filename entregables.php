@@ -251,7 +251,7 @@
                         <input type="submit" id="bcomprobacion" class="btn-verde-submit" onclick="mostrarText();"
                             name="button" value="Guardar" />
                         <button type="button" id="bregresar" class="btn btn-verde"
-                            onclick="location.href='principal.php'" name="bregresar"> Regresar </button>
+                            onclick="location.href='principal2.php'" name="bregresar"> Regresar </button>
                     </div>
 
                 </div>

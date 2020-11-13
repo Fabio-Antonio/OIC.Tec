@@ -719,21 +719,6 @@ textarea:hover{
   grid-template-rows: 100px 100px 100px 130px 100px 100px;
 }
 
-.tabla-de-captura{
-  margin: 0;
-  border:2px solid red;
-  background-color: #fff;
-  width: 370px;
-  min-height: calc(100vh - 100px -100%);
-}
-.Display{
-  margin-top: 20px;
-}
-.tabla-captura-cantidad{
-  display: grid;
-  padding-top: 790px;
-  padding-left: 0px;
-}
 
 }
 

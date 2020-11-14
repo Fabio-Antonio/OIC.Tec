@@ -129,6 +129,28 @@ function ingresar3() {
 }
 
 
+function consolidado() {
+    var selObj = document.getElementById('licitacion');
+    var id_consolidado = selObj.options[selObj.selectedIndex].value;
+    
+
+    if (id_consolidado == 0 ) {
+        alert("El campo Unidad Compradora es invalido");
+        document.getElementById('licitacion').focus();
+        return;
+    }
+
+
+
+
+    window.location = "../besa/consulta_licitacion.php?id_consolidado="+id_consolidado;
+
+}
+
+
+
+
+
 function ingresar4() {
     var selObj = document.getElementById('partidas');
     var partida_presupuestal = selObj.options[selObj.selectedIndex].value;

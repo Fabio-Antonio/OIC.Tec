@@ -139,7 +139,7 @@ window.location.replace('index');</script>";
                     <li><i class="fas fa-plus-circle" data-toggle="modal" data-target="#mymodal4"></i> Informe 70-30
                     </li>
                     <li><i class="fas fa-plus-circle"></i> <a href="consulta_top.php">Top por Contrato</a></li>
-                    <li><i class="fas fa-plus-circle"></i> Informe Montos por Procedimiento</li>
+                    <li><i class="fas fa-plus-circle" data-toggle="modal" data-target="#mymodal6"></i> Informe Consolidado </li>
                 </ul>
                 <p></p>
             </div>
@@ -403,6 +403,60 @@ window.location.replace('index');</script>";
             </div>
         </div>
     </div>
+
+
+    <div class="modal fade" role="dialog" id="mymodal6" aria-labelledby="modal-title"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="modal-title">B.E.S.A</h3>
+                </div>
+                <div class="modal-body">
+
+
+                    <form role="form" id="formulario">
+                        <div class="form-group">
+                            <label class="control-label" for="email-01">Licitacion:</label>
+                            <select id="licitacion" name="licitacion">
+                                <?php
+                                require_once("consulta_principal.php");
+
+                                foreach ($flag2 as $key => $val) {
+                                ?>
+
+                                <option value="<?php print($val['id_consolidado']); ?>">
+                                    <?php print($val['licitacion']); ?></option>
+                                <?php
+                                }
+
+                                ?>
+
+                            </select>
+
+
+                        </div>
+
+
+
+
+                        <button class="btn btn-default btn-success" type="button" name="submit"
+                            onclick="consolidado();">Enviar</button>
+
+                    </form>
+
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" data-dismiss="modal">cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>

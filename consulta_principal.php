@@ -14,4 +14,20 @@ $valor=serialize($flag);
 }
 
 
+$query=$conn->prepare("SELECT id_consolidado,licitacion FROM consolidado");
+
+ $query->execute();
+if($query){
+while($row=$query->fetch()){
+$flag2[]=$row;
+}
+$valor2=serialize($flag2);
+
+}
+
+
+
+
+
+
 ?>

@@ -17,11 +17,11 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.js">
     </script>
-    
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/estile.css">
+
 </head>
 
 <body>
@@ -77,7 +77,7 @@
                 <h1> INFORME CONSOLIDADO </h1>
                 <div class="tabla-consolidador">
                     <table class="table table" id="table7030">
-                       <!-- <caption>Consolidador</caption>-->
+                        <!-- <caption>Consolidador</caption>-->
                         <tr>
                             <th>Clave requirente</th>
                             <th>Unidad Requirente</th>
@@ -124,32 +124,32 @@
                     </table>
 
                     <script>
-                        $(document).ready(function () {
-                           <?php $id_consolidado = $_POST["id_consolidado"];?>
-                            var id_consolidado = '<?=$id_consolidado?>';
-                            var table = $('#myTable').dataTable({
-                                "language": {
-                                    "lengthMenu": "Mostrar _MENU_ Inserciones por página",
-                                    "zeroRecords": "No se encontraron resultados - lo siento",
-                                    "search": "Buscar:",
-                                    "info": "Mostrar páginas _PAGE_ of _PAGES_",
-                                    "infoEmpty": "No existen registros",
-                                    "infoFiltered": "(filtered from _MAX_ total records)",
-                                    "loadingRecords": "Cargando...",
+                    $(document).ready(function() {
+                        <?php $id_consolidado = $_POST["id_consolidado"];?>
+                        var id_consolidado = '<?=$id_consolidado?>';
+                        var table = $('#myTable').dataTable({
+                            "language": {
+                                "lengthMenu": "Mostrar _MENU_ Inserciones por página",
+                                "zeroRecords": "No se encontraron resultados - lo siento",
+                                "search": "Buscar:",
+                                "info": "Mostrar páginas _PAGE_ of _PAGES_",
+                                "infoEmpty": "No existen registros",
+                                "infoFiltered": "(filtered from _MAX_ total records)",
+                                "loadingRecords": "Cargando...",
 
-                                    "paginate": {
-                                        "first": "Primero",
-                                        "previous": "Previa",
-                                        "next": "Siguiente",
-                                        "last": "Última"
-                                    },
+                                "paginate": {
+                                    "first": "Primero",
+                                    "previous": "Previa",
+                                    "next": "Siguiente",
+                                    "last": "Última"
                                 },
-                                "bProcessing": true,
-                                "sAjaxSource": "contratos_consolidado.php?id_consolidado=" + id_consolidado,
-                                "bPaginate": true,
-                                "sPaginationType": "full_numbers",
-                                "iDisplayLength": 5,
-                                "aoColumns": [{
+                            },
+                            "bProcessing": true,
+                            "sAjaxSource": "contratos_consolidado.php?id_consolidado=" + id_consolidado,
+                            "bPaginate": true,
+                            "sPaginationType": "full_numbers",
+                            "iDisplayLength": 5,
+                            "aoColumns": [{
                                     mData: 'nombre_unidad_compradora'
                                 },
                                 {
@@ -182,15 +182,61 @@
                                 },
 
 
-                                ]
-                            });
+                            ]
                         });
+                    });
                     </script>
                 </div>
             </div>
             <div class="barra-progreso">
-                <h1> PROGRESO </h1>
-                <progress class="progress progress-striped progress-animated progreso" value="50" max="100"></progress>
+
+                <canvas id="myCanvas" width="500" height="200"></canvas>
+                <script>
+                var canvas = document.getElementById('myCanvas');
+                var context = canvas.getContext('2d');
+                var al = 0;
+                var start = 4.72;
+                var cw = context.canvas.width / 2;
+                var ch = context.canvas.height / 2;
+                var diff;
+                var monto_total = '<?=$monto_total?>';
+                <?php $total = $_POST["total"];?>
+                var total = '<?=$total?>';
+                var valor = 0;
+                function evaluar(total,monto_total){
+                   return ((total*100)/monto_total);  
+                }
+                function progressBar() {
+                    diff = (al / 100) * Math.PI * 2;
+                    context.clearRect(0, 0, 400, 200);
+                    context.beginPath();
+                    context.arc(cw, ch, 80, 0, 2 * Math.PI, false);
+                    context.fillStyle = '#FFF';
+                    context.fill();
+                    context.strokeStyle = '#6F7271';
+                    context.stroke();
+                    context.fillStyle = '#000';
+                    context.strokeStyle = '#9D2449';
+                    context.textAlign = 'center';
+                    context.lineWidth = 30;
+                    context.font = '10pt Verdana';
+                    context.beginPath();
+                    context.arc(cw, ch, 80, start, diff + start, false);
+                    context.stroke();
+                    context.fillText(al + '%', cw + 2, ch + 6);
+                     valor = evaluar(total,monto_total);
+                    if (al >= valor) {
+                        clearTimeout(bar);
+                    }
+
+                    al++;
+                }
+
+                var bar = setInterval(progressBar, 50);
+               
+                </script>
+
+
             </div>
             <div class="botones-informe">
                 <button type="button" id="bregresar" class="btn btn-verde" onclick="location.href='principal2.php'"
@@ -245,15 +291,15 @@
     </footer>
 
     <script>
-        function w3_open() {
-            document.getElementById("mySidebar").style.display = "block";
-            document.getElementById("myOverlay").style.display = "block";
-        }
+    function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("myOverlay").style.display = "block";
+    }
 
-        function w3_close() {
-            document.getElementById("mySidebar").style.display = "none";
-            document.getElementById("myOverlay").style.display = "none";
-        }
+    function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("myOverlay").style.display = "none";
+    }
     </script>
 </body>
 

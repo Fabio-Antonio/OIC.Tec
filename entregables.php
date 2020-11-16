@@ -157,7 +157,7 @@
                     </div>
                     <div class="botones btn-entregables">
                         <!--button type="button" id="bcomprobacion" class="btn btn-primary" onclick="mostrarText();" name="button"> Guardar </button>-->
-                        <button type="button" id="bcomprobacion" class="btn-verde-submit" onclick="mostrarText();"
+                        <button type="button" id="bcomprobacion" class="btn btn-verde" onclick="mostrarText();"
                             name="button" value="Guardar" ></button>
                         <button type="button" id="bregresar" class="btn btn-verde"
                             onclick="location.href='principal2.php'" name="bregresar"> Regresar </button>

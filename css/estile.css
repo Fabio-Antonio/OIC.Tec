@@ -848,3 +848,103 @@ background: -ms-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%,
 background: linear-gradient(to right, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019', GradientType=1 );
 }
+
+
+/*INFORME CONSOLIDADO*/
+.main-informe-consolidado {
+  height: 240vh;
+  width: 1050px;
+  margin: 0 auto;
+}
+.contenedor-gris-informe-consolidado-one{
+  height: 230vh;
+  width: 1150px;
+  display: grid;
+  background-color: #d8d8d8;
+  grid-template-areas:
+  "conenedor-informe-consolidado"
+  "contenedor-contratos-informe"
+  "barra-progreso"
+  "botones-informe" ;
+  grid-template-rows: 600px 600px;
+  grid-template-columns: 1fr;
+}
+
+.contenedor-gris-informe-consolidado-one .conenedor-informe-consolidado{
+  grid-area:conenedor-informe-consolidado ;
+}
+.contenedor-gris-informe-consolidado-one .contenedor-contratos-informe{
+  grid-area: contenedor-contratos-informe;
+}
+.contenedor-gris-informe-consolidado-one .botones-informe{
+  grid-area: botones-informe;
+}
+.contenedor-gris-informe-consolidado-one .barra-progreso{
+  grid-area: barra-progreso;
+  text-align: center;
+}
+.botones-informe{
+  margin: 0 auto;
+}
+.barra-progreso .progreso{
+  border: 2px solid blue;
+  width: 1fr;
+  height: 30px;
+}
+.barra-progreso .progreso:hover{
+  border:2px solid #0c9;
+}
+
+.conenedor-informe-consolidado{
+  display: grid;
+  grid-template-areas: 
+  "informe-consolidado "
+  "tabla-consolidador "
+  ;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px;
+  
+}
+.conenedor-informe-consolidado h1{
+  grid-area: informe-consolidado;
+  text-align: center;
+}
+ 
+.conenedor-informe-consolidado .tabla-consolidador{
+  grid-area: tabla-consolidador;
+}
+
+
+.contenedor-contratos-informe{
+  display: grid;
+  grid-template-areas: 
+  "contratos "
+  "tabla-contrato ";
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px 300px;
+}
+
+.contenedor-contratos-informe h1,h2{
+  grid-area: contratos;
+  text-align: center;
+}
+.contenedor-contratos-informe .tabla-contrato{
+  grid-area: tabla-contrato;
+}
+
+
+.tabla-contrato  table{
+  font-size: 12px;
+  
+}
+.tabla-contrato table th {
+  text-align: center;
+}
+
+.contenedor-gris-informe-consolidado-one h1::after {
+  content: "";
+  display: block;
+  width: 10rem;
+  height: 0.2rem;
+  background-color: #0c9;
+}

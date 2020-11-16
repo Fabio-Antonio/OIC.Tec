@@ -125,7 +125,7 @@
 
                     <script>
                         $(document).ready(function () {
-                           <? php $id_consolidado = $_POST["id_consolidado"];?>
+                           <?php $id_consolidado = $_POST["id_consolidado"];?>
                             var id_consolidado = '<?=$id_consolidado?>';
                             var table = $('#myTable').dataTable({
                                 "language": {

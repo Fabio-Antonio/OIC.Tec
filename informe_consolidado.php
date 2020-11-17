@@ -124,8 +124,7 @@
 
                     <script>
                     $(document).ready(function() {
-                        <
-                        ? php $id_consolidado = $_POST["id_consolidado"]; ? >
+                        <?php $id_consolidado = $_POST["id_consolidado"];?>
                         var id_consolidado = '<?=$id_consolidado?>';
                         var table = $('#myTable').dataTable({
                             "language": {
@@ -199,8 +198,8 @@
                 var cw = context.canvas.width / 2;
                 var ch = context.canvas.height / 2;
                 var diff;
-                var monto_total = '<?=$monto_total?>'; <
-                ? php $total = $_POST["total"]; ? >
+                var monto_total = '<?=$monto_total?>'; 
+                <?php $total = $_POST["total"];?>
                 var total = '<?=$total?>';
                 var valor = 0;
 

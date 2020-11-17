@@ -96,7 +96,6 @@
 
 
                         </tr>
-
                     </table>
 
                 </div>
@@ -125,7 +124,8 @@
 
                     <script>
                     $(document).ready(function() {
-                        <?php $id_consolidado = $_POST["id_consolidado"];?>
+                        <
+                        ? php $id_consolidado = $_POST["id_consolidado"]; ? >
                         var id_consolidado = '<?=$id_consolidado?>';
                         var table = $('#myTable').dataTable({
                             "language": {
@@ -199,13 +199,15 @@
                 var cw = context.canvas.width / 2;
                 var ch = context.canvas.height / 2;
                 var diff;
-                var monto_total = '<?=$monto_total?>';
-                <?php $total = $_POST["total"];?>
+                var monto_total = '<?=$monto_total?>'; <
+                ? php $total = $_POST["total"]; ? >
                 var total = '<?=$total?>';
                 var valor = 0;
-                function evaluar(total,monto_total){
-                   return ((total*100)/monto_total);  
+
+                function evaluar(total, monto_total) {
+                    return ((total * 100) / monto_total);
                 }
+
                 function progressBar() {
                     diff = (al / 100) * Math.PI * 2;
                     context.clearRect(0, 0, 400, 200);
@@ -224,7 +226,7 @@
                     context.arc(cw, ch, 80, start, diff + start, false);
                     context.stroke();
                     context.fillText(al + '%', cw + 2, ch + 6);
-                     valor = evaluar(total,monto_total);
+                    valor = evaluar(total, monto_total);
                     if (al >= valor) {
                         clearTimeout(bar);
                     }
@@ -233,7 +235,6 @@
                 }
 
                 var bar = setInterval(progressBar, 50);
-               
                 </script>
 
 

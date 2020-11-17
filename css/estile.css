@@ -852,12 +852,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', end
 
 /*INFORME CONSOLIDADO*/
 .main-informe-consolidado {
-  height: 160vh;
+  height: 170vh;
   width: 1050px;
   margin: 0 auto;
 }
 .contenedor-gris-informe-consolidado-one{
-  height: 150vh;
+  height: 160vh;
   width: 1150px;
   display: grid;
   background-color: #d8d8d8;
@@ -866,7 +866,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', end
   "contenedor-contratos-informe"
   "barra-progreso"
   "botones-informe" ;
-  grid-template-rows: 250px 400px 200px;
+  grid-template-rows: 250px 500px 200px;
   grid-template-columns: 1fr;
 }
 

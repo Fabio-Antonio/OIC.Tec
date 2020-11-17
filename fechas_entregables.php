@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <title>Informe Consolidado</title>
+    <title>Fechas Entregables</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.datos.gob.mx/assets/css/main.css" rel="stylesheet">
     <link href="https://cdn.datos.gob.mx/assets/img/favicon.ico" rel="shortcut icon">
@@ -74,25 +74,27 @@
     <main class="main-informe-consolidado">
         <div class="contenedor-gris-informe-consolidado-one">
             <div class="conenedor-informe-consolidado">
-                <h1> INFORME CONSOLIDADO </h1>
+                <h1> Fechas Entregables </h1>
                 <div class="tabla-consolidador">
                     <table class="table table" id="table7030">
                         <!-- <caption>Consolidador</caption>-->
                         <tr>
-                            <th>Clave requirente</th>
-                            <th>Unidad Requirente</th>
-                            <th>Monto total</th>
-                            <th>Licitación</th>
-                            <th>Descripción</th>
-
+                            <th>Numero de contrato</th>
+                            <th>Compranet</th>
+                            <th>Objeto de contratación</th>
+                            <th>Proveedor</th>
+                            <th>Fecha máxima</th>
+                            <th>Cantidad</th>
                         </tr>
                         <tr>
-                            <td><?php $clave_requirente=$_POST["clave_requirente"]; echo $clave_requirente;?></td>
-                            <td><?php $unidad=$_POST["unidad"]; echo $unidad;?></td>
-                            <td><?php $monto_total=$_POST["monto_total"]; $tot=number_format($monto_total); echo '$'.$tot;?>
+                            <td><?php $numero_contrato=$_POST["numero_contrato"]; echo $numero_contrato;?></td>
+                            <td><?php $contrato_compranet=$_POST["contrato_compranet"]; echo $contrato_compranet;?></td>
+                            <td><?php $objeto_contratacion=$_POST["objeto_contratacion"]; echo $objeto_contratacion;?>
                             </td>
-                            <td><?php $licitacion=$_POST["licitacion"]; echo $licitacion;?></td>
-                            <td><?php $descripcion=$_POST["descripcion"]; echo $descripcion;?></td>
+                            <td><?php $nombre=$_POST["nombre"]; echo $nombre;?></td>
+                            <td><?php $fecha_maxima=$_POST["fecha_maxima"]; echo $fecha_maxima;?></td>
+                            <td><?php $cantidad=$_POST["cantidad"]; echo $cantidad;?></td>
+
 
 
                         </tr>
@@ -108,24 +110,20 @@
                     <table id="myTable" class="tablemy">
                         <thead>
                             <tr>
-                                <th>Unidad compradora</th>
-                                <th>Procedimiento de contratación </th>
-                                <th>Unidad requirente</th>
-                                <th>Proveedor adjudicado</th>
-                                <th>Partida presupuestal</th>
-                                <th>Licitacion</th>
-                                <th>Número de contrato</th>
-                                <th>Número compranet</th>
-                                <th>Objeto de contratación</th>
-                                <th>Monto</th>
+                                <th>Numero de contrato</th>
+                                <th>Fecha entrega </th>
+                                <th>Entregable</th>
+                                <th>Cantidad</th>
+                                <th>Dirección</th>
+                                <th>Descripción</th>
                             </tr>
                         </thead>
                     </table>
 
                     <script>
                     $(document).ready(function() {
-                        <?php $id_consolidado = $_POST["id_consolidado"];?>
-                        var id_consolidado = '<?=$id_consolidado?>';
+                        <?php $numero_contrato = $_POST["numero_contrato"];?>
+                        var numero_contrato = '<?=$numero_contrato?>';
                         var table = $('#myTable').dataTable({
                             "language": {
                                 "lengthMenu": "Mostrar _MENU_ Inserciones por página",
@@ -144,43 +142,29 @@
                                 },
                             },
                             "bProcessing": true,
-                            "sAjaxSource": "contratos_consolidado.php?id_consolidado=" + id_consolidado,
+                            "sAjaxSource": "contratos_entregables.php?numero_contrato=" + numero_contrato,
                             "bPaginate": true,
                             "sPaginationType": "full_numbers",
                             "iDisplayLength": 5,
                             "aoColumns": [{
-                                    mData: 'nombre_unidad_compradora'
-                                },
-                                {
-                                    mData: 'procedimientos'
-                                },
-                                {
-                                    mData: 'unidad'
-                                },
-                                {
-                                    mData: 'nombre'
-                                },
-                                {
-                                    mData: 'nombre'
-                                },
-                                {
-                                    mData: 'licitacion'
-                                },
-                                {
                                     mData: 'numero_contrato'
                                 },
                                 {
-                                    mData: 'contrato_compranet'
+                                    mData: 'fecha_entrega'
                                 },
                                 {
-                                    mData: 'objeto_contratacion'
+                                    mData: 'nombre_entregable'
                                 },
                                 {
-                                    mData: 'monto_max',
-                                    render: $.fn.dataTable.render.number(',', '.', 2, '$')
+                                    mData: 'cantidad_entregable'
                                 },
-
-
+                                {
+                                    mData: 'direccion_entregable'
+                                },
+                                {
+                                    mData: 'descripcion'
+                                },
+                                
                             ]
                         });
                     });
@@ -198,13 +182,13 @@
                 var cw = context.canvas.width / 2;
                 var ch = context.canvas.height / 2;
                 var diff;
-                var monto_total = '<?=$monto_total?>'; 
+                var cantidad = '<?=$cantidad?>'; 
                 <?php $total = $_POST["total"];?>
                 var total = '<?=$total?>';
                 var valor = 0;
 
-                function evaluar(total, monto_total) {
-                    return ((total * 100) / monto_total);
+                function evaluar(total, cantidad) {
+                    return ((total * 100) / cantidad);
                 }
 
                 function progressBar() {
@@ -225,7 +209,7 @@
                     context.arc(cw, ch, 80, start, diff + start, false);
                     context.stroke();
                     context.fillText(al + '%', cw + 2, ch + 6);
-                    valor = evaluar(total, monto_total);
+                    valor = evaluar(total, cantidad);
                     if (al >= valor) {
                         clearTimeout(bar);
                     }

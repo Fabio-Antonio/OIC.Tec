@@ -192,6 +192,33 @@ $("#presupuesto").on({
     }
 });
 
+
+function autocompletar(arreglo) {
+    
+    $( "#contrato" ).autocomplete({
+        source: arreglo,
+        appendTo: "#formulario7"
+    });
+} 
+
+function entregable(){
+    var contrato = (document.getElementById("contrato").value);
+ 
+ 
+    if (contrato.length == 0 || !(/^[A-Za-z0-9\-\s]*$/.test(contrato))){
+    
+    document.getElementById("contrato").focus();
+    return;
+
+}
+
+window.location="../besa/consulta_entregables.php?numero_contrato="+contrato;
+
+}
+
+
+
+
 /*
 $("#2000").on({
     "focus": function(event) {

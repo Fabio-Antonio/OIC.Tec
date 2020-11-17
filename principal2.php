@@ -125,7 +125,7 @@ window.location.replace('index');</script>";
                 <ul>
                     <li><i class="fas fa-plus-circle"></i> <a href="consulta_vigencia.php">Fin VIgencia</a></li>
                     <li><i class="fas fa-plus-circle"></i> Consultas por Fecha de Adjudicación</li>
-                    <li><i class="fas fa-plus-circle"></i> Fechas Entregables</li>
+                    <li><i class="fas fa-plus-circle" data-toggle="modal" data-target="#mymodal7"></i> Fechas Entregables</li>
                     <li><i class="fas fa-plus-circle"></i> Fecha de Formalización</li>
                 </ul>
                 <p></p>
@@ -453,14 +453,57 @@ window.location.replace('index');</script>";
         </div>
     </div>
 
+    <div class="modal fade" role="dialog" id="mymodal7" aria-labelledby="modal-title"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="modal-title">B.E.S.A</h3>
+                </div>
+                <div class="modal-body">
+
+
+                    <form role="form" id="formulario7">
+                        <div class="form-group">
+                            <label class="control-label" for="email-01">Contrato:</label>
+                            <input class="form-control" id="contrato" placeholder="Escribe el número de contrato" type="text">
+                       </div>
 
 
 
+
+                        <button class="btn btn-default btn-success" type="button" name="submit"
+                            onclick="entregable();">Enviar</button>
+
+                    </form>
+
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" data-dismiss="modal">cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="https://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" rel="Stylesheet"></link>
+    <script src="https://code.jquery.com/ui/1.10.2/jquery-ui.js" ></script>
+    <script src="https://code.jquery.com/jquery-migrate-3.0.0.min.js"></script>
     <script src="js/funciones_principal.js"></script>
+    <script>
+
+    $(function() {
+        <?php
+     require_once("consulta_principal.php");                                
+                                ?>
+       var arreglo = <?php echo json_encode($array) ?>;
+       autocompletar(arreglo);                         
+
+
+    });
+    </script>
 
 </body>
 

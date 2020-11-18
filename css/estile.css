@@ -1,75 +1,75 @@
 html {
-    box-sizing: border-box;
-    font-size: 62.5%;
+  box-sizing: border-box;
+  font-size: 62.5%;
 }
 
 *,
 * :before,
 *:after {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 
 body {
-    font-size: 2.2rem;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    padding: 0;
+  font-size: 2.2rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  padding: 0;
 }
 
 
 img {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 
 /*universales*/
 
 .contenedor {
-    width: 120rem;
-    max-width: 95%;
-    margin: 0 auto;
+  width: 120rem;
+  max-width: 95%;
+  margin: 0 auto;
 }
 
 
 .seccion{
-    padding: 3rem 0;
+  padding: 3rem 0;
 }
 
 .w3-sidebar{
-    background-color: #12322b;
-    color: #e1e1e1 !important;
+  background-color: #12322b;
+  color: #e1e1e1 !important;
 }
 
 .w3-sidebar a{
-    font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 
 /*BOTONES*/
 
 .btn {
-    display: inline-block;
-    padding: 1rem 3rem;
-    color: #fff;
-    border-radius: 1rem;
-    cursor: pointer;
+  display: inline-block;
+  padding: 1rem 3rem;
+  color: #fff;
+  border-radius: 1rem;
+  cursor: pointer;
 }
 
 
 .btn-verde {
-    background-color: #0c9;
-    border-color: #0c9;
+  background-color: #0c9;
+  border-color: #0c9;
 }
 
 .btn:hover{
-  background: rgba(169,3,41,1);
-  background: -moz-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(169,3,41,1)), color-stop(44%, rgba(143,2,34,1)), color-stop(100%, rgba(109,0,25,1)));
-  background: -webkit-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  background: -o-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  background: -ms-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  background: linear-gradient(to right, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019', GradientType=1 );
+background: rgba(169,3,41,1);
+background: -moz-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(169,3,41,1)), color-stop(44%, rgba(143,2,34,1)), color-stop(100%, rgba(109,0,25,1)));
+background: -webkit-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
+background: -o-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
+background: -ms-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
+background: linear-gradient(to right, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019', GradientType=1 );
 }
 
 
@@ -77,355 +77,376 @@ img {
 /*HEADER LOGIN*/
 
 header.site-header {
-    background-color: #222;
-    color: #fff;
-    height: 5rem;
+  background-color: #222;
+  color: #fff;
+  height: 5rem;
 }
 
 
 div.encabezado {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-height: 100%;
 }
 
 
 header.site-header p {
-    margin: 0;
-    font-size: 2rem;
-    max-width: 100%;
+  margin: 0;
+  font-size: 2rem;
+  max-width: 100%;
 }
 
 
 @media (min-width:440px) {
-    header.site-header p {
-        font-size: 3rem;
-    }
+  header.site-header p {
+      font-size: 3rem;
+  }
 }
 
 
 div.imagen-header {
-    width: 30rem;
+  width: 30rem;
 }
+
 
 /*MAIN LOGIN*/
 
 main.login h1 {
-    font-family: 'Mukta', sans-serif;
-    font-weight: 700;
-    font-size: 5rem;
-    margin: 0;
-    text-align: left;
+  font-family: 'Mukta', sans-serif;
+  font-weight: 700;
+  font-size: 5rem;
+  margin: 0;
+  text-align: left;
 }
 
 @media (min-width: 440px) {
-    main.login h1 {
-        text-align: center;
-    }
+  main.login h1 {
+      text-align: center;
+  }
 }
 
 
 main.login::before {
-    background-image: url(../img/banner.jpg);
-    height: 100vh;
-    background-size: cover;
-    width: 100%;
-    background-position: center center;
-    filter: blur(.5rem);
-    position: absolute;
-    content: "";
+  background-image: url(../img/banner.jpg);
+  height: 100vh;
+  background-size: cover;
+  width: 100%;
+  background-position: center center;
+  filter: blur(.5rem);
+  position: absolute;
+  content: "";
 }
 
 
 div.formularios-logo {
-    display: grid;
-    grid-template-columns: 1fr;
-    padding-top: 7rem;
-    height: 100vh;
-    color: rgba(255, 255, 255, 0.8);
-    position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  padding-top: 7rem;
+  height: 100vh;
+  color: rgba(255, 255, 255, 0.8);
+  position: relative;
 }
 
 
 @media (min-width: 768px) {
-    div.formularios-logo {
-        grid-template-columns: repeat(2, 1fr);
-        align-items: center;
-        justify-content: center;
-    }
+  div.formularios-logo {
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+      justify-content: center;
+  }
 }
 
 /*FORMULARIO LOGIN*/
 
 form.formulario-logo {
-    display: grid;
-    grid-template-rows: repeat(3, 1fr);
-    row-gap: 2rem;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  row-gap: 2rem;
 }
 
 
 div.campo label {
-    display: block;
-    text-align: left;
-    margin-bottom: 1rem;
-    font-size: 2.6rem;
+  display: block;
+  text-align: left;
+  margin-bottom: 1rem;
+  font-size: 2.6rem;
 }
 
 
 form.formulario-logo  input:not([type='submit']) {
-    display: block;
-    background: transparent;
-    border: .1rem solid rgba(255, 255, 255, 0.8);
-    color: rgba(255, 255, 255, 0.8);
-    padding: 1rem 1rem;
-    border-radius: 1rem;
-    max-width: 70%;
+  display: block;
+  background: transparent;
+  border: .1rem solid rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.8);
+  padding: 1rem 1rem;
+  border-radius: 1rem;
+  max-width: 70%;
 }
 
 div.campo input:hover {
-    -webkit-box-shadow: 1px 1px 3px 1.5px rgba(71, 173, 92, 1);
-    -moz-box-shadow: 1px 1px 3px 1.5px rgba(71, 173, 92, 1);
-    box-shadow: 1px 1px 3px 1.5px rgba(71, 173, 92, 1);
+  -webkit-box-shadow: 1px 1px 3px 1.5px rgba(71, 173, 92, 1);
+  -moz-box-shadow: 1px 1px 3px 1.5px rgba(71, 173, 92, 1);
+  box-shadow: 1px 1px 3px 1.5px rgba(71, 173, 92, 1);
 }
 
 /*FOOTER SITE*/
 
 footer.site-footer{
-    background-color: #222;
-    color: #fff;
+  background-color: #222;
+  color: #fff;
+}
+div.display-footer{
+display: grid;
+grid-template-columns: 10% repeat(3,1fr);
+column-gap: 2rem;
+align-items: center;
 }
 
-@media (min-width: 768px){
-   div.display-footer{
-       display: grid;
-       grid-template-columns: 10% repeat(3,1fr);
-       column-gap: 2rem;
-       align-items: center;
-   }
+@media (max-width: 768px){
+ div.display-footer{
+     display: grid;
+     grid-template-columns: repeat(2,1fr);
+     column-gap: 2rem;
+     align-items: center;
+ }
+}
+@media (max-width: 375px){
+div.display-footer{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    column-gap: 2rem;
+    align-items: center;
+}
+div.im img{
+  width: 10rem;
+  transition: 0.5s;
+}
+
 }
 
 div.display-footer p{
-    text-align: center;
-    font-size: 2rem;
+  text-align: center;
+  font-size: 2rem;
 }
 
 div.display-footer h4{
-    text-align: center;
+  text-align: center;
 }
 
 div.im img{
-    border-radius: 50%;
-    max-width: 70%;
-    transition: 0.5s;
+  border-radius: 50%;
+  max-width: 70%;
+  transition: 0.5s;
 }
 
 div.im img:hover{
-   transform: scale(3);
+ transform: scale(3);
 }
 
 div.im{
-    padding: 2rem;
+  padding: 2rem;
 }
 
 div.copyright{
-    background-color: #000;
+  background-color: #000;
 }
 
 
 @media (min-width: 768px) {
-   div.copyright{
-    display: flex;
-    justify-content: space-evenly;
-   }
+ div.copyright{
+  display: flex;
+  justify-content: space-evenly;
+ }
 }
 div.copyright p{
-    flex: 0 0 calc(50% - 2rem);
-    font-weight: 300;
-    font-size: 1.4rem;
+  flex: 0 0 calc(50% - 2rem);
+  font-weight: 300;
+  font-size: 1.4rem;
 }
-
 
 div.copyright p span:hover{
-    color: red;
+  color: red;
 }
+
+
 /*PAGINA ADMIN*/
 /*FORMULARIO*/
 
 main.principal-administrador h1{
-    margin: 0;
-    text-align: center;
-    font-family: 'Mukta', sans-serif;
-    background-color: #d8d8d8;
+  margin: 0;
+  text-align: center;
+  font-family: 'Mukta', sans-serif;
+  background-color: #d8d8d8;
 }
 
 main.principal-administrador h1::after{
-    content: '';
-    display: block;
-    width: 10rem;
-    height: .2rem;
-    background-color:#0c9;
+  content: '';
+  display: block;
+  width: 10rem;
+  height: .2rem;
+  background-color:#0c9;
 }
 
 form.administrador{
-    display: grid;
-    background-color: #d8d8d8;
-    row-gap: 3rem;
-    padding: 2rem 3rem;
+  display: grid;
+  background-color: #d8d8d8;
+  row-gap: 3rem;
+  padding: 2rem 3rem;
 }
 
 @media (min-width: 768px) {
-    form.administrador{
-        grid-template-columns: repeat(2,1fr);
-        gap: 3rem 1rem;
-    }
-    div.botones{
-        grid-column:1/3;
-        display: flex;
-        justify-content: space-evenly;
-    }
+  form.administrador{
+      grid-template-columns: repeat(2,1fr);
+      gap: 3rem 1rem;
+  }
+  div.botones{
+      grid-column:1/3;
+      display: flex;
+      justify-content: space-evenly;
+  }
 }
 
 div.botones input{
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
 div.botones input:last-of-type{
-    margin: 0;
+  margin: 0;
 }
 
 @media (min-width: 768px) {
-    div.botones input{
-        margin: 0;
-    }
+  div.botones input{
+      margin: 0;
+  }
 }
 
 form.administrador input:not([type='submit']){
-    background-color: #fff;
-    color: #000;
-    border: .2rem solid rgba(0,0,0,.15);
-    padding: 1rem .2rem;
-    border-radius: 1rem;
-    width: 90%;
+  background-color: #fff;
+  color: #000;
+  border: .2rem solid rgba(0,0,0,.15);
+  padding: 1rem .2rem;
+  border-radius: 1rem;
+  width: 90%;
 }
 
 /*Alta*/
 
 .main-alta {
-  height: 500px;
-  width: 100vh;
-  margin: 0 auto;
+height: 500px;
+width: 100vh;
+margin: 0 auto;
 }
 
 .contenedor-gris {
-  height: 480px;
-  width: 675px;
-  display: grid;
-  grid-gap: 10px;
-  background-color: #d8d8d8;
-  grid-template-areas:
-    "altausuario altausuario"
-    "usuario contraseña"
-    "radioalta radioalta"
-    "btnalta btnalta";
-  grid-template-columns: repeat(2 1fr);
-  grid-template-rows: 100px 100px 180px 50px;
-  min-height: calc(100vh - 100px -100%);
-  min-width: calc(100vh - 100px -100%);
+height: 480px;
+width: 675px;
+display: grid;
+grid-gap: 10px;
+background-color: #d8d8d8;
+grid-template-areas:
+  "altausuario altausuario"
+  "usuario contraseña"
+  "radioalta radioalta"
+  "btnalta btnalta";
+grid-template-columns: repeat(2 1fr);
+grid-template-rows: 100px 100px 180px 50px;
+min-height: calc(100vh - 100px -100%);
+min-width: calc(100vh - 100px -100%);
 }
 
 /*Nombramos los elementos*/
 .contenedor-gris h1 {
-  grid-area: altausuario;
-  text-align: center;
-  height: 100px;
+grid-area: altausuario;
+text-align: center;
+height: 100px;
 }
 .main-alta h1::after {
-  content: "";
-  display: block;
-  width: 10rem;
-  height: 0.2rem;
-  background-color: #0c9;
+content: "";
+display: block;
+width: 10rem;
+height: 0.2rem;
+background-color: #0c9;
 }
 .usuario-alta {
-  grid-area: usuario;
+grid-area: usuario;
 }
 .contraseña-alta {
-  grid-area: contraseña;
+grid-area: contraseña;
 }
 .radio-alta {
-  grid-area: radioalta;
-  padding-left: 220px;
+grid-area: radioalta;
+padding-left: 220px;
 }
 .btn-alta {
-  grid-area: btnalta;
+grid-area: btnalta;
 }
 
 .usuario-alta,
 .contraseña-alta {
-  padding: 25px;
-  height: 100px;
+padding: 25px;
+height: 100px;
 }
 
 .usuario-alta input,
 .contraseña-alta input {
-  width: 280px;
-  height: 40px;
-  background-color: #fff;
-  color: #000;
-  border: 0.2rem solid rgba(0, 0, 0, 0.15);
-  padding: 1rem 0.2rem;
-  border-radius: 1rem;
+width: 280px;
+height: 40px;
+background-color: #fff;
+color: #000;
+border: 0.2rem solid rgba(0, 0, 0, 0.15);
+padding: 1rem 0.2rem;
+border-radius: 1rem;
 }
 
 input:hover {
-  -webkit-box-shadow: 1px 1px 3px 1.5px rgba(71, 173, 92, 1);
-  -moz-box-shadow: 1px 1px 3px 1.5px rgba(71, 173, 92, 1);
-  box-shadow: 1px 1px 3px 1.5px rgba(71, 173, 92, 1);
+-webkit-box-shadow: 1px 1px 3px 1.5px rgba(71, 173, 92, 1);
+-moz-box-shadow: 1px 1px 3px 1.5px rgba(71, 173, 92, 1);
+box-shadow: 1px 1px 3px 1.5px rgba(71, 173, 92, 1);
 }
 select:hover{
-  -webkit-box-shadow: 1px 1px 3px 1.5px rgba(71, 173, 92, 1);
-  -moz-box-shadow: 1px 1px 3px 1.5px rgba(71, 173, 92, 1);
-  box-shadow: 1px 1px 3px 1.5px rgba(71, 173, 92, 1);
+-webkit-box-shadow: 1px 1px 3px 1.5px rgba(71, 173, 92, 1);
+-moz-box-shadow: 1px 1px 3px 1.5px rgba(71, 173, 92, 1);
+box-shadow: 1px 1px 3px 1.5px rgba(71, 173, 92, 1);
 }
 
 /*Alta para ipad*/
 @media screen and (max-width: 768px) {
-  .main-alta {
-    height: 500px;
-    width: 100vh;
-    padding-left: 45px;
-  }
+.main-alta {
+  height: 500px;
+  width: 100vh;
+  padding-left: 45px;
+}
 }
 /*Alta para celular*/
 @media screen and (max-width: 375px) {
-  .main-alta {
-    height: 550px;
-    width: 100vh;
-    margin: 0 auto;
-    padding-bottom: 580px;
-    padding-left: 0px;
-  }
-  .contenedor-gris {
-    height: 550px;
-    width: 375px;
-    display: grid;
-    grid-gap: 10px;
-    background-color: #d8d8d8;
-    grid-template-areas:
-      "altausuario"
-      "usuario "
-      "contraseña"
-      "radioalta"
-      "btnalta";
-    grid-template-rows: 80px 80px 120px 140px;
-  }
-  .radio-alta {
-    padding-left: 20px;
-  }
-  .btn-alta {
-    padding-left: 30px;
-  }
+.main-alta {
+  height: 550px;
+  width: 100vh;
+  margin: 0 auto;
+  padding-bottom: 580px;
+  padding-left: 0px;
+}
+.contenedor-gris {
+  height: 550px;
+  width: 375px;
+  display: grid;
+  grid-gap: 10px;
+  background-color: #d8d8d8;
+  grid-template-areas:
+    "altausuario"
+    "usuario "
+    "contraseña"
+    "radioalta"
+    "btnalta";
+  grid-template-rows: 80px 80px 120px 140px;
+}
+.radio-alta {
+  padding-left: 20px;
+}
+.btn-alta {
+  padding-left: 30px;
+}
 }
 
 
@@ -433,290 +454,308 @@ select:hover{
 /*Contenedor de titulos*/
 
 .titulo_principal{
-    text-align: center;
-    font-family: 'Mukta', sans-serif;
+  text-align: center;
+  font-family: 'Mukta', sans-serif;
 }
 .titulo_principal::after{
-    content: '';
-    display: block;
-    width: 10rem;
-    height: .1rem;
-    background-color:#0c9;
+  content: '';
+  display: block;
+  width: 10rem;
+  height: .1rem;
+  background-color:#0c9;
 }
 .titulo_principal h1{
-    font-weight: 900;
-    font-size: 5.6rem;
-    color: #222;
-    margin: 0;
+  font-weight: 900;
+  font-size: 5.6rem;
+  color: #222;
+  margin: 0;
 }
 .titulo_principal h2{
-    font-weight: 300;
-    color:#545454 ;
-    margin: 0;
+  font-weight: 300;
+  color:#545454 ;
+  margin: 0;
 }
 
 /*Tarjetas*/
 .tarjeta{
-    border: #222 .1rem solid;
-    font-family: 'Mukta', sans-serif;
+  border: #222 .1rem solid;
+  font-family: 'Mukta', sans-serif;
 }
 .img_tarjeta{
-    width: 39rem;
-    border-bottom: #0c9 .1rem solid;
+  width: 39rem;
+  border-bottom: #0c9 .1rem solid;
 }
 .tarjeta h3{
-    font-weight: 400;
-    text-align: center;
+  font-weight: 400;
+  text-align: center;
 }
 .tarjeta ul{
-    list-style: none;
-    font-weight: 300;
-    color: #545454;
-    font-size: 2rem;
-    line-height: 1.5;
+  list-style: none;
+  font-weight: 300;
+  color: #545454;
+  font-size: 2rem;
+  line-height: 1.5;
 }
 .tarjeta ul i{
-    color: #0c9;
+  color: #0c9;
 }
 .tarjeta ul li:hover{
-    color: #000;
-    transform: scale(1.05);
+  color: #000;
+  transform: scale(1.05);
 }
 .tarjeta p{
-    color: #545454;
-    background-color: #00000008;
-    margin: 0;
-    padding: 1rem 0;
-    font-size: 1.8rem;
-    font-weight: 300;
+  color: #545454;
+  background-color: #00000008;
+  margin: 0;
+  padding: 1rem 0;
+  font-size: 1.8rem;
+  font-weight: 300;
 }
 
 /*Contenedor capturas*/
 .capturas{
-    display: grid;
-    row-gap: 1rem;
+  display: grid;
+  row-gap: 1rem;
+  grid-template-columns: repeat(3,1fr);
+  gap: 1rem;
 }
-@media (min-width: 480px) {
-    .capturas{
-        grid-template-columns: repeat(2,1fr);
-        gap: 1rem;
-    }
+
+@media (max-width: 768px) {
+.capturas{
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem;
 }
-@media (min-width: 768px) {
-    .capturas{
-        grid-template-columns: repeat(3,1fr);
-        gap: 1rem;
-    }
+.img_tarjeta{
+  width: 35rem;
+  border-bottom: #0c9 .1rem solid;
 }
+
+}
+@media (max-width: 375px) {
+.capturas{
+    grid-template-columns: repeat(1,1fr);
+    gap: 1rem;
+}
+.img_tarjeta{
+  width: 35rem;
+  border-bottom: #0c9 .1rem solid;
+}
+
+}
+
+
+
+
+
 
 
 
 /*Captura consolidador
-  Adjuntos al consolidado
+Adjuntos al consolidado
 */
 .main-captura-pro-mont {
-  height: 130vh;
-  width: 1010px;
-  margin: 0 auto;
+height: 130vh;
+width: 1010px;
+margin: 0 auto;
 }
 .contenedor-gris-procedimiento-consolidado {
-  height: 120vh;
-  width: 1010px;
-  display: grid;
-  grid-gap: 10px;
-  background-color: #d8d8d8;
-  grid-template-areas:
-  "contenedor-captura-procedimiento";
-  grid-template-rows: 400px;
+height: 120vh;
+width: 1010px;
+display: grid;
+grid-gap: 10px;
+background-color: #d8d8d8;
+grid-template-areas:
+"contenedor-captura-procedimiento";
+grid-template-rows: 400px;
 
 }
 .contenedor-gris-procedimiento-consolidado .contenedor-captura-procedimiento{
-  grid-area: contenedor-captura-procedimiento;
+grid-area: contenedor-captura-procedimiento;
 }
 .contenedor-gris-procedimiento-consolidado .contenedor-adjunto-consolidado{
- grid-area: contenedor-adjunto-consolidado;
+grid-area: contenedor-adjunto-consolidado;
 }
 .contenedor-gris-procedimiento-consolidado .tabla-captura-cantidad{
-  grid-area: tabla-captura-cantidad;
+grid-area: tabla-captura-cantidad;
 }
 .contenedor-captura-procedimiento {
-  display: grid;
-  grid-template-areas:
-    "captura-procedimiento-consolidado captura-procedimiento-consolidado"
-    "consolidador-captura numero-lisitacion-captura"
-    "monto-total-captura ."
-    "descripcion-consolidado descripcion-consolidado"
-    "btn-captura-procedimiento btn-captura-procedimiento";
-  grid-template-columns: repeat(2 1fr);
-  grid-template-rows: 150px 100px 100px 250px;
+display: grid;
+grid-template-areas:
+  "captura-procedimiento-consolidado captura-procedimiento-consolidado"
+  "consolidador-captura numero-lisitacion-captura"
+  "monto-total-captura ."
+  "descripcion-consolidado descripcion-consolidado"
+  "btn-captura-procedimiento btn-captura-procedimiento";
+grid-template-columns: repeat(2 1fr);
+grid-template-rows: 150px 100px 100px 250px;
 }
 .main-captura-pro-mont h1::after {
-  content: "";
-  display: block;
-  width: 10rem;
-  height: 0.2rem;
-  background-color: #0c9;
+content: "";
+display: block;
+width: 10rem;
+height: 0.2rem;
+background-color: #0c9;
 }
 
 /*Nombramos los elementos*/
 .contenedor-captura-procedimiento h1 {
-  grid-area: captura-procedimiento-consolidado;
-  text-align: center;
+grid-area: captura-procedimiento-consolidado;
+text-align: center;
 }
 .contenedor-captura-procedimiento .consolidador-captura {
-  grid-area: consolidador-captura;
+grid-area: consolidador-captura;
 }
 .contenedor-captura-procedimiento .numero-lisitacion-captura{
-  grid-area: numero-lisitacion-captura;
+grid-area: numero-lisitacion-captura;
 }
 .contenedor-captura-procedimiento .monto-total-captura{
-  grid-area: monto-total-captura;
+grid-area: monto-total-captura;
 }
 .contenedor-captura-procedimiento .descripcion-consolidado{
-  grid-area: descripcion-consolidado;
+grid-area: descripcion-consolidado;
 }
 .contenedor-captura-procedimiento .btn-captura-procedimiento {
-  grid-area: btn-captura-procedimiento;
+grid-area: btn-captura-procedimiento;
 }
 
 .contenedor-captura-procedimiento textarea{
-  width: 950px;
-  height: 150px;
-  background-color: #fff;
-  color: #000;
-  border: 0.2rem solid rgba(0, 0, 0, 0.15);
-  padding: 1rem 0.2rem;
-  border-radius: 1rem;
+width: 950px;
+height: 150px;
+background-color: #fff;
+color: #000;
+border: 0.2rem solid rgba(0, 0, 0, 0.15);
+padding: 1rem 0.2rem;
+border-radius: 1rem;
 }
 textarea:hover{
-  -webkit-box-shadow: 1px 1px 3px 1.5px rgba(71, 173, 92, 1);
-  -moz-box-shadow: 1px 1px 3px 1.5px rgba(71, 173, 92, 1);
-  box-shadow: 1px 1px 3px 1.5px rgba(71, 173, 92, 1);}
+-webkit-box-shadow: 1px 1px 3px 1.5px rgba(71, 173, 92, 1);
+-moz-box-shadow: 1px 1px 3px 1.5px rgba(71, 173, 92, 1);
+box-shadow: 1px 1px 3px 1.5px rgba(71, 173, 92, 1);}
 .contenedor-gris-procedimiento-consolidado input {
-  width: 450px;
-  height: 40px;
-  background-color: #fff;
-  color: #000;
-  border: 0.2rem solid rgba(0, 0, 0, 0.15);
-  padding: 1rem 0.2rem;
-  border-radius: 1rem;
+width: 450px;
+height: 40px;
+background-color: #fff;
+color: #000;
+border: 0.2rem solid rgba(0, 0, 0, 0.15);
+padding: 1rem 0.2rem;
+border-radius: 1rem;
 }
 
 .contenedor-gris-procedimiento-consolidado select
 {
-  width: 450px;
-  height: 40px;
-  background-color: #fff;
-  color: #000;
-  border: 0.2rem solid rgba(0, 0, 0, 0.15);
-  border-radius: 1rem;
+width: 450px;
+height: 40px;
+background-color: #fff;
+color: #000;
+border: 0.2rem solid rgba(0, 0, 0, 0.15);
+border-radius: 1rem;
 }
 
 .consolidador-captura,
 .numero-lisitacion-captura,
 .monto-total-captura,
 .descripcion-consolidado{
-  padding-left: 25px;
+padding-left: 25px;
 }
 
 /*Captura Procedimiento
-  Proveedor Adjudicado para ipad
+Proveedor Adjudicado para ipad
 */
 @media screen and (max-width: 768px) {
-  .main-captura-pro-mont {
-    height: 100vh;
-    width: 650px;
-    border: 2px solid red;
-    margin: 0 auto;
-  }
-  .contenedor-gris-procedimiento-consolidado {
-    height: 50vh;
-    border: 2px solid red;
-    width: 650px;
-    display: grid;
-    grid-template-rows: 240px 550px;
+.main-captura-pro-mont {
+  height: 100vh;
+  width: 650px;
+  border: 2px solid red;
+  margin: 0 auto;
+}
+.contenedor-gris-procedimiento-consolidado {
+  height: 50vh;
+  border: 2px solid red;
+  width: 650px;
+  display: grid;
+  grid-template-rows: 240px 550px;
 
-  }
+}
 
-  .contenedor-captura-procedimiento{
-    grid-template-rows: 200px 100px 120px;
-  }
-  .contenedor-adjunto-consolidado{
-    grid-template-rows: 120px 100px 130px 120px;
-  }
-  .contenedor-gris-procedimiento-consolidado input {
-    width: 280px;
-    height: 40px;
-  }
+.contenedor-captura-procedimiento{
+  grid-template-rows: 200px 100px 120px;
+}
+.contenedor-adjunto-consolidado{
+  grid-template-rows: 120px 100px 130px 120px;
+}
+.contenedor-gris-procedimiento-consolidado input {
+  width: 280px;
+  height: 40px;
+}
 
-  .contenedor-gris-procedimiento-consolidado select{
-    width: 280px;
-    height: 40px;
-  }
-  .Display{
-    margin: 0;
-    background-color: #fff;
-    width: 600px;
-    
+.contenedor-gris-procedimiento-consolidado select{
+  width: 280px;
+  height: 40px;
+}
+.Display{
+  margin: 0;
+  background-color: #fff;
+  width: 600px;
+  
 
-  }
+}
 
-  .tabla-captura-cantidad{
-    padding-top: 50px;
-    grid-template-columns: 1fr;
-    padding-left: 25px;
-   
-  }
+.tabla-captura-cantidad{
+  padding-top: 50px;
+  grid-template-columns: 1fr;
+  padding-left: 25px;
+ 
+}
 
 
 }
 
 /*Captura Procedimiento
-  Proveedor Adjudicado para celular
+Proveedor Adjudicado para celular
 */
 
 @media screen and (max-width: 375px) {
-  .main-captura-pro-mont {
-    height: 250vh;
-    width: 650px;
-    margin: 0 auto;
-  }
-  .contenedor-gris-procedimiento-consolidado {
-    height: 100vh;
-    width: 370px;
-    display: grid;
-    grid-gap: 10px;
-    background-color: #d8d8d8;
-    grid-template-rows: 400px 40px;
-  }
-  .contenedor-captura-procedimiento {
-    display: grid;
-    
-    grid-template-areas:
-      "captura-procedimiento-consolidado"
-      "consolidador-captura"
-      "proveedor-captura"
-      "numero-lisitacion-captura"
-      "monto-total-captura"
-      "descripcion-consolidado"
-      "btn-captura-procedimiento";
-    grid-template-rows: 100px repeat(3, 100px) 110px;
-  }
-  .btn-captura-procedimiento,
-  .btn-proveedor {
-    padding-left: 20px;
-  }
+.main-captura-pro-mont {
+  height: 250vh;
+  width: 650px;
+  margin: 0 auto;
+}
+.contenedor-gris-procedimiento-consolidado {
+  height: 100vh;
+  width: 370px;
+  display: grid;
+  grid-gap: 10px;
+  background-color: #d8d8d8;
+  grid-template-rows: 400px 40px;
+}
+.contenedor-captura-procedimiento {
+  display: grid;
+  
+  grid-template-areas:
+    "captura-procedimiento-consolidado"
+    "consolidador-captura"
+    "proveedor-captura"
+    "numero-lisitacion-captura"
+    "monto-total-captura"
+    "descripcion-consolidado"
+    "btn-captura-procedimiento";
+  grid-template-rows: 100px repeat(3, 100px) 110px;
+}
+.btn-captura-procedimiento,
+.btn-proveedor {
+  padding-left: 20px;
+}
 
 .contenedor-adjunto-consolidado {
-  display: grid;
-  grid-template-areas:
-    "proveedor-adjudicado"
-    "adjunto-unidad-requirente"
-    "adjunto-monto"
-    "adjunto_cantidad-maxima"
-    "adjunto-cantidad-minima"
-    "btn-proveedor";
-  grid-template-rows: 100px 100px 100px 130px 100px 100px;
+display: grid;
+grid-template-areas:
+  "proveedor-adjudicado"
+  "adjunto-unidad-requirente"
+  "adjunto-monto"
+  "adjunto_cantidad-maxima"
+  "adjunto-cantidad-minima"
+  "btn-proveedor";
+grid-template-rows: 100px 100px 100px 130px 100px 100px;
 }
 
 
@@ -725,117 +764,117 @@ textarea:hover{
 
 /*Entregables*/
 .main-entregables {
-  height: 130vh;
-  width: 1010px;
-  margin: 0 auto;
+height: 130vh;
+width: 1010px;
+margin: 0 auto;
 }
 .contenedor-gris-one{
-  height: 120vh;
-  width: 1010px;
-  grid-gap: 10px;
-  background-color: #d8d8d8;
-  
+height: 120vh;
+width: 1010px;
+grid-gap: 10px;
+background-color: #d8d8d8;
+
 }
 .contenedor-gris-entregables{
-  grid-area: contenedor-gris-entregables;
+grid-area: contenedor-gris-entregables;
 }
 .contenedor-gris-entregables {
-  display: grid;
-  grid-template-areas:
-    "entregables entregables"
-    "contrato-entregables fechaentrega-entregables"
-    "nombreentregable-entregables cantidadentregable-entregables"
-    "direccionentregable-entregables ."
-    "descripcion-entregables descripcion-entregables"
-    "btn-entregables btn-entregables"
-    ;
-    grid-template-columns: repeat(2 1fr);
-    grid-template-rows: 100px 100px 100px 100px 250px;
-  
+display: grid;
+grid-template-areas:
+  "entregables entregables"
+  "contrato-entregables fechaentrega-entregables"
+  "nombreentregable-entregables cantidadentregable-entregables"
+  "direccionentregable-entregables ."
+  "descripcion-entregables descripcion-entregables"
+  "btn-entregables btn-entregables"
+  ;
+  grid-template-columns: repeat(2 1fr);
+  grid-template-rows: 100px 100px 100px 100px 250px;
+
 }
 
 /*Nombramos los elementos*/
 .contenedor-gris-entregables h1{
-  grid-area: entregables;
-  text-align: center;
+grid-area: entregables;
+text-align: center;
 }
 .contenedor-gris-entregables .contrato-entregables{
-  grid-area: contrato-entregables;
+grid-area: contrato-entregables;
 }
 .contenedor-gris-entregables .fechaentrega-entregables{
-  grid-area: fechaentrega-entregables;
+grid-area: fechaentrega-entregables;
 }
 .contenedor-gris-entregables .nombreentregable-entregables{
-  grid-area: nombreentregable-entregables;
+grid-area: nombreentregable-entregables;
 }
 .contenedor-gris-entregables .cantidadentregable-entregables{
-  grid-area: cantidadentregable-entregables;
+grid-area: cantidadentregable-entregables;
 }
 .contenedor-gris-entregables .direccionentregable-entregables{
-  grid-area: direccionentregable-entregables;
+grid-area: direccionentregable-entregables;
 }
 .contenedor-gris-entregables .descripcion-entregables{
-  grid-area: descripcion-entregables;
+grid-area: descripcion-entregables;
 }
 .contenedor-gris-entregables .btn-entregables{
-  grid-area: btn-entregables;
+grid-area: btn-entregables;
 }
 
 
 .contenedor-gris-entregables h1::after {
-  content: "";
-  display: block;
-  width: 10rem;
-  height: 0.2rem;
-  background-color: #0c9;
+content: "";
+display: block;
+width: 10rem;
+height: 0.2rem;
+background-color: #0c9;
 }
 .contenedor-gris-entregables textarea{
-  width: 950px;
-  height: 150px;
-  background-color: #fff;
-  color: #000;
-  border: 0.2rem solid rgba(0, 0, 0, 0.15);
-  padding: 1rem 0.2rem;
-  border-radius: 1rem;
+width: 950px;
+height: 150px;
+background-color: #fff;
+color: #000;
+border: 0.2rem solid rgba(0, 0, 0, 0.15);
+padding: 1rem 0.2rem;
+border-radius: 1rem;
 }
 .contenedor-gris-entregables input {
-  width: 450px;
-  height: 40px;
-  background-color: #fff;
-  color: #000;
-  border: 0.2rem solid rgba(0, 0, 0, 0.15);
-  padding: 1rem 0.2rem;
-  border-radius: 1rem;
+width: 450px;
+height: 40px;
+background-color: #fff;
+color: #000;
+border: 0.2rem solid rgba(0, 0, 0, 0.15);
+padding: 1rem 0.2rem;
+border-radius: 1rem;
 }
 
 .contenedor-gris-entregables select
 {
-  width: 450px;
-  height: 40px;
-  background-color: #fff;
-  color: #000;
-  border: 0.2rem solid rgba(0, 0, 0, 0.15);
-  border-radius: 1rem;
+width: 450px;
+height: 40px;
+background-color: #fff;
+color: #000;
+border: 0.2rem solid rgba(0, 0, 0, 0.15);
+border-radius: 1rem;
 }
 
 .contrato-entregables,
 .nombreentregable-entregables,
 .direccionentregable-entregables,
 .descripcion-entregables{
-  padding-left: 25px;
+padding-left: 25px;
 }
 
 input[type=submit]{
-  display: inline-block;
-  padding: 1rem 3rem;
-  color: #fff;
-  border-radius: 1rem;
-  cursor: pointer;
-  background-color: #0c9;
-  border-color: #0c9;
-  width: 130px;
-  height: 50px;
-  font-size: 15px;
+display: inline-block;
+padding: 1rem 3rem;
+color: #fff;
+border-radius: 1rem;
+cursor: pointer;
+background-color: #0c9;
+border-color: #0c9;
+width: 130px;
+height: 50px;
+font-size: 15px;
 }
 
 input[type=submit]:hover{
@@ -852,107 +891,107 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', end
 
 /*INFORME CONSOLIDADO*/
 .main-informe-consolidado {
-  height: 170vh;
-  width: 1050px;
-  margin: 0 auto;
+height: 170vh;
+width: 1050px;
+margin: 0 auto;
 }
 .contenedor-gris-informe-consolidado-one{
-  height: 160vh;
-  width: 1150px;
-  display: grid;
-  background-color: #d8d8d8;
-  grid-template-areas:
-  "conenedor-informe-consolidado"
-  "contenedor-contratos-informe"
-  "barra-progreso"
-  "botones-informe" ;
-  grid-template-rows: 250px 500px 200px;
-  grid-template-columns: 1fr;
+height: 160vh;
+width: 1150px;
+display: grid;
+background-color: #d8d8d8;
+grid-template-areas:
+"conenedor-informe-consolidado"
+"contenedor-contratos-informe"
+"barra-progreso"
+"botones-informe" ;
+grid-template-rows: 250px 500px 200px;
+grid-template-columns: 1fr;
 }
 
 .contenedor-gris-informe-consolidado-one .conenedor-informe-consolidado{
-  grid-area:conenedor-informe-consolidado ;
+grid-area:conenedor-informe-consolidado ;
 }
 .contenedor-gris-informe-consolidado-one .contenedor-contratos-informe{
-  grid-area: contenedor-contratos-informe;
+grid-area: contenedor-contratos-informe;
 }
 .contenedor-gris-informe-consolidado-one .botones-informe{
-  grid-area: botones-informe;
+grid-area: botones-informe;
 }
 .contenedor-gris-informe-consolidado-one .barra-progreso{
-  grid-area: barra-progreso;
-  text-align: center;
+grid-area: barra-progreso;
+text-align: center;
 }
 .botones-informe{
-  margin: 0 auto;
+margin: 0 auto;
 }
 .barra-progreso .progreso{
-  border: 2px solid blue;
-  width: 1fr;
-  height: 30px;
+border: 2px solid blue;
+width: 1fr;
+height: 30px;
 }
 .barra-progreso .progreso:hover{
-  border:2px solid #0c9;
+border:2px solid #0c9;
 }
 
 .conenedor-informe-consolidado{
-  display: grid;
-  grid-template-areas: 
-  "informe-consolidado "
-  "tabla-consolidador "
-  ;
-  grid-template-columns: 1fr;
-  grid-template-rows: 100px;
-  
+display: grid;
+grid-template-areas: 
+"informe-consolidado "
+"tabla-consolidador "
+;
+grid-template-columns: 1fr;
+grid-template-rows: 100px;
+
 }
 .conenedor-informe-consolidado h1{
-  grid-area: informe-consolidado;
-  text-align: center;
+grid-area: informe-consolidado;
+text-align: center;
 }
- 
+
 .conenedor-informe-consolidado .tabla-consolidador{
-  grid-area: tabla-consolidador;
+grid-area: tabla-consolidador;
 }
 #table7030{
 background: #FFFFFF;
 }
 #table7030 tr:nth-child{
-  background-color: #ddd;
+background-color: #ddd;
 }
 
 .contenedor-contratos-informe{
-  display: grid;
-  grid-template-areas: 
-  "contratos "
-  "tabla-contrato ";
-  grid-template-columns: 1fr;
-  grid-template-rows: 100px 300px;
+display: grid;
+grid-template-areas: 
+"contratos "
+"tabla-contrato ";
+grid-template-columns: 1fr;
+grid-template-rows: 100px 300px;
 }
 
 .contenedor-contratos-informe h1,h2{
-  grid-area: contratos;
-  text-align: center;
+grid-area: contratos;
+text-align: center;
 }
 .contenedor-contratos-informe .tabla-contrato{
-  grid-area: tabla-contrato;
+grid-area: tabla-contrato;
 }
 
 
 .tabla-contrato  table{
-  font-size: 12px;
-  
+font-size: 12px;
+
 }
 .tabla-contrato table th {
-  text-align: center;
+text-align: center;
 }
 
 .contenedor-gris-informe-consolidado-one h1::after {
-  content: "";
-  display: block;
-  width: 10rem;
-  height: 0.2rem;
-  background-color: #0c9;
+content: "";
+display: block;
+width: 10rem;
+height: 0.2rem;
+background-color: #0c9;
 }
 .ui-autocomplete{
-  z-index:1050;
+z-index:1050;
 }

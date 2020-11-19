@@ -72,14 +72,13 @@ function mostrarText() {
         "descripcion": descripcion
     },function(data) {
         var response = jQuery.parseJSON(data);
-        alert(response.success);
         if(response.success==true){
             $(function() {
             $('#my-modal').modal('show')
         });   
         }else{
             $(function() {
-            $('#my-modal2').modal('show')
+            $('#my-modal3').modal('show')
         });
         }
 

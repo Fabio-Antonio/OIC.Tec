@@ -158,7 +158,7 @@
                                     mData: 'unidad'
                                 },
                                 {
-                                    mData: 'nombre'
+                                    mData: 'nombre2'
                                 },
                                 {
                                     mData: 'nombre'

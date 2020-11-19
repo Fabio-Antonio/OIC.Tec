@@ -156,11 +156,12 @@
                     </div>
                     <div class="form-group">
                         <label class="col-sm-3 control-label" for="email-03">Cantidad maxima:</label>
-                            <input class="form-control" id="cantidadm" placeholder="Cantidad maxima" type="number">                        
+                            <input class="form-control" id="cantidadm" placeholder="Cantidad maxima" type="number">
+                            <button class="btn btn-primary" onclick="entrega();">Guardar</button>                        
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button class="btn btn-primary" onclick="entrega();">Ok</button>
+                    <button class="btn btn-primary" data-dismiss="modal">Ok</button>
                 </div>
             </div>
         </div>

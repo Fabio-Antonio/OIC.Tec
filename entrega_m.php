@@ -3,6 +3,7 @@ require_once("conexion.php");
 $numero_contrato=$_POST["contrato"];
 $fecha_maxima=$_POST["fecha_maxima"];
 $cantidadm=$_POST["cantidadm"];
+
 $query=$conn->prepare("SELECT id_contrato FROM contrato  WHERE numero_contrato=?");
 $query->bindParam(1, $numero_contrato);
 $query->execute();

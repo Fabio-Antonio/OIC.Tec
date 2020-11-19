@@ -48,12 +48,12 @@ function ingresar() {
 
     }
 
-    if (partida.length == 0 || partida.lenth > 200) {
+    if (partida.length == 0 || partida.lenth > 220) {
         alert("El campo no cumple con la longitud correcta");
         document.getElementById("partida").focus();
         return;
     }
-    if (!(/^[A-Za-zñÑáéíóúÁÉÍÓÚ\s]*$/i.test(partida))) {
+    if (!(/^[A-Za-zñÑáéíóúÁÉÍÓÚ,.\s]*$/i.test(partida))) {
         alert("El contiene caracteres no permitidos");
         document.getElementById("partida").focus();
         return;
@@ -66,7 +66,11 @@ function ingresar() {
         "clave": clave,
         "partida": partida
     }, function(data) {
-        alert("listo");
+        var response = jQuery.parseJSON(data);
+        if(response.success==true){ 
+        }else{
+            alert("La partida ya existe");
+        }
     });
 }
 

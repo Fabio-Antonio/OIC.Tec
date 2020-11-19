@@ -81,7 +81,7 @@
  var chart3 = new CanvasJS.Chart("chartContainer3", {
         animationEnabled: true,
         title: {
-                text: "Consumo Total  de la Partida Presupuestal"
+                text: "Consumo Total  del Presupuesto"
         },
         data: [{
                 type: "pie",

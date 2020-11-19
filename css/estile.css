@@ -933,6 +933,9 @@ height: 30px;
 .barra-progreso .progreso:hover{
 border:2px solid #0c9;
 }
+.barra-progreso {
+  padding-bottom: 30px;
+  }
 
 .conenedor-informe-consolidado{
 display: grid;

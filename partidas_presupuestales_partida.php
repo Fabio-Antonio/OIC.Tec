@@ -140,75 +140,38 @@ document.getElementById("myOverlay").style.display = "none";
         </div>
     </div>
 
+
+    <div class="modal fade" role="dialog" id="my-modal3" aria-labelledby="modal-title">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header" style="background-color:#D0021B;">
+                        <h3 class="modal-title" id="modal-title">B.E.S.A</h3>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            No se puede repetir una asignación!!
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary" data-dismiss="modal">Ok</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 
 
-<script lenguage="javascript" type="text/javascript">
-         function mostrarText(){
-    var selObj = document.getElementById('secontrapartisasp');
-      var selObj2 = document.getElementById('inclavepartida');
-      var selIndex = selObj.options[selObj.selectedIndex].value;
-    var clave_partida  = selObj2.options[selObj2.selectedIndex].value;
-
-      if(clave_partida<0||clave_partida.length==0){
-        $(function(){
-	$('#my-modal2').modal('show');
-	});
-        document.getElementById('inclavepartida').focus();
-        return;
-  }
-
-  if(selIndex<0||selIndex.length==0){
-        $(function(){
-	$('#my-modal2').modal('show');
-	});
-        document.getElementById('secontrapartisasp').focus();
-        return;
-  }
-  
-
-
-         alert(selIndex);
-       // window.location="partidas_presupuestales.php?nombre_unidad_compradora="+selIndex+"&clave_partida="+clave_partida;
-	$.post('partidas_presupuestales.php',{
-	"nombre_unidad_compradora":selIndex,
-	"clave_partida":clave_partida
-	},function(data){
-		$('#my-modal').modal('show')
-		});
-    }
+<script lenguage="javascript" src="js/funciones_asignacion.js" type="text/javascript">
+        
 </script>
-
-
-<script lenguage="javascript" type="text/javascript">
-         function mostrarTexts(){
-    var selObj = document.getElementById('secontatosub');
-      var numero_sub_partida  = (document.getElementById('innumerosubpartida').value);
-      var descripcion  = (document.getElementById('texadescripcionsubpartida').value);
-
-      var selIndex = selObj.options[selObj.selectedIndex].text;
-
-      if(numero_sub_partida<0||numero_sub_partida.length==0||!(/^[0-9]+$/.test(numero_sub_partida))){
-        alert("El campo Numero Subpartida es invalido");
-        document.getElementById('innumerosubpartida').focus();
-        return;
-        }
-
-        if(String(descripcion)==""||!(/^[A-Za-z]+$/.test(descripcion))){
-	 alert("El campo Descripcion es invalido");
-        document.getElementById('texadescripcionsubpartida').focus();
-        return;
-	}
-
-
-         alert(selIndex);
-        window.location="sub_partida.php?numero_contrato="+selIndex+"&numero_sub_partida="+numero_sub_partida+"&descripcion="+descripcion;
-    }
-</script>
-
-
 
 
 
@@ -257,7 +220,7 @@ document.getElementById("myOverlay").style.display = "none";
       </div>
     </div>
 
-      <div id="contenedorconvenios">
+      <!--<div id="contenedorconvenios">
         <div class="container1">
           <div class="row">
             <div class='col-sm-20 col-md-20 col-ld-20'>
@@ -294,7 +257,7 @@ document.getElementById("myOverlay").style.display = "none";
             </div>
           </div>
         </div>
-      </div>
+      </div>-->
     </div>
 
  

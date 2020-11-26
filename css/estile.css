@@ -891,110 +891,249 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', end
 
 /*INFORME CONSOLIDADO*/
 .main-informe-consolidado {
-height: 170vh;
-width: 1050px;
-margin: 0 auto;
-}
-.contenedor-gris-informe-consolidado-one{
-height: 160vh;
-width: 1150px;
-display: grid;
-background-color: #d8d8d8;
-grid-template-areas:
-"conenedor-informe-consolidado"
-"contenedor-contratos-informe"
-"barra-progreso"
-"botones-informe" ;
-grid-template-rows: 250px 500px 200px;
-grid-template-columns: 1fr;
-}
-
-.contenedor-gris-informe-consolidado-one .conenedor-informe-consolidado{
-grid-area:conenedor-informe-consolidado ;
-}
-.contenedor-gris-informe-consolidado-one .contenedor-contratos-informe{
-grid-area: contenedor-contratos-informe;
-}
-.contenedor-gris-informe-consolidado-one .botones-informe{
-grid-area: botones-informe;
-}
-.contenedor-gris-informe-consolidado-one .barra-progreso{
-grid-area: barra-progreso;
-text-align: center;
-}
-.botones-informe{
-margin: 0 auto;
-}
-.barra-progreso .progreso{
-border: 2px solid blue;
-width: 1fr;
-height: 30px;
-}
-.barra-progreso .progreso:hover{
-border:2px solid #0c9;
-}
-.barra-progreso {
-  padding-bottom: 30px;
+  min-height: calc(100px - 100px -100%);
+  width: 1050px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  
   }
-
-.conenedor-informe-consolidado{
-display: grid;
-grid-template-areas: 
-"informe-consolidado "
-"tabla-consolidador "
-;
-grid-template-columns: 1fr;
-grid-template-rows: 100px;
-
-}
-.conenedor-informe-consolidado h1{
-grid-area: informe-consolidado;
-text-align: center;
-}
-
-.conenedor-informe-consolidado .tabla-consolidador{
-grid-area: tabla-consolidador;
-}
-#table7030{
-background: #FFFFFF;
-}
-#table7030 tr:nth-child{
-background-color: #ddd;
-}
-
-.contenedor-contratos-informe{
-display: grid;
-grid-template-areas: 
-"contratos "
-"tabla-contrato ";
-grid-template-columns: 1fr;
-grid-template-rows: 100px 300px;
-}
-
-.contenedor-contratos-informe h1,h2{
-grid-area: contratos;
-text-align: center;
-}
-.contenedor-contratos-informe .tabla-contrato{
-grid-area: tabla-contrato;
-}
-
-
-.tabla-contrato  table{
-font-size: 12px;
-
-}
-.tabla-contrato table th {
-text-align: center;
-}
-
-.contenedor-gris-informe-consolidado-one h1::after {
-content: "";
-display: block;
-width: 10rem;
-height: 0.2rem;
-background-color: #0c9;
-}
-.ui-autocomplete{
-z-index:1050;
-}
+  .contenedor-gris-informe-consolidado-one{
+  width: 1150px;
+  min-height: calc(100px - 100px -100%);
+  display: grid;
+  background-color: #d8d8d8;
+  grid-template-areas:
+  "conenedor-informe-consolidado"
+  "contenedor-contratos-informe"
+  "barra-progreso"
+  "botones-informe" ;
+  grid-template-rows: 300px 1fr 250px 50px;
+  grid-template-columns: 1fr;
+  }
+  
+  .contenedor-gris-informe-consolidado-one .conenedor-informe-consolidado{
+  grid-area:conenedor-informe-consolidado ;
+  }
+  .contenedor-gris-informe-consolidado-one .contenedor-contratos-informe{
+  grid-area: contenedor-contratos-informe;
+  }
+  .contenedor-gris-informe-consolidado-one .botones-informe{
+  grid-area: botones-informe;
+  }
+  .contenedor-gris-informe-consolidado-one .barra-progreso{
+  grid-area: barra-progreso;
+  text-align: center;
+  }
+  
+  .botones-informe{
+  margin: 0 auto;
+  }
+  
+  .barra-progreso {
+    padding-bottom: 30px;
+    }
+  
+  .conenedor-informe-consolidado{
+  display: grid;
+  grid-template-areas: 
+  "informe-consolidado "
+  "tabla-consolidador "
+  ;
+  grid-template-columns: 1120px;
+  grid-template-rows: 100px;
+  
+  }
+  .conenedor-informe-consolidado h1{
+  grid-area: informe-consolidado;
+  text-align: center;
+  }
+  
+  .conenedor-informe-consolidado .tabla-consolidador{
+  grid-area: tabla-consolidador;
+  }
+  #table7030{
+  background: #FFFFFF;
+  }
+  #table7030 tr:nth-child{
+  background-color: #ddd;
+  }
+  .tabla-consolidador{
+    padding-left: 25px;
+  }
+  
+  .contenedor-contratos-informe{
+  display: grid;
+  grid-template-areas: 
+  "contratos "
+  "tabla-contrato ";
+  grid-template-columns:  1120px;
+  grid-template-rows: 100px ;
+  }
+  
+  .contenedor-contratos-informe h1,h2{
+  grid-area: contratos;
+  text-align: center;
+  }
+  .contenedor-contratos-informe .tabla-contrato{
+  grid-area: tabla-contrato;
+  }
+  .tabla-contrato{
+    padding-left: 25px;
+  }
+  
+  .tabla-contrato  table{
+  font-size: 12px;
+  
+  }
+  .tabla-contrato table th {
+  text-align: center;
+  }
+  
+  .contenedor-gris-informe-consolidado-one h1::after {
+  content: "";
+  display: block;
+  width: 10rem;
+  height: 0.2rem;
+  background-color: #0c9;
+  }
+  .ui-autocomplete{
+  z-index:1050;
+  }
+  
+  /*INFORME CONSOLIDADO PARA IPAD*/
+  @media screen and (max-width: 768px){
+    .main-informe-consolidado {
+      min-height: calc(100px - 100px -100%);
+      width: 770px;
+      margin: 0 auto;
+      padding-bottom: 20px;
+      }
+      .contenedor-gris-informe-consolidado-one{
+        width: 770px;
+        min-height: calc(100px - 100px -100%);
+        display: grid;
+        background-color: #d8d8d8;
+        grid-template-areas:
+        "conenedor-informe-consolidado"
+        "contenedor-contratos-informe"
+        "barra-progreso"
+        "botones-informe" ;
+        grid-template-rows: 200px 1fr 250px 100px;
+        grid-template-columns: 1fr;
+        }
+        
+          .tabla-consolidador{
+            width: 720px;
+            font-size: 10px;
+          }
+          .conenedor-informe-consolidado h1{
+            width: 720px;
+            
+            }
+          .contenedor-contratos-informe h1,h2{
+            width: 720px;
+          }
+          .tabla-contrato{
+            width: 720px;
+            text-align: center;
+          }
+          .tabla-contrato  table{
+            font-size: 6px;
+            }
+            .tabla-contrato table th {
+            text-align: center;
+            }
+            .barra-progreso {
+              width: 720px;
+              padding-left: 50px;
+              padding-top: 50px;
+              }
+            .botones-informe{
+              width: 720px;
+              padding-left: 120px;
+              padding-top: 50px;
+            }
+          }
+  
+  /*INFORME CONSOLIDADO PARA CELULAR*/
+  @media screen and (max-width: 375px){
+    .main-informe-consolidado {
+      min-height: calc(100px - 100px -100%);
+      width: 371px;
+      margin: 0 auto;
+      padding-bottom: 20px;
+      }
+      .contenedor-gris-informe-consolidado-one{
+        width: 371px;
+        min-height: calc(100px - 100px -100%);
+        display: grid;
+        background-color: #d8d8d8;
+        grid-template-areas:
+        "conenedor-informe-consolidado"
+        "contenedor-contratos-informe"
+        "barra-progreso"
+        "botones-informe" ;
+        grid-template-rows: 300px 1fr 150px 150px;
+        grid-template-columns: 250px;
+        }
+        .conenedor-informe-consolidado{
+          display: grid;
+          grid-template-areas: 
+          "informe-consolidado "
+          "tabla-consolidador "
+          ;
+          grid-template-columns: 1fr ;
+          grid-template-rows: 150px;
+          
+          }
+          .tabla-consolidador{
+            width: 301px;
+            font-size: 8px;
+          }
+          .conenedor-informe-consolidado h1{
+            width: 371px;
+            
+            }
+          .contenedor-contratos-informe h1,h2{
+            width: 371px;
+          }
+          
+          .tabla-contrato{
+            width: 330px;
+            overflow: scroll;
+          }
+          .dataTables_filter input{
+            width: 200px;
+            height: 20px;
+            font-size: 10px;
+          }
+          .dataTables_length{
+            padding-left: 1px;
+          }
+          .dataTables_length select{
+            height: 25px;
+            width: 200px;
+            font-size: 10px;
+          }
+          .dataTables_wrapper{
+            font-size: 10px;
+          }
+          .tabla-contrato  table{
+            font-size: 5px;
+            }
+            .tabla-contrato table th {
+            text-align: center;
+            width: 5px;
+            }
+            .barra-progreso {
+              width: 370px;
+              padding-top: 50px;
+              }
+            .CanvasMy{
+              height: 100px;
+            }
+            .botones-informe{
+              width: 200px;
+            }
+          }
+  

@@ -125,7 +125,7 @@
 <form   id="pdf"  method="POST"enctype="multipart/form-data">
                   <h1><strong> SUBIR ARCHIVO PDF </strong></h1>
                   <input type="file" name="pdf" accept=".pdf" for="file-01" data-toggle="tooltip" data-placement="top" title="Solo archivos PDF">
-                 <input class="form-control" placeholder="Escriba el número de contrato" type="text"name="numero_contrato" required pattern="[A-Za-z0-9]*">
+                 <input class="form-control" placeholder="Escriba el número de contrato" type="text"name="numero_contrato" id="contrato" required pattern="[A-Za-z0-9]*">
                   <button id="E" class="btn btn-primary" type="submit"onclick=this.form.action="subirpdf.php">Enviar</button>
                     <button id="bre" class="btn btn-primary" type="button" onclick="location.href='principal2.php'">Regresar</button>
 </form>
@@ -249,11 +249,28 @@
         </footer>
 
         <!--Fin cargador de archivos -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"
-            integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY"
-            crossorigin="anonymous">
-          </script>
+       
           <script src="https://cdn.datos.gob.mx/assets/js/main.js"></script>
           <script src="js/bootstrap.min.js"></script>
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="https://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" rel="Stylesheet"></link>
+    <script src="https://code.jquery.com/ui/1.10.2/jquery-ui.js" ></script>
+    <script src="https://code.jquery.com/jquery-migrate-3.0.0.min.js"></script>
+
+    <script src="js/funciones_cvs_pdf.js"></script>
+    <script>
+
+    $(function() {
+        <?php
+     require_once("consulta_principal.php");                                
+                                ?>
+       var arreglo = <?php echo json_encode($array) ?>;
+       autocompletar(arreglo);                         
+
+
+    });
+    </script>
+
 </body>
 </html>

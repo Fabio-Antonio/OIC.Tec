@@ -89,7 +89,7 @@ window.location.replace('index');</script>";
                 </div>
                 <h3>ADMINISTRACIÓN</h3>
                 <ul>
-                    <li><i class="fas fa-plus-circle"></i> <a href="lectura.html">Carga de archivos (PDF)(CVS)</a></li>
+                    <li><i class="fas fa-plus-circle"></i> <a href="lectura.php">Carga de archivos (PDF)(CVS)</a></li>
                     <li><i class="fas fa-plus-circle"></i><a href="consulta_contrato.php"> Comprobación/Convenios
                             Modificados</a></li>
                     <li><i class="fas fa-plus-circle"></i><a href="consulta_contrato.php"> Documentos Adicionales</a>

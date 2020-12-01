@@ -69,7 +69,7 @@
   <button  id="ce" class="w3-bar-item w3-button w3-large" onclick="w3_close()">Cerrar &times;</button>
   <img src="icons/lf.png" alt="sfp" width="145" height="60">
   <a  class="w3-bar-item w3-button"></a>
-  <a href="#" class="w3-bar-item w3-button">Inicio</a>
+  <a href="principal2.php" class="w3-bar-item w3-button">Inicio</a>
   <a href="alta.html" class="w3-bar-item w3-button">Usuarios</a>
   <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal2" >Contacto</a>
    <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal3">Nueva Partida</a>
@@ -170,7 +170,7 @@
           <div id="btnac">
               <button type="button" id="bac" class="btn btn-primary" onclick="ingresar2();" name="button"> Guardar </button>
 		</form>
-              <button type="button" id="bregresar" class="btn btn-primary"  onclick="location.href='principal.php'" name="bregresar"> Regresar </button>
+              <button type="button" id="bregresar" class="btn btn-primary"  onclick="location.href='principal2.php'" name="bregresar"> Regresar </button>
           </div>
     </div>
   </div>
@@ -193,126 +193,9 @@
     <div id="ful">
       <label id="ccp" class="col-sm-20"> Fundamento legal:   </label>
       </div>
- <script lenguage="javascript" type="text/javascript">
-         function mostrarText(){
-    var selObj = document.getElementById('prc');
-      var pr  = (document.getElementById('proc').value);
-	var rate_value;
+ 
+<script lenguaje="javascript" src="js/funciones_pro_fundamento.js"type="text/javascript">
 
-
-	if (document.getElementById('70').checked) {
-  rate_value = document.getElementById('70').value;
-}
-if (document.getElementById('30').checked) {
-  rate_value = document.getElementById('30').value;
-}
-	  if(selObj.length==0){
-
-        document.getElementById("prc").focus();
-	 $(function(){
-                $('#my-modal2').modal('show')
-                });
-
-        return;
-        }
-
-       if(pr.length==0||!(/^[A-Z-a-z0-9ñÑáéíóúÁÉÍÓÚ,.°\s]*$/.test(pr))){
-         document.getElementById('proc').focus();
-	 $(function(){
-
-	  $('#my-modal2').modal('show')
-                });
-
-         return;
-	}
-
-
-       var selIndex = selObj.options[selObj.selectedIndex].value;
-
-    if(selIndex.length==0){
-         document.getElementById('prc').focus();
-	  $(function(){
-                $('#my-modal2').modal('show')
-                });
-
-         return;
-        }
-
-
-        // window.location="procedimientos.php?fundamento="+selIndex+"&procedimientos="+pr;
-
-$.post('procedimientos.php',{
-"fundamento":selIndex,
-"procedimientos":pr,
-"informe":rate_value
-},function(data){
-
-$('#my-modal').modal('show')
-
-});
-}
-
-
-</script>
-
-<script   lenguaje="javascript" type="text/javascript">
-function ingresar2(){
-var fundamento= (document.getElementById("fundanen").value);
-var fecha= (document.getElementById("fechafun").value);
-var descripcion= (document.getElementById("descripcionfunda").value);
-
-
-if(fundamento.length==0||fundamento.lenth>45){
-
-document.getElementById("fundanen").focus();
- $(function(){
-                $('#my-modal2').modal('show')
-                });
-
-return;
-}
-if(!(/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ,.°\s]*$/i.test(fundamento))){
-document.getElementById("fundanen").focus();
- $(function(){
-                $('#my-modal2').modal('show')
-                });
-
-return;
-
-}
-if(descripcion.length==0||descripcion.lenth>500){
-document.getElementById("descripciónfunda").focus();
- $(function(){
-                $('#my-modal2').modal('show')
-                });
-
-return;
-}
-
-if(!(/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ,.°\s]*$/i.test(descripcion))){
-
-document.getElementById("descripcionfunda").focus();
- $(function(){
-                $('#my-modal2').modal('show')
-                });
-
-return;
-
-}
-
-
-
-$.post('fundamento.php',{
-"fundamento":fundamento,
-"fecha":fecha,
-"descripcion":descripcion
-
-},function(data){
-
-$('#my-modal').modal('show')
-
-});
-}
 </script>
 
 
@@ -351,7 +234,7 @@ $('#my-modal').modal('show')
 
     <div id="btnca">
         <button type="button" id="bca" onclick="mostrarText();" class="btn btn-primary" name="button"> Guardar </button>
-        <button type="button" id="bregresar" class="btn btn-primary"  onclick="location.href='principal.php'" name="bregresar"> Regresar </button>
+        <button type="button" id="bregresar" class="btn btn-primary"  onclick="location.href='principal2.php'" name="bregresar"> Regresar </button>
     </div>
   </div>
 </div>

@@ -146,18 +146,24 @@
     <div class="modal fade" role="dialog" id="my-modal3" aria-labelledby="modal-title">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
-                <div class="modal-header" style="background-color:#27C44D;">
+                <div class="modal-header" style="background-color:#545454;">
                     <h3 class="modal-title" id="modal-title">B.E.S.A</h3>
                 </div>
                 <div class="modal-body">
+                    <p>Ingrese los datos correspondientes a las entregas de bienes o servicios de su contrato. Se debe
+                        establecer la fecha máxima de entrga y la cantidad máxima del bien o servicio a entregar. En el
+                        caso
+                        de ser un servicio, establecer cuantas entregas se realizarán hasta que termina la vigencia del
+                        contrato; en caso de
+                        bienes se establece la cantidad total de bienes</p>
                     <div class="form-group datepicker-group">
                         <label class="control-label" for="calendarYear">Fecha maxima de entrega:</label>
                         <input class="form-control" id="calendarYear" type="date">
                     </div>
                     <div class="form-group">
                         <label class="col-sm-3 control-label" for="email-03">Cantidad maxima:</label>
-                            <input class="form-control" id="cantidadm" placeholder="Cantidad maxima" type="number">
-                            <button class="btn btn-primary" onclick="entrega();">Guardar</button>                        
+                        <input class="form-control" id="cantidadm" placeholder="Cantidad maxima" type="number">
+
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -168,8 +174,38 @@
     </div>
 
 
+    <div class="modal fade" role="dialog" id="my-modal4" aria-labelledby="modal-title">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color:#545454;">
+                    <h3 class="modal-title" id="modal-title">B.E.S.A</h3>
+                </div>
+                <div class="modal-body">
+                    <p>Para establecer las fechas de un contrato, se debe tomar en cuenta las siguientes
+                        consideraciones:</p>
+                    <ol>
+                        <li>La fecha de formalización de contrato no debe pasar los quince días
+                        naturales después de la fecha de notificación de adjudicación.</li>
+                        <li>Las fechas SAT,IMSS,INFONAVIT no deben exceder los treinta días antes de la
+                        fecha de notificación de adjudicación; no debe ser mayor que la fecha de formalización de
+                         contrato.</li>
+                         <li>Las fechas de requisición y suficiencia deben ser anteriores a la fecha de notificación 
+                         de adjudicación.</li>
+                         <li>La fecha de garantía de cumplimiento no debe exceder los díez días naturales después de 
+                         la fecha de formalización de contrato.</li>
+                         <li>La fecha máxima de entrega deberá estar dentro del rango de la vigencia del contrato.</li>
 
 
+                    </ol>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" data-dismiss="modal">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

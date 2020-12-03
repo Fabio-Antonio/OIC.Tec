@@ -68,6 +68,7 @@ function ingresar() {
     }, function(data) {
         var response = jQuery.parseJSON(data);
         if(response.success==true){ 
+            alert("Datos ingresados correctamente");
         }else{
             alert("La partida ya existe");
         }

@@ -547,15 +547,7 @@
                 document.getElementById("seproveedoradjudicadocontrato").focus();
                 return;
             }
-            if (selObj8.length == 0) {
-                $(function() {
-                    $('#my-modal2').modal('show')
-                });
-
-
-                document.getElementById("seconsolidadocontrato").focus();
-                return;
-            }
+            
             var min = 0;
             var valor =0;
             var envío;

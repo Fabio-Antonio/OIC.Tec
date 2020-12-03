@@ -144,6 +144,9 @@ function mostrarText(){
     
     
              $this.css({"color":"red","border":"1px solid red"});
+             $(function(){
+               $('#my-modal4').modal('show')
+               });
           }else{
          $this.css({"color":"green","border":"1px solid green"});
     
@@ -166,6 +169,9 @@ function mostrarText(){
     
     
              $this.css({"color":"red","border":"1px solid red"});
+             $(function(){
+               $('#my-modal4').modal('show')
+               });
           }else{
              $this.css({"color":"green","border":"1px solid green"});
     
@@ -187,6 +193,9 @@ function mostrarText(){
        if (sat>fecha_formalizacion_contrato||sat<fecha_notificacion_adjudicada.setDate(fecha_notificacion_adjudicada.getDate()-30)){
     
              $this.css({"color":"red","border":"1px solid red"});
+             $(function(){
+               $('#my-modal4').modal('show')
+               });
           }else{
              $this.css({"color":"green","border":"1px solid green"});
     

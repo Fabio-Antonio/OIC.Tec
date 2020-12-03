@@ -48,13 +48,13 @@ if($statement){
     }
     if($total1==null){
         echo "<script>alert('No se encontraron resultados')
-window.location.replace('consulta_vigencia.php');</script>";
+window.location.replace('principal2.php');</script>";
        return;
         }
    
 }else{
 echo "<script>alert('La consulta a la base de datos es incorrecta')
-window.location.replace('principal.php');</script>";
+window.location.replace('principal2.php');</script>";
 }
 
   $statement = $conn->prepare("SELECT COUNT(*) AS total FROM contrato AS c
@@ -71,7 +71,7 @@ if($statement){
     }
     if($total2==null){
         echo "<script>alert('No se encontraron resultados')
-window.location.replace('consulta_vigencia.php');</script>";
+window.location.replace('principal2.php');</script>";
        return;
         }
    
@@ -95,7 +95,7 @@ if($statement){
 
  if($total3==null){
         echo "<script>alert('No se encontraron resultados')
-window.location.replace('consulta_vigencia.php');</script>";
+window.location.replace('principal2.php');</script>";
        return;
         }
 

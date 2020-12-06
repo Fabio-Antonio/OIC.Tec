@@ -9,120 +9,70 @@
     <link href="https://cdn.datos.gob.mx/assets/img/favicon.ico" rel="shortcut icon">
     <title> CONSULTA POR NUMERO DE CONTRATO </title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/estilos.css" rel="stylesheet">
     <link href="https://cdn.datos.gob.mx/assets/css/main.css" rel="stylesheet">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/estile.css">
 </head>
 
-<body class="front">
-    <main>
-        <nav class="navbar navbar-inverse sub-navbar navbar-fixed-top" style="height: 55px; ">
-            <div class="container">
-                <div class="navbar-header" style="margin-top: 10px;">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                        data-target="#subenlaces">
-                        <span class="sr-only">Interruptor de Navegación</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="principal2.php" id="besa2">B.E.S.A</a>
-                    <a> <img data-v-4a3754a3="" src="icons/lf.png" alt="logo gobierno de méxico" class="logos"
-                            style="width: 80%;height: 50%; margin-top: -100px; margin-bottom: -25px; margin-left: 420px "></a>
-                </div>
-
-                <div class="collapse navbar-collapse" id="subenlaces" style=" width:108%; margin-top: -30px;">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#">Enlace</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                                aria-expanded="false">Desplegable <span class="caret"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="#">Acción</a></li>
-                                <li><a href="#">Otra acción</a></li>
-                                <li><a href="#">Algo más aquí</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">Enlace separado</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
+<body>
+    <header class="site-header">
+        <div class="contenedor encabezado">
+            <p>
+                B.E.S.A
+            </p>
+            <div class="imagen-header">
+                <img src="img/lf.png" alt="FuncionPublica">
             </div>
-        </nav>
-        <br><br><br><br>
-        <!------------------------------------------------->
-        <!------------------------------------------------->
-        <!---------INICIO DE MENU A LA IZQUIERDA-------------------------->
-        <!------------------------------------------------->
-        <!------------------------------------------------->
-
-        <div class="barraizquierda">
-
-
-            <!-- Sidebar -->
-            <div class="barra">
-
-
-                <!-- Sidebar -->
-
-                <div class="w3-sidebar w3-bar-block w3-animate-left" style="display:none;z-index:5" id="mySidebar">
-                    <button id="ce" class="w3-bar-item w3-button w3-large" onclick="w3_close()">Cerrar &times;</button>
-                    <img src="icons/lf.png" alt="sfp" width="145" height="60">
-                    <a class="w3-bar-item w3-button"></a>
-                    <a href="principal2.php" class="w3-bar-item w3-button">Inicio</a>
-                    <a href="alta.html" class="w3-bar-item w3-button">Usuarios</a>
-                    <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal2">Contacto</a>
-                    <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal3">Nueva
-                        Partida</a>
-
-                    <a href="cerrar.php" class="w3-bar-item w3-button">Logout -></a>
-
-                </div>
-
-                <!-- Page Content -->
-                <div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay">
-                </div>
-
-                <div>
-                    <button class="w3-button w3-white w3-xxlarge" onclick="w3_open()">&#9776;</button>
-                </div>
-            </div>
+            <span></span>
         </div>
-        <script>
-        function w3_open() {
-            document.getElementById("mySidebar").style.display = "block";
-            document.getElementById("myOverlay").style.display = "block";
-        }
+    </header>
 
-        function w3_close() {
-            document.getElementById("mySidebar").style.display = "none";
-            document.getElementById("myOverlay").style.display = "none";
-        }
-        </script>
+    <!-- Sidebar -->
+    <div class="barra">
 
-        <div id="centro">
-            <div class="container1">
-                <div class="row" id="todo">
-                    <div class='col-sm-150 col-md-150 col-ld-150' id="todo">
-                        <div id="tit">
-                            <h2 class="ts">CONSULTA POR NÚMERO DE CONTRATO </h2>
-                        </div>
+        <!-- Sidebar -->
+        <div class="w3-sidebar w3-bar-block w3-animate-left" style="display:none;z-index:5" id="mySidebar">
+            <button id="ce" class="w3-bar-item w3-button w3-large" onclick="w3_close()">Cerrar &times;</button>
+            <img src="img/lf.png" alt="sfp" width="145" height="60">
+            <a class="w3-bar-item w3-button"></a>
+            <a href="principal2.php" class="w3-bar-item w3-button">Inicio</a>
+            <a href="alta.html" class="w3-bar-item w3-button">Usuarios</a>
+            <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal2">Contacto</a>
+            <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal3">Nueva Partida</a>
+            <a href="cerrar.php" class="w3-bar-item w3-button">Logout -></a>
+        </div>
+
+        <!-- Page Content -->
+        <div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+        <div>
+            <button class="w3-button w3-white w3-xxlarge" onclick="w3_open()">&#9776;</button>
+        </div>
+    </div>
 
 
-                        <!--select-->
-                        <div id="selec">
-                            <h3 class="selc"> Seleccionar el contrato a consultar </h3>
-                            <!--inicio de buscar -->
-                            <div id="busca">
-                                <div class="btn-group bootstrap-select form-control hidden-xs hidden-sm">
-                                    <button type="button" class="btn dropdown-toggle bs-placeholder btn-default"
-                                        id="drop" data-toggle="dropdown" role="button" title="Filtrar por tema">
-                                        <span class="filter-option pull-left">Buscar</span>
-                                        <span class="bs-caret"></span>
-                                    </button>
-                                    <div class="dropdown-menu open" role="combobox">
-                                        <ul id="lista" class="dropdown-menu inner" role="listbox" aria-expanded="false">
-                                            <?php
+    <main class="main-consulta-numero-contrato">
+        <div class="contenedor-gris-consulta-numero-contrato">
+            <h1>GENERAL</h1>
+
+            <div class="general-consulta-numero-contrato">
+                <!--select-->
+
+                <div class="selec-consulta-numero-contrato">
+                    <h2> Seleccionar el contrato a consultar </h2>
+                    <!--inicio de buscar -->
+                    <div class="busca">
+                        <div class="btn-group bootstrap-select form-control hidden-xs hidden-sm bot">
+                            <button type="button" class="btn dropdown-toggle bs-placeholder btn-default" id="drop"
+                                data-toggle="dropdown" role="button" title="Filtrar por tema">
+                                <span class="filter-option pull-left">Buscar</span>
+                                <span class="bs-caret"></span>
+                            </button>
+                            <div class="dropdown-menu open men" role="combobox">
+                                <ul id="lista" class="dropdown-menu inner" role="listbox" aria-expanded="false">
+                                    <?php
                  
                 $flag=unserialize($_POST['flag']);
                 $valor=json_encode($flag);
@@ -131,65 +81,69 @@
 
                     ?>
 
-                                            <li data-original-index="<?php print($val['id_contrato']);?>"
-                                                id="<?php print($val['id_contrato']);?>">
-                                                <a tabindex="0" class="" data-tokens="null" role="option"
-                                                    aria-disabled="false" aria-selected="false">
-                                                    <span class="text"><?php print($val['numero_contrato']); ?></span>
-                                                    <span class="glyphicon glyphicon-ok check-mark"></span>
-                                                </a>
-                                            </li>
-                                            <?php
+                                    <li data-original-index="<?php print($val['id_contrato']);?>"
+                                        id="<?php print($val['id_contrato']);?>">
+                                        <a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false"
+                                            aria-selected="false">
+                                            <span class="text"><?php print($val['numero_contrato']); ?></span>
+                                            <span class="glyphicon glyphicon-ok check-mark"></span>
+                                        </a>
+                                    </li>
+                                    <?php
                 }
 
 
   ?>
 
-                                        </ul>
-                                    </div>
-
-
-
-                                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
-                                    </script>
-
-                                    <script lenguage="javascript" type="text/javascript">
-                                    $("#lista li").on("click", function() {
-                                        var value = $(this).text();
-                                        var value2 = value.trim();
-                                        var Variable = '<?=$valor?>';
-                                        var sOptionVal = $(this).val();
-                                        var bool = confirm("Se desea consultar: " + value2);
-
-                                        if (bool) {
-                                            // window.location="consulta.php?numero_contrato="+value2+"&flag="+Variable;
-                                            $.post({
-                                                url: "consulta.php",
-                                                data: {
-                                                    "numero_contrato": value2,
-                                                    "flag": Variable
-                                                }
-                                            }).done(function(data) {
-                                                $("main").html(data);
-                                            });
-
-                                        } else {
-                                            alert("solicitud cancelada");
-                                        }
-                                    });
-                                    </script>
-
-                                </div>
-                                <div class="modal later-modal">
-                                    <p>Select a time to deliver.</p>
-                                </div>
-                                <button id="ser" class="btn btn-primary">
-                                    <div class="glyphicon glyphicon-search"></div>
-                                </button>
+                                </ul>
                             </div>
+                            <!--men-->
 
 
-                            <?php
+
+                            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+                            </script>
+
+                            <script lenguage="javascript" type="text/javascript">
+                            $("#lista li").on("click", function() {
+                                var value = $(this).text();
+                                var value2 = value.trim();
+                                var Variable = '<?=$valor?>';
+                                var sOptionVal = $(this).val();
+                                var bool = confirm("Se desea consultar: " + value2);
+
+                                if (bool) {
+                                    // window.location="consulta.php?numero_contrato="+value2+"&flag="+Variable;
+                                    $.post({
+                                        url: "consulta.php",
+                                        data: {
+                                            "numero_contrato": value2,
+                                            "flag": Variable
+                                        }
+                                    }).done(function(data) {
+                                        $("main").html(data);
+                                    });
+
+                                } else {
+                                    alert("solicitud cancelada");
+                                }
+                            });
+                            </script>
+
+                        </div>
+                        <!--bot-->
+                        <div class="modal later-modal mod">
+                            <p>Select a time to deliver.</p>
+                        </div>
+                        <!--mod-->
+                        
+                            
+                        </button>
+                    </div>
+                    <!--busca-->
+
+
+                    <?php
 
   if (isset($_POST['numero_contrato'])) {
 
@@ -241,134 +195,139 @@
   }
          ?>
 
-                        </div>
-
-
-
-                        <!--final select-->
-
-                        <div class="dtextnumcontracon">
-                            <label class="textnumcontracon">Número de contrato</label>
-                            <input id="intextnumcontracon" class="form-control" type="text"
-                                placeholder="NÚMERO DE CONTRATO" readonly="readonly"
-                                value="<?php echo $numero_contrato;?>">
-                        </div>
-
-                        <div class="dtextnumcontratocomcon">
-                            <label class="textnumcontratocomcon">Número Contrato Compranet</label>
-                            <input id="intextnumcontratocomcon" class="form-control"
-                                placeholder="Número Contrato Compranet" type="text" readonly="readonly"
-                                value="<?php echo $contrato_compranet; ?>">
-                        </div>
-                        <div class="dtextsufipresupcon">
-                            <label class="textsufipresupcon">Suficiencia Presupuestal</label>
-                            <input id="intextsufipresupcon" class="form-control" placeholder="Suficiencia Presupuestas"
-                                type="text" readonly="readonly" value="<?php echo $suficiencia ?>">
-                        </div>
-                        <div class="dtextproceconsocon">
-                            <label class="textproceconsocon">Licitación</label>
-                            <input id="indtextproceconsocon" class="form-control"
-                                placeholder="Procedimiento Consolidado" type="text" readonly="readonly"
-                                value="<?php echo $licitacion ?>">
-                        </div>
-                        <div class="dtextiniciovigcon">
-                            <label class="textiniciovigcon">Inicio Vigencia</label>
-                            <input id="indtextiniciovigcon" class="form-control" placeholder="Inicio Vigencia"
-                                type="text" readonly="readonly" value="<?php echo $inicio_vigencia ?>">
-                        </div>
-                        <div class="dtextfinvigenciacon">
-                            <label class="textfinvigenciacon">Fin Vigencia</label>
-                            <input id="indtextfinvigenciacon" class="form-control" placeholder="Fin Vigencia"
-                                type="text" readonly="readonly" value="<?php echo $fin_vigencia ?>">
-                        </div>
-                        <div class="dtextfechadnotifadcon">
-                            <label class="textfechadnotifadcon">Fecha de Notificación Adjudicación</label>
-                            <input id="indtextfechadnotifadcon" class="form-control"
-                                placeholder="Fecha de Notificación Adjudicación" type="text" readonly="readonly"
-                                value="<?php echo $notificacion_adjudicada ?>">
-                        </div>
-                        <div class="dtextfechadformalcon">
-                            <label class="textfechadformalcon">Fecha de Formalización</label>
-                            <input id="indtextfechadformalcon" class="form-control" placeholder="Fecha de Formalización"
-                                type="text" readonly="readonly" value="<?php echo $formalizacion_contrato ?>">
-                        </div>
-
-                        <div class="dunidadrequircon">
-                            <label class="unidadrequircon">Unidad Requirente</label>
-                            <input id="indunidadrequircon" class="form-control" placeholder="Unidad Requirente"
-                                type="text" readonly="readonly" value="<?php echo $unidad ?>">
-                        </div>
-                        <div class="dtextmontmaxcon">
-                            <label class="textmontmaxcon">Monto Máximo</label>
-                            <input id="indtextmontmaxcon" class="form-control" placeholder="Monto Máximo" type="text"
-                                readonly="readonly" value="<?php echo "$".$monto_maximo ?>">
-                        </div>
-                        <div class="dtextmontmincon">
-                            <label class="textmontmincon">Monto Minimo</label>
-                            <input id="indtextmontmincon" class="form-control" placeholder="Monto Minimo" type="text"
-                                readonly="readonly" value="<?php echo "$".$monto_minimo ?>">
-                        </div>
-                        <div class="dtextopinsatcon">
-                            <label class="textopinsatcon">Opinion SAT</label>
-                            <input id="indtextopinsatcon" class="form-control" placeholder="Opinion SAT" type="text"
-                                readonly="readonly" value="<?php echo $sat ?>">
-                        </div>
-                        <div class="dtextopinininfocon">
-                            <label class="textopinininfocon">Opinion INFONAVIT</label>
-                            <input id="indtextopinininfocon" class="form-control" placeholder="Opinion INFONAVIT"
-                                type="text" readonly="readonly" value="<?php echo $infonavit ?>">
-                        </div>
-                        <div class="dtextobjetconcon">
-                            <label class="textobjetconcon">Objeto del Contrato</label>
-                            <textarea id="indtextobjetconcon" class="form-control" placeholder="Objeto del Contrato"
-                                type="text" readonly="readonly" value="<?php echo $objeto_contratacion ?>"></textarea>
-                        </div>
-                        <div class="dtextfundalegcon">
-                            <label class="textfundalegcon">Procedimiento de Contratación</label>
-                            <input id="indtextfundalegcon" class="form-control" placeholder="Fundamento Legal"
-                                type="text" readonly="readonly" value="<?php echo $procedimientos ?>">
-                        </div>
-                       
-                        <div class="dtextgarantcumpcon">
-                            <label class="textgarantcumpcon">Garantia de Cumplimiento</label>
-                            <input id="indtextgarantcumpcon" class="form-control" placeholder="Garantia de Cumplimiento"
-                                type="text" readonly="readonly" value="<?php echo $garantia_cumplimiento ?>">
-                        </div>
-                        <div class="dtextunidadcomcon">
-                            <label class="textunidadcomcon">Número Unidad Compradora</label>
-                            <input id="intextunidadcomcon" class="form-control"
-                                placeholder="Número de Unidad Compradora" type="text" readonly="readonly"
-                                value="<?php echo $numero_unidad; ?>">
-                            <label class="textunidadcomcon">Unidad Compradora</label>
-                            <input id="texatextunidadcomcon" class="form-control" placeholder="Unidad compradora" 
-                                readonly="readonly" value="<?php echo $nombre_unidad_compradora; ?>">
-                        </div>
-                        <div class="dtextresicon">
-                            <label class="textresicon">Requisición</label>
-                            <input id="indtextresicon" class="form-control" placeholder="Requisicion" type="text"
-                                readonly="readonly" value="<?php echo $requisicion_contrato ?>">
-                                <label class="textresicon">Clave de la Unidad Requirente</label>
-                            <input type="text" id="texadtextresicon" class="form-control" placeholder="Clave requirente" 
-                                readonly="readonly" value="<?php echo $clave_requirente ?>">
-                        </div>
-                        <div class="dche">
-                            <label id="ccp" class="col-sm-20">Contrato Abierto</label>
-                            <input id="ck" type="checkbox" name="Entregables">
-                        </div>
-
-
-                        <div id="dbtdescargar">
-                            <button class="btn btn-primary btn-lg" onclick="saludo();" id="btdescargar"> Descargar pdf
-                            </button>
-                        </div>
-                        <div id="dbtregcon">
-                            <button class="btn btn-primary btn-lg" id="btregrecon"
-                                onclick="window.location.href='principal2.php'"> Regresar </button>
-                        </div>
-
-                    </div>
                 </div>
+        
+
+
+            <!--final select-->
+
+            <div class="numero-de-contrato-consulta-numero-contrato">
+                <label>Número de contrato</label>
+                <input id="intextnumcontracon" type="text" placeholder="NÚMERO DE CONTRATO" readonly="readonly"
+                    value="<?php echo $numero_contrato;?>">
             </div>
+
+            <div class="numero-contrato-compranet-consulta-numero-contrato">
+                <label>Número Contrato Compranet</label>
+                <input id="intextnumcontratocomcon" placeholder="Número Contrato Compranet" type="text"
+                    readonly="readonly" value="<?php echo $contrato_compranet; ?>">
+            </div>
+
+            <div class="monto-maximo-consulta-numero-contrato">
+                <label>Monto Máximo</label>
+                <input id="indtextmontmaxcon" placeholder="Monto Máximo" type="text" readonly="readonly"
+                    value="<?php echo "$".$monto_maximo ?>">
+            </div>
+
+            <div class="monto-minimo-consulta-numero-contrato">
+                <label>Monto Minimo</label>
+                <input id="indtextmontmincon" placeholder="Monto Minimo" type="text" readonly="readonly"
+                    value="<?php echo "$".$monto_minimo ?>">
+            </div>
+
+            <div class="objeto-contrato-consulta-numero-contrato">
+                <label>Objeto del Contrato</label>
+                <input id="indtextobjetconcon" placeholder="Objeto del Contrato" type="text" readonly="readonly"
+                    value="<?php echo $objeto_contratacion ?>">
+            </div>
+
+            <div class="unidad-compradora-consulta-numero-contrato">
+                <label>Unidad Compradora</label>
+                <input id="texatextunidadcomcon" placeholder="Unidad compradora" readonly="readonly"
+                    value="<?php echo $nombre_unidad_compradora; ?>">
+            </div>
+
+            <div class="unidad-requirente-consulta-numero-contrato">
+                <label>Unidad Requirente</label>
+                <input id="indunidadrequircon" placeholder="Unidad Requirente" type="text" readonly="readonly"
+                    value="<?php echo $unidad ?>">
+            </div>
+
+            <div class="procedimiento-contratacion-consulta-numero-contrato">
+                <label>Procedimiento de Contratación</label>
+                <input id="indtextfundalegcon" placeholder="Fundamento Legal" type="text" readonly="readonly"
+                    value="<?php echo $procedimientos ?>">
+            </div>
+
+
+        </div>
+
+        <!--fechas-->
+
+        <div class="fechas-consulta-numero-contrato">
+            <h1>FECHAS</h1>
+
+            <div class="fecha-notificacion-adjudicada-consulta-numero-contrato">
+                <label>Fecha de Notificación Adjudicación</label>
+                <input id="indtextfechadnotifadcon" placeholder="Fecha de Notificación Adjudicación" type="text"
+                    readonly="readonly" value="<?php echo $notificacion_adjudicada ?>">
+            </div>
+
+            <div class="garantia-cumplimiento-consulta-numero-contrato">
+                <label>Garantia de Cumplimiento</label>
+                <input id="indtextgarantcumpcon" placeholder="Garantia de Cumplimiento" type="text" readonly="readonly"
+                    value="<?php echo $garantia_cumplimiento ?>">
+            </div>
+
+            <div class="formalizacion-contrato-consulta-numero-contrato">
+                <label>Formalización Contrato</label>
+                <input placeholder="Formalización Contrato" type="text" readonly="readonly">
+            </div>
+
+            <div class="sat-consulta-numero-contrato">
+                <label>Opinion SAT</label>
+                <input id="indtextopinsatcon" placeholder="Opinion SAT" type="text" readonly="readonly"
+                    value="<?php echo $sat ?>">
+            </div>
+
+            <div class="imss-consulta-numero-contrato">
+                <label>Opinion IMSS</label>
+                <input id="indtextopinsatcon" placeholder="Opinion IMSS" type="text" readonly="readonly" value="">
+            </div>
+
+            <div class="infonavit-consulta-numero-contrato">
+                <label>Opinion INFONAVIT</label>
+                <input id="indtextopinininfocon" placeholder="Opinion INFONAVIT" type="text" readonly="readonly"
+                    value="<?php echo $infonavit ?>">
+            </div>
+
+            <div class="inicio-vigencia-consulta-numero-contrato">
+                <label>Inicio Vigencia</label>
+                <input id="indtextiniciovigcon" placeholder="Inicio Vigencia" type="text" readonly="readonly"
+                    value="<?php echo $inicio_vigencia ?>">
+            </div>
+
+            <div class="fin-vigencia-consulta-numero-contrato">
+                <label>Fin Vigencia</label>
+                <input id="indtextfinvigenciacon" placeholder="Fin Vigencia" type="text" readonly="readonly"
+                    value="<?php echo $fin_vigencia ?>">
+            </div>
+
+        </div>
+
+
+
+        <!--Entregas-->
+        <div class="entregas-consulta-numero-contrato">
+            <h1>ENTREGAS</h1>
+            <div class="fecha-maxima-entrega-consulta-numero-contrato">
+                <label>Fecha Máxima de Entrega</label>
+                <input placeholder="Garantia de Cumplimiento" type="text" readonly="readonly">
+            </div>
+
+            <div class="cantidad-consulta-numero-contrato">
+                <label>Cantidad</label>
+                <input placeholder="Cantidad" type="text" readonly="readonly">
+            </div>
+
+            <div class="botones-consulta-numero-contrato">
+                <button class="btn btn-verde" onclick="saludo();" id="btdescargar"> Descargar
+                </button>
+                <button class="btn btn-verde" id="modificar-consulta">
+                    Modificar </button>
+            </div>
+        </div>
+
         </div>
 
 
@@ -388,116 +347,62 @@
 
     </main>
 
-    <footer>
-
-        <div class="contenedor-todo-footer">
-
-            <div class="contenedor-body">
-
-                <div class="columna1">
-                    <h1> </h1>
-                    <img src="itt.png" alt="ITT">
-                    <h1> </h1>
-                    <img src="indice.png" alt="TECNM">
-                    <h1> </h1>
-                    <img src="ff.png" alt="logo gobierno de méxico">
+    <footer class="site-footer">
+        <div class="contenedor display-footer">
+            <div class="footer-img">
+                <div class="im">
+                    <img src="img/itt.png" alt="ittlahuac">
                 </div>
-
-                <div class="columna2">
-                    <h1>B.E.S.A</h1>
-                    <ul class="list-unstyled">
-                        <li>
-                            <p align="center">
-                                <img src="icons/user.svg" alt="">
-                                Responsable del programa: Ing. David Rogelio Rodríguez Arias
-                            </p>
-                        </li>
-                        <li>
-                            <div class="tel">
-                                <p align="justify">
-                                    <img src="icons/mail.svg" alt="">
-                                    drrodriguez@nube.sep.gob.mx
-                            </div>
-                            </p>
-                        </li>
-                        <li>
-                            <div class="tel">
-                                <p align="justify">
-                                    <img src="icons/phone.svg" alt="">
-                                    36018650 ext. 66125
-                            </div>
-                            </p>
-                        </li>
-                    </ul>
+                <div class="im">
+                    <img src="img/indice.png" alt="ittlahuac">
                 </div>
-
-                <div class="columna3">
-                    <h1>Órgano Interno de Control de la SEP</h1>
-                    <ul class="list-unstyled">
-                        <li>
-                            <p align="center">
-                                <img src="icons/home.svg" alt="">
-                                Avenida Universidad #1074, col. Xoco, alcaldía Benito Juárez, C.P. 03330, CDMX
-                            </p>
-                        </li>
-                        </li>
-                        <li>
-                            <div class="tel2">
-                                <p align="justify">
-                                    <img src="icons/mail.svg" alt="">
-                                    arturo.orci@nube.sep.gob.mx
-                            </div>
-                            </p>
-                        </li>
-                        <li>
-                            <div class="tel2">
-                                <p align="justify">
-                                    <img src="icons/phone.svg" alt="">
-                                    36068650 ext.66429
-                            </div>
-                            </p>
-                        </li>
-                    </ul>
-
-                </div>
-
-                <div class="columna4">
-                    <h1>Instituto Tecnológico de Tláhuac</h1>
-                    <ul class="list-unstyled">
-                        <div class="tel2">
-                            <li>
-                                <p align="center">
-                                    <img src="icons/home.svg" alt="">
-                                    Av. Estanislao Ramírez # 301 Colonia Ampliación Selene C.P. 13430 Tláhuac CDMX
-                                </p>
-                            </li>
-                        </div>
-                        <li>
-                            <div class="tel2">
-                                <p align="justify">
-                                    <img src="icons/phone.svg" alt="">
-                                    7312-5614 | 7312-5616 | 5841-0560|
-                            </div>
-                            </p>
-                        </li>
-                    </ul>
+                <div class="im">
+                    <img src="img/ff.png" alt="ittlahuac">
                 </div>
             </div>
 
-        </div>
-
-        <div class="contenedor-footer">
-            <div class="copyright">
-                <a>&copy; 2020 Todos los Derechos Reservados</a>
+            <div class="info-besa">
+                <h4>B.E.S.A</h4>
+                <p><i class="fas fa-user"></i> Responsable del programa: Ing. David Rogelio Rodríguez Arias </p>
+                <p><i class="fas fa-envelope"></i> drrodriguez@nube.sep.gob.mx </p>
+                <p><i class="fas fa-phone-square-alt"></i> 36018650 ext. 66125</p>
             </div>
-            <div class="autores">
-                <a>Antonio Lorenzana Fabio Antonio</a> |
-                <a>Flores Reyes Jahir</a> |
-                <a>Reyes Villafranca Jose Pedro</a>
+
+            <div class="info-sep">
+                <h4>Órgano Interno De Control De La SEP</h4>
+                <p><i class="fas fa-home"></i> Avenida Universidad #1074, col. Xoco, alcaldía Benito Juárez, C.P. 03330,
+                    CDMX </p>
+                <p><i class="fas fa-envelope"></i> arturo.orci@nube.sep.gob.mx</p>
+                <p><i class="fas fa-phone-square-alt"></i> 36068650 ext.66429</p>
+            </div>
+
+            <div class="info-tec">
+                <h4>Instituto Tecnológico de Tláhuac</h4>
+                <p><i class="fas fa-home"></i> Av. Estanislao Ramírez # 301 Colonia Ampliación Selene C.P. 13430 Tláhuac
+                    CDMX</p>
+                <p><i class="fas fa-phone-square-alt"></i> 7312-5614 | 7312-5616 | 5841-0560| </p>
             </div>
         </div>
 
+        <div class="copyright">
+            <p><span>&copy 2020 Todos Los Derechos Reservados</span></p>
+            <p><span>Antonio Lorenzana Fabio Enrique</span> | <span>Flores Reyes Jahir</span> | <span> Reyes Villafranca
+                    Jose Pedro</span></p>
+        </div>
     </footer>
+
+    <script src="https://kit.fontawesome.com/263207fda3.js" crossorigin="anonymous"></script>
+    <script>
+    function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("myOverlay").style.display = "block";
+    }
+
+    function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("myOverlay").style.display = "none";
+    }
+    </script>
 </body>
 
 </html>

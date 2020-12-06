@@ -1137,3 +1137,184 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', end
             }
           }
   
+
+          /*CONSULTA NUMERO CONTRATO*/
+          .main-consulta-numero-contrato {
+            min-height: calc(100px - 100px -100%);
+            width: 1050px;
+            margin: 0 auto;
+            padding-bottom: 20px;
+                    
+         }
+        .contenedor-gris-consulta-numero-contrato{
+            width: 1150px;
+            height: 280vh;
+            display: grid;
+            background-color: #d8d8d8;
+            grid-template-areas: 
+            "general"
+            "general-consulta-numero-contrato"
+            "fechas-consulta-numero-contrato"
+            "entregas-consulta-numero-contrato";
+                    
+          }
+          .contenedor-gris-consulta-numero-contrato h1::after {
+            content: "";
+            display: block;
+            width: 10rem;
+            height: 0.2rem;
+            background-color: #0c9;
+            }
+        
+          .contenedor-gris-consulta-numero-contrato h1{
+            grid-area: general;
+            text-align: center;
+          }
+          .contenedor-gris-consulta-numero-contrato .general-consulta-numero-contrato{
+            grid-area: general-consulta-numero-contrato;
+          }
+          .contenedor-gris-consulta-numero-contrato .fechas-consulta-numero-contrato{
+            grid-area: fechas-consulta-numero-contrato;
+          }
+          .contenedor-gris-consulta-numero-contrato .entregas-consulta-numero-contrato{
+            grid-area: entregas-consulta-numero-contrato;
+          }
+        
+          .general-consulta-numero-contrato{
+            display: grid;
+            grid-gap: 10px;
+            grid-template-areas: 
+            "selec-consulta-numero-contrato selec-consulta-numero-contrato"
+            "numero-de-contrato-consulta-numero-contrato numero-contrato-compranet-consulta-numero-contrato "
+            "monto-maximo-consulta-numero-contrato  monto-minimo-consulta-numero-contrato"
+            "objeto-contrato-consulta-numero-contrato unidad-compradora-consulta-numero-contrato"
+            "unidad-requirente-consulta-numero-contrato  procedimiento-contratacion-consulta-numero-contrato";
+            grid-template-rows: 150px 100px 100px 100px 100px;
+          }
+        
+          .general-consulta-numero-contrato .selec-consulta-numero-contrato{
+            grid-area: selec-consulta-numero-contrato;
+          }
+          .general-consulta-numero-contrato .numero-de-contrato-consulta-numero-contrato{
+            grid-area: numero-de-contrato-consulta-numero-contrato;
+          }
+          .general-consulta-numero-contrato .numero-contrato-compranet-consulta-numero-contrato{
+            grid-area: numero-contrato-compranet-consulta-numero-contrato;
+          }
+          .general-consulta-numero-contrato .monto-maximo-consulta-numero-contrato{
+            grid-area: monto-maximo-consulta-numero-contrato;
+          }
+          .general-consulta-numero-contrato .monto-minimo-consulta-numero-contrato{
+            grid-area: monto-minimo-consulta-numero-contrato;
+          }
+          .general-consulta-numero-contrato .objeto-contrato-consulta-numero-contrato{
+            grid-area: objeto-contrato-consulta-numero-contrato;
+          }
+          .general-consulta-numero-contrato .unidad-compradora-consulta-numero-contrato{
+            grid-area: unidad-compradora-consulta-numero-contrato;
+          }
+          .general-consulta-numero-contrato .unidad-requirente-consulta-numero-contrato{
+            grid-area: unidad-requirente-consulta-numero-contrato;
+          }
+          .general-consulta-numero-contrato .procedimiento-contratacion-consulta-numero-contrato{
+            grid-area: procedimiento-contratacion-consulta-numero-contrato;
+          }
+          
+        
+          .contenedor-gris-consulta-numero-contrato input{
+            width: 450px;
+            height: 40px;
+            background-color: #fff;
+            color: #000;
+            border: 0.2rem solid rgba(0, 0, 0, 0.15);
+            padding: 1rem 0.2rem;
+            border-radius: 1rem;
+          }
+        
+          .selec-consulta-numero-contrato{
+            width: 900px;
+            height: 100px;
+            text-align: center;
+            padding-left: 300px;
+          }
+        
+          .fechas-consulta-numero-contrato{
+            display: grid;
+            grid-gap: 10px;
+            grid-template-areas:
+            "fechas fechas"
+            "fecha-notificacion-adjudicada-consulta-numero-contrato garantia-cumplimiento-consulta-numero-contrato"
+            "formalizacion-contrato-consulta-numero-contrato sat-consulta-numero-contrato"
+            "imss-consulta-numero-contrato infonavit-consulta-numero-contrato"
+            "inicio-vigencia-consulta-numero-contrato fin-vigencia-consulta-numero-contrato"; 
+            grid-template-rows: 150px 100px 100px 100px 100px;
+          }
+        
+          .fechas-consulta-numero-contrato h1{
+            grid-area: fechas;
+          }
+          .fechas-consulta-numero-contrato .fecha-notificacion-adjudicada-consulta-numero-contrato{
+            grid-area: fecha-notificacion-adjudicada-consulta-numero-contrato;
+          }
+          .fechas-consulta-numero-contrato .garantia-cumplimiento-consulta-numero-contrato{
+            grid-area: garantia-cumplimiento-consulta-numero-contrato;
+          }
+          .fechas-consulta-numero-contrato .formalizacion-contrato-consulta-numero-contrato{
+            grid-area: formalizacion-contrato-consulta-numero-contrato;
+          }
+          .fechas-consulta-numero-contrato .sat-consulta-numero-contrato{
+            grid-area: sat-consulta-numero-contrato;
+          }
+          .fechas-consulta-numero-contrato .imss-consulta-numero-contrato{
+            grid-area: imss-consulta-numero-contrato;
+          }
+          .fechas-consulta-numero-contrato .infonavit-consulta-numero-contrato{
+            grid-area: infonavit-consulta-numero-contrato;
+          }
+          .fechas-consulta-numero-contrato .inicio-vigencia-consulta-numero-contrato{
+            grid-area: inicio-vigencia-consulta-numero-contrato;
+          }
+          .fechas-consulta-numero-contrato .fin-vigencia-consulta-numero-contrato{
+            grid-area: fin-vigencia-consulta-numero-contrato;
+          }
+        
+          .entregas-consulta-numero-contrato{
+            display: grid;
+            grid-gap: 10px;
+            grid-template-areas:
+            "entregas entregas"
+            "fecha-maxima-entrega-consulta-numero-contrato cantidad-consulta-numero-contrato"
+            "botones-consulta-numero-contrato botones-consulta-numero-contrato";
+            grid-template-rows: 150px 100px;
+          }
+        
+          .entregas-consulta-numero-contrato h1{
+            grid-area: entregas;
+          }
+          .entregas-consulta-numero-contrato .fecha-maxima-entrega-consulta-numero-contrato{
+            grid-area: fecha-maxima-entrega-consulta-numero-contrato;
+          }
+          .entregas-consulta-numero-contrato .cantidad-consulta-numero-contrato{
+            grid-area: cantidad-consulta-numero-contrato;
+          }
+          .entregas-consulta-numero-contrato .botones-consulta-numero-contrato{
+            grid-area: botones-consulta-numero-contrato;
+          }
+        
+          .botones-consulta-numero-contrato{
+            padding-left: 400px;
+          }
+        
+        
+          .numero-de-contrato-consulta-numero-contrato,
+          .monto-maximo-consulta-numero-contrato,
+          .objeto-contrato-consulta-numero-contrato,
+          .unidad-requirente-consulta-numero-contrato,
+          .fecha-notificacion-adjudicada-consulta-numero-contrato,
+          .formalizacion-contrato-consulta-numero-contrato,
+          .imss-consulta-numero-contrato,
+          .inicio-vigencia-consulta-numero-contrato,
+          .fecha-maxima-entrega-consulta-numero-contrato{
+            padding-left: 50px;
+          }
+          

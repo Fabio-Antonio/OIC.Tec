@@ -1,5 +1,6 @@
 <?php
     require_once("conexion.php");
+       
      
     $numero_contrato = $_POST["numero_contrato"];
      $fecha_entrega = $_POST["fecha_entrega"];
@@ -8,8 +9,37 @@
 	$direccion_entregable=$_POST["direccion_entregable"];
 	$descripcion=$_POST['descripcion'];
 
+function comprobar($conn,$cantidad_entregable,$numero_contrato){
+
+	$cantidad=null;
+	$total=null;
+	$statement = $conn->prepare("SELECT numero_contrato,cantidad,SUM(cantidad_entregable) AS total
+	FROM contrato AS c INNER JOIN entregas_m AS em ON c.id_contrato = em.id_contrato INNER JOIN
+	entregables AS e ON c.id_contrato = e.id_contrato WHERE c.id_contrato = ? ");
+  $statement->bindValue(1, $numero_contrato);
+  $statement->execute();
 
 
+	if($statement)
+	{
+	while($row=$statement->fetch())
+			{
+	$cantidad=$row['cantidad'];
+	$total=$row['total'];       
+	
+	}
+	if($cantidad_entregable<=$cantidad&&$cantidad_entregable+$total<=$cantidad){
+	 return true;
+	}else{
+	  return false;
+	}
+
+	}
+	 return false;
+	}
+
+
+if(comprobar($conn,$cantidad_entregable,$numero_contrato)==true){
 $statement = $conn->prepare("INSERT INTO entregables (id_contrato,fecha_entrega,nombre_entregable,cantidad_entregable,direccion_entregable,descripcion)VALUES(?,?,?,?,?,?)");
 $statement->bindValue(1, $numero_contrato);
 $statement->bindParam(2, $fecha_entrega);
@@ -28,5 +58,7 @@ $statement->execute();
 }else{
 	echo json_encode(array("success"=>false));
 }
-    
+}else{
+	echo json_encode(array("success"=>false));
+}    
 ?>

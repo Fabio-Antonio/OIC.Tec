@@ -49,9 +49,7 @@ window.location.replace('index');</script>";
             <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal2">Contacto</a>
             <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal3">Nueva Partida</a>
             <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal5">Nuevo Contrato</a>
-            <a href="numero_de_contrato.php" class="w3-bar-item w3-button">Consulta de Contrato</a>
-
-
+            
             <a onclick="cerrar();" class="w3-bar-item w3-button">Logout -></a>
         </div>
         <!-- Page Content -->
@@ -109,7 +107,7 @@ window.location.replace('index');</script>";
                 <h3>LEGAL</h3>
                 <ul>
                     <li><i class="fas fa-plus-circle"></i><a href="consulta_fundamento.php"> Fundamento Legal</a></li>
-                    <li><i class="fas fa-plus-circle"></i><a href="consulta_fundamento.php"> Procedimientos de
+                    <li><i class="fas fa-plus-circle"></i><a href="consulta_fundamento.<a href="consulta_fundamento.php"> Procedimientos de
                             Contratación</a></li>
                     <li><i class="fas fa-plus-circle"></i> Inconformidades</li>
                     <li><i class="fas fa-plus-circle"></i> Facturas</li>
@@ -147,9 +145,9 @@ window.location.replace('index');</script>";
                 <div class="img_tarjeta">
                     <img src="img/proveedor.jpg" alt="proveedor">
                 </div>
-                <h3>PRESUPUESTO</h3>
+                <h3>Contrataciones</h3>
                 <ul>
-                    <li><i class="fas fa-plus-circle"></i> Consultas por Número de Contrato</li>
+                    <li><i class="fas fa-plus-circle"></i><a href="numero_de_contrato.php"> Consulta por número de contrato</a></li>
                     <li><i class="fas fa-plus-circle"></i> Contrato por Proveedor</li>
                     <li><i class="fas fa-plus-circle"></i> Contratos por Partida</li>
                 </ul>

@@ -169,6 +169,8 @@
                $infonavit=$_POST["infonavit"];
       $garantia_cumplimiento=$_POST["garantia_cumplimiento"];
       $licitacion=$_POST["licitacion"];
+      $fecha_maxima=$_POST["fecha_maxima"];
+      $cantidad = $_POST["cantidad"];
 
       }else{
   $numero_contrato="";
@@ -192,6 +194,8 @@
   $infonavit="";
   $garantia_cumplimiento="";
   $licitacion="";
+  $fecha_maxima="";
+  $cantidad="";
   }
          ?>
 
@@ -271,7 +275,7 @@
 
             <div class="formalizacion-contrato-consulta-numero-contrato">
                 <label>Formalización Contrato</label>
-                <input placeholder="Formalización Contrato" type="text" readonly="readonly">
+                <input placeholder="Formalización Contrato" type="text" value="<?php echo $formalizacion_contrato ?>" readonly="readonly">
             </div>
 
             <div class="sat-consulta-numero-contrato">
@@ -282,7 +286,7 @@
 
             <div class="imss-consulta-numero-contrato">
                 <label>Opinion IMSS</label>
-                <input id="indtextopinsatcon" placeholder="Opinion IMSS" type="text" readonly="readonly" value="">
+                <input id="indtextopinsatcon" placeholder="Opinion IMSS" type="text" readonly="readonly" value="<?php echo $imss ?>">
             </div>
 
             <div class="infonavit-consulta-numero-contrato">
@@ -312,12 +316,12 @@
             <h1>ENTREGAS</h1>
             <div class="fecha-maxima-entrega-consulta-numero-contrato">
                 <label>Fecha Máxima de Entrega</label>
-                <input placeholder="Garantia de Cumplimiento" type="text" readonly="readonly">
+                <input placeholder="Garantia de Cumplimiento" type="text" value="<?php echo $fecha_maxima ?>" readonly="readonly">
             </div>
 
             <div class="cantidad-consulta-numero-contrato">
                 <label>Cantidad</label>
-                <input placeholder="Cantidad" type="text" readonly="readonly">
+                <input placeholder="Cantidad" type="text" value="<?php echo $cantidad ?>" readonly="readonly">
             </div>
 
             <div class="botones-consulta-numero-contrato">

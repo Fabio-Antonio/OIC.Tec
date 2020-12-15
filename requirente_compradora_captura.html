@@ -139,6 +139,27 @@
         </div>
     </div>
 
+
+
+    <div class="modal fade" role="dialog" id="my-modal3" aria-labelledby="modal-title" rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+      <div class="modal-dialog" role="document">
+          <div class="modal-content">
+              <div class="modal-header" style="background-color:#D0021B;">
+                  <h3 class="modal-title" id="modal-title">B.E.S.A</h3>
+              </div>
+              <div class="modal-body">
+                  <p>
+                      El registro ya existe!
+                  </p>
+              </div>
+              <div class="modal-footer">
+                  <button class="btn btn-primary" data-dismiss="modal">Ok</button>
+              </div>
+          </div>
+      </div>
+  </div>
+
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
@@ -295,112 +316,10 @@
   <!--------------------------------------------------------------->
   <!--------------------------------------------------------------->
 
-<script   lenguaje="javascript" type="text/javascript">
-function ingresar(){
-var claver= (document.getElementById("claver").value);
-var uni= (document.getElementById("uni").value);
+<script  src="js/funciones_requirente_compradora.js" lenguaje="javascript" type="text/javascript">
 
-if(claver.length==0||claver.lenth>3){
-
-document.getElementById("claver").focus();
- $(function(){
-                $('#my-modal2').modal('show')
-                });
-
-return;
-}
-if(!(/^[A-Za-z0-9\s]*$/i.test(claver))){
-document.getElementById("claver").focus();
- $(function(){
-                $('#my-modal2').modal('show')
-                });
-
-return;
-
-}
-
-if(uni.length==0||uni.lenth>45){
-document.getElementById("uni").focus();
- $(function(){
-                $('#my-modal2').modal('show')
-                });
-
-return;
-}
-if(!(/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ.\s]*$/i.test(uni))){
-
-document.getElementById("uni").focus();
- $(function(){
-                $('#my-modal2').modal('show')
-                });
-
-return;
-
-}
-$.post('requirente.php',{
-"claver":claver,
-"uni":uni
-},function(data){
-
-$('#my-modal').modal('show')
-
-});
-}
 </script>
 
-
-
-<script   lenguaje="javascript" type="text/javascript">
-function ingresar2(){
-var nuc= (document.getElementById("nuc").value);
-var un= (document.getElementById("un").value);
-
-if(nuc.length==0||nuc.lenth>20){
-
-document.getElementById("nuc").focus();
- $(function(){
-                $('#my-modal2').modal('show')
-                });
-
-return;
-}
-if(!(/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ\s]*$/i.test(nuc))){
-document.getElementById("nuc").focus();
- $(function(){
-                $('#my-modal2').modal('show')
-                });
-
-return;
-
-}
-if(un.length==0||un.lenth>45){
-document.getElementById("un").focus();
- $(function(){
-                $('#my-modal2').modal('show')
-                });
-
-return;
-}
-if(!(/^[a-zA-Z0-9.\s]*$/i.test(un))){
-
-document.getElementById("un").focus();
- $(function(){
-                $('#my-modal2').modal('show')
-                });
-
-return;
-
-}
-$.post('compradora.php',{
-"nuc":nuc,
-"un":un
-},function(data){
-
-$('#my-modal').modal('show')
-
-});
-}
-</script>
 
 
   </body>

@@ -20,9 +20,6 @@ $dato=$row['id_contrato'];
 
 }
 
-
-
-
 $statement = $conn->prepare("INSERT INTO entregas_m (id_contrato,fecha_maxima,cantidad)VALUES(?,?,?)");
 $statement->bindValue(1, $dato);
 $statement->bindParam(2, $fecha_maxima);

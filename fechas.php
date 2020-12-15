@@ -161,7 +161,7 @@
                         <input class="form-control" id="calendarYear" type="date">
                     </div>
                     <div class="form-group">
-                        <label class="col-sm-3 control-label" for="email-03">Cantidad maxima:</label>
+                        <label class="control-label" for="email-01">Cantidad maxima:</label>
                         <input class="form-control" id="cantidadm" placeholder="Cantidad maxima" type="number">
 
                     </div>
@@ -186,7 +186,7 @@
                     <ol>
                         <li>La fecha de formalización de contrato no debe pasar los quince días
                         naturales después de la fecha de notificación de adjudicación.</li>
-                        <li>Las fechas SAT,IMSS,INFONAVIT no deben exceder los treinta días antes de la
+                        <li>Las fechas SAT, IMSS, INFONAVIT no deben exceder los treinta días antes de la
                         fecha de notificación de adjudicación; no debe ser mayor que la fecha de formalización de
                          contrato.</li>
                          <li>Las fechas de requisición y suficiencia deben ser anteriores a la fecha de notificación 

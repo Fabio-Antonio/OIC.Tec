@@ -2,6 +2,7 @@
 <html lang="en">
 <link href="https://cdn.datos.gob.mx/assets/css/main.css" rel="stylesheet">
 <link href="https://cdn.datos.gob.mx/bower_components/polymer/polymer.html" rel="import">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,7 +15,7 @@
     <link href="https://cdn.datos.gob.mx/bower_components/dgm-footer/dgm-footer.html" rel="import">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
-    
+
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/estile.css">
 
@@ -126,7 +127,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 
-    <script lenguage="javascript" src="js/funciones_entregables.js"type="text/javascript">
+    <script lenguage="javascript" src="js/funciones_entregables.js" type="text/javascript">
     </script>
 
     <main class="main-entregables">
@@ -171,6 +172,14 @@
                         <input type="text" id="indireccione" name="direccion_entregable"
                             placeholder="Dirección Entregables">
                     </div>
+                    <div class="precio-unitario-entregables">
+                        <label> Precio Unitario:</label>
+                        <input type="text" id="" name="direccion_entregable" placeholder="Precio Unitario">
+                    </div>
+                    <div class="porcentaje-penalizacion-entragables">
+                        <label> Porcentaje De Penalización:</label>
+                        <input type="text" id="" name="direccion_entregable" placeholder="Porcentaje De Penalización">
+                    </div>
                     <div class="descripcion-entregables">
                         <label>Descripción:</label>
                         <textarea name="descripcion" id="descripcion" placeholder="Descripción" cols="30"
@@ -179,7 +188,7 @@
                     <div class="botones btn-entregables">
                         <!--button type="button" id="bcomprobacion" class="btn btn-primary" onclick="mostrarText();" name="button"> Guardar </button>-->
                         <button type="button" id="bcomprobacion" class="btn btn-verde" onclick="mostrarText();"
-                            name="button"  >Guardar</button>
+                            name="button">Guardar</button>
                         <button type="button" id="bregresar" class="btn btn-verde"
                             onclick="location.href='principal2.php'" name="bregresar"> Regresar </button>
                     </div>

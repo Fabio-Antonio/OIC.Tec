@@ -764,131 +764,224 @@ grid-template-rows: 100px 100px 100px 130px 100px 100px;
 
 /*Entregables*/
 .main-entregables {
-height: 130vh;
-width: 1010px;
-margin: 0 auto;
-}
-.contenedor-gris-one{
-height: 120vh;
-width: 1010px;
-grid-gap: 10px;
-background-color: #d8d8d8;
-
-}
-.contenedor-gris-entregables{
-grid-area: contenedor-gris-entregables;
-}
-.contenedor-gris-entregables {
-display: grid;
-grid-template-areas:
-  "entregables entregables"
-  "contrato-entregables fechaentrega-entregables"
-  "nombreentregable-entregables cantidadentregable-entregables"
-  "direccionentregable-entregables ."
-  "descripcion-entregables descripcion-entregables"
-  "btn-entregables btn-entregables"
-  ;
-  grid-template-columns: repeat(2 1fr);
-  grid-template-rows: 100px 100px 100px 100px 250px;
-
-}
-
-/*Nombramos los elementos*/
-.contenedor-gris-entregables h1{
-grid-area: entregables;
-text-align: center;
-}
-.contenedor-gris-entregables .contrato-entregables{
-grid-area: contrato-entregables;
-}
-.contenedor-gris-entregables .fechaentrega-entregables{
-grid-area: fechaentrega-entregables;
-}
-.contenedor-gris-entregables .nombreentregable-entregables{
-grid-area: nombreentregable-entregables;
-}
-.contenedor-gris-entregables .cantidadentregable-entregables{
-grid-area: cantidadentregable-entregables;
-}
-.contenedor-gris-entregables .direccionentregable-entregables{
-grid-area: direccionentregable-entregables;
-}
-.contenedor-gris-entregables .descripcion-entregables{
-grid-area: descripcion-entregables;
-}
-.contenedor-gris-entregables .btn-entregables{
-grid-area: btn-entregables;
-}
-
-
-.contenedor-gris-entregables h1::after {
-content: "";
-display: block;
-width: 10rem;
-height: 0.2rem;
-background-color: #0c9;
-}
-.contenedor-gris-entregables textarea{
-width: 950px;
-height: 150px;
-background-color: #fff;
-color: #000;
-border: 0.2rem solid rgba(0, 0, 0, 0.15);
-padding: 1rem 0.2rem;
-border-radius: 1rem;
-}
-.contenedor-gris-entregables input {
-width: 450px;
-height: 40px;
-background-color: #fff;
-color: #000;
-border: 0.2rem solid rgba(0, 0, 0, 0.15);
-padding: 1rem 0.2rem;
-border-radius: 1rem;
-}
-
-.contenedor-gris-entregables select
-{
-width: 450px;
-height: 40px;
-background-color: #fff;
-color: #000;
-border: 0.2rem solid rgba(0, 0, 0, 0.15);
-border-radius: 1rem;
-}
-
-.contrato-entregables,
-.nombreentregable-entregables,
-.direccionentregable-entregables,
-.descripcion-entregables{
-padding-left: 25px;
-}
-
-input[type=submit]{
-display: inline-block;
-padding: 1rem 3rem;
-color: #fff;
-border-radius: 1rem;
-cursor: pointer;
-background-color: #0c9;
-border-color: #0c9;
-width: 130px;
-height: 50px;
-font-size: 15px;
-}
-
-input[type=submit]:hover{
-background: rgba(169,3,41,1);
-background: -moz-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-background: -webkit-gradient(left top, right top, color-stop(0%, rgba(169,3,41,1)), color-stop(44%, rgba(143,2,34,1)), color-stop(100%, rgba(109,0,25,1)));
-background: -webkit-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-background: -o-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-background: -ms-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-background: linear-gradient(to right, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019', GradientType=1 );
-}
-
-
+  height: 130vh;
+  width: 1010px;
+  margin: 0 auto;
+  }
+  .contenedor-gris-one{
+  height: 125vh;
+  width: 1010px;
+  grid-gap: 10px;
+  background-color: #d8d8d8;
+  
+  }
+  .contenedor-gris-entregables{
+  grid-area: contenedor-gris-entregables;
+  }
+  .contenedor-gris-entregables {
+  display: grid;
+  grid-template-areas:
+    "entregables entregables"
+    "contrato-entregables fechaentrega-entregables"
+    "nombreentregable-entregables cantidadentregable-entregables"
+    "direccionentregable-entregables precio-unitario-entregables"
+    "porcentaje-penalizacion-entragables ."
+    "descripcion-entregables descripcion-entregables"
+    "btn-entregables btn-entregables"
+    ;
+    grid-template-columns: repeat(2 1fr);
+    grid-template-rows: 100px 100px 100px 100px 100px 250px;
+  
+  }
+  
+  
+  /*Nombramos los elementos*/
+  .contenedor-gris-entregables h1{
+  grid-area: entregables;
+  text-align: center;
+  }
+  .contenedor-gris-entregables .contrato-entregables{
+  grid-area: contrato-entregables;
+  }
+  .contenedor-gris-entregables .fechaentrega-entregables{
+  grid-area: fechaentrega-entregables;
+  }
+  .contenedor-gris-entregables .nombreentregable-entregables{
+  grid-area: nombreentregable-entregables;
+  }
+  .contenedor-gris-entregables .cantidadentregable-entregables{
+  grid-area: cantidadentregable-entregables;
+  }
+  .contenedor-gris-entregables .direccionentregable-entregables{
+  grid-area: direccionentregable-entregables;
+  }
+  .contenedor-gris-entregables .descripcion-entregables{
+  grid-area: descripcion-entregables;
+  }
+  .contenedor-gris-entregables .precio-unitario-entregables{
+    grid-area: precio-unitario-entregables;
+  }
+  .contenedor-gris-entregables .porcentaje-penalizacion-entragables{
+    grid-area: porcentaje-penalizacion-entragables;
+  }
+  .contenedor-gris-entregables .btn-entregables{
+  grid-area: btn-entregables;
+  }
+  
+  
+  .contenedor-gris-entregables h1::after {
+  content: "";
+  display: block;
+  width: 10rem;
+  height: 0.2rem;
+  background-color: #0c9;
+  }
+  .contenedor-gris-entregables textarea{
+  width: 950px;
+  height: 150px;
+  background-color: #fff;
+  color: #000;
+  border: 0.2rem solid rgba(0, 0, 0, 0.15);
+  padding: 1rem 0.2rem;
+  border-radius: 1rem;
+  }
+  .contenedor-gris-entregables input {
+  width: 450px;
+  height: 40px;
+  background-color: #fff;
+  color: #000;
+  border: 0.2rem solid rgba(0, 0, 0, 0.15);
+  padding: 1rem 0.2rem;
+  border-radius: 1rem;
+  }
+  
+  .contenedor-gris-entregables select
+  {
+  width: 450px;
+  height: 40px;
+  background-color: #fff;
+  color: #000;
+  border: 0.2rem solid rgba(0, 0, 0, 0.15);
+  border-radius: 1rem;
+  }
+  
+  .contrato-entregables,
+  .nombreentregable-entregables,
+  .direccionentregable-entregables,
+  .descripcion-entregables,
+  .porcentaje-penalizacion-entragables{
+  padding-left: 25px;
+  }
+  
+  input[type=submit]{
+  display: inline-block;
+  padding: 1rem 3rem;
+  color: #fff;
+  border-radius: 1rem;
+  cursor: pointer;
+  background-color: #0c9;
+  border-color: #0c9;
+  width: 130px;
+  height: 50px;
+  font-size: 15px;
+  }
+  
+  input[type=submit]:hover{
+  background: rgba(169,3,41,1);
+  background: -moz-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(169,3,41,1)), color-stop(44%, rgba(143,2,34,1)), color-stop(100%, rgba(109,0,25,1)));
+  background: -webkit-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
+  background: -o-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
+  background: -ms-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
+  background: linear-gradient(to right, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019', GradientType=1 );
+  }
+  /*ENTREGABLES IPAD*/
+  @media screen and (max-width: 768px){
+    .main-entregables {
+      height: 95vh;
+      width: 760px;
+      margin: 0 auto;
+      }
+      .contenedor-gris-one{
+      height: 90vh;
+      width: 760px;
+      }
+      .contenedor-gris-entregables {
+        display: grid;
+        grid-gap: 10px;
+          grid-template-columns: repeat(2,375px);
+          grid-template-rows: 100px 100px 100px 100px 100px 250px;
+        
+        }
+        .contenedor-gris-entregables textarea{
+          width: 680px;
+          height: 150px;
+          }
+          .contenedor-gris-entregables input {
+          width: 320px;
+          height: 40px;
+          }
+          
+          .contenedor-gris-entregables select
+          {
+          width: 320px;
+          height: 40px;
+          }
+      }
+  
+      /*ENTREGABLES CELULAR*/
+    @media screen and (max-width: 375px){
+      .main-entregables {
+        height:190vh;
+        width: 370px;
+        margin: 0 auto;
+        }
+        .contenedor-gris-one{
+        height: 180vh;
+        width: 370px;
+        }
+        .contenedor-gris-entregables {
+          display: grid;
+          grid-gap: 10px;
+          grid-template-areas:
+            "entregables"
+            "contrato-entregables" 
+            "fechaentrega-entregables"
+            "nombreentregable-entregables" 
+            "cantidadentregable-entregables"
+            "direccionentregable-entregables" 
+            "precio-unitario-entregables"
+            "porcentaje-penalizacion-entragables"
+            "descripcion-entregables"
+            "btn-entregables"
+            ;
+            grid-template-columns: 375px;
+            grid-template-rows: 100px 100px 100px 100px 100px 100px 100px 100px 200px;
+          
+          }
+            
+          .contenedor-gris-entregables textarea{
+            width: 320px;
+            height: 150px;
+            }
+           
+            .entregables,
+            .contrato-entregables, 
+            .fechaentrega-entregables,
+            .nombreentregable-entregables, 
+            .cantidadentregable-entregables,
+            .direccionentregable-entregables, 
+            .precio-unitario-entregables,
+            .porcentaje-penalizacion-entragables,
+            .descripcion-entregables{
+              padding-left: 25px;
+            }
+            .btn-entregables{
+              padding-left: 60px;
+            }
+    }
+    
 /*INFORME CONSOLIDADO*/
 .main-informe-consolidado {
   min-height: calc(100px - 100px -100%);
@@ -1318,3 +1411,298 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', end
             padding-left: 50px;
           }
           
+
+          /*CONTRATO*/
+.main-contrato{
+  min-height: calc(100px - 100px -100%);
+  width:1000px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+          
+}
+.contenedor-gris-contrato{
+  width: 1000px;
+  height: 200vh;
+  display: grid;
+  grid-gap: 10px;
+  background-color: #d8d8d8;
+  grid-template-areas: 
+  "contrato contrato"
+  "contenedor-select--unidad-compradora-contrato contenedor-select-unidad-requirente-contrato"
+  "contenedor-select-admministrador-contrato contenedor-proveedor-adjudicado-contrato"
+  "contenedor-select-procedimiento-contratacion-contrato contenedor-articulo-normativo-contrato"
+  "contenedor-numero-contrato-contrato contenedor-procedimineto-compranet-contrato"
+  "contenedor-contraro-compranet-contrato contenedor-convenio-interno-contrato"
+  "contenedor-total-contrato contenedor-monto-minimo-contrato"
+  "contenedor-objeto-contratacion-contrato contenedor-documento-descripcion-contrato"
+  "contenedor-contrato-abierto-contrato contenedor-consilidado-contrato"
+  "contenedor-select-consolidado-contrato ."
+  "contenedor-botones-contrato contenedor-botones-contrato";
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: 150px repeat(6, 100px) 200px 50px 100px;
+}
+.contenedor-select--unidad-compradora-contrato,
+.contenedor-select-admministrador-contrato,
+.contenedor-select-procedimiento-contratacion-contrato,
+.contenedor-numero-contrato-contrato,
+.contenedor-contraro-compranet-contrato,
+.contenedor-total-contrato,
+.contenedor-objeto-contratacion-contrato,
+.contenedor-contrato-abierto-contrato,
+.contenedor-select-consolidado-contrato{
+  padding-left: 40px;
+}
+.contenedor-botones-contrato{
+  padding-left: 350px;
+}
+
+.contenedor-gris-contrato h1{
+  grid-area: contrato;
+  text-align: center;
+}
+.contenedor-gris-contrato .contenedor-select--unidad-compradora-contrato{
+  grid-area: contenedor-select--unidad-compradora-contrato;
+}
+.contenedor-gris-contrato .contenedor-select-unidad-requirente-contrato{
+  grid-area: contenedor-select-unidad-requirente-contrato;
+}
+
+.contenedor-gris-contrato .contenedor-select-admministrador-contrato{
+  grid-area: contenedor-select-admministrador-contrato;
+}
+.contenedor-gris-contrato .contenedor-proveedor-adjudicado-contrato{
+  grid-area: contenedor-proveedor-adjudicado-contrato;
+}
+
+.contenedor-gris-contrato .contenedor-select-procedimiento-contratacion-contrato{
+  grid-area: contenedor-select-procedimiento-contratacion-contrato;
+}
+.contenedor-gris-contrato .contenedor-numero-contrato-contrato{
+  grid-area: contenedor-numero-contrato-contrato;
+}
+
+.contenedor-gris-contrato .contenedor-procedimineto-compranet-contrato{
+  grid-area: contenedor-procedimineto-compranet-contrato;
+}
+.contenedor-gris-contrato .contenedor-contraro-compranet-contrato{
+  grid-area: contenedor-contraro-compranet-contrato;
+}
+
+.contenedor-gris-contrato .contenedor-convenio-interno-contrato{
+  grid-area: contenedor-convenio-interno-contrato;
+}
+.contenedor-gris-contrato .contenedor-total-contrato{
+  grid-area: contenedor-total-contrato;
+}
+
+.contenedor-gris-contrato .contenedor-monto-minimo-contrato{
+  grid-area: contenedor-monto-minimo-contrato;
+}
+
+.contenedor-gris-contrato .contenedor-objeto-contratacion-contrato{
+  grid-area: contenedor-objeto-contratacion-contrato;
+}
+.contenedor-gris-contrato .contenedor-documento-descripcion-contrato{
+  grid-area: contenedor-documento-descripcion-contrato;
+}
+
+.contenedor-gris-contrato .contenedor-contrato-abierto-contrato{
+  grid-area: contenedor-contrato-abierto-contrato;
+}
+.contenedor-gris-contrato .contenedor-consilidado-contrato{
+  grid-area: contenedor-consilidado-contrato;
+}
+
+.contenedor-gris-contrato .contenedor-select-consolidado-contrato{
+  grid-area: contenedor-select-consolidado-contrato;
+}
+
+.contenedor-gris-contrato .contenedor-botones-contrato{
+  grid-area: contenedor-botones-contrato;
+}
+
+.contenedor-contrato-abierto-contrato{
+  display: grid;
+  grid-template-areas: 
+  "contrato-a ch-contrato-abierto";
+  grid-template-columns: 200px 220px;
+}
+.contenedor-contrato-abierto-contrato label{
+  grid-area: contrato-a;
+}
+.contenedor-contrato-abierto-contrato input{
+  grid-area: ch-contrato-abierto;
+  justify-self: center;
+}
+.contenedor-consilidado-contrato{
+  display: grid;
+  grid-template-areas: 
+  "consolidado-c ch-consolidado";
+  grid-template-columns: 200px 220px;
+}
+.contenedor-consilidado-contrato label{
+  grid-area: consolidado-c;
+}
+.contenedor-consilidado-contrato input{
+  grid-area: ch-consolidado;
+  justify-self: center;
+}
+
+.contenedor-gris-contrato input[type=checkbox]{
+  display: inline-block;
+  cursor: pointer;
+  width: 20px;
+  }
+
+.contenedor-gris-contrato h1::after {
+  content: "";
+  display: block;
+  width: 10rem;
+  height: 0.2rem;
+  background-color: #0c9;
+  }
+  .contenedor-gris-contrato textarea{
+  width: 430px;
+  height: 150px;
+  background-color: #fff;
+  color: #000;
+  border: 0.2rem solid rgba(0, 0, 0, 0.15);
+  padding: 1rem 0.2rem;
+  border-radius: 1rem;
+  }
+  .contenedor-gris-contrato input {
+  width: 430px;
+  height: 40px;
+  background-color: #fff;
+  color: #000;
+  border: 0.2rem solid rgba(0, 0, 0, 0.15);
+  padding: 1rem 0.2rem;
+  border-radius: 1rem;
+  }
+  
+  .contenedor-gris-contrato select
+  {
+  width: 430px;
+  height: 40px;
+  background-color: #fff;
+  color: #000;
+  border: 0.2rem solid rgba(0, 0, 0, 0.15);
+  border-radius: 1rem;
+  }
+  
+  
+
+/*CONTRATO IPAD*/
+@media screen and (max-width: 768px) {
+  .main-contrato {
+    min-height: calc(100px - 100px -100%);
+    width: 760px;
+    margin: 0 auto; 
+
+  }
+  .contenedor-gris-contrato{
+    width: 760px;
+    height: 130vh;
+    display: grid;
+    background-color: #d8d8d8;
+    grid-template-columns: 380px; 
+  }
+
+  .contenedor-gris-contrato textarea{
+    width: 360px;
+    }
+    .contenedor-gris-contrato input {
+    width: 360px;
+    }
+    
+    .contenedor-gris-contrato select
+    {
+    width: 360px;
+    }
+    
+    .contenedor-select--unidad-compradora-contrato,
+    .contenedor-select-admministrador-contrato,
+    .contenedor-select-procedimiento-contratacion-contrato,
+    .contenedor-numero-contrato-contrato,
+    .contenedor-contraro-compranet-contrato,
+    .contenedor-total-contrato,
+    .contenedor-objeto-contratacion-contrato,
+    .contenedor-contrato-abierto-contrato,
+    .contenedor-select-consolidado-contrato{
+  padding-left: 20px;
+}
+.contenedor-botones-contrato{
+  padding-left: 260px;
+}
+}
+
+/*CONTRATO PÁRA CELULAR*/
+@media screen and (max-width: 375px){
+  .main-contrato {
+    min-height: calc(100px - 100px -100%);
+    width: 370px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+  }
+  .contenedor-gris-contrato{
+    width: 370px;
+    height: 355vh;
+    grid-template-areas: 
+    "contrato"
+    "contenedor-select--unidad-compradora-contrato" 
+    "contenedor-select-unidad-requirente-contrato"
+    "contenedor-select-admministrador-contrato" 
+    "contenedor-proveedor-adjudicado-contrato"
+    "contenedor-select-procedimiento-contratacion-contrato"
+    "contenedor-articulo-normativo-contrato" 
+    "contenedor-numero-contrato-contrato"
+    "contenedor-procedimineto-compranet-contrato" 
+    "contenedor-contraro-compranet-contrato"
+    "contenedor-convenio-interno-contrato" 
+    "contenedor-total-contrato"
+    "contenedor-monto-minimo-contrato" 
+    "contenedor-objeto-contratacion-contrato" 
+    "contenedor-documento-descripcion-contrato"
+    "contenedor-contrato-abierto-contrato" 
+    "contenedor-consilidado-contrato"
+    "contenedor-select-consolidado-contrato"
+    "contenedor-botones-contrato";
+    grid-template-columns: 360px;
+    grid-template-rows: 150px repeat(12, 100px) 220px 220px repeat(3,100px);
+  }
+
+  .contenedor-select--unidad-compradora-contrato, 
+  .contenedor-select-unidad-requirente-contrato,
+  .contenedor-select-admministrador-contrato, 
+  .contenedor-proveedor-adjudicado-contrato,
+  .contenedor-select-procedimiento-contratacion-contrato,
+  .contenedor-articulo-normativo-contrato, 
+  .contenedor-numero-contrato-contrato,
+  .contenedor-procedimineto-compranet-contrato, 
+  .contenedor-contraro-compranet-contrato,
+  .contenedor-convenio-interno-contrato,
+  .contenedor-total-contrato,
+  .contenedor-monto-minimo-contrato, 
+  .contenedor-objeto-contratacion-contrato, 
+  .contenedor-documento-descripcion-contrato,
+  .contenedor-contrato-abierto-contrato,
+  .contenedor-consilidado-contrato,
+  .contenedor-select-consolidado-contrato{
+    padding-left: 20px;
+  }
+  .contenedor-botones-contrato{
+    padding-left: 60px;
+  }
+
+  .contenedor-gris-contrato textarea{
+    width: 320px;
+    }
+    .contenedor-gris-contrato input {
+    width: 320px;
+    }
+    
+    .contenedor-gris-contrato select
+    {
+    width: 320px;
+    }
+}

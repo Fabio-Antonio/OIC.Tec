@@ -31,7 +31,7 @@ echo "<script>alert('La consulta a la base de datos es incorrecta')
 window.location.replace('principal2.php');</script>";
 }
 
- $statement = $conn->prepare("SELECT SUM(monto_max) AS total FROM contrato AS c INNER JOIN procedimientos_contratacion AS pc ON c.id_procedimiento_contratacion = pc.id_procedimiento_contratacion INNER JOIN unidad_compradora AS uc ON c.id_unidad_compradora = uc.id_unidad_compradora WHERE pc.setenta_treinta = 30 AND uc.id_unidad_compradora = ? ");
+ $statement = $conn->prepare("SELECT SUM(monto_max) AS total FROM contrato AS c INNER JOIN fundamento_legal AS fl ON c.id_fundamento_legal = fl.id_fundamento_legal INNER JOIN unidad_compradora AS uc ON c.id_unidad_compradora = uc.id_unidad_compradora WHERE fl.setenta_treinta = 30 AND uc.id_unidad_compradora = ? ");
 
 $statement->bindParam(1,$id_unidad_compradora);
 
@@ -55,7 +55,7 @@ window.location.replace('principal2.php');</script>";
 
 
 
- $statement = $conn->prepare("SELECT SUM(monto_max) AS total FROM contrato AS c INNER JOIN procedimientos_contratacion AS pc ON c.id_procedimiento_contratacion = pc.id_procedimiento_contratacion INNER JOIN unidad_compradora AS uc ON c.id_unidad_compradora = uc.id_unidad_compradora WHERE pc.setenta_treinta = 70 AND uc.id_unidad_compradora = ?");
+ $statement = $conn->prepare("SELECT SUM(monto_max) AS total FROM contrato AS c INNER JOIN fundamento_legal AS fl ON c.id_fundamento_legal = fl.id_fundamento_legal INNER JOIN unidad_compradora AS uc ON c.id_unidad_compradora = uc.id_unidad_compradora WHERE fl.setenta_treinta = 70 AND uc.id_unidad_compradora = ?");
 $statement->bindParam(1,$id_unidad_compradora);
 $statement->execute();
 

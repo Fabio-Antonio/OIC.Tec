@@ -169,7 +169,6 @@
                     name="searticulonormativocontrato">
 
 
-
                 </select>
             </div>
 
@@ -180,7 +179,7 @@
             </div>
 
             <div class="contenedor-procedimineto-compranet-contrato">
-                <label>Procedimiento Compranet:</label>
+                <label>Compranet:</label>
                 <input type="text" id="inprocedimientocompranetc" name="inprocedimientocompranetc"
                     placeholder="Procedimiento Compranet">
             </div>
@@ -197,7 +196,7 @@
             </div>
 
             <div class="contenedor-total-contrato">
-                <label> Total: </label>
+                <label id="ccp"> Total: </label>
                 <input name="monto_maximo" id="montomaxi" required type="text">
             </div>
 
@@ -308,6 +307,64 @@
         </div>
     </footer>
 
+
+
+
+    <div class="modal fade" role="dialog" id="my-modal" aria-labelledby="modal-title">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color:#27C44D;">
+                    <h3 class="modal-title" id="modal-title">B.E.S.A</h3>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Los datos se han ingresado correctamente!!
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" onclick="cambio();">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" role="dialog" id="my-modal2" aria-labelledby="modal-title">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color:#D0021B;">
+                    <h3 class="modal-title" id="modal-title">B.E.S.A</h3>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Los datos no son compatibles!!
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" data-dismiss="modal">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" role="dialog" id="my-modal3" aria-labelledby="modal-title">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color:#D0021B;">
+                    <h3 class="modal-title" id="modal-title">B.E.S.A</h3>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        El número de contrato ya existe!!
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" data-dismiss="modal">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <script lenguage="javascript" type="text/javascript">
     function mostrarText() {
         <?php $partida = $_POST['partida']; ?>
@@ -317,6 +374,7 @@
         var selObj3 = document.getElementById('seunidadrequirentecontrato');
         var selObj4 = document.getElementById('seadministradorcontrato');
         var selObj6 = document.getElementById('seproveedoradjudicadocontrato');
+        var selObj7 = document.getElementById('searticulonormativocontrato');
         var selObj8 = document.getElementById('seconsolidadocontrato');
 
         if (selObj.length == 0) {
@@ -361,15 +419,7 @@
             document.getElementById("seproveedoradjudicadocontrato").focus();
             return;
         }
-        if (selObj8.length == 0) {
-            $(function() {
-                $('#my-modal2').modal('show')
-            });
-
-
-            document.getElementById("seconsolidadocontrato").focus();
-            return;
-        }
+       
         var min = 0;
         var valor = 0;
         var envío;
@@ -379,12 +429,12 @@
         var convenio_interno = (document.getElementById('inconveniointernoc').value);
         var objeto_contratacion = (document.getElementById('inobjetocontratacionc').value);
         var max = (document.getElementById('montomaxi').value);
-        var monto_maximo = Number(max.replace(",", ""));
+        var monto_maximo = Number(max.replace(/[$,]/g, ""));
         var monto_minimo = min;
         if (document.getElementById("incontratoabiertoc").checked == true) {
             var contrato_abierto = (document.getElementById('incontratoabiertoc').value = 1);
             min = (document.getElementById('montomini').value);
-            var monto_minimo = Number(min.replace(",", ""));
+            var monto_minimo = Number(min.replace(/[$,]/g, ""));
         } else {
             var contrato_abierto = (document.getElementById('incontratoabiertoc').value = 0);
 
@@ -396,7 +446,6 @@
             var selObj8 = document.getElementById('seconsolidadocontrato');
             var selIndex8 = selObj8.options[selObj8.selectedIndex].value;
             envio = selIndex8;
-            alert(envio);
         } else {
             envio = valor;
 
@@ -408,7 +457,7 @@
         var selIndex3 = selObj3.options[selObj3.selectedIndex].value;
         var selIndex4 = selObj4.options[selObj4.selectedIndex].value;
         var selIndex6 = selObj6.options[selObj6.selectedIndex].value;
-        //var selIndex8 = selObj8.options[selObj8.selectedIndex].value;
+        var selIndex7 = selObj7.options[selObj7.selectedIndex].value;
         if (numero_contrato.length == 0 || !(/^[A-Za-z0-9]+$/.test(numero_contrato))) {
             $(function() {
                 $('#my-modal2').modal('show')
@@ -489,10 +538,7 @@
             return;
 
         }
-        /*window.location="contrato_in.php?nombre_unidad_compradora="+selIndex+"&procedimientos="+selIndex2+"&unidad_requirente="+selIndex3+"&nombre="+selIndex4+
-                "&proveedor="+selIndex6+"&procedimiento="+selIndex8+"&numero_contrato="+numero_contrato+
-        "&procedimiento_compranet="+procedimiento_compranet+"&contrato_compranet="+contrato_compranet+"&convenio_interno="+convenio_interno+"&objeto_contratacion="
-        +objeto_contratacion+"&documentacion_descripcion="+documentacion_descripcion+"&monto_maximo="+monto_maximo+"&monto_minimo="+monto_minimo;*/
+        
 
         $.post('contrato_in.php', {
 
@@ -501,6 +547,7 @@
             "unidad_requirente": selIndex3,
             "nombre": selIndex4,
             "proveedor": selIndex6,
+            "articulo": selIndex7,
             "partida": partida,
             "numero_contrato": numero_contrato,
             "procedimiento_compranet": procedimiento_compranet,
@@ -528,6 +575,12 @@
         });
     }
     </script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="https://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" rel="Stylesheet">
+    </link>
+    <script src="https://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-3.0.0.min.js"></script>
     <script lenguage="javascript" src="js/funciones_contrato.js" type="text/javascript">
     </script>
 

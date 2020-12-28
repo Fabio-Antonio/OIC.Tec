@@ -112,6 +112,29 @@ echo "<script>alert('La consulta a la base de datos es incorrecta')
 window.location.replace('principal2.php');</script>";
 }
 
+
+$query=$conn->prepare("SELECT id_fundamento_legal,articulo FROM fundamento_legal");
+
+ $query->execute();
+if($query){
+while($row=$query->fetch()){
+$flag7[]=$row;
+}
+$valor7=serialize($flag7);
+
+ if($flag7==null){
+        echo "<script>alert('Debe ingresar un provedor adjudicado')
+window.location.replace('principal2.php');</script>";
+       return;
+        }
+
+}else{
+echo "<script>alert('La consulta a la base de datos es incorrecta')
+window.location.replace('principal2.php');</script>";
+}
+
+
+
 $query=$conn->prepare("SELECT id_consolidado,unidad,licitacion FROM consolidado AS co INNER JOIN unidad_requirente AS ur ON co.id_requirente = ur.id_requirente");
 
  $query->execute();
@@ -134,7 +157,7 @@ curl_setopt($ch, CURLOPT_URL,$url);
 // indicamos el tipo de petición: POST
 curl_setopt($ch, CURLOPT_POST, TRUE);
 // definimos cada uno de los parámetros
-curl_setopt($ch, CURLOPT_POSTFIELDS, "flag=$valor&flag2=$valor2&flag3=$valor3&flag4=$valor4&flag6=$valor6&partida=$partida_presupuestal&flag8=$valor8");
+curl_setopt($ch, CURLOPT_POSTFIELDS, "flag=$valor&flag2=$valor2&flag3=$valor3&flag4=$valor4&flag6=$valor6&partida=$partida_presupuestal&flag8=$valor8&flag7=$valor7");
 curl_setopt($ch, CURLOPT_HEADER, 0);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 0);
     curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);

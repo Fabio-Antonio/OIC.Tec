@@ -232,6 +232,7 @@ document.getElementById("myOverlay").style.display = "none";
         <th>Monto Maximo</th>
         <th>Procedimiento</th>
         <th>Partida presupuestal</th>
+        <th>Articulo normativo</th>
         </tr>
 	  </thead>
           </table>
@@ -267,6 +268,7 @@ var table = $('#myTable').dataTable({
 { mData: 'monto_max', render: $.fn.dataTable.render.number( ',', '.', 2,'$') },
 { mData: 'procedimientos' },
 { mData: 'nombre' },
+{ mData: 'articulo' },
 
 ]
 });

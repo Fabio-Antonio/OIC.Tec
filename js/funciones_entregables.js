@@ -5,8 +5,8 @@ function mostrarText() {
     var cantidad_entregable = (document.getElementById('incantidade').value);
     var direccion_entregable = (document.getElementById('indireccione').value);
     var descripcion = (document.getElementById('descripcion').value);
-
-
+    var porcentaje = (document.getElementById('porcentaje').value);
+    var unitario = (document.getElementById('unitario').value);
     var selIndex = selObj.options[selObj.selectedIndex].value;
     
     if (cantidad_entregable.length == 0 || cantidad_entregable < 0) {
@@ -18,7 +18,7 @@ function mostrarText() {
         return;
     }
 
-    if (nombre_entregable.length == 0 || nombre_entregable.length >= 26||!(/^[A-Za-zñÑáéíóúÁÉÍÓÚ.\s]*$/i.test(nombre_entregable))) {
+    if (nombre_entregable.length == 0 || nombre_entregable.length >= 28||!(/^[A-Za-zñÑáéíóúÁÉÍÓÚ.\s]*$/i.test(nombre_entregable))) {
         $(function() {
             $('#my-modal2').modal('show')
         });
@@ -62,6 +62,34 @@ function mostrarText() {
         return;
     } 
 
+    if(porcentaje.length=0||!(/^[%0-9.\s]+$/i.test(porcentaje))){
+
+        document.getElementById("porcentaje").focus();
+
+        $(function() {
+            $('#my-modal2').modal('show')
+        });
+        return;
+
+
+    }
+
+
+    if(unitario.length=0||!(/^[$0-9,.\s]+$/i.test(unitario))){
+
+        document.getElementById("unitario").focus();
+
+        $(function() {
+            $('#my-modal2').modal('show')
+        });
+        return;
+
+
+    }
+
+
+
+
     $.post('../besa/entregable.php', {
             
         "numero_contrato": selIndex,
@@ -69,6 +97,8 @@ function mostrarText() {
         "nombre_entregable": nombre_entregable,
         "cantidad_entregable": cantidad_entregable,
         "direccion_entregable": direccion_entregable,
+        "unitario":unitario,
+        "porcentaje":porcentaje,
         "descripcion": descripcion
     },function(data) {
         var response = jQuery.parseJSON(data);
@@ -85,3 +115,35 @@ function mostrarText() {
   });
     
 }
+
+$("#unitario").on({
+    "focus": function(event) {
+        $(event.target).select();
+        
+    },
+    "keyup": function(event) {
+        $(event.target).val(function(index, value) {
+            return '$'+value.replace(/\D/g, "")
+                .replace(/([0-9])([0-9]{2})$/, '$1.$2')
+                .replace(/\B(?=(\d{3})+(?!\d)\.?)/g, ",");
+        });
+    }
+});
+
+$("#porcentaje").on({
+    "focus": function(event) {
+        $(event.target).select();
+    },
+    "keyup": function(event) {
+        $(event.target).val(function(index, value) {
+            return '%'+value.replace(/\D/g, "")
+                .replace(/([0-9])([0-9]{2})$/, '$1.$2')
+                .replace(/\B(?=(\d{3})+(?!\d)\.?)/g, ",");
+        });
+    }
+});
+
+
+
+
+

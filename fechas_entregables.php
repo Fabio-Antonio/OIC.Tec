@@ -116,6 +116,8 @@
                                 <th>Cantidad</th>
                                 <th>Dirección</th>
                                 <th>Descripción</th>
+                                <th>Penalización</th>
+
                             </tr>
                         </thead>
                     </table>
@@ -142,7 +144,8 @@
                                 },
                             },
                             "bProcessing": true,
-                            "sAjaxSource": "contratos_entregables.php?numero_contrato=" + numero_contrato,
+                            "sAjaxSource": "contratos_entregables.php?numero_contrato=" +
+                                numero_contrato,
                             "bPaginate": true,
                             "sPaginationType": "full_numbers",
                             "iDisplayLength": 5,
@@ -164,8 +167,19 @@
                                 {
                                     mData: 'descripcion'
                                 },
-                                
-                            ]
+                                {
+                                    mData: 'penalizacion',
+                                    render: $.fn.dataTable.render.number(',', '.', 2, '$')
+                                },
+
+                            ],
+                            "fnRowCallback": function(nRow, aData, iDisplayIndex, iDisplayIndexFull) {
+                                if(aData.penalizacion>0){
+                                $(nRow).css('color', 'Red');
+                                }else{
+                                    $(nRow).css('color', 'green');
+                                }
+                            }
                         });
                     });
                     </script>
@@ -182,7 +196,7 @@
                 var cw = context.canvas.width / 2;
                 var ch = context.canvas.height / 2;
                 var diff;
-                var cantidad = '<?=$cantidad?>'; 
+                var cantidad = '<?=$cantidad?>';
                 <?php $total = $_POST["total"];?>
                 var total = '<?=$total?>';
                 var valor = 0;

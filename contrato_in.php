@@ -17,6 +17,7 @@
 	$monto_minimo= $_POST["monto_minimo"];
         $partida=$_POST["partida"];
         $consolidado=$_POST["consolidado"];
+        $articulo=$_POST["articulo"];
         
         
         
@@ -46,7 +47,7 @@
         if(comprovar($numero_contrato,$conn)==true && $consolidado>0){
         $statement = $conn->prepare("INSERT INTO contrato (id_unidad_compradora,id_procedimiento_contratacion,id_unidad_requirente,id_administrador,
         id_proveedor_adjudicado,id_partida,id_consolidado,numero_contrato,procedimiento_compranet,contrato_compranet,convenio_interno
-        ,objeto_contratacion,contrato_abierto,documentacion_descirpcion,monto_max,monto_min)VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+        ,objeto_contratacion,contrato_abierto,documentacion_descirpcion,monto_max,monto_min,id_fundamento_legal)VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
         $statement->bindValue(1, $nombre_unidad_compradora);
         $statement->bindValue(2, $procedimientos);
         $statement->bindValue(3, $unidad_requirente);
@@ -63,7 +64,7 @@
         $statement->bindParam(14, $documentacion_descripcion);
         $statement->bindValue(15, $monto_maximo);
         $statement->bindValue(16, $monto_minimo);
-        
+        $statement->bindValue(17,$articulo);
 
        
         $statement->execute();         
@@ -74,7 +75,7 @@
        else if(comprovar($numero_contrato,$conn)==true && $consolidado==0){
           $statement = $conn->prepare("INSERT INTO contrato (id_unidad_compradora,id_procedimiento_contratacion,id_unidad_requirente,id_administrador,
           id_proveedor_adjudicado,id_partida,numero_contrato,procedimiento_compranet,contrato_compranet,convenio_interno
-          ,objeto_contratacion,contrato_abierto,documentacion_descirpcion,monto_max,monto_min)VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+          ,objeto_contratacion,contrato_abierto,documentacion_descirpcion,monto_max,monto_min,id_fundamento_legal)VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
           $statement->bindValue(1, $nombre_unidad_compradora);
           $statement->bindValue(2, $procedimientos);
           $statement->bindValue(3, $unidad_requirente);
@@ -90,6 +91,7 @@
           $statement->bindParam(13, $documentacion_descripcion);
           $statement->bindValue(14, $monto_maximo);
           $statement->bindValue(15, $monto_minimo);
+          $statement->bindValue(16, $articulo);
           
   
          

@@ -6,7 +6,7 @@ $("#montomaxi").on({
     },
     "keyup": function(event) {
         $(event.target).val(function(index, value) {
-            return value.replace(/\D/g, "")
+            return "$"+value.replace(/\D/g, "")
                 .replace(/([0-9])([0-9]{2})$/, '$1.$2')
                 .replace(/\B(?=(\d{3})+(?!\d)\.?)/g, ",");
         });
@@ -19,7 +19,7 @@ $("#montomini").on({
     },
     "keyup": function(event) {
         $(event.target).val(function(index, value) {
-            return value.replace(/\D/g, "")
+            return "$"+value.replace(/\D/g, "")
                 .replace(/([0-9])([0-9]{2})$/, '$1.$2')
                 .replace(/\B(?=(\d{3})+(?!\d)\.?)/g, ",");
         });
@@ -49,4 +49,25 @@ $('#checkconsolidado').on('change', function() {
 function cambio(){
     var numero_contrato = (document.getElementById('innumerocontratoc').value);
     window.location = "../besa/fechas.php?numero_contrato="+numero_contrato;
+}
+
+
+$(document).ready(function(){
+    $('#secontrarecepcion').val(1);
+    recargarLista();
+
+    $('#secontrarecepcion').change(function(){
+        recargarLista();
+    });
+})
+
+function recargarLista(){
+    $.ajax({
+        type:"POST",
+        url:"articulos_select.php",
+        data:"procedimiento=" + $('#secontrarecepcion').val(),
+        success:function(r){
+            $('#searticulonormativocontrato').html(r);
+        }
+    });
 }

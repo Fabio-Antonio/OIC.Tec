@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<link href="https://cdn.datos.gob.mx/assets/css/main.css" rel="stylesheet">
-<link href="https://cdn.datos.gob.mx/bower_components/polymer/polymer.html" rel="import">
 
 <head>
+    <link href="https://cdn.datos.gob.mx/assets/css/main.css" rel="stylesheet">
+    <link href="https://cdn.datos.gob.mx/bower_components/polymer/polymer.html" rel="import">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -14,8 +14,6 @@
     <link href="https://cdn.datos.gob.mx/assets/img/favicon.ico" rel="shortcut icon">
     <link href="https://cdn.datos.gob.mx/bower_components/dgm-footer/dgm-footer.html" rel="import">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
-
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/estile.css">
 
@@ -46,7 +44,7 @@
             <button id="ce" class="w3-bar-item w3-button w3-large" onclick="w3_close()">Cerrar &times;</button>
             <img src="icons/lf.png" alt="sfp" width="145" height="60">
             <a class="w3-bar-item w3-button"></a>
-            <a href="#" class="w3-bar-item w3-button">Inicio</a>
+            <a href="principal2.php" class="w3-bar-item w3-button">Inicio</a>
             <a href="alta.html" class="w3-bar-item w3-button">Usuarios</a>
             <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal2">Contacto</a>
             <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal3">Nueva Partida</a>
@@ -123,13 +121,6 @@
 
 
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-
-    <script lenguage="javascript" src="js/funciones_entregables.js" type="text/javascript">
-    </script>
-
     <main class="main-entregables">
         <form role="form">
             <div class="contenedor-gris-one">
@@ -174,11 +165,11 @@
                     </div>
                     <div class="precio-unitario-entregables">
                         <label> Precio Unitario:</label>
-                        <input type="text" id="" name="direccion_entregable" placeholder="Precio Unitario">
+                        <input type="text" id="unitario" name="unitario" placeholder="Precio Unitario">
                     </div>
                     <div class="porcentaje-penalizacion-entragables">
                         <label> Porcentaje De Penalización:</label>
-                        <input type="text" id="" name="direccion_entregable" placeholder="Porcentaje De Penalización">
+                        <input type="text" id="porcentaje" name="porcentaje" placeholder="Porcentaje De Penalización">
                     </div>
                     <div class="descripcion-entregables">
                         <label>Descripción:</label>
@@ -257,6 +248,16 @@
         document.getElementById("mySidebar").style.display = "none";
         document.getElementById("myOverlay").style.display = "none";
     }
+    </script>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="https://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" rel="Stylesheet">
+    </link>
+    <script src="https://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-3.0.0.min.js"></script>
+    <script lenguage="javascript" src="js/funciones_entregables.js" type="text/javascript">
     </script>
 </body>
 

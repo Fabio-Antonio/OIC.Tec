@@ -17,6 +17,7 @@ window.location.replace('index');</script>";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Principal</title>
+
     <link rel="shortcut icon" href="https://cdn.datos.gob.mx/assets/img/favicon.ico">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
@@ -49,7 +50,7 @@ window.location.replace('index');</script>";
             <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal2">Contacto</a>
             <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal3">Nueva Partida</a>
             <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal5">Nuevo Contrato</a>
-            
+
             <a onclick="cerrar();" class="w3-bar-item w3-button">Logout -></a>
         </div>
         <!-- Page Content -->
@@ -107,7 +108,8 @@ window.location.replace('index');</script>";
                 <h3>LEGAL</h3>
                 <ul>
                     <li><i class="fas fa-plus-circle"></i><a href="consulta_fundamento.php"> Fundamento Legal</a></li>
-                    <li><i class="fas fa-plus-circle"></i><a href="consulta_fundamento.<a href="consulta_fundamento.php"> Procedimientos de
+                    <li><i class="fas fa-plus-circle"></i><a href="consulta_fundamento.<a href="
+                            consulta_fundamento.php"> Procedimientos de
                             Contratación</a></li>
                     <li><i class="fas fa-plus-circle"></i> Inconformidades</li>
                     <li><i class="fas fa-plus-circle"></i> Facturas</li>
@@ -123,7 +125,8 @@ window.location.replace('index');</script>";
                 <ul>
                     <li><i class="fas fa-plus-circle"></i> <a href="consulta_vigencia.php">Fin VIgencia</a></li>
                     <li><i class="fas fa-plus-circle"></i> Consultas por Fecha de Adjudicación</li>
-                    <li><i class="fas fa-plus-circle" data-toggle="modal" data-target="#mymodal7"></i> Fechas Entregables</li>
+                    <li><i class="fas fa-plus-circle" data-toggle="modal" data-target="#mymodal7"></i> Fechas
+                        Entregables</li>
                     <li><i class="fas fa-plus-circle"></i> Fecha de Formalización</li>
                 </ul>
                 <p></p>
@@ -137,7 +140,8 @@ window.location.replace('index');</script>";
                     <li><i class="fas fa-plus-circle" data-toggle="modal" data-target="#mymodal4"></i> Informe 70-30
                     </li>
                     <li><i class="fas fa-plus-circle"></i> <a href="consulta_top.php">Top por Contrato</a></li>
-                    <li><i class="fas fa-plus-circle" data-toggle="modal" data-target="#mymodal6"></i> Informe Consolidado </li>
+                    <li><i class="fas fa-plus-circle" data-toggle="modal" data-target="#mymodal6"></i> Informe
+                        Consolidado </li>
                 </ul>
                 <p></p>
             </div>
@@ -147,7 +151,8 @@ window.location.replace('index');</script>";
                 </div>
                 <h3>Contrataciones</h3>
                 <ul>
-                    <li><i class="fas fa-plus-circle"></i><a href="numero_de_contrato.php"> Consulta por número de contrato</a></li>
+                    <li><i class="fas fa-plus-circle"></i><a href="numero_de_contrato.php"> Consulta por número de
+                            contrato</a></li>
                     <li><i class="fas fa-plus-circle"></i> Contrato por Proveedor</li>
                     <li><i class="fas fa-plus-circle"></i> Contratos por Partida</li>
                 </ul>
@@ -366,6 +371,8 @@ window.location.replace('index');</script>";
         </div>
     </div>
 
+
+
     <div class="modal fade" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" role="dialog"
         id="mymodal3" aria-labelledby="modal-title">
         <div class="modal-dialog" role="document">
@@ -374,30 +381,67 @@ window.location.replace('index');</script>";
                     <h3 class="modal-title" id="modal-title">B.E.S.A</h3>
                 </div>
                 <div class="modal-body">
-                    <h3>
-                        Ingrese nueva partida presupuestal
-                    </h3>
 
-                    <form role="form" id="formulario">
-                        <div class="form-group">
-                            <label class="control-label" for="email-01">Clave:</label>
-                            <input class="form-control" id="clave" placeholder="Ejemplo:58101" type="text" required>
-                            <label class="control-label" for="email-01">Partida:</label>
-                            <input class="form-control" id="partida" placeholder="Ejemplo: Terrenos" type="text"
-                                required>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label" for="email-01">Presupuesto:</label>
-                            <input class="form-control" id="presupuesto" placeholder="presupuesto" type="text" required>
-                        </div>
+                    <div class="container11">
+                        <div class="row2">
+                            <div class='col-sm-20 col-md-20 col-ld-418'>
+                                <!-- Pestañas -->
+                                <ul class="nav nav-tabs">
+                                    <li class="active"><a data-toggle="tab" href="#tab-01">CREAR</a></li>
+                                    <li><a data-toggle="tab" href="#tab-04">MODIFICAR</a></li>
+                                </ul>
+                                <!--fin pestañas -->
+                                <div class="form-group">
+                                    <!-- inicio dentro pestaña-->
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="tab-01">
 
-                        <button class="btn btn-default btn-success" type="button" name="submit"
-                            onclick="ingresar();">Enviar</button>
-                    </form>
+                                            <h1><strong>CREAR</strong></h1>
+
+
+                                            <form role="form" id="formulario">
+                                                <div class="form-group">
+                                                    <label class="control-label" for="email-01">Clave:</label>
+                                                    <input class="form-control" id="clave" placeholder="Ejemplo:58101"
+                                                        type="text" required>
+                                                    <label class="control-label" for="email-01">Partida:</label>
+                                                    <input class="form-control" id="partida"
+                                                        placeholder="Ejemplo: Terrenos" type="text" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label" for="email-01">Presupuesto:</label>
+                                                    <input class="form-control" id="presupuesto"
+                                                        placeholder="presupuesto" type="text" required>
+                                                </div>
+
+                                                <button class="btn btn-default btn-success" type="button" name="submit"
+                                                    onclick="ingresar();">Enviar</button>
+                                            </form>
+
+
+
+
+                                        </div>
+                                        <div class="tab-pane" id="tab-04">
+                                            <h1><strong> MODIFICAR </strong></h1>
+                                            <label class="control-label">Clave:</label>
+                                            <input type="text" class="form-control">
+                                            <label class="control-label">Presupuesto:</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary" data-dismiss="modal">Listo!!</button>
+                                </div>
+                                <!--fin dentro pestañas -->
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+
+                    </div>
                 </div>
-                <div class="modal-footer">
-                    <button class="btn btn-primary" data-dismiss="modal">Listo!!</button>
-                </div>
+
             </div>
         </div>
     </div>
@@ -464,8 +508,9 @@ window.location.replace('index');</script>";
                     <form role="form" id="formulario7">
                         <div class="form-group">
                             <label class="control-label" for="email-01">Contrato:</label>
-                            <input class="form-control" id="contrato" placeholder="Escribe el número de contrato" type="text">
-                       </div>
+                            <input class="form-control" id="contrato" placeholder="Escribe el número de contrato"
+                                type="text">
+                        </div>
 
 
 
@@ -486,18 +531,18 @@ window.location.replace('index');</script>";
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link href="https://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" rel="Stylesheet"></link>
-    <script src="https://code.jquery.com/ui/1.10.2/jquery-ui.js" ></script>
+    <link href="https://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" rel="Stylesheet">
+    </link>
+    <script src="https://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
     <script src="https://code.jquery.com/jquery-migrate-3.0.0.min.js"></script>
     <script src="js/funciones_principal.js"></script>
     <script>
-
     $(function() {
         <?php
      require_once("consulta_principal.php");                                
                                 ?>
-       var arreglo = <?php echo json_encode($array) ?>;
-       autocompletar(arreglo);                         
+        var arreglo = <?php echo json_encode($array) ?>;
+        autocompletar(arreglo);
 
 
     });

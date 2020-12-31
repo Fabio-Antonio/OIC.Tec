@@ -512,6 +512,7 @@ box-shadow: 1px 1px 3px 1.5px rgba(71, 173, 92, 1);
   font-weight: 300;
 }
 
+
 /*Contenedor capturas*/
 .capturas{
   display: grid;
@@ -554,212 +555,510 @@ box-shadow: 1px 1px 3px 1.5px rgba(71, 173, 92, 1);
 Adjuntos al consolidado
 */
 .main-captura-pro-mont {
-height: 130vh;
-width: 1010px;
-margin: 0 auto;
-}
-.contenedor-gris-procedimiento-consolidado {
-height: 120vh;
-width: 1010px;
-display: grid;
-grid-gap: 10px;
-background-color: #d8d8d8;
-grid-template-areas:
-"contenedor-captura-procedimiento";
-grid-template-rows: 400px;
-
-}
-.contenedor-gris-procedimiento-consolidado .contenedor-captura-procedimiento{
-grid-area: contenedor-captura-procedimiento;
-}
-.contenedor-gris-procedimiento-consolidado .contenedor-adjunto-consolidado{
-grid-area: contenedor-adjunto-consolidado;
-}
-.contenedor-gris-procedimiento-consolidado .tabla-captura-cantidad{
-grid-area: tabla-captura-cantidad;
-}
-.contenedor-captura-procedimiento {
-display: grid;
-grid-template-areas:
-  "captura-procedimiento-consolidado captura-procedimiento-consolidado"
-  "consolidador-captura numero-lisitacion-captura"
-  "monto-total-captura ."
-  "descripcion-consolidado descripcion-consolidado"
-  "btn-captura-procedimiento btn-captura-procedimiento";
-grid-template-columns: repeat(2 1fr);
-grid-template-rows: 150px 100px 100px 250px;
-}
-.main-captura-pro-mont h1::after {
-content: "";
-display: block;
-width: 10rem;
-height: 0.2rem;
-background-color: #0c9;
-}
-
-/*Nombramos los elementos*/
-.contenedor-captura-procedimiento h1 {
-grid-area: captura-procedimiento-consolidado;
-text-align: center;
-}
-.contenedor-captura-procedimiento .consolidador-captura {
-grid-area: consolidador-captura;
-}
-.contenedor-captura-procedimiento .numero-lisitacion-captura{
-grid-area: numero-lisitacion-captura;
-}
-.contenedor-captura-procedimiento .monto-total-captura{
-grid-area: monto-total-captura;
-}
-.contenedor-captura-procedimiento .descripcion-consolidado{
-grid-area: descripcion-consolidado;
-}
-.contenedor-captura-procedimiento .btn-captura-procedimiento {
-grid-area: btn-captura-procedimiento;
-}
-
-.contenedor-captura-procedimiento textarea{
-width: 950px;
-height: 150px;
-background-color: #fff;
-color: #000;
-border: 0.2rem solid rgba(0, 0, 0, 0.15);
-padding: 1rem 0.2rem;
-border-radius: 1rem;
-}
-textarea:hover{
--webkit-box-shadow: 1px 1px 3px 1.5px rgba(71, 173, 92, 1);
--moz-box-shadow: 1px 1px 3px 1.5px rgba(71, 173, 92, 1);
-box-shadow: 1px 1px 3px 1.5px rgba(71, 173, 92, 1);}
-.contenedor-gris-procedimiento-consolidado input {
-width: 450px;
-height: 40px;
-background-color: #fff;
-color: #000;
-border: 0.2rem solid rgba(0, 0, 0, 0.15);
-padding: 1rem 0.2rem;
-border-radius: 1rem;
-}
-
-.contenedor-gris-procedimiento-consolidado select
-{
-width: 450px;
-height: 40px;
-background-color: #fff;
-color: #000;
-border: 0.2rem solid rgba(0, 0, 0, 0.15);
-border-radius: 1rem;
-}
-
-.consolidador-captura,
-.numero-lisitacion-captura,
-.monto-total-captura,
-.descripcion-consolidado{
-padding-left: 25px;
-}
-
-/*Captura Procedimiento
-Proveedor Adjudicado para ipad
-*/
-@media screen and (max-width: 768px) {
-.main-captura-pro-mont {
-  height: 100vh;
-  width: 650px;
-  border: 2px solid red;
+  height: 130vh;
+  width: 1010px;
   margin: 0 auto;
-}
-.contenedor-gris-procedimiento-consolidado {
-  height: 50vh;
-  border: 2px solid red;
-  width: 650px;
-  display: grid;
-  grid-template-rows: 240px 550px;
-
-}
-
-.contenedor-captura-procedimiento{
-  grid-template-rows: 200px 100px 120px;
-}
-.contenedor-adjunto-consolidado{
-  grid-template-rows: 120px 100px 130px 120px;
-}
-.contenedor-gris-procedimiento-consolidado input {
-  width: 280px;
-  height: 40px;
-}
-
-.contenedor-gris-procedimiento-consolidado select{
-  width: 280px;
-  height: 40px;
-}
-.Display{
-  margin: 0;
-  background-color: #fff;
-  width: 600px;
-  
-
-}
-
-.tabla-captura-cantidad{
-  padding-top: 50px;
-  grid-template-columns: 1fr;
-  padding-left: 25px;
- 
-}
-
-
-}
-
-/*Captura Procedimiento
-Proveedor Adjudicado para celular
-*/
-
-@media screen and (max-width: 375px) {
-.main-captura-pro-mont {
-  height: 250vh;
-  width: 650px;
-  margin: 0 auto;
-}
-.contenedor-gris-procedimiento-consolidado {
-  height: 100vh;
-  width: 370px;
+  }
+  .contenedor-gris-procedimiento-consolidado {
+  height: 120vh;
+  width: 1010px;
   display: grid;
   grid-gap: 10px;
   background-color: #d8d8d8;
-  grid-template-rows: 400px 40px;
-}
-.contenedor-captura-procedimiento {
-  display: grid;
-  
   grid-template-areas:
-    "captura-procedimiento-consolidado"
-    "consolidador-captura"
-    "proveedor-captura"
-    "numero-lisitacion-captura"
-    "monto-total-captura"
-    "descripcion-consolidado"
-    "btn-captura-procedimiento";
-  grid-template-rows: 100px repeat(3, 100px) 110px;
+  "contenedor-captura-procedimiento";
+  grid-template-rows: 400px;
+  
+  }
+  .contenedor-gris-procedimiento-consolidado .contenedor-captura-procedimiento{
+  grid-area: contenedor-captura-procedimiento;
+  }
+  
+  
+  .contenedor-captura-procedimiento {
+  display: grid;
+  grid-template-areas:
+    "captura-procedimiento-consolidado captura-procedimiento-consolidado"
+    "consolidador-captura numero-lisitacion-captura"
+    "monto-total-captura ."
+    "descripcion-consolidado descripcion-consolidado"
+    "btn-captura-procedimiento btn-captura-procedimiento";
+  grid-template-columns: repeat(2 1fr);
+  grid-template-rows: 150px 100px 100px 250px;
+  }
+  .main-captura-pro-mont h1::after {
+  content: "";
+  display: block;
+  width: 10rem;
+  height: 0.2rem;
+  background-color: #0c9;
+  }
+  
+  /*Nombramos los elementos*/
+  .contenedor-captura-procedimiento h1 {
+  grid-area: captura-procedimiento-consolidado;
+  text-align: center;
+  }
+  .contenedor-captura-procedimiento .consolidador-captura {
+  grid-area: consolidador-captura;
+  }
+  .contenedor-captura-procedimiento .numero-lisitacion-captura{
+  grid-area: numero-lisitacion-captura;
+  }
+  .contenedor-captura-procedimiento .monto-total-captura{
+  grid-area: monto-total-captura;
+  }
+  .contenedor-captura-procedimiento .descripcion-consolidado{
+  grid-area: descripcion-consolidado;
+  }
+  .contenedor-captura-procedimiento .btn-captura-procedimiento {
+  grid-area: btn-captura-procedimiento;
+  }
+  
+  .contenedor-captura-procedimiento textarea{
+  width: 950px;
+  height: 150px;
+  background-color: #fff;
+  color: #000;
+  border: 0.2rem solid rgba(0, 0, 0, 0.15);
+  padding: 1rem 0.2rem;
+  border-radius: 1rem;
+  }
+  textarea:hover{
+  -webkit-box-shadow: 1px 1px 3px 1.5px rgba(71, 173, 92, 1);
+  -moz-box-shadow: 1px 1px 3px 1.5px rgba(71, 173, 92, 1);
+  box-shadow: 1px 1px 3px 1.5px rgba(71, 173, 92, 1);}
+  .contenedor-gris-procedimiento-consolidado input {
+  width: 450px;
+  height: 40px;
+  background-color: #fff;
+  color: #000;
+  border: 0.2rem solid rgba(0, 0, 0, 0.15);
+  padding: 1rem 0.2rem;
+  border-radius: 1rem;
+  }
+  
+  .contenedor-gris-procedimiento-consolidado select
+  {
+  width: 450px;
+  height: 40px;
+  background-color: #fff;
+  color: #000;
+  border: 0.2rem solid rgba(0, 0, 0, 0.15);
+  border-radius: 1rem;
+  }
+  
+  .consolidador-captura,
+  .numero-lisitacion-captura,
+  .monto-total-captura,
+  .descripcion-consolidado{
+  padding-left: 25px;
+  }
+  
+  /*Captura Procedimiento
+  Proveedor Adjudicado para ipad
+  */
+  @media screen and (max-width: 768px) {
+  .main-captura-pro-mont {
+    height: 70vh;
+    width: 650px;
+    margin: 0 auto;
+  }
+  .contenedor-gris-procedimiento-consolidado {
+    height: 65vh;
+    width: 690px; 
+  }
+  .contenedor-captura-procedimiento textarea{
+    width: 640px;
+    }
+    .contenedor-gris-procedimiento-consolidado input {
+    width: 300px;
+    }
+    
+    .contenedor-gris-procedimiento-consolidado select
+    {
+    width: 300px;
+    }
+  
+  }
+  
+  /*Captura Procedimiento
+  Proveedor Adjudicado para celular
+  */
+  @media screen and (max-width: 375px){
+    .main-captura-pro-mont {
+      height: 115vh;
+      width: 350px;
+      margin: 0 auto;
+    }
+    .contenedor-gris-procedimiento-consolidado {
+      height: 110vh;
+      width: 350px; 
+    }
+    .contenedor-captura-procedimiento {
+      display: grid;
+      grid-template-areas:
+        "captura-procedimiento-consolidado"
+        "consolidador-captura" 
+        "numero-lisitacion-captura"
+        "monto-total-captura"
+        "descripcion-consolidado"
+        "btn-captura-procedimiento";
+      grid-template-rows: 150px 100px 100px 100px 220px;
+      }
+  
+    .contenedor-captura-procedimiento textarea{
+      width: 300px;
+      }
+      .contenedor-gris-procedimiento-consolidado input {
+      width: 300px;
+      }
+      
+      .contenedor-gris-procedimiento-consolidado select
+      {
+      width: 300px;
+      }
+      .btn-captura-procedimiento{
+        padding-left: 55px;
+      }
+  }
+
+
+  /*Comprobacion
+Convenios Modificados
+Documentos Adicionales*/
+.main-ccd {
+  height: 275vh;
+  width: 1010px;
+  margin: 0 auto;
+  }
+.contenedor-gris-ccd{
+  height: 270vh;
+  width: 1010px;
+  display: grid;
+  grid-gap: 10px;
+  background-color: #d8d8d8;
+  grid-template-areas: 
+  "contenedor-comprobacion-ccd"
+  "contenedor-convenios-modificados-ccd"
+  "contenedor-documentos-adicionales-ccd";
+  }
+  .main-ccd h1::after {
+    content: "";
+    display: block;
+    width: 10rem;
+    height: 0.2rem;
+    background-color: #0c9;
+    }
+
+.contenedor-gris-ccd .contenedor-comprobacion-ccd{
+  grid-area: contenedor-comprobacion-ccd;
 }
-.btn-captura-procedimiento,
-.btn-proveedor {
-  padding-left: 20px;
+.contenedor-gris-ccd .contenedor-convenios-modificados-ccd{
+  grid-area: contenedor-convenios-modificados-ccd;
+}
+.contenedor-gris-ccd .contenedor-documentos-adicionales-ccd{
+  grid-area: contenedor-documentos-adicionales-ccd;
 }
 
-.contenedor-adjunto-consolidado {
-display: grid;
-grid-template-areas:
-  "proveedor-adjudicado"
-  "adjunto-unidad-requirente"
-  "adjunto-monto"
-  "adjunto_cantidad-maxima"
-  "adjunto-cantidad-minima"
-  "btn-proveedor";
-grid-template-rows: 100px 100px 100px 130px 100px 100px;
+.contenedor-comprobacion-ccd{
+  display: grid;
+  grid-gap: 10px;
+  grid-template-areas: 
+  "comprobacion-ccd comprobacion-ccd"
+  "contrato-comprobacion-ccd fechadocumento-ccd"
+  "descripcion-ccd descripcion-ccd"
+  "botones-comprobacion-ccd botones-comprobacion-ccd";
+  grid-template-columns: repeat(2, 500px);
+  grid-template-rows: 150px 100px 200px 100px;
+}
+.contenedor-comprobacion-ccd h1{
+  grid-area: comprobacion-ccd;
+  text-align: center;
+}
+.contenedor-comprobacion-ccd .contrato-comprobacion-ccd{
+  grid-area: contrato-comprobacion-ccd;
+}
+.contenedor-comprobacion-ccd .fechadocumento-ccd{
+  grid-area: fechadocumento-ccd;
+}
+.contenedor-comprobacion-ccd .descripcion-ccd{
+  grid-area: descripcion-ccd;
+}
+.contenedor-comprobacion-ccd .botones-comprobacion-ccd{
+  grid-area: botones-comprobacion-ccd;
 }
 
 
+.contenedor-gris-ccd textarea{
+  width: 950px;
+  height: 150px;
+  background-color: #fff;
+  color: #000;
+  border: 0.2rem solid rgba(0, 0, 0, 0.15);
+  padding: 1rem 0.2rem;
+  border-radius: 1rem;
+  }
+
+  textarea:hover{
+  -webkit-box-shadow: 1px 1px 3px 1.5px rgba(71, 173, 92, 1);
+  -moz-box-shadow: 1px 1px 3px 1.5px rgba(71, 173, 92, 1);
+  box-shadow: 1px 1px 3px 1.5px rgba(71, 173, 92, 1);
 }
+  
+  .contenedor-gris-ccd input {
+  width: 470px;
+  height: 40px;
+  background-color: #fff;
+  color: #000;
+  border: 0.2rem solid rgba(0, 0, 0, 0.15);
+  padding: 1rem 0.2rem;
+  border-radius: 1rem;
+  }
+  
+  .contenedor-gris-ccd select
+  {
+  width: 460px;
+  height: 40px;
+  background-color: #fff;
+  color: #000;
+  border: 0.2rem solid rgba(0, 0, 0, 0.15);
+  border-radius: 1rem;
+  }
+  
+  .contrato-comprobacion-ccd,
+  .descripcion-ccd,
+  .contrato-convenios-modificados-ccd,
+  .monto-maximo-convenios-modificados-ccd,
+  .inicio-vigencia-convenios-modificados-ccd,
+  .contrato-documentos-adicionales-ccd,
+  .descripcion-documentos-adicionales-ccd{
+  padding-left: 25px;
+  }
+
+  .botones-comprobacion-ccd,
+  .botones-convenios-modificados-ccd,
+  .botones-documentos-adicionales-ccd{
+    padding-left: 383px;
+  }
+
+  .contenedor-convenios-modificados-ccd{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-areas: 
+    "convenios-modificados convenios-modificados"
+    "contrato-convenios-modificados-ccd fecha-entrega-convenios-modificados-ccd"
+    "monto-maximo-convenios-modificados-ccd monto-minimo-convenios-modificados-ccd"
+    "inicio-vigencia-convenios-modificados-ccd fin-vigencia-convenios-modificados-ccd"
+    "botones-convenios-modificados-ccd botones-convenios-modificados-ccd";
+    grid-template-columns: repeat(2, 500px);
+    grid-template-rows: 150px 100px 100px 100px 100px;
+  }
+
+  .contenedor-convenios-modificados-ccd h1{
+    grid-area: convenios-modificados;
+    text-align: center;
+  }
+  .contenedor-convenios-modificados-ccd .contrato-convenios-modificados-ccd{
+    grid-area: contrato-convenios-modificados-ccd;
+  }
+  .contenedor-convenios-modificados-ccd .fecha-entrega-convenios-modificados-ccd{
+    grid-area: fecha-entrega-convenios-modificados-ccd;
+  }
+  .contenedor-convenios-modificados-ccd .monto-maximo-convenios-modificados-ccd{
+    grid-area: monto-maximo-convenios-modificados-ccd;
+  }
+  .contenedor-convenios-modificados-ccd .monto-minimo-convenios-modificados-ccd{
+    grid-area: monto-minimo-convenios-modificados-ccd;
+  }
+  .contenedor-convenios-modificados-ccd .inicio-vigencia-convenios-modificados-ccd{
+    grid-area: inicio-vigencia-convenios-modificados-ccd;
+  }
+  .contenedor-convenios-modificados-ccd .fin-vigencia-convenios-modificados-ccd{
+    grid-area: fin-vigencia-convenios-modificados-ccd;
+  }
+  .contenedor-convenios-modificados-ccd .botones-convenios-modificados-ccd{
+    grid-area: botones-convenios-modificados-ccd;
+  }
+  
+  .contenedor-documentos-adicionales-ccd{
+  display: grid;
+  grid-gap: 10px;
+  grid-template-areas:
+  "documentos-adicionales documentos-adicionales"
+  "contrato-documentos-adicionales-ccd  fecha-documento-documentos-adicionales-ccd"
+  "descripcion-documentos-adicionales-ccd descripcion-documentos-adicionales-ccd"
+  "botones-documentos-adicionales-ccd botones-documentos-adicionales-ccd";
+  grid-template-columns: repeat(2, 500px);
+  grid-template-rows: 150px 100px 200px 100px;
+  
+  }
+  .contenedor-documentos-adicionales-ccd h1{
+    grid-area: documentos-adicionales;
+    text-align: center;
+  }
+  .contenedor-documentos-adicionales-ccd .contrato-documentos-adicionales-ccd{
+    grid-area: contrato-documentos-adicionales-ccd;
+  }
+  .contenedor-documentos-adicionales-ccd .fecha-documento-documentos-adicionales-ccd{
+    grid-area: fecha-documento-documentos-adicionales-ccd;
+  }
+  .contenedor-documentos-adicionales-ccd .descripcion-documentos-adicionales-ccd{
+    grid-area: descripcion-documentos-adicionales-ccd;
+  }
+  .contenedor-documentos-adicionales-ccd .botones-documentos-adicionales-ccd{
+    grid-area: botones-documentos-adicionales-ccd;
+  }
+
+/*Comprobacion
+Convenios Modificados
+Documentos AdicionaleS IPAD*/
+@media screen and (max-width: 768px) {
+  .main-ccd {
+    height: 175vh;
+    width: 750px;
+    margin: 0 auto;
+    }
+  .contenedor-gris-ccd{
+    height: 170vh;
+    width: 750px;
+    grid-template-rows: 600px 550px ;
+    }
+    
+    .contenedor-comprobacion-ccd{
+      grid-template-columns:  380px 280px;
+      grid-template-rows: 150px 100px 250px 500px;
+    }
+
+    .contenedor-gris-ccd textarea{
+      width: 695px;
+      height: 150px;
+      }
+    
+      .contenedor-gris-ccd input {
+      width: 335px;
+      height: 40px;
+      }
+      
+      .contenedor-gris-ccd select
+      {
+      width: 350px;
+      height: 40px;
+      }
+  
+  .botones-comprobacion-ccd,
+  .botones-convenios-modificados-ccd,
+  .botones-documentos-adicionales-ccd{
+    padding-left: 240px;
+  }
+  .contenedor-convenios-modificados-ccd{
+    grid-template-columns:  380px 280px;
+    grid-template-rows: 150px 100px 100px 100px 100px;
+  }
+  
+  .contenedor-documentos-adicionales-ccd{
+    grid-template-columns:  380px 280px;
+    grid-template-rows: 150px 100px 200px 100px;
+    
+    }
+
+}
+
+/*Comprobacion
+Convenios Modificados
+Documentos AdicionaleS celular*/
+@media screen and (max-width: 375px){
+  .main-ccd {
+    height: 350vh;
+    width: 370px;
+    }
+    .contenedor-gris-ccd{
+      height: 340vh;
+      width: 370px;
+      grid-template-rows: 700px 850px ;
+    }
+    .contenedor-comprobacion-ccd{
+      display: grid;
+      grid-gap: 10px;
+      grid-template-areas: 
+      "comprobacion-ccd"
+      "contrato-comprobacion-ccd" 
+      "fechadocumento-ccd"
+      "descripcion-ccd" 
+      "botones-comprobacion-ccd";
+      grid-template-columns:  400px;
+      grid-template-rows: 150px 100px 100px 200px 500px;
+    }
+
+    .contenedor-convenios-modificados-ccd{
+      display: grid;
+      grid-gap: 10px;
+      grid-template-areas: 
+      "convenios-modificados"
+      "contrato-convenios-modificados-ccd"
+      "fecha-entrega-convenios-modificados-ccd"
+      "monto-maximo-convenios-modificados-ccd"
+      "monto-minimo-convenios-modificados-ccd"
+      "inicio-vigencia-convenios-modificados-ccd"
+      "fin-vigencia-convenios-modificados-ccd"
+      "botones-convenios-modificados-ccd";
+      grid-template-columns: 400px;
+      grid-template-rows: 150px 100px 100px 100px 100px 100px 100px;
+    }
+
+    .contenedor-documentos-adicionales-ccd{
+      display: grid;
+      grid-gap: 10px;
+      grid-template-areas:
+      "documentos-adicionales"
+      "contrato-documentos-adicionales-ccd"  
+      "fecha-documento-documentos-adicionales-ccd"
+      "descripcion-documentos-adicionales-ccd"
+      "botones-documentos-adicionales-ccd";
+      grid-template-columns: 400px;
+      grid-template-rows: 150px 100px 100px 200px;
+      
+      }
+  
+  .contrato-comprobacion-ccd,
+  .fechadocumento-ccd,
+  .descripcion-ccd,
+  .contrato-convenios-modificados-ccd,
+  .fecha-entrega-convenios-modificados-ccd,
+  .monto-minimo-convenios-modificados-ccd,
+  .fin-vigencia-convenios-modificados-ccd,
+  .monto-maximo-convenios-modificados-ccd,
+  .inicio-vigencia-convenios-modificados-ccd,
+  .contrato-documentos-adicionales-ccd,
+  .fecha-documento-documentos-adicionales-ccd,
+  .descripcion-documentos-adicionales-ccd{
+  padding-left: 25px;
+  }
+
+  .botones-comprobacion-ccd,
+  .botones-convenios-modificados-ccd,
+  .botones-documentos-adicionales-ccd{
+    padding-left: 50px;
+  }
+
+  .contenedor-gris-ccd textarea{
+    width: 330px;
+    height: 150px;
+    }
+  
+    .contenedor-gris-ccd input {
+    width: 330px;
+    height: 40px;
+    }
+    
+    .contenedor-gris-ccd select
+    {
+    width: 330px;
+    height: 40px;
+    }
+
+}
+
 
 
 /*Entregables*/
@@ -981,7 +1280,269 @@ grid-template-rows: 100px 100px 100px 130px 100px 100px;
               padding-left: 60px;
             }
     }
+
+/*FACTURAS PAGOS EFECTUADOS*/
+.main-facturas-pagos-efectuados {
+  min-height: calc(100px - 100px -100%);
+  width: 1080px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  
+  }
+  .contenedor-gris-facturas-pagos-efectuados{
+  width: 1180px;
+  min-height: calc(100px - 100px -100%);
+  display: grid;
+  background-color: #d8d8d8;
+  grid-template-areas: 
+  "contenedor-facturas-facturas-pagos-efectuados"
+  "contenedor-pagos-efectuados-facturas-pagos-efectuados";
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+  }
+  
+  .contenedor-gris-facturas-pagos-efectuados .contenedor-facturas-facturas-pagos-efectuados{
+    grid-area: contenedor-facturas-facturas-pagos-efectuados;
+  }
+  .contenedor-gris-facturas-pagos-efectuados .contenedor-pagos-efectuados-facturas-pagos-efectuados{
+    grid-area: contenedor-pagos-efectuados-facturas-pagos-efectuados;
+  }
+  
+  .contenedor-facturas-facturas-pagos-efectuados{
+    display: grid;
     
+    grid-template-areas: 
+    "facturas facturas"
+    "contrato-facturas-pagos-efectuados numero-factura-facturas-pagos-efectuados"
+    "monto-facturas-pagos-efectuados fecha-factura-facturas-pagos-efectuados"
+    "fecha-pago-facturas-pagos-efectuados ."
+    "descripcion-facturas-pagos-efectuados descripcion-facturas-pagos-efectuados"
+    "botones-facturas-pagos-efectuados botones-facturas-pagos-efectuados";
+   
+   grid-template-columns: 600px 600px;
+   grid-template-rows: 150px 100px 100px 100px 200px;
+  }
+
+  .contenedor-facturas-facturas-pagos-efectuados h1{
+    grid-area: facturas;
+    text-align: center;
+  }
+  .contenedor-facturas-facturas-pagos-efectuados .contrato-facturas-pagos-efectuados{
+    grid-area: contrato-facturas-pagos-efectuados;
+  }
+  .contenedor-facturas-facturas-pagos-efectuados .numero-factura-facturas-pagos-efectuados{
+    grid-area: numero-factura-facturas-pagos-efectuados;
+  }
+  .contenedor-facturas-facturas-pagos-efectuados .monto-facturas-pagos-efectuados{
+    grid-area: monto-facturas-pagos-efectuados;
+  }
+  .contenedor-facturas-facturas-pagos-efectuados .fecha-factura-facturas-pagos-efectuados{
+    grid-area: fecha-factura-facturas-pagos-efectuados;
+  }
+  .contenedor-facturas-facturas-pagos-efectuados .fecha-pago-facturas-pagos-efectuados{
+    grid-area: fecha-pago-facturas-pagos-efectuados;
+  }
+  .contenedor-facturas-facturas-pagos-efectuados .descripcion-facturas-pagos-efectuados{
+    grid-area: descripcion-facturas-pagos-efectuados;
+  }
+  .contenedor-facturas-facturas-pagos-efectuados .botones-facturas-pagos-efectuados{
+    grid-area: botones-facturas-pagos-efectuados;
+  }
+
+  .contenedor-pagos-efectuados-facturas-pagos-efectuados{
+    display: grid;
+    grid-template-areas: 
+    "pagos-efectuados pagos-efectuados"
+    "contrato-facturas-f-pagos-efectuados monto-facturas-f-pagos-efectuados"
+    "fechas-pago-facturas-f-pagos-efectuados ."
+    "descripcion-facturas-f-pagos-efectuados descripcion-facturas-f-pagos-efectuados"
+    "botones-facturas-f-pagos-efectuados botones-facturas-f-pagos-efectuados";
+    grid-template-columns: 600px 600px;
+   grid-template-rows: 150px 100px 100px 200px 100px;
+  }
+
+  .contenedor-pagos-efectuados-facturas-pagos-efectuados h1{
+    grid-area: pagos-efectuados;
+    text-align: center;
+  }
+  .contenedor-pagos-efectuados-facturas-pagos-efectuados .contrato-facturas-f-pagos-efectuados{
+    grid-area: contrato-facturas-f-pagos-efectuados;
+  }
+  .contenedor-pagos-efectuados-facturas-pagos-efectuados .monto-facturas-f-pagos-efectuados{
+    grid-area: monto-facturas-f-pagos-efectuados;
+  }
+  .contenedor-pagos-efectuados-facturas-pagos-efectuados .fechas-pago-facturas-f-pagos-efectuados{
+    grid-area: fechas-pago-facturas-f-pagos-efectuados;
+  }
+  .contenedor-pagos-efectuados-facturas-pagos-efectuados .descripcion-facturas-f-pagos-efectuados{
+    grid-area: descripcion-facturas-f-pagos-efectuados;
+  }
+  .contenedor-pagos-efectuados-facturas-pagos-efectuados .botones-facturas-f-pagos-efectuados{
+    grid-area: botones-facturas-f-pagos-efectuados;
+  }
+
+  .contenedor-gris-facturas-pagos-efectuados h1::after {
+    content: "";
+    display: block;
+    width: 10rem;
+    height: 0.2rem;
+    background-color: #0c9;
+    }
+    .contenedor-gris-facturas-pagos-efectuados textarea{
+    width: 1120px;
+    height: 150px;
+    background-color: #fff;
+    color: #000;
+    border: 0.2rem solid rgba(0, 0, 0, 0.15);
+    padding: 1rem 0.2rem;
+    border-radius: 1rem;
+    }
+    .contenedor-gris-facturas-pagos-efectuados input {
+    width: 550px;
+    height: 40px;
+    background-color: #fff;
+    color: #000;
+    border: 0.2rem solid rgba(0, 0, 0, 0.15);
+    padding: 1rem 0.2rem;
+    border-radius: 1rem;
+    }
+    
+    .contenedor-gris-facturas-pagos-efectuados select
+    {
+    width: 550px;
+    height: 40px;
+    background-color: #fff;
+    color: #000;
+    border: 0.2rem solid rgba(0, 0, 0, 0.15);
+    border-radius: 1rem;
+    }
+
+    .contrato-facturas-pagos-efectuados,
+    .monto-facturas-pagos-efectuados,
+    .fecha-pago-facturas-pagos-efectuados,
+    .descripcion-facturas-pagos-efectuados,
+    .contrato-facturas-f-pagos-efectuados,
+    .fechas-pago-facturas-f-pagos-efectuados,
+    .descripcion-facturas-f-pagos-efectuados
+    {
+      padding-left: 25px;
+    }
+
+    .botones-facturas-pagos-efectuados,
+    .botones-facturas-f-pagos-efectuados{
+      padding-left: 480px;
+    }
+
+    /*FACTURAS PAGOS EFECTUADOS IPAD*/
+  @media screen and (max-width: 768px){
+    .main-facturas-pagos-efectuados {
+      height: 135vh;
+      width: 760px;
+      margin: 0 auto;
+      }
+      .contenedor-gris-facturas-pagos-efectuados{
+      height: 130vh;
+      width: 760px;
+      grid-template-rows: 700px;
+      }
+
+      .contenedor-facturas-facturas-pagos-efectuados{
+        display: grid;
+       grid-template-columns: 380px 380px;
+       grid-template-rows: 150px 100px 100px 100px 200px;
+      }
+      .contenedor-pagos-efectuados-facturas-pagos-efectuados{
+        display: grid;
+        grid-template-columns: 380px 380px;
+       grid-template-rows: 150px 100px 100px 200px;
+      }
+
+      .contenedor-gris-facturas-pagos-efectuados textarea{
+        width: 700px;
+        height: 150px;
+       
+        }
+        .contenedor-gris-facturas-pagos-efectuados input {
+        width: 350px;
+        height: 40px;
+       
+        }
+        .contenedor-gris-facturas-pagos-efectuados select
+        {
+        width: 350px;
+        height: 40px;
+        }
+
+    .botones-facturas-pagos-efectuados,
+    .botones-facturas-f-pagos-efectuados{
+      padding-left: 260px;
+    }
+    }
+
+ /*FACTURAS PAGOS EFECTUADOS CELULAR*/
+    @media screen and (max-width: 375px){
+      .main-facturas-pagos-efectuados {
+        height:260vh;
+        width: 370px;
+        margin: 0 auto;
+        }
+        .contenedor-gris-facturas-pagos-efectuados{
+        height: 250vh;
+        width: 370px;
+        grid-template-rows: 900px;
+        }
+        .contenedor-facturas-facturas-pagos-efectuados{
+          display: grid;
+          
+          grid-template-areas: 
+          "facturas"
+          "contrato-facturas-pagos-efectuados" 
+          "numero-factura-facturas-pagos-efectuados"
+          "monto-facturas-pagos-efectuados" 
+          "fecha-factura-facturas-pagos-efectuados"
+          "fecha-pago-facturas-pagos-efectuados"
+          "descripcion-facturas-pagos-efectuados"
+          "botones-facturas-pagos-efectuados";
+         
+         grid-template-columns: 370px;
+         grid-template-rows: 150px 100px 100px 100px 100px 100px 200px;
+        }
+        .contenedor-pagos-efectuados-facturas-pagos-efectuados{
+          display: grid;
+          grid-template-areas: 
+          "pagos-efectuados"
+          "contrato-facturas-f-pagos-efectuados" 
+          "monto-facturas-f-pagos-efectuados"
+          "fechas-pago-facturas-f-pagos-efectuados"
+          "descripcion-facturas-f-pagos-efectuados"
+          "botones-facturas-f-pagos-efectuados";
+          grid-template-columns: 370px;
+         grid-template-rows: 150px 100px 100px 100px 200px;
+        }
+
+        .contrato-facturas-pagos-efectuados,
+    .monto-facturas-pagos-efectuados,
+    .fecha-pago-facturas-pagos-efectuados,
+    .descripcion-facturas-pagos-efectuados,
+    .contrato-facturas-f-pagos-efectuados,
+    .fechas-pago-facturas-f-pagos-efectuados,
+    .descripcion-facturas-f-pagos-efectuados
+    {
+      padding-left: 0px;
+    }
+
+    .botones-facturas-pagos-efectuados,
+    .botones-facturas-f-pagos-efectuados{
+      padding-left: 80px;
+    }
+    .contenedor-gris-facturas-pagos-efectuados textarea{
+      width: 350px;
+      height: 150px;
+     
+      }
+      }
+
+
 /*INFORME CONSOLIDADO*/
 .main-informe-consolidado {
   min-height: calc(100px - 100px -100%);
@@ -1231,186 +1792,618 @@ grid-template-rows: 100px 100px 100px 130px 100px 100px;
           }
   
 
-          /*CONSULTA NUMERO CONTRATO*/
-          .main-consulta-numero-contrato {
-            min-height: calc(100px - 100px -100%);
-            width: 1050px;
-            margin: 0 auto;
-            padding-bottom: 20px;
-                    
-         }
-        .contenedor-gris-consulta-numero-contrato{
-            width: 1150px;
-            height: 280vh;
-            display: grid;
-            background-color: #d8d8d8;
-            grid-template-areas: 
-            "general"
-            "general-consulta-numero-contrato"
-            "fechas-consulta-numero-contrato"
-            "entregas-consulta-numero-contrato";
-                    
-          }
-          .contenedor-gris-consulta-numero-contrato h1::after {
-            content: "";
-            display: block;
-            width: 10rem;
-            height: 0.2rem;
-            background-color: #0c9;
-            }
-        
-          .contenedor-gris-consulta-numero-contrato h1{
-            grid-area: general;
-            text-align: center;
-          }
-          .contenedor-gris-consulta-numero-contrato .general-consulta-numero-contrato{
-            grid-area: general-consulta-numero-contrato;
-          }
-          .contenedor-gris-consulta-numero-contrato .fechas-consulta-numero-contrato{
-            grid-area: fechas-consulta-numero-contrato;
-          }
-          .contenedor-gris-consulta-numero-contrato .entregas-consulta-numero-contrato{
-            grid-area: entregas-consulta-numero-contrato;
-          }
-        
-          .general-consulta-numero-contrato{
-            display: grid;
-            grid-gap: 10px;
-            grid-template-areas: 
-            "selec-consulta-numero-contrato selec-consulta-numero-contrato"
-            "numero-de-contrato-consulta-numero-contrato numero-contrato-compranet-consulta-numero-contrato "
-            "monto-maximo-consulta-numero-contrato  monto-minimo-consulta-numero-contrato"
-            "objeto-contrato-consulta-numero-contrato unidad-compradora-consulta-numero-contrato"
-            "unidad-requirente-consulta-numero-contrato  procedimiento-contratacion-consulta-numero-contrato";
-            grid-template-rows: 150px 100px 100px 100px 100px;
-          }
-        
-          .general-consulta-numero-contrato .selec-consulta-numero-contrato{
-            grid-area: selec-consulta-numero-contrato;
-          }
-          .general-consulta-numero-contrato .numero-de-contrato-consulta-numero-contrato{
-            grid-area: numero-de-contrato-consulta-numero-contrato;
-          }
-          .general-consulta-numero-contrato .numero-contrato-compranet-consulta-numero-contrato{
-            grid-area: numero-contrato-compranet-consulta-numero-contrato;
-          }
-          .general-consulta-numero-contrato .monto-maximo-consulta-numero-contrato{
-            grid-area: monto-maximo-consulta-numero-contrato;
-          }
-          .general-consulta-numero-contrato .monto-minimo-consulta-numero-contrato{
-            grid-area: monto-minimo-consulta-numero-contrato;
-          }
-          .general-consulta-numero-contrato .objeto-contrato-consulta-numero-contrato{
-            grid-area: objeto-contrato-consulta-numero-contrato;
-          }
-          .general-consulta-numero-contrato .unidad-compradora-consulta-numero-contrato{
-            grid-area: unidad-compradora-consulta-numero-contrato;
-          }
-          .general-consulta-numero-contrato .unidad-requirente-consulta-numero-contrato{
-            grid-area: unidad-requirente-consulta-numero-contrato;
-          }
-          .general-consulta-numero-contrato .procedimiento-contratacion-consulta-numero-contrato{
-            grid-area: procedimiento-contratacion-consulta-numero-contrato;
-          }
+
+/*CONSULTA NUMERO CONTRATO*/
+.main-consulta-numero-contrato {
+  min-height: calc(100px - 100px -100%);
+  width: 1050px;
+  margin: 0 auto;
+  padding-bottom: 20px;
           
-        
-          .contenedor-gris-consulta-numero-contrato input{
-            width: 450px;
-            height: 40px;
-            background-color: #fff;
-            color: #000;
-            border: 0.2rem solid rgba(0, 0, 0, 0.15);
-            padding: 1rem 0.2rem;
-            border-radius: 1rem;
-          }
-        
-          .selec-consulta-numero-contrato{
-            width: 900px;
-            height: 100px;
-            text-align: center;
-            padding-left: 300px;
-          }
-        
-          .fechas-consulta-numero-contrato{
-            display: grid;
-            grid-gap: 10px;
-            grid-template-areas:
-            "fechas fechas"
-            "fecha-notificacion-adjudicada-consulta-numero-contrato garantia-cumplimiento-consulta-numero-contrato"
-            "formalizacion-contrato-consulta-numero-contrato sat-consulta-numero-contrato"
-            "imss-consulta-numero-contrato infonavit-consulta-numero-contrato"
-            "inicio-vigencia-consulta-numero-contrato fin-vigencia-consulta-numero-contrato"; 
-            grid-template-rows: 150px 100px 100px 100px 100px;
-          }
-        
-          .fechas-consulta-numero-contrato h1{
-            grid-area: fechas;
-          }
-          .fechas-consulta-numero-contrato .fecha-notificacion-adjudicada-consulta-numero-contrato{
-            grid-area: fecha-notificacion-adjudicada-consulta-numero-contrato;
-          }
-          .fechas-consulta-numero-contrato .garantia-cumplimiento-consulta-numero-contrato{
-            grid-area: garantia-cumplimiento-consulta-numero-contrato;
-          }
-          .fechas-consulta-numero-contrato .formalizacion-contrato-consulta-numero-contrato{
-            grid-area: formalizacion-contrato-consulta-numero-contrato;
-          }
-          .fechas-consulta-numero-contrato .sat-consulta-numero-contrato{
-            grid-area: sat-consulta-numero-contrato;
-          }
-          .fechas-consulta-numero-contrato .imss-consulta-numero-contrato{
-            grid-area: imss-consulta-numero-contrato;
-          }
-          .fechas-consulta-numero-contrato .infonavit-consulta-numero-contrato{
-            grid-area: infonavit-consulta-numero-contrato;
-          }
-          .fechas-consulta-numero-contrato .inicio-vigencia-consulta-numero-contrato{
-            grid-area: inicio-vigencia-consulta-numero-contrato;
-          }
-          .fechas-consulta-numero-contrato .fin-vigencia-consulta-numero-contrato{
-            grid-area: fin-vigencia-consulta-numero-contrato;
-          }
-        
-          .entregas-consulta-numero-contrato{
-            display: grid;
-            grid-gap: 10px;
-            grid-template-areas:
-            "entregas entregas"
-            "fecha-maxima-entrega-consulta-numero-contrato cantidad-consulta-numero-contrato"
-            "botones-consulta-numero-contrato botones-consulta-numero-contrato";
-            grid-template-rows: 150px 100px;
-          }
-        
-          .entregas-consulta-numero-contrato h1{
-            grid-area: entregas;
-          }
-          .entregas-consulta-numero-contrato .fecha-maxima-entrega-consulta-numero-contrato{
-            grid-area: fecha-maxima-entrega-consulta-numero-contrato;
-          }
-          .entregas-consulta-numero-contrato .cantidad-consulta-numero-contrato{
-            grid-area: cantidad-consulta-numero-contrato;
-          }
-          .entregas-consulta-numero-contrato .botones-consulta-numero-contrato{
-            grid-area: botones-consulta-numero-contrato;
-          }
-        
-          .botones-consulta-numero-contrato{
-            padding-left: 400px;
-          }
-        
-        
-          .numero-de-contrato-consulta-numero-contrato,
-          .monto-maximo-consulta-numero-contrato,
-          .objeto-contrato-consulta-numero-contrato,
-          .unidad-requirente-consulta-numero-contrato,
-          .fecha-notificacion-adjudicada-consulta-numero-contrato,
-          .formalizacion-contrato-consulta-numero-contrato,
-          .imss-consulta-numero-contrato,
-          .inicio-vigencia-consulta-numero-contrato,
-          .fecha-maxima-entrega-consulta-numero-contrato{
-            padding-left: 50px;
-          }
+}
+.contenedor-gris-consulta-numero-contrato{
+  width: 1150px;
+  height: 280vh;
+  display: grid;
+  background-color: #d8d8d8;
+  grid-template-areas: 
+  "general"
+  "general-consulta-numero-contrato"
+  "fechas-consulta-numero-contrato"
+  "entregas-consulta-numero-contrato";
           
+}
+.contenedor-gris-consulta-numero-contrato h1::after {
+  content: "";
+  display: block;
+  width: 10rem;
+  height: 0.2rem;
+  background-color: #0c9;
+  }
+
+.contenedor-gris-consulta-numero-contrato h1{
+  grid-area: general;
+  text-align: center;
+}
+.contenedor-gris-consulta-numero-contrato .general-consulta-numero-contrato{
+  grid-area: general-consulta-numero-contrato;
+}
+.contenedor-gris-consulta-numero-contrato .fechas-consulta-numero-contrato{
+  grid-area: fechas-consulta-numero-contrato;
+}
+.contenedor-gris-consulta-numero-contrato .entregas-consulta-numero-contrato{
+  grid-area: entregas-consulta-numero-contrato;
+}
+
+.general-consulta-numero-contrato{
+  display: grid;
+  grid-gap: 10px;
+  grid-template-areas: 
+  "selec-consulta-numero-contrato selec-consulta-numero-contrato"
+  "numero-de-contrato-consulta-numero-contrato numero-contrato-compranet-consulta-numero-contrato "
+  "monto-maximo-consulta-numero-contrato  monto-minimo-consulta-numero-contrato"
+  "objeto-contrato-consulta-numero-contrato unidad-compradora-consulta-numero-contrato"
+  "unidad-requirente-consulta-numero-contrato  procedimiento-contratacion-consulta-numero-contrato";
+  grid-template-rows: 150px 100px 100px 100px 100px;
+}
+
+.general-consulta-numero-contrato .selec-consulta-numero-contrato{
+  grid-area: selec-consulta-numero-contrato;
+}
+.general-consulta-numero-contrato .numero-de-contrato-consulta-numero-contrato{
+  grid-area: numero-de-contrato-consulta-numero-contrato;
+}
+.general-consulta-numero-contrato .numero-contrato-compranet-consulta-numero-contrato{
+  grid-area: numero-contrato-compranet-consulta-numero-contrato;
+}
+.general-consulta-numero-contrato .monto-maximo-consulta-numero-contrato{
+  grid-area: monto-maximo-consulta-numero-contrato;
+}
+.general-consulta-numero-contrato .monto-minimo-consulta-numero-contrato{
+  grid-area: monto-minimo-consulta-numero-contrato;
+}
+.general-consulta-numero-contrato .objeto-contrato-consulta-numero-contrato{
+  grid-area: objeto-contrato-consulta-numero-contrato;
+}
+.general-consulta-numero-contrato .unidad-compradora-consulta-numero-contrato{
+  grid-area: unidad-compradora-consulta-numero-contrato;
+}
+.general-consulta-numero-contrato .unidad-requirente-consulta-numero-contrato{
+  grid-area: unidad-requirente-consulta-numero-contrato;
+}
+.general-consulta-numero-contrato .procedimiento-contratacion-consulta-numero-contrato{
+  grid-area: procedimiento-contratacion-consulta-numero-contrato;
+}
+
+
+.contenedor-gris-consulta-numero-contrato input{
+  width: 450px;
+  height: 40px;
+  background-color: #fff;
+  color: #000;
+  border: 0.2rem solid rgba(0, 0, 0, 0.15);
+  padding: 1rem 0.2rem;
+  border-radius: 1rem;
+}
+
+.selec-consulta-numero-contrato{
+  width: 900px;
+  height: 100px;
+  text-align: center;
+  padding-left: 300px;
+}
+
+.fechas-consulta-numero-contrato{
+  display: grid;
+  grid-gap: 10px;
+  grid-template-areas:
+  "fechas fechas"
+  "fecha-notificacion-adjudicada-consulta-numero-contrato garantia-cumplimiento-consulta-numero-contrato"
+  "formalizacion-contrato-consulta-numero-contrato sat-consulta-numero-contrato"
+  "imss-consulta-numero-contrato infonavit-consulta-numero-contrato"
+  "inicio-vigencia-consulta-numero-contrato fin-vigencia-consulta-numero-contrato"; 
+  grid-template-rows: 150px 100px 100px 100px 100px;
+}
+
+.fechas-consulta-numero-contrato h1{
+  grid-area: fechas;
+}
+.fechas-consulta-numero-contrato .fecha-notificacion-adjudicada-consulta-numero-contrato{
+  grid-area: fecha-notificacion-adjudicada-consulta-numero-contrato;
+}
+.fechas-consulta-numero-contrato .garantia-cumplimiento-consulta-numero-contrato{
+  grid-area: garantia-cumplimiento-consulta-numero-contrato;
+}
+.fechas-consulta-numero-contrato .formalizacion-contrato-consulta-numero-contrato{
+  grid-area: formalizacion-contrato-consulta-numero-contrato;
+}
+.fechas-consulta-numero-contrato .sat-consulta-numero-contrato{
+  grid-area: sat-consulta-numero-contrato;
+}
+.fechas-consulta-numero-contrato .imss-consulta-numero-contrato{
+  grid-area: imss-consulta-numero-contrato;
+}
+.fechas-consulta-numero-contrato .infonavit-consulta-numero-contrato{
+  grid-area: infonavit-consulta-numero-contrato;
+}
+.fechas-consulta-numero-contrato .inicio-vigencia-consulta-numero-contrato{
+  grid-area: inicio-vigencia-consulta-numero-contrato;
+}
+.fechas-consulta-numero-contrato .fin-vigencia-consulta-numero-contrato{
+  grid-area: fin-vigencia-consulta-numero-contrato;
+}
+
+.entregas-consulta-numero-contrato{
+  display: grid;
+  grid-gap: 10px;
+  grid-template-areas:
+  "entregas entregas"
+  "fecha-maxima-entrega-consulta-numero-contrato cantidad-consulta-numero-contrato"
+  "botones-consulta-numero-contrato botones-consulta-numero-contrato";
+  grid-template-rows: 150px 100px;
+}
+
+.entregas-consulta-numero-contrato h1{
+  grid-area: entregas;
+}
+.entregas-consulta-numero-contrato .fecha-maxima-entrega-consulta-numero-contrato{
+  grid-area: fecha-maxima-entrega-consulta-numero-contrato;
+}
+.entregas-consulta-numero-contrato .cantidad-consulta-numero-contrato{
+  grid-area: cantidad-consulta-numero-contrato;
+}
+.entregas-consulta-numero-contrato .botones-consulta-numero-contrato{
+  grid-area: botones-consulta-numero-contrato;
+}
+
+.botones-consulta-numero-contrato{
+  padding-left: 400px;
+}
+
+
+.numero-de-contrato-consulta-numero-contrato,
+.monto-maximo-consulta-numero-contrato,
+.objeto-contrato-consulta-numero-contrato,
+.unidad-requirente-consulta-numero-contrato,
+.fecha-notificacion-adjudicada-consulta-numero-contrato,
+.formalizacion-contrato-consulta-numero-contrato,
+.imss-consulta-numero-contrato,
+.inicio-vigencia-consulta-numero-contrato,
+.fecha-maxima-entrega-consulta-numero-contrato{
+  padding-left: 50px;
+}
+
+/*CONSULTA NUMERO CONTRATO IPAD*/
+@media screen and (max-width: 768px) {
+.main-consulta-numero-contrato {
+  min-height: calc(100px - 100px -100%);
+  width: 765px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+          
+}
+.contenedor-gris-consulta-numero-contrato{
+  width: 765px;
+  height: 170vh;
+  display: grid;
+  background-color: #d8d8d8;
+  grid-template-areas: 
+  "general"
+  "general-consulta-numero-contrato"
+  "fechas-consulta-numero-contrato"
+  "entregas-consulta-numero-contrato";
+  grid-template-columns: 750px;
+  grid-template-rows: 100px 600px 600px ;
+}
+
+.general-consulta-numero-contrato{
+  display: grid;
+  grid-gap: 10px;
+  grid-template-areas: 
+  "selec-consulta-numero-contrato selec-consulta-numero-contrato"
+  "numero-de-contrato-consulta-numero-contrato numero-contrato-compranet-consulta-numero-contrato "
+  "monto-maximo-consulta-numero-contrato  monto-minimo-consulta-numero-contrato"
+  "objeto-contrato-consulta-numero-contrato unidad-compradora-consulta-numero-contrato"
+  "unidad-requirente-consulta-numero-contrato  procedimiento-contratacion-consulta-numero-contrato";
+  grid-template-rows: 150px 100px 100px 100px 100px;
+  grid-template-columns: 400px;
+}
+
+.contenedor-gris-consulta-numero-contrato input{
+  width: 340px;
+  height: 40px;
+  background-color: #fff;
+  color: #000;
+  border: 0.2rem solid rgba(0, 0, 0, 0.15);
+  padding: 1rem 0.2rem;
+  border-radius: 1rem;
+}
+
+.selec-consulta-numero-contrato{
+  width: 900px;
+  height: 100px;
+  text-align: center;
+  padding-left: 50px;
+}
+.numero-de-contrato-consulta-numero-contrato,
+.monto-maximo-consulta-numero-contrato,
+.objeto-contrato-consulta-numero-contrato,
+.unidad-requirente-consulta-numero-contrato,
+.fecha-notificacion-adjudicada-consulta-numero-contrato,
+.formalizacion-contrato-consulta-numero-contrato,
+.imss-consulta-numero-contrato,
+.inicio-vigencia-consulta-numero-contrato,
+.fecha-maxima-entrega-consulta-numero-contrato{
+  padding-left: 25px;
+}
+
+.botones-consulta-numero-contrato{
+  padding-left: 200px;
+}
+}
+
+/*CONSULTA NUMERO CONTRATO CELULAR*/
+@media screen and (max-width: 375px){
+.main-consulta-numero-contrato {
+  min-height: calc(100px - 100px -100%);
+  width: 380px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+          
+}
+.contenedor-gris-consulta-numero-contrato{
+  width: 380px;
+  height: 392vh;
+  display: grid;
+  background-color: #d8d8d8;
+  grid-template-areas: 
+  "general"
+  "general-consulta-numero-contrato"
+  "fechas-consulta-numero-contrato"
+  "entregas-consulta-numero-contrato"; 
+  grid-template-columns: 385px;
+  grid-template-rows: 100px 1000px 1020px ;       
+}
+
+.general-consulta-numero-contrato{
+  display: grid;
+  grid-gap: 10px;
+  grid-template-areas: 
+  "selec-consulta-numero-contrato"
+  "numero-de-contrato-consulta-numero-contrato" 
+  "numero-contrato-compranet-consulta-numero-contrato "
+  "monto-maximo-consulta-numero-contrato"  
+  "monto-minimo-consulta-numero-contrato"
+  "objeto-contrato-consulta-numero-contrato" 
+  "unidad-compradora-consulta-numero-contrato"
+  "unidad-requirente-consulta-numero-contrato"  
+  "procedimiento-contratacion-consulta-numero-contrato";
+  grid-template-rows: 150px 100px 100px 100px 100px 100px 100px 100px;
+}
+
+.fechas-consulta-numero-contrato{
+  display: grid;
+  grid-gap: 10px;
+  grid-template-areas:
+  "fechas"
+  "fecha-notificacion-adjudicada-consulta-numero-contrato" 
+  "garantia-cumplimiento-consulta-numero-contrato"
+  "formalizacion-contrato-consulta-numero-contrato" 
+  "sat-consulta-numero-contrato"
+  "imss-consulta-numero-contrato" 
+  "infonavit-consulta-numero-contrato"
+  "inicio-vigencia-consulta-numero-contrato" 
+  "fin-vigencia-consulta-numero-contrato"; 
+  grid-template-rows: 150px 120px 100px 100px 100px 100px 100px 100px;
+}
+
+.entregas-consulta-numero-contrato{
+  display: grid;
+  grid-gap: 10px;
+  grid-template-areas:
+  "entregas"
+  "fecha-maxima-entrega-consulta-numero-contrato" 
+  "cantidad-consulta-numero-contrato"
+  "botones-consulta-numero-contrato";
+  grid-template-rows: 150px 100px;
+}
+.selec-consulta-numero-contrato,
+.numero-de-contrato-consulta-numero-contrato,
+.numero-contrato-compranet-consulta-numero-contrato,
+.monto-maximo-consulta-numero-contrato,
+.monto-minimo-consulta-numero-contrato,
+.objeto-contrato-consulta-numero-contrato,
+.unidad-compradora-consulta-numero-contrato,
+.unidad-requirente-consulta-numero-contrato,
+.procedimiento-contratacion-consulta-numero-contrato,
+.fecha-notificacion-adjudicada-consulta-numero-contrato,
+.garantia-cumplimiento-consulta-numero-contrato,
+.formalizacion-contrato-consulta-numero-contrato,
+.sat-consulta-numero-contrato,
+.imss-consulta-numero-contrato,
+.infonavit-consulta-numero-contrato,
+.inicio-vigencia-consulta-numero-contrato,
+.fin-vigencia-consulta-numero-contrato,
+.fecha-maxima-entrega-consulta-numero-contrato,
+.cantidad-consulta-numero-contrato{
+  padding-left: 25px;
+}
+
+.botones-consulta-numero-contrato{
+  padding-left: 50px;
+}
+
+}
+
+
+
+/*CONSULTA POR VIGENCIA*/
+
+.main-consulta-por-vigencia {
+  min-height: calc(100px - 100px -100%);
+  width: 1050px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+          
+}
+.contenedor-gris-consulta-por-vigencia{
+  width: 1150px;
+  height: 170vh;
+  display: grid;
+  background-color: #d8d8d8;
+  grid-template-areas: 
+  "consulta-por-vigencia"
+  "semaforo-consulta-por-vigencia"
+  "tabla-consulta-por-vigencia"
+  "grafica-consulta-por-vigencia"
+  "botones-consulta-por-vigencia";
+  grid-template-rows: 150px 100px 400px 350px;   
+}
+
+.contenedor-gris-consulta-por-vigencia h1::after {
+  content: "";
+  display: block;
+  width: 10rem;
+  height: 0.2rem;
+  background-color: #0c9;
+  }
+
+.contenedor-gris-consulta-por-vigencia h1{
+  grid-area: consulta-por-vigencia;
+  text-align: center;
+}
+.contenedor-gris-consulta-por-vigencia .semaforo-consulta-por-vigencia{
+  grid-area: semaforo-consulta-por-vigencia;
+}
+.contenedor-gris-consulta-por-vigencia .tabla-consulta-por-vigencia{
+  grid-area: tabla-consulta-por-vigencia;
+}
+.contenedor-gris-consulta-por-vigencia .grafica-consulta-por-vigencia{
+  grid-area: grafica-consulta-por-vigencia;
+}
+.contenedor-gris-consulta-por-vigencia .botones-consulta-por-vigencia{
+  grid-area: botones-consulta-por-vigencia;
+}
+
+.semaforo-consulta-por-vigencia,
+.grafica-consulta-por-vigencia{
+  padding-left: 100px;
+}
+.botones-consulta-por-vigencia{
+  padding-left: 500px;
+}
+.tabla-consulta-por-vigencia{
+  padding-left: 55px;
+}
+.semaforo-consulta-por-vigencia{
+  display: grid;
+  grid-template-areas: 
+  "botond botont botonv botontod";
+  grid-template-columns: 100px 100px 100px 100px;
+}
+
+.semaforo-consulta-por-vigencia .botond{
+  grid-area: botond;
+}
+.semaforo-consulta-por-vigencia{
+  grid-area: botont;
+}
+.semaforo-consulta-por-vigencia{
+  grid-area: botonv;
+}
+.semaforo-consulta-por-vigencia{
+  grid-area: botontod;
+}
+
+.botond{
+  display: block;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  font-size: 8px;
+  font-weight: bold;
+  background: rgba(210,255,82,1);
+  background: -moz-radial-gradient(center, ellipse cover, rgba(210,255,82,1) 0%, rgba(145,232,66,1) 40%, rgba(145,232,66,1) 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(210,255,82,1)), color-stop(40%, rgba(145,232,66,1)), color-stop(100%, rgba(145,232,66,1)));
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(210,255,82,1) 0%, rgba(145,232,66,1) 40%, rgba(145,232,66,1) 100%);
+  background: -o-radial-gradient(center, ellipse cover, rgba(210,255,82,1) 0%, rgba(145,232,66,1) 40%, rgba(145,232,66,1) 100%);
+  background: -ms-radial-gradient(center, ellipse cover, rgba(210,255,82,1) 0%, rgba(145,232,66,1) 40%, rgba(145,232,66,1) 100%);
+  background: radial-gradient(ellipse at center, rgba(210,255,82,1) 0%, rgba(145,232,66,1) 40%, rgba(145,232,66,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d2ff52', endColorstr='#91e842', GradientType=1 );
+
+}
+.botond:hover{
+  transform : scale(1.3);
+  -moz-transform : scale(1.3);      /* Firefox */
+  -webkit-transform : scale(1.3);   /* Chrome - Safari */
+  -o-transform : scale(1.3);
+}
+.botontr{
+  margin-left: 60px;
+  margin-top: -50px;
+}
+.botont{
+  display: block;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  font-size: 8px;
+  font-weight: bold;
+  background: rgba(252,234,187,1);
+  background: -moz-radial-gradient(center, ellipse cover, rgba(252,234,187,1) 0%, rgba(252,205,77,1) 50%, rgba(248,181,0,1) 51%, rgba(251,223,147,1) 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(252,234,187,1)), color-stop(50%, rgba(252,205,77,1)), color-stop(51%, rgba(248,181,0,1)), color-stop(100%, rgba(251,223,147,1)));
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(252,234,187,1) 0%, rgba(252,205,77,1) 50%, rgba(248,181,0,1) 51%, rgba(251,223,147,1) 100%);
+  background: -o-radial-gradient(center, ellipse cover, rgba(252,234,187,1) 0%, rgba(252,205,77,1) 50%, rgba(248,181,0,1) 51%, rgba(251,223,147,1) 100%);
+  background: -ms-radial-gradient(center, ellipse cover, rgba(252,234,187,1) 0%, rgba(252,205,77,1) 50%, rgba(248,181,0,1) 51%, rgba(251,223,147,1) 100%);
+  background: radial-gradient(ellipse at center, rgba(252,234,187,1) 0%, rgba(252,205,77,1) 50%, rgba(248,181,0,1) 51%, rgba(251,223,147,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fceabb', endColorstr='#fbdf93', GradientType=1 );
+
+}
+.botont:hover{
+  transform : scale(1.3);
+  -moz-transform : scale(1.3);      /* Firefox */
+  -webkit-transform : scale(1.3);   /* Chrome - Safari */
+  -o-transform : scale(1.3);
+}
+.botonve{
+  margin-left: 120px;
+  margin-top: -50px;
+}
+.botonv{
+  display: block;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  font-size: 6px;
+  font-weight: bold;
+  background: rgba(248,80,50,1);
+  background: -moz-radial-gradient(center, ellipse cover, rgba(248,80,50,1) 0%, rgba(241,111,92,1) 50%, rgba(246,41,12,1) 51%, rgba(240,47,23,1) 71%, rgba(231,56,39,1) 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(248,80,50,1)), color-stop(50%, rgba(241,111,92,1)), color-stop(51%, rgba(246,41,12,1)), color-stop(71%, rgba(240,47,23,1)), color-stop(100%, rgba(231,56,39,1)));
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(248,80,50,1) 0%, rgba(241,111,92,1) 50%, rgba(246,41,12,1) 51%, rgba(240,47,23,1) 71%, rgba(231,56,39,1) 100%);
+  background: -o-radial-gradient(center, ellipse cover, rgba(248,80,50,1) 0%, rgba(241,111,92,1) 50%, rgba(246,41,12,1) 51%, rgba(240,47,23,1) 71%, rgba(231,56,39,1) 100%);
+  background: -ms-radial-gradient(center, ellipse cover, rgba(248,80,50,1) 0%, rgba(241,111,92,1) 50%, rgba(246,41,12,1) 51%, rgba(240,47,23,1) 71%, rgba(231,56,39,1) 100%);
+  background: radial-gradient(ellipse at center, rgba(248,80,50,1) 0%, rgba(241,111,92,1) 50%, rgba(246,41,12,1) 51%, rgba(240,47,23,1) 71%, rgba(231,56,39,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f85032', endColorstr='#e73827', GradientType=1 );
+}
+.botonv:hover{
+  transform : scale(1.3);
+  -moz-transform : scale(1.3);      /* Firefox */
+  -webkit-transform : scale(1.3);   /* Chrome - Safari */
+  -o-transform : scale(1.3);
+}
+
+.botontod{
+  display: block;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  font-size: 6px;
+  font-weight: bold;
+  background: rgba(179,220,237,1);
+  background: -moz-radial-gradient(center, ellipse cover, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(179,220,237,1)), color-stop(50%, rgba(41,184,229,1)), color-stop(100%, rgba(188,224,238,1)));
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%);
+  background: -o-radial-gradient(center, ellipse cover, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%);
+  background: -ms-radial-gradient(center, ellipse cover, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%);
+  background: radial-gradient(ellipse at center, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3dced', endColorstr='#bce0ee', GradientType=1 );
+
+}
+.botontod:hover{
+  transform : scale(1.3);
+  -moz-transform : scale(1.3);      /* Firefox */
+  -webkit-transform : scale(1.3);   /* Chrome - Safari */
+  -o-transform : scale(1.3);
+}
+
+.tabla-consulta-por-vigencia{
+  width: 1100px;
+}
+.container-graf{
+  height: 300px; 
+  width: 980px;
+}
+
+/*CONSULTA POR VIGENCIA IPAD*/
+@media screen and (max-width: 768px) {
+  .main-consulta-por-vigencia {
+    min-height: calc(100px - 100px -100%);
+    width: 760px;
+    margin: 0 auto;
+    padding-bottom: 20px;   
+  }
+  .contenedor-gris-consulta-por-vigencia{
+    width: 760px;
+    height: 120vh;
+    display: grid;
+    background-color: #d8d8d8;
+    grid-template-rows: 150px 100px 500px 350px;  
+    grid-template-columns: 760px; 
+  }
+
+.semaforo-consulta-por-vigencia,
+.grafica-consulta-por-vigencia{
+  padding-left: 40px;
+}
+.tabla-consulta-por-vigencia{
+  width: 750px;
+  text-align: center;
+  padding-left: 0px;
+}
+.tabla-consulta-por-vigencia .select{
+  width: 200px;
+}
+
+.container-graf{
+  height: 300px; 
+  width: 680px;
+}
+
+.botones-consulta-por-vigencia{
+  padding-left: 300px;
+}
+
+}
+
+/*CONSULTA POR VIGENCIA CELULAR*/
+
+@media screen and (max-width: 375px){
+  .main-consulta-por-vigencia {
+    min-height: calc(100px - 100px -100%);
+    width: 370px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+  }
+  .contenedor-gris-consulta-por-vigencia{
+    width: 370px;
+    height: 155vh;
+    display: grid;
+    background-color: #d8d8d8;
+    grid-template-rows: 150px 100px 350px 350px;  
+    grid-template-columns: 370px; 
+  }
+
+  .tabla-consulta-por-vigencia{
+    width: 220px;
+    text-align: center;
+    padding-left: 10px;
+  }
+  .tabla-consulta-por-vigencia .select{
+    width: 100px;
+  }
+ 
+.semaforo-consulta-por-vigencia,
+.grafica-consulta-por-vigencia{
+  padding-left: 0px;
+}
+.container-graf{
+  height: 300px; 
+  width: 369px;
+}
+.botones-consulta-por-vigencia{
+  padding-left: 150px;
+}
+}
 
           /*CONTRATO*/
 .main-contrato{
@@ -1706,3 +2699,75 @@ grid-template-rows: 100px 100px 100px 130px 100px 100px;
     width: 320px;
     }
 }
+
+/*RECEPCION*/
+.main-recepcion {
+  min-height: calc(100px - 100px -100%);
+  width: 1080px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  
+  }
+  .contenedor-gris-recepcion{
+  width: 1180px;
+  min-height: calc(100px - 100px -100%);
+  display: grid;
+  grid-gap:10px;
+  background-color: #d8d8d8;
+  grid-template-areas: 
+  "recepcion recepcion"
+  "numero-contrato-recepcion entregables-recepcion"
+  "botones-recepcion botones-recepcion"
+  ;
+  grid-template-columns: 1fr;
+  grid-template-rows: 150px 100px 100px;
+  }
+
+  .contenedor-gris-recepcion h1{
+    grid-area: recepcion;
+    text-align: center;
+  }
+  .contenedor-gris-recepcion .numero-contrato-recepcion{
+    grid-area: numero-contrato-recepcion;
+  }
+  .contenedor-gris-recepcion .entregables-recepcion{
+    grid-area: entregables-recepcion;
+  }
+  .contenedor-gris-recepcion .botones-recepcion{
+    grid-area: botones-recepcion;
+  }
+
+
+  .contenedor-gris-recepcion h1::after {
+    content: "";
+    display: block;
+    width: 10rem;
+    height: 0.2rem;
+    background-color: #0c9;
+    }
+    
+    .contenedor-gris-recepcion input {
+    width: 550px;
+    height: 40px;
+    background-color: #fff;
+    color: #000;
+    border: 0.2rem solid rgba(0, 0, 0, 0.15);
+    padding: 1rem 0.2rem;
+    border-radius: 1rem;
+    }
+    
+    .contenedor-gris-recepcion select
+    {
+    width: 550px;
+    height: 40px;
+    background-color: #fff;
+    color: #000;
+    border: 0.2rem solid rgba(0, 0, 0, 0.15);
+    border-radius: 1rem;
+    }
+    .numero-contrato-recepcion{
+      padding-left: 25px;
+    }
+    .botones-recepcion{
+      padding-left: 460px;
+    }

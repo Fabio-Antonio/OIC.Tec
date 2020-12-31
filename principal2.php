@@ -93,7 +93,7 @@ window.location.replace('index');</script>";
                             Modificados</a></li>
                     <li><i class="fas fa-plus-circle"></i><a href="consulta_contrato.php"> Documentos Adicionales</a>
                     </li>
-                    <li><i class="fas fa-plus-circle"></i> Recepción</li>
+                    <li><i class="fas fa-plus-circle"></i><a href="recepcion.html">Recepción</li>
                     <li><i class="fas fa-plus-circle"></i> Terminación Anticipada</li>
                     <li><i class="fas fa-plus-circle"></i><a href="partidas_presupuestales_partida.php"> Asignación de
                             Partidas</a>

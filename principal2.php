@@ -428,7 +428,10 @@ window.location.replace('index');</script>";
                                             <input type="text" class="form-control">
                                             <label class="control-label">Presupuesto:</label>
                                             <input type="text" class="form-control">
+                                            <button class="btn btn-default btn-success" type="button" name="submit"
+                                                    onclick="">Enviar</button>
                                         </div>
+                                        
                                     </div>
                                     <button class="btn btn-primary" data-dismiss="modal">Listo!!</button>
                                 </div>

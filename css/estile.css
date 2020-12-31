@@ -2705,7 +2705,7 @@ Documentos AdicionaleS celular*/
   min-height: calc(100px - 100px -100%);
   width: 1080px;
   margin: 0 auto;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
   
   }
   .contenedor-gris-recepcion{
@@ -2717,10 +2717,11 @@ Documentos AdicionaleS celular*/
   grid-template-areas: 
   "recepcion recepcion"
   "numero-contrato-recepcion entregables-recepcion"
+  "subir-archivo-recepcion ."
   "botones-recepcion botones-recepcion"
   ;
-  grid-template-columns: 1fr;
-  grid-template-rows: 150px 100px 100px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 150px 100px 100px 50px;
   }
 
   .contenedor-gris-recepcion h1{
@@ -2732,6 +2733,9 @@ Documentos AdicionaleS celular*/
   }
   .contenedor-gris-recepcion .entregables-recepcion{
     grid-area: entregables-recepcion;
+  }
+  .contenedor-gris-recepcion .subir-archivo-recepcion{
+    grid-area: subir-archivo-recepcion;
   }
   .contenedor-gris-recepcion .botones-recepcion{
     grid-area: botones-recepcion;
@@ -2765,9 +2769,80 @@ Documentos AdicionaleS celular*/
     border: 0.2rem solid rgba(0, 0, 0, 0.15);
     border-radius: 1rem;
     }
-    .numero-contrato-recepcion{
+    .numero-contrato-recepcion,
+    .subir-archivo-recepcion{
       padding-left: 25px;
     }
     .botones-recepcion{
       padding-left: 460px;
     }
+
+    .subir-archivo-recepcion input{
+      background-color: #d8d8d8; 
+      border: 0px
+    }
+
+    /*RECEPCION IPAD*/
+  @media screen and (max-width: 768px){
+    .main-recepcion {
+      height: 55vh;
+      width: 760px;
+      margin: 0 auto;
+      }
+      .contenedor-gris-recepcion{
+      height: 50vh;
+      width: 760px;
+      grid-template-columns: 380px 380px;
+       grid-template-rows: 150px 100px 100px;
+      }
+
+      .contenedor-gris-recepcion textarea{
+        width: 700px;
+        height: 150px;
+       
+        }
+        .contenedor-gris-recepcion input {
+        width: 350px;
+        height: 40px;
+       
+        }
+        .contenedor-gris-recepcion select
+        {
+        width: 350px;
+        height: 40px;
+        }
+
+    .botones-recepcion{
+      padding-left: 260px;
+    }
+    }
+
+ /*RECEPCION CELULAR*/
+    @media screen and (max-width: 375px){
+      .main-recepcion {
+        height:100vh;
+        width: 370px;
+        margin: 0 auto;
+        }
+        .contenedor-gris-recepcion{
+        height: 90vh;
+        width: 370px;
+        grid-template-areas: 
+  "recepcion"
+  "numero-contrato-recepcion" 
+  "entregables-recepcion"
+  "subir-archivo-recepcion"
+  "botones-recepcion"
+  ;
+        grid-template-columns: 370px;
+        grid-template-rows: 150px 100px 100px 100px 100px;
+        }
+
+    .numero-contrato-recepcion,
+    .subir-archivo-recepcion{
+      padding-left: 0px;
+    }
+    .botones-recepcion{
+      padding-left: 60px;
+    }
+      }

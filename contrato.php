@@ -458,7 +458,7 @@
         var selIndex4 = selObj4.options[selObj4.selectedIndex].value;
         var selIndex6 = selObj6.options[selObj6.selectedIndex].value;
         var selIndex7 = selObj7.options[selObj7.selectedIndex].value;
-        if (numero_contrato.length == 0 || !(/^[A-Za-z0-9]+$/.test(numero_contrato))) {
+        if (numero_contrato.length == 0 || !(/^[A-Za-z0-9\-]+$/.test(numero_contrato))) {
             $(function() {
                 $('#my-modal2').modal('show')
             });

@@ -122,11 +122,11 @@
 
                 </div>
                 <div class="tab-pane" id="tab-04">
-<form   id="pdf"  method="POST"enctype="multipart/form-data">
+                 <form   id="pdf" action="#">
                   <h1><strong> SUBIR ARCHIVO PDF </strong></h1>
-                  <input type="file" name="pdf" accept=".pdf" for="file-01" data-toggle="tooltip" data-placement="top" title="Solo archivos PDF">
-                 <input class="form-control" placeholder="Escriba el número de contrato" type="text"name="numero_contrato" id="contrato" required pattern="[A-Za-z0-9]*">
-                  <button id="E" class="btn btn-primary" type="submit"onclick=this.form.action="subirpdf.php">Enviar</button>
+                  <input type="file" name="pdf_archivo" id="pdf_achivo" accept=".pdf" for="file-01" data-toggle="tooltip" data-placement="top" title="Solo archivos PDF">
+                 <input class="form-control" placeholder="Escriba el número de contrato" type="text" name="numero_contrato" id="contrato" required pattern="[A-Za-z0-9]*">
+                  <button id="E" class="btn btn-primary" type="submit">Enviar</button>
                     <button id="bre" class="btn btn-primary" type="button" onclick="location.href='principal2.php'">Regresar</button>
 </form>
 
@@ -247,6 +247,65 @@
           </div>
 
         </footer>
+
+
+      <!--Modals -->
+
+
+    <div class="modal fade" role="dialog" id="my-modal" aria-labelledby="modal-title">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color:#27C44D;">
+                    <h3 class="modal-title" id="modal-title">B.E.S.A</h3>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Los datos se han ingresado correctamente!!
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" data-dismiss="modal">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" role="dialog" id="my-modal2" aria-labelledby="modal-title">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color:#D0021B;">
+                    <h3 class="modal-title" id="modal-title">B.E.S.A</h3>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Revise los campos!!
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" data-dismiss="modal">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" role="dialog" id="my-modal3" aria-labelledby="modal-title">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color:#D0021B;">
+                    <h3 class="modal-title" id="modal-title">B.E.S.A</h3>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Algo salió mal al subir el archivo!!
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" data-dismiss="modal">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
         <!--Fin cargador de archivos -->
        

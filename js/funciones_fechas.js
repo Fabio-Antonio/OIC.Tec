@@ -253,14 +253,14 @@ function mostrarText(){
     $(document).ready(function(){
     
     $('#ingarantiacumplimientof').change(function(){
-             var notificacion_adjudicada= $('#innotificacionadjudicadaf').val();
-    var fecha_notificacion_adjudicada= new Date(notificacion_adjudicada);
+             var formalizacion_contrato= $('informalizacioncontratof').val();
+    var fecha_formalizacion_contrato= new Date(formalizacion_adjudicada);
     
           var $this = $(this);
           var insertedVal = $this.val();
           var garantia_cumplimiento = new Date(insertedVal);
     
-          if (garantia_cumplimiento < fecha_notificacion_adjudicada||garantia_cumplimiento>fecha_notificacion_adjudicada.setDate(fecha_notificacion_adjudicada.getDate()+10)){
+          if (garantia_cumplimiento < fecha_formalizacion_contrato||garantia_cumplimiento>fecha_formalizacion_contrato.setDate(fecha_formalizacion_contrato.getDate()+10)){
     
     
              $this.css({"color":"red","border":"1px solid red"});

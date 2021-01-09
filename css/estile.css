@@ -1281,6 +1281,7 @@ Documentos AdicionaleS celular*/
             }
     }
 
+
 /*FACTURAS PAGOS EFECTUADOS*/
 .main-facturas-pagos-efectuados {
   min-height: calc(100px - 100px -100%);
@@ -1542,6 +1543,453 @@ Documentos AdicionaleS celular*/
       }
       }
 
+      
+      /*FECHAS*/
+
+      .main-fechas {
+        min-height: calc(100px - 100px -100%);
+        width: 1080px;
+        margin: 0 auto;
+        padding-bottom: 30px;
+        
+        }
+        .contenedor-gris-fechas{
+        width: 1180px;
+        min-height: calc(100px - 100px -100%);
+        display: grid;
+        grid-gap:10px;
+        background-color: #d8d8d8;
+        grid-template-areas: 
+        "fechas fechas"
+        "numero-de-contrato-fechas notificacion-de-adjudicacion-fechas"
+        "formalizacion-contrato-fechas requisicion-contrato-fechas"
+        "garantia-cumplimiento-fechas inicio-vigencia-fechas"
+        "sat-fechas imss-fechas"
+        "infonavit-fechas suficiencia-fechas"
+        "fin-vigencia-fechas ."
+        "botones-fechas botones-fechas"
+        ;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 150px repeat(7, 100px);
+        }
+        .contenedor-gris-fechas h1{
+          grid-area: fechas;
+          text-align: center;
+        }
+        .contenedor-gris-fechas .numero-de-contrato-fechas{
+          grid-area: numero-de-contrato-fechas;
+        }
+        .contenedor-gris-fechas .notificacion-de-adjudicacion-fechas{
+          grid-area: notificacion-de-adjudicacion-fechas;
+        }
+        .contenedor-gris-fechas .formalizacion-contrato-fechas{
+          grid-area: formalizacion-contrato-fechas;
+        }
+        .contenedor-gris-fechas .requisicion-contrato-fechas{
+          grid-area: requisicion-contrato-fechas;
+        }
+        .contenedor-gris-fechas .garantia-cumplimiento-fechas{
+          grid-area: garantia-cumplimiento-fechas;
+        }
+        .contenedor-gris-fechas .inicio-vigencia-fechas{
+          grid-area: inicio-vigencia-fechas;
+        }
+        .contenedor-gris-fechas .sat-fechas{
+          grid-area: sat-fechas;
+        }
+        .contenedor-gris-fechas .imss-fechas{
+          grid-area: imss-fechas;
+        }
+        .contenedor-gris-fechas .infonavit-fechas{
+          grid-area: infonavit-fechas;
+        }
+        .contenedor-gris-fechas .suficiencia-fechas{
+          grid-area: suficiencia-fechas;
+        }
+        .contenedor-gris-fechas .fin-vigencia-fechas{
+          grid-area: fin-vigencia-fechas;
+        }
+        .contenedor-gris-fechas .botones-fechas{
+          grid-area: botones-fechas;
+        }
+
+        .contenedor-gris-fechas h1::after {
+          content: "";
+          display: block;
+          width: 10rem;
+          height: 0.2rem;
+          background-color: #0c9;
+          }
+          
+          .contenedor-gris-fechas input {
+          width: 550px;
+          height: 40px;
+          background-color: #fff;
+          color: #000;
+          border: 0.2rem solid rgba(0, 0, 0, 0.15);
+          padding: 1rem 0.2rem;
+          border-radius: 1rem;
+          }
+          
+          .contenedor-gris-fechas select
+          {
+          width: 550px;
+          height: 40px;
+          background-color: #fff;
+          color: #000;
+          border: 0.2rem solid rgba(0, 0, 0, 0.15);
+          border-radius: 1rem;
+          }
+
+        .numero-de-contrato-fechas,
+        .formalizacion-contrato-fechas,
+        .garantia-cumplimiento-fechas,
+        .sat-fechas,
+        .infonavit-fechas,
+        .fin-vigencia-fechas{
+          padding-left: 25px;
+        }
+        .botones-fechas{
+          padding-left: 450px;
+        }
+
+        /*FECHAS IPAD*/
+ @media screen and (max-width: 768px){
+  .main-fechas {
+    height: 95vh;
+    width: 760px;
+    margin: 0 auto;
+    }
+    .contenedor-gris-fechas{
+    height: 90vh;
+    width: 760px;
+    grid-template-columns: 380px 380px;
+     grid-template-rows: 150px repeat(7,100px);
+    }
+      .contenedor-gris-fechas input {
+      width: 350px;
+      height: 40px;
+     
+      }
+      .contenedor-gris-fechas select
+      {
+      width: 350px;
+      height: 40px;
+      }
+
+  .botones-fechas{
+    padding-left: 260px;
+  }
+  }
+
+/*FECHAS CELULAR*/
+  @media screen and (max-width: 375px){
+    .main-fechas {
+      height:240vh;
+      width: 370px;
+      margin: 0 auto;
+      }
+      .contenedor-gris-fechas{
+      height: 230vh;
+      width: 370px;
+      grid-template-areas: 
+      "fechas"
+      "numero-de-contrato-fechas" 
+      "notificacion-de-adjudicacion-fechas"
+      "formalizacion-contrato-fechas" 
+      "requisicion-contrato-fechas"
+      "garantia-cumplimiento-fechas" 
+      "inicio-vigencia-fechas"
+      "sat-fechas" 
+      "imss-fechas"
+      "infonavit-fechas" 
+      "suficiencia-fechas"
+      "fin-vigencia-fechas"
+      "botones-fechas"
+;
+      grid-template-columns: 370px;
+      grid-template-rows: 150px repeat(12, 100px);
+      }
+      .numero-de-contrato-fechas,
+        .formalizacion-contrato-fechas,
+        .garantia-cumplimiento-fechas,
+        .sat-fechas,
+        .infonavit-fechas,
+        .fin-vigencia-fechas{
+          padding-left: 0px;
+        }
+
+        .botones-fechas{
+          padding-left: 60px;
+        }
+
+    }
+
+/*FUNDAMENTOS PROCEDIMIENTOS*/
+.main-fundamentos-procedimientos{
+  min-height: calc(100px - 100px -100%);
+  width: 1080px;
+  margin: 0 auto;
+  padding-bottom: 30px;
+  
+  }
+  .contenedor-gris-fundamentos-procedimientos{
+  width: 1180px;
+  min-height: calc(100px - 100px -100%);
+  display: grid;
+  grid-gap:10px;
+  background-color: #d8d8d8;
+  grid-template-areas: 
+  "contenedor-fundamento-legal-fundamentos-procedimientos"
+  "contenedor-procedimientos-contratacion-fundamentos-procedimientos"
+  ;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  }
+
+  .contenedor-gris-fundamentos-procedimientos .contenedor-fundamento-legal-fundamentos-procedimientos{
+    grid-area: contenedor-fundamento-legal-fundamentos-procedimientos;
+  }
+  .contenedor-gris-fundamentos-procedimientos .contenedor-procedimientos-contratacion-fundamentos-procedimientos{
+    grid-area: contenedor-procedimientos-contratacion-fundamentos-procedimientos;
+  }
+
+  .contenedor-fundamento-legal-fundamentos-procedimientos{
+    display: grid;
+    grid-template-areas: 
+    "fundamento-legal fundamento-legal"
+    "fundamento-fundamento-legal-fp fecha-fundamento-legal-fp"
+    "descripcion-fundamento-legal-fp descripcion-fundamento-legal-fp"
+    "botones-fundamento-legal-fp botones-fundamento-legal-fp";
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 150px 100px 200px;
+  }
+
+  .contenedor-fundamento-legal-fundamentos-procedimientos h1{
+    grid-area: fundamento-legal;
+    text-align: center;
+  }
+  .contenedor-fundamento-legal-fundamentos-procedimientos .fundamento-fundamento-legal-fp{
+    grid-area: fundamento-fundamento-legal-fp;
+  }
+  .contenedor-fundamento-legal-fundamentos-procedimientos .fecha-fundamento-legal-fp{
+    grid-area: fecha-fundamento-legal-fp;
+  }
+  .contenedor-fundamento-legal-fundamentos-procedimientos .descripcion-fundamento-legal-fp{
+    grid-area: descripcion-fundamento-legal-fp;
+  }
+  .contenedor-fundamento-legal-fundamentos-procedimientos .botones-fundamento-legal-fp{
+    grid-area: botones-fundamento-legal-fp;
+  }
+
+  .contenedor-procedimientos-contratacion-fundamentos-procedimientos{
+    display: grid;
+    grid-template-areas: 
+    "procedimientos-contratacion procedimientos-contratacion" 
+    "procedimientos-procedimientos-contratacion-fp fundamento-legal-procedimientos-contratacion-fp"
+    "correspondiente-al-informe-procedimientos-contratacion-fp ."
+    "botones-procedimiento-contratacion-fp botones-procedimiento-contratacion-fp";
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 150px 100px 200px 100px;
+  }
+
+  .contenedor-procedimientos-contratacion-fundamentos-procedimientos h1{
+    grid-area: procedimientos-contratacion;
+    text-align: center;
+  }
+  .contenedor-procedimientos-contratacion-fundamentos-procedimientos .procedimientos-procedimientos-contratacion-fp{
+    grid-area: procedimientos-procedimientos-contratacion-fp;
+  }
+  .contenedor-procedimientos-contratacion-fundamentos-procedimientos .fundamento-legal-procedimientos-contratacion-fp{
+    grid-area: fundamento-legal-procedimientos-contratacion-fp;
+  }
+  .contenedor-procedimientos-contratacion-fundamentos-procedimientos .correspondiente-al-informe-procedimientos-contratacion-fp{
+    grid-area: correspondiente-al-informe-procedimientos-contratacion-fp;
+    
+  }
+  .contenedor-procedimientos-contratacion-fundamentos-procedimientos .botones-procedimiento-contratacion-fp{
+    grid-area: botones-procedimiento-contratacion-fp;
+  }
+  .correspondiente-al-informe-procedimientos-contratacion-fp{
+    display: grid;
+    grid-template-areas: 
+    "correspondiente-al-informe correspondiente-al-informe"
+    "setenta treinta";
+    grid-template-columns: repeat(2,190px);
+    grid-template-rows: 50px;
+  }
+  .correspondiente-al-informe-procedimientos-contratacion-fp label{
+    grid-area: correspondiente-al-informe;
+  }
+  .correspondiente-al-informe-procedimientos-contratacion-fp .setenta{
+    grid-area: setenta;
+  }
+  .correspondiente-al-informe-procedimientos-contratacion-fp .treinta{
+    grid-area: treinta;
+  }
+  .fundamento-fundamento-legal-fp,
+  .descripcion-fundamento-legal-fp,
+  .procedimientos-procedimientos-contratacion-fp,
+  .correspondiente-al-informe-procedimientos-contratacion-fp{
+    padding-left: 25px;
+  }
+  .botones-fundamento-legal-fp,
+  .botones-procedimiento-contratacion-fp{
+    padding-left: 450px;
+  }
+
+  
+  .contenedor-gris-fundamentos-procedimientos h1::after {
+    content: "";
+    display: block;
+    width: 10rem;
+    height: 0.2rem;
+    background-color: #0c9;
+    }
+
+    .contenedor-gris-fundamentos-procedimientos textarea{
+      width: 1120px;
+      height: 150px;
+      background-color: #fff;
+      color: #000;
+      border: 0.2rem solid rgba(0, 0, 0, 0.15);
+      padding: 1rem 0.2rem;
+      border-radius: 1rem;
+      }
+    
+    .contenedor-gris-fundamentos-procedimientos input {
+    width: 550px;
+    height: 40px;
+    background-color: #fff;
+    color: #000;
+    border: 0.2rem solid rgba(0, 0, 0, 0.15);
+    padding: 1rem 0.2rem;
+    border-radius: 1rem;
+    }
+    
+    .contenedor-gris-fundamentos-procedimientos select
+    {
+    width: 550px;
+    height: 40px;
+    background-color: #fff;
+    color: #000;
+    border: 0.2rem solid rgba(0, 0, 0, 0.15);
+    border-radius: 1rem;
+    }
+
+    .setenta input{
+      width: 40px;
+      margin-left: 10px;
+      text-align: center;
+    }
+    .treinta input{
+      width: 40px;
+      margin-left: 10px;
+    }
+    
+
+         /*FUNDAMENTOS PROCEDIMIENTOS IPAD*/
+ @media screen and (max-width: 768px){
+  .main-fundamentos-procedimientos {
+    height: 115vh;
+    width: 760px;
+    margin: 0 auto;
+    }
+    .contenedor-gris-fundamentos-procedimientos{
+    height: 110vh;
+    width: 760px;
+    grid-template-columns: 380px 380px;
+     grid-template-rows: 550px;
+    }
+
+    .contenedor-gris-fundamentos-procedimientos textarea{
+      width: 700px;
+      height: 150px;
+      
+      }
+      .contenedor-gris-fundamentos-procedimientos input {
+      width: 350px;
+      height: 40px;
+     
+      }
+      .contenedor-gris-fundamentos-procedimientos select
+      {
+      width: 350px;
+      height: 40px;
+      }
+
+      .botones-fundamento-legal-fp,
+      .botones-procedimiento-contratacion-fp{
+    padding-left: 260px;
+  }
+  .setenta input{
+    width: 30px;
+    margin-left: 0px;
+    text-align: center;
+  }
+  .treinta input{
+    width: 30px;
+    margin-left: 5px;
+  }
+  }
+
+  /*FUNDAMENTOS PROCEDIMIENTOS CELULAR*/
+  @media screen and (max-width: 375px){
+    .main-fundamentos-procedimientos {
+      height:185vh;
+      width: 370px;
+      margin: 0 auto;
+      }
+      .contenedor-gris-fundamentos-procedimientos{
+      height: 180vh;
+      width: 370px;
+      grid-template-columns: 360px;
+      grid-template-rows: 600px;
+      }
+      .contenedor-fundamento-legal-fundamentos-procedimientos{
+        display: grid;
+        grid-template-areas: 
+        "fundamento-legal"
+        "fundamento-fundamento-legal-fp" 
+        "fecha-fundamento-legal-fp"
+        "descripcion-fundamento-legal-fp"
+        "botones-fundamento-legal-fp";
+        grid-template-columns: 360px;
+        grid-template-rows: 150px 100px 100px 200px;
+      }
+
+      .contenedor-procedimientos-contratacion-fundamentos-procedimientos{
+        display: grid;
+        grid-template-areas: 
+        "procedimientos-contratacion" 
+        "procedimientos-procedimientos-contratacion-fp" 
+        "fundamento-legal-procedimientos-contratacion-fp"
+        "correspondiente-al-informe-procedimientos-contratacion-fp"
+        "botones-procedimiento-contratacion-fp";
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 150px 100px 100px 150px;
+      }
+
+      .contenedor-gris-fundamentos-procedimientos textarea{
+        width: 350px;
+        height: 150px;
+        
+        }
+
+        .botones-fundamento-legal-fp,
+      .botones-procedimiento-contratacion-fp{
+    padding-left: 60px;
+  }
+  .fundamento-fundamento-legal-fp,
+  .descripcion-fundamento-legal-fp,
+  .procedimientos-procedimientos-contratacion-fp,
+  .correspondiente-al-informe-procedimientos-contratacion-fp{
+    padding-left: 0px;
+  }
+    }
+
+
+
 
 /*INFORME CONSOLIDADO*/
 .main-informe-consolidado {
@@ -1791,6 +2239,1051 @@ Documentos AdicionaleS celular*/
             }
           }
   
+          /*LECTURA*/
+.main-lectura{
+  min-height: calc(100px - 100px -100%);
+  width: 800px;
+  margin: 0 auto;
+  padding-bottom: 30px;
+  
+  }
+  .contenedor-gris-lectura{
+  width: 800px;
+  min-height: calc(100px - 100px -100%);
+  display: grid;
+  grid-gap:10px;
+  background-color: #d8d8d8;
+  
+  }
+  .subir-archivo-cvs-lectura{
+    display: grid;
+    grid-template-areas: 
+    "subir-archivo-cvs"
+    "brow-cvs-subir-archivo-cvs-lectura"
+    "botones-subir-archivo-cvs-lectura";
+    grid-template-columns: 1fr;
+    grid-template-rows: 150px 100px;
+  }
+  .subir-archivo-cvs-lectura h1{
+    grid-area: subir-archivo-cvs;
+    text-align: center;
+  }
+.subir-archivo-cvs-lectura .brow-cvs-subir-archivo-cvs-lectura{
+  grid-area: brow-cvs-subir-archivo-cvs-lectura;
+}
+.subir-archivo-cvs-lectura .botones-subir-archivo-cvs-lectura{
+  grid-area: botones-subir-archivo-cvs-lectura;
+}
+
+.subir-archivo-pdf-lectura{
+  display: grid;
+  grid-template-areas: 
+  "subir-archivo-pdf"
+  "brow-pdf-subir-archivo-pdf-lectura"
+  "escribe-el-numero-contrato-lectura"
+  "botones-subir-archivo-pdf-lectura";
+  grid-template-columns: 1fr;
+  grid-template-rows: 150px 100px 100px;
+}
+
+.subir-archivo-pdf-lectura h1{
+  grid-area: subir-archivo-pdf;
+  text-align: center;
+}
+.subir-archivo-pdf-lectura .brow-pdf-subir-archivo-pdf-lectura{
+  grid-area: brow-pdf-subir-archivo-pdf-lectura;
+}
+.subir-archivo-pdf-lectura .escribe-el-numero-contrato-lectura{
+  grid-area: escribe-el-numero-contrato-lectura;
+}
+.subir-archivo-pdf-lectura{
+  grid-area: botones-subir-archivo-pdf-lectura;
+}
+.contenedor-gris-lectura h1::after {
+  content: "";
+  display: block;
+  width: 10rem;
+  height: 0.2rem;
+  background-color: #0c9;
+  }
+.contenedor-gris-lectura input {
+  width: 550px;
+  height: 40px;
+  background-color: #fff;
+  color: #000;
+  border: 0.2rem solid rgba(0, 0, 0, 0.15);
+  padding: 1rem 0.2rem;
+  border-radius: 1rem;
+  }
+  .brow-cvs-subir-archivo-cvs-lectura,
+  .brow-pdf-subir-archivo-pdf-lectura,
+  .escribe-el-numero-contrato-lectura{
+    padding-left: 25px;
+  }
+  
+  .botones-subir-archivo-cvs-lectura,
+  .botones-subir-archivo-pdf-lectura{
+    padding-left: 250px;
+  }
+
+  /*LECTURA IPAD*/
+ @media screen and (max-width: 768px){
+  .main-lectura {
+    height: 55vh;
+    width: 760px;
+    margin: 0 auto;
+    }
+    .contenedor-gris-lectura{
+    height: 50vh;
+    width: 760px;
+    grid-template-columns: 380px;
+    }
+      .contenedor-gris-fundamentos-procedimientos input {
+      width: 350px;
+      height: 40px;
+     
+      }
+      .form-group{
+        width: 760px;
+      }
+  }
+
+  /*LECTURA CELULAR*/
+  @media screen and (max-width: 375px){
+    .main-lectura {
+      height:85vh;
+      width: 370px;
+      margin: 0 auto;
+      }
+      .contenedor-gris-lectura{
+      height: 80vh;
+      width: 370px;
+      grid-template-columns: 360px;
+      
+      }
+      
+      .form-group{
+        width: 370px;
+      }
+      .contenedor-gris-lectura input {
+        width: 300px;
+        height: 40px;
+        }
+      
+
+        .botones-subir-archivo-cvs-lectura,
+  .botones-subir-archivo-pdf-lectura{
+    padding-left: 60px;
+  }
+ 
+    }
+
+
+    /*MOTIVOS INCONFORMIDAD*/
+  
+    .main-motivos-inconformidad{
+      min-height: calc(100px - 100px -100%);
+      width: 1180px;
+      margin: 0 auto;
+      padding-bottom: 30px;
+      
+      }
+      .contenedor-gris-motivos-inconformidad{
+        width: 1180px;
+      min-height: calc(100px - 100px -100%);
+      display: grid;
+      grid-gap:10px;
+      background-color: #d8d8d8;
+      grid-template-areas: 
+      "contenedor-motivo-inconformidad-motivos-inconformidad"
+      "contenedor-inconformidades-mi";
+      }
+      .contenedor-gris-motivos-inconformidad .contenedor-motivo-inconformidad-motivos-inconformidad{
+        grid-area: contenedor-motivo-inconformidad-motivos-inconformidad;
+      }
+      .contenedor-gris-motivos-inconformidad .contenedor-inconformidades-mi{
+        grid-area: contenedor-inconformidades-mi;
+      }
+
+      .contenedor-motivo-inconformidad-motivos-inconformidad{
+        display: grid;
+        grid-template-areas: 
+        "motivo-inconformidad"
+        "motivo-motivo-inconformidad-mi"
+        "botones-motivo-inconformidad-mi";
+        grid-template-columns: 1fr;
+        grid-template-rows: 150px 100px;
+      }
+.contenedor-motivo-inconformidad-motivos-inconformidad h1{
+  grid-area: motivo-inconformidad;
+  text-align: center;
+}
+.contenedor-motivo-inconformidad-motivos-inconformidad .motivo-motivo-inconformidad-mi{
+  grid-area: motivo-motivo-inconformidad-mi;
+  width: 400px;
+}
+.contenedor-motivo-inconformidad-motivos-inconformidad .botones-motivo-inconformidad-mi{
+  grid-area: botones-motivo-inconformidad-mi;
+}
+.contenedor-inconformidades-mi{
+  display: grid;
+  grid-gap: 10px;
+  grid-template-areas: 
+  "inconformidades inconformidades"
+  "contrato-inconformidades-mi motivo-inconformidades-mi"
+  "nombre-inconformidad-inconformidades-mi sentido-resolucion-inconformidades-mi"
+  "botones-inconformidades-mi botones-inconformidades-mi";
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: 150px repeat(3,100px);
+}
+.contenedor-inconformidades-mi h1{
+  grid-area: inconformidades;
+  text-align: center;
+}
+.contenedor-inconformidades-mi .contrato-inconformidades-mi{
+  grid-area: contrato-inconformidades-mi;
+}
+.contenedor-inconformidades-mi .motivo-inconformidades-mi{
+  grid-area: motivo-inconformidades-mi;
+}
+.contenedor-inconformidades-mi .nombre-inconformidad-inconformidades-mi{
+  grid-area: nombre-inconformidad-inconformidades-mi;
+}
+.contenedor-inconformidades-mi .sentido-resolucion-inconformidades-mi{
+  grid-area: sentido-resolucion-inconformidades-mi;
+}
+.contenedor-inconformidades-mi .botones-inconformidades-mi{
+  grid-area: botones-inconformidades-mi;
+}
+.contenedor-gris-motivos-inconformidad input {
+  width: 550px;
+  height: 40px;
+  background-color: #fff;
+  color: #000;
+  border: 0.2rem solid rgba(0, 0, 0, 0.15);
+  padding: 1rem 0.2rem;
+  border-radius: 1rem;
+  }
+  
+  .contenedor-gris-motivos-inconformidad select
+  {
+  width: 550px;
+  height: 40px;
+  background-color: #fff;
+  color: #000;
+  border: 0.2rem solid rgba(0, 0, 0, 0.15);
+  border-radius: 1rem;
+  }
+  .contenedor-gris-motivos-inconformidad h1::after {
+    content: "";
+    display: block;
+    width: 10rem;
+    height: 0.2rem;
+    background-color: #0c9;
+    }
+
+  .motivo-motivo-inconformidad-mi,
+  .contrato-inconformidades-mi,
+  .nombre-inconformidad-inconformidades-mi{
+    padding-left: 25px;
+  }
+  .botones-motivo-inconformidad-mi,
+  .botones-inconformidades-mi{
+    padding-left: 450px;
+  }
+
+  /*MOTIVOS INCONFORMIDAD IPAD*/
+ @media screen and (max-width: 768px){
+  .main-motivos-inconformidad {
+    height: 85vh;
+    width: 760px;
+    margin: 0 auto;
+    }
+    .contenedor-gris-motivos-inconformidad{
+    height: 80vh;
+    width: 760px;
+    grid-template-columns: 760px;
+    }
+      .contenedor-gris-motivos-inconformidad input {
+        width: 350px;
+        height: 40px;
+     
+        }
+        
+        .contenedor-gris-motivos-inconformidad select
+        {
+        width: 350px;
+        height: 40px;
+       
+        }
+
+  .botones-motivo-inconformidad-mi,
+  .botones-inconformidades-mi{
+    padding-left: 260px;
+  }
+    }
+
+     /*MOTIVOS INCONFORMIDAD CELULAR*/
+    @media screen and (max-width: 375px){
+      .main-motivos-inconformidad {
+        height:155vh;
+        width: 365px;
+        margin: 0 auto;
+        }
+        .contenedor-gris-motivos-inconformidad{
+        height: 150vh;
+        width: 365px;
+        grid-template-columns: 360px;
+        grid-template-rows: 280px;
+        
+        }
+        .contenedor-motivo-inconformidad-motivos-inconformidad{
+          display: grid;
+          grid-template-areas: 
+          "motivo-inconformidad"
+          "motivo-motivo-inconformidad-mi"
+          "botones-motivo-inconformidad-mi";
+          grid-template-columns: 360px;
+          grid-template-rows: 150px 100px;
+        }
+        .contenedor-inconformidades-mi{
+          display: grid;
+          grid-gap: 10px;
+          grid-template-areas: 
+          "inconformidades"
+          "contrato-inconformidades-mi" 
+          "motivo-inconformidades-mi"
+          "nombre-inconformidad-inconformidades-mi" 
+          "sentido-resolucion-inconformidades-mi"
+          "botones-inconformidades-mi";
+          grid-template-columns: 360px;
+          grid-template-rows: 150px repeat(4,100px);
+        }
+
+        .motivo-motivo-inconformidad-mi,
+  .contrato-inconformidades-mi,
+  .nombre-inconformidad-inconformidades-mi{
+    padding-left: 0px;
+  }
+        .botones-motivo-inconformidad-mi,
+  .botones-inconformidades-mi{
+    padding-left: 60px;
+  }
+        
+      }
+
+/*PARTIDAS PRESUPUESTALES PARTIDA*/
+  
+.main-partidas-presupuestales-partida{
+  min-height: calc(100px - 100px -100%);
+  width: 1180px;
+  margin: 0 auto;
+  padding-bottom: 30px;
+  
+  }
+  .contenedor-gris-partidas-presupuestales-partida{
+    width: 1180px;
+  min-height: calc(100px - 100px -100%);
+  display: grid;
+  grid-gap:10px;
+  background-color: #d8d8d8;
+  grid-template-areas: 
+  "asignacion-de-partidas asignacion-de-partidas"
+  "asigne asigne"
+  "unidad-compradora-partidas-presupuestales-partida clave-partida-partidas-presupuestales-partida"
+  "botones-partidas-presupuestales-partida botones-partidas-presupuestales-partida";
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 150px repeat(3,100px);
+}
+
+  .contenedor-gris-partidas-presupuestales-partida h1{
+    grid-area: asignacion-de-partidas;
+    text-align: center;
+  }
+  .contenedor-gris-partidas-presupuestales-partida h3{
+    grid-area: asigne;
+    text-align: center;
+  }
+  .contenedor-gris-partidas-presupuestales-partida .unidad-compradora-partidas-presupuestales-partida{
+    grid-area: unidad-compradora-partidas-presupuestales-partida;
+  }
+  .contenedor-gris-partidas-presupuestales-partida .clave-partida-partidas-presupuestales-partida{
+    grid-area: clave-partida-partidas-presupuestales-partida;
+  }
+  .contenedor-gris-partidas-presupuestales-partida .botones-partidas-presupuestales-partida{
+    grid-area: botones-partidas-presupuestales-partida;
+  }
+
+  .contenedor-gris-partidas-presupuestales-partida select
+  {
+  width: 550px;
+  height: 40px;
+  background-color: #fff;
+  color: #000;
+  border: 0.2rem solid rgba(0, 0, 0, 0.15);
+  border-radius: 1rem;
+  }
+  .contenedor-gris-partidas-presupuestales-partida h1::after {
+    content: "";
+    display: block;
+    width: 10rem;
+    height: 0.2rem;
+    background-color: #0c9;
+    }
+  .unidad-compradora-partidas-presupuestales-partida{
+    padding-left: 25px;
+  }
+ .botones-partidas-presupuestales-partida{
+   padding-left: 460px;
+ }
+
+ /*PARTIDAS PRESUPUESTALES PARTIDA IPAD*/
+ @media screen and (max-width: 768px){
+  .main-partidas-presupuestales-partida {
+    height: 50vh;
+    width: 760px;
+    margin: 0 auto;
+    }
+    .contenedor-gris-partidas-presupuestales-partida{
+    height: 45vh;
+    width: 760px;
+    grid-template-columns: 1fr 1fr;
+    }
+    .contenedor-gris-partidas-presupuestales-partida select
+        {
+        width: 350px;
+        height: 40px;
+        }
+    .botones-partidas-presupuestales-partida{
+        padding-left: 260px;
+    }
+  }
+
+   /*PARTIDAS PRESUPUESTALES PARTIDA CELULAR*/
+   @media screen and (max-width: 375px){
+    .main-partidas-presupuestales-partida {
+      height:95vh;
+      width: 365px;
+      margin: 0 auto;
+      }
+      .contenedor-gris-partidas-presupuestales-partida{
+      height: 90vh;
+      width: 365px;
+      grid-template-areas: 
+  "asignacion-de-partidas"
+  "asigne"
+  "unidad-compradora-partidas-presupuestales-partida" 
+  "clave-partida-partidas-presupuestales-partida"
+  "botones-partidas-presupuestales-partida";
+    grid-template-columns: 1fr;
+    grid-template-rows: 150px 100px 100px 100px;
+      
+      }
+      .unidad-compradora-partidas-presupuestales-partida{
+        padding-left: 0px;
+      }
+      .botones-partidas-presupuestales-partida{
+        padding-left: 60px;
+    }
+    }
+
+    /*RECEPCION TERMINACION ANTICIPADA*/
+    .main-recepcion-terminacion-anticipada{
+      min-height: calc(100px - 100px -100%);
+      width: 1180px;
+      margin: 0 auto;
+      padding-bottom: 30px;
+      
+      }
+      .contenedor-gris-recepcion-terminacion-anticipada{
+        width: 1180px;
+      min-height: calc(100px - 100px -100%);
+      display: grid;
+      grid-gap:10px;
+      background-color: #d8d8d8;
+      grid-template-areas: 
+      "contenedor-recepcion-recepcion-terminacion-anticipada"
+      "contendor-terminacion-anticipada-recepcion-terminacion-anticipada";
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+    }
+    
+    .contenedor-gris-recepcion-terminacion-anticipada .contenedor-recepcion-recepcion-terminacion-anticipada{
+      grid-area: contenedor-recepcion-recepcion-terminacion-anticipada;
+    }
+    .contenedor-gris-recepcion-terminacion-anticipada .contendor-terminacion-anticipada-recepcion-terminacion-anticipada{
+      grid-area: contendor-terminacion-anticipada-recepcion-terminacion-anticipada;
+    }
+
+    .contenedor-recepcion-recepcion-terminacion-anticipada{
+      display: grid;
+      grid-gap:10px;
+      grid-template-areas: 
+      "recepcion recepcion"
+      "contrato-contenedor-recepcion-recepcion-terminacion-anticipada requirente-contenedor-recepcion-recepcion-terminacion-anticipada"
+      "descripcion-contenedor-recepcion-recepcion-terminacion-anticipada descripcion-contenedor-recepcion-recepcion-terminacion-anticipada"
+      "botones-contenedor-recepcion-recepcion-terminacion-anticipada botones-contenedor-recepcion-recepcion-terminacion-anticipada";
+      grid-template-columns: repeat(2,1fr);
+      grid-template-rows: 150px 100px 200px;
+    }
+    .contenedor-recepcion-recepcion-terminacion-anticipada h1{
+      grid-area: recepcion;
+      text-align: center;
+    }
+    .contenedor-recepcion-recepcion-terminacion-anticipada .contrato-contenedor-recepcion-recepcion-terminacion-anticipada{
+      grid-area: contrato-contenedor-recepcion-recepcion-terminacion-anticipada;
+    }
+    .contenedor-recepcion-recepcion-terminacion-anticipada .requirente-contenedor-recepcion-recepcion-terminacion-anticipada{
+      grid-area: requirente-contenedor-recepcion-recepcion-terminacion-anticipada;
+    }
+    .contenedor-recepcion-recepcion-terminacion-anticipada .descripcion-contenedor-recepcion-recepcion-terminacion-anticipada{
+      grid-area: descripcion-contenedor-recepcion-recepcion-terminacion-anticipada;
+    }
+    .contenedor-recepcion-recepcion-terminacion-anticipada .botones-contenedor-recepcion-recepcion-terminacion-anticipada{
+      grid-area: botones-contenedor-recepcion-recepcion-terminacion-anticipada;
+    }
+
+    .contendor-terminacion-anticipada-recepcion-terminacion-anticipada{
+      display: grid;
+      grid-gap: 10px;
+      grid-template-areas: 
+      "terminacion-anticipada terminacion-anticipada"
+      "contrato-terminacion-anticipada-recepcion-terminacion-anticipada fecha-terminacion-terminacion-anticipada-recepcion-terminacion-anticipada"
+      "gastos-no-recuperables-terminacion-anticipada-recepcion-terminacion-anticipada monto-finiquito-terminacion-anticipada-recepcion-terminacion-anticipada"
+      "botones-terminacion-anticipada-recepcion-terminacion-anticipada botones-terminacion-anticipada-recepcion-terminacion-anticipada";
+      grid-template-columns: repeat(2,1fr);
+      grid-template-rows: 150px 100px 100px 100px;
+    }
+
+    .contendor-terminacion-anticipada-recepcion-terminacion-anticipada h1{
+      grid-area: terminacion-anticipada;
+      text-align: center;
+    }
+    .contendor-terminacion-anticipada-recepcion-terminacion-anticipada .contrato-terminacion-anticipada-recepcion-terminacion-anticipada{
+      grid-area: contrato-terminacion-anticipada-recepcion-terminacion-anticipada;
+    }
+    .contendor-terminacion-anticipada-recepcion-terminacion-anticipada .fecha-terminacion-terminacion-anticipada-recepcion-terminacion-anticipada{
+      grid-area: fecha-terminacion-terminacion-anticipada-recepcion-terminacion-anticipada;
+    }
+    .contendor-terminacion-anticipada-recepcion-terminacion-anticipada .gastos-no-recuperables-terminacion-anticipada-recepcion-terminacion-anticipada{
+      grid-area: gastos-no-recuperables-terminacion-anticipada-recepcion-terminacion-anticipada;
+    }
+    .contendor-terminacion-anticipada-recepcion-terminacion-anticipada .monto-finiquito-terminacion-anticipada-recepcion-terminacion-anticipada{
+      grid-area: monto-finiquito-terminacion-anticipada-recepcion-terminacion-anticipada;
+    } 
+    .contendor-terminacion-anticipada-recepcion-terminacion-anticipada .botones-terminacion-anticipada-recepcion-terminacion-anticipada{
+      grid-area: botones-terminacion-anticipada-recepcion-terminacion-anticipada;
+    }
+    
+    .contrato-contenedor-recepcion-recepcion-terminacion-anticipada,
+    .descripcion-contenedor-recepcion-recepcion-terminacion-anticipada,
+    .contrato-terminacion-anticipada-recepcion-terminacion-anticipada,
+    .gastos-no-recuperables-terminacion-anticipada-recepcion-terminacion-anticipada{
+      padding-left: 25px;
+    }
+
+    .botones-contenedor-recepcion-recepcion-terminacion-anticipada,
+    .botones-terminacion-anticipada-recepcion-terminacion-anticipada{
+      padding-left: 460px;
+    }
+
+    .contenedor-gris-recepcion-terminacion-anticipada textarea{
+      width: 1120px;
+      height: 150px;
+      background-color: #fff;
+      color: #000;
+      border: 0.2rem solid rgba(0, 0, 0, 0.15);
+      padding: 1rem 0.2rem;
+      border-radius: 1rem;
+      }
+    
+    .contenedor-gris-recepcion-terminacion-anticipada input {
+    width: 550px;
+    height: 40px;
+    background-color: #fff;
+    color: #000;
+    border: 0.2rem solid rgba(0, 0, 0, 0.15);
+    padding: 1rem 0.2rem;
+    border-radius: 1rem;
+    }
+    
+    .contenedor-gris-recepcion-terminacion-anticipada select
+    {
+    width: 550px;
+    height: 40px;
+    background-color: #fff;
+    color: #000;
+    border: 0.2rem solid rgba(0, 0, 0, 0.15);
+    border-radius: 1rem;
+    }
+
+    .contenedor-gris-recepcion-terminacion-anticipada h1::after {
+      content: "";
+      display: block;
+      width: 10rem;
+      height: 0.2rem;
+      background-color: #0c9;
+      }
+
+
+
+      /*RECEPCION TERMINACION ANTICIPADA IPAD*/
+      @media screen and (max-width: 768px){
+        .main-recepcion-terminacion-anticipada {
+          height: 105vh;
+          width: 760px;
+          margin: 0 auto;
+          }
+          .contenedor-gris-recepcion-terminacion-anticipada{
+          height: 100vh;
+          width: 760px;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 500px;
+          }
+        
+              .contenedor-gris-recepcion-terminacion-anticipada textarea{
+                width: 705px;
+                height: 150px;
+                background-color: #fff;
+                color: #000;
+                border: 0.2rem solid rgba(0, 0, 0, 0.15);
+                padding: 1rem 0.2rem;
+                border-radius: 1rem;
+                }
+              
+              .contenedor-gris-recepcion-terminacion-anticipada input {
+              width: 350px;
+              height: 40px;
+              }
+              
+              .contenedor-gris-recepcion-terminacion-anticipada select
+              {
+              width: 350px;
+              height: 40px;
+              }
+              .botones-contenedor-recepcion-recepcion-terminacion-anticipada,
+              .botones-terminacion-anticipada-recepcion-terminacion-anticipada{
+                padding-left: 260px;
+              }
+        }
+
+        /*RECEPCION TERMINACION ANTICIPADA CELULAR*/
+
+        @media screen and (max-width: 375px){
+          .main-recepcion-terminacion-anticipada {
+            height:200vh;
+            width: 365px;
+            margin: 0 auto;
+            }
+            .contenedor-gris-recepcion-terminacion-anticipada{
+            height: 190vh;
+            width: 365px;
+          grid-template-columns: 1fr;
+          grid-template-rows: 600px;
+            
+            }
+            .contenedor-recepcion-recepcion-terminacion-anticipada{
+              display: grid;
+              grid-gap:10px;
+              grid-template-areas: 
+              "recepcion"
+              "contrato-contenedor-recepcion-recepcion-terminacion-anticipada"
+              "requirente-contenedor-recepcion-recepcion-terminacion-anticipada"
+              "descripcion-contenedor-recepcion-recepcion-terminacion-anticipada"
+              "botones-contenedor-recepcion-recepcion-terminacion-anticipada";
+              grid-template-columns: 360PX;
+              grid-template-rows: 150px 100px 100px 200px;
+            }
+            .contendor-terminacion-anticipada-recepcion-terminacion-anticipada{
+              display: grid;
+              grid-gap: 10px;
+              grid-template-areas: 
+              "terminacion-anticipada"
+              "contrato-terminacion-anticipada-recepcion-terminacion-anticipada" 
+              "fecha-terminacion-terminacion-anticipada-recepcion-terminacion-anticipada"
+              "gastos-no-recuperables-terminacion-anticipada-recepcion-terminacion-anticipada" 
+              "monto-finiquito-terminacion-anticipada-recepcion-terminacion-anticipada"
+              "botones-terminacion-anticipada-recepcion-terminacion-anticipada";
+              grid-template-columns: 1fr;
+              grid-template-rows: 150px 100px 100px 100px;
+            }
+
+            .contenedor-gris-recepcion-terminacion-anticipada textarea{
+              width: 350px;
+              height: 150px;
+              }
+
+    .contrato-contenedor-recepcion-recepcion-terminacion-anticipada,
+    .descripcion-contenedor-recepcion-recepcion-terminacion-anticipada,
+    .contrato-terminacion-anticipada-recepcion-terminacion-anticipada,
+    .gastos-no-recuperables-terminacion-anticipada-recepcion-terminacion-anticipada{
+      padding-left: 0px;
+    }
+
+    .botones-contenedor-recepcion-recepcion-terminacion-anticipada,
+    .botones-terminacion-anticipada-recepcion-terminacion-anticipada{
+      padding-left: 60px;
+    }
+
+          }
+
+
+/*REGISTRO*/
+.main-registro{
+  min-height: calc(100px - 100px -100%);
+  width: 1180px;
+  margin: 0 auto;
+  padding-bottom: 30px;
+  
+  }
+  .contenedor-gris-registro{
+    width: 1180px;
+  min-height: calc(100px - 100px -100%);
+  display: grid;
+  grid-gap:10px;
+  background-color: #d8d8d8;
+  grid-template-areas: 
+  "alta-usuarios alta-usuarios"
+  "nombre-usuario-registro apellido-paterno-registro"
+  "apellido-materno-registro ."
+  "correo-electronico-registro contraseña-registro"
+  "tipo-de-usuario tipo-de-usuario"
+  "radio-administrador radio-empleado"
+  "botones-registro botones-registro";
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: 150px repeat(3,100px) 50px repeat(2,100px);
+}
+
+.contenedor-gris-registro h1{
+  grid-area: alta-usuarios;
+  text-align: center;
+}
+.contenedor-gris-registro .nombre-usuario-registro{
+  grid-area: nombre-usuario-registro;
+}
+.contenedor-gris-registro .apellido-paterno-registro{
+  grid-area: apellido-paterno-registro;
+}
+.contenedor-gris-registro .apellido-materno-registro{
+  grid-area: apellido-materno-registro;
+}
+
+.contenedor-gris-registro .correo-electronico-registro{
+  grid-area: correo-electronico-registro;
+}
+.contenedor-gris-registro .contraseña-registro{
+  grid-area: contraseña-registro;
+}
+.contenedor-gris-registro h2{
+  grid-area: tipo-de-usuario;
+  text-align: center;
+}
+.contenedor-gris-registro .radio-administrador{
+  grid-area: radio-administrador;
+}
+.contenedor-gris-registro .radio-empleado{
+  grid-area: radio-empleado;
+}
+.contenedor-gris-registro .botones-registro{
+  grid-area: botones-registro;
+}
+
+.contenedor-gris-registro input {
+  width: 550px;
+  height: 40px;
+  background-color: #fff;
+  color: #000;
+  border: 0.2rem solid rgba(0, 0, 0, 0.15);
+  padding: 1rem 0.2rem;
+  border-radius: 1rem;
+  }
+
+  .contenedor-gris-registro h1::after {
+    content: "";
+    display: block;
+    width: 10rem;
+    height: 0.2rem;
+    background-color: #0c9;
+    }
+
+.nombre-usuario-registro,
+.apellido-materno-registro,
+.correo-electronico-registro,
+.tipo-de-usuario{
+  padding-left: 25px;
+}
+.radio-administrador{
+  padding-left: 350px;
+}
+.botones-registro{
+  padding-left: 460px;
+}
+.radio-administrador input{
+  width: 40px;
+}
+.radio-empleado input{
+  width: 40px;
+}
+
+
+      /*REGISTRO IPAD*/
+      @media screen and (max-width: 768px){
+        .main-registro {
+          height: 75vh;
+          width: 760px;
+          margin: 0 auto;
+          }
+          .contenedor-gris-registro{
+          height: 70vh;
+          width: 760px;
+          grid-gap:10px;
+          grid-template-columns: 370px 370px;
+          grid-template-rows: 150px repeat(3,100px) 50px repeat(2,100px);
+          }
+
+          .contenedor-gris-registro input {
+            width: 350px;
+            height: 40px;
+            
+            }
+            .radio-administrador{
+              padding-left: 150px;
+            }
+            .botones-registro{
+              padding-left: 260px;
+            }
+          }
+
+
+          /*REGISTRO CELULAR*/
+
+        @media screen and (max-width: 375px){
+          .main-registro {
+            height:155vh;
+            width: 365px;
+            margin: 0 auto;
+            }
+            .contenedor-gris-registro{
+            height: 150vh;
+            width: 365px;
+            grid-template-areas: 
+  "alta-usuarios"
+  "nombre-usuario-registro" 
+  "apellido-paterno-registro"
+  "apellido-materno-registro"
+  "correo-electronico-registro" 
+  "contraseña-registro"
+  "tipo-de-usuario"
+  "radio-administrador" 
+  "radio-empleado"
+  "botones-registro";
+          grid-template-columns: 360px;
+          grid-template-rows: repeat(6,100px) 50px 50px 100px;
+            
+            }
+            .radio-administrador{
+              padding-left: 0px;
+            }
+            .botones-registro{
+              padding-left: 60px;
+            }
+
+.nombre-usuario-registro,
+.apellido-materno-registro,
+.correo-electronico-registro,
+.tipo-de-usuario{
+  padding-left: 0px;
+}
+.radio-administrador input{
+  width: 30px;
+}
+.radio-empleado input{
+  width: 30px;
+}
+          
+          }
+
+/*REQUIRENTE COMPRADORA CAPTURA*/
+
+.main-requirente-compradora-captura{
+  min-height: calc(100px - 100px -100%);
+  width: 1180px;
+  margin: 0 auto;
+  padding-bottom: 30px;
+  
+  }
+  .contenedor-gris-requirente-compradora-captura{
+    width: 1180px;
+  min-height: calc(100px - 100px -100%);
+  display: grid;
+  grid-gap:10px;
+  background-color: #d8d8d8;
+  grid-template-areas: 
+  "contenedor-unidad-requirente-requirente-compradora-captura"
+  "contenedor-unidad-compradora-requirente-compradora-captura";
+  grid-template-columns: 1fr;
+}
+  .contenedor-gris-requirente-compradora-captura .contenedor-unidad-requirente-requirente-compradora-captura{
+    grid-area: contenedor-unidad-requirente-requirente-compradora-captura;
+  }
+  .contenedor-gris-requirente-compradora-captura .contenedor-unidad-compradora-requirente-compradora-captura{
+    grid-area: contenedor-unidad-compradora-requirente-compradora-captura;
+  }
+
+  .contenedor-gris-requirente-compradora-captura input {
+    width: 550px;
+    height: 40px;
+    background-color: #fff;
+    color: #000;
+    border: 0.2rem solid rgba(0, 0, 0, 0.15);
+    padding: 1rem 0.2rem;
+    border-radius: 1rem;
+    }
+    .contenedor-unidad-requirente-requirente-compradora-captura{
+      display: grid;
+      grid-gap: 10px;
+      grid-template-areas: 
+      "unidad-requirente unidad-requirente"
+      "clave-requirente-unidad-requirente-compradora-captura  unidad-unidad-requirente-compradora-captura"
+      "botones-unidad-requirente-compradora-captura botones-unidad-requirente-compradora-captura";
+      grid-template-columns: repeat(2,1fr);
+      grid-template-rows: 150px 100px;
+    }
+    .contenedor-unidad-requirente-requirente-compradora-captura h1{
+      grid-area: unidad-requirente;
+      text-align: center;
+    }
+    .contenedor-unidad-requirente-requirente-compradora-captura .clave-requirente-unidad-requirente-compradora-captura{
+      grid-area: clave-requirente-unidad-requirente-compradora-captura;
+    }
+    .contenedor-unidad-requirente-requirente-compradora-captura .unidad-unidad-requirente-compradora-captura{
+      grid-area: unidad-unidad-requirente-compradora-captura;
+    }
+    .contenedor-unidad-requirente-requirente-compradora-captura .botones-unidad-requirente-compradora-captura{
+      grid-area: botones-unidad-requirente-compradora-captura;
+    }
+
+    .contenedor-unidad-compradora-requirente-compradora-captura{
+      display: grid;
+      grid-gap: 10px;
+      grid-template-areas: 
+      "unidad-compradora unidad-compradora"
+      "nombre-unidad-compradora-unidad-compradora-requirente-compradora-captura numero-unidad-unidad-compradora-requirente-compradora-captura"
+      "botones-unidad-compradora-requirente-compradora-captura botones-unidad-compradora-requirente-compradora-captura";
+      grid-template-columns: repeat(2,1fr);
+      grid-template-rows: 150px 100px;
+    }
+    .contenedor-unidad-compradora-requirente-compradora-captura h1{
+      grid-area: unidad-compradora;
+      text-align: center;
+    }
+    .contenedor-unidad-compradora-requirente-compradora-captura .nombre-unidad-compradora-unidad-compradora-requirente-compradora-captura{
+      grid-area: nombre-unidad-compradora-unidad-compradora-requirente-compradora-captura;
+    }
+    .contenedor-unidad-compradora-requirente-compradora-captura .numero-unidad-unidad-compradora-requirente-compradora-captura{
+      grid-area: numero-unidad-unidad-compradora-requirente-compradora-captura;
+    }
+    .contenedor-unidad-compradora-requirente-compradora-captura .botones-unidad-compradora-requirente-compradora-captura{
+      grid-area: botones-unidad-compradora-requirente-compradora-captura;
+    }
+
+    .clave-requirente-unidad-requirente-compradora-captura,
+    .nombre-unidad-compradora-unidad-compradora-requirente-compradora-captura{
+      padding-left: 25px;
+    }
+  .botones-unidad-requirente-compradora-captura,
+  .botones-unidad-compradora-requirente-compradora-captura{
+    padding-left: 460px;
+  }
+    .contenedor-gris-requirente-compradora-captura h1::after {
+      content: "";
+      display: block;
+      width: 10rem;
+      height: 0.2rem;
+      background-color: #0c9;
+      }
+
+      /*REQUIRENTE COMPRADORA CAPTURA IPAD*/
+      @media screen and (max-width: 768px){
+        .main-requirente-compradora-captura {
+          height: 75vh;
+          width: 760px;
+          margin: 0 auto;
+          }
+          .contenedor-gris-requirente-compradora-captura{
+          height: 70vh;
+          width: 760px;
+          grid-gap:10px;
+          grid-template-columns: 370px 370px;
+          }
+
+          .contenedor-gris-requirente-compradora-captura input {
+            width: 350px;
+            height: 40px;
+            
+            }
+  .botones-unidad-requirente-compradora-captura,
+  .botones-unidad-compradora-requirente-compradora-captura{
+    padding-left: 260px;
+  }
+
+  .contenedor-unidad-compradora-requirente-compradora-captura{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 150px 140px;
+  }
+
+          }
+
+ /*REQUIRENTE COMPRADORA CAPTURA CELULAR*/
+          @media screen and (max-width: 375px){
+            .main-requirente-compradora-captura {
+              height:155vh;
+              width: 365px;
+              margin: 0 auto;
+              }
+              .contenedor-gris-requirente-compradora-captura{
+              height: 150vh;
+              width: 365px;
+              }
+              .contenedor-unidad-requirente-requirente-compradora-captura{
+                display: grid;
+                grid-gap: 10px;
+                grid-template-areas: 
+                "unidad-requirente"
+                "clave-requirente-unidad-requirente-compradora-captura"  
+                "unidad-unidad-requirente-compradora-captura"
+                "botones-unidad-requirente-compradora-captura";
+                grid-template-columns: 1fr;
+                grid-template-rows: 150px 100px;
+              }
+              .contenedor-unidad-compradora-requirente-compradora-captura{
+                display: grid;
+                grid-gap: 10px;
+                grid-template-areas: 
+                "unidad-compradora"
+                "nombre-unidad-compradora-unidad-compradora-requirente-compradora-captura" 
+                "numero-unidad-unidad-compradora-requirente-compradora-captura"
+                "botones-unidad-compradora-requirente-compradora-captura";
+                grid-template-columns: repeat(2,1fr);
+                grid-template-rows: 150px 150px 150px;
+              }
+   
+   .botones-unidad-requirente-compradora-captura,
+  .botones-unidad-compradora-requirente-compradora-captura{
+    padding-left: 60px;
+  }
+  .clave-requirente-unidad-requirente-compradora-captura,
+    .nombre-unidad-compradora-unidad-compradora-requirente-compradora-captura{
+      padding-left: 0px;
+    }
+            }
+
+
+
+
+
 
 
 /*CONSULTA NUMERO CONTRATO*/

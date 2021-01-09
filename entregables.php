@@ -259,6 +259,20 @@
     <script src="https://code.jquery.com/jquery-migrate-3.0.0.min.js"></script>
     <script lenguage="javascript" src="js/funciones_entregables.js" type="text/javascript">
     </script>
+    <script>
+
+$(function() {
+    <?php
+ require_once("consulta_principal.php");                                
+                            ?>
+   var arreglo = <?php echo json_encode($array) ?>;
+   autocompletar(arreglo);                         
+
+
+});
+</script>
+
+
 </body>
 
 </html>

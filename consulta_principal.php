@@ -15,7 +15,7 @@ $valor=serialize($flag);
 
 
 $query=$conn->prepare("SELECT id_consolidado,licitacion FROM consolidado");
-
+$flag2=null;
  $query->execute();
 if($query){
 while($row=$query->fetch()){

@@ -18,7 +18,7 @@ function mostrarText() {
         return;
     }
 
-    if (nombre_entregable.length == 0 || nombre_entregable.length >= 28||!(/^[A-Za-zñÑáéíóúÁÉÍÓÚ.\s]*$/i.test(nombre_entregable))) {
+    if (nombre_entregable.length == 0 || nombre_entregable.length >= 28||!(/^[0-9A-Za-zñÑáéíóúÁÉÍÓÚ.\s]*$/i.test(nombre_entregable))) {
         $(function() {
             $('#my-modal2').modal('show')
         });
@@ -36,7 +36,7 @@ function mostrarText() {
         document.getElementById("indireccione").focus();
         return;
     }
-    if (!(/^[a-zA-ZñÑáéíóúÁÉÍÓÚ.\s]+$/i.test(direccion_entregable))) {
+    if (!(/^[#0-9a-zA-ZñÑáéíóúÁÉÍÓÚ.\-\s]+$/i.test(direccion_entregable))) {
         $(function() {
             $('#my-modal2').modal('show')
         });
@@ -143,7 +143,13 @@ $("#porcentaje").on({
     }
 });
 
-
+function autocompletar(arreglo) {
+    
+    $( "#contrato" ).autocomplete({
+        source: arreglo,
+        appendTo: "#formulario7"
+    });
+} 
 
 
 

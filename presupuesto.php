@@ -2,8 +2,8 @@
 
    require_once("conexion.php");
    $presupuesto=$_POST["presupuesto"];
- $clave=$_POST["clave"];
- $partida=$_POST["partida"];
+   $clave=$_POST["clave"];
+   $partida=$_POST["partida"];
    $presupuesto=str_replace([',','$'],"",$presupuesto);
 
 

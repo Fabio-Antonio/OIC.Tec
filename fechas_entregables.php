@@ -12,8 +12,8 @@
     <link href="https://cdn.datos.gob.mx/assets/img/favicon.ico" rel="shortcut icon">
     <link href="https://cdn.datos.gob.mx/bower_components/dgm-footer/dgm-footer.html" rel="import">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.js">
     </script>
@@ -117,7 +117,10 @@
                                 <th>Dirección</th>
                                 <th>Descripción</th>
                                 <th>Penalización</th>
-
+                                <th>Porcentaje de penalización</th>
+                                <th>Precio Unitario</th>
+                                <th>Días de penalización</th>
+                                <th>Documentación</th>
                             </tr>
                         </thead>
                     </table>
@@ -171,6 +174,20 @@
                                     mData: 'penalizacion',
                                     render: $.fn.dataTable.render.number(',', '.', 2, '$')
                                 },
+                                {
+                                    mData: 'porcentaje'
+                                },
+                                {
+                                    mData: 'precio_unitario',
+                                    render: $.fn.dataTable.render.number(',', '.', 2, '$')
+                                },
+                                {
+                                    mData: 'dias'
+                                },
+                                
+                                {
+                                    "defaultContent": "<button>Ver</button>"
+                                },
 
                             ],
                             "fnRowCallback": function(nRow, aData, iDisplayIndex, iDisplayIndexFull) {
@@ -181,6 +198,17 @@
                                 }
                             }
                         });
+                        $('#myTable tbody').on('click','button',function(){
+                            var data = table.dataTable().api().row($(this).parents('tr')).data();
+                            var url = data["url_constancia"];
+                            if(url.length==0){
+                                alert("Esta entrega no tiene documentación");
+                                return;
+                            }
+                           window.location= "downloadpdf_constancia.php?url="+data["url_constancia"];
+                            
+
+                        })
                     });
                     </script>
                 </div>
@@ -242,6 +270,7 @@
             </div>
 
         </div>
+            <div id="documento"></div>
     </main>
 
     <footer class="site-footer">

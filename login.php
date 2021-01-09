@@ -1,38 +1,36 @@
 <?php
-    require_once("conexion.php");
+require_once("conexion.php");
 session_start();     
     
     $nombre = $_POST["nombre"];
     $password = $_POST["password"];  		
-    
     $statement = $conn->prepare("SELECT permiso FROM login WHERE nombre = ?  AND password = ? ");
 
 $statement->bindParam(1, $nombre);
 $statement->bindParam(2, $password);
 $statement->execute();
+
        if($statement->rowCount()>0){
-       while ($row = $statement->fetch()){
+        while ($row = $statement->fetch()){
 
-        if($row['permiso']=="administrador"){
+            if($row['permiso']=="administrador"){
             
-     $_SESSION['usuario']=$nombre;
-     
+                $_SESSION['usuario']=$nombre;
+                 header("location:principal2.php");
+	        }else if($row['permiso']=="empleado"){
+	            header("location:principal2.php");
+	        }       
 
- header("location:principal2.php");
-	}else if($row['permiso']=="empleado"){
-	header("location:principal2.php");
-	}       
+        }
 
-}
-
-	}else {
+	    }else {
+            $conn = null;
           echo "<script>
                 alert('el usuario no fue encontrado')
                 window.location=('index.php');
-    </script>";
-	}
+            </script>";
+	    }
 
 
-  $conn = null;
-        
+  
 ?>

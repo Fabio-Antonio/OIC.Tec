@@ -121,7 +121,7 @@
                                             "flag": Variable
                                         }
                                     }).done(function(data) {
-                                        $("main").html(data);
+                                        $(".numero-de-contrato-consulta-numero-contrato").html(data);
                                     });
 
                                 } else {
@@ -179,8 +179,8 @@
    $nombre_unidad_compradora="";
   $unidad="";
    $clave_requirente="";
-  $monto_maximo="";
-  $monto_minimo="";
+  $monto_maximo=0.00;
+  $monto_minimo=0.00;
   $objeto_contratacion="";
   $procedimientos="";
   $suficiencia="";
@@ -220,13 +220,13 @@
             <div class="monto-maximo-consulta-numero-contrato">
                 <label>Monto Máximo</label>
                 <input id="indtextmontmaxcon" placeholder="Monto Máximo" type="text" readonly="readonly"
-                    value="<?php echo "$".$monto_maximo ?>">
+                    value="<?php $monto_maximo_f=number_format($monto_maximo); echo "$".$monto_maximo_f ?>">
             </div>
 
             <div class="monto-minimo-consulta-numero-contrato">
                 <label>Monto Minimo</label>
                 <input id="indtextmontmincon" placeholder="Monto Minimo" type="text" readonly="readonly"
-                    value="<?php echo "$".$monto_minimo ?>">
+                    value="<?php  $monto_minimo_f=number_format($monto_minimo); echo "$".$monto_minimo_f ?>">
             </div>
 
             <div class="objeto-contrato-consulta-numero-contrato">

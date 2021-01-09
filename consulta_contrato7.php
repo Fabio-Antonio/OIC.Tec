@@ -2,50 +2,52 @@
   require_once("conexion.php");
   require_once("url.php");
   
-  $partida_presupuestal=$_GET["partida_presupuestal"]; 
+   $partida_presupuestal=$_GET["partida_presupuestal"]; 
    $flag8=null;
-      $query=$conn->prepare("SELECT id_unidad_compradora,nombre_unidad_compradora FROM partidas_presupuestales
+   $query=$conn->prepare("SELECT id_unidad_compradora,nombre_unidad_compradora FROM partidas_presupuestales
    AS pp INNER JOIN unidad_compradora AS uc ON pp.id_unidad = uc.id_unidad_compradora INNER JOIN 
    partida_presupuesto AS po ON po.id = pp.id_presupuesto WHERE po.id = ?");
-$query->bindValue(1,$partida_presupuestal);
- $query->execute();
-if($query){
-while($row=$query->fetch()){
-$flag[]=$row;
-}
-$valor=serialize($flag);
+   $query->bindValue(1,$partida_presupuestal);
+   $query->execute();
+        if($query)
+        {
+                 while($row=$query->fetch()){
+                $flag[]=$row;
+                }
+        $valor=serialize($flag);
 
- if($flag==null){
-        echo "<script>alert('Debe ingresar una unidad compradora')
-window.location.replace('principal2.php');</script>";
-       return;
+                if($flag==null)
+                {
+                        echo "<script>alert('Debe ingresar una unidad compradora')
+                        window.location.replace('principal2.php');</script>";
+                        return;
+                }
+
+        }else{
+                echo "<script>alert('La consulta a la base de datos es incorrecta')
+                window.location.replace('principal2.php');</script>";
         }
-
-}else{
-echo "<script>alert('La consulta a la base de datos es incorrecta')
-window.location.replace('principal2.php');</script>";
-}
 
 
  $query=$conn->prepare("SELECT id_procedimiento_contratacion,procedimientos FROM procedimientos_contratacion");
 
  $query->execute();
-if($query){
-while($row=$query->fetch()){
-$flag2[]=$row;
-}
-$valor2=serialize($flag2);
-
- if($flag==null){
-        echo "<script>alert('No se encontraron procedimientos de contratación')
-window.location.replace('principal2.php');</script>";
-       return;
+        if($query){
+                while($row=$query->fetch()){
+                $flag2[]=$row;
         }
+        $valor2=serialize($flag2);
 
-}else{
-echo "<script>alert('La consulta a la base de datos es incorrecta')
-window.location.replace('principal2.php');</script>";
-}
+                if($flag==null){
+                        echo "<script>alert('No se encontraron procedimientos de contratación')
+                        window.location.replace('principal2.php');</script>";
+                        return;
+                 }
+
+        }else{
+                echo "<script>alert('La consulta a la base de datos es incorrecta')
+                window.location.replace('principal2.php');</script>";
+        }
 
 
 $query=$conn->prepare("SELECT id_requirente,unidad FROM unidad_requirente");
@@ -159,10 +161,10 @@ curl_setopt($ch, CURLOPT_POST, TRUE);
 // definimos cada uno de los parámetros
 curl_setopt($ch, CURLOPT_POSTFIELDS, "flag=$valor&flag2=$valor2&flag3=$valor3&flag4=$valor4&flag6=$valor6&partida=$partida_presupuestal&flag8=$valor8&flag7=$valor7");
 curl_setopt($ch, CURLOPT_HEADER, 0);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 0);
-    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 0);
+curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);
 curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.1.2) Gecko/20090729 Firefox/3.5.2 GTB5');
 
 

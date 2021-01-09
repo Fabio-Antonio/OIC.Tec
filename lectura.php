@@ -123,6 +123,21 @@
                         </div>
                     </div>
                 </div>
+<<<<<<< HEAD
+=======
+                <div class="tab-pane" id="tab-04">
+                 <form   id="pdf" action="#">
+                  <h1><strong> SUBIR ARCHIVO PDF </strong></h1>
+                  <input type="file" name="pdf_archivo" id="pdf_achivo" accept=".pdf" for="file-01" data-toggle="tooltip" data-placement="top" title="Solo archivos PDF">
+                 <input class="form-control" placeholder="Escriba el número de contrato" type="text" name="numero_contrato" id="contrato" required pattern="[A-Za-z0-9]*">
+                  <button id="E" class="btn btn-primary" type="submit">Enviar</button>
+                    <button id="bre" class="btn btn-primary" type="button" onclick="location.href='principal2.php'">Regresar</button>
+</form>
+
+              </div>
+              </div>
+            </div> <!--fin dentro pestañas -->
+>>>>>>> a08fbc4ff9a03605d7a7dd56a63bb7bb2ec2d69b
             </div>
 
             <!--fin dentro pestañas -->
@@ -178,6 +193,7 @@
 
 
 
+<<<<<<< HEAD
 
 
 
@@ -197,6 +213,71 @@
     <script src="https://cdn.datos.gob.mx/assets/js/main.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+=======
+      <!--Modals -->
+
+
+    <div class="modal fade" role="dialog" id="my-modal" aria-labelledby="modal-title">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color:#27C44D;">
+                    <h3 class="modal-title" id="modal-title">B.E.S.A</h3>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Los datos se han ingresado correctamente!!
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" data-dismiss="modal">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" role="dialog" id="my-modal2" aria-labelledby="modal-title">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color:#D0021B;">
+                    <h3 class="modal-title" id="modal-title">B.E.S.A</h3>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Revise los campos!!
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" data-dismiss="modal">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" role="dialog" id="my-modal3" aria-labelledby="modal-title">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color:#D0021B;">
+                    <h3 class="modal-title" id="modal-title">B.E.S.A</h3>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Algo salió mal al subir el archivo!!
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" data-dismiss="modal">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+        <!--Fin cargador de archivos -->
+       
+          <script src="https://cdn.datos.gob.mx/assets/js/main.js"></script>
+          <script src="js/bootstrap.min.js"></script>
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+>>>>>>> a08fbc4ff9a03605d7a7dd56a63bb7bb2ec2d69b
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link href="https://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" rel="Stylesheet">
     </link>

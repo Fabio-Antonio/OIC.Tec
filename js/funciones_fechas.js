@@ -17,7 +17,7 @@ function mostrarText(){
                     });
     
     document.getElementById("innotificacionadjudicadaf").focus();
-    
+       return;
     }
     if(String(formalizacion_contrato)==""){
      $(function(){
@@ -25,7 +25,7 @@ function mostrarText(){
                     });
     
     document.getElementById("informalizacioncontratof").focus();
-    
+    return;
     }
     if(String(requisicion_contrato)==""){
      $(function(){
@@ -33,7 +33,7 @@ function mostrarText(){
                     });
     
     document.getElementById("inrequesicioncontratof").focus();
-    
+    return;
     }
     if(String(garantia_cumplimiento)==""){
      $(function(){
@@ -41,7 +41,7 @@ function mostrarText(){
                     });
     
     document.getElementById("ingarantiacumpliminetof").focus();
-    
+    return;
     }
     
     if(String(inicio_vigencia)==""){
@@ -50,7 +50,7 @@ function mostrarText(){
                     });
     
     document.getElementById("ininiciovigenciaf").focus();
-    
+     return;
     }
     if(String(sat)==""){
      $(function(){
@@ -58,7 +58,7 @@ function mostrarText(){
                     });
     
     document.getElementById("insatf").focus();
-    
+    return;
     }
     
     if(String(imss)==""){
@@ -67,7 +67,7 @@ function mostrarText(){
                     });
     
     document.getElementById("inimssf").focus();
-    
+    return;
     }
     if(String(infonavit)==""){
      $(function(){
@@ -75,7 +75,7 @@ function mostrarText(){
                     });
     
     document.getElementById("ininfonavitf").focus();
-    
+    return;
     }
     
     
@@ -85,7 +85,7 @@ function mostrarText(){
                     });
     
     document.getElementById("insuficienciaf").focus();
-    
+    return;
     }
     
     if(String(fin_vigencia)==""){
@@ -94,7 +94,7 @@ function mostrarText(){
                     });
     
     document.getElementById("infinvigenciaf").focus();
-    
+    return;
     }
     if(descripcion.length==0||!(/^[A-Za-z0-9]+$/.test(descripcion))){
      $(function(){
@@ -253,15 +253,14 @@ function mostrarText(){
     $(document).ready(function(){
     
     $('#ingarantiacumplimientof').change(function(){
-             var formalizacion_contrato= $('informalizacioncontratof').val();
-    var fecha_formalizacion_contrato= new Date(formalizacion_adjudicada);
+             var formalizacion_contrato= $('#informalizacioncontratof').val();
+             var fecha_formalizacion_contrato= new Date(formalizacion_contrato);
     
           var $this = $(this);
           var insertedVal = $this.val();
           var garantia_cumplimiento = new Date(insertedVal);
-    
-          if (garantia_cumplimiento < fecha_formalizacion_contrato||garantia_cumplimiento>fecha_formalizacion_contrato.setDate(fecha_formalizacion_contrato.getDate()+10)){
-    
+          
+          if (garantia_cumplimiento<fecha_formalizacion_contrato||garantia_cumplimiento>fecha_formalizacion_contrato.setDate(fecha_formalizacion_contrato.getDate()+10)){
     
              $this.css({"color":"red","border":"1px solid red"});
              $(function(){

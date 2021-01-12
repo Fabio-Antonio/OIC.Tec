@@ -1,9 +1,25 @@
 <?php
 
+require_once("conexion.php");
 
-$statement = $conn->prepare("SELECT numero_contrato, objeto_contratacion, monto_max, nombre, apellido_paterno, apellido_materno, email FROM contrato AS c INNER JOIN contrato_fechas AS cf ON
+function enviar($miArray){
+   
+$headers = "From: ing.fabio.a@gmail.com\r\n";
+$headers .= "CC: ing.fabio.a@gmail.com\r\n";
+$headers .= "MIME-Version: 1.0\r\n";
+$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+    mail($miArray["email"], "Organo Interno de Control en la Secretaría de Educación Pública", "<html>
+    <body>
+    <h1>Organo Interno de Control en la Secretaría de Educación Pública</h1>
+    <span> Estimado ".$miArray["nombre"].". Por este medio se le informa, que su contrato con número ".$miArray["contrato"].", se encuentra en estatus: </span>
+    <p>".$miArray["mensaje"]."</p>
+    </body>
+    </html>", $headers);
+}
+
+$statement = $conn->prepare("SELECT numero_contrato, monto_max, nombre,fin_vigencia,apellido_paterno, apellido_materno, email FROM contrato AS c INNER JOIN contrato_fechas AS cf ON
 c.id_contrato = cf.id_contrato INNER JOIN administrador AS a ON
-c.id_administrador = a.id_administrador WHERE fin_vigencia =  DATE_SUB(CURDATE(), INTERVAL 5 DAY);");       
+c.id_administrador = a.id_administrador WHERE cf.fin_vigencia =  DATE_SUB(CURDATE(), INTERVAL 5 DAY);");       
 $statement->execute();
 
 if($statement){
@@ -13,9 +29,9 @@ if($statement){
     $apellido_materno=$row["apellido_materno"];
     $email=$row["email"];
     $numero_contrato=$row["numero_contrato"];
-    $objeto_contratacion=$row["objeto_contratacion"];
+    $fin_vigencia=$row["fin_vigencia"];
 
-    $miArray = array("nombre"=>$nombre." ".$apellido_paterno." ".$apellido_materno, "email"=>$email,"contrato"=>$numero_contrato,"mensaje"=>$objeto_contratacion.". Este contrato esta próximo a vencer, por favor contacte a la parte de correspondiente para la culminación de su tramite.");
+    $miArray = array("nombre"=>$nombre." ".$apellido_paterno." ".$apellido_materno, "email"=>$email,"contrato"=>$numero_contrato,"mensaje"=>"Este contrato esta próximo a vencer en la fecha ".$fin_vigencia.", por favor contacte al departamento correspondiente para la culminación de su tramite.");
     enviar($miArray);
    
 } 
@@ -27,33 +43,195 @@ if($statement){
 
 }
 
-$conn=null;
+$statement = $conn->prepare("SELECT numero_contrato,notificacion_adjudicada,formalizacion_contrato, nombre, apellido_paterno, apellido_materno, email FROM contrato AS c INNER JOIN contrato_fechas AS cf ON c.id_contrato = cf.id_contrato INNER JOIN administrador AS a ON c.id_administrador = a.id_administrador WHERE cf.formalizacion_contrato >(DATE_ADD(cf.notificacion_adjudicada, INTERVAL 15 DAY))");       
+$statement->execute();
 
-
-function enviar ($miArray){
-$data = json_encode($miArray);
-$ch = curl_init();
- $url="http://192.168.1.70:3000/api/usuarios/";
-// definimos la URL a la que hacemos la petición
-curl_setopt($ch, CURLOPT_URL,$url);
-// indicamos el tipo de petición: POST
-curl_setopt($ch, CURLOPT_POST, TRUE);
-// definimos cada uno de los parámetros
-curl_setopt($ch, CURLOPT_POSTFIELDS,$data);
-curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 0);
-    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);
-curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.1.2) Gecko/20090729 Firefox/3.5.2 GTB5');
-
- curl_exec ($ch);
- $error= curl_error($ch);
- echo $error;
-// cerramos la sesión cURL
-curl_close ($ch);
+if($statement){
+    while($row = $statement->fetch(PDO::FETCH_ASSOC)){   
+    $nombre=$row["nombre"];
+    $apellido_paterno=$row["apellido_paterno"];
+    $apellido_materno=$row["apellido_materno"];
+    $email=$row["email"];
+    $numero_contrato=$row["numero_contrato"];
+    $formalización_contrato=$row["formalizacion_contrato"];
+    $miArray = array("nombre"=>$nombre." ".$apellido_paterno." ".$apellido_materno, "email"=>$email,"contrato"=>$numero_contrato,"mensaje"=>"La fecha de formalización es incorrecta: ".$formalización_contrato.", ya que la fecha supera los 15 días de la fecha de notificación, por favor contacte al departamento correspondiente para su solución.");
+    enviar($miArray);
+   
+} 
+    if($nombre=null){
+	
+	} 
+  
+}else{
 
 }
 
+
+$statement = $conn->prepare("SELECT numero_contrato, objeto_contratacion,requisicion_contrato, nombre, apellido_paterno, apellido_materno, email FROM contrato AS c INNER JOIN contrato_fechas AS cf ON c.id_contrato = cf.id_contrato INNER JOIN administrador AS a ON c.id_administrador = a.id_administrador WHERE cf.requisicion_contrato >cf.formalizacion_contrato");       
+$statement->execute();
+
+if($statement){
+    while($row = $statement->fetch(PDO::FETCH_ASSOC)){   
+    $nombre=$row["nombre"];
+    $apellido_paterno=$row["apellido_paterno"];
+    $apellido_materno=$row["apellido_materno"];
+    $email=$row["email"];
+    $numero_contrato=$row["numero_contrato"];
+    $requisicion_contrato=$row["requisicion_contrato"];
+    $miArray = array("nombre"=>$nombre." ".$apellido_paterno." ".$apellido_materno, "email"=>$email,"contrato"=>$numero_contrato,"mensaje"=>"La fecha de requisición del contrato es incorrecta: ".$requisicion_contrato.", ya que la fecha supera a la fecha de formalización de contrato, por favor contacte al departamento correspondiente para su solución.");
+    enviar($miArray);
+   
+} 
+    if($nombre=null){
+	
+	} 
+  
+}else{
+
+}
+
+$statement = $conn->prepare("SELECT numero_contrato,notificacion_adjudicada,requisicion_contrato, nombre, apellido_paterno, apellido_materno, email FROM contrato AS c INNER JOIN contrato_fechas AS cf ON c.id_contrato = cf.id_contrato INNER JOIN administrador AS a ON c.id_administrador = a.id_administrador WHERE cf.requisicion_contrato<(DATE_ADD(cf.formalizacion_contrato, INTERVAL -10 DAY))");       
+$statement->execute();
+
+if($statement){
+    while($row = $statement->fetch(PDO::FETCH_ASSOC)){   
+    $nombre=$row["nombre"];
+    $apellido_paterno=$row["apellido_paterno"];
+    $apellido_materno=$row["apellido_materno"];
+    $email=$row["email"];
+    $numero_contrato=$row["numero_contrato"];
+    $requisicion_contrato=$row["requisicion_contrato"];
+    $miArray = array("nombre"=>$nombre." ".$apellido_paterno." ".$apellido_materno, "email"=>$email,"contrato"=>$numero_contrato,"mensaje"=>"La fecha de requisición del contrato es incorrecta: ".$requisicion_contrato.", ya que la fecha supera los diez días anteriores a la fecha de formalización de contrato, por favor contacte al departamento correspondiente para su solución.");
+    enviar($miArray);
+   
+} 
+    if($nombre=null){
+	
+	} 
+  
+}else{
+
+}
+
+
+$statement = $conn->prepare("SELECT numero_contrato, objeto_contratacion,suficiencia, nombre, apellido_paterno, apellido_materno, email FROM contrato AS c INNER JOIN contrato_fechas AS cf ON c.id_contrato = cf.id_contrato INNER JOIN administrador AS a ON c.id_administrador = a.id_administrador WHERE cf.suficiencia >cf.formalizacion_contrato");       
+$statement->execute();
+
+if($statement){
+    while($row = $statement->fetch(PDO::FETCH_ASSOC)){   
+    $nombre=$row["nombre"];
+    $apellido_paterno=$row["apellido_paterno"];
+    $apellido_materno=$row["apellido_materno"];
+    $email=$row["email"];
+    $numero_contrato=$row["numero_contrato"];
+    $suficiencia=$row["suficiencia"];
+    $miArray = array("nombre"=>$nombre." ".$apellido_paterno." ".$apellido_materno, "email"=>$email,"contrato"=>$numero_contrato,"mensaje"=>"La fecha de suficiencia del contrato es incorrecta: ".$suficiencia.", ya que la fecha supera a la fecha de formalización de contrato, por favor contacte al departamento correspondiente para su solución.");
+    enviar($miArray);
+   
+} 
+    if($nombre=null){
+	
+	} 
+  
+}else{
+
+}
+
+$statement = $conn->prepare("SELECT numero_contrato,notificacion_adjudicada,suficiencia, nombre, apellido_paterno, apellido_materno, email FROM contrato AS c INNER JOIN contrato_fechas AS cf ON c.id_contrato = cf.id_contrato INNER JOIN administrador AS a ON c.id_administrador = a.id_administrador WHERE cf.suficiencia<(DATE_ADD(cf.formalizacion_contrato, INTERVAL -10 DAY))");       
+$statement->execute();
+
+if($statement){
+    while($row = $statement->fetch(PDO::FETCH_ASSOC)){   
+    $nombre=$row["nombre"];
+    $apellido_paterno=$row["apellido_paterno"];
+    $apellido_materno=$row["apellido_materno"];
+    $email=$row["email"];
+    $numero_contrato=$row["numero_contrato"];
+    $suficiencia=$row["suficiencia"];
+    $miArray = array("nombre"=>$nombre." ".$apellido_paterno." ".$apellido_materno, "email"=>$email,"contrato"=>$numero_contrato,"mensaje"=>"La fecha de suficiencia del contrato es incorrecta: ".$suficiencia.", ya que la fecha supera los diez días anteriores a la fecha de formalización de contrato, por favor contacte al departamento correspondiente para su solución.");
+    enviar($miArray);
+   
+} 
+    if($nombre=null){
+	
+	} 
+  
+}else{
+
+}
+
+$statement = $conn->prepare("SELECT numero_contrato,notificacion_adjudicada,sat, nombre, apellido_paterno, apellido_materno, email FROM contrato AS c INNER JOIN contrato_fechas AS cf ON c.id_contrato = cf.id_contrato INNER JOIN administrador AS a ON c.id_administrador = a.id_administrador WHERE cf.sat<(DATE_ADD(cf.formalizacion_contrato, INTERVAL -30 DAY))");       
+$statement->execute();
+
+if($statement){
+    while($row = $statement->fetch(PDO::FETCH_ASSOC)){   
+    $nombre=$row["nombre"];
+    $apellido_paterno=$row["apellido_paterno"];
+    $apellido_materno=$row["apellido_materno"];
+    $email=$row["email"];
+    $numero_contrato=$row["numero_contrato"];
+    $sat=$row["sat"];
+    $miArray = array("nombre"=>$nombre." ".$apellido_paterno." ".$apellido_materno, "email"=>$email,"contrato"=>$numero_contrato,"mensaje"=>"La fecha SAT del contrato es incorrecta: ".$sat.", ya que la fecha supera los 30 días anteriores a la fecha de formalización de contrato, por favor contacte al departamento correspondiente para su solución.");
+    enviar($miArray);
+   
+} 
+    if($nombre=null){
+	
+	} 
+  
+}else{
+
+}
+
+
+$statement = $conn->prepare("SELECT numero_contrato,notificacion_adjudicada,imss, nombre, apellido_paterno, apellido_materno, email FROM contrato AS c INNER JOIN contrato_fechas AS cf ON c.id_contrato = cf.id_contrato INNER JOIN administrador AS a ON c.id_administrador = a.id_administrador WHERE cf.imss<(DATE_ADD(cf.formalizacion_contrato, INTERVAL -30 DAY))");       
+$statement->execute();
+
+if($statement){
+    while($row = $statement->fetch(PDO::FETCH_ASSOC)){   
+    $nombre=$row["nombre"];
+    $apellido_paterno=$row["apellido_paterno"];
+    $apellido_materno=$row["apellido_materno"];
+    $email=$row["email"];
+    $numero_contrato=$row["numero_contrato"];
+    $imss=$row["imss"];
+    $miArray = array("nombre"=>$nombre." ".$apellido_paterno." ".$apellido_materno, "email"=>$email,"contrato"=>$numero_contrato,"mensaje"=>"La fecha IMSS del contrato es incorrecta: ".$imss.", ya que la fecha supera los 30 días anteriores a la fecha de formalización de contrato, por favor contacte al departamento correspondiente para su solución.");
+    enviar($miArray);
+   
+} 
+    if($nombre=null){
+	
+	} 
+  
+}else{
+
+}
+
+$statement = $conn->prepare("SELECT numero_contrato,notificacion_adjudicada,infonavit, nombre, apellido_paterno, apellido_materno, email FROM contrato AS c INNER JOIN contrato_fechas AS cf ON c.id_contrato = cf.id_contrato INNER JOIN administrador AS a ON c.id_administrador = a.id_administrador WHERE cf.infonavit<(DATE_ADD(cf.formalizacion_contrato, INTERVAL -30 DAY))");       
+$statement->execute();
+
+if($statement){
+    while($row = $statement->fetch(PDO::FETCH_ASSOC)){   
+    $nombre=$row["nombre"];
+    $apellido_paterno=$row["apellido_paterno"];
+    $apellido_materno=$row["apellido_materno"];
+    $email=$row["email"];
+    $numero_contrato=$row["numero_contrato"];
+    $imss=$row["infonavit"];
+    $miArray = array("nombre"=>$nombre." ".$apellido_paterno." ".$apellido_materno, "email"=>$email,"contrato"=>$numero_contrato,"mensaje"=>"La fecha INFONAVIT del contrato es incorrecta: ".$infonavit.", ya que la fecha supera los 30 días anteriores a la fecha de formalización de contrato, por favor contacte al departamento correspondiente para su solución.");
+    enviar($miArray);
+   
+} 
+    if($nombre=null){
+	
+	} 
+  
+}else{
+
+}
+
+
+
+$conn=null;
 
 ?>

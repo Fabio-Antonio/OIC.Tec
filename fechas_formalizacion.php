@@ -1,10 +1,8 @@
 <?php
 require_once("conexion.php");
 
-$clave=$_GET["clave"];
-$statement = $conn->prepare("SELECT numero_contrato,objeto_contratacion,monto_max,nombre FROM contrato AS c INNER JOIN partida_presupuesto AS pp ON c.id_partida = pp.id WHERE pp.clave = ?");
+$statement = $conn->prepare("SELECT numero_contrato,formalizacion_contrato,sat,imss,infonavit,garantia_cumplimiento FROM `contrato_fechas` AS cf INNER JOIN contrato AS c ON c.id_contrato = cf.id_contrato");
 
-$statement->bindParam(1,$clave);
 $statement->execute();
 
 if($statement){

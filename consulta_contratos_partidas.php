@@ -164,7 +164,7 @@
                 </div>
 
                 <div class="botones-contratos-por-partida-presupuestal-consulta-contratos-partidas">
-                    <button type="button" id="bregresar" class="btn btn-primary" onclick="location.href='principal.php'"
+                    <button type="button" id="bregresar" class="btn btn-primary" onclick="location.href='principal2.php'"
                         name="bregresar"> Regresar </button>
                 </div>
 

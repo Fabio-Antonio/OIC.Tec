@@ -89,8 +89,7 @@ window.location.replace('index');</script>";
                 <h3>ADMINISTRACIÓN</h3>
                 <ul>
                     <li><i class="fas fa-plus-circle"></i> <a href="lectura.php">Carga de archivos (PDF)(CVS)</a></li>
-                    <li><i class="fas fa-plus-circle"></i><a href="consulta_contrato.php"> Comprobación/Convenios
-                            Modificados</a></li>
+                    <li><i class="fas fa-plus-circle"></i><a href="consulta_contrato.php">Asignaciones</a></li>
                     <li><i class="fas fa-plus-circle"></i><a href="consulta_contrato.php"> Documentos Adicionales</a>
                     </li>
                     <li><i class="fas fa-plus-circle"></i><a href="recepcion.php">Recepción</li>
@@ -107,13 +106,14 @@ window.location.replace('index');</script>";
                 </div>
                 <h3>LEGAL</h3>
                 <ul>
-                    <li><i class="fas fa-plus-circle"></i><a href="consulta_fundamento.php"> Fundamento Legal</a></li>
-                    <li><i class="fas fa-plus-circle"></i><a href="consulta_fundamento.<a href="
-                            consulta_fundamento.php"> Procedimientos de
+                   
+                    <li><i class="fas fa-plus-circle"></i><a href="fundamentos_procedimientos.php"> Procedimientos de
                             Contratación</a></li>
                     <li><i class="fas fa-plus-circle"></i> Inconformidades</li>
                     <li><i class="fas fa-plus-circle"></i> Facturas</li>
                     <li><i class="fas fa-plus-circle"></i> Pagos Efectuados</li>
+                    <li><i class="fas fa-plus-circle"></i><a href="consulta_contrato.php"> Comprobación/Convenios
+                            Modificados</a></li>
                 </ul>
                 <p></p>
             </div>
@@ -124,10 +124,8 @@ window.location.replace('index');</script>";
                 <h3>CALENDARIO</h3>
                 <ul>
                     <li><i class="fas fa-plus-circle"></i> <a href="consulta_vigencia.php">Fin VIgencia</a></li>
-                    <li><i class="fas fa-plus-circle"></i> Consultas por Fecha de Adjudicación</li>
-                    <li><i class="fas fa-plus-circle" data-toggle="modal" data-target="#mymodal7"></i> Fechas
-                        Entregables</li>
-                    <li><i class="fas fa-plus-circle"></i> Fecha de Formalización</li>
+                    <li><i class="fas fa-plus-circle"></i><a href="notificacion_adjudicada.php"> Fecha de Adjudicación</a></li>
+                    <li><i class="fas fa-plus-circle"></i><a href="formalizacion_contrato.php"> Fecha de Formalización</a></li>
                 </ul>
                 <p></p>
             </div>
@@ -137,11 +135,12 @@ window.location.replace('index');</script>";
                 </div>
                 <h3>PRODUCCIÓN</h3>
                 <ul>
-                    <li><i class="fas fa-plus-circle" data-toggle="modal" data-target="#mymodal4"></i> Informe 70-30
-                    </li>
+                    <li><i class="fas fa-plus-circle"></i> <a data-toggle="modal" data-target="#mymodal4"> Informe 70-30
+                    </a></li>
                     <li><i class="fas fa-plus-circle"></i> <a href="consulta_top.php">Top por Contrato</a></li>
-                    <li><i class="fas fa-plus-circle" data-toggle="modal" data-target="#mymodal6"></i> Informe
-                        Consolidado </li>
+                    <li><i class="fas fa-plus-circle" data-toggle="modal" data-target="#mymodal6"></i><a data-toggle="modal" data-target="#mymodal6"> Informe
+                        Consolidado </a></li>
+                        <li><i class="fas fa-plus-circle"></i><a data-toggle="modal" data-target="#mymodal7">Entregables</a></li>
                 </ul>
                 <p></p>
             </div>
@@ -154,7 +153,7 @@ window.location.replace('index');</script>";
                     <li><i class="fas fa-plus-circle"></i><a href="numero_de_contrato.php"> Consulta por número de
                             contrato</a></li>
                     <li><i class="fas fa-plus-circle"></i> Contrato por Proveedor</li>
-                    <li><i class="fas fa-plus-circle"></i> Contratos por Partida</li>
+                    <li><i class="fas fa-plus-circle"></i><a data-toggle="modal" data-target="#mymodal8"> Contratos por Partida</a></li>
                 </ul>
                 <p></p>
             </div>
@@ -520,6 +519,57 @@ window.location.replace('index');</script>";
 
                         <button class="btn btn-default btn-success" type="button" name="submit"
                             onclick="entregable();">Enviar</button>
+
+                    </form>
+
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" data-dismiss="modal">cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" role="dialog" id="mymodal8" aria-labelledby="modal-title"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="modal-title">B.E.S.A</h3>
+                </div>
+                <div class="modal-body">
+
+
+                <h3>
+                        Selecciona una Partida Presupuestal
+                    </h3>
+
+                    <form role="form" id="formulario">
+                        <div class="form-group">
+                            <label class="control-label" for="email-01">Partida Presupuestal:</label>
+                            <select id="partidas" name="partidas">
+                                <?php
+                                require_once("consulta_partida.php");
+
+                                foreach ($flag2 as $key => $val) {
+                                ?>
+
+                                <option value="<?php print($val['id']); ?>">
+                                    <?php print($val['clave']);
+                                        echo " ";
+                                        print($val['nombre']); ?></option>
+                                <?php
+                                }
+
+                                ?>
+
+                            </select>
+
+                        </div>
+
+                        <button class="btn btn-default btn-success" type="button" name="submit"
+                            onclick="ingresar5();">Enviar</button>
 
                     </form>
 

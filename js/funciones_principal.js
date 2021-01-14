@@ -139,7 +139,7 @@ function consolidado() {
     var id_consolidado = selObj.options[selObj.selectedIndex].value;
     
 
-    if (id_consolidado == 0 ) {
+    if (id_consolidado.length == 0 ) {
         alert("El campo Unidad Compradora es invalido");
         document.getElementById('licitacion').focus();
         return;
@@ -160,7 +160,7 @@ function ingresar4() {
     var selObj = document.getElementById('partidas');
     var partida_presupuestal = selObj.options[selObj.selectedIndex].value;
 
-    if (partida_presupuestal == 0){
+    if (partida_presupuestal.length == 0){
         alert("El campo Partida presupuestal");
         document.getElementById('partidas').focus();
         return;
@@ -183,6 +183,36 @@ function ingresar4() {
 
 }); */
 }
+
+function ingresar5() {
+    var selObj = document.getElementById('partidas');
+    var partida_presupuestal = selObj.options[selObj.selectedIndex].value;
+
+    if (partida_presupuestal.length == 0){
+        alert("El campo Partida presupuestal");
+        document.getElementById('partidas').focus();
+        return;
+    }
+
+
+    window.location = "../besa/consulta_contrato_partidas.php?id_partida=" + partida_presupuestal;
+    
+   /* $.ajax({
+
+        url:"../besa/consulta_contrato7.php",
+        type: "POST",
+        data: {
+            partida_presupuestal: partida_presupuestal ,
+        },
+        success: function(respuesta){
+            //$('main').html(respuesta.url);
+            window.location.replace(respuesta);
+        }
+
+}); */
+}
+
+
 
 $("#presupuesto").on({
     "focus": function(event) {

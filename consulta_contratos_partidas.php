@@ -8,203 +8,171 @@
     <meta name="description" content="">
     <title> </title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/estilos.css" rel="stylesheet">
+
     <link href="https://cdn.datos.gob.mx/assets/css/main.css" rel="stylesheet">
     <link href="https://cdn.datos.gob.mx/assets/img/favicon.ico" rel="shortcut icon">
     <link href="https://cdn.datos.gob.mx/bower_components/dgm-footer/dgm-footer.html" rel="import">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/estile.css">
 </head>
 
 
-<body class="front">
-    <main>
-        <nav class="navbar navbar-inverse sub-navbar navbar-fixed-top" style="height: 55px">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                        data-target="#subenlaces">
-                        <span class="sr-only">Interruptor de Navegación</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="principal.php" id="besa">B.E.S.A</a>
-                    <a> <img data-v-4a3754a3="" src="icons/lf.png" alt="logo gobierno de méxico" class="logos"
-                            style="width: 80%;height: 50%; margin-top: -100px; margin-bottom: -25px; margin-left: 420px "></a>
-                </div>
-
-                <div class="collapse navbar-collapse" id="subenlaces" style=" width:110%; margin-top: -30px;">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#">Enlace</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                                aria-expanded="false">Desplegable <span class="caret"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="#">Acción</a></li>
-                                <li><a href="#">Otra acción</a></li>
-                                <li><a href="#">Algo más aquí</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">Enlace separado</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
+<body>
+    <header class="site-header">
+        <div class="contenedor encabezado">
+            <p>
+                B.E.S.A
+            </p>
+            <div class="imagen-header">
+                <img src="img/lf.png" alt="FuncionPublica">
             </div>
-        </nav>
-        <br><br><br><br>
-        <!-- ----------------------------------------------->
-        <!-- ----------------------------------------------->
-        <!--INICIO DE MENU A LA IZQUIERDA-------------------------->
-        <!-- ----------------------------------------------->
-        <!-- ----------------------------------------------->
+            <span></span>
+        </div>
+    </header>
 
-    </main>
-    <div class="barraizquierda">
+
+
+    <!-- Sidebar -->
+    <div class="barra">
 
 
         <!-- Sidebar -->
-        <div class="barra">
 
+        <div class="w3-sidebar w3-bar-block w3-animate-left" style="display:none;z-index:5" id="mySidebar">
+            <button id="ce" class="w3-bar-item w3-button w3-large" onclick="w3_close()">Cerrar &times;</button>
+            <img src="icons/lf.png" alt="sfp" width="145" height="60">
+            <a class="w3-bar-item w3-button"></a>
+            <a href="principal2.php" class="w3-bar-item w3-button">Inicio</a>
+            <a href="alta.html" class="w3-bar-item w3-button">Usuarios</a>
+            <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal2">Contacto</a>
+            <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal3">Nueva Partida</a>
 
-            <!-- Sidebar -->
+            <a href="cerrar.php" class="w3-bar-item w3-button">Logout -></a>
 
-            <div class="w3-sidebar w3-bar-block w3-animate-left" style="display:none;z-index:5" id="mySidebar">
-                <button id="ce" class="w3-bar-item w3-button w3-large" onclick="w3_close()">Cerrar &times;</button>
-                <img src="icons/lf.png" alt="sfp" width="145" height="60">
-                <a class="w3-bar-item w3-button"></a>
-                <a href="#" class="w3-bar-item w3-button">Inicio</a>
-                <a href="alta.html" class="w3-bar-item w3-button">Usuarios</a>
-                <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal2">Contacto</a>
-                <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal3">Nueva Partida</a>
+        </div>
 
-                <a href="cerrar.php" class="w3-bar-item w3-button">Logout -></a>
+        <!-- Page Content -->
+        <div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
 
-            </div>
-
-            <!-- Page Content -->
-            <div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
-
-            <div>
-                <button class="w3-button w3-white w3-xxlarge" onclick="w3_open()">&#9776;</button>
-            </div>
+        <div>
+            <button class="w3-button w3-white w3-xxlarge" onclick="w3_open()">&#9776;</button>
         </div>
     </div>
-    <script>
-    function w3_open() {
-        document.getElementById("mySidebar").style.display = "block";
-        document.getElementById("myOverlay").style.display = "block";
-    }
 
-    function w3_close() {
-        document.getElementById("mySidebar").style.display = "none";
-        document.getElementById("myOverlay").style.display = "none";
-    }
-    </script>
     <!------------------------------------------------------>
     <!------------------------------------------------------>
     <!-- INICIA REGISTRO------------------------------------>
     <!------------------------------------------------------>
     <!------------------------------------------------------>
-    <div id="contepr">
-        <div class="container1">
-            <div class="row">
-                <div class='col-sm-20 col-md-20 col-ld-20'>
-                    <h2 class="fuu"> CONTRATOS POR PARTIDA PRESUPUESTAL</h2>
-                    <div id="Layercf">
-                        <table class="table table-bordered">
-                            <tr>
-                                <th>Clave </th>
-                                <th>Partida Presupuestal</th>
-                                <th>Presupuesto</th>
-                                <th>Consumo Actual</th>
-                            </tr>
-                            <tr>
-                                <td><?php $clave=$_POST["clave"]; echo $clave;?></td>
 
-                                <td><?php $nombre=$_POST["nombre"]; echo $nombre;?></td>
-                                <td><?php $presupuesto=$_POST["presupuesto"]; $presupuestof=number_format($presupuesto); echo $presupuestof;?>
-                                </td>
-                                <td><?php $total=$_POST["total"]; $totalf=number_format($total); echo $totalf;?></td>
-                            </tr>
+    <main class="main-consulta-contratos-partidas">
+        <div class="contenedor-gris-consulta-contratos-partidas">
 
-                        </table>
+            <div class="contenedor-contratos-por-partida-presupuestal-consulta-contratos-partidas">
 
-                        <div class="tabla-consulta-por-vigencia">
-                            <table id="myTable" class="tablemy" style="width:100%">
-                                <thead>
-                                    <tr>
-                                        <th>Número de Contrato</th>
-                                        <th>Objeto de contratación</th>
-                                        <th>Monto máximo</th>
-                                        <th>Partida presupuestal</th>
-                                    </tr>
-                                </thead>
-                            </table>
-                        </div>
+                <h1> CONTRATOS POR PARTIDA PRESUPUESTAL</h1>
 
+                <div class="tabla-contratos-por-partida-presupuestal-consulta-contratos-partidas">
+                    <table class="table table-bordered">
+                        <tr>
+                            <th>Clave </th>
+                            <th>Partida Presupuestal</th>
+                            <th>Presupuesto</th>
+                            <th>Consumo Actual</th>
+                        </tr>
+                        <tr>
+                            <td><?php $clave=$_POST["clave"]; echo $clave;?></td>
 
+                            <td><?php $nombre=$_POST["nombre"]; echo $nombre;?></td>
+                            <td><?php $presupuesto=$_POST["presupuesto"]; $presupuestof=number_format($presupuesto); echo $presupuestof;?>
+                            </td>
+                            <td><?php $total=$_POST["total"]; $totalf=number_format($total); echo $totalf;?></td>
+                        </tr>
+                        
 
-                    </div>
-                    <div class="barra-progreso">
-
-                        <canvas id="myCanvas" width="500" height="200"></canvas>
-                        <script>
-                        var canvas = document.getElementById('myCanvas');
-                        var context = canvas.getContext('2d');
-                        var al = 0;
-                        var start = 4.72;
-                        var cw = context.canvas.width / 2;
-                        var ch = context.canvas.height / 2;
-                        var diff;
-                        var cantidad = '<?=$presupuesto?>';
-                        <?php $total = $_POST["total"];?>
-                        var total = '<?=$total?>';
-                        var valor = 0;
-
-                        function evaluar(total, cantidad) {
-                            return ((total * 100) / cantidad);
-                        }
-
-                        function progressBar() {
-                            diff = (al / 100) * Math.PI * 2;
-                            context.clearRect(0, 0, 400, 200);
-                            context.beginPath();
-                            context.arc(cw, ch, 80, 0, 2 * Math.PI, false);
-                            context.fillStyle = '#FFF';
-                            context.fill();
-                            context.strokeStyle = '#6F7271';
-                            context.stroke();
-                            context.fillStyle = '#000';
-                            context.strokeStyle = '#9D2449';
-                            context.textAlign = 'center';
-                            context.lineWidth = 30;
-                            context.font = '10pt Verdana';
-                            context.beginPath();
-                            context.arc(cw, ch, 80, start, diff + start, false);
-                            context.stroke();
-                            context.fillText(al + '%', cw + 2, ch + 6);
-                            valor = evaluar(total, cantidad);
-                            if (al >= valor) {
-                                clearTimeout(bar);
-                            }
-
-                            al++;
-                        }
-
-                        var bar = setInterval(progressBar, 50);
-                        </script>
-                    </div>
-                    <div class="breggt">
-                        <button type="button" id="bregresar" class="btn btn-primary"
-                            onclick="location.href='principal.php'" name="bregresar"> Regresar </button>
-                    </div>
+                    </table>
                 </div>
+
+                <div class="tabla-consulta-contratos-por-partida-presupuestal-consulta-contratos-partidas">
+                    <table id="myTable" class="tablemy" >
+                        <thead>
+                            <tr>
+                                <th>Número de Contrato</th>
+                                <th>Objeto de contratación</th>
+                                <th>Monto máximo</th>
+                                <th>Partida presupuestal</th>
+                            </tr>
+                           
+                        </thead>
+                        
+                    </table>
+                </div>
+
+
+
+                <div class="barra-progreso-contratos-por-partida-presupuestal-consulta-contratos-partidas">
+
+                    <canvas id="myCanvas" width="500" height="200" class="grafica-c-contrato"></canvas>
+                    <script>
+                    var canvas = document.getElementById('myCanvas');
+                    var context = canvas.getContext('2d');
+                    var al = 0;
+                    var start = 4.72;
+                    var cw = context.canvas.width / 2;
+                    var ch = context.canvas.height / 2;
+                    var diff;
+                    var cantidad = '<?=$presupuesto?>';
+                    <?php $total = $_POST["total"];?>
+                    var total = '<?=$total?>';
+                    var valor = 0;
+
+                    function evaluar(total, cantidad) {
+                        return ((total * 100) / cantidad);
+                    }
+
+                    function progressBar() {
+                        diff = (al / 100) * Math.PI * 2;
+                        context.clearRect(0, 0, 400, 200);
+                        context.beginPath();
+                        context.arc(cw, ch, 80, 0, 2 * Math.PI, false);
+                        context.fillStyle = '#FFF';
+                        context.fill();
+                        context.strokeStyle = '#6F7271';
+                        context.stroke();
+                        context.fillStyle = '#000';
+                        context.strokeStyle = '#9D2449';
+                        context.textAlign = 'center';
+                        context.lineWidth = 30;
+                        context.font = '10pt Verdana';
+                        context.beginPath();
+                        context.arc(cw, ch, 80, start, diff + start, false);
+                        context.stroke();
+                        context.fillText(al + '%', cw + 2, ch + 6);
+                        valor = evaluar(total, cantidad);
+                        if (al >= valor) {
+                            clearTimeout(bar);
+                        }
+
+                        al++;
+                    }
+
+                    var bar = setInterval(progressBar, 50);
+                    </script>
+                </div>
+
+                <div class="botones-contratos-por-partida-presupuestal-consulta-contratos-partidas">
+                    <button type="button" id="bregresar" class="btn btn-primary" onclick="location.href='principal.php'"
+                        name="bregresar"> Regresar </button>
+                </div>
+
             </div>
         </div>
-    </div>
 
 
+    </main>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"
         integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous">
@@ -266,116 +234,61 @@
     });
     </script>
 
-    <footer>
-
-        <div class="contenedor-todo-footer">
-
-            <div class="contenedor-body">
-
-                <div class="columna1">
-                    <h1> </h1>
-                    <img src="itt.png" alt="ITT">
-                    <h1> </h1>
-                    <img src="indice.png" alt="TECNM">
-                    <h1> </h1>
-                    <img src="ff.png" alt="logo gobierno de méxico">
+    <footer class="site-footer">
+        <div class="contenedor display-footer">
+            <div class="footer-img">
+                <div class="im">
+                    <img src="img/itt.png" alt="ittlahuac">
                 </div>
-
-                <div class="columna2">
-                    <h1>B.E.S.A</h1>
-                    <ul class="list-unstyled">
-                        <li>
-                            <p align="center">
-                                <img src="icons/user.svg" alt="">
-                                Responsable del programa: Ing. David Rogelio Rodríguez Arias
-                            </p>
-                        </li>
-                        <li>
-                            <div class="tel">
-                                <p align="justify">
-                                    <img src="icons/mail.svg" alt="">
-                                    drrodriguez@nube.sep.gob.mx
-                            </div>
-                            </p>
-                        </li>
-                        <li>
-                            <div class="tel">
-                                <p align="justify">
-                                    <img src="icons/phone.svg" alt="">
-                                    36018650 ext. 66125
-                            </div>
-                            </p>
-                        </li>
-                    </ul>
+                <div class="im">
+                    <img src="img/indice.png" alt="ittlahuac">
                 </div>
-
-                <div class="columna3">
-                    <h1>Órgano Interno de Control de la SEP</h1>
-                    <ul class="list-unstyled">
-                        <li>
-                            <p align="center">
-                                <img src="icons/home.svg" alt="">
-                                Avenida Universidad #1074, col. Xoco, alcaldía Benito Juárez, C.P. 03330, CDMX
-                            </p>
-                        </li>
-                        </li>
-                        <li>
-                            <div class="tel2">
-                                <p align="justify">
-                                    <img src="icons/mail.svg" alt="">
-                                    arturo.orci@nube.sep.gob.mx
-                            </div>
-                            </p>
-                        </li>
-                        <li>
-                            <div class="tel2">
-                                <p align="justify">
-                                    <img src="icons/phone.svg" alt="">
-                                    36068650 ext.66429
-                            </div>
-                            </p>
-                        </li>
-                    </ul>
-
-                </div>
-
-                <div class="columna4">
-                    <h1>Instituto Tecnológico de Tláhuac</h1>
-                    <ul class="list-unstyled">
-                        <div class="tel2">
-                            <li>
-                                <p align="center">
-                                    <img src="icons/home.svg" alt="">
-                                    Av. Estanislao Ramírez # 301 Colonia Ampliación Selene C.P. 13430 Tláhuac CDMX
-                                </p>
-                            </li>
-                        </div>
-                        <li>
-                            <div class="tel2">
-                                <p align="justify">
-                                    <img src="icons/phone.svg" alt="">
-                                    7312-5614 | 7312-5616 | 5841-0560|
-                            </div>
-                            </p>
-                        </li>
-                    </ul>
+                <div class="im">
+                    <img src="img/ff.png" alt="ittlahuac">
                 </div>
             </div>
 
-        </div>
-
-        <div class="contenedor-footer">
-            <div class="copyright">
-                <a>&copy; 2020 Todos los Derechos Reservados</a>
+            <div class="info-besa">
+                <h4>B.E.S.A</h4>
+                <p><i class="fas fa-user"></i> Responsable del programa: Ing. David Rogelio Rodríguez Arias </p>
+                <p><i class="fas fa-envelope"></i> drrodriguez@nube.sep.gob.mx </p>
+                <p><i class="fas fa-phone-square-alt"></i> 36018650 ext. 66125</p>
             </div>
-            <div class="autores">
-                <a>Antonio Lorenzana Fabio Antonio</a> |
-                <a>Flores Reyes Jahir</a> |
-                <a>Reyes Villafranca Jose Pedro</a>
+
+            <div class="info-sep">
+                <h4>Órgano Interno De Control De La SEP</h4>
+                <p><i class="fas fa-home"></i> Avenida Universidad #1074, col. Xoco, alcaldía Benito Juárez, C.P. 03330,
+                    CDMX </p>
+                <p><i class="fas fa-envelope"></i> arturo.orci@nube.sep.gob.mx</p>
+                <p><i class="fas fa-phone-square-alt"></i> 36068650 ext.66429</p>
+            </div>
+
+            <div class="info-tec">
+                <h4>Instituto Tecnológico de Tláhuac</h4>
+                <p><i class="fas fa-home"></i> Av. Estanislao Ramírez # 301 Colonia Ampliación Selene C.P. 13430 Tláhuac
+                    CDMX</p>
+                <p><i class="fas fa-phone-square-alt"></i> 7312-5614 | 7312-5616 | 5841-0560| </p>
             </div>
         </div>
 
+        <div class="copyright">
+            <p><span>&copy 2020 Todos Los Derechos Reservados</span></p>
+            <p><span>Lorenzana Fabio Enrique</span> | <span>Flores Reyes Jahir</span> | <span> Reyes Villafranca Jose
+                    Pedro</span></p>
+        </div>
     </footer>
+
+    <script>
+    function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("myOverlay").style.display = "block";
+    }
+
+    function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("myOverlay").style.display = "none";
+    }
+    </script>
 </body>
 
 </html>

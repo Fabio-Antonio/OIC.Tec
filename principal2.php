@@ -286,7 +286,7 @@ window.location.replace('index');</script>";
                     <form role="form" id="formulario">
                         <div class="form-group">
                             <label class="control-label" for="email-01">Unidad Compradora:</label>
-                            <select id="unidadcom" name="unidad">
+                            <select id="unidadcom" name="unidad" class="form-control">
                                 <?php
                                 require_once("consulta_principal.php");
 
@@ -433,7 +433,7 @@ window.location.replace('index');</script>";
                                         </div>
                                         
                                     </div>
-                                    <button class="btn btn-primary" data-dismiss="modal">Listo!!</button>
+                                    <button class="btn btn-primary listo-modal" data-dismiss="modal">Listo!!</button>
                                 </div>
                                 <!--fin dentro pestañas -->
 
@@ -463,7 +463,7 @@ window.location.replace('index');</script>";
                     <form role="form" id="formulario">
                         <div class="form-group">
                             <label class="control-label" for="email-01">Licitacion:</label>
-                            <select id="licitacion" name="licitacion">
+                            <select id="licitacion" name="licitacion" class="form-control">
                                 <?php
                                 require_once("consulta_principal.php");
 

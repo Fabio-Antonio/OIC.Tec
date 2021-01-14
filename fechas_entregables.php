@@ -215,7 +215,7 @@
             </div>
             <div class="barra-progreso">
 
-                <canvas id="myCanvas" width="500" height="200"></canvas>
+                <canvas id="myCanvas" width="500" height="200" class="barra-progres"></canvas>
                 <script>
                 var canvas = document.getElementById('myCanvas');
                 var context = canvas.getContext('2d');

@@ -512,6 +512,9 @@ box-shadow: 1px 1px 3px 1.5px rgba(71, 173, 92, 1);
   font-weight: 300;
 }
 
+.listo-modal{
+  margin-left: 450px;
+}
 
 /*Contenedor capturas*/
 .capturas{
@@ -722,6 +725,139 @@ Adjuntos al consolidado
         padding-left: 55px;
       }
   }
+
+
+  /*CAPTURA PRO MONT*/
+  .main-captura-pro-montt {
+    min-height: calc(100px - 100px -100%);
+    width: 1080px;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    }
+    .contendedor-gris-captura-pro-montt {
+      min-height: calc(100px - 100px -100%);
+    width: 1080px;
+    display: grid;
+    grid-gap: 10px;
+    background-color: #d8d8d8;
+    }
+.contenedro-proveedor-adjudicado-captura-pro-montt{
+  display: grid;
+  grid-gap: 10px;
+  grid-template-areas: 
+  "proveedor-adjudicado proveedor-adjudicado"
+  "nombre-proveedor-adjudicado-captura-pro-montt rfc-proveedor-adjudicado-captura-pro-montt"
+  "botones-proveedor-adjudicado-captura-pro-montt botones-proveedor-adjudicado-captura-pro-montt";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 150px 100px 100px ;
+}
+.contenedro-proveedor-adjudicado-captura-pro-montt h1{
+  grid-area: proveedor-adjudicado;
+  text-align: center;
+}
+.contenedro-proveedor-adjudicado-captura-pro-montt .nombre-proveedor-adjudicado-captura-pro-montt{
+  grid-area: nombre-proveedor-adjudicado-captura-pro-montt;
+}
+.contenedro-proveedor-adjudicado-captura-pro-montt .rfc-proveedor-adjudicado-captura-pro-montt{
+  grid-area: rfc-proveedor-adjudicado-captura-pro-montt;
+}
+.contenedro-proveedor-adjudicado-captura-pro-montt .botones-proveedor-adjudicado-captura-pro-montt{
+  grid-area: botones-proveedor-adjudicado-captura-pro-montt;
+}
+
+.contendedor-gris-captura-pro-montt h1::after {
+  content: "";
+  display: block;
+  width: 10rem;
+  height: 0.2rem;
+  background-color: #0c9;
+  }
+  
+  .contendedor-gris-captura-pro-montt input {
+  width: 490px;
+  height: 40px;
+  background-color: #fff;
+  color: #000;
+  border: 0.2rem solid rgba(0, 0, 0, 0.15);
+  padding: 1rem 0.2rem;
+  border-radius: 1rem;
+  }
+
+  .nombre-proveedor-adjudicado-captura-pro-montt{
+    padding-left: 25px;
+  }
+  .botones-proveedor-adjudicado-captura-pro-montt{
+    padding-left: 400px;
+  }
+
+     /*CAPTURA PRO MONT IPAD*/
+     @media screen and (max-width: 768px){
+      .main-captura-pro-montt {
+        min-height: calc(100px - 100px -100%);
+        width: 760px;
+        margin: 0 auto;
+        }
+        .contendedor-gris-captura-pro-montt{
+          min-height: calc(100px - 100px -100%);
+        width: 760px;
+        grid-gap:10px;
+        
+        
+        }
+        .contenedro-proveedor-adjudicado-captura-pro-montt{
+          display: grid;
+          grid-gap: 10px;
+          grid-template-columns: 370px 370px;
+          grid-template-rows: 150px 100px 100px ;
+        }
+
+        .contendedor-gris-captura-pro-montt input {
+          width: 350px;
+          height: 40px;
+          }
+          .botones-proveedor-adjudicado-captura-pro-montt{
+            padding-left: 250px;
+          }
+        }
+
+
+        /*CAPTURA PRO MONT CELULAR*/
+
+      @media screen and (max-width: 375px){
+        .main-captura-pro-montt {
+          min-height: calc(100px - 100px -100%);
+          width: 365px;
+          margin: 0 auto;
+          }
+        .contendedor-gris-captura-pro-montt{
+          min-height: calc(100px - 100px -100%);
+          width: 365px;
+          }
+    
+          .contenedro-proveedor-adjudicado-captura-pro-montt{
+            display: grid;
+            grid-gap: 10px;
+            grid-template-areas: 
+            "proveedor-adjudicado"
+            "nombre-proveedor-adjudicado-captura-pro-montt" 
+            "rfc-proveedor-adjudicado-captura-pro-montt"
+            "botones-proveedor-adjudicado-captura-pro-montt";
+            grid-template-columns: 360px;
+            grid-template-rows: 150px 100px 100px ;
+          }
+          
+            .contendedor-gris-captura-pro-montt input {
+            width: 360px;
+            }
+          
+            .nombre-proveedor-adjudicado-captura-pro-montt{
+              padding-left: 0px;
+            }
+            .botones-proveedor-adjudicado-captura-pro-montt{
+              padding-left: 60px;
+            }
+
+        }
 
 
   /*Comprobacion
@@ -1058,6 +1194,173 @@ Documentos AdicionaleS celular*/
     }
 
 }
+
+/*CONSULTA CONTRATOS PARTIDAS */
+.main-consulta-contratos-partidas{
+  min-height: calc(100px - 100px -100%);
+  width: 1180px;
+  margin: 0 auto;
+  padding-bottom: 30px;
+  
+  }
+  .contenedor-gris-consulta-contratos-partidas{
+    width: 1180px;
+  min-height: calc(100px - 100px -100%);
+  background-color: #d8d8d8;
+  padding-bottom: 20px;
+}
+
+.contenedor-contratos-por-partida-presupuestal-consulta-contratos-partidas{
+  display: grid;
+  grid-gap: 10px;
+  grid-template-areas: 
+  "contratos-por-partida-presupuestal"
+  "tabla-contratos-por-partida-presupuestal-consulta-contratos-partidas"
+  "tabla-consulta-contratos-por-partida-presupuestal-consulta-contratos-partidas"
+  "barra-progreso-contratos-por-partida-presupuestal-consulta-contratos-partidas"
+  "botones-contratos-por-partida-presupuestal-consulta-contratos-partidas";
+  grid-template-columns: 1fr;
+  grid-template-rows: 150px 1fr 1fr;
+}
+.contenedor-contratos-por-partida-presupuestal-consulta-contratos-partidas h1{
+  grid-area: contratos-por-partida-presupuestal;
+  text-align: center;
+}
+.contenedor-contratos-por-partida-presupuestal-consulta-contratos-partidas .tabla-contratos-por-partida-presupuestal-consulta-contratos-partidas{
+  grid-area: tabla-contratos-por-partida-presupuestal-consulta-contratos-partidas;
+ 
+}
+.contenedor-contratos-por-partida-presupuestal-consulta-contratos-partidas .tabla-consulta-contratos-por-partida-presupuestal-consulta-contratos-partidas{
+  grid-area: tabla-consulta-contratos-por-partida-presupuestal-consulta-contratos-partidas;
+}
+.contenedor-contratos-por-partida-presupuestal-consulta-contratos-partidas .barra-progreso-contratos-por-partida-presupuestal-consulta-contratos-partidas{
+  grid-area: barra-progreso-contratos-por-partida-presupuestal-consulta-contratos-partidas;
+}
+.contenedor-contratos-por-partida-presupuestal-consulta-contratos-partidas .botones-contratos-por-partida-presupuestal-consulta-contratos-partidas{
+  grid-area: botones-contratos-por-partida-presupuestal-consulta-contratos-partidas;
+}
+
+.tabla-contratos-por-partida-presupuestal-consulta-contratos-partidas,
+.tabla-consulta-contratos-por-partida-presupuestal-consulta-contratos-partidas{
+  min-height: calc(100px - 100px -100%);
+}
+
+  .contenedor-gris-consulta-contratos-partidas h1::after {
+    content: "";
+    display: block;
+    width: 10rem;
+    height: 0.2rem;
+    background-color: #0c9;
+    }
+
+    .tabla-contratos-por-partida-presupuestal-consulta-contratos-partidas table{
+      width: 1130px;
+      background: #FFFFFF;
+    }
+    .tabla-contratos-por-partida-presupuestal-consulta-contratos-partidas{
+      padding-left: 25px;
+    }
+    .tabla-consulta-contratos-por-partida-presupuestal-consulta-contratos-partidas{
+      padding-left: 25px;
+      width: 1140px;
+    }
+    .barra-progreso-contratos-por-partida-presupuestal-consulta-contratos-partidas{
+      padding-left: 270px;
+    }
+
+.botones-contratos-por-partida-presupuestal-consulta-contratos-partidas{
+  padding-left: 460px;
+}
+
+
+
+      /*CONSULTA CONTRATOS PARTIDAS IPAD*/
+      @media screen and (max-width: 768px){
+        .main-consulta-contratos-partidas {
+          min-height: calc(100px - 100px -100%);
+          width: 760px;
+          margin: 0 auto;
+          }
+          .contenedor-gris-consulta-contratos-partidas{
+         min-height: calc(100px - 100px -100%);
+          width: 760px;
+          grid-gap:10px;
+          
+         
+          }
+          .contenedor-contratos-por-partida-presupuestal-consulta-contratos-partidas{
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: 730px;
+            grid-template-rows: 150px ;
+          }
+          
+          
+          .tabla-consulta-contratos-por-partida-presupuestal-consulta-contratos-partidas{
+            padding-left: 25px;
+            width: 730px;
+          }
+          .barra-progreso-contratos-por-partida-presupuestal-consulta-contratos-partidas{
+            padding-left: 170px;
+          }
+
+          
+          .botones-contratos-por-partida-presupuestal-consulta-contratos-partidas{
+            padding-left: 350px;
+          }
+          }
+
+
+          /*CONSULTA CONTRATOS PARTIDAS CELULAR*/
+
+        @media screen and (max-width: 375px){
+          .main-consulta-contratos-partidas {
+            min-height: calc(100px - 100px -100%);
+            width: 365px;
+            margin: 0 auto;
+            }
+            .contenedor-gris-consulta-contratos-partidas{
+           min-height: calc(100px - 100px -100%);
+            width: 365px;
+            grid-gap:10px;
+            
+           
+            }
+            .contenedor-contratos-por-partida-presupuestal-consulta-contratos-partidas{
+              display: grid;
+              grid-gap: 10px;
+              grid-template-columns: 360px;
+              grid-template-rows: 200px ;
+            }
+            
+            .tabla-contratos-por-partida-presupuestal-consulta-contratos-partidas table{
+              width: 10px;
+              padding-left: 0px;
+              font-size: 12px;
+            }
+            
+            .tabla-consulta-contratos-por-partida-presupuestal-consulta-contratos-partidas{
+              padding-left: 0px;
+              width: 150px;
+              font-size: 5px;
+            }
+            .barra-progreso-contratos-por-partida-presupuestal-consulta-contratos-partidas{
+              padding-left: 50px;
+              
+            }
+            .grafica-c-contrato{
+              width:250px; 
+              height:100px;
+            }
+  
+            
+            .botones-contratos-por-partida-presupuestal-consulta-contratos-partidas{
+              padding-left: 120px;
+            }
+            }
+          
+          
+
 
 
 
@@ -1998,6 +2301,7 @@ Documentos AdicionaleS celular*/
   margin: 0 auto;
   padding-bottom: 20px;
   
+  
   }
   .contenedor-gris-informe-consolidado-one{
   width: 1150px;
@@ -2011,6 +2315,7 @@ Documentos AdicionaleS celular*/
   "botones-informe" ;
   grid-template-rows: 300px 1fr 250px 50px;
   grid-template-columns: 1fr;
+  
   }
   
   .contenedor-gris-informe-consolidado-one .conenedor-informe-consolidado{
@@ -2084,7 +2389,7 @@ Documentos AdicionaleS celular*/
   }
   
   .tabla-contrato  table{
-  font-size: 12px;
+  font-size: 11px;
   
   }
   .tabla-contrato table th {
@@ -2140,7 +2445,7 @@ Documentos AdicionaleS celular*/
             text-align: center;
           }
           .tabla-contrato  table{
-            font-size: 6px;
+            font-size: 5px;
             }
             .tabla-contrato table th {
             text-align: center;
@@ -2189,8 +2494,8 @@ Documentos AdicionaleS celular*/
           
           }
           .tabla-consolidador{
-            width: 301px;
-            font-size: 8px;
+            width: 200px;
+            font-size: 7px;
           }
           .conenedor-informe-consolidado h1{
             width: 371px;
@@ -2229,16 +2534,219 @@ Documentos AdicionaleS celular*/
             }
             .barra-progreso {
               width: 370px;
-              padding-top: 50px;
+              padding-top: 10px;
+              
+            
               }
-            .CanvasMy{
-              height: 100px;
-            }
+              .barra-progres{
+                width: 350px;
+                padding-left: 0;
+                margin: 0 auto;
+                margin-left: -50px;
+              }
             .botones-informe{
               width: 200px;
             }
           }
+
+/*INFORME 70-30*/
+.main-informe70-30 {
+  min-height: calc(100px - 100px -100%);
+  width: 1050px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+ 
   
+  }
+  .contenedor-gris-informe70-30{
+  width: 1150px;
+  min-height: calc(100px - 100px -100%);
+  display: grid;
+  background-color: #d8d8d8;
+  
+  }
+
+  .contenedor-informe70-30{
+    display: grid;
+    min-height: calc(100px - 100px -100%);
+    grid-gap: 10px;
+    grid-template-areas: 
+    "informe-procedimiento70-30"
+    "tabla-informe70-30"
+    "contratos"
+    "tabla-contratos-30-informe70-30"
+    "tabla-contratos-70-informe70-30"
+    "graficas"
+    "grafica-30-informe70-30"
+    "grafica-70-informe70-30"
+    "grafica-total-informe70-30"
+    "botones-informe70-30";
+    grid-template-columns: 1fr;
+  }
+
+.contenedor-informe70-30 .titulo-uno{
+  grid-area: informe-procedimiento70-30;
+  text-align: center;
+}
+.contenedor-informe70-30 .tabla-informe70-30{
+  grid-area: tabla-informe70-30;
+}
+.contenedor-informe70-30 .titulo-dos{
+  grid-area: contratos;
+  text-align: center;
+}
+.contenedor-informe70-30 .tabla-contratos-30-informe70-30{
+  grid-area: tabla-contratos-30-informe70-30;
+}
+.contenedor-informe70-30 .tabla-contratos-70-informe70-30{
+  grid-area: tabla-contratos-70-informe70-30;
+}
+.contenedor-informe70-30 .titulo-tres{
+  grid-area: graficas;
+  text-align: center;
+}
+.contenedor-informe70-30 .grafica-30-informe70-30{
+  grid-area: grafica-30-informe70-30;
+}
+.contenedor-informe70-30 .grafica-70-informe70-30{
+  grid-area: grafica-70-informe70-30;
+}
+.contenedor-informe70-30 .grafica-total-informe70-30{
+  grid-area: grafica-total-informe70-30;
+}
+.contenedor-informe70-30 .botones-informe70-30{
+  grid-area: botones-informe70-30;
+}
+
+.contenedor-gris-informe70-30 h1::after {
+  content: "";
+  display: block;
+  width: 10rem;
+  height: 0.2rem;
+  background-color: #0c9;
+  }
+  .botones-informe70-30{
+    padding-left: 500px;
+    margin-bottom: 50px;
+  }
+  .tabla-informe70-30 table{
+    width: 1100px;
+    font-size: 15px
+  }
+  .tabla-informe70-30,
+  .tabla-contratos-30-informe70-30,
+  .tabla-contratos-70-informe70-30{
+    padding-left: 25px;
+  }
+  .tabla-informe70-30,
+  .tabla-contratos-30-informe70-30{
+  min-height: calc(100px - 100px -100%);
+  }
+  .tabla-contratos-30-informe70-30,
+  .tabla-contratos-70-informe70-30{
+    font-size: 15px;
+    width: 1100px;
+  }
+  .grafica-treinta,
+  .grafica-setenta,
+  .grafica-total{
+    height: 300px;
+    width: 1080px;
+    margin-left:30px;
+  }
+
+   /*INFORME 70-30 IPAD*/
+   @media screen and (max-width: 768px){
+    .main-informe70-30 {
+      min-height: calc(100px - 100px -100%);
+      width: 770px;
+      margin: 0 auto;
+      padding-bottom: 20px;
+      }
+      .contenedor-gris-informe70-30{
+        width: 770px;
+        min-height: calc(100px - 100px -100%);
+        display: grid;
+        background-color: #d8d8d8;
+        }
+      
+        .contenedor-informe70-30{
+          width: 770px;
+          min-height: calc(100px - 100px -100%);
+          grid-gap: 10px;
+          grid-template-columns: 770px;
+        }
+        .botones-informe70-30{
+          padding-left: 260px;
+          margin-bottom: 50px;
+        }
+        .tabla-informe70-30 table{
+          width: 700px;
+          font-size: 15px
+        }
+        
+        .tabla-contratos-30-informe70-30,
+        .tabla-contratos-70-informe70-30{
+          font-size: 15px;
+          width: 700px;
+        }
+        
+  .grafica-treinta,
+  .grafica-setenta,
+  .grafica-total{
+    height: 300px;
+    width: 680px;
+    margin-left:30px;
+  }
+      }
+
+      /*INFORME 70-30 PARA CELULAR*/
+  @media screen and (max-width: 375px){
+    .main-informe70-30 {
+      min-height: calc(100px - 100px -100%);
+      width: 371px;
+      margin: 0 auto;
+      padding-bottom: 20px;
+      }
+      .contenedor-gris-informe70-30{
+        width: 371px;
+        min-height: calc(100px - 100px -100%);
+        
+        }
+        .contenedor-informe70-30{
+          width: 371px;
+          min-height: calc(100px - 100px -100%);
+          grid-gap: 10px;
+          grid-template-columns: 371px;
+        }
+
+        .botones-informe70-30{
+          padding-left: 120px;
+          margin-bottom: 50px;
+        }
+        .tabla-informe70-30 table{
+          width: 100px;
+          font-size: 8px
+        }
+        
+        .tabla-contratos-30-informe70-30,
+        .tabla-contratos-70-informe70-30{
+          font-size: 10px;
+          width: 300px;
+          overflow: scroll;
+        }
+        
+  .grafica-treinta,
+  .grafica-setenta,
+  .grafica-total{
+    height: 200px;
+    width: 300px;
+    margin-left:30px;
+  }
+        
+      }
+
+
           /*LECTURA*/
 .main-lectura{
   min-height: calc(100px - 100px -100%);
@@ -3280,6 +3788,156 @@ Documentos AdicionaleS celular*/
     }
             }
 
+/*TOP POR CONTRATOS*/
+
+.main-top-por-contratos{
+  min-height: calc(100px - 100px -100%);
+  width: 1180px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  }
+  .contenedor-gris-top-por-contratos{
+    width: 1180px;
+  min-height: calc(100px - 100px -100%);
+  padding-bottom: 20px;
+  background-color: #d8d8d8;
+}
+
+.contenedor-top-por-contratos-tp{
+  display: grid;
+  min-height: calc(100px - 100px -100%);
+  grid-gap: 10px;
+  grid-template-areas: 
+  "top-montos-por-contrato"
+  "tabla-contratos-mas-altos-top-por-contratos"
+  "grafica-barra-top-por-contrato"
+  "botones-top-por-contratos";
+  grid-template-columns: 1160px;
+  grid-template-rows: 150px ;
+}
+
+.contenedor-top-por-contratos-tp h1{
+  grid-area: top-montos-por-contrato;
+  text-align: center;
+}
+.contenedor-top-por-contratos-tp .tabla-contratos-mas-altos-top-por-contratos{
+  grid-area: tabla-contratos-mas-altos-top-por-contratos;
+}
+.contenedor-top-por-contratos-tp .grafica-barra-top-por-contrato{
+  grid-area: grafica-barra-top-por-contrato;
+}
+.contenedor-top-por-contratos-tp .botones-top-por-contratos{
+  grid-area: botones-top-por-contratos;
+}
+.grafica-barras{
+  height: 500px;
+  width: 1140px;
+}
+.Display{
+  font-size: 15px;
+  width: 100px;
+}
+.tabla-contratos-mas-altos-top-por-contratos,
+.grafica-barras{
+  min-height: calc(100px - 100px -100%);
+  padding-left: 25px;
+}
+
+.botones-top-por-contratos{
+  padding-left: 560px;
+}
+.contenedor-gris-top-por-contratos h1::after {
+  content: "";
+  display: block;
+  width: 10rem;
+  height: 0.2rem;
+  background-color: #0c9;
+  }
+
+/*TOP POR CONTRATOS IPAD*/
+@media screen and (max-width: 768px){
+  .main-top-por-contratos {
+    min-height: calc(100px - 100px -100%);
+    width: 760px;
+    margin: 0 auto;
+    }
+    .contenedor-gris-top-por-contratos{
+      min-height: calc(100px - 100px -100%);
+    width: 760px;
+    grid-gap:10px;
+    
+    }
+
+    .contenedor-top-por-contratos-tp{
+      display: grid;
+      min-height: calc(100px - 100px -100%);
+      grid-gap: 10px;
+      grid-template-columns: 760px;
+      grid-template-rows: 150px ;
+    }
+
+    .grafica-barras{
+      height: 500px;
+      width: 770px;
+    }
+    .Display{
+      font-size: 8px;
+      
+    }
+    .tabla-contratos-mas-altos-top-por-contratos,
+    .grafica-barras{
+      min-height: calc(100px - 100px -100%);
+      padding-left: 0px;
+    }
+    
+    .botones-top-por-contratos{
+      padding-left: 360px;
+    }
+
+  }
+
+   /*TOP POR CONTRATOS CELULAR*/
+   @media screen and (max-width: 375px){
+    .main-top-por-contratos {
+      min-height: calc(100px - 100px -100%);
+      width: 365px;
+      margin: 0 auto;
+      }
+      .contenedor-gris-top-por-contratos{
+        min-height: calc(100px - 100px -100%);
+      width: 365px;
+      }
+
+      .contenedor-top-por-contratos-tp{
+        display: grid;
+        min-height: calc(100px - 100px -100%);
+        grid-gap: 10px;
+        grid-template-columns: 360px;
+        grid-template-rows: 150px ;
+      }
+  
+      .grafica-barras{
+        height: 500px;
+        width: 360px;
+        font-size: 8px;
+      }
+      .Display{
+        font-size: 7px;
+        
+        
+      }
+      
+      .tabla-contratos-mas-altos-top-por-contratos,
+      .grafica-barras{
+        min-height: calc(100px - 100px -100%);
+        padding-left: 0px;
+      }
+      
+      .botones-top-por-contratos{
+        padding-left: 100px;
+      }
+
+    }
 
 
 

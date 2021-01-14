@@ -122,28 +122,14 @@
 
                         </div>
                     </div>
+
                 </div>
-<<<<<<< HEAD
-=======
-                <div class="tab-pane" id="tab-04">
-                 <form   id="pdf" action="#">
-                  <h1><strong> SUBIR ARCHIVO PDF </strong></h1>
-                  <input type="file" name="pdf_archivo" id="pdf_achivo" accept=".pdf" for="file-01" data-toggle="tooltip" data-placement="top" title="Solo archivos PDF">
-                 <input class="form-control" placeholder="Escriba el número de contrato" type="text" name="numero_contrato" id="contrato" required pattern="[A-Za-z0-9]*">
-                  <button id="E" class="btn btn-primary" type="submit">Enviar</button>
-                    <button id="bre" class="btn btn-primary" type="button" onclick="location.href='principal2.php'">Regresar</button>
-</form>
 
-              </div>
-              </div>
-            </div> <!--fin dentro pestañas -->
->>>>>>> a08fbc4ff9a03605d7a7dd56a63bb7bb2ec2d69b
             </div>
-
-            <!--fin dentro pestañas -->
-
-
         </div>
+
+
+
     </main>
 
 
@@ -193,9 +179,6 @@
 
 
 
-<<<<<<< HEAD
-
-
 
     <script src="https://kit.fontawesome.com/263207fda3.js" crossorigin="anonymous"></script>
     <script>
@@ -213,8 +196,8 @@
     <script src="https://cdn.datos.gob.mx/assets/js/main.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-=======
-      <!--Modals -->
+
+    <!--Modals -->
 
 
     <div class="modal fade" role="dialog" id="my-modal" aria-labelledby="modal-title">
@@ -272,12 +255,11 @@
     </div>
 
 
-        <!--Fin cargador de archivos -->
-       
-          <script src="https://cdn.datos.gob.mx/assets/js/main.js"></script>
-          <script src="js/bootstrap.min.js"></script>
-          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
->>>>>>> a08fbc4ff9a03605d7a7dd56a63bb7bb2ec2d69b
+    <!--Fin cargador de archivos -->
+
+    <script src="https://cdn.datos.gob.mx/assets/js/main.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link href="https://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" rel="Stylesheet">
     </link>

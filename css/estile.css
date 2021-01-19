@@ -1243,6 +1243,7 @@ Documentos AdicionaleS celular*/
 .tabla-contratos-por-partida-presupuestal-consulta-contratos-partidas,
 .tabla-consulta-contratos-por-partida-presupuestal-consulta-contratos-partidas{
   min-height: calc(100px - 100px -100%);
+  text-align: center;
 }
 
   .contenedor-gris-consulta-contratos-partidas h1::after {
@@ -1256,6 +1257,7 @@ Documentos AdicionaleS celular*/
     .tabla-contratos-por-partida-presupuestal-consulta-contratos-partidas table{
       width: 1130px;
       background: #FFFFFF;
+      
     }
     .tabla-contratos-por-partida-presupuestal-consulta-contratos-partidas{
       padding-left: 25px;
@@ -2039,108 +2041,40 @@ Documentos AdicionaleS celular*/
   .contenedor-gris-fundamentos-procedimientos{
   width: 1180px;
   min-height: calc(100px - 100px -100%);
-  display: grid;
   grid-gap:10px;
   background-color: #d8d8d8;
-  grid-template-areas: 
-  "contenedor-fundamento-legal-fundamentos-procedimientos"
-  "contenedor-procedimientos-contratacion-fundamentos-procedimientos"
-  ;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(2, 1fr);
+  padding-bottom: 30px;
   }
 
-  .contenedor-gris-fundamentos-procedimientos .contenedor-fundamento-legal-fundamentos-procedimientos{
-    grid-area: contenedor-fundamento-legal-fundamentos-procedimientos;
-  }
-  .contenedor-gris-fundamentos-procedimientos .contenedor-procedimientos-contratacion-fundamentos-procedimientos{
-    grid-area: contenedor-procedimientos-contratacion-fundamentos-procedimientos;
-  }
-
-  .contenedor-fundamento-legal-fundamentos-procedimientos{
+  .contenedor-fundamentos-procedimientos{
     display: grid;
-    grid-template-areas: 
-    "fundamento-legal fundamento-legal"
-    "fundamento-fundamento-legal-fp fecha-fundamento-legal-fp"
-    "descripcion-fundamento-legal-fp descripcion-fundamento-legal-fp"
-    "botones-fundamento-legal-fp botones-fundamento-legal-fp";
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 150px 100px 200px;
+    grid-template-areas:
+    "procedimiento-de-contratacion" 
+    "tabla-procedimiento-contratacion-fundamentos-procedimientos"
+    "botones-procedimiento-contratacion-fundamento-procedimiento";
+    grid-template-columns: 1fr;
+    grid-template-rows: 150px ;
   }
 
-  .contenedor-fundamento-legal-fundamentos-procedimientos h1{
-    grid-area: fundamento-legal;
+  .contenedor-fundamentos-procedimientos h1{
+    grid-area: procedimiento-de-contratacion;
     text-align: center;
   }
-  .contenedor-fundamento-legal-fundamentos-procedimientos .fundamento-fundamento-legal-fp{
-    grid-area: fundamento-fundamento-legal-fp;
+  .contenedor-fundamentos-procedimientos .tabla-procedimiento-contratacion-fundamentos-procedimientos{
+    grid-area: tabla-procedimiento-contratacion-fundamentos-procedimientos;
   }
-  .contenedor-fundamento-legal-fundamentos-procedimientos .fecha-fundamento-legal-fp{
-    grid-area: fecha-fundamento-legal-fp;
+  .contenedor-fundamentos-procedimientos .botones-procedimiento-contratacion-fundamento-procedimiento{
+    grid-area: botones-procedimiento-contratacion-fundamento-procedimiento;
   }
-  .contenedor-fundamento-legal-fundamentos-procedimientos .descripcion-fundamento-legal-fp{
-    grid-area: descripcion-fundamento-legal-fp;
-  }
-  .contenedor-fundamento-legal-fundamentos-procedimientos .botones-fundamento-legal-fp{
-    grid-area: botones-fundamento-legal-fp;
-  }
-
-  .contenedor-procedimientos-contratacion-fundamentos-procedimientos{
-    display: grid;
-    grid-template-areas: 
-    "procedimientos-contratacion procedimientos-contratacion" 
-    "procedimientos-procedimientos-contratacion-fp fundamento-legal-procedimientos-contratacion-fp"
-    "correspondiente-al-informe-procedimientos-contratacion-fp ."
-    "botones-procedimiento-contratacion-fp botones-procedimiento-contratacion-fp";
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 150px 100px 200px 100px;
-  }
-
-  .contenedor-procedimientos-contratacion-fundamentos-procedimientos h1{
-    grid-area: procedimientos-contratacion;
-    text-align: center;
-  }
-  .contenedor-procedimientos-contratacion-fundamentos-procedimientos .procedimientos-procedimientos-contratacion-fp{
-    grid-area: procedimientos-procedimientos-contratacion-fp;
-  }
-  .contenedor-procedimientos-contratacion-fundamentos-procedimientos .fundamento-legal-procedimientos-contratacion-fp{
-    grid-area: fundamento-legal-procedimientos-contratacion-fp;
-  }
-  .contenedor-procedimientos-contratacion-fundamentos-procedimientos .correspondiente-al-informe-procedimientos-contratacion-fp{
-    grid-area: correspondiente-al-informe-procedimientos-contratacion-fp;
-    
-  }
-  .contenedor-procedimientos-contratacion-fundamentos-procedimientos .botones-procedimiento-contratacion-fp{
-    grid-area: botones-procedimiento-contratacion-fp;
-  }
-  .correspondiente-al-informe-procedimientos-contratacion-fp{
-    display: grid;
-    grid-template-areas: 
-    "correspondiente-al-informe correspondiente-al-informe"
-    "setenta treinta";
-    grid-template-columns: repeat(2,190px);
-    grid-template-rows: 50px;
-  }
-  .correspondiente-al-informe-procedimientos-contratacion-fp label{
-    grid-area: correspondiente-al-informe;
-  }
-  .correspondiente-al-informe-procedimientos-contratacion-fp .setenta{
-    grid-area: setenta;
-  }
-  .correspondiente-al-informe-procedimientos-contratacion-fp .treinta{
-    grid-area: treinta;
-  }
-  .fundamento-fundamento-legal-fp,
-  .descripcion-fundamento-legal-fp,
-  .procedimientos-procedimientos-contratacion-fp,
-  .correspondiente-al-informe-procedimientos-contratacion-fp{
+  .tabla-procedimiento-contratacion-fundamentos-procedimientos{
+    width: 1150px;
     padding-left: 25px;
+    text-align: center;
+    min-height: calc(100px - 100px -100%);
   }
-  .botones-fundamento-legal-fp,
-  .botones-procedimiento-contratacion-fp{
-    padding-left: 450px;
-  }
-
+.botones-procedimiento-contratacion-fundamento-procedimiento{
+  padding-left: 460px;
+}
   
   .contenedor-gris-fundamentos-procedimientos h1::after {
     content: "";
@@ -2150,145 +2084,70 @@ Documentos AdicionaleS celular*/
     background-color: #0c9;
     }
 
-    .contenedor-gris-fundamentos-procedimientos textarea{
-      width: 1120px;
-      height: 150px;
-      background-color: #fff;
-      color: #000;
-      border: 0.2rem solid rgba(0, 0, 0, 0.15);
-      padding: 1rem 0.2rem;
-      border-radius: 1rem;
-      }
-    
-    .contenedor-gris-fundamentos-procedimientos input {
-    width: 550px;
-    height: 40px;
-    background-color: #fff;
-    color: #000;
-    border: 0.2rem solid rgba(0, 0, 0, 0.15);
-    padding: 1rem 0.2rem;
-    border-radius: 1rem;
-    }
-    
-    .contenedor-gris-fundamentos-procedimientos select
-    {
-    width: 550px;
-    height: 40px;
-    background-color: #fff;
-    color: #000;
-    border: 0.2rem solid rgba(0, 0, 0, 0.15);
-    border-radius: 1rem;
-    }
-
-    .setenta input{
-      width: 40px;
-      margin-left: 10px;
-      text-align: center;
-    }
-    .treinta input{
-      width: 40px;
-      margin-left: 10px;
-    }
+   
     
 
          /*FUNDAMENTOS PROCEDIMIENTOS IPAD*/
  @media screen and (max-width: 768px){
   .main-fundamentos-procedimientos {
-    height: 115vh;
+    min-height: calc(100px - 100px -100%);
     width: 760px;
     margin: 0 auto;
     }
     .contenedor-gris-fundamentos-procedimientos{
-    height: 110vh;
+    min-height: calc(100px - 100px -100%);
     width: 760px;
-    grid-template-columns: 380px 380px;
-     grid-template-rows: 550px;
+    
     }
+    .contenedor-fundamentos-procedimientos{
+      display: grid;
+      grid-template-columns: 760px;
+      grid-template-rows: 150px ;
+    }
+    .tabla-procedimiento-contratacion-fundamentos-procedimientos{
+      width: 740px;
+      padding-left: 25px;
+      text-align: center;
+      min-height: calc(100px - 100px -100%);
+      padding-bottom: 30px;
+      font-size: 15px;
+    }
+  .botones-procedimiento-contratacion-fundamento-procedimiento{
+    padding-left: 320px;
+  }
 
-    .contenedor-gris-fundamentos-procedimientos textarea{
-      width: 700px;
-      height: 150px;
+    
       
-      }
-      .contenedor-gris-fundamentos-procedimientos input {
-      width: 350px;
-      height: 40px;
-     
-      }
-      .contenedor-gris-fundamentos-procedimientos select
-      {
-      width: 350px;
-      height: 40px;
-      }
-
-      .botones-fundamento-legal-fp,
-      .botones-procedimiento-contratacion-fp{
-    padding-left: 260px;
-  }
-  .setenta input{
-    width: 30px;
-    margin-left: 0px;
-    text-align: center;
-  }
-  .treinta input{
-    width: 30px;
-    margin-left: 5px;
-  }
   }
 
   /*FUNDAMENTOS PROCEDIMIENTOS CELULAR*/
   @media screen and (max-width: 375px){
     .main-fundamentos-procedimientos {
-      height:185vh;
+      min-height: calc(100px - 100px -100%);
       width: 370px;
       margin: 0 auto;
       }
       .contenedor-gris-fundamentos-procedimientos{
-      height: 180vh;
+      min-height: calc(100px - 100px -100%);
       width: 370px;
-      grid-template-columns: 360px;
-      grid-template-rows: 600px;
+      
       }
-      .contenedor-fundamento-legal-fundamentos-procedimientos{
+      .contenedor-fundamentos-procedimientos{
         display: grid;
-        grid-template-areas: 
-        "fundamento-legal"
-        "fundamento-fundamento-legal-fp" 
-        "fecha-fundamento-legal-fp"
-        "descripcion-fundamento-legal-fp"
-        "botones-fundamento-legal-fp";
-        grid-template-columns: 360px;
-        grid-template-rows: 150px 100px 100px 200px;
+        grid-template-columns: 370px;
+        grid-template-rows: 150px ;
       }
-
-      .contenedor-procedimientos-contratacion-fundamentos-procedimientos{
-        display: grid;
-        grid-template-areas: 
-        "procedimientos-contratacion" 
-        "procedimientos-procedimientos-contratacion-fp" 
-        "fundamento-legal-procedimientos-contratacion-fp"
-        "correspondiente-al-informe-procedimientos-contratacion-fp"
-        "botones-procedimiento-contratacion-fp";
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 150px 100px 100px 150px;
+      .tabla-procedimiento-contratacion-fundamentos-procedimientos{
+        width: 360px;
+        padding-left: 0px;
+        text-align: center;
+        min-height: calc(100px - 100px -100%);
+        padding-bottom: 30px;
+        font-size: 15px;
       }
-
-      .contenedor-gris-fundamentos-procedimientos textarea{
-        width: 350px;
-        height: 150px;
-        
-        }
-
-        .botones-fundamento-legal-fp,
-      .botones-procedimiento-contratacion-fp{
-    padding-left: 60px;
-  }
-  .fundamento-fundamento-legal-fp,
-  .descripcion-fundamento-legal-fp,
-  .procedimientos-procedimientos-contratacion-fp,
-  .correspondiente-al-informe-procedimientos-contratacion-fp{
-    padding-left: 0px;
-  }
+    .botones-procedimiento-contratacion-fundamento-procedimiento{
+      padding-left: 120px;
+    }
     }
 
 
@@ -2303,6 +2162,12 @@ Documentos AdicionaleS celular*/
   
   
   }
+
+  .boton-pdf{
+    height:50px;
+    width:30px;
+    
+    }
   .contenedor-gris-informe-consolidado-one{
   width: 1150px;
   min-height: calc(100px - 100px -100%);
@@ -2357,7 +2222,9 @@ Documentos AdicionaleS celular*/
   
   .conenedor-informe-consolidado .tabla-consolidador{
   grid-area: tabla-consolidador;
+  text-align: center;
   }
+  
   #table7030{
   background: #FFFFFF;
   }
@@ -2383,13 +2250,14 @@ Documentos AdicionaleS celular*/
   }
   .contenedor-contratos-informe .tabla-contrato{
   grid-area: tabla-contrato;
+  text-align: center;
   }
   .tabla-contrato{
     padding-left: 25px;
   }
   
   .tabla-contrato  table{
-  font-size: 11px;
+  font-size: 10px;
   
   }
   .tabla-contrato table th {
@@ -3079,6 +2947,264 @@ Documentos AdicionaleS celular*/
   }
         
       }
+
+/*NOTIFICACION ADJUDICADA*/
+.main-notificacion-adjudicada{
+  min-height: calc(100px - 100px -100%);
+  width: 1080px;
+  margin: 0 auto;
+  padding-bottom: 30px;
+  
+  }
+  .contenedor-gris-notificacion-adjudicada{
+  width: 1180px;
+  min-height: calc(100px - 100px -100%);
+  grid-gap:10px;
+  background-color: #d8d8d8;
+  padding-bottom: 30px;
+  }
+
+  .contenedor-notificacion-de-adjudicacion-na{
+    display: grid;
+    grid-template-areas:
+    "notificacion-de-adjudicacion"
+   "tabla-notificacion-de-adjudicacion-na"
+   "botones-notificacion-de-adjudicacion-na";
+    grid-template-columns: 1fr;
+    grid-template-rows: 150px ;
+  }
+
+  .contenedor-notificacion-de-adjudicacion-na h1{
+    grid-area: notificacion-de-adjudicacion;
+    text-align: center;
+  }
+  .contenedor-notificacion-de-adjudicacion-na .tabla-notificacion-de-adjudicacion-na{
+    grid-area: tabla-notificacion-de-adjudicacion-na;
+  }
+  .contenedor-notificacion-de-adjudicacion-na .botones-notificacion-de-adjudicacion-na{
+    grid-area: botones-notificacion-de-adjudicacion-na;
+  }
+  .tabla-notificacion-de-adjudicacion-na{
+    width: 1150px;
+    padding-left: 25px;
+    text-align: center;
+    min-height: calc(100px - 100px -100%);
+  }
+.botones-notificacion-de-adjudicacion-na{
+  padding-left: 460px;
+}
+  
+  .contenedor-gris-notificacion-adjudicada h1::after {
+    content: "";
+    display: block;
+    width: 10rem;
+    height: 0.2rem;
+    background-color: #0c9;
+    }
+
+   
+    
+
+         /*NOTIFICACION ADJUDICADA IPAD*/
+ @media screen and (max-width: 768px){
+  .main-notificacion-adjudicada {
+    min-height: calc(100px - 100px -100%);
+    width: 760px;
+    margin: 0 auto;
+    }
+    .contenedor-gris-notificacion-adjudicada{
+    min-height: calc(100px - 100px -100%);
+    width: 760px;
+    
+    }
+    .contenedor-notificacion-de-adjudicacion-na{
+      display: grid;
+      grid-template-columns: 760px;
+      grid-template-rows: 150px ;
+    }
+    .tabla-notificacion-de-adjudicacion-na{
+      width: 740px;
+      padding-left: 25px;
+      text-align: center;
+      min-height: calc(100px - 100px -100%);
+      padding-bottom: 30px;
+      font-size: 14px;
+    }
+  .botones-notificacion-de-adjudicacion-na{
+    padding-left: 320px;
+  }
+
+    
+      
+  }
+
+  /*NOTIFICACION ADJUDICADA CELULAR*/
+  @media screen and (max-width: 375px){
+    .main-notificacion-adjudicada {
+      min-height: calc(100px - 100px -100%);
+      width: 370px;
+      margin: 0 auto;
+      }
+      .contenedor-gris-notificacion-adjudicada{
+      min-height: calc(100px - 100px -100%);
+      width: 370px;
+      
+      }
+      .contenedor-notificacion-de-adjudicacion-na{
+        display: grid;
+        grid-template-columns: 370px;
+        grid-template-rows: 150px ;
+      }
+      .tabla-notificacion-de-adjudicacion-na{
+        width: 370px;
+        padding-left: 0px;
+        text-align: center;
+        min-height: calc(100px - 100px -100%);
+        padding-bottom: 30px;
+        font-size: 15px;
+        overflow: scroll;
+      }
+      
+    .botones-notificacion-de-adjudicacion-na{
+      padding-left: 120px;
+    }
+    }
+
+/*FORMALIZACON CONTRATO*/
+.main-formalizacion-contrato{
+  min-height: calc(100px - 100px -100%);
+  width: 1080px;
+  margin: 0 auto;
+  padding-bottom: 30px;
+  
+  }
+  .contenedor-gris-formalizacion-contraro{
+  width: 1180px;
+  min-height: calc(100px - 100px -100%);
+  grid-gap:10px;
+  background-color: #d8d8d8;
+  padding-bottom: 30px;
+  }
+
+  .contenedor-formalizacion-contrato{
+    display: grid;
+    grid-template-areas:
+    "formalizacion-contrato"
+   "tabla-formalizacion-contrato"
+   "botones-formalizacion-contrato";
+    grid-template-columns: 1fr;
+    grid-template-rows: 150px ;
+  }
+
+  .contenedor-formalizacion-contrato h1{
+    grid-area: formalizacion-contrato;
+    text-align: center;
+  }
+  .contenedor-formalizacion-contrato .tabla-formalizacion-contrato{
+    grid-area: tabla-formalizacion-contrato;
+  }
+  .contenedor-formalizacion-contrato .botones-formalizacion-contrato{
+    grid-area: botones-formalizacion-contrato;
+  }
+  .tabla-formalizacion-contrato{
+    width: 1150px;
+    padding-left: 25px;
+    text-align: center;
+    min-height: calc(100px - 100px -100%);
+    font-size: 20px;
+  }
+.botones-formalizacion-contrato{
+  padding-left: 460px;
+}
+  
+  .contenedor-gris-formalizacion-contraro h1::after {
+    content: "";
+    display: block;
+    width: 10rem;
+    height: 0.2rem;
+    background-color: #0c9;
+    }
+
+   
+    
+
+         /*FORMALIZACION CONTRATO IPAD*/
+ @media screen and (max-width: 768px){
+  .main-formalizacion-contrato {
+    min-height: calc(100px - 100px -100%);
+    width: 760px;
+    margin: 0 auto;
+    }
+    .contenedor-gris-formalizacion-contraro{
+    min-height: calc(100px - 100px -100%);
+    width: 760px;
+    
+    }
+    .contenedor-formalizacion-contrato{
+      display: grid;
+      grid-template-columns: 760px;
+      grid-template-rows: 150px ;
+    }
+    .tabla-formalizacion-contrato{
+      width: 740px;
+      padding-left: 25px;
+      text-align: center;
+      min-height: calc(100px - 100px -100%);
+      padding-bottom: 30px;
+      font-size: 12px;
+    }
+  .botones-formalizacion-contrato{
+    padding-left: 320px;
+  }
+      
+  }
+
+  /*NOTIFICACION ADJUDICADA CELULAR*/
+  @media screen and (max-width: 375px){
+    .main-formalizacion-contrato {
+      min-height: calc(100px - 100px -100%);
+      width: 370px;
+      margin: 0 auto;
+      }
+      .contenedor-gris-formalizacion-contraro{
+      min-height: calc(100px - 100px -100%);
+      width: 370px;
+      
+      }
+      .contenedor-formalizacion-contrato{
+        display: grid;
+        grid-template-columns: 370px;
+        grid-template-rows: 150px ;
+      }
+      .tabla-formalizacion-contrato{
+        width: 370px;
+        padding-left: 0px;
+        text-align: center;
+        min-height: calc(100px - 100px -100%);
+        padding-bottom: 30px;
+        font-size: 15px;
+        overflow: scroll;
+      }
+      
+    .botones-formalizacion-contrato{
+      padding-left: 120px;
+    }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*PARTIDAS PRESUPUESTALES PARTIDA*/
   

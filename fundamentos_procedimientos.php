@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <title>Procedimientos de contratación</title>
+    <title></title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.datos.gob.mx/assets/css/main.css" rel="stylesheet">
     <link href="https://cdn.datos.gob.mx/assets/img/favicon.ico" rel="shortcut icon">
@@ -71,13 +71,15 @@
     <!-- INICIA REGISTRO------------------------------------>
     <!------------------------------------------------------>
     <!------------------------------------------------------>
-    <main class="main-informe-consolidado">
-        <div class="contenedor-gris-informe-consolidado-one">
-            
+    <main class="main-fundamentos-procedimientos">
+        <div class="contenedor-gris-fundamentos-procedimientos">
 
-            <div class="contenedor-contratos-informe">
+
+            <div class="contenedor-fundamentos-procedimientos">
+
                 <h1>Procedimiento de contratación</h1>
-                <div class="tabla-contrato">
+
+                <div class="tabla-procedimiento-contratacion-fundamentos-procedimientos">
                     <h2>Procedimientos y fundamento legal</h2>
                     <table id="myTable" class="tablemy">
                         <thead>
@@ -122,23 +124,24 @@
                                 {
                                     mData: 'setenta_treinta'
                                 },
-                              
+
                             ],
-                           
+
                         });
-                       
+
                     });
                     </script>
                 </div>
-            </div>
-            
-            <div class="botones-informe">
-                <button type="button" id="bregresar" class="btn btn-verde" onclick="location.href='principal2.php'"
-                    name="bregresar"> Regresar </button>
-            </div>
 
+
+                <div class="botones-procedimiento-contratacion-fundamento-procedimiento">
+                    <button type="button" id="bregresar" class="btn btn-verde" onclick="location.href='principal2.php'"
+                        name="bregresar"> Regresar </button>
+                </div>
+
+            </div>
         </div>
-            <div id="documento"></div>
+
     </main>
 
     <footer class="site-footer">

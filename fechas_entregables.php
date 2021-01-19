@@ -186,7 +186,7 @@
                                 },
                                 
                                 {
-                                    "defaultContent": "<button>Ver</button>"
+                                    "defaultContent": "<button class=boton-pdf><img src=icons/pdf3.png alt=pdf></button>"
                                 },
 
                             ],

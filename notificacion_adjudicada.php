@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <title>Fechas notificación de adjudicación</title>
+    <title></title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.datos.gob.mx/assets/css/main.css" rel="stylesheet">
     <link href="https://cdn.datos.gob.mx/assets/img/favicon.ico" rel="shortcut icon">
@@ -71,13 +71,14 @@
     <!-- INICIA REGISTRO------------------------------------>
     <!------------------------------------------------------>
     <!------------------------------------------------------>
-    <main class="main-informe-consolidado">
-        <div class="contenedor-gris-informe-consolidado-one">
-            
+    <main class="main-notificacion-adjudicada">
+        <div class="contenedor-gris-notificacion-adjudicada">
 
-            <div class="contenedor-contratos-informe">
+
+            <div class="contenedor-notificacion-de-adjudicacion-na">
                 <h1>Notificación de Adjudicación</h1>
-                <div class="tabla-contrato">
+
+                <div class="tabla-notificacion-de-adjudicacion-na">
                     <table id="myTable" class="tablemy">
                         <thead>
                             <tr>
@@ -126,24 +127,26 @@
                                 {
                                     mData: 'suficiencia'
                                 },
-                              
+
                             ],
-                           
+
                         });
-                       
+
                     });
                     </script>
                 </div>
-            </div>
-            
-            <div class="botones-informe">
-                <button type="button" id="bregresar" class="btn btn-verde" onclick="location.href='principal2.php'"
-                    name="bregresar"> Regresar </button>
-            </div>
 
+
+                <div class="botones-notificacion-de-adjudicacion-na">
+                    <button type="button" id="bregresar" class="btn btn-verde" onclick="location.href='principal2.php'"
+                        name="bregresar"> Regresar </button>
+                </div>
+            </div>
         </div>
-            <div id="documento"></div>
+
     </main>
+
+
 
     <footer class="site-footer">
         <div class="contenedor display-footer">

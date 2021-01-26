@@ -1,5 +1,6 @@
 function mostrarText() {
     var selObj = document.getElementById('secontrae');
+    var selObj2 = document.getElementById('entregas-programadas');
     var fecha_entrega = (document.getElementById('infechaentregamo').value);
     var nombre_entregable = (document.getElementById('innombreentregables').value);
     var cantidad_entregable = (document.getElementById('incantidade').value);
@@ -7,7 +8,20 @@ function mostrarText() {
     var descripcion = (document.getElementById('descripcion').value);
     var porcentaje = (document.getElementById('porcentaje').value);
     var unitario = (document.getElementById('unitario').value);
+  
+   
+
     var selIndex = selObj.options[selObj.selectedIndex].value;
+    var selIndex2 = selObj2.options[selObj2.selectedIndex].value;
+alert(selIndex2);
+    if(selIndex2.length=0){
+        $(function() {
+            $('#my-modal2').modal('show')
+            document.getElementById("entregas-programadas").focus();
+
+        });
+        return;
+    }
     
     if (cantidad_entregable.length == 0 || cantidad_entregable < 0) {
         $(function() {
@@ -89,7 +103,6 @@ function mostrarText() {
 
 
 
-
     $.post('../besa/entregable.php', {
             
         "numero_contrato": selIndex,
@@ -99,7 +112,8 @@ function mostrarText() {
         "direccion_entregable": direccion_entregable,
         "unitario":unitario,
         "porcentaje":porcentaje,
-        "descripcion": descripcion
+        "descripcion": descripcion,
+        "id_intrega_m": selIndex2
     },function(data) {
         var response = jQuery.parseJSON(data);
         if(response.success==true){
@@ -151,5 +165,24 @@ function autocompletar(arreglo) {
     });
 } 
 
+$(document).ready(function(){
+    $('#secontrae').val(1);
+    recargarLista();
 
+    $('#secontrae').change(function(){
+        recargarLista();
+    });
+})
+
+
+function recargarLista(){
+    $.ajax({
+        type:"POST",
+        url:"../besa/entregas_select.php",
+        data:"numero_contrato=" + $('#secontrae').val(),
+        success:function(r){
+            $('#entregas-programadas').html(r);
+        }
+    });
+}
 

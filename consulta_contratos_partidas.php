@@ -87,9 +87,9 @@
                             <td><?php $clave=$_POST["clave"]; echo $clave;?></td>
 
                             <td><?php $nombre=$_POST["nombre"]; echo $nombre;?></td>
-                            <td><?php $presupuesto=$_POST["presupuesto"]; $presupuestof=number_format($presupuesto); echo $presupuestof;?>
+                            <td><?php $presupuesto=$_POST["presupuesto"]; $presupuestof=number_format($presupuesto); echo "$".$presupuestof;?>
                             </td>
-                            <td><?php $total=$_POST["total"]; $totalf=number_format($total); echo $totalf;?></td>
+                            <td><?php $total=$_POST["total"]; $totalf=number_format($total); echo "$".$totalf;?></td>
                         </tr>
                         
 

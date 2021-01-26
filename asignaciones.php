@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <title>Fechas Entregables</title>
+    <title>Asignaciones</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.datos.gob.mx/assets/css/main.css" rel="stylesheet">
     <link href="https://cdn.datos.gob.mx/assets/img/favicon.ico" rel="shortcut icon">
@@ -71,62 +71,26 @@
     <!-- INICIA REGISTRO------------------------------------>
     <!------------------------------------------------------>
     <!------------------------------------------------------>
-    <main class="main-informe-consolidado">
-        <div class="contenedor-gris-informe-consolidado-one">
-            <div class="conenedor-informe-consolidado">
-                <h1> Fechas Entregables </h1>
-                <div class="tabla-consolidador">
-                    <table class="table table" id="table7030">
-                        <!-- <caption>Consolidador</caption>-->
-                        <tr>
-                            <th>Numero de contrato</th>
-                            <th>Compranet</th>
-                            <th>Objeto de contratación</th>
-                            <th>Proveedor</th>
-                            <th>Cantidad</th>
-                        </tr>
-                        <tr>
-                            <td><?php $numero_contrato=$_POST["numero_contrato"]; echo $numero_contrato;?></td>
-                            <td><?php $contrato_compranet=$_POST["contrato_compranet"]; echo $contrato_compranet;?></td>
-                            <td><?php $objeto_contratacion=$_POST["objeto_contratacion"]; echo $objeto_contratacion;?>
-                            </td>
-                            <td><?php $nombre=$_POST["nombre"]; echo $nombre;?></td>
-                            <td><?php $cantidad=$_POST["cantidad"]; echo $cantidad;?></td>
+    <main class="main-formalizacion-contrato">
+        <div class="contenedor-gris-formalizacion-contraro">
 
 
-
-                        </tr>
-                    </table>
-
-                </div>
-            </div>
-
-            <div class="contenedor-contratos-informe">
-                <h1>Entregas</h1>
-                <div class="tabla-contrato">
-                    <h2>Entregas correspondientes</h2>
+            <div class="contenedor-formalizacion-contrato">
+                <h1>Asignaciones Unidad Compradora y Partidas presupuestales</h1>
+                <div class="tabla-formalizacion-contrato">
                     <table id="myTable" class="tablemy">
                         <thead>
                             <tr>
-                                <th>Numero de contrato</th>
-                                <th>Fecha entrega </th>
-                                <th>Fecha máxima</th>
-                                <th>Entregable</th>
-                                <th>Cantidad</th>
-                                <th>Dirección</th>
-                                <th>Penalización</th>
-                                <th>Porcentaje de penalización</th>
-                                <th>Precio Unitario</th>
-                                <th>Días de penalización</th>
-                                <th>Documentación</th>
+                                <th>Unidad Compradora</th>
+                                <th>Número de Unidad</th>
+                                <th>Partida Presupuestal</th>
+                                <th>Presupuesto</th>
                             </tr>
                         </thead>
                     </table>
 
                     <script>
                     $(document).ready(function() {
-                        <?php $numero_contrato = $_POST["numero_contrato"];?>
-                        var numero_contrato = '<?=$numero_contrato?>';
                         var table = $('#myTable').dataTable({
                             "language": {
                                 "lengthMenu": "Mostrar _MENU_ Inserciones por página",
@@ -145,131 +109,41 @@
                                 },
                             },
                             "bProcessing": true,
-                            "sAjaxSource": "contratos_entregables.php?numero_contrato=" +
-                                numero_contrato,
+                            "sAjaxSource": "asignaciones_tabla.php",
                             "bPaginate": true,
                             "sPaginationType": "full_numbers",
                             "iDisplayLength": 5,
                             "aoColumns": [{
-                                    mData: 'numero_contrato'
+                                    mData: 'nombre_unidad_compradora'
                                 },
                                 {
-                                    mData: 'fecha_entrega'
+                                    mData: 'numero_unidad'
                                 },
                                 {
-                                    mData: 'fecha_maxima'
+                                    mData: 'nombre'
                                 },
                                 {
-                                    mData: 'nombre_entregable'
-                                },
-                                {
-                                    mData: 'cantidad_entregable'
-                                },
-                                {
-                                    mData: 'direccion_entregable'
-                                },
-                               
-                                {
-                                    mData: 'penalizacion',
+                                    mData: 'presupuesto',
                                     render: $.fn.dataTable.render.number(',', '.', 2, '$')
-                                },
-                                {
-                                    mData: 'porcentaje'
-                                },
-                                {
-                                    mData: 'precio_unitario',
-                                    render: $.fn.dataTable.render.number(',', '.', 2, '$')
-                                },
-                                {
-                                    mData: 'dias'
                                 },
                                 
-                                {
-                                    "defaultContent": "<button class=boton-pdf><img src=icons/pdf3.png alt=pdf></button>"
-                                },
 
                             ],
-                            "fnRowCallback": function(nRow, aData, iDisplayIndex, iDisplayIndexFull) {
-                                if(aData.penalizacion>0){
-                                $(nRow).css('color', 'Red');
-                                }else{
-                                    $(nRow).css('color', 'green');
-                                }
-                            }
-                        });
-                        $('#myTable tbody').on('click','button',function(){
-                            var data = table.dataTable().api().row($(this).parents('tr')).data();
-                            var url = data["url_constancia"];
-                            if(url.length==0){
-                                alert("Esta entrega no tiene documentación");
-                                return;
-                            }
-                           window.location= "downloadpdf_constancia.php?url="+data["url_constancia"];
-                            
 
-                        })
+                        });
+
                     });
                     </script>
                 </div>
-            </div>
-            <div class="barra-progreso">
 
-                <canvas id="myCanvas" width="500" height="200" class="barra-progres"></canvas>
-                <script>
-                var canvas = document.getElementById('myCanvas');
-                var context = canvas.getContext('2d');
-                var al = 0;
-                var start = 4.72;
-                var cw = context.canvas.width / 2;
-                var ch = context.canvas.height / 2;
-                var diff;
-                var cantidad = '<?=$cantidad?>';
-                <?php $total = $_POST["total"];?>
-                var total = '<?=$total?>';
-                var valor = 0;
 
-                function evaluar(total, cantidad) {
-                    return ((total * 100) / cantidad);
-                }
-
-                function progressBar() {
-                    diff = (al / 100) * Math.PI * 2;
-                    context.clearRect(0, 0, 400, 200);
-                    context.beginPath();
-                    context.arc(cw, ch, 80, 0, 2 * Math.PI, false);
-                    context.fillStyle = '#FFF';
-                    context.fill();
-                    context.strokeStyle = '#6F7271';
-                    context.stroke();
-                    context.fillStyle = '#000';
-                    context.strokeStyle = '#9D2449';
-                    context.textAlign = 'center';
-                    context.lineWidth = 30;
-                    context.font = '10pt Verdana';
-                    context.beginPath();
-                    context.arc(cw, ch, 80, start, diff + start, false);
-                    context.stroke();
-                    context.fillText(al + '%', cw + 2, ch + 6);
-                    valor = evaluar(total, cantidad);
-                    if (al >= valor) {
-                        clearTimeout(bar);
-                    }
-
-                    al++;
-                }
-
-                var bar = setInterval(progressBar, 50);
-                </script>
-
+                <div class="botones-formalizacion-contrato">
+                    <button type="button" id="bregresar" class="btn btn-verde" onclick="location.href='principal2.php'"
+                        name="bregresar"> Regresar </button>
+                </div>
 
             </div>
-            <div class="botones-informe">
-                <button type="button" id="bregresar" class="btn btn-verde" onclick="location.href='principal2.php'"
-                    name="bregresar"> Regresar </button>
-            </div>
-
         </div>
-            <div id="documento"></div>
     </main>
 
     <footer class="site-footer">

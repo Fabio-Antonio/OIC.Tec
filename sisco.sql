@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 10-01-2021 a las 00:55:37
+-- Tiempo de generación: 26-01-2021 a las 18:37:14
 -- Versión del servidor: 10.1.38-MariaDB
 -- Versión de PHP: 7.1.27
 
@@ -66,8 +66,7 @@ CREATE TABLE `administrador` (
 --
 
 INSERT INTO `administrador` (`id_administrador`, `nombre`, `apellido_paterno`, `apellido_materno`, `email`) VALUES
-(1, 'Gustavo', 'Aguirre', 'Lopez', 'ing.fabio.a@gmail.com'),
-(2, 'Gustavo', 'Aguirre ', 'Lopez', 'ing.fabio.a@gmail.com');
+(1, 'Gustavo', 'Aguirre', 'Lopez', 'ing.fabio.a@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -131,7 +130,8 @@ CREATE TABLE `contrato` (
 INSERT INTO `contrato` (`id_contrato`, `id_unidad_compradora`, `id_procedimiento_contratacion`, `id_fundamento_legal`, `id_unidad_requirente`, `id_administrador`, `id_proveedor_adjudicado`, `id_partida`, `id_consolidado`, `numero_contrato`, `procedimiento_compranet`, `contrato_compranet`, `convenio_interno`, `objeto_contratacion`, `contrato_abierto`, `documentacion_descirpcion`, `monto_max`, `monto_min`, `pdf`) VALUES
 (4, 4, 1, 11, 4, 1, 5, 5, NULL, 'AN4567', 'LA-000999-E12', 1234567, 'sin convenio', 'Compra de muebles', 0, 'Documentación obtenida de compranet', '350000.00', '0.00', 'uploads/contratos/carta de aceptación ejemplo.pdf'),
 (5, 4, 2, 12, 4, 1, 6, 6, NULL, 'BN5678', 'LA-000999-E14', 1234567, 'sin convenio', 'Arrendamiento de terreno para uso de eventos', 0, 'Documentación obtenida de compranet', '200768.00', '0.00', 'uploads/EVALUACION_TERCER'),
-(6, 5, 2, 15, 5, 1, 7, 7, NULL, 'SEP011DGRMSDGAAI0022020', 'LA-000999-E0001', 4564121, 'sin convenio', 'Fumigación', 0, 'Servicio de fumigación a nivel central', '12593000.00', '0.00', 'uploads/Etapas_equipo2.pd');
+(6, 5, 2, 15, 5, 1, 7, 7, NULL, 'SEP011DGRMSDGAAI0022020', 'LA-000999-E0001', 4564121, 'sin convenio', 'Fumigación', 0, 'Servicio de fumigación a nivel central', '12593000.00', '0.00', 'uploads/Etapas_equipo2.pd'),
+(7, 5, 3, 14, 6, 1, 7, 7, NULL, 'SEP011DGRMSDGAAIII22020', 'LA-000999-E12', 9854321, 'sin convenio', 'Servicio de fumigación', 0, 'Documentación obtenida de compranet', '4789234.00', '0.00', NULL);
 
 -- --------------------------------------------------------
 
@@ -162,7 +162,8 @@ CREATE TABLE `contrato_fechas` (
 INSERT INTO `contrato_fechas` (`id_fecha`, `id_contrato`, `notificacion_adjudicada`, `formalizacion_contrato`, `inicio_vigencia`, `fin_vigencia`, `sat`, `imss`, `infonavit`, `garantia_cumplimiento`, `suficiencia`, `requisicion_contrato`, `resicion_contrato`) VALUES
 (4, 4, '2020-12-22', '2020-12-25', '2020-12-25', '2021-02-24', '2020-11-25', '2020-11-25', '2020-11-25', '2020-12-24', '2020-12-21', '2020-12-21', NULL),
 (5, 5, '2020-12-22', '2020-12-24', '2020-12-22', '2021-06-22', '2020-11-24', '2020-11-24', '2020-11-24', '2020-12-24', '2020-12-21', '2020-12-21', NULL),
-(6, 6, '2019-12-24', '2020-01-06', '2020-01-01', '2020-12-31', '2019-12-31', '2020-01-04', '2020-01-04', '2020-01-16', '2019-11-11', '2019-11-11', NULL);
+(6, 6, '2019-12-24', '2020-01-06', '2020-01-01', '2020-12-31', '2019-12-31', '2020-01-04', '2020-01-04', '2020-01-16', '2019-11-11', '2019-11-11', NULL),
+(7, 7, '2021-01-25', '2021-02-05', '2021-02-05', '2021-12-31', '2021-01-05', '2021-01-05', '2021-01-05', '2021-02-14', '2021-01-22', '2021-01-22', NULL);
 
 -- --------------------------------------------------------
 
@@ -202,6 +203,7 @@ CREATE TABLE `documentos_adicionales` (
 CREATE TABLE `entregables` (
   `id_entregable` int(11) NOT NULL,
   `id_contrato` int(11) DEFAULT NULL,
+  `id_intrega_m` int(11) NOT NULL,
   `fecha_entrega` date DEFAULT NULL,
   `nombre_entregable` varchar(26) DEFAULT NULL,
   `cantidad_entregable` int(11) DEFAULT NULL,
@@ -215,10 +217,9 @@ CREATE TABLE `entregables` (
 -- Volcado de datos para la tabla `entregables`
 --
 
-INSERT INTO `entregables` (`id_entregable`, `id_contrato`, `fecha_entrega`, `nombre_entregable`, `cantidad_entregable`, `direccion_entregable`, `precio_unitario`, `porcentaje`, `descripcion`) VALUES
-(9, 4, '2021-01-22', 'Silla de madera', 5, 'Almacén OIC ', '35000.00', '0.02', 'Entrega de silla de madera para sala de conferencias '),
-(10, 4, '2021-02-24', 'Silla de madera', 5, 'Almacén OIC ', '35000.00', '0.02', 'Entrega de silla de madera para sala de conferencias '),
-(11, 6, '2020-01-31', 'Servicio de fumigacion', 1, 'Avenida universidad ', '1049416.66', '2.00', 'Constancia de fumigación para el mes de enero ');
+INSERT INTO `entregables` (`id_entregable`, `id_contrato`, `id_intrega_m`, `fecha_entrega`, `nombre_entregable`, `cantidad_entregable`, `direccion_entregable`, `precio_unitario`, `porcentaje`, `descripcion`) VALUES
+(13, 6, 13, '2020-02-26', 'servicio fumigación febrer', 1, 'Avenida universidad #567 función pública', '1049416.66', '0.02', 'Servicio de fumigación mensual'),
+(14, 6, 14, '2020-04-01', 'servicio fumigación febrer', 1, 'Avenida universidad #567 función pública', '1049416.66', '0.02', 'Servicio de fumigación mensual');
 
 -- --------------------------------------------------------
 
@@ -240,7 +241,21 @@ CREATE TABLE `entregas_m` (
 INSERT INTO `entregas_m` (`id_entrega`, `id_contrato`, `fecha_maxima`, `cantidad`) VALUES
 (7, 4, '2021-02-23', 10),
 (8, 5, '2021-06-21', 6),
-(9, 6, '2020-12-31', 12);
+(10, 7, '2021-12-31', 1),
+(13, 6, '2020-02-29', 1),
+(14, 6, '2020-03-31', 1),
+(15, 6, '2020-04-30', 1),
+(16, 6, '2020-05-31', 1),
+(17, 6, '2020-06-30', 1),
+(18, 6, '2020-07-31', 1),
+(19, 6, '2020-08-31', 1),
+(20, 6, '2020-09-30', 1),
+(21, 6, '2020-10-31', 1),
+(22, 6, '2020-11-30', 1),
+(23, 6, '2020-12-31', 1),
+(24, 7, '2021-02-05', 1),
+(25, 7, '2021-03-05', 1),
+(26, 7, '2021-04-05', 1);
 
 -- --------------------------------------------------------
 
@@ -462,9 +477,8 @@ CREATE TABLE `recepcion` (
 --
 
 INSERT INTO `recepcion` (`id_recepcion`, `id_entregable`, `url_constancia`) VALUES
-(6, 11, 'uploads/recepcion/funcionalidad del dispositivo.pdf'),
-(7, 10, 'uploads/recepcion/ResporteTecnico_Viversidad_Equipo2.pdf'),
-(8, 9, 'uploads/recepcion/delfin-victp20-reconocimientocongresista-estudiante-ID02487.pdf');
+(10, 13, 'uploads/recepcion/Sistemas Operativos para Dispositivos Móviles.pdf'),
+(11, 14, 'uploads/recepcion/IMG_20201203_0001.pdf');
 
 -- --------------------------------------------------------
 
@@ -611,14 +625,15 @@ ALTER TABLE `documentos_adicionales`
 --
 ALTER TABLE `entregables`
   ADD PRIMARY KEY (`id_entregable`),
-  ADD KEY `entregable_contrato_FK` (`id_contrato`);
+  ADD KEY `entregable_contrato_FK` (`id_contrato`) USING BTREE,
+  ADD KEY `id_entrega_m_FK` (`id_intrega_m`);
 
 --
 -- Indices de la tabla `entregas_m`
 --
 ALTER TABLE `entregas_m`
   ADD PRIMARY KEY (`id_entrega`),
-  ADD UNIQUE KEY `contrato_FK` (`id_contrato`) COMMENT 'contrato';
+  ADD KEY `contrato_FK` (`id_contrato`) USING BTREE COMMENT 'contrato';
 
 --
 -- Indices de la tabla `facturas`
@@ -744,7 +759,7 @@ ALTER TABLE `visitas`
 -- AUTO_INCREMENT de la tabla `administrador`
 --
 ALTER TABLE `administrador`
-  MODIFY `id_administrador` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_administrador` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `comprobacion`
@@ -762,13 +777,13 @@ ALTER TABLE `consolidado`
 -- AUTO_INCREMENT de la tabla `contrato`
 --
 ALTER TABLE `contrato`
-  MODIFY `id_contrato` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_contrato` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de la tabla `contrato_fechas`
 --
 ALTER TABLE `contrato_fechas`
-  MODIFY `id_fecha` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_fecha` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de la tabla `convenios_modificados`
@@ -786,13 +801,13 @@ ALTER TABLE `documentos_adicionales`
 -- AUTO_INCREMENT de la tabla `entregables`
 --
 ALTER TABLE `entregables`
-  MODIFY `id_entregable` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id_entregable` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT de la tabla `entregas_m`
 --
 ALTER TABLE `entregas_m`
-  MODIFY `id_entrega` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_entrega` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT de la tabla `facturas`
@@ -864,7 +879,7 @@ ALTER TABLE `proveedor_adjudicado`
 -- AUTO_INCREMENT de la tabla `recepcion`
 --
 ALTER TABLE `recepcion`
-  MODIFY `id_recepcion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_recepcion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT de la tabla `sub_partida`
@@ -947,7 +962,7 @@ ALTER TABLE `documentos_adicionales`
 -- Filtros para la tabla `entregables`
 --
 ALTER TABLE `entregables`
-  ADD CONSTRAINT `entregable_contrato_FK` FOREIGN KEY (`id_contrato`) REFERENCES `contrato` (`id_contrato`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `id_entrega_m_FK` FOREIGN KEY (`id_intrega_m`) REFERENCES `entregas_m` (`id_entrega`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `entregas_m`

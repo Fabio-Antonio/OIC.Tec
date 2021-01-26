@@ -352,60 +352,7 @@ function mostrarText(){
     });
 
 
-    $(document).ready(function(){
-        $('#calendarYear').change(function(){
-                 var inicio_vigencia= $('#ininiciovigenciaf').val();
-        var fecha_inicio_vigencia= new Date(inicio_vigencia);
+  
 
 
-        var fin_vigencia= $('#infinvigenciaf').val();
-        var fecha_fin_vigencia= new Date(fin_vigencia);
-
         
-        
-              var $this = $(this);
-              var insertedVal = $this.val();
-              var fecham = new Date(insertedVal);
-        
-              if (fecham<fecha_inicio_vigencia||fecham>fecha_fin_vigencia){
-        
-        
-                 $this.css({"color":"red","border":"1px solid red"});
-                 $(function(){
-                  $('#my-modal4').modal('show')
-                  });
-              }else{
-                 $this.css({"color":"green","border":"1px solid green"});
-        
-                }
-           })
-        });
-
-
-      function entrega() {
-        var fecha_maxima = (document.getElementById("calendarYear").value);
-        var cantidadm = (document.getElementById("cantidadm").value);
-        var descripcion= (document.getElementById("infechadescripcion").value);
-    
-        if (cantidadm.length == 0 || cantidadm <0) {
-            alert("El campo es incorrecto");
-            document.getElementById("cantidadm").focus();
-            return;
-        }
-        if (!(/^[0-9\s]*$/i.test(cantidadm))) {
-            alert("El contiene caracteres no permitidos");
-            document.getElementById("cantidadm").focus();
-            return;
-    
-        }
-    
-        
-        $.post('../besa/entrega_m.php', {
-            "fecha_maxima": fecha_maxima,
-            "cantidadm": cantidadm,
-            "contrato": descripcion,
-
-        }, function(data) {
-            alert("listo");
-        });
-    }

@@ -15,8 +15,8 @@ $valor=serialize($flag);
 
 
 $query=$conn->prepare("SELECT id_consolidado,licitacion FROM consolidado");
-$flag2=null;
  $query->execute();
+ $flag2=[];
 if($query){
 while($row=$query->fetch()){
 $flag2[]=$row;
@@ -25,7 +25,6 @@ $valor2=serialize($flag2);
 }
 
 $query=$conn->prepare("SELECT numero_contrato FROM contrato");
-
  $query->execute();
 if($query){
 while($row=$query->fetch()){
@@ -42,6 +41,18 @@ foreach ($flag3 as $key => $val) {
 $array[]=$val["numero_contrato"];
 }
 }
+
+ 
+$query=$conn->prepare("SELECT id, clave, nombre FROM partida_presupuesto");
+
+$query->execute();
+if($query){
+while($row=$query->fetch()){
+$flag4[]=$row;
+}
+
+}
+
 
 
 

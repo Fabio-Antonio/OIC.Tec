@@ -3,7 +3,7 @@
   require_once("url.php");
   $numero_contrato=$_GET["numero_contrato"];
 
-   $query=$conn->prepare("SELECT numero_contrato,contrato_compranet,objeto_contratacion,nombre,fecha_maxima,cantidad FROM `contrato`AS c INNER JOIN proveedor_adjudicado AS pro ON c.id_proveedor_adjudicado = pro.id_proveedor INNER JOIN entregas_m AS em ON c.id_contrato = em.id_contrato WHERE numero_contrato = ?");
+   $query=$conn->prepare("SELECT numero_contrato,contrato_compranet,objeto_contratacion,nombre,SUM(cantidad) AS cantidad FROM `contrato`AS c INNER JOIN proveedor_adjudicado AS pro ON c.id_proveedor_adjudicado = pro.id_proveedor INNER JOIN entregas_m AS em ON c.id_contrato = em.id_contrato WHERE c.numero_contrato = ?");
    $query->bindParam(1,$numero_contrato);  
  $query->execute();
 if($query){
@@ -12,7 +12,6 @@ $numero_contrato=$row["numero_contrato"];
 $contrato_compranet=$row["contrato_compranet"];
 $objeto_contratacion=$row["objeto_contratacion"];
 $nombre=$row["nombre"];
-$fecha_maxima=$row["fecha_maxima"];
 $cantidad=$row["cantidad"];
 
 }
@@ -55,7 +54,7 @@ $ch= curl_init();
 $url=$path."/besa/fechas_entregables.php";
 curl_setopt($ch,CURLOPT_URL,$url);
 curl_setopt($ch,CURLOPT_POST,TRUE);
-curl_setopt($ch,CURLOPT_POSTFIELDS,"numero_contrato=$numero_contrato&contrato_compranet=$contrato_compranet&objeto_contratacion=$objeto_contratacion&nombre=$nombre&fecha_maxima=$fecha_maxima&cantidad=$cantidad&total=$total");
+curl_setopt($ch,CURLOPT_POSTFIELDS,"numero_contrato=$numero_contrato&contrato_compranet=$contrato_compranet&objeto_contratacion=$objeto_contratacion&nombre=$nombre&cantidad=$cantidad&total=$total");
 curl_setopt($ch, CURLOPT_HEADER, 0);
    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 0);
     curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);

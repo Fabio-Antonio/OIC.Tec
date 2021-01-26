@@ -354,7 +354,7 @@
                 </div>
                 <div class="modal-body">
                     <p>
-                        El número de contrato ya existe!!
+                        El número de contrato ya existe o se ha excedido el presupuesto para está partida!!
                     </p>
                 </div>
                 <div class="modal-footer">

@@ -44,7 +44,54 @@
          return false;
         }
 
-        if(comprovar($numero_contrato,$conn)==true && $consolidado>0){
+
+        function comprovar_presupuesto($partida,$monto_maximo,$conn){
+          $dato="";
+          $dato2="";
+          $statement = $conn->prepare("SELECT SUM(monto_max) AS total_contratos FROM contrato AS c INNER JOIN partida_presupuesto AS pp ON c.id_partida = pp.id WHERE pp.id = ?");
+        $statement->bindValue(1, $partida);
+        $statement->execute();
+
+        if($statement)
+        {
+        while($row=$statement->fetch())
+                {
+        $dato=$row['total_contratos'];        
+        
+        }
+      }else{
+        return false;
+      }
+
+
+        $statement = $conn->prepare("SELECT presupuesto from partida_presupuesto AS pp  WHERE pp.id = ?");
+        $statement->bindValue(1, $partida);
+        $statement->execute();
+
+        if($statement)
+        {
+        while($row=$statement->fetch())
+                {
+        $dato2=$row['presupuesto'];        
+        
+        }
+      }else{
+        return false;
+      }
+
+        if($monto_maximo+$dato<=$dato2){
+         return true;
+
+        }else{
+
+          return false;
+        }
+
+
+        }
+
+
+        if(comprovar($numero_contrato,$conn)==true && $consolidado>0&&comprovar_presupuesto($partida,$monto_maximo,$conn)==true){
         $statement = $conn->prepare("INSERT INTO contrato (id_unidad_compradora,id_procedimiento_contratacion,id_unidad_requirente,id_administrador,
         id_proveedor_adjudicado,id_partida,id_consolidado,numero_contrato,procedimiento_compranet,contrato_compranet,convenio_interno
         ,objeto_contratacion,contrato_abierto,documentacion_descirpcion,monto_max,monto_min,id_fundamento_legal)VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
@@ -72,7 +119,7 @@
         }
         
         
-       else if(comprovar($numero_contrato,$conn)==true && $consolidado==0){
+       else if(comprovar($numero_contrato,$conn)==true && $consolidado==0&&comprovar_presupuesto($partida,$monto_maximo,$conn)==true){
           $statement = $conn->prepare("INSERT INTO contrato (id_unidad_compradora,id_procedimiento_contratacion,id_unidad_requirente,id_administrador,
           id_proveedor_adjudicado,id_partida,numero_contrato,procedimiento_compranet,contrato_compranet,convenio_interno
           ,objeto_contratacion,contrato_abierto,documentacion_descirpcion,monto_max,monto_min,id_fundamento_legal)VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
@@ -99,7 +146,7 @@
            
            echo json_encode(array("success"=>true));
           }else{ 
-            echo json_encode(array("success"=>false));
+            echo json_encode(array("success"=>false,"msg"=>"El contrato ya existe o se excede el presupuesto para está partida"));
           }
           $conn=null;  
       

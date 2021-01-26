@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <title></title>
+    <title>Formalización de Contrato</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.datos.gob.mx/assets/css/main.css" rel="stylesheet">
     <link href="https://cdn.datos.gob.mx/assets/img/favicon.ico" rel="shortcut icon">
@@ -76,7 +76,7 @@
 
 
             <div class="contenedor-formalizacion-contrato">
-                <h1>Notificación de Adjudicación</h1>
+                <h1>Formalización de Contrato</h1>
                 <div class="tabla-formalizacion-contrato">
                     <table id="myTable" class="tablemy">
                         <thead>

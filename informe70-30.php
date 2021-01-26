@@ -289,7 +289,7 @@
                                 <th>Monto Maximo</th>
                                 <th>Procedimiento</th>
                                 <th>Partida presupuestal</th>
-
+                                <th>Articulo normativo</th>
                             </tr>
                         </thead>
 
@@ -333,6 +333,9 @@
                                 },
                                 {
                                     mData: 'nombre'
+                                },
+                                {
+                                    mData: 'articulo'
                                 },
 
 

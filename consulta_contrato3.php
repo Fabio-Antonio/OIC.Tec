@@ -2,7 +2,7 @@
   require_once("conexion.php");
   require_once("url.php");
 
-   $query=$conn->prepare("SELECT em.id_contrato,numero_contrato FROM entregas_m AS em INNER JOIN contrato AS c ON em.id_contrato = c.id_contrato");
+   $query=$conn->prepare("SELECT id_contrato,numero_contrato FROM contrato");
 
  $query->execute();
 if($query){

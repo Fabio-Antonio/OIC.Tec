@@ -185,7 +185,7 @@ function ingresar4() {
 }
 
 function ingresar5() {
-    var selObj = document.getElementById('partidas');
+    var selObj = document.getElementById('partidas_presupuesto');
     var partida_presupuestal = selObj.options[selObj.selectedIndex].value;
 
     if (partida_presupuestal.length == 0){
@@ -193,7 +193,7 @@ function ingresar5() {
         document.getElementById('partidas').focus();
         return;
     }
-
+  
 
     window.location = "../besa/consulta_contrato_partidas.php?id_partida=" + partida_presupuestal;
     
@@ -236,6 +236,16 @@ function autocompletar(arreglo) {
     });
 } 
 
+
+function autocompletar2(arreglo) {
+    
+    $( "#contrato2" ).autocomplete({
+        source: arreglo,
+        appendTo: "#formulario8"
+    });
+} 
+
+
 function entregable(){
     var contrato = (document.getElementById("contrato").value);
  
@@ -251,7 +261,33 @@ window.location="../besa/consulta_entregables.php?numero_contrato="+contrato;
 
 }
 
+function entrega() {
+    var fecha_maxima = (document.getElementById("calendarYear").value);
+    var cantidadm = (document.getElementById("cantidadm").value);
+    var descripcion= (document.getElementById("contrato2").value);
 
+    if (cantidadm.length == 0 || cantidadm <0) {
+        alert("El campo es incorrecto");
+        document.getElementById("cantidadm").focus();
+        return;
+    }
+    if (!(/^[0-9\s]*$/i.test(cantidadm))) {
+        alert("El contiene caracteres no permitidos");
+        document.getElementById("cantidadm").focus();
+        return;
+
+    }
+
+    
+    $.post('../besa/entrega_m.php', {
+        "fecha_maxima": fecha_maxima,
+        "cantidadm": cantidadm,
+        "contrato": descripcion,
+
+    }, function(data) {
+        alert("listo");
+    });
+}
 
 
 /*

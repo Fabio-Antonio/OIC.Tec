@@ -50,6 +50,7 @@ window.location.replace('index');</script>";
             <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal2">Contacto</a>
             <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal3">Nueva Partida</a>
             <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal5">Nuevo Contrato</a>
+            <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#my-modal9">Entregas</a>
 
             <a onclick="cerrar();" class="w3-bar-item w3-button">Logout -></a>
         </div>
@@ -77,8 +78,8 @@ window.location.replace('index');</script>";
                     <li><i class="fas fa-plus-circle"></i> <a href="requirente_compradora_captura.html">Unidad
                             Compradora</a></li>
                     <li><i class="fas fa-plus-circle"></i><a href="admin.html"> Administrador de Contrato</a></li>
-                    <li><i class="fas fa-plus-circle"></i> <a href="captura_pro_mont2.php">Consolidado</a></li>
-                    <li><i class="fas fa-plus-circle"></i> <a href="captura_pro_mont.html">Proveedor Adjudicado</a></li>
+                    <li><i class="fas fa-plus-circle"></i> <a href="captura_pro_mont2.php"> Consolidado</a></li>
+                    <li><i class="fas fa-plus-circle"></i> <a href="captura_pro_mont.html"> Proveedor Adjudicado</a></li>
                 </ul>
                 <p></p>
             </div>
@@ -88,11 +89,11 @@ window.location.replace('index');</script>";
                 </div>
                 <h3>ADMINISTRACIÓN</h3>
                 <ul>
-                    <li><i class="fas fa-plus-circle"></i> <a href="lectura.php">Carga de archivos (PDF)(CVS)</a></li>
-                    <li><i class="fas fa-plus-circle"></i><a href="consulta_contrato.php">Asignaciones</a></li>
+                    <li><i class="fas fa-plus-circle"></i> <a href="lectura.php"> Carga de archivos (PDF)(CVS)</a></li>
+                    <li><i class="fas fa-plus-circle"></i><a href="asignaciones.php"> Asignaciones</a></li>
                     <li><i class="fas fa-plus-circle"></i><a href="consulta_contrato.php"> Documentos Adicionales</a>
                     </li>
-                    <li><i class="fas fa-plus-circle"></i><a href="recepcion.php">Recepción</li>
+                    <li><i class="fas fa-plus-circle"></i><a href="recepcion.php"> Recepción</li>
                     <li><i class="fas fa-plus-circle"></i> Terminación Anticipada</li>
                     <li><i class="fas fa-plus-circle"></i><a href="partidas_presupuestales_partida.php"> Asignación de
                             Partidas</a>
@@ -106,7 +107,7 @@ window.location.replace('index');</script>";
                 </div>
                 <h3>LEGAL</h3>
                 <ul>
-                   
+
                     <li><i class="fas fa-plus-circle"></i><a href="fundamentos_procedimientos.php"> Procedimientos de
                             Contratación</a></li>
                     <li><i class="fas fa-plus-circle"></i> Inconformidades</li>
@@ -123,9 +124,11 @@ window.location.replace('index');</script>";
                 </div>
                 <h3>CALENDARIO</h3>
                 <ul>
-                    <li><i class="fas fa-plus-circle"></i> <a href="consulta_vigencia.php">Fin VIgencia</a></li>
-                    <li><i class="fas fa-plus-circle"></i><a href="notificacion_adjudicada.php"> Fecha de Adjudicación</a></li>
-                    <li><i class="fas fa-plus-circle"></i><a href="formalizacion_contrato.php"> Fecha de Formalización</a></li>
+                    <li><i class="fas fa-plus-circle"></i> <a href="consulta_vigencia.php"> Fin VIgencia</a></li>
+                    <li><i class="fas fa-plus-circle"></i><a href="notificacion_adjudicada.php"> Fecha de
+                            Adjudicación</a></li>
+                    <li><i class="fas fa-plus-circle"></i><a href="formalizacion_contrato.php"> Fecha de
+                            Formalización</a></li>
                 </ul>
                 <p></p>
             </div>
@@ -136,11 +139,13 @@ window.location.replace('index');</script>";
                 <h3>PRODUCCIÓN</h3>
                 <ul>
                     <li><i class="fas fa-plus-circle"></i> <a data-toggle="modal" data-target="#mymodal4"> Informe 70-30
-                    </a></li>
-                    <li><i class="fas fa-plus-circle"></i> <a href="consulta_top.php">Top por Contrato</a></li>
-                    <li><i class="fas fa-plus-circle" data-toggle="modal" data-target="#mymodal6"></i><a data-toggle="modal" data-target="#mymodal6"> Informe
-                        Consolidado </a></li>
-                        <li><i class="fas fa-plus-circle"></i><a data-toggle="modal" data-target="#mymodal7">Entregables</a></li>
+                        </a></li>
+                    <li><i class="fas fa-plus-circle"></i> <a href="consulta_top.php"> Top por Contrato</a></li>
+                    <li><i class="fas fa-plus-circle" data-toggle="modal" data-target="#mymodal6"></i><a
+                            data-toggle="modal" data-target="#mymodal6"> Informe
+                            Consolidado </a></li>
+                    <li><i class="fas fa-plus-circle"></i><a data-toggle="modal" data-target="#mymodal7"> Entregables</a>
+                    </li>
                 </ul>
                 <p></p>
             </div>
@@ -150,10 +155,11 @@ window.location.replace('index');</script>";
                 </div>
                 <h3>Contrataciones</h3>
                 <ul>
-                    <li><i class="fas fa-plus-circle"></i><a href="numero_de_contrato.php"> Consulta por número de
+                    <li><i class="fas fa-plus-circle"></i><a href="consulta_numero_contrato.php"> Consulta por número de
                             contrato</a></li>
-                    <li><i class="fas fa-plus-circle"></i> Contrato por Proveedor</li>
-                    <li><i class="fas fa-plus-circle"></i><a data-toggle="modal" data-target="#mymodal8"> Contratos por Partida</a></li>
+                    <li><i class="fas fa-plus-circle"></i> <a href = "contratos_proveedor.php"> Contrato por Proveedor</a></li>
+                    <li><i class="fas fa-plus-circle"></i><a data-toggle="modal" data-target="#mymodal8"> Contratos por
+                            Partida</a></li>
                 </ul>
                 <p></p>
             </div>
@@ -339,9 +345,9 @@ window.location.replace('index');</script>";
                             <label class="control-label" for="email-01">Partida Presupuestal:</label>
                             <select id="partidas" name="partidas">
                                 <?php
-                                require_once("consulta_partida.php");
+                                require_once("consulta_principal.php");
 
-                                foreach ($flag2 as $key => $val) {
+                                foreach ($flag4 as $key => $val) {
                                 ?>
 
                                 <option value="<?php print($val['id']); ?>">
@@ -428,9 +434,9 @@ window.location.replace('index');</script>";
                                             <label class="control-label">Presupuesto:</label>
                                             <input type="text" class="form-control">
                                             <button class="btn btn-default btn-success" type="button" name="submit"
-                                                    onclick="">Enviar</button>
+                                                onclick="">Enviar</button>
                                         </div>
-                                        
+
                                     </div>
                                     <button class="btn btn-primary listo-modal" data-dismiss="modal">Listo!!</button>
                                 </div>
@@ -541,23 +547,22 @@ window.location.replace('index');</script>";
                 <div class="modal-body">
 
 
-                <h3>
+                    <h3>
                         Selecciona una Partida Presupuestal
                     </h3>
 
                     <form role="form" id="formulario">
                         <div class="form-group">
                             <label class="control-label" for="email-01">Partida Presupuestal:</label>
-                            <select id="partidas" name="partidas">
+                            <select id="partidas_presupuesto" name="partidas">
                                 <?php
-                                require_once("consulta_partida.php");
+                                require_once("consulta_principal.php");
 
-                                foreach ($flag2 as $key => $val) {
+                                foreach ($flag4 as $key => $val) {
                                 ?>
 
                                 <option value="<?php print($val['id']); ?>">
-                                    <?php print($val['clave']);
-                                        echo " ";
+                                    <?php print($val['clave']); echo " ";
                                         print($val['nombre']); ?></option>
                                 <?php
                                 }
@@ -582,6 +587,44 @@ window.location.replace('index');</script>";
     </div>
 
 
+    <div class="modal fade" role="dialog" id="my-modal9" aria-labelledby="modal-title">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color:#545454;">
+                    <h3 class="modal-title" id="modal-title">B.E.S.A</h3>
+                </div>
+                <div class="modal-body">
+                    <p>Ingrese los datos correspondientes a las entregas de bienes o servicios de su contrato. Se debe
+                        establecer la fecha máxima de entrga y la cantidad a entregar. En el
+                        caso
+                        de ser un servicio, se debe establecer de manera mensual</p>
+                    <form id="formulario8">
+                        <div class="form-group">
+                            <label class="control-label" for="email-01">Contrato:</label>
+                            <input class="form-control" id="contrato2" placeholder="Escribe el número de contrato"
+                                type="text">
+                        </div>
+
+                        <div class="form-group datepicker-group">
+                            <label class="control-label" for="calendarYear">Fecha maxima de entrega:</label>
+                            <input class="form-control" id="calendarYear" type="date">
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="email-01">Cantidad:</label>
+                            <input class="form-control" id="cantidadm" placeholder="Cantidad maxima" type="number">
+
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" onclick="entrega()">Ok</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link href="https://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" rel="Stylesheet">
@@ -595,8 +638,9 @@ window.location.replace('index');</script>";
      require_once("consulta_principal.php");                                
                                 ?>
         var arreglo = <?php echo json_encode($array) ?>;
-        autocompletar(arreglo);
 
+        autocompletar(arreglo);
+        autocompletar2(arreglo);
 
     });
     </script>

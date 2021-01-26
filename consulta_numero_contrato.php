@@ -74,10 +74,8 @@
                                 <ul id="lista" class="dropdown-menu inner" role="listbox" aria-expanded="false">
                                     <?php
                  
-                $flag=unserialize($_POST['flag']);
-                $valor=json_encode($flag);
-
-                foreach ($flag as $key=> $val) {
+               require_once("consulta_principal.php");
+                foreach ($flag3 as $key=> $val) {
 
                     ?>
 
@@ -108,22 +106,12 @@
                             $("#lista li").on("click", function() {
                                 var value = $(this).text();
                                 var value2 = value.trim();
-                                var Variable = '<?=$valor?>';
                                 var sOptionVal = $(this).val();
                                 var bool = confirm("Se desea consultar: " + value2);
 
                                 if (bool) {
-                                    // window.location="consulta.php?numero_contrato="+value2+"&flag="+Variable;
-                                    $.post({
-                                        url: "consulta.php",
-                                        data: {
-                                            "numero_contrato": value2,
-                                            "flag": Variable
-                                        }
-                                    }).done(function(data) {
-                                        $(".numero-de-contrato-consulta-numero-contrato").html(data);
-                                    });
-
+                                     window.location="consulta.php?numero_contrato="+value2;
+                                   
                                 } else {
                                     alert("solicitud cancelada");
                                 }
@@ -407,6 +395,7 @@
         document.getElementById("myOverlay").style.display = "none";
     }
     </script>
+
 </body>
 
 </html>

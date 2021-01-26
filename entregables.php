@@ -128,7 +128,7 @@
                     <h1>ENTREGABLES </h1>
                     <div class="contrato-entregables">
                         <label>Contrato:</label>
-                        <select id="secontrae" name="secontra">
+                        <select id="secontrae" name="secontrae">
                             <?php
                 if (isset($_POST["flag"])) {
               $flag=unserialize($_POST["flag"]);
@@ -145,7 +145,7 @@
                         </select>
                     </div>
                     <div class="fechaentrega-entregables">
-                        <label> Fecha entraga: </label>
+                        <label> Fecha entrega: </label>
                         <input id="infechaentregamo" name="fecha_entrega" type="date" required>
                     </div>
                     <div class="nombreentregable-entregables">
@@ -170,6 +170,12 @@
                     <div class="porcentaje-penalizacion-entragables">
                         <label> Porcentaje De Penalización:</label>
                         <input type="text" id="porcentaje" name="porcentaje" placeholder="Porcentaje De Penalización">
+                    </div>
+                    <div class="fechas-entregables">
+                        <label>Entregas programadas:</label>
+                        <select id="entregas-programadas" name="entregas-programadas">
+                 
+                        </select>
                     </div>
                     <div class="descripcion-entregables">
                         <label>Descripción:</label>

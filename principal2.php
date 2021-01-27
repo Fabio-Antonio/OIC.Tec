@@ -91,10 +91,10 @@ window.location.replace('index');</script>";
                 <ul>
                     <li><i class="fas fa-plus-circle"></i> <a href="lectura.php"> Carga de archivos (PDF)(CVS)</a></li>
                     <li><i class="fas fa-plus-circle"></i><a href="asignaciones.php"> Asignaciones</a></li>
-                    <li><i class="fas fa-plus-circle"></i><a href="consulta_contrato.php"> Documentos Adicionales</a>
+                    <li><i class="fas fa-plus-circle"></i><a href="#"> Documentos Adicionales</a>
                     </li>
                     <li><i class="fas fa-plus-circle"></i><a href="recepcion.php"> Recepción</li>
-                    <li><i class="fas fa-plus-circle"></i> Terminación Anticipada</li>
+                    <li><i class="fas fa-plus-circle"></i><a href="#"> Terminación Anticipada</li>
                     <li><i class="fas fa-plus-circle"></i><a href="partidas_presupuestales_partida.php"> Asignación de
                             Partidas</a>
                     </li>
@@ -113,7 +113,7 @@ window.location.replace('index');</script>";
                     <li><i class="fas fa-plus-circle"></i> Inconformidades</li>
                     <li><i class="fas fa-plus-circle"></i> Facturas</li>
                     <li><i class="fas fa-plus-circle"></i> Pagos Efectuados</li>
-                    <li><i class="fas fa-plus-circle"></i><a href="consulta_contrato.php"> Comprobación/Convenios
+                    <li><i class="fas fa-plus-circle"></i><a href="#"> Comprobación/Convenios
                             Modificados</a></li>
                 </ul>
                 <p></p>

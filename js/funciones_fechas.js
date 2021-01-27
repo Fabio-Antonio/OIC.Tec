@@ -123,7 +123,6 @@ function mostrarText(){
     
     
               },function(data) {
-                $('#my-modal3').modal('show')
                    $('#my-modal').modal('show')
     
               });

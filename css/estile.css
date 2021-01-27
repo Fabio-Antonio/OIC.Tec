@@ -4425,7 +4425,7 @@ Documentos AdicionaleS celular*/
 }
 .contenedor-gris-consulta-por-vigencia{
   width: 1150px;
-  height: 170vh;
+  min-height: calc(100px - 100px -100%);
   display: grid;
   background-color: #d8d8d8;
   grid-template-areas: 
@@ -4471,6 +4471,7 @@ Documentos AdicionaleS celular*/
 }
 .tabla-consulta-por-vigencia{
   padding-left: 55px;
+  min-height: calc(100px - 100px -100%);
 }
 .semaforo-consulta-por-vigencia{
   display: grid;

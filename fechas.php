@@ -98,37 +98,6 @@
 
 
 
-    <div class="modal fade" role="dialog" id="my-modal3" aria-labelledby="modal-title">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header" style="background-color:#545454;">
-                    <h3 class="modal-title" id="modal-title">B.E.S.A</h3>
-                </div>
-                <div class="modal-body">
-                    <p>Ingrese los datos correspondientes a las entregas de bienes o servicios de su contrato. Se debe
-                        establecer la fecha máxima de entrga y la cantidad máxima del bien o servicio a entregar. En el
-                        caso
-                        de ser un servicio, establecer cuantas entregas se realizarán hasta que termina la vigencia del
-                        contrato; en caso de
-                        bienes se establece la cantidad total de bienes</p>
-                    <div class="form-group datepicker-group">
-                        <label class="control-label" for="calendarYear">Fecha maxima de entrega:</label>
-                        <input class="form-control" id="calendarYear" type="date">
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label" for="email-01">Cantidad maxima:</label>
-                        <input class="form-control" id="cantidadm" placeholder="Cantidad maxima" type="number">
-
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button class="btn btn-primary" onclick="entrega()">Ok</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
     <div class="modal fade" role="dialog" id="my-modal4" aria-labelledby="modal-title">
         <div class="modal-dialog" role="document">
             <div class="modal-content">

@@ -13,7 +13,7 @@ function mostrarText() {
 
     var selIndex = selObj.options[selObj.selectedIndex].value;
     var selIndex2 = selObj2.options[selObj2.selectedIndex].value;
-alert(selIndex2);
+
     if(selIndex2.length=0){
         $(function() {
             $('#my-modal2').modal('show')

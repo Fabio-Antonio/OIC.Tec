@@ -8,8 +8,8 @@
     <link  rel="shortcut icon" href="https://cdn.datos.gob.mx/assets/img/favicon.ico"> 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/estile.css">
+    <link rel="stylesheet" href="vista/css/normalize.css">
+    <link rel="stylesheet" href="vista/css/estile.css">
 </head>
 
 <body>
@@ -19,7 +19,7 @@
                 B.E.S.A
             </p>
             <div class="imagen-header">
-                <img src="img/lf.png" alt="FuncionPublica">
+                <img src="vista/img/lf.png" alt="FuncionPublica">
             </div>
             <span></span>
         </div>
@@ -27,7 +27,7 @@
     <main class="login">
         <div class="contenedor formularios-logo">
             <h1>B.E.S.A</h1>
-            <form action="login.php" method="post" class="formulario-logo">
+            <form action="controlador/logueo.php" method="post" class="formulario-logo">
                 <div class="campo">
                     <label for="email-01">USUARIO</label>
                     <input type="text" name="nombre" id="email-01" placeholder="Username">

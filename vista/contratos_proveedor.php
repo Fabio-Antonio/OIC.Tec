@@ -50,11 +50,7 @@
             <img src="icons/lf.png" alt="sfp" width="145" height="60">
             <a class="w3-bar-item w3-button"></a>
             <a href="principal2.php" class="w3-bar-item w3-button">Inicio</a>
-            <a href="alta.html" class="w3-bar-item w3-button">Usuarios</a>
-            <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal2">Contacto</a>
-            <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal3">Nueva Partida</a>
-
-            <a href="cerrar.php" class="w3-bar-item w3-button">Logout -></a>
+            
 
         </div>
 
@@ -76,7 +72,7 @@
 
 
             <div class="contenedor-formalizacion-contrato">
-                <h1>Contrataciones por Proveedor</h1>
+                <h1>CINTRATACIONES POR PROVEEDOR</h1>
                 <div class="tabla-formalizacion-contrato">
                     <table id="myTable" class="tablemy">
                         <thead>

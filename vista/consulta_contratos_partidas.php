@@ -9,10 +9,15 @@
     <title> </title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
+    <link href="https://cdn.datos.gob.mx/bower_components/polymer/polymer.html" rel="import">
+
     <link href="https://cdn.datos.gob.mx/assets/css/main.css" rel="stylesheet">
     <link href="https://cdn.datos.gob.mx/assets/img/favicon.ico" rel="shortcut icon">
     <link href="https://cdn.datos.gob.mx/bower_components/dgm-footer/dgm-footer.html" rel="import">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../vista/css/normalize.css">
@@ -42,15 +47,12 @@
         <!-- Sidebar -->
 
         <div class="w3-sidebar w3-bar-block w3-animate-left" style="display:none;z-index:5" id="mySidebar">
-            <button id="ce" class="w3-bar-item w3-button w3-large" onclick="w3_close()">Cerrar &times;</button>
-            <img src="../vista/icons/lf.png" alt="sfp" width="145" height="60">
-            <a class="w3-bar-item w3-button"></a>
-            <a href="../vista/principal2.php" class="w3-bar-item w3-button">Inicio</a>
-            <a href="alta.html" class="w3-bar-item w3-button">Usuarios</a>
-            <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal2">Contacto</a>
-            <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal3">Nueva Partida</a>
 
-            <a href="cerrar.php" class="w3-bar-item w3-button">Logout -></a>
+            <button id="ce" class="w3-bar-item w3-button w3-large" onclick="w3_close()">Cerrar &times;</button>
+            <img src="../vista/img/lf.png" alt="sfp" width="145" height="60">
+            <a href="../vista/principal2.php" class="w3-bar-item w3-button">Inicio</a>
+            
+
 
         </div>
 
@@ -91,13 +93,13 @@
                             </td>
                             <td><?php $total=$_POST["total"]; $totalf=number_format($total); echo "$".$totalf;?></td>
                         </tr>
-                        
+
 
                     </table>
                 </div>
 
                 <div class="tabla-consulta-contratos-por-partida-presupuestal-consulta-contratos-partidas">
-                    <table id="myTable" class="tablemy" >
+                    <table id="myTable" class="tablemy">
                         <thead>
                             <tr>
                                 <th>Número de Contrato</th>
@@ -105,9 +107,9 @@
                                 <th>Monto máximo</th>
                                 <th>Partida presupuestal</th>
                             </tr>
-                           
+
                         </thead>
-                        
+
                     </table>
                 </div>
 
@@ -164,8 +166,8 @@
                 </div>
 
                 <div class="botones-contratos-por-partida-presupuestal-consulta-contratos-partidas">
-                    <button type="button" id="bregresar" class="btn btn-primary" onclick="location.href='../vista/principal2.php'"
-                        name="bregresar"> Regresar </button>
+                    <button type="button" id="bregresar" class="btn btn-primary"
+                        onclick="location.href='../vista/principal2.php'" name="bregresar"> Regresar </button>
                 </div>
 
             </div>
@@ -207,7 +209,7 @@
             },
             "bProcessing": true,
             "sAjaxSource": "../controlador/controlador_tablas.php?clave=" +
-                clave+"&metodo=j",
+                clave + "&metodo=j",
             "bPaginate": true,
             "sPaginationType": "full_numbers",
             "iDisplayLength": 5,
@@ -277,6 +279,8 @@
                     Pedro</span></p>
         </div>
     </footer>
+
+
 
     <script>
     function w3_open() {

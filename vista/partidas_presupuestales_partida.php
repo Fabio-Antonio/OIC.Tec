@@ -43,10 +43,7 @@
             <img src="img/lf.png" alt="sfp" width="145" height="60">
             <a class="w3-bar-item w3-button"></a>
             <a href="principal2.php" class="w3-bar-item w3-button">Inicio</a>
-            <a href="alta.html" class="w3-bar-item w3-button">Usuarios</a>
-            <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal2">Contacto</a>
-            <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal3">Nueva Partida</a>
-            <a href="cerrar.php" class="w3-bar-item w3-button">Logout -></a>
+            
         </div>
 
         <!-- Page Content -->
@@ -136,7 +133,7 @@
 
         <div class="contenedor-gris-partidas-presupuestales-partida">
 
-            <h1>Asignación de Partidas</h1>
+            <h1>ASIGNACIÓN DE PARTIDAS</h1>
             <h3> Asigne una partida a una unidad compradora</h3>
 
             <div class="unidad-compradora-partidas-presupuestales-partida">

@@ -40,10 +40,7 @@
             <img src="img/lf.png" alt="sfp" width="145" height="60">
             <a class="w3-bar-item w3-button"></a>
             <a href="principal2.php" class="w3-bar-item w3-button">Inicio</a>
-            <a href="alta.html" class="w3-bar-item w3-button">Usuarios</a>
-            <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal2">Contacto</a>
-            <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal3">Nueva Partida</a>
-            <a href="cerrar.php" class="w3-bar-item w3-button">Logout -></a>
+            
         </div>
 
         <!-- Page Content -->
@@ -115,7 +112,7 @@
                 <div class="botones-motivo-inconformidad-mi">
                     <button type="submit" id="bcomprobacion" class="btn btn-verde"
                         onclick=this.form.action="motivo.php" name="bcomprobacion"> Guardar </button>
-                    <button type="button" id="bregresar" class="btn btn-verde" onclick="location.href='principal.php'"
+                    <button type="button" id="bregresar" class="btn btn-verde" onclick="location.href='principal2.php'"
                         name="bregresar"> Regresar </button>
 
                     </form>
@@ -179,7 +176,7 @@
                 <div class="botones-inconformidades-mi">
                     <button type="button" id="bcomprobacion" class="btn btn-verde" onclick="mostrarText();"
                         name="bcomprobacion"> Guardar </button>
-                    <button type="button" id="bregresar" class="btn btn-verde" onclick="location.href='principal.php'"
+                    <button type="button" id="bregresar" class="btn btn-verde" onclick="location.href='principal2.php'"
                         name="bregresar"> Regresar </button>
                 </div>
             </div>

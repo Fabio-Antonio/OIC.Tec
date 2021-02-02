@@ -50,12 +50,7 @@
             <img src="../vista/icons/lf.png" alt="sfp" width="145" height="60">
             <a class="w3-bar-item w3-button"></a>
             <a href="../vista/principal2.php" class="w3-bar-item w3-button">Inicio</a>
-            <a href="alta.html" class="w3-bar-item w3-button">Usuarios</a>
-            <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal2">Contacto</a>
-            <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal3">Nueva Partida</a>
-
-            <a href="cerrar.php" class="w3-bar-item w3-button">Logout -></a>
-
+            
         </div>
 
         <!-- Page Content -->
@@ -74,7 +69,7 @@
     <main class="main-informe-consolidado">
         <div class="contenedor-gris-informe-consolidado-one">
             <div class="conenedor-informe-consolidado">
-                <h1> Fechas Entregables </h1>
+                <h1> FECHAS ENTREGABLES </h1>
                 <div class="tabla-consolidador">
                     <table class="table table" id="table7030">
                         <!-- <caption>Consolidador</caption>-->
@@ -102,7 +97,7 @@
             </div>
 
             <div class="contenedor-contratos-informe">
-                <h1>Entregas</h1>
+                <h1>ENTREGAS</h1>
                 <div class="tabla-contrato">
                     <h2>Entregas correspondientes</h2>
                     <table id="myTable" class="tablemy">

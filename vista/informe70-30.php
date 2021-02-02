@@ -154,11 +154,7 @@
             <img src="../vista/icons/lf.png" alt="sfp" width="145" height="60">
             <a class="w3-bar-item w3-button"></a>
             <a href="../vista/principal2.php" class="w3-bar-item w3-button">Inicio</a>
-            <a href="alta.html" class="w3-bar-item w3-button">Usuarios</a>
-            <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal2">Contacto</a>
-            <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal3">Nueva Partida</a>
-
-            <a href="cerrar.php" class="w3-bar-item w3-button">Logout -></a>
+            
 
         </div>
 
@@ -208,7 +204,7 @@
 
 
 
-                <h1 class="titulo-dos">Contratos</h1>
+                <h1 class="titulo-dos">CONTRATOS</h1>
                 <div class="tabla-contratos-30-informe70-30">
                     
                     <h2>Contratos Correspondientes al 30%</h2>
@@ -346,7 +342,7 @@
 
                 </div>
 
-                <h1 class="titulo-tres">Gráficas</h1>
+                <h1 class="titulo-tres">GRÁFICAS</h1>
 
                 <div class="grafica-30-informe70-30">
                     <div id="chartContainer" class="grafica-treinta"></div>

@@ -46,7 +46,7 @@ window.location.replace('index');</script>";
             <img src="img/lf.png" alt="sfp" width="145" height="60">
             <a href="#" class="w3-bar-item w3-button"><?php echo $_SESSION['usuario']; ?></a>
             <a href="principal2.php" class="w3-bar-item w3-button">Inicio</a>
-            <a href="alta.html" class="w3-bar-item w3-button">Usuarios</a>
+            <a href="alta.php" class="w3-bar-item w3-button">Usuarios</a>
             <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal2">Contacto</a>
             <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal3">Nueva Partida</a>
             <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal5">Nuevo Contrato</a>
@@ -77,9 +77,9 @@ window.location.replace('index');</script>";
                             Requirente</a></li>
                     <li><i class="fas fa-plus-circle"></i> <a href="requirente_compradora_captura.html">Unidad
                             Compradora</a></li>
-                    <li><i class="fas fa-plus-circle"></i><a href="admin.html"> Administrador de Contrato</a></li>
+                    <li><i class="fas fa-plus-circle"></i><a href="admin.php"> Administrador de Contrato</a></li>
                     <li><i class="fas fa-plus-circle"></i> <a href="captura_pro_mont2.php"> Consolidado</a></li>
-                    <li><i class="fas fa-plus-circle"></i> <a href="captura_pro_mont.html"> Proveedor Adjudicado</a></li>
+                    <li><i class="fas fa-plus-circle"></i> <a href="captura_pro_mont.php"> Proveedor Adjudicado</a></li>
                 </ul>
                 <p></p>
             </div>
@@ -153,7 +153,7 @@ window.location.replace('index');</script>";
                 <div class="img_tarjeta">
                     <img src="img/proveedor.jpg" alt="proveedor">
                 </div>
-                <h3>Contrataciones</h3>
+                <h3>CONTRATACIONES</h3>
                 <ul>
                     <li><i class="fas fa-plus-circle"></i><a href="consulta_numero_contrato.php"> Consulta por número de
                             contrato</a></li>
@@ -268,7 +268,7 @@ window.location.replace('index');</script>";
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button class="btn btn-primary" data-dismiss="modal">Listo!!</button>
+                    <button class="btn btn-primary" data-dismiss="modal">Cerrar</button>
                 </div>
             </div>
         </div>
@@ -320,7 +320,7 @@ window.location.replace('index');</script>";
 
                 </div>
                 <div class="modal-footer">
-                    <button class="btn btn-primary" data-dismiss="modal">cerrar</button>
+                    <button class="btn btn-primary" data-dismiss="modal">Cerrar</button>
                 </div>
             </div>
         </div>
@@ -370,7 +370,7 @@ window.location.replace('index');</script>";
 
                 </div>
                 <div class="modal-footer">
-                    <button class="btn btn-primary" data-dismiss="modal">cerrar</button>
+                    <button class="btn btn-primary" data-dismiss="modal">Cerrar</button>
                 </div>
             </div>
         </div>
@@ -440,7 +440,7 @@ window.location.replace('index');</script>";
                                         </div>
 
                                     </div>
-                                    <button class="btn btn-primary listo-modal" data-dismiss="modal">Listo!!</button>
+                                    <button class="btn btn-primary listo-modal" data-dismiss="modal">Cerrar</button>
                                 </div>
                                 <!--fin dentro pestañas -->
 
@@ -499,7 +499,7 @@ window.location.replace('index');</script>";
 
                 </div>
                 <div class="modal-footer">
-                    <button class="btn btn-primary" data-dismiss="modal">cerrar</button>
+                    <button class="btn btn-primary" data-dismiss="modal">Cerrar</button>
                 </div>
             </div>
         </div>
@@ -532,7 +532,7 @@ window.location.replace('index');</script>";
 
                 </div>
                 <div class="modal-footer">
-                    <button class="btn btn-primary" data-dismiss="modal">cerrar</button>
+                    <button class="btn btn-primary" data-dismiss="modal">Cerrar</button>
                 </div>
             </div>
         </div>
@@ -582,7 +582,7 @@ window.location.replace('index');</script>";
 
                 </div>
                 <div class="modal-footer">
-                    <button class="btn btn-primary" data-dismiss="modal">cerrar</button>
+                    <button class="btn btn-primary" data-dismiss="modal">Cerrar</button>
                 </div>
             </div>
         </div>
@@ -619,7 +619,10 @@ window.location.replace('index');</script>";
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button class="btn btn-primary" onclick="entrega()">Ok</button>
+                    <button class="btn btn-primary" onclick="entrega()">Enviar</button>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" data-dismiss="modal">Cerrar</button>
                 </div>
 
             </div>

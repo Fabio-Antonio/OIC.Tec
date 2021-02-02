@@ -20,6 +20,8 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/estile.css">
 
+
+
 </head>
 
 <body>
@@ -42,12 +44,7 @@
         <div class="w3-sidebar w3-bar-block w3-animate-left" style="display:none;z-index:5" id="mySidebar">
             <button id="ce" class="w3-bar-item w3-button w3-large" onclick="w3_close()">Cerrar &times;</button>
             <img src="img/lf.png" alt="sfp" width="145" height="60">
-            <a class="w3-bar-item w3-button"></a>
             <a href="principal2.php" class="w3-bar-item w3-button">Inicio</a>
-            <a href="alta.html" class="w3-bar-item w3-button">Usuarios</a>
-            <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal2">Contacto</a>
-            <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal3">Nueva Partida</a>
-            <a href="cerrar.php" class="w3-bar-item w3-button">Logout -></a>
         </div>
 
         <!-- Page Content -->
@@ -61,7 +58,7 @@
 
         <div class="contenedor-gris-procedimiento-consolidado">
             <div class="contenedor-captura-procedimiento">
-                <h1> Consolidado </h1>
+                <h1> CONSOLIDADO </h1>
                 <div class="consolidador-captura">
                     <label> Consolidador: </label>
                     <select name="consolidador" id="consolidador">
@@ -186,9 +183,8 @@
     </div>
 
 
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script src="js/funciones_consolidado.js"> </script>
 
+    <script src="js/funciones_consolidado.js"> </script>
 
 
 

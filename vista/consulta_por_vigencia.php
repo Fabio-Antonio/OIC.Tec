@@ -7,6 +7,8 @@
 
     <meta name="description" content="">
     <title>Vigencia </title>
+    
+    <link href="https://cdn.datos.gob.mx/bower_components/polymer/polymer.html" rel="import"> 
     <link href="https://cdn.datos.gob.mx/assets/css/main.css" rel="stylesheet">
     <link href="https://cdn.datos.gob.mx/assets/img/favicon.ico" rel="shortcut icon">
     <link href="https://cdn.datos.gob.mx/bower_components/dgm-footer/dgm-footer.html" rel="import">
@@ -86,14 +88,9 @@
 
         <!-- Sidebar -->
         <div class="w3-sidebar w3-bar-block w3-animate-left" style="display:none;z-index:5" id="mySidebar">
-            <button id="ce" class="w3-bar-item w3-button w3-large" onclick="w3_close()">Cerrar &times;</button>
-            <img src="img/lf.png" alt="sfp" width="145" height="60">
-            <a class="w3-bar-item w3-button"></a>
+        <button id="ce" class="w3-bar-item w3-button w3-large" onclick="w3_close()">Cerrar &times;</button>
+            <img src="../vista/img/lf.png" alt="sfp" width="145" height="60">
             <a href="../vista/principal2.php" class="w3-bar-item w3-button">Inicio</a>
-            <a href="alta.html" class="w3-bar-item w3-button">Usuarios</a>
-            <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal2">Contacto</a>
-            <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal3">Nueva Partida</a>
-            <a href="cerrar.php" class="w3-bar-item w3-button">Logout -></a>
         </div>
 
         <!-- Page Content -->
@@ -193,6 +190,8 @@
                     Jose Pedro</span></p>
         </div>
     </footer>
+
+    
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>

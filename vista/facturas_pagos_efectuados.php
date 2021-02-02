@@ -44,11 +44,7 @@
             <img src="icons/lf.png" alt="sfp" width="145" height="60">
             <a class="w3-bar-item w3-button"></a>
             <a href="principal2.php" class="w3-bar-item w3-button">Inicio</a>
-            <a href="alta.html" class="w3-bar-item w3-button">Usuarios</a>
-            <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal2">Contacto</a>
-            <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal3">Nueva Partida</a>
-
-            <a href="cerrar.php" class="w3-bar-item w3-button">Logout -></a>
+            
 
         </div>
 
@@ -196,7 +192,7 @@
                 <div class="botones-facturas-pagos-efectuados">
                     <button type="button" id="bcomprobacion" class="btn btn-verde" onclick="mostrarText();" name="">
                         Guardar </button>
-                    <button type="button" id="bregresar" class="btn btn-verde" onclick="location.href='principal.php'"
+                    <button type="button" id="bregresar" class="btn btn-verde" onclick="location.href='principal2.php'"
                         name="bregresar"> Regresar </button>
                 </div>
 
@@ -245,7 +241,7 @@
                 <div class="botones-facturas-f-pagos-efectuados">
                     <button type="button" id="bcomprobacion" class="btn btn-verde" onclick="mostrarTexts();"
                         name="bcomprobacion"> Guardar </button>
-                    <button type="button" id="bregresar" class="btn btn-verde" onclick="location.href='principal.php'"
+                    <button type="button" id="bregresar" class="btn btn-verde" onclick="location.href='principal2.php'"
                         name="bregresar"> Regresar </button>
                 </div>
 

@@ -7,7 +7,8 @@
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
       <meta name="description" content="">
       <title> B.E.S.A </title>
-       
+      
+    <link href="https://cdn.datos.gob.mx/bower_components/polymer/polymer.html" rel="import"> 
 
         <link href="https://cdn.datos.gob.mx/assets/css/main.css" rel="stylesheet">
 
@@ -46,16 +47,10 @@
         <!-- Sidebar -->
 
         <div class="w3-sidebar w3-bar-block w3-animate-left" style="display:none;z-index:5" id="mySidebar">
-            <button id="ce" class="w3-bar-item w3-button w3-large" onclick="w3_close()">Cerrar &times;</button>
-            <img src="icons/lf.png" alt="sfp" width="145" height="60">
-            <a class="w3-bar-item w3-button"></a>
+        <button id="ce" class="w3-bar-item w3-button w3-large" onclick="w3_close()">Cerrar &times;</button>
+            <img src="img/lf.png" alt="sfp" width="145" height="60">
             <a href="principal2.php" class="w3-bar-item w3-button">Inicio</a>
-            <a href="alta.html" class="w3-bar-item w3-button">Usuarios</a>
-            <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal2">Contacto</a>
-            <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal3">Nueva Partida</a>
-
-            <a href="cerrar.php" class="w3-bar-item w3-button">Logout -></a>
-
+            
         </div>
 
         <!-- Page Content -->
@@ -195,6 +190,8 @@
               Pedro</span></p>
   </div>
 </footer>
+
+
 
 <script>
 function w3_open() {

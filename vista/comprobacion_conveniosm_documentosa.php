@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
+   
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,8 +13,11 @@
     <link href="https://cdn.datos.gob.mx/assets/img/favicon.ico" rel="shortcut icon">
     <link href="https://cdn.datos.gob.mx/bower_components/dgm-footer/dgm-footer.html" rel="import">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    
+    <link href="https://cdn.datos.gob.mx/bower_components/polymer/polymer.html" rel="import"> 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;700&display=swap" rel="stylesheet">
+   
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/estile.css">
 </head>
@@ -36,14 +40,10 @@
 
         <!-- Sidebar -->
         <div class="w3-sidebar w3-bar-block w3-animate-left" style="display:none;z-index:5" id="mySidebar">
-            <button id="ce" class="w3-bar-item w3-button w3-large" onclick="w3_close()">Cerrar &times;</button>
+        <button id="ce" class="w3-bar-item w3-button w3-large" onclick="w3_close()">Cerrar &times;</button>
             <img src="img/lf.png" alt="sfp" width="145" height="60">
-            <a class="w3-bar-item w3-button"></a>
             <a href="principal2.php" class="w3-bar-item w3-button">Inicio</a>
-            <a href="alta.html" class="w3-bar-item w3-button">Usuarios</a>
-            <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal2">Contacto</a>
-            <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal3">Nueva Partida</a>
-            <a href="cerrar.php" class="w3-bar-item w3-button">Logout -></a>
+            
         </div>
 
         <!-- Page Content -->
@@ -210,7 +210,7 @@
                 <div class="botones-comprobacion-ccd">
                     <button type="button" id="bcomprobacion" class="btn btn-verde" onclick="mostrarText();"
                         name="bcomprobacion"> Guardar </button>
-                    <button type="button" id="bregresar" class="btn btn-verde" onclick="location.href='principal.php'"
+                    <button type="button" id="bregresar" class="btn btn-verde" onclick="location.href='principal2.php'"
                         name="bregresar"> Regresar </button>
                 </div>
             </div>
@@ -269,7 +269,7 @@
                 <div class="botones-convenios-modificados-ccd">
                     <button type="button" id="bcomprobacion" class="btn btn-verde" onclick="mostrarTexts();"
                         name="button"> Guardar </button>
-                    <button type="button" id="bregresar" class="btn btn-verde" onclick="location.href='principal.php'"
+                    <button type="button" id="bregresar" class="btn btn-verde" onclick="location.href='principal2.php'"
                         name="bregresar"> Regresar </button>
                 </div>
 
@@ -310,7 +310,7 @@
                 <div class="botones-documentos-adicionales-ccd">
                     <button type="button" id="bcomprobacion" onclick="mostrarText3();" class="btn btn-verde"
                         name="button"> Guardar </button>
-                    <button type="button" id="bregresar" class="btn btn-verde" onclick="location.href='principal.php'"
+                    <button type="button" id="bregresar" class="btn btn-verde" onclick="location.href='principal2.php'"
                         name="bregresar"> Regresar </button>
                 </div>
             </div>
@@ -367,10 +367,6 @@
                     Pedro</span></p>
         </div>
     </footer>
-
-
-
-
 
 
     <script src="https://kit.fontawesome.com/263207fda3.js" crossorigin="anonymous"></script>

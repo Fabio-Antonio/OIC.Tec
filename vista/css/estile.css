@@ -4427,6 +4427,7 @@ Documentos AdicionaleS celular*/
   width: 1150px;
   min-height: calc(100px - 100px -100%);
   display: grid;
+  padding-bottom: 30px;
   background-color: #d8d8d8;
   grid-template-areas: 
   "consulta-por-vigencia"
@@ -4434,7 +4435,7 @@ Documentos AdicionaleS celular*/
   "tabla-consulta-por-vigencia"
   "grafica-consulta-por-vigencia"
   "botones-consulta-por-vigencia";
-  grid-template-rows: 150px 100px 400px 350px;   
+  grid-template-rows: 150px 100px ;   
 }
 
 .contenedor-gris-consulta-por-vigencia h1::after {
@@ -4470,8 +4471,8 @@ Documentos AdicionaleS celular*/
   padding-left: 500px;
 }
 .tabla-consulta-por-vigencia{
-  padding-left: 55px;
-  min-height: calc(100px - 100px -100%);
+  padding-left: 25px;
+  
 }
 .semaforo-consulta-por-vigencia{
   display: grid;
@@ -4480,6 +4481,9 @@ Documentos AdicionaleS celular*/
   grid-template-columns: 100px 100px 100px 100px;
 }
 
+.grafica-consulta-por-vigencia{
+  padding-left: 25px;
+}
 .semaforo-consulta-por-vigencia .botond{
   grid-area: botond;
 }
@@ -4596,10 +4600,11 @@ Documentos AdicionaleS celular*/
 
 .tabla-consulta-por-vigencia{
   width: 1100px;
+  min-height: calc(100px - 100px -100%);
 }
 .container-graf{
   height: 300px; 
-  width: 980px;
+  width: 1080px;
 }
 
 /*CONSULTA POR VIGENCIA IPAD*/

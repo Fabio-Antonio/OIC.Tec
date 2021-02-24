@@ -8,7 +8,7 @@
     while($row = $statement->fetch())
     {
         $pdf=$row['pdf'];    
-       	$mi_pdf="../$pdf";       
+       	$mi_pdf="$pdf";       
         header('Content-type: application/pdf');
         header('Content-Disposition: inline; filename="'.$mi_pdf.'"');
         readfile($mi_pdf); 

@@ -48,8 +48,8 @@ window.location.replace('index');</script>";
             <a href="principal2.php" class="w3-bar-item w3-button">Inicio</a>
             <a href="alta.php" class="w3-bar-item w3-button">Usuarios</a>
             <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal2">Contacto</a>
-            <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal3">Nueva Partida</a>
-            <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal5">Nuevo Contrato</a>
+            <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal3">Partidas Presupuestales</a>
+            <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#mymodal5">Contrato</a>
             <a href="#" class="w3-bar-item w3-button" data-toggle="modal" data-target="#my-modal9">Entregas</a>
 
             <a onclick="cerrar();" class="w3-bar-item w3-button">Logout -></a>

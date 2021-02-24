@@ -95,6 +95,12 @@ if(isset($_POST['contrato_compranet'])){
         $insersion::{'contrato_fechas'}();
   
     }  
+}else if(isset($_POST['cantidadm'])){
+    if(method_exists($insersion,'entregas_m')){
+
+        $insersion::{'entregas_m'}();
+  
+    }  
 }
 
 ?>

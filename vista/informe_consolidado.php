@@ -19,8 +19,8 @@
     </script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/estile.css">
+    <link rel="stylesheet" href="../vista/css/normalize.css">
+    <link rel="stylesheet" href="../vista/css/estile.css">
 
 </head>
 
@@ -31,7 +31,7 @@
                 B.E.S.A
             </p>
             <div class="imagen-header">
-                <img src="img/lf.png" alt="FuncionPublica">
+                <img src="../vista/img/lf.png" alt="FuncionPublica">
             </div>
             <span></span>
         </div>
@@ -47,9 +47,9 @@
 
         <div class="w3-sidebar w3-bar-block w3-animate-left" style="display:none;z-index:5" id="mySidebar">
             <button id="ce" class="w3-bar-item w3-button w3-large" onclick="w3_close()">Cerrar &times;</button>
-            <img src="icons/lf.png" alt="sfp" width="145" height="60">
+            <img src="../vista/icons/lf.png" alt="sfp" width="145" height="60">
             <a class="w3-bar-item w3-button"></a>
-            <a href="principal2.php" class="w3-bar-item w3-button">Inicio</a>
+            <a href="../vista/principal2.php" class="w3-bar-item w3-button">Inicio</a>
             
 
         </div>
@@ -235,7 +235,7 @@
 
             </div>
             <div class="botones-informe">
-                <button type="button" id="bregresar" class="btn btn-verde" onclick="location.href='principal2.php'"
+                <button type="button" id="bregresar" class="btn btn-verde" onclick="location.href='../vista/principal2.php'"
                     name="bregresar"> Regresar </button>
             </div>
 
@@ -246,13 +246,13 @@
         <div class="contenedor display-footer">
             <div class="footer-img">
                 <div class="im">
-                    <img src="img/itt.png" alt="ittlahuac">
+                    <img src="../vista/img/itt.png" alt="ittlahuac">
                 </div>
                 <div class="im">
-                    <img src="img/indice.png" alt="ittlahuac">
+                    <img src="../vista/img/indice.png" alt="ittlahuac">
                 </div>
                 <div class="im">
-                    <img src="img/ff.png" alt="ittlahuac">
+                    <img src="../vista/img/ff.png" alt="ittlahuac">
                 </div>
             </div>
 

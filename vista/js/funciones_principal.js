@@ -193,7 +193,7 @@ function consolidado() {
 
 
 
-    window.location = "../besa/consulta_licitacion.php?id_consolidado="+id_consolidado;
+    window.location = "../modelo/consulta_licitacion.php?id_consolidado="+id_consolidado;
 
 }
 
@@ -339,13 +339,18 @@ function entrega() {
     }
 
     
-    $.post('../besa/entrega_m.php', {
+    $.post('../controlador/insercionesController.php', {
         "fecha_maxima": fecha_maxima,
         "cantidadm": cantidadm,
         "contrato": descripcion,
 
     }, function(data) {
-        alert("listo");
+        var response = jQuery.parseJSON(data);
+        if(response.success==true){ 
+            alert("Datos ingresados correctamente");
+        }else{
+            alert("Es posible que este contrato ya tenga está fecha asignada");
+        }
     });
 }
 

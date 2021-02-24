@@ -176,7 +176,7 @@
             </div>
 
             <div class="contenedor-procedimineto-compranet-contrato">
-                <label>Compranet:</label>
+                <label>Procedimiento Compranet:</label>
                 <input type="text" id="inprocedimientocompranetc" name="inprocedimientocompranetc"
                     placeholder="Procedimiento Compranet">
             </div>

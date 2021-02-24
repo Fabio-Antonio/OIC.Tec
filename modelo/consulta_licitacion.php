@@ -16,13 +16,13 @@ $descripcion=$row["descripcion"];
 }
  if($clave_requirente==null){
         echo "<script>alert('No se han registrado contratos')
-window.location.replace('principal2.php');</script>";
+window.location.replace('../vista/principal2.php');</script>";
        return;
         }
 
 }else{
 echo "<script>alert('La consulta a la base de datos es incorrecta')
-window.location.replace('principal2.php');</script>";
+window.location.replace('../vista/principal2.php');</script>";
 }
 
 
@@ -35,13 +35,13 @@ while($row=$query->fetch()){
 }
  if($total==null){
         echo "<script>alert('No se han registrado contratos')
-window.location.replace('principal2.php');</script>";
+window.location.replace('../vista/principal2.php');</script>";
        return;
         }
 
 }else{
 echo "<script>alert('La consulta a la base de datos es incorrecta')
-window.location.replace('principal2.php');</script>";
+window.location.replace('../vista/principal2.php');</script>";
 }
 
 
@@ -50,7 +50,7 @@ $conn=null;
 
 $ch=null;
 $ch= curl_init();
-$url=$path."/besa/informe_consolidado.php";
+$url=$path."/besa/vista/informe_consolidado.php";
 curl_setopt($ch,CURLOPT_URL,$url);
 curl_setopt($ch,CURLOPT_POST,TRUE);
 curl_setopt($ch,CURLOPT_POSTFIELDS,"clave_requirente=$clave_requirente&unidad=$unidad&licitacion=$licitacion&monto_total=$monto_total&descripcion=$descripcion&total=$total&id_consolidado=$id_consolidado");
@@ -66,7 +66,7 @@ $error=curl_error($ch);
 curl_close($ch);
 if($error){
 echo "<script>alert('Los datos no se enviaron correctamente')
-window.location.replace('principa2.php');</script>";
+window.location.replace('../vista/principa2.php');</script>";
         }
 
 ?>

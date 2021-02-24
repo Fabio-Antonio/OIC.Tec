@@ -39,8 +39,8 @@
         <!-- Sidebar -->
         <div class="w3-sidebar w3-bar-block w3-animate-left" style="display:none;z-index:5" id="mySidebar">
         <button id="ce" class="w3-bar-item w3-button w3-large" onclick="w3_close()">Cerrar &times;</button>
-            <img src="img/lf.png" alt="sfp" width="145" height="60">
-            <a href="principal2.php" class="w3-bar-item w3-button">Inicio</a>
+            <img src="../vista/img/lf.png" alt="sfp" width="145" height="60">
+            <a href="../vista/principal2.php" class="w3-bar-item w3-button">Inicio</a>
             
         </div>
 
@@ -312,7 +312,7 @@
             </div>
 
             <div class="botones-consulta-numero-contrato">
-                <button class="btn btn-verde" onclick="saludo();" id="btdescargar"> Descargar
+                <button class="btn btn-verde" onclick="saludo();" id="btdescargar"> Ver documentación
                 </button>
                 <button class="btn btn-verde" id="modificar-consulta" onclick="location.href='../vista/principal2.php'">
                     Regresar </button>

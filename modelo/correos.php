@@ -6,7 +6,33 @@ $headers .= "CC: ing.fabio.a@gmail.com\r\n";
 $headers .= "MIME-Version: 1.0\r\n";
 $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
     mail($miArray["email"], "Organo Interno de Control en la Secretaría de Educación Pública", "<html>
+    <link href='https://cdn.datos.gob.mx/assets/css/main.css' rel='stylesheet'>
+<link href='https://cdn.datos.gob.mx/bower_components/polymer/polymer.html' rel='import'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title></title>
+
+    <link rel=shortcut icon href=https://cdn.datos.gob.mx/assets/img/favicon.ico>
+    <link rel='stylesheet' href='https://www.w3schools.com/w3css/4/w3.css'>
+    <link href='https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;700&display=swap' rel='stylesheet'>
+    <link rel='stylesheet' href='../vista/css/normalize.css'>
+    <link rel='stylesheet' href='../vista/css/estile.css'>
+</head>
     <body>
+    <header class='site-header'>
+        <div class='contenedor encabezado'>
+            <p>
+                B.E.S.A
+            </p>
+            <div class='imagen-header'>
+                <img src='../vista/img/lf.png' alt='FuncionPublica'>
+            </div>
+            <span></span>
+        </div>
+    </header>
     <h1>Organo Interno de Control en la Secretaría de Educación Pública</h1>
     <span> Estimado ".$miArray["nombre"].". Por este medio se le informa, que su contrato con número ".$miArray["contrato"].", se encuentra en estatus: </span>
     <p>".$miArray["mensaje"]."</p>

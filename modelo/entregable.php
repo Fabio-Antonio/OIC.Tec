@@ -779,5 +779,74 @@ window.location.replace('../vista/fechas.php');</script> ";
  $conn=null;       
 }
 
+public function entregas_m(){
+  require_once("conexion.php");
+$numero_contrato=$_POST["contrato"];
+$fecha_maxima=$_POST["fecha_maxima"];
+$cantidadm=$_POST["cantidadm"];
+
+
+$query=$conn->prepare("SELECT id_contrato FROM contrato  WHERE numero_contrato=?");
+$query->bindParam(1, $numero_contrato);
+$query->execute();
+
+if($query)
+{
+while($row=$query->fetch())
+        {
+$dato=$row['id_contrato'];
+
+
+}
+
+
+}
+
+function comprobacion($conn,$dato,$fecha_maxima){
+$variable="";
+$query=$conn->prepare("SELECT * FROM `entregas_m` WHERE id_contrato= ? AND fecha_maxima = ?");
+$query->bindValue(1, $dato);
+$query->bindParam(2,$fecha_maxima);
+$query->execute();
+
+if($query)
+{
+while($row=$query->fetch())
+        {
+$variable=$row['id_entrega'];
+
+}
+
+}
+
+if($variable==""){
+  return true;
+}else{
+  return false;
+}
+
+}
+if(comprobacion($conn,$dato,$fecha_maxima)== true ){
+$statement = $conn->prepare("INSERT INTO entregas_m (id_contrato,fecha_maxima,cantidad)VALUES(?,?,?)");
+$statement->bindValue(1, $dato);
+$statement->bindParam(2, $fecha_maxima);
+$statement->bindValue(3, $cantidadm);
+
+$statement->execute();
+   
+  
+ 
+ if($statement){
+  echo json_encode(array("success"=>true));
+
+}else{
+  echo json_encode(array("success"=>false));
+
+}
+ $conn=null; 
+}else{
+  echo json_encode(array("success"=>false));
+}
+}
 }    
 ?>
